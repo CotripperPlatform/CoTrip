@@ -1,4 +1,4 @@
-# Project Title
+# CoTripper
 
 CoTripper: an app to facilitate organized group travel experiences for
 single-mothers.
