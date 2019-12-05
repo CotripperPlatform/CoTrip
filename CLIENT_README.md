@@ -16,6 +16,7 @@ Ensure you have the following installed:
 
 ### Installing
 
+<<<<<<< HEAD
 After you have cloned the repository, you'll need to need to make sure that you work for the correct branch for the part of the project that you are assigned to. Here's an example:
 
 `git checkout development` will change your current branch to development.
@@ -23,4 +24,8 @@ After you have cloned the repository, you'll need to need to make sure that you 
 Then you will need to run the following to install dependencies:
 
 `npm install`
+=======
+After you have cloned the repository, you'll need to need to make sure that you work for the correct branch for your part of the project. Here's an example:
 
+`git checkout development` will change your current branch to devepent.
+>>>>>>> 5e77be7... Started Clienet Readme
