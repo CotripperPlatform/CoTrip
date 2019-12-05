@@ -22,9 +22,9 @@ git clone git@github.com:CotripperPlatform/CoTrip.git
 
 1. Run command `pipenv install` this will set up the virtual environment and install dependencies listed in the pipfile.
 
-1) Run the virtual shell `pipenv shell`
+1. Run the virtual shell `pipenv shell`
 
-1) Run the following command in the shell to load the sql file into postgres
+1. Run the following command in the shell to load the sql file into postgres
 
 ```
 psql -U postgres -f settings.sql
