@@ -9,6 +9,7 @@ verify_ssl = true
 psycopg2 = "==2.7.7"
 django-heroku = "*"
 gunicorn = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "3.7"
