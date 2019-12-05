@@ -23,4 +23,3 @@ After you have cloned the repository, you'll need to need to make sure that you 
 Then you will need to run the following to install dependencies:
 
 `npm install`
-
