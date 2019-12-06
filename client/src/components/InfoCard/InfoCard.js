@@ -7,6 +7,7 @@ const InfoCard = (props) => {
 
   // Default Class to apply to Component
   let classList = `InfoCard`;
+  let name = ['Group Name', 'Location']
   //if Group Card, classNames are groupName, members, and location
   //if Location card, classNames are locationName and date
 
