@@ -398,4 +398,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Jest Testing Snapshots
+browser/src/__snapshots__
+
 # End of https://www.gitignore.io/api/vim,node,code,react,linux,macos,python,django,windows,sublimetext

@@ -21,11 +21,3 @@ describe('App component', () => {
     expect(component['0'].children[0].name).toBe('header');
   });
 });
-
-// sources:
-//
-// https://medium.com/@rossbulat/testing-in-react-with-jest-and-enzyme-an-introduction-99ce047dfcf8
-//
-// https://www.robinwieruch.de/react-testing-jest
-//
-// https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913
