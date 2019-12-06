@@ -30,6 +30,11 @@
     --social-pinterest: url("../../assets/images/social_pinterest.png");
     --slash-background: url("../../assets/images/splash_background.png");
     --text-box-search: url("../../assets/images/text_box_search.png");
+    /* Font Weights */
+    --paragraph-weight: 14px;
+    --banner-weight: 80px;
+    --link-weight: 24px;
+    --title-weight: 36px;
 }   
 
 .App {
