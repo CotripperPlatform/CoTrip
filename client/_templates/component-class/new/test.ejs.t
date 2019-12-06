@@ -1,7 +1,6 @@
 ---
 to: src/components/<%= name %>/<%= name %>.test.js
 ---
-
 import React from 'react'
 import { shallow, configure } from 'enzyme'
 import <%= name %> from './<%= name %>.js'
