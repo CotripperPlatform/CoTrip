@@ -37,6 +37,28 @@ npm start
 
 ### Usage
 
-#### Components
+#### Prototype
 
 You can find the [mock and clickable prototype here](https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1)
+
+#### Creating New Components
+
+We use [Hygen]() to generate consistent components. We have a generator for class components as well as function components.
+
+Ensure that Hygen is installed globally:
+
+```sh
+npm install hygen -g
+```
+
+To generate a **function** component, run the following
+
+```sh
+hygen component-const new --name NameOfComponent
+```
+
+To generate a **class** component, run the following
+
+```sh
+hygen component-class new --name NameOfComponent
+```
