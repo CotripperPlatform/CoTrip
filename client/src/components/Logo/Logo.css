@@ -1,0 +1,13 @@
+.Logo {
+  background-image: url("./logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20vh;
+  height: 20vh;
+}
+
+.smallLogo {
+  width: 10vh;
+  height: 10vh;
+}
