@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import "./InputTextField.css";
+/**
+ * Created by Tyler
+ *
+ * Props will define the type of input field
+ * Input fields include email, password, name, password, confirm password, city *  of residence, what is your age?, what is your dream destination, First name,*   last name, search my directory w/ magnifying glass,
+ */
 
 // Class Based React Component
 class InputTextField extends Component {
@@ -9,7 +15,7 @@ class InputTextField extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "InputTextField"
+      classList: "input-text-field-container"
     };
   }
 
@@ -23,7 +29,9 @@ class InputTextField extends Component {
   componentWillUnmount() {}
 
   render() {
-    return <div className={this.state.classList}>Input text field</div>;
+    if (this.props.type === "Email") {
+      return <div className={this.state.classList}>Input text hello</div>;
+    }
   }
 }
 
