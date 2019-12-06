@@ -1,16 +1,16 @@
 import React from "react";
-import "./PillTopic.css";
+import "./Pill.css";
 
 // Function based React Component
-const PillTopic = props => {
+const Pill = props => {
   // Default Class to apply to Component
-  let classList = `PillTopic`;
+  let classList = `PillContainer`;
 
   return (
     <div className={classList}>
-      <h1>Topic is broken</h1>
+      <h1 className="pillContainer">Topic</h1>
     </div>
   );
 };
 
-export default PillTopic;
+export default Pill;
