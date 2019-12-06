@@ -1,11 +1,9 @@
-
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import "./InputTextField.css";
 
-
 // Class Based React Component
-class InputTextField extends Component{
-  constructor(props){
+class InputTextField extends Component {
+  constructor(props) {
     super(props);
     console.log(props);
 
@@ -15,24 +13,17 @@ class InputTextField extends Component{
     };
   }
 
-
   // Runs after Component is loaded in the broswer
-  componentDidMount(){}
-
+  componentDidMount() {}
 
   // Runs after a component has been updated
-  componentDidUpdate(){}
-
+  componentDidUpdate() {}
 
   // Runs right before a component is removed from the DOM
-  componentWillUnmount(){}
+  componentWillUnmount() {}
 
-  render(){
-    return(
-      <div className={this.state.classList}>
-        InputTextField
-      </div>
-    );
+  render() {
+    return <div className={this.state.classList}>InputTextField</div>;
   }
 }
 
