@@ -1,7 +1,7 @@
 import React from "react";
 import "./FavoritedCard.css";
-import whiteHeart from "../../public/icon/whiteheart.png";
-import pinkHeart from "../../public/icon/pinkHeart.png";
+import whiteHeart from "./whiteheart.png";
+import pinkHeart from "./pinkHeart.png";
 export default function FavoritedCard({
   topic: { text, favorite, hashtag },
   onStatusChange

@@ -12,8 +12,8 @@ addParameters({
     page: DocsPage
   },
   backgrounds: [
-    { name: "CoTrip", value: "#FFCB08", default: true },
-    { name: "CoTrip2", value: "#6A4C93" }
+    { name: "CoTrip Background Gold", value: "#FFCB08", default: true },
+    { name: "CoTrip Background Purple", value: "#6A4C93" }
   ]
 });
 addDecorator(centered);
