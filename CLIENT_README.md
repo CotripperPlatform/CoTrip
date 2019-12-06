@@ -8,7 +8,7 @@ These instructions will help you get started in getting the React front end to r
 
 ### Prerequisites
 
-Ensure you have the following installed:
+You will need the following installed locally on your machine:
 
 * [ `pipenv` ](https://github.com/pypa/pipenv)
 * [ `pyenv` ](https://github.com/pyenv/pyenv)
@@ -22,4 +22,18 @@ After you have cloned the repository, you'll need to need to make sure that you 
 
 Then you will need to run the following to install dependencies:
 
-`npm install`
+```sh
+npm install
+```
+
+You can then use the following command to start the server on your machine:
+
+```sh
+npm start
+```
+
+### Usage
+
+
+
+#### Components
