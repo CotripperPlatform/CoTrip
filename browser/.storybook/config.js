@@ -9,7 +9,11 @@ addParameters({
   docs: {
     container: DocsContainer,
     page: DocsPage
-  }
+  },
+  backgrounds: [
+    { name: "CoTrip", value: "#FFCB08", default: true },
+    { name: "CoTrip2", value: "#6A4C93" }
+  ]
 });
 addDecorator(StoryRouter());
 
