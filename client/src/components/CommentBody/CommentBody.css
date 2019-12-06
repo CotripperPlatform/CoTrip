@@ -1,0 +1,16 @@
+
+.CommentBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 737px;
+    height: auto;
+    background-color: rgb(196, 196, 196);
+    border: 1px solid rgb(171, 171, 171);
+    font-size: 14px;
+    font-family: "Open Sans";
+}
+.Date {
+    margin-left: 10px;
+}
