@@ -1,4 +1,3 @@
-
 import React from 'react';
 import "./IndividualMomBox.css";
 
@@ -11,7 +10,11 @@ const IndividualMomBox = (props) => {
 
   return(
     <div className={classList}>
-      IndividualMomBox
+      <p className='momName'>Mom Name</p>
+      <div className="MomBoxInfo">
+        <p className="location">Location</p>
+        <p className="hashtags">#Hashtag</p>
+      </div>
     </div>
   );
 }
