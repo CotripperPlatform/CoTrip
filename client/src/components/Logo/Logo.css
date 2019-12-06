@@ -3,11 +3,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 20vh;
-  height: 20vh;
+  width: 4rem;
+  height: 4rem;
 }
 
-.smallLogo {
-  width: 10vh;
-  height: 10vh;
+.small-logo {
+  width: 2rem;
+  height: 2rem;
 }

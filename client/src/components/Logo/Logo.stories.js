@@ -5,4 +5,5 @@ import Logo from "./Logo";
 storiesOf("Logo", module)
   .add("Default", () => <Logo />)
   .add("Small", () => <Logo small />)
-  .add("Clickable Small", () => <Logo small clickable />);
+  .add("Clickable Default Route Small", () => <Logo small clickable />)
+  .add("Clickable Route as Prop", () => <Logo clickable to="/route" />);

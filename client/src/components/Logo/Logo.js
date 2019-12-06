@@ -7,9 +7,15 @@ const Logo = props => {
   // Default Class to apply to Component
   let classList = `Logo`;
   if (props.small) {
-    classList += ` smallLogo`;
+    classList += ` small-logo`;
   }
-  if (props.clickable) {
+  if (props.clickable && props.to) {
+    return (
+      <div className={classList}>
+        <Link to={props.to} />
+      </div>
+    );
+  } else if (props.clickable) {
     return (
       <div className={classList}>
         <Link to="/" />
