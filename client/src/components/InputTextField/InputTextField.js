@@ -15,9 +15,16 @@ class InputTextField extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "input-text-field-container"
+      classList: "input-text-field-container",
+      email: "",
+      name: ""
     };
   }
+
+  changeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+    console.log(this.state.email);
+  };
 
   // Runs after Component is loaded in the broswer
   componentDidMount() {}
@@ -32,7 +39,14 @@ class InputTextField extends Component {
     if (this.props.type === "Email") {
       return (
         <div className={this.state.classList}>
-          <input type="text" name="email" placeholder="Email" />
+          <input type="text" name="email" placeholder="Email" onChange={this.changeHandler} />
+        </div>
+      );
+    }
+    if (this.props.type === "Name") {
+      return (
+        <div className={this.state.classList}>
+          <input type="text" name="name" placeholder="Name" />
         </div>
       );
     }

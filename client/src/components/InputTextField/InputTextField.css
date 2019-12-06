@@ -2,7 +2,8 @@
 }
 
 .input-text-field-container input {
-  color: rgb(186, 186, 186);
+  /* color: rgb(186, 186, 186); */
+  color: black;
   width: 455px;
   height: 55px;
   background-color: #fff;
