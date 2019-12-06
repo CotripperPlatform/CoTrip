@@ -5,7 +5,7 @@ import "./InputTextField.css";
 class InputTextField extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    console.log(hello);
 
     // Default CSS class to apply to the Component
     this.state = {
