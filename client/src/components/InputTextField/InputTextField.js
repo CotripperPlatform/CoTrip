@@ -5,7 +5,7 @@ import "./InputTextField.css";
 class InputTextField extends Component {
   constructor(props) {
     super(props);
-    console.log(hello);
+    console.log(props);
 
     // Default CSS class to apply to the Component
     this.state = {
@@ -23,7 +23,7 @@ class InputTextField extends Component {
   componentWillUnmount() {}
 
   render() {
-    return <div className={this.state.classList}>InputTextField</div>;
+    return <div className={this.state.classList}>Input text field</div>;
   }
 }
 
