@@ -4,6 +4,7 @@ import requireContext from "require-context.macro";
 import "../src/index.css";
 import { addParameters } from "@storybook/react";
 import { DocsPage, DocsContainer } from "@storybook/addon-docs/blocks";
+import centered from "@storybook/addon-centered/react";
 
 addParameters({
   docs: {
@@ -15,6 +16,7 @@ addParameters({
     { name: "CoTrip2", value: "#6A4C93" }
   ]
 });
+addDecorator(centered);
 addDecorator(StoryRouter());
 
 const req = requireContext("../src/components", true, /\.stories\.js$/);
