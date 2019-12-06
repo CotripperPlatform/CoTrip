@@ -1,14 +1,13 @@
 .pillContainer {
-  background-color: red;
-  height: 1.31em;
-  width: 8.81em;
+  height: 1.061vw;
+  width: 7.071vw;
   position: absolute;
   left: 0%;
   right: 0%;
   top: 0%;
   font-family: non-serif;
   bottom: 0%;
-  font-size: 14px;
+  font-size: 0.707vw;
   font-family: sans-serif;
   background: #fb836f;
   font-weight: 350;
