@@ -1,2 +1,13 @@
 .input-text-field-container {
 }
+
+.input-text-field-container input {
+  color: rgb(186, 186, 186);
+  width: 455px;
+  height: 55px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0px 16px;
+  font-size: 20px;
+}

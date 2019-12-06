@@ -30,7 +30,11 @@ class InputTextField extends Component {
 
   render() {
     if (this.props.type === "Email") {
-      return <div className={this.state.classList}>Input text hello</div>;
+      return (
+        <div className={this.state.classList}>
+          <input type="text" name="email" placeholder="Email" />
+        </div>
+      );
     }
   }
 }

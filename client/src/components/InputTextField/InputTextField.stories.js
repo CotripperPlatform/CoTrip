@@ -11,4 +11,6 @@ storiesOf("InputTextField", module)
   .add("First Name", () => <InputTextField type="First Name" />)
   .add("Last Name", () => <InputTextField type="Last Name" />)
   .add("Password", () => <InputTextField type="Password" />)
-  .add("Confirm Password", () => <InputTextField type="Confirm Password" />);
+  .add("Confirm Password", () => <InputTextField type="Confirm Password" />)
+  .add("Search Magnify", () => <InputTextField type="Search Magnify" />)
+  .add("Last Name", () => <InputTextField type="Last Name" />);
