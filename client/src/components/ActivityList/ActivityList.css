@@ -1,4 +1,18 @@
 
 .ActivityList {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 10vw;
+}
 
+.activityContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.activity {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
 }
