@@ -3,11 +3,13 @@
 
 .input-text-field-container input {
   /* color: rgb(186, 186, 186); */
+  display: flex;
   color: black;
   width: 455px;
   height: 55px;
   background-color: #fff;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 2px solid white;
   border-radius: 3px;
   padding: 0px 30px;
   font-size: 20px;
@@ -18,8 +20,24 @@
   width: 175px;
   height: 42px;
   background-color: #fff;
-  border: 2px solid black;
+  /* border: 2px solid black; */
+  border: 2px solid white;
   border-radius: 3px;
   padding: 0px 24px;
   font-size: 16px;
+}
+
+.input-text-field-container svg {
+  position: absolute;
+  height: 48px;
+  width: 60px;
+}
+
+.search input {
+  width: 300px;
+  height: 50px;
+  padding-left: 60px;
+  -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+  box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
 }
