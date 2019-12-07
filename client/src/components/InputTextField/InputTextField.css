@@ -9,6 +9,17 @@
   background-color: #fff;
   border: 2px solid black;
   border-radius: 3px;
-  padding: 0px 16px;
+  padding: 0px 30px;
   font-size: 20px;
+}
+
+.input-text-field-container-small input {
+  color: black;
+  width: 175px;
+  height: 42px;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 0px 24px;
+  font-size: 16px;
 }
