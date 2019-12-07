@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
+
+.Button {
+  width: 200px;
+  height: 50px;
+  background: #fafafa;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #252525;
+}
+.btn-large {
+  width: 302px;
+  height: 65px;
+  font-size: 36px;
+  line-height: 54px;
+}
+.btn-small {
+  width: 175px;
+  height: 44px;
+  font-size: 18px;
+  line-height: 27px;
+}
+.btn-coral {
+  color: #fafafa;
+  background-color: #fb836f;
+}
+.btn-purple {
+  color: #fafafa;
+  background-color: #6a4c93;
+}
+.btn-pink {
+  color: #fafafa;
+  background-color: #d1495b;
+}
+.btn-gold {
+  color: #fafafa;
+  background-color: #ffcb08;
+}
