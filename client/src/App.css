@@ -22,13 +22,15 @@
     --heart-white: url("../../assets/images/heart_white.png");
     --heart-black: url("../../assets/images/heart_black.png");
     --home-banner: url("../../assets/images/home_banner.png");
+    --profile-banner: url("../../assets/images/profile_banner.png");
+    --community-banner: url("../../assets/images/community_banner.png");
     --login-logo: url("../../assets/images/login_logo.png");
     --nav-arrow-purple: url("../../assets/images/nav_arrow_purple.png");
     --nav-arrow-yellow: url("../../assets/images/nav_arrow_yellow.png");
     --social-facebook: url("../../assets/images/social_facebook.png");
     --social-instagram: url("../../assets/images/social_instagram.png");
     --social-pinterest: url("../../assets/images/social_pinterest.png");
-    --slash-background: url("../../assets/images/splash_background.png");
+    --splash-background: url("../../assets/images/splash_background.png");
     --text-box-search: url("../../assets/images/text_box_search.png");
     /* Font Weights */
     --paragraph-weight: 400;
