@@ -12,33 +12,38 @@ class ActivityList extends Component{
       classList: "ActivityList"
     };
     this.momActivityList = ['Spa', 'Wine Nights', 'Brunch with Other Moms'];
-    this.kidsActivityList = ['Snorkeling', 'Hiking', 'Island Hopping', 'Hawaiian Luaus', 'Food Markets'];
+    this.kidsActivityList = ['Snorkeling', 'Hiking', 'Island Hopping', 'Hawaiian Luaus', 'Food Markets', 'Beaches'];
   }
 
-  renderActivities = () => {
-    const momActivities = this.momActivityList
-    const kidsActivities = this.kidsActivityList
-    let activities = [];
-    if (this.props.type === 'mom') {
-      momActivities.forEach(activity => {
-        activities.push(
-          <div className='activity mom'>{activity}</div>
-        )
-      })
-    } else if (this.props.type === 'kids') {
-      kidsActivities.forEach(activity => {
-        activities.push(
-          <div className='activity kids'>{activity}</div>
-        )
-      })
-    }
-    return <div className='activityContainer'>{activities}</div>
+  renderMomActivities = () => {
+    const momActivityList = this.momActivityList
+    let momActivities = [];
+    momActivityList.forEach(activity => {
+      momActivities.push(
+        <div className='activity mom'>
+          <span className='activities'>{activity}</span>
+        </div>
+      )
+    })
+    return <div className='activityContainer'>{momActivities}</div>
+  }
+
+  renderKidsActivities = () => {
+    const kidsActivityList = this.kidsActivityList
+    let kidsActivities = [];
+    kidsActivityList.forEach(activity => {
+      kidsActivities.push(
+        <div className='activity kids'>
+          <span className='activities'>{activity}</span>
+        </div>
+      )
+    })
+    return <div className='activityContainer'>{kidsActivities}</div>
   }
 
   // Runs after Component is loaded in the broswer
   componentDidMount(){
   }
-
 
   // Runs after a component has been updated
   componentDidUpdate(){}
@@ -48,11 +53,18 @@ class ActivityList extends Component{
   componentWillUnmount(){}
   
   render(){
-    const renderActivities = this.renderActivities()
+    const renderMomActivities = this.renderMomActivities()
+    const renderKidsActivities = this.renderKidsActivities()
     return(
       <div className={this.state.classList}>
-        <span className='activityHeader'>Activities for {this.props.label}</span>
-        {renderActivities}
+        <div className='activitiesContainer'>
+          <span className='activityHeader'>Activities for Mom</span>
+          {renderMomActivities}
+        </div>
+        <div className='activitiesContainer'>
+          <span className='activityHeader'>Activities for Mom & Kids</span>
+          {renderKidsActivities}
+        </div>
       </div>
     );
   }

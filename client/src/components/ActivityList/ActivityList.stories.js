@@ -6,15 +6,3 @@ storiesOf('ActivityList', module)
   .add("Default", () => (
     <ActivityList />
   ))
-  .add("Mom", () => (
-    <ActivityList
-      type='mom'
-      label='Mom'
-    />
-  ))
-  .add("Kids", () => (
-    <ActivityList
-      type='kids'
-      label='Mom & Kids'
-    />
-  ))
