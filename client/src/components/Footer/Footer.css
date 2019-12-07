@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap'); /* Will eventually delete */
+
 .Footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 100vw;
-    height: 75px;
+    height: 50px;
     background-color: #FFCB06; /* Change colors once css variables are merged */
+    font-family: 'Reem Kufi', sans-serif; /* Will eventually delete */
+}
+
+.Footer a, .Footer a:active, .Footer a:link, .Footer a:visited { 
+    color: #252525; /* Change colors once css variables are merged */
 }
 
 .footer-left, .footer-right, .footer-center {
@@ -27,6 +34,10 @@
 }
 
 @media only screen and (max-width:1000px) {
+
+    .Footer {
+        height: 75px;
+    }
 
     .footer-right {
         flex-direction: column;
