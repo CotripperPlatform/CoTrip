@@ -21,7 +21,14 @@ const PreviousTripHashtagCard = props => {
   } else if (props.trips.length > 0) {
     return (
       <div className={classList}>
-        <div className="trips-header">hiiii</div>
+        <div className="trips-content-container">
+          <h1>Previous Trips</h1>
+          <div className="trips-names-container">
+            {props.trips.map(trip => {
+              return <h3>{trip}</h3>;
+            })}
+          </div>
+        </div>
       </div>
     );
   }

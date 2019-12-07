@@ -4,4 +4,8 @@ import PreviousTripHashtagCard from "./PreviousTripHashtagCard";
 
 storiesOf("PreviousTripHashtagCard", module)
   .add("Previous Trips, Empty", () => <PreviousTripHashtagCard trips={[]} />)
-  .add("Previous Trips", () => <PreviousTripHashtagCard trips={["New York", "Mexico"]} />);
+  .add("Previous Trips", () => (
+    <PreviousTripHashtagCard
+      trips={["New York", "Mexico", "Wakanda", "Hawaii", "Japan", "Canada", "Italy"]}
+    />
+  ));

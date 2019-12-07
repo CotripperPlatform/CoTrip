@@ -34,3 +34,24 @@
   font-size: 18px;
   color: #fff;
 }
+.trips-content-container a:hover {
+  color: #ffcb06;
+}
+
+.trips-names-container {
+  /* border: 2px solid saddlebrown; */
+  position: relative;
+  left: 47%;
+  top: 30%;
+  width: 350px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.trips-names-container h3 {
+  padding: 0px 10px 0px 10px;
+  color: #fff;
+  font-size: 22px;
+}
