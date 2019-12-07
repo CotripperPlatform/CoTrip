@@ -1,0 +1,18 @@
+
+.CarouselDots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.CarouselDot {
+}
+
+.UnselectedDot {
+
+}
+
+.SelectedDot {
+
+}
