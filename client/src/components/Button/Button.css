@@ -11,6 +11,13 @@
   line-height: 36px;
   text-align: center;
   color: #252525;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+.Button:hover {
+  background-color: #fcf0ee;
 }
 .btn-large {
   width: 302px;
@@ -28,15 +35,27 @@
   color: #fafafa;
   background-color: #fb836f;
 }
+.btn-coral:hover {
+  background-color: #ff6a50;
+}
 .btn-purple {
   color: #fafafa;
   background-color: #6a4c93;
+}
+.btn-purple:hover {
+  background-color: #592d96;
 }
 .btn-pink {
   color: #fafafa;
   background-color: #d1495b;
 }
+.btn-pink:hover {
+  background-color: #d42e44;
+}
 .btn-gold {
   color: #fafafa;
   background-color: #ffcb08;
+}
+.btn-gold:hover {
+  background-color: #f5c000;
 }
