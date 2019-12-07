@@ -39,7 +39,7 @@
 }
 
 .trips-names-container {
-  border: 2px solid saddlebrown;
+  /* border: 2px solid saddlebrown; */
   position: relative;
   left: 47%;
   top: 30%;
@@ -57,7 +57,8 @@
   text-align: center;
   height: 30px;
   width: 100px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
+  padding: 5px 5px 5px 5px;
 }
