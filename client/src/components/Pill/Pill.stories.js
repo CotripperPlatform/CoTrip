@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { storiesOf } from "@storybook/react";
 import Pill from "./Pill";
-const topic = "Passed as a Prop";
-storiesOf("Pill", module).add("Default", () => <Pill topic={topic} />);
+const text = "Passed as a Prop";
+const backgroundColor = "orange";
+storiesOf("Pill", module).add("Default", () => (
+  <Pill text={text} backgroundColor={backgroundColor} />
+));
