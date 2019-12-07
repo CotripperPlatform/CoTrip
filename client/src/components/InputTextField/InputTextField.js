@@ -5,7 +5,9 @@ import searchIcon from "../../../../assets/images/global-nav_search_icon.png";
  * Created by Tyler
  *
  * Props will define the type of input field
- * Input fields include email, password, name, confirm password, city of residence, what is your age?, what is your dream destination, First name,   last name, search my directory w/ magnifying glass,
+ * Input fields include email, password, name, confirm password, city of residence, what is your age?, what is your dream destination, First name,   last name, search my directory, search trips.
+ *
+ * I think we'll need to implement a function on these to retrieve the data typed in when pressing a submit button. I wasn't sure how to do this with just the standalone components in storybook.
  */
 
 // Class Based React Component
