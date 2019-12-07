@@ -4,7 +4,7 @@ import "./ButtonSubmit.css";
 // Function based React Component
 const ButtonSubmit = props => {
   // Default Class to apply to Component
-  let classList = "";
+  let classList = "ButtonSubmit";
   let types = [
     "followed",
     "favorited",
@@ -21,7 +21,7 @@ const ButtonSubmit = props => {
     "post"
   ];
   if (types.includes(props.type)) {
-    classList += ` ButtonSubmit-${props.type}`;
+    classList += ` ${classList}-${props.type}`;
   }
   return <button className={classList}>{props.label && <span>{props.label} </span>}</button>;
 };
