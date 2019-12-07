@@ -5,15 +5,25 @@ import "./ButtonSubmit.css";
 const ButtonSubmit = props => {
   // Default Class to apply to Component
   let classList = "";
-  let types = ["followed", "favorited", "next", "register"];
+  let types = [
+    "followed",
+    "favorited",
+    "next",
+    "finish",
+    "login",
+    "joinTribe",
+    "register",
+    "connect",
+    "message",
+    "join",
+    "book",
+    "follow",
+    "post"
+  ];
   if (types.includes(props.type)) {
     classList += ` ButtonSubmit-${props.type}`;
   }
-  return (
-    <button className={classList} onClick={props.onClick}>
-      {props.label && <span>{props.label}</span>}
-    </button>
-  );
+  return <button className={classList}>{props.label && <span>{props.label} </span>}</button>;
 };
 
 export default ButtonSubmit;
