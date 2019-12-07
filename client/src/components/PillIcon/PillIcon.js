@@ -9,8 +9,9 @@ class PillIcon extends Component {
   render() {
     return (
       <div style={{ backgroundColor: this.props.backgroundColor }} className="pill-container">
-        <h1>{this.props.text}</h1>
-        <img src={Heart} />
+        <span>
+          <img src={Heart} /> <h1>{this.props.text}</h1>
+        </span>
       </div>
     );
   }
