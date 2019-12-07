@@ -1,15 +1,6 @@
 import React, { Component } from "react";
 import "./PillIcon.css";
-
-// Function based React Component
-// const PillIcon = props => {
-//   // Default Class to apply to Component
-//   let classList = `PillIcon`;
-
-//   return <div className={classList}>PillIcon</div>;
-// };
-
-// export default PillIcon;
+import Heart from "./Icon/icon.svg";
 
 class PillIcon extends Component {
   constructor(props) {
@@ -18,7 +9,8 @@ class PillIcon extends Component {
   render() {
     return (
       <div style={{ backgroundColor: this.props.backgroundColor }} className="pill-container">
-        {this.props.text}
+        <h1>{this.props.text}</h1>
+        <img src={Heart} />
       </div>
     );
   }
