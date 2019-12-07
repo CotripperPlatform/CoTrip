@@ -4,11 +4,11 @@ import "./Pill.css";
 // Function based React Component
 const Pill = props => {
   // Default Class to apply to Component
-  let classList = `PillContainer`;
+  let classList = `pill-container`;
 
   return (
     <div className={classList}>
-      <h1 className="pillContainer">Topic</h1>
+      <h1 className="pill-container">Topic</h1>
     </div>
   );
 };
