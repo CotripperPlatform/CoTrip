@@ -39,19 +39,25 @@
 }
 
 .trips-names-container {
-  /* border: 2px solid saddlebrown; */
+  border: 2px solid saddlebrown;
   position: relative;
   left: 47%;
   top: 30%;
   width: 350px;
-  height: 180px;
+  height: 200px;
   transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
 }
-.trips-names-container h3 {
-  padding: 0px 10px 0px 10px;
+
+.single-trip-container {
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  border: 2px solid black;
   color: #fff;
-  font-size: 22px;
+  font-size: 18px;
 }
