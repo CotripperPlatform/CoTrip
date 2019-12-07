@@ -9,9 +9,19 @@ const Footer = (props) => {
   let classList = `Footer`;
 
 
-  return(
+  return (
     <div className={classList}>
-      Footer
+      <div className="footer-left">
+        <a href="">Sitemap</a>
+      </div>
+      <div className="footer-center">
+        <a href="mailto:info@cotripper.co?">info@cotripper.co</a>
+      </div>
+      <div className="footer-right">
+        <a href="">Instagram</a>
+        <a href="">Facebook</a>
+        <a href="">Meetup</a>
+      </div>
     </div>
   );
 }
