@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
+
+.PinkHeader {
+    background-image: url('./cotripper_banner2-01.png');
+    border: 2px solid black;
+    width: 1440px;
+    height: 231px;
+    margin: 0 auto;
+}
+
+.box{
+    margin-top: 15px;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Reem Kufi', sans-serif;
+    color: #FAFAFA;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    margin: 0;
+}
+
+input{
+    background-image: url("./search@2x.png");
+    background-color: #FAFAFA;
+    /* box-sizing: border-box; */
+    /* left: 557px;
+    top: 237px; */
+    width: 356px;
+    height: 48px;
+    padding: 17px; 
+    padding-left:55px;
+    font-size:25px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Reem Kufi', sans-serif;
+    background-repeat:no-repeat;
+    background-position:left center;
+    border: 1px solid #E5E5E5;
+    border-radius: 3px;
+    /* outline:0; */
+}
