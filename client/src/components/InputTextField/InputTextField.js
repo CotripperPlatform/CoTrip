@@ -41,11 +41,17 @@ class InputTextField extends Component {
   componentWillUnmount() {}
 
   render() {
-    let type = this.props.type;
+    let { type, name, placeholder, onChange } = this.props;
+    let classList = "input-text-field-container";
+    if (this.props.type === "small") {
+      classList = "input-text-field-container-small";
+    } else if (this.props.search) {
+      classList = "input-text-field-container search";
+    }
 
     return (
-      <div className={this.state.classList}>
-        <input type="text" name="email" placeholder={type} onChange={this.props.changeHandler} />
+      <div className={classList}>
+        <input type="text" name={name} placeholder={placeholder} onChange={onChange} />
       </div>
     );
 
