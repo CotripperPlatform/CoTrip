@@ -41,13 +41,14 @@ class InputTextField extends Component {
   componentWillUnmount() {}
 
   render() {
-    if (this.props.type === "Email") {
-      return (
-        <div className={this.state.classList}>
-          <input type="text" name="email" placeholder="Email" onChange={this.changeHandler} />
-        </div>
-      );
-    }
+    let type = this.props.type;
+
+    return (
+      <div className={this.state.classList}>
+        <input type="text" name="email" placeholder={type} onChange={this.props.changeHandler} />
+      </div>
+    );
+
     if (this.props.type === "Name") {
       return (
         <div className={this.state.classList}>
