@@ -1,8 +1,4 @@
-.input-text-field-container {
-}
-
 .input-text-field-container input {
-  /* color: rgb(186, 186, 186); */
   display: flex;
   color: black;
   width: 455px;
@@ -13,6 +9,7 @@
   border-radius: 3px;
   padding: 0px 30px;
   font-size: 20px;
+  font-family: var(--default-font);
 }
 
 .input-text-field-container-small input {
@@ -25,6 +22,7 @@
   border-radius: 3px;
   padding: 0px 24px;
   font-size: 16px;
+  font-family: var(--default-font);
 }
 
 .input-text-field-container svg {
