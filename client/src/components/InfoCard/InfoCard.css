@@ -2,24 +2,48 @@
 .InfoCard {
     width: 220px;
     height: 150px;
+    padding: 10px;
     border-radius: 3px;
-    background-color: #FB836F;
+    background-color: var(--pink);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    color: white;
-}
-
-.groupName {
+    color: var(--white);
+    font-family: var(--default-font);
     font-size: 24px;
-    text-align: center;
-    position: absolute;
-    top: 25%;
-    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-.infoCardInfo {
+.group {
+    justify-content: space-between;
+}
+
+.location {
+    justify-content: center;
+}
+
+.group-name {
+    padding: 10px;
+}
+
+.location-name {
+    text-align: center;
+    padding: 30px;
+}
+
+.info-card-info,
+.date {
     display: flex;
     width: 220px;
-    height: 150px;
+}
+
+.info-card-info {
+    justify-content: space-around;
+    font-size: 14px;
     align-items: flex-end;
-    align-content: space-between;
+}
+
+.date {
+    justify-content: center;
+    font-size: 16px;
+    align-self: flex-end;
 }
