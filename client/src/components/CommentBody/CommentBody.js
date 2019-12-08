@@ -5,6 +5,8 @@ import "./CommentBody.css";
 // Function based React Component
 const CommentBody = (props) => {
   // Default Class to apply to Component
+  // No props right now but when there is data we can use 
+  // this.props.comment and this.props.date
   let classList = `CommentBody`;
 
 
@@ -15,10 +17,12 @@ const CommentBody = (props) => {
       accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo 
       inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim 
       ipsam voluptatem quia voluptas sit aspernatur aut odit
+      {/* {this.props.comment} */}
       </p>
       <p className="Date">
       Date <br/>
       Time
+      {/* {this.props.date} */}
       </p>
     </div>
   );
