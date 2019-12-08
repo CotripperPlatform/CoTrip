@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./InputSelect.css";
+import PropTypes from "prop-types";
 
 // Class Based React Component
 class InputSelect extends Component {
@@ -7,7 +8,6 @@ class InputSelect extends Component {
     super(props);
     console.log(props);
 
-    // Default CSS class to apply to the Component
     this.state = {
       classList: "InputSelect",
       value: "select"
@@ -18,45 +18,36 @@ class InputSelect extends Component {
   handleChange(e) {
     e.preventDefault();
     this.setState({ value: e.target.value });
-    this.props.callback();
+    this.props.onSelect(e.target.value);
   }
-  // Runs after Component is loaded in the browser
-  componentDidMount() {}
-
-  // Runs after a component has been updated
-  componentDidUpdate() {}
-
-  // Runs right before a component is removed from the DOM
-  componentWillUnmount() {}
 
   render() {
-    if (this.props.options) {
-      return (
-        <select
-          className={this.state.classList}
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-          {this.props.options.map(option => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-        </select>
-      );
-    } else {
-      return (
-        <select
-          className={this.state.classList}
-          value={this.state.value}
-          onChange={this.handleChange}
-        >
-          <option value="Option 1">Option 1</option>
-          <option value="Option 2">Option 2</option>
-        </select>
-      );
-    }
+    return (
+      <select
+        className={this.state.classList}
+        value={this.state.value}
+        onChange={this.handleChange}
+      >
+        {this.props.options.map(option => (
+          <option key={option.value} value={option.value}>
+            {this.props.optionPrefix} {option.title}
+          </option>
+        ))}
+      </select>
+    );
   }
 }
+InputSelect.defaultProps = {
+  optionPrefix: "Sort By: ",
+  options: [
+    { value: "option1", title: "Option 1" },
+    { value: "option2", title: "Option 2" }
+  ]
+};
+InputSelect.propTypes = {
+  optionPrefix: PropTypes.string,
+  options: PropTypes.array,
+  onSelect: PropTypes.func.isRequired
+};
 
 export default InputSelect;
