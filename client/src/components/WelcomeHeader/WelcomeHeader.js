@@ -1,5 +1,6 @@
 import React from "react";
 import "./WelcomeHeader.css";
+import "../../App.css";
 
 // Created by Tyler. Not sure what font we're going with yet so feel free to adjust that and play around with the font size.
 const WelcomeHeader = props => {

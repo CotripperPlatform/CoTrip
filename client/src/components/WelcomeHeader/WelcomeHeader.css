@@ -1,13 +1,14 @@
 .welcome-header {
   width: 1440px;
-  height: 380px;
-  background-image: url("../../../../assets/images/home_banner.png");
+  min-height: 380px;
+  height: 30vh;
+  background-image: var(--home-banner);
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
   text-align: center;
   line-height: 400%;
-  color: white;
+  color: var(--white);
   font-size: 90px;
-  /* font-family: ???; */
+  font-family: var(--default-font);
 }
