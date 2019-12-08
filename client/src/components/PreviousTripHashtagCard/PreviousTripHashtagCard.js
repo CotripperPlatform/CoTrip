@@ -35,9 +35,7 @@ const PreviousTripHashtagCard = props => {
       </div>
     );
   }
-  // each item will have to be a link
-  // each item will be numbered
-  const NUMS_ARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+  // each item will have to link to some sort of search page that uses the hashtag as a search query.
   if (props.data.length > 0 && props.type === "hashtags") {
     return (
       <div className={classListHashtags}>
@@ -55,6 +53,18 @@ const PreviousTripHashtagCard = props => {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </div>
+    );
+    // not totally sure what this should display when it's empty. Hypothetically it would never even be empty?
+  } else if (props.data.length === 0 && props.type === "hashtags") {
+    return (
+      <div className={classListHashtags}>
+        <div className="trips-content-container">
+          <h1>Previous Trips</h1>
+          <div className="no-trips-container">
+            <h2>No hashtags yet!</h2>
           </div>
         </div>
       </div>

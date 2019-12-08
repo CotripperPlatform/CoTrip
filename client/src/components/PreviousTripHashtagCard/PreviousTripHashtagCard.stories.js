@@ -15,4 +15,5 @@ storiesOf("PreviousTripHashtagCard", module)
       data={["#dope", "#torch", "#hawaii", "#kids", "#cats", "#dogs", "#Italy"]}
       type="hashtags"
     />
-  ));
+  ))
+  .add("Trending Hashtags, Empty", () => <PreviousTripHashtagCard data={[]} type="hashtags" />);
