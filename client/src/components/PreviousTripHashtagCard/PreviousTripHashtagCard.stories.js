@@ -10,9 +10,39 @@ storiesOf("PreviousTripHashtagCard", module)
       type="trips"
     />
   ))
+  .add("Previous Trips, Lots of Data", () => (
+    <PreviousTripHashtagCard
+      data={[
+        "New York",
+        "Mexico",
+        "Wakanda",
+        "Hawaii",
+        "Japan",
+        "Canada",
+        "Italy",
+        "Valhalla",
+        "Crait",
+        "Hylia",
+        "Shambala",
+        "Jakku",
+        "North Pole"
+      ]}
+      type="trips"
+    />
+  ))
   .add("Trending Hashtags", () => (
     <PreviousTripHashtagCard
-      data={["#dope", "#torch", "#hawaii", "#kids", "#cats", "#dogs", "#Italy"]}
+      data={[
+        "#dope",
+        "#torch",
+        "#hawaii",
+        "#kids",
+        "#cats",
+        "#dogs",
+        "#italy",
+        "starwars",
+        "babyyoda"
+      ]}
       type="hashtags"
     />
   ))
