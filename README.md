@@ -7,46 +7,12 @@ single-mothers.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+### Setup and Installation
 
-Ensure you have the following installed:
+For setup and installation instructions, see the readmes for the API and Client:
 
-* [ `pipenv` ](https://github.com/pypa/pipenv)
-* [ `pyenv` ](https://github.com/pyenv/pyenv)
-* [ `node` ](https://nodejs.org/en/) (>11.0.0)
-
-### Installing
-
-#### API
-
-We use `pipenv` to manage dependencies and a virtual environment for this
-project. So change into the `api/` directory and setup pipenv:
-
-```sh
-pipenv install
-```
-
-Once you've done so, either be sure to run any command within the environment:
-
-```sh
-pipenv run python manage.py runserver
-```
-
-Or start the shell:
-
-```sh
-pipenv run shell
-python manage.py runserver
-```
-
-#### Client
-
-The client-side application is built with React using `create-react-app`. To
-install and setup, just install everything with npm:
-
-```sh
-npm install
-```
+- [API Readme](./client/README.md)
+- [Client Readme](./api/README.md)
 
 ### Coding Style
 
