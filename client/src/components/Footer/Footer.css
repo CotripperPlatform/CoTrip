@@ -6,12 +6,12 @@
     align-items: center;
     min-width: 100vw;
     height: 50px;
-    background-color: #FFCB06; /* Change colors once css variables are merged */
+    background-color: var(--yellow);
     font-family: 'Reem Kufi', sans-serif; /* Will eventually delete */
 }
 
 .Footer a, .Footer a:active, .Footer a:link, .Footer a:visited { 
-    color: #252525; /* Change colors once css variables are merged */
+    color: var(--black)
 }
 
 .footer-left, .footer-right, .footer-center {
