@@ -16,26 +16,26 @@ class Modal extends Component {
   // Runs after Component is loaded in the broswer
   componentDidMount() { }
   render() {
-    if (this.props.join){
-      return(
+    if (this.props.join) {
+      return (
         <div className={this.state.classList}>
-        <div className="modal-header">
-          <span className="close-modal-btn">×</span>
-        </div>
-        <div className="modal-body">
-          <div className="htag">
-            <h3>Are you sure you want to join {this.props.children}?</h3>
+          <div className="modal-header">
+            <span className="close-modal-btn">×</span>
+          </div>
+          <div className="modal-body">
+            <div className="htag">
+              <h3>Are you sure you want to join {this.props.children}?</h3>
+            </div>
+          </div>
+          <div className="modal-footer">
+            <div className="cancel">
+              <button className="cancel">Cancel</button>
+            </div>
+            <div className="confirm">
+              <button className="confirm">Join</button>
+            </div>
           </div>
         </div>
-        <div className="modal-footer">
-          <div className="cancel">
-            <p>Cancel</p>
-          </div>
-          <div className="confirm">
-            <p>join</p>
-          </div>
-        </div>
-      </div>
       )
     }
     return (
@@ -50,10 +50,10 @@ class Modal extends Component {
         </div>
         <div className="modal-footer">
           <div className="cancel">
-            <p>Cancel</p>
+            <button className="cancel">Cancel</button>
           </div>
           <div className="confirm">
-            <p>Confirm</p>
+            <button className="confirm">Confirm</button>
           </div>
         </div>
       </div>
