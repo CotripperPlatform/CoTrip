@@ -1,105 +1,105 @@
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
 
 .ActivityList {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 0px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 40px;
 }
 
 .activitiesContainer {
-    padding: 20px 0px;
+  padding: 20px 0px;
 }
 
 .activityHeader {
-    font-family: 'Reem Kufi', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 54px;
-    color: #6A4C93;
+  font-family: "Reem Kufi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 54px;
+  color: #6a4c93;
 }
 
 .activityContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .activity {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 180px;
-    height: 135px;
-    border-radius: 3px;
-    margin: 40px 40px 20px 0px;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 135px;
+  border-radius: 3px;
+  margin: 40px 40px 20px 0px;
+  padding: 10px;
 }
 
 .activities {
-    font-family: 'Reem Kufi', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 36px;
-    color: #FAFAFA;
-    text-align: center;
+  font-family: "Reem Kufi", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  color: #fafafa;
+  text-align: center;
 }
 
 .mom {
-    background: #6A4C93;
+  background: #6a4c93;
 }
 
 .kids {
-    background: #D1495B;
+  background: #d1495b;
 }
 
 @media all and (max-width: 1024px) and (min-width: 721px) {
-    .activityList {
-        width: 75vw;
-        padding: 0px 30px;
-    }
-    .activityHeader {
-        font-size: 27px;
-        line-height: 40.5px;
-    }
-    .activity {
-        width: 135px;
-        height: 101.25px;
-        margin: 30px 30px 15px 0px;
-        padding: 7.5px;
-    }
-    .activitiesContainer {
-        padding: 15px 0px;
-    }
-    .activities {
-        font-size: 18px;
-        line-height: 27px;
-    }
+  .activityList {
+    width: 75vw;
+    padding: 0px 30px;
+  }
+  .activityHeader {
+    font-size: 27px;
+    line-height: 40.5px;
+  }
+  .activity {
+    width: 135px;
+    height: 101.25px;
+    margin: 30px 30px 15px 0px;
+    padding: 7.5px;
+  }
+  .activitiesContainer {
+    padding: 15px 0px;
+  }
+  .activities {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }
 
 @media all and (max-width: 720px) {
-    .activityList {
-        width: 50%;
-        padding: 0px 20px;
-    }
-    .activityHeader {
-        font-size: 18px;
-        line-height: 27px;
-    }
-    .activity {
-        width: 90px;
-        height: 67.5px;
-        margin: 20px 20px 10px 0px;
-        padding: 5px;
-    }
-    .activitiesContainer {
-        padding: 10px 0px;
-    }
-    .activities {
-        font-size: 12px;
-        line-height: 18px;
-    }
+  .activityList {
+    width: 50%;
+    padding: 0px 20px;
+  }
+  .activityHeader {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .activity {
+    width: 90px;
+    height: 67.5px;
+    margin: 20px 20px 10px 0px;
+    padding: 5px;
+  }
+  .activitiesContainer {
+    padding: 10px 0px;
+  }
+  .activities {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }

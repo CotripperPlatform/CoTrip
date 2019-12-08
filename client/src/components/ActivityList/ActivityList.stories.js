@@ -1,8 +1,5 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import ActivityList from './ActivityList';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import ActivityList from "./ActivityList";
 
-storiesOf('ActivityList', module)
-  .add("Default", () => (
-    <ActivityList />
-  ))
+storiesOf("ActivityList", module).add("Default", () => <ActivityList />);
