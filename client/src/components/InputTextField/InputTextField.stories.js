@@ -23,6 +23,8 @@ storiesOf("InputTextField", module)
     <InputTextField name="confirm password" placeholder="Confirm Password" />
   ))
   .add("Search Directory", () => (
-    <InputTextField name="search directory" placeholder="Search Directory" />
+    <InputTextField type="search" name="search directory" placeholder="Search Directory" />
   ))
-  .add("Search Trips", () => <InputTextField name="search trips" placeholder="Search Trips" />);
+  .add("Search Trips", () => (
+    <InputTextField type="search" name="search trips" placeholder="Search Trips" />
+  ));
