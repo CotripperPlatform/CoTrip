@@ -17,3 +17,13 @@ storiesOf('PinkHeader', module)
     <PinkHeader
         Trip/>
   ))
+  .add("Directory: My Friends", () => (
+    <PinkHeader
+        Friends
+        placeholder="Search My Directory"/>
+  ))
+  .add("Directory: My Groups", () => (
+    <PinkHeader
+        Groups
+        placeholder="Search My Directory"/>
+  ))

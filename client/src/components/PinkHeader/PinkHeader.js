@@ -17,10 +17,46 @@ class PinkHeader extends Component {
   }
 
   render() {
+    if (this.props.Groups) {
+      return (
+        <div className={this.state.classList}>
+          <div className="box">
+            <div className="header">
+              <h3>Directory: My Groups</h3>
+            </div>
+            <div className="box2">
+              <div className="container-1">
+                <span className="icon"><img src={Search} /></span>
+                <input type="search" id="search" placeholder={this.props.placeholder} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (this.props.Friends) {
+      return (
+        <div className={this.state.classList}>
+          <div className="box">
+            <div className="header">
+              <h3>Directory: My Friends</h3>
+            </div>
+            <div className="box2">
+              <div className="container-1">
+                <span className="icon"><img src={Search} /></span>
+                <input type="search" id="search" placeholder={this.props.placeholder} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
     if (this.props.Trip) {
       return (
         <div className={this.state.classList}>
-          <div className="box" style={{marginTop: "75px"}}>
+          <div className="box" style={{ marginTop: "75px" }}>
             <div className="header">
               <h3>Trip: {this.props.children}</h3>
             </div>
