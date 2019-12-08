@@ -1,13 +1,7 @@
-* {
-  border: 1px solid red;
-}
 .backgroundImage {
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-.first {
 }
 
 .textHolder {
@@ -22,7 +16,7 @@
 }
 
 .textHolder h3 {
-  color: rgba(237, 230, 230, 0.85);
+  color: rgb(242, 235, 235);
   font: 1.2vw Helvetica, Sans-Serif;
   letter-spacing: -1px;
   width: 100%;
@@ -31,7 +25,8 @@
 
 .textHolder .first {
   color: white;
-  font: bold 1.4vw Helvetica, Sans-Serif;
+  font: bold 1.5vw Helvetica, Sans-Serif;
+  margin: 14% 0 5%;
 }
 
 .ImageCard {
