@@ -7,12 +7,12 @@
   width: 100%;
 }
 
-.textEl {
+.first {
 }
 
 .textHolder {
   position: absolute;
-  top: 200px;
+  top: 12%;
   left: 0;
   width: 100%;
   display: flex;
@@ -22,14 +22,19 @@
 }
 
 .textHolder h3 {
-  color: white;
-  font: bold 24px/45px Helvetica, Sans-Serif;
+  color: rgba(237, 230, 230, 0.85);
+  font: 1.2vw Helvetica, Sans-Serif;
   letter-spacing: -1px;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  width: 15%;
+  width: 100%;
+  text-align: center;
+}
+
+.textHolder .first {
+  color: white;
+  font: bold 1.4vw Helvetica, Sans-Serif;
 }
 
 .ImageCard {
   position: relative;
+  width: 17vw;
 }

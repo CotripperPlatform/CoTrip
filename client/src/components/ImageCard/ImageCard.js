@@ -6,7 +6,10 @@ const ImageCard = props => {
   // Default Class to apply to Component
   let classList = `ImageCard`;
   let image = <img className="backgroundImage" src={props.url} alt="trip background" />;
-  let textEls = props.text.map(text => {
+  let textEls = props.text.map((text, index) => {
+    if (index == 0) {
+      return <h3 className="first">{text}</h3>;
+    }
     return <h3 className="textEl">{text}</h3>;
   });
   return (
