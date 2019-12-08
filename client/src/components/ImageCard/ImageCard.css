@@ -1,4 +1,7 @@
+.backgroundImage {
+  position: absolute;
+}
 
 .ImageCard {
-
+  position: relative;
 }
