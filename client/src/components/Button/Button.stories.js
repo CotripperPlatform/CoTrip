@@ -12,14 +12,12 @@ storiesOf("Button", module)
   .add("Large Default Button", () => (
     <Button text="Submit" size="large" handleClick={handleClick} />
   ))
-  .add("Small Coral Button", () => (
-    <Button text="Submit" color="coral" size="small" handleClick={handleClick} />
+  .add("Small Pink Button", () => (
+    <Button text="Submit" color="pink" size="small" handleClick={handleClick} />
   ))
-  .add("Normal Coral Button", () => (
-    <Button text="Submit" color="coral" handleClick={handleClick} />
-  ))
-  .add("Large Coral Button", () => (
-    <Button text="Submit" color="coral" size="large" handleClick={handleClick} />
+  .add("Normal Pink Button", () => <Button text="Submit" color="pink" handleClick={handleClick} />)
+  .add("Large Pink Button", () => (
+    <Button text="Submit" color="pink" size="large" handleClick={handleClick} />
   ))
   .add("Small Purple Button", () => (
     <Button text="Submit" color="purple" size="small" handleClick={handleClick} />
@@ -30,17 +28,19 @@ storiesOf("Button", module)
   .add("Large Purple Button", () => (
     <Button text="Submit" color="purple" size="large" handleClick={handleClick} />
   ))
-  .add("Small Pink Button", () => (
-    <Button text="Submit" color="pink" size="small" handleClick={handleClick} />
+  .add("Small Red Button", () => (
+    <Button text="Submit" color="red" size="small" handleClick={handleClick} />
   ))
-  .add("Normal Pink Button", () => <Button text="Submit" color="pink" handleClick={handleClick} />)
-  .add("Large Pink Button", () => (
-    <Button text="Submit" color="pink" size="large" handleClick={handleClick} />
+  .add("Normal Red Button", () => <Button text="Submit" color="red" handleClick={handleClick} />)
+  .add("Large Red Button", () => (
+    <Button text="Submit" color="red" size="large" handleClick={handleClick} />
   ))
-  .add("Small Gold Button", () => (
-    <Button text="Submit" color="gold" size="small" handleClick={handleClick} />
+  .add("Small Yellow Button", () => (
+    <Button text="Submit" color="yellow" size="small" handleClick={handleClick} />
   ))
-  .add("Normal Gold Button", () => <Button text="Submit" color="gold" handleClick={handleClick} />)
-  .add("Large Gold Button", () => (
-    <Button text="Submit" color="gold" size="large" handleClick={handleClick} />
+  .add("Normal Yellow Button", () => (
+    <Button text="Submit" color="yellow" handleClick={handleClick} />
+  ))
+  .add("Large Yellow Button", () => (
+    <Button text="Submit" color="yellow" size="large" handleClick={handleClick} />
   ));

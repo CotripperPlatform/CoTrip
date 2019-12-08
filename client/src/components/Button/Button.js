@@ -1,4 +1,5 @@
 import React from "react";
+import "./../../App.css";
 import "./Button.css";
 
 const Button = props => {
@@ -6,7 +7,7 @@ const Button = props => {
     color: "color",
     size: "size"
   };
-  let classList = `Button btn-${props.color} btn-${props.size}`;
+  let classList = `button button-${props.color} button-${props.size}`;
 
   return (
     <button className={classList} onClick={() => props.handleClick()}>

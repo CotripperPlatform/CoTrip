@@ -1,61 +1,59 @@
-@import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
-
-.Button {
+.button {
   width: 200px;
   height: 50px;
-  background: #fafafa;
+  background: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-  font-family: "Reem Kufi", sans-serif;
+  font-family: var(--default-font);
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  color: #252525;
+  color: var(--black);
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
 }
-.Button:hover {
+.button:hover {
   background-color: #fcf0ee;
 }
-.btn-large {
+.button-large {
   width: 302px;
   height: 65px;
   font-size: 36px;
   line-height: 54px;
 }
-.btn-small {
+.button-small {
   width: 175px;
   height: 44px;
   font-size: 18px;
   line-height: 27px;
 }
-.btn-coral {
-  color: #fafafa;
-  background-color: #fb836f;
+.button-pink {
+  color: var(--white);
+  background-color: var(--pink);
 }
-.btn-coral:hover {
+.button-pink:hover {
   background-color: #ff6a50;
 }
-.btn-purple {
-  color: #fafafa;
-  background-color: #6a4c93;
+.button-purple {
+  color: var(--white);
+  background-color: var(--purple);
 }
-.btn-purple:hover {
+.button-purple:hover {
   background-color: #592d96;
 }
-.btn-pink {
-  color: #fafafa;
-  background-color: #d1495b;
+.button-red {
+  color: var(--white);
+  background-color: var(--red);
 }
-.btn-pink:hover {
+.button-red:hover {
   background-color: #d42e44;
 }
-.btn-gold {
-  color: #fafafa;
-  background-color: #ffcb08;
+.button-yellow {
+  color: var(--white);
+  background-color: var(--yellow);
 }
-.btn-gold:hover {
+.button-yellow:hover {
   background-color: #f5c000;
 }
