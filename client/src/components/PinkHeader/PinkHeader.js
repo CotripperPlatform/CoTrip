@@ -20,13 +20,13 @@ class PinkHeader extends Component {
     return (
       <div className={this.state.classList}>
         <div className="box">
-          <div>
+          <div className="header">
             <h3>User Profile</h3>
           </div>
-          <div class="box">
-            <div class="container-1">
-              <span class="icon"><img src={Search}/></span>
-              <input type="search" id="search" placeholder="Search..." />
+          <div className="box2">
+            <div className="container-1">
+              <span className="icon"><img src={Search}/></span>
+              <input type="search" id="search" placeholder={this.props.placeholder} />
             </div>
           </div>
         </div>
