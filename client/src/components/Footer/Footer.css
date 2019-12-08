@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap'); /* Will eventually delete */
-
 .Footer {
     display: flex;
     justify-content: space-between;
@@ -43,5 +41,21 @@
         flex-direction: column;
         justify-content: right;
         line-height: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .Footer {
+        flex-direction: column;
+        justify-content: center;
+        height: 150px;
+    }
+
+    .footer-left, .footer-center {
+        display: block;
+    }
+
+    .footer-center {
+        margin: 0;
     }
 }
