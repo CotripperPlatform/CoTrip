@@ -1,7 +1,10 @@
 
 import React from 'react';
 import "./UpcomingTripsCard.css";
-// import InfoCard from "../InfoCard";
+import "../../App.css";
+import "../InfoCard/InfoCard.css";
+import InfoCard from "../InfoCard";
+// when InfoCard is reviewed & approved, this should work.
 
 // Function based React Component
 const UpcomingTripsCard = (props) => {
@@ -9,24 +12,24 @@ const UpcomingTripsCard = (props) => {
   // Default Class to apply to Component
   let classList = `UpcomingTripsCard`;
 
-
   return(
     <div className={classList}>
-      <header>Upcoming Trips</header>
+      <header>{props.header}</header>
       <div className="info">
-        {/* <InfoCard /> */}
-        <div className="info-card"></div>
+        <InfoCard />
+        {/* placeholder: */}
+        {/* <div className="InfoCard"></div> */}
         <div className="text-info">
           <p className="general-information">General Information:</p>
           <ul>
-            <li>~3 Days, 2 Nights</li>
-            <li>~Resort Stay</li>
-            <li>~Children Welcome</li>
-            <li>~Guided Tours</li>
+            <li>~{props.detailOne}</li>
+            <li>~{props.detailTwo}</li>
+            <li>~{props.detailThree}</li>
+            <li>~{props.detailFour}</li>
           </ul>
         </div>
       </div>
-      <a href="#" className="link">More Details</a>
+      <a href={props.url} className="link">{props.linkName}</a>
     </div>
   );
 }
