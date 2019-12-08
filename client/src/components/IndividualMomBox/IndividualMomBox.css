@@ -5,6 +5,12 @@ border: 1px solid #F2BC0F;
 background: #FAFAFA;
 }
 
-p {
-    font-family: 'Reem Kufi', sans-serif;
+.momName {
+font-family: 'Reem Kufi', sans-serif;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 100%;
+/* or 36px */
+text-align: center;
 }

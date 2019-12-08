@@ -1,7 +1,6 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import IndividualMomBox from './IndividualMomBox';
-
+import { storiesOf } from '@storybook/react';
 storiesOf('IndividualMomBox', module)
   .add("Default", () => (
     <IndividualMomBox />

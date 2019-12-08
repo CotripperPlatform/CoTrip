@@ -1,20 +1,22 @@
-module.exports = function({ config }) {
-  config.module.rules.push({
-    test: /\.stories\.jsx?$/,
-    loaders: [
-      {
-        loader: require.resolve("@storybook/source-loader"),
-        options: {
-          prettierConfig: {
-            printWidth: 100,
-            singleQuote: false
-          },
-          uglyCommentsRegex: [/^eslint-.*/, /^global.*/]
-        }
-      }
-    ],
-    enforce: "pre"
-  });
+const path = require("path");
 
-  return config;
+module.exports = async ({ config }) => {
+    config.module.rules.unshift({
+        test: /\.jsx?$/,
+        include: path.resolve(__dirname, "../src/examples"),
+        loaders: [
+            {
+                loader: require.resolve("@storybook/addon-storysource/loader"),
+                options: {
+                    prettierConfig: {
+                        tabWidth: 4,
+                        trailingComma: "es5",
+                    },
+                },
+            },
+        ],
+        enforce: "pre",
+    });
+
+    return config;
 };
