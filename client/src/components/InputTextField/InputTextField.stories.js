@@ -12,12 +12,12 @@ storiesOf("InputTextField", module)
     <InputTextField name="dream" placeholder="What is your dream destination(s)?" />
   ))
   .add("First Name, Small", () => (
-    <InputTextField type="small" name="first name" placeholder="First Name" />
+    <InputTextField size="small" name="first name" placeholder="First Name" />
   ))
   .add("Last Name, Small", () => (
-    <InputTextField type="small" name="last name" placeholder="Last Name" />
+    <InputTextField size="small" name="last name" placeholder="Last Name" />
   ))
-  .add("Email Small", () => <InputTextField type="small" name="email" placeholder="Email" />)
+  .add("Email Small", () => <InputTextField size="small" name="email" placeholder="Email" />)
   .add("Password", () => <InputTextField name="password" placeholder="Password" />)
   .add("Confirm Password", () => (
     <InputTextField name="confirm password" placeholder="Confirm Password" />

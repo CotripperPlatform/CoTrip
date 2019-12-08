@@ -11,12 +11,14 @@ import "./InputTextField.css";
 
 // Class Based React Component
 const InputTextField = props => {
-  let { type, name, placeholder, onChange } = props;
+  let { size, type, name, placeholder, onChange } = props;
   let classList = "input-text-field-container";
-  if (type === "small") {
+  if (size === "small") {
     classList = "input-text-field-container-small";
   } else if (type === "search") {
     classList = "input-text-field-container search";
+  } else if (size === "small" && type === "search") {
+    classList = "input-text-field-container-small search";
   }
 
   return (
