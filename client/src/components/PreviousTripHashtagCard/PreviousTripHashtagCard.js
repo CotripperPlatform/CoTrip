@@ -47,9 +47,11 @@ const PreviousTripHashtagCard = props => {
             {props.data.map((item, key) => {
               return (
                 <div className="single-hashtag-container">
-                  <h3>
-                    {key + 1} <a href="#">{item}</a>
-                  </h3>
+                  <div>
+                    <h3>
+                      {key + 1} <a href="#">{item}</a>
+                    </h3>
+                  </div>
                 </div>
               );
             })}
