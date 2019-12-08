@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from "react-router-dom";
 import "./MediaCard.css";
 
 
@@ -7,20 +8,23 @@ import "./MediaCard.css";
 const MediaCard = (props) => {
 
   // Default Class to apply to Component
-  let classList = `MediaCard`;
   let styles = {
     height: '248px',
     width: '248px',
     backgroundImage: `url(${props.imageSrc})`,
+    backgroundSize: 'cover',
     display: 'flex',
     flexDirection: 'column-reverse'
   }
+  let userPath = `/User/--usernameid--`
 
   console.log(props.imageSrc)
   return (
-    <div style={styles} className='.MeidaCard'>
-      <footer className='media-footer'>Photo By: {props.userFirstName}</footer>
-    </div>
+    <Link className='media-card'to={userPath} style={styles}>
+      <footer className='media-footer'>
+        <p className='footer-text'>Posted By: {props.userFirstName}</p>
+      </footer>
+    </Link>
   );
 }
 

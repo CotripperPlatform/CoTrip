@@ -1,4 +1,20 @@
+.media-card {
+  text-decoration: none;
+
+}
 .media-footer {
   background: rgba(106, 76, 147, 0.5);
-  border-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.footer-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: inherit;
+  font-weight: 100;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 10px 10px 10px 10px;
 }
