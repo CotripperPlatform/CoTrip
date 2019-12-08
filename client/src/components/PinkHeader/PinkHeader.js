@@ -17,6 +17,34 @@ class PinkHeader extends Component {
   }
 
   render() {
+    if (this.props.Trip) {
+      return (
+        <div className={this.state.classList}>
+          <div className="box" style={{marginTop: "75px"}}>
+            <div className="header">
+              <h3>Trip: {this.props.children}</h3>
+            </div>
+          </div>
+        </div>
+      )
+    }
+    if (this.props.bookTrip) {
+      return (
+        <div className={this.state.classList}>
+          <div className="box">
+            <div className="header">
+              <h3>Book a Trip</h3>
+            </div>
+            <div className="box2">
+              <div className="container-1">
+                <span className="icon"><img src={Search} /></span>
+                <input type="search" id="search" placeholder={this.props.placeholder} />
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
     return (
       <div className={this.state.classList}>
         <div className="box">
@@ -25,7 +53,7 @@ class PinkHeader extends Component {
           </div>
           <div className="box2">
             <div className="container-1">
-              <span className="icon"><img src={Search}/></span>
+              <span className="icon"><img src={Search} /></span>
               <input type="search" id="search" placeholder={this.props.placeholder} />
             </div>
           </div>
