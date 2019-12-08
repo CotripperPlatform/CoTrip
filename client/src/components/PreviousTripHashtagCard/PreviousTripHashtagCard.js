@@ -6,6 +6,7 @@ const PreviousTripHashtagCard = props => {
   console.log(props);
   // Default Class to apply to Component
   let classList = `prev-hash-card-container`;
+  let classListHashtags = `prev-hash-card-container hashtags`;
 
   if (props.data.length === 0 && props.type === "trips") {
     return (
@@ -39,7 +40,7 @@ const PreviousTripHashtagCard = props => {
   const NUMS_ARRAY = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
   if (props.data.length > 0 && props.type === "hashtags") {
     return (
-      <div className={classList}>
+      <div className={classListHashtags}>
         <div className="trips-content-container">
           <h1>Previous Trips</h1>
           <div className="trips-names-container">
