@@ -1,5 +1,6 @@
 import React from "react";
 import "./InputTextField.css";
+import "../../App.css";
 /**
  * Created by Tyler
  *
