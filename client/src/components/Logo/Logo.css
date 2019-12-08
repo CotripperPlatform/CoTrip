@@ -1,0 +1,13 @@
+.Logo {
+  background-image: url("../../../../assets/images/login_logo.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 4rem;
+  height: 4rem;
+}
+
+.small-logo {
+  width: 2rem;
+  height: 2rem;
+}
