@@ -6,6 +6,9 @@ import "../../App.css";
 const WelcomeHeader = props => {
   // Default Class to apply to Component
   let classList = `welcome-header`;
+  if (props.type === "community") {
+    classList = "welcome-header community";
+  }
 
   return <div className={classList}>Welcome, {props.name}!</div>;
 };

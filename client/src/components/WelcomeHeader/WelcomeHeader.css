@@ -14,6 +14,10 @@
   font-family: var(--default-font);
 }
 
+.community {
+  background-image: var(--splash-background);
+}
+
 @media only screen and (min-width: 768px) {
   .welcome-header {
     font-size: 90px;
