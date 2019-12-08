@@ -9,11 +9,18 @@ class InputSelect extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "InputSelect"
+      classList: "InputSelect",
+      value: "select"
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  // Runs after Component is loaded in the broswer
+  handleChange(e) {
+    e.preventDefault();
+    this.setState({ value: e.target.value });
+    this.props.callback();
+  }
+  // Runs after Component is loaded in the browser
   componentDidMount() {}
 
   // Runs after a component has been updated
@@ -25,22 +32,28 @@ class InputSelect extends Component {
   render() {
     if (this.props.options) {
       return (
-        <div className={this.state.classList}>
-          <select value={this.state.value} onChange={this.props.onChange}>
-            {this.props.options.map(option => (
-              <option value={option}>{option}</option>
-            ))}
-          </select>
-        </div>
+        <select
+          className={this.state.classList}
+          value={this.state.value}
+          onChange={this.handleChange}
+        >
+          {this.props.options.map(option => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
       );
     } else {
       return (
-        <div className={this.state.classList}>
-          <select value={this.state.value} onChange={this.props.onChange}>
-            <option>Option 1</option>
-            <option>Option 2</option>
-          </select>
-        </div>
+        <select
+          className={this.state.classList}
+          value={this.state.value}
+          onChange={this.handleChange}
+        >
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+        </select>
       );
     }
   }
