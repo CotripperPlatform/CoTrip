@@ -42,7 +42,7 @@ const PreviousTripHashtagCard = props => {
     return (
       <div className={classListHashtags}>
         <div className="trips-content-container">
-          <h1>Previous Trips</h1>
+          <h1>Trending Hashtags</h1>
           <div className="trips-names-container">
             {props.data.map((item, key) => {
               return (
