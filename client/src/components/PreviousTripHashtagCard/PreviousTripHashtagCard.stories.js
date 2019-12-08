@@ -40,8 +40,8 @@ storiesOf("PreviousTripHashtagCard", module)
         "#cats",
         "#dogs",
         "#italy",
-        "starwars",
-        "babyyoda"
+        "#starwars",
+        "#babyyoda"
       ]}
       type="hashtags"
     />

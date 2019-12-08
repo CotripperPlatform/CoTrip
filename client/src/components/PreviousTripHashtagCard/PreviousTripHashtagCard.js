@@ -35,6 +35,8 @@ const PreviousTripHashtagCard = props => {
           </div>
         </div>
       );
+
+      // if props.data is greater than 10 trips trim it down to the latest 10 trips
     } else if (props.data.length > 10) {
       let dataLength = props.data.length - 1;
       let trimmedData = props.data.slice(dataLength - 10, dataLength);
@@ -52,7 +54,11 @@ const PreviousTripHashtagCard = props => {
       );
     }
   }
-  // each item will have to link to some sort of search page that uses the hashtag as a search query.
+  // Issues:
+  // 1. each item will have to link to some sort of search page that uses the hashtag as a search query.
+  /* 2. one way I think we could handle this component is by passing in an array of hashtags that is already trimmed?
+     not sure how we're going to be handling this hashtag system. I'm thinking we could have some functionality
+     that keeps a count of every hashtag posted as its posted and stores that number in the database?*/
   if (props.data.length > 0 && props.type === "hashtags") {
     return (
       <div className={classListHashtags}>
