@@ -4,30 +4,26 @@ import { Link } from "react-router-dom";
 
 // Function based React Component
 const ProfilePicture = props => {
-  console.log(props);
   // Default Class to apply to Component
-  let classList = `ProfilePicture`;
+  let classList = "ProfilePicture";
   let types = ["extra-small", "small", "medium", "large"];
   if (types.includes(props.type)) {
-    classList += ` profile-pic-${props.type}`;
+    classList += ` ${props.type}`;
   }
 
-  if (props.link) {
-    return (
-      <div className={classList}>
-        {/* this will be a link to the user profile page */}
-        <Link exact={true} to={props.link}>
+  return (
+    <div className={classList}>
+      {/* this will be a link to the user profile page */}
+
+      {props.link ? (
+        <Link exact={true} to={props.to}>
           <img className="profile-picture-img" src={props.image} alt="profile-picture" />
         </Link>
-      </div>
-    );
-  } else {
-    return (
-      <div className={classList}>
-        {/* this is the url for the user profile picture */}
-        <img className="profile-picture-img" src={props.image} />
-      </div>
-    );
-  }
+      ) : (
+        <img className="profile-picture-img" src={props.image} alt="profile-picture" />
+      )}
+    </div>
+  );
 };
+
 export default ProfilePicture;

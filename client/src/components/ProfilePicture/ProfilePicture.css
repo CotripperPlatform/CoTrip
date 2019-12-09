@@ -1,18 +1,16 @@
-/* .ProfilePicture {
-} */
-.profile-pic-extra-small .profile-picture-img {
+.extra-small img {
   height: 67px;
   width: 67px;
 }
-.profile-pic-small .profile-picture-img {
+.small img {
   height: 90px;
   width: 90px;
 }
-.profile-pic-medium .profile-picture-img {
+.medium img {
   height: 150px;
   width: 150px;
 }
-.profile-pic-large .profile-picture-img {
+.large img {
   height: 233px;
   width: 233px;
 }
