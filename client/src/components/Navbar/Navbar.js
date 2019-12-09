@@ -1,6 +1,6 @@
-
 import React from 'react';
 import "./Navbar.css";
+import Logo from "../Logo/Logo"
 
 // Function based React Component
 const Navbar = (props) => {
@@ -9,9 +9,11 @@ const Navbar = (props) => {
   let classList = `Navbar`;
 
 
-  return(
+  return (
     <div className={classList}>
-      Navbar
+      <div className="navbar-logo">
+        <Logo />
+      </div>
     </div>
   );
 }
