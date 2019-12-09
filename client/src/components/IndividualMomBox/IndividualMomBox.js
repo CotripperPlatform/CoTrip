@@ -10,10 +10,10 @@ const IndividualMomBox = (props) => {
 
   return(
     <div className={classList}>
-      <p className='momName'>Mom Name</p>
+      <p className='momName'>{props.momName}</p>
       <div className="MomBoxInfo">
-        <p className="location">Location</p>
-        <p className="hashtags">#Hashtag</p>
+        <p className="location">{props.location}</p>
+        <p className="hashtags">{props.hashtags}</p>
       </div>
     </div>
   );
