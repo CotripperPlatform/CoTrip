@@ -2,11 +2,8 @@ import React from "react";
 import "./InputTextField.css";
 
 const InputTextField = props => {
-  let { variation, type, name, placeholder, onChange } = props;
+  let { variation = "default", type, name, placeholder, onChange } = props;
   let classList = `input-field-container-${variation}`;
-  InputTextField.defaultProps = {
-    variation: "default"
-  };
 
   return (
     <div className={classList}>
