@@ -1,0 +1,67 @@
+.PersonCard {
+    width: 229px;
+    height: 289px;
+    border: 1px solid #F2BC0F;
+    background: #FAFAFA;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 35px;
+    top: 09px;
+    }
+    
+    .momName {
+    font-family: 'Reem Kufi', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 100%;
+    /* or 36px */
+    text-align: center;
+    position: absolute;
+    left: 10.04%;
+    right: 10.48%;
+    top: 46.79%;
+    bottom: 28.03%;
+    }
+    
+    .location {
+    position: absolute;
+    left: 17.03%;
+    right: 17.03%;
+    top: 62.97%;
+    bottom: 0%;
+    font-family: Reem Kufi, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #252525;
+    }
+    
+    
+    .interests {
+        overflow-wrap: break-word;
+        position: absolute;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+        top: 69.6%;
+        right: 17.03%;
+        bottom: 0%;
+        left: 17.03%;
+        font-family: Reem Kufi, sans-serif;
+    
+    }
