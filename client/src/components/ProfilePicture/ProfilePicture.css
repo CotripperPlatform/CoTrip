@@ -1,0 +1,18 @@
+.ProfilePicture {
+}
+.extra-small {
+  height: 67px;
+  width: 67px;
+}
+small {
+  height: 90px;
+  width: 90px;
+}
+.medium {
+  height: 150px;
+  width: 150px;
+}
+.large {
+  height: 233px;
+  width: 233px;
+}
