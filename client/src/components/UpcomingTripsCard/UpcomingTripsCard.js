@@ -2,9 +2,7 @@
 import React from 'react';
 import "./UpcomingTripsCard.css";
 import "../../App.css";
-import "../InfoCard/InfoCard.css";
-import InfoCard from "../InfoCard";
-// when InfoCard is reviewed & approved, this should work.
+//import location/trip card
 
 // Function based React Component
 const UpcomingTripsCard = (props) => {
@@ -16,9 +14,8 @@ const UpcomingTripsCard = (props) => {
     <div className={classList}>
       <header>{props.header}</header>
       <div className="info">
-        <InfoCard />
         {/* placeholder: */}
-        {/* <div className="InfoCard"></div> */}
+        <div className="InfoCard"></div>
         <div className="text-info">
           <p className="general-information">General Information:</p>
           <ul>
