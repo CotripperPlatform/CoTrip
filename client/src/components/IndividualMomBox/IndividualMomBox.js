@@ -1,5 +1,6 @@
 import React from 'react';
 import "./IndividualMomBox.css";
+import mom from "../../Assets/Images/MomExample.png"
 
 // Function based React Component
 const IndividualMomBox = (props) => {
@@ -10,10 +11,10 @@ const IndividualMomBox = (props) => {
 
   return(
     <div className={classList}>
+      <img src={mom} />
       <p className='momName'>{props.momName}</p>
       <div className="MomBoxInfo">
         <p className="location">{props.location}</p>
-        <p className="hashtags">{props.hashtags}</p>
       </div>
     </div>
   );
