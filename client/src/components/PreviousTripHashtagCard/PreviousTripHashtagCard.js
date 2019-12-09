@@ -7,7 +7,6 @@ const PreviousTripHashtagCard = props => {
   console.log(props);
   // Default Class to apply to Component
   const classList = `prev-hash-card-container`;
-  const classListHashtags = `prev-hash-card-container hashtags`;
   let data;
   // if data is greater than 10 items only get the latest 10 items
   if (props.data.length > 10) {
