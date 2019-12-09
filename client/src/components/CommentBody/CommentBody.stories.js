@@ -6,6 +6,6 @@ const date = "December 9";
 const time = "10:08 am";
 storiesOf('Comment', module)
   .add("Body", () => (
-    <CommentBody bodyProps={body} dateProps={date} timeProps={time}/>
+    <CommentBody body={body} date={date} time={time}/>
   )
 )

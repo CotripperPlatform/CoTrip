@@ -1,6 +1,5 @@
 
 import React from 'react';
-import "../../App.css"
 import "./CommentBody.css";
 
 // Function based React Component
@@ -9,9 +8,9 @@ const CommentBody = (props) => {
   // No props right now but when there is data we can use 
   // this.props.comment and this.props.date
   let classList = `CommentBody`;
-  const body = props.bodyProps;
-  const date = props.dateProps;
-  const time = props.timeProps;
+  const body = props.body;
+  const date = props.date;
+  const time = props.time;
 
   return(
     <div className={classList}>
@@ -19,10 +18,9 @@ const CommentBody = (props) => {
         {body}
       </p>
       <div className="Date">
-        <p>
-          {date}
-          <br/>
-          {time}
+        <p> 
+          <span>{date}</span>
+          <span>{time}</span>
         </p>
       </div>
     </div>
