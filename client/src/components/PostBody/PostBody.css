@@ -1,8 +1,8 @@
 .PostBody {
-  background: #fafafa;
+  background: var(--white);
   width: 50rem;
   font-family: "Open Sans", sans-serif;
-  color: #252525;
+  color: var(--black);
 }
 
 .post-body-top {
@@ -23,7 +23,7 @@
 }
 
 .post-body-title {
-  font-family: "Reem Kufi", sans-serif;
+  font-family: var(--default-font);
   font-size: 1.5rem;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .post-body-hashtags a {
-  color: #252525;
+  color: var(--black);
   font-weight: bold;
   margin-right: 1rem;
   margin-left: 0;

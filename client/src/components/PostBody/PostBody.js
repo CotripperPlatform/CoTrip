@@ -4,11 +4,8 @@ import "../../App.css";
 
 // Function based React Component
 const PostBody = props => {
-  // Default Class to apply to Component
-  let classList = `PostBody`;
-
   return (
-    <div className={classList}>
+    <div className="PostBody">
       <div className="post-body-top">
         <div className="post-body-top-left">
           <div className="post-body-title">{props.title}</div>
