@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root {
-    /* These are all the defaults for CoTripper. Below is an example of usage:
+  /* These are all the defaults for CoTripper. Below is an example of usage:
         background-color: var(--yellow);
     */
 
@@ -12,8 +13,11 @@
     --purple: #6A4C93;
     --black: #252525;
     --white: #FAFAFA;
+    --gray-lite: #E5E5E5;
+    --gray-dark: #C4C4C4;
     /* Default font */
     --default-font: 'Reem Kufi', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
     /* Images */
     --comment-black: url("../../assets/images/comment_black.png");
     --edit-button: url("../../assets/images/edit_button.png");
@@ -40,25 +44,3 @@
     --title-weight: 500;
 }   
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
-}
