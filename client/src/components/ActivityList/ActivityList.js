@@ -23,10 +23,8 @@ class ActivityList extends Component {
   }
 
   renderMomActivities = () => {
-    const momActivityList = this.momActivityList;
-    let momActivities = [];
-    momActivityList.forEach(activity => {
-      momActivities.push(
+    const momActivities = this.momActivityList.map(activity => {
+      return (
         <div className="activity mom">
           <span className="activities">{activity}</span>
         </div>
@@ -36,10 +34,8 @@ class ActivityList extends Component {
   };
 
   renderKidsActivities = () => {
-    const kidsActivityList = this.kidsActivityList;
-    let kidsActivities = [];
-    kidsActivityList.forEach(activity => {
-      kidsActivities.push(
+    const kidsActivities = this.kidsActivityList.map(activity => {
+      return (
         <div className="activity kids">
           <span className="activities">{activity}</span>
         </div>
@@ -58,17 +54,15 @@ class ActivityList extends Component {
   componentWillUnmount() {}
 
   render() {
-    const renderMomActivities = this.renderMomActivities();
-    const renderKidsActivities = this.renderKidsActivities();
     return (
       <div className={this.state.classList}>
         <div className="activitiesContainer">
           <span className="activityHeader">Activities for Mom</span>
-          {renderMomActivities}
+          {this.renderMomActivities()}
         </div>
         <div className="activitiesContainer">
           <span className="activityHeader">Activities for Mom & Kids</span>
-          {renderKidsActivities}
+          {this.renderKidsActivities()}
         </div>
       </div>
     );
