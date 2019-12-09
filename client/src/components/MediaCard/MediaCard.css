@@ -1,4 +1,4 @@
-.media-card {
+.MediaCard {
   text-decoration: none;
   border-radius: 3px;
   box-shadow: 0px 5px 5px .5px rgba(0,0,0,0.65);
@@ -6,8 +6,22 @@
   flex-direction: column-reverse;
 }
 
+.MediaCard--small {
+  height: 220px;
+  width: 220px;
+}
 
-.media-footer {
+.MediaCard--medium {
+  height: 248px;
+  width: 248px;
+}
+
+.MediaCard--large {
+  height: 300px;
+  width: 300px;
+}
+
+.MediaCard__footer {
   background: var(--purple);
   opacity: .8;
   border-bottom-left-radius: 3px;
@@ -16,7 +30,7 @@
   border-top-right-radius: 0px;
 }
 
-.footer-text {
+.MediaCard__footer-text {
   font-family: var(--paragraph-font);
   font-style: inherit;
   font-weight: 100;
