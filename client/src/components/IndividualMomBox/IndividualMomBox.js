@@ -15,6 +15,9 @@ const IndividualMomBox = (props) => {
       <p className='momName'>{props.momName}</p>
       <div className="MomBoxInfo">
         <p className="location">{props.location}</p>
+        <p className="interests">
+          {props.interests}
+        </p>
       </div>
     </div>
   );

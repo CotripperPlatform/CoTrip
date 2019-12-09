@@ -51,3 +51,17 @@ text-align: center;
 color: #252525;
 }
 
+
+.interests {
+    overflow-wrap: break-word;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    top: 69.6%;
+    right: 17.03%;
+    bottom: 0%;
+    left: 17.03%;
+    font-family: Reem Kufi, sans-serif;
+
+}
