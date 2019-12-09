@@ -1,7 +1,6 @@
 
 import React from 'react';
 import "./Footer.css";
-import "../../App.css";
 
 // Function based React Component
 const Footer = (props) => {
