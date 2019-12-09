@@ -1,0 +1,78 @@
+.ForumComment {
+position: absolute;
+left: 0%;
+right: 0%;
+top: 62.58%;
+bottom: 0%;
+background-color: var(--gray-dark);
+border: 1px solid rgba(37, 37, 37, 0.5);
+box-sizing: border-box;
+border-radius: 3px;
+}
+
+.momName {
+position: absolute;
+font-family: var( --paragraph-font);
+bottom: 0%;
+left: 2.5%;
+font-size: 18px;
+}
+
+.comment {
+position: absolute;
+left: 13.49%;
+right: 14.81%;
+top: 03.98%;
+bottom: 96.72%;
+font-family: var( --paragraph-font);
+font-size: 13.75px;
+line-height: 119.3%;
+/* or 18px */
+
+color: var(--black);
+}
+
+.profile {
+position: absolute;
+left: 3.75%;
+right: 91.04%;
+top: 79.42%;
+bottom: 16.2%;
+}
+
+.date {
+position: absolute;
+left: 90.83%;
+right: 40.35%;
+top: 06.36%;
+bottom: 18.42%;
+font-family: var( --paragraph-font);
+font-size: 14px;
+line-height: 19px;
+text-align: right;
+}
+
+.likes {
+position: absolute;
+font-family: var( --paragraph-font);
+font-size: 13px;
+bottom: 23%;
+top: 65%;
+left: 13.5%;
+right: 87.5%; 
+}
+
+.replies {
+position: absolute;
+font-family: var( --paragraph-font);
+font-size: 13px;
+bottom: 23%;
+top: 65%;
+left: 21%;
+right: 83%;       
+}
+
+.date {
+font-family: var( --paragraph-font);
+font-size: 13px;
+}
