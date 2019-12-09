@@ -8,6 +8,8 @@ const UpcomingTripsCard = (props) => {
 
   // Default Class to apply to Component
   let classList = `UpcomingTripsCard`;
+  let details = props.details;
+
 
   return(
     <div className={classList}>
@@ -18,11 +20,14 @@ const UpcomingTripsCard = (props) => {
         <div className="text-info">
           <p className="general-information">General Information:</p>
           <ul>
+            {details.map(detail => {
+              return <li>~{detail}</li>
+            })}
             {/* map through the details array above */}
-            <li>~{props.details[0]}</li>
+            {/* <li>~{props.details[0]}</li>
             <li>~{props.details[1]}</li>
             <li>~{props.details[2]}</li>
-            <li>~{props.details[3]}</li>
+            <li>~{props.details[3]}</li> */}
           </ul>
         </div>
       </div>
