@@ -2,15 +2,16 @@ import React from "react";
 import "./InfoCard.css";
 
 // Function based React Component
-const InfoCard = props => {
+const Card = props => {
+  let { size = "large", color, picture } = props;
   // Default Class to apply to Component
-  let className = `info-card-container ${props.variant} ${props.size}`;
+  let className = `info-card-container info-card-${color} info-card-${size}`;
   return (
     <div className={className}>
-      {props.picture ? <img src={props.picture} alt="whoops"></img> : null}
+      {picture ? <img src={picture} alt="whoops"></img> : null}
       {props.children}
     </div>
   );
 };
 
-export default InfoCard;
+export default Card;
