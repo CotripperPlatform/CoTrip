@@ -11,8 +11,6 @@ const MediaCard = (props) => {
   let styles = {
     backgroundImage: `url(${props.imageSrc})`,
     backgroundSize: 'cover',
-    display: 'flex',
-    flexDirection: 'column-reverse'
   }
 
   if (props.small) {
@@ -29,13 +27,12 @@ const MediaCard = (props) => {
     styles.width = '275px'
   }
   
-  
-  let userPath = `/User/--usernameid--`
+
   return (
   
-    <Link className='media-card' to={userPath} style={styles}>
+    <Link className='media-card' to={props.to} style={styles}>
       <footer className='media-footer'>
-        <p className='footer-text'>Posted By: {props.userFirstName}</p>
+        <p className='footer-text'>{props.footerText}</p>
       </footer>
     </Link>
   );
