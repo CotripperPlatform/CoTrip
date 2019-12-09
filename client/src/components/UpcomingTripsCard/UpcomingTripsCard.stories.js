@@ -5,10 +5,11 @@ import UpcomingTripsCard from './UpcomingTripsCard';
 storiesOf('UpcomingTripsCard', module)
   .add("Default", () => <UpcomingTripsCard 
     header="Upcoming Trips"
-    detailOne="3 Days, 2 Nights"
-    detailTwo="Resort Stay"
-    detailThree="Children Welcome"
-    detailFour="Guided Tours"
+    details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
+    // detailOne="3 Days, 2 Nights"
+    // detailTwo="Resort Stay"
+    // detailThree="Children Welcome"
+    // detailFour="Guided Tours"
     url="#"
-    linkName="More Details"
+    linkText="More Details"
   />)
