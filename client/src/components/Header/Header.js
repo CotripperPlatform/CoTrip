@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Header.css";
 import homeBanner from "../../../../assets/images/home_banner.png";
+import passportPinkBanner from "./passport_pink_banner.png";
+import passportPurpleBanner from "./passport_purple_banner.png";
 
 // import url from "@storybook/api/dist/modules/url";
 
@@ -26,7 +28,7 @@ class Header extends Component {
   componentWillUnmount() {}
   // no-repeat center center fixed
   render() {
-    const style = {
+    const styleHome = {
       backgroundImage: "url(" + homeBanner + ")",
       width: "120vw",
       height: "50vh",
@@ -36,12 +38,36 @@ class Header extends Component {
       color: "white",
       fontSize: "5vh"
     };
+    const stylePassportPink = {
+      backgroundImage: "url(" + passportPinkBanner + ")",
+      width: "120vw",
+      height: "30vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "white",
+      fontSize: "5vh"
+    };
+    const stylePassportPurple = {
+      backgroundImage: "url(" + passportPurpleBanner + ")",
+      width: "120vw",
+      height: "30vh",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "white",
+      fontSize: "5vh"
+    };
     if (this.props.home) {
       return (
-        <div className={this.state.classList} style={style}>
+        <div className={this.state.classList} style={styleHome}>
           <h1>Welcome {this.props.name}!</h1>
         </div>
       );
+    } else if (this.props.passport && this.props.pink) {
+      return <div className={this.state.classList} style={stylePassportPink}></div>;
+    } else if (this.props.passport && this.props.purple) {
+      return <div className={this.state.classList} style={stylePassportPurple}></div>;
     } else {
       return (
         <div className={this.state.classList}>
