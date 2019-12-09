@@ -7,13 +7,12 @@ const CommentBody = (props) => {
   // Default Class to apply to Component
   // No props right now but when there is data we can use 
   // this.props.comment and this.props.date
-  let classList = `CommentBody`;
   const body = props.body;
   const date = props.date;
   const time = props.time;
 
   return(
-    <div className={classList}>
+    <div className='CommentBody'>
       <p className="Body">
         {body}
       </p>
