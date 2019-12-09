@@ -2,11 +2,8 @@ import React from "react";
 import "./BannerParent.css";
 
 const BannerParent = props => {
-  BannerParent.defaultProps = {
-    bannerType: "home"
-  };
-
-  return <div className={`banner-parent banner-home ${props.bannerType}`}>{props.children}</div>;
+  let classlist = `banner-parent banner-${props.bannerType}`;
+  return <div className={classlist}>{props.children}</div>;
 };
 
 export default BannerParent;
