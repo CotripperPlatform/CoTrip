@@ -5,7 +5,7 @@
     min-width: 100vw;
     height: 50px;
     background-color: var(--yellow);
-    font-family: 'Reem Kufi', sans-serif; /* Will eventually delete */
+    font-family: var(--default-font);
 }
 
 .Footer a, .Footer a:active, .Footer a:link, .Footer a:visited { 
