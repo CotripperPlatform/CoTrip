@@ -1,4 +1,12 @@
 .InteractionCard {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.image-interaction {
+  border-radius: 50% 50%;
+  height: 100%;
+  width: 100%;
 }
