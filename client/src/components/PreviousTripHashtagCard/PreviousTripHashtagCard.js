@@ -18,7 +18,10 @@ const PreviousTripHashtagCard = props => {
 
   return (
     <div className={classList}>
-      <div className="trips-content-container">{props.children}</div>
+      <div className="trips-content-container">
+        {props.children}
+        {props.type === "trips slider" ? <div className="trip-slider-arrow" /> : null}
+      </div>
       {props.data.length > 0 ? (
         <div className="trips-names-container">
           {data.map(item => {
