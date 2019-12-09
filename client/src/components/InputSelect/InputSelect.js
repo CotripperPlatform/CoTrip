@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 class InputSelect extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       value: "select"
     };
@@ -15,7 +14,8 @@ class InputSelect extends Component {
 
   handleChange(e) {
     e.preventDefault();
-    this.setState({ value: e.target.value }, () => this.props.onSelect(e.target.value));
+    this.setState({ value: e.target.value });
+    this.props.onSelect(e.target.value);
   }
 
   render() {
