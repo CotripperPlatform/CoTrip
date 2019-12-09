@@ -8,7 +8,6 @@ class InputSelect extends Component {
     super(props);
 
     this.state = {
-      classList: "InputSelect",
       value: "select"
     };
     this.handleChange = this.handleChange.bind(this);
@@ -21,11 +20,7 @@ class InputSelect extends Component {
 
   render() {
     return (
-      <select
-        className={this.state.classList}
-        value={this.state.value}
-        onChange={this.handleChange}
-      >
+      <select className="InputSelect" value={this.state.value} onChange={this.handleChange}>
         {this.props.options.map(option => (
           <option key={option.value} value={option.value}>
             {this.props.optionPrefix}
