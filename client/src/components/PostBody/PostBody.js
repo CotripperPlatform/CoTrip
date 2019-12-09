@@ -1,5 +1,6 @@
 import React from "react";
 import "./PostBody.css";
+import "../../App.css";
 
 // Function based React Component
 const PostBody = props => {
