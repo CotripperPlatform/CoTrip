@@ -58,18 +58,18 @@
 
 @media all and (max-width: 1024px) and (min-width: 721px) {
   .activityList {
-    width: 75vw;
+    width: 75%;
     padding: 0px 30px;
   }
   .activity-header {
     font-size: 27px;
-    line-height: 40.5px;
+    line-height: 40px;
   }
   .activity {
     width: 135px;
-    height: 101.25px;
+    height: 101px;
     margin: 30px 30px 15px 0px;
-    padding: 7.5px;
+    padding: 7px;
   }
   .activities-container {
     padding: 15px 0px;
@@ -91,7 +91,7 @@
   }
   .activity {
     width: 90px;
-    height: 67.5px;
+    height: 68px;
     margin: 20px 20px 10px 0px;
     padding: 5px;
   }
