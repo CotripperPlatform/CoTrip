@@ -23,29 +23,6 @@ storiesOf("PreviousTripHashtagCard", module)
       <div>2</div>
     </PreviousTripHashtagCard>
   ))
-  .add("Previous Trips, Lots of Data", () => (
-    <PreviousTripHashtagCard
-      data={[
-        "New York",
-        "Mexico",
-        "Wakanda",
-        "Hawaii",
-        "Japan",
-        "Canada",
-        "Italy",
-        "Valhalla",
-        "Crait",
-        "Hylia",
-        "Shambala",
-        "Jakku",
-        "North Pole"
-      ]}
-      type="trips"
-      header="Previous Trips"
-    >
-      <h1>Previous Trips</h1>
-    </PreviousTripHashtagCard>
-  ))
   .add("Trending Hashtags", () => (
     <PreviousTripHashtagCard
       data={[
@@ -69,5 +46,15 @@ storiesOf("PreviousTripHashtagCard", module)
     <PreviousTripHashtagCard data={[]} type="hashtags" header="Trending Hashtags">
       <h1>Trending Hashtags</h1>
       <h2>None with CoTripper yet!</h2>
+    </PreviousTripHashtagCard>
+  ))
+  .add("Book a Trip", () => (
+    <PreviousTripHashtagCard
+      data={["Disney", "Mexico City"]}
+      type="trips"
+      header="Trending Hashtags"
+    >
+      <h1>Book a Trip</h1>
+      <a href="#">Book a Trip Now!</a>
     </PreviousTripHashtagCard>
   ));
