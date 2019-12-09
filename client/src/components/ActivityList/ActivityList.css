@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
 
-.ActivityList {
+.activity-list {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 0px 40px;
 }
 
-.activitiesContainer {
+.activities-container {
   padding: 20px 0px;
 }
 
-.activityHeader {
+.activity-header {
   font-family: "Reem Kufi", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -20,7 +20,7 @@
   color: #6a4c93;
 }
 
-.activityContainer {
+.activity-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -61,7 +61,7 @@
     width: 75vw;
     padding: 0px 30px;
   }
-  .activityHeader {
+  .activity-header {
     font-size: 27px;
     line-height: 40.5px;
   }
@@ -71,7 +71,7 @@
     margin: 30px 30px 15px 0px;
     padding: 7.5px;
   }
-  .activitiesContainer {
+  .activities-container {
     padding: 15px 0px;
   }
   .activities {
@@ -85,7 +85,7 @@
     width: 50%;
     padding: 0px 20px;
   }
-  .activityHeader {
+  .activity-header {
     font-size: 18px;
     line-height: 27px;
   }
@@ -95,7 +95,7 @@
     margin: 20px 20px 10px 0px;
     padding: 5px;
   }
-  .activitiesContainer {
+  .activities-container {
     padding: 10px 0px;
   }
   .activities {

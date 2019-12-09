@@ -9,7 +9,7 @@ class ActivityList extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "ActivityList"
+      classList: "activity-list"
     };
     this.momActivityList = ["Spa", "Wine Nights", "Brunch with Other Moms"];
     this.kidsActivityList = [
@@ -30,7 +30,7 @@ class ActivityList extends Component {
         </div>
       );
     });
-    return <div className="activityContainer">{momActivities}</div>;
+    return <div className="activity-container">{momActivities}</div>;
   };
 
   renderKidsActivities = () => {
@@ -41,7 +41,7 @@ class ActivityList extends Component {
         </div>
       );
     });
-    return <div className="activityContainer">{kidsActivities}</div>;
+    return <div className="activity-container">{kidsActivities}</div>;
   };
 
   // Runs after Component is loaded in the broswer
@@ -56,12 +56,12 @@ class ActivityList extends Component {
   render() {
     return (
       <div className={this.state.classList}>
-        <div className="activitiesContainer">
-          <span className="activityHeader">Activities for Mom</span>
+        <div className="activities-container">
+          <span className="activity-header">Activities for Mom</span>
           {this.renderMomActivities()}
         </div>
-        <div className="activitiesContainer">
-          <span className="activityHeader">Activities for Mom & Kids</span>
+        <div className="activities-container">
+          <span className="activity-header">Activities for Mom & Kids</span>
           {this.renderKidsActivities()}
         </div>
       </div>
