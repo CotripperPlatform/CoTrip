@@ -12,7 +12,7 @@ const Navbar = (props) => {
   return (
     <div className={classList}>
       <div className="navbar-logo">
-        <Logo />
+        <Logo clickable to="/route" />
       </div>
     </div>
   );
