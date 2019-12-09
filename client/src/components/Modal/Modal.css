@@ -13,7 +13,7 @@
     flex-direction: column;
 }
 
-.close-modal-btn {
+.close-modal-button {
     color: black;
     cursor: pointer;
     float: right;
@@ -25,7 +25,7 @@
     margin: 0 auto;
 }
 
-.htag{
+.modal-message{
     width: 520px;
     height: 74.12px;
 }
@@ -45,7 +45,7 @@ h3{
     flex-direction: row;
 }
 
-.confirm{
+.confirm-button{
     border: 1px solid rgba(250, 250, 250, 0.25);
     width: 285.09px;
     height: 100%;
@@ -59,7 +59,7 @@ h3{
     text-transform: uppercase;
 }
 
-.cancel{
+.cancel-button{
     border: 1px solid rgba(37, 37, 37, 0.25);
     width: 296.91px;
     height: 100%;

@@ -19,19 +19,19 @@ class Modal extends Component {
     return (
       <div className={this.state.classList}>
         <div className="modal-header">
-          <span className="close-modal-btn" onClick={this.props.onClose}>×</span>
+          <span className="close-modal-button" onClick={this.props.onClose}>×</span>
         </div>
         <div className="modal-body">
-          <div className="htag">
+          <div className="modal-message">
             <h3>{this.props.message}</h3>
           </div>
         </div>
         <div className="modal-footer">
-          <div className="cancel">
-            <button className="cancel" onClick={this.props.onCancel}>{this.props.cancelText}</button>
+          <div >
+            <button className="cancel-button" onClick={this.props.onCancel}>{this.props.cancelText}</button>
           </div>
-          <div className="confirm">
-            <button className="confirm" onClick={this.props.onConfirm}>{this.props.confirmText}</button>
+          <div >
+            <button className="confirm-button" onClick={this.props.onConfirm}>{this.props.confirmText}</button>
           </div>
         </div>
       </div>
