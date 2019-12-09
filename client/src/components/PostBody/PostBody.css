@@ -33,7 +33,8 @@
   margin: 0.5rem;
 }
 
-.post-body-hashtags a {
+.post-body-hashtag-links {
+  font-family: var(--paragraph-font);
   color: var(--black);
   font-weight: bold;
   margin-right: 1rem;

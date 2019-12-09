@@ -1,6 +1,5 @@
 import React from "react";
 import "./PostBody.css";
-import "../../App.css";
 
 // Function based React Component
 const PostBody = props => {
@@ -11,7 +10,9 @@ const PostBody = props => {
           <div className="post-body-title">{props.title}</div>
           <div className="post-body-hashtags">
             {props.hashtags.map(hashtag => (
-              <a href={hashtag.url}>#{hashtag.title}</a>
+              <a className="post-body-hashtag-links" href={hashtag.url}>
+                #{hashtag.title}
+              </a>
             ))}
           </div>
         </div>
