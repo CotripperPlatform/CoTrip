@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import "./InputSelect.css";
 import PropTypes from "prop-types";
-import "../../App.css";
 
 // Class Based React Component
 class InputSelect extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     this.state = {
       classList: "InputSelect",
@@ -18,8 +16,7 @@ class InputSelect extends Component {
 
   handleChange(e) {
     e.preventDefault();
-    this.setState({ value: e.target.value });
-    this.props.onSelect(e.target.value);
+    this.setState({ value: e.target.value }, () => this.props.onSelect(e.target.value));
   }
 
   render() {
