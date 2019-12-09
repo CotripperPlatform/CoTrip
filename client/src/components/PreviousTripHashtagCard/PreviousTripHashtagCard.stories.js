@@ -16,6 +16,8 @@ storiesOf("PreviousTripHashtagCard", module)
       type="trips"
     >
       <h1>Previous Trips</h1>
+      <div>1</div>
+      <div>2</div>
     </PreviousTripHashtagCard>
   ))
   .add("Previous Trips, Lots of Data", () => (
@@ -69,8 +71,11 @@ storiesOf("PreviousTripHashtagCard", module)
   .add("Empty Card", () => (
     <PreviousTripHashtagCard data={[]} type="trips"></PreviousTripHashtagCard>
   ))
-  .add("Slider Card", () => (
-    <PreviousTripHashtagCard data={[]} type="trips slider">
+  .add("Previous Trips with Data", () => (
+    <PreviousTripHashtagCard
+      data={["New York", "Mexico", "Wakanda", "Hawaii", "Japan", "Canada", "Italy"]}
+      type="trips"
+    >
       <h1>Previous Trips</h1>
     </PreviousTripHashtagCard>
   ));

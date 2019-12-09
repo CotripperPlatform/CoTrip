@@ -4,6 +4,7 @@ import "../../App.css";
 
 // Function based React Component
 const Card = props => {
+  console.log(props.children);
   let data;
   // if data is greater than 10 items only get the latest 10 items
   if (props.data.length > 10) {
@@ -17,13 +18,21 @@ const Card = props => {
     <div className={"prev-hash-card-container"}>
       <div className="trips-content-container">
         {props.children}
-        {props.type === "trips slider" ? <div className="trip-slider-arrow" /> : null}
+        {props.type === "trips" && props.data.length > 0 ? (
+          <div className="trip-slider-arrow" />
+        ) : null}
       </div>
-      {props.data.length > 0 ? (
+      {props.data.length > 0 && props.type === "hashtags" ? (
         <div className="trips-names-container">
           {data.map(item => {
             return <div className="single-trip-container">{item}</div>;
           })}
+        </div>
+      ) : null}
+      {props.data.length > 0 && props.type === "trips" ? (
+        <div className="trip-images-container">
+          {props.children[1]}
+          {props.children[2]}
         </div>
       ) : null}
     </div>
