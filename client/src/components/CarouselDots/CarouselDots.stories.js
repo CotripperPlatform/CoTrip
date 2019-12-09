@@ -23,17 +23,12 @@ let location = 1;
 
 
 storiesOf('CarouselDots', module)
-  .add("Default", () => (
+  .add("Onboarding Step 2", () => (
     <div style={style1}>
     <CarouselDots
       numberOfDots={5}
       activeLocation={location}
-      activeDotColor={'#6A4C93'}
-      inactiveDotColor={'#FAFAFA'}
-      hasBorder={false}
-      borderWeight={null}
       onStatusChange={statusChange}
-      size={50}
      />
     </div>
 
@@ -44,12 +39,8 @@ storiesOf('CarouselDots', module)
     <CarouselDots
       numberOfDots={5}
       activeLocation={3}
-      activeDotColor={'#6A4C93'}
-      inactiveDotColor={'#FAFAFA'}
-      hasBorder={true}
-      borderWeight={3}
+      border
       onStatusChange={statusChange}
-      size={50}
      />
     </div>
 

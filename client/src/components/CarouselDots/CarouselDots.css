@@ -4,15 +4,5 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-}
-
-.CarouselDot {
-}
-
-.UnselectedDot {
-
-}
-
-.SelectedDot {
-
+  transition: all 0.5s ease;
 }
