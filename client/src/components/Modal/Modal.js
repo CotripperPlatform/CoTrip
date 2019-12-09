@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Modal.css";
+import "../../App.css";
 
 
 // Class Based React Component
@@ -27,10 +28,10 @@ class Modal extends Component {
           </div>
         </div>
         <div className="modal-footer">
-          <div >
+          <div className="cancel-box">
             <button className="cancel-button" onClick={this.props.onCancel}>{this.props.cancelText}</button>
           </div>
-          <div >
+          <div className="cancel-box">
             <button className="confirm-button" onClick={this.props.onConfirm}>{this.props.confirmText}</button>
           </div>
         </div>
