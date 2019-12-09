@@ -1,26 +1,29 @@
 import React from "react";
 import "./SliderContainer.css";
+// remove this later
+import "../../App.css";
 
 // Function based React Component
 const SliderContainer = props => {
   return (
     <div className="SliderContainer">
       <div className="slider-container-left">
-        <img className="slider-image" src={props.url} />
-        <button />
+        <img className="slider-image" src={props.url} alt="location" />
+        <button>...</button>
       </div>
-      <div className="slider-container-right">
-        <h4 className="slider-overview-title">Overview</h4>
-        <h4 className="slider-dates-title">Dates</h4>
-        <h4 className="slider-location-title">Location</h4>
-        <p className="slider-overview-text">{props.overview}</p>
-        <p className="slider-dates-text">
+
+      <h4 className="slider-overview-title">Overview</h4>
+      <h4 className="slider-dates-title">Dates</h4>
+      <h4 className="slider-location-title">Location</h4>
+      <p className="slider-overview-text">{props.overview}</p>
+      <div className="slider-dates-text">
+        <p>
           {props.start_date}
           {" -"}
         </p>
-        <p className="slider-dates-text">{props.end_date}</p>
-        <p className="slider-location-text">{props.location}</p>
+        <p>{props.end_date}</p>
       </div>
+      <p className="slider-location-text">{props.location}</p>
     </div>
   );
 };
