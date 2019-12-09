@@ -3,7 +3,7 @@ import "./PreviousTripHashtagCard.css";
 import "../../App.css";
 
 // Function based React Component
-const InfoCard = props => {
+const OtherCard = props => {
   console.log(props.children);
   let data;
   // if data is greater than 10 items only get the latest 10 items
@@ -41,4 +41,4 @@ const InfoCard = props => {
   );
 };
 
-export default InfoCard;
+export default OtherCard;
