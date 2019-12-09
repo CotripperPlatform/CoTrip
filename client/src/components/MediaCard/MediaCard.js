@@ -9,13 +9,14 @@ const MediaCard = (props) => {
 
   // Default Class to apply to Component
   let styles = {
-    height: '248px',
-    width: '248px',
+    height: '220px',
+    width: '220px',
     backgroundImage: `url(${props.imageSrc})`,
     backgroundSize: 'cover',
     display: 'flex',
     flexDirection: 'column-reverse'
   }
+  
   let userPath = `/User/--usernameid--`
 
   console.log(props.imageSrc)

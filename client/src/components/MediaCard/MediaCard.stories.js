@@ -8,7 +8,7 @@ import nightSky from '../../../../assets/images/media-card-4.png';
 import waterfall from '../../../../assets/images/media-card-5.png';
 import flight from '../../../../assets/images/media-card-6.png';
 
-storiesOf('MediaCard', module)
+storiesOf('Media Cards', module)
   .add("Books", () => <MediaCard imageSrc={books} userFirstName='User' />)
   .add("Happiness", () => <MediaCard imageSrc={happiness} userFirstName='User' />)
   .add("Van", () => <MediaCard imageSrc={van} userFirstName='User' />)
