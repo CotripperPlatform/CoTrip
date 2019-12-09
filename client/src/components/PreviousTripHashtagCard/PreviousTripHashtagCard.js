@@ -3,10 +3,7 @@ import "./PreviousTripHashtagCard.css";
 import "../../App.css";
 
 // Function based React Component
-const PreviousTripHashtagCard = props => {
-  console.log(props);
-  // Default Class to apply to Component
-  const classList = `prev-hash-card-container`;
+const Card = props => {
   let data;
   // if data is greater than 10 items only get the latest 10 items
   if (props.data.length > 10) {
@@ -17,7 +14,7 @@ const PreviousTripHashtagCard = props => {
   }
 
   return (
-    <div className={classList}>
+    <div className={"prev-hash-card-container"}>
       <div className="trips-content-container">
         {props.children}
         {props.type === "trips slider" ? <div className="trip-slider-arrow" /> : null}
@@ -33,4 +30,4 @@ const PreviousTripHashtagCard = props => {
   );
 };
 
-export default PreviousTripHashtagCard;
+export default Card;
