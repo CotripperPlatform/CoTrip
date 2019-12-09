@@ -1,13 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 @import "../../App.css";
 
-/* :root {
-    --main-font-family: 'Open Sans', sans-serif;
-    --main-bg-color: rgb(196, 196, 196);
-    --main-border: 1px solid rgb(171, 171, 171);
-    --main-font-size: 14px;
-}
-
 .CommentBody {
     display: flex;
     flex-direction: row;
@@ -15,14 +8,14 @@
     align-items: flex-start;
     width: 60%;
     height: auto;
-    background-color: var(--main-bg-color);
-    border: var(--main-border);
-    font-size: var(--main-font-size);
-    font-family: var(--main-font-family);
+    background-color: var(--gray-dark);
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
 }
 .Date {
     margin-left: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}  */
+    flex-direction: row;
+    justify-content: flex-end;
+    white-space: nowrap;
+}

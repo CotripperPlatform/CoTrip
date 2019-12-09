@@ -18,10 +18,13 @@ const CommentBody = (props) => {
       <p className="Body">
         {body}
       </p>
-      <p className="Date">
-        {date} <br/>
-        {time}
-      </p>
+      <div className="Date">
+        <p>
+          {date}
+          <br/>
+          {time}
+        </p>
+      </div>
     </div>
   );
 }
