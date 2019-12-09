@@ -1,12 +1,12 @@
 import React from "react";
 import "./BannerParent.css";
 
-// Function based React Component
 const BannerParent = props => {
-  // Default Class to apply to Component
-  let classList = `BannerParent`;
+  BannerParent.defaultProps = {
+    type: "home"
+  };
 
-  return <div className={classList}>{props.children}</div>;
+  return <div className={`banner-parent banner-${props.type}`}>{props.children}</div>;
 };
 
 export default BannerParent;
