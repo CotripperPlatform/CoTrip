@@ -3,10 +3,10 @@ import "./BannerParent.css";
 
 const BannerParent = props => {
   BannerParent.defaultProps = {
-    type: "home"
+    bannerType: "home"
   };
 
-  return <div className={`banner-parent banner-${props.type}`}>{props.children}</div>;
+  return <div className={`banner-parent banner-${props.bannerType}`}>{props.children}</div>;
 };
 
 export default BannerParent;
