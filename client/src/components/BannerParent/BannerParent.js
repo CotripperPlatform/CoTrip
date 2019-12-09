@@ -6,7 +6,7 @@ const BannerParent = props => {
     bannerType: "home"
   };
 
-  return <div className={`banner-parent banner-${props.bannerType}`}>{props.children}</div>;
+  return <div className={`banner-parent banner-home ${props.bannerType}`}>{props.children}</div>;
 };
 
 export default BannerParent;

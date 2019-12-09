@@ -1,6 +1,6 @@
 .banner-parent {
-  width: 100px;
-  height: 100px;
+  width: 100vw;
+  height: 200px;
 }
 .banner-home {
   background-image: var(--home-banner);
