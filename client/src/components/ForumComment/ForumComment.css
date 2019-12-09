@@ -1,0 +1,34 @@
+.ForumComment {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 62.58%;
+    bottom: 0%;
+    
+    background: #C4C4C4;
+    border: 1px solid rgba(37, 37, 37, 0.5);
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.Body {
+position: absolute;
+left: 12.99%;
+right: 13.81%;
+top: 66.98%;
+bottom: 15.72%;
+
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 125.3%;
+/* or 18px */
+
+
+color: #252525;
+}
+
+.Date {
+    margin-left: 10px;
+}

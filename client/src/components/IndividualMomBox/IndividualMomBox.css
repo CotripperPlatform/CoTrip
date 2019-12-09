@@ -24,7 +24,7 @@ top: 09px;
 }
 
 .momName {
-font-family: 'Reem Kufi', sans-serif;
+    --default-font: 'Reem Kufi', sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 30px;
@@ -44,13 +44,12 @@ left: 17.03%;
 right: 17.03%;
 top: 62.97%;
 bottom: 0%;
-font-family: Reem Kufi, sans-serif;
-font-style: normal;
-font-weight: normal;
+--default-font: 'Reem Kufi', sans-serif;
+--paragraph-weight: 400;
 font-size: 15px;
 line-height: 22px;
 text-align: center;
-color: #252525;
+--black: #252525;
 }
 
 
@@ -64,6 +63,6 @@ color: #252525;
     right: 17.03%;
     bottom: 0%;
     left: 17.03%;
-    font-family: Reem Kufi, sans-serif;
+    --default-font: 'Reem Kufi', sans-serif;
 
 }
