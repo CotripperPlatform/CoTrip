@@ -51,3 +51,8 @@
 .button-yellow:hover {
   background-color: #f5c000;
 }
+.button-outline {
+  color: var(--pink);
+  background-color: var(--white);
+  border: 1px solid var(--pink);
+}

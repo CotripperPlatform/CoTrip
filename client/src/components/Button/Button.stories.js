@@ -43,4 +43,13 @@ storiesOf("Button", module)
   ))
   .add("Large Yellow Button", () => (
     <Button text="Submit" color="yellow" size="large" handleClick={handleClick} />
+  ))
+  .add("Small Outline Button", () => (
+    <Button text="Submit" color="outline" size="small" handleClick={handleClick} />
+  ))
+  .add("Normal Outline Button", () => (
+    <Button text="Submit" color="outline" handleClick={handleClick} />
+  ))
+  .add("Large Outline Button", () => (
+    <Button text="Submit" color="outline" size="large" handleClick={handleClick} />
   ));
