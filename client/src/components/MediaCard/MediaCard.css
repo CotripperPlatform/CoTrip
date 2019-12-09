@@ -17,7 +17,7 @@
 }
 
 .footer-text {
-  font-family: Open Sans, Helvetica, sans-serif;
+  font-family: var(--paragraph-font);
   font-style: inherit;
   font-weight: 100;
   letter-spacing: 1px;
