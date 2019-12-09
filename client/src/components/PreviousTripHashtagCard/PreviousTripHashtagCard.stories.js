@@ -68,4 +68,9 @@ storiesOf("PreviousTripHashtagCard", module)
   ))
   .add("Empty Card", () => (
     <PreviousTripHashtagCard data={[]} type="trips"></PreviousTripHashtagCard>
+  ))
+  .add("Slider Card", () => (
+    <PreviousTripHashtagCard data={[]} type="trips slider">
+      <h1>Previous Trips</h1>
+    </PreviousTripHashtagCard>
   ));
