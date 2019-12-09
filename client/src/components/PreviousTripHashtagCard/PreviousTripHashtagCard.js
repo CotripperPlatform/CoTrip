@@ -12,10 +12,7 @@ const PreviousTripHashtagCard = props => {
   if (props.data.length === 0 && props.type === "trips") {
     return (
       <div className={classList}>
-        <div className="trips-content-container">
-          <h1>Previous Trips</h1>
-          <div className="no-trips-container">{props.children}</div>
-        </div>
+        <div className="trips-content-container">{props.children}</div>
       </div>
     );
   }

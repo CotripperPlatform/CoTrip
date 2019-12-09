@@ -5,6 +5,7 @@ import PreviousTripHashtagCard from "./PreviousTripHashtagCard";
 storiesOf("PreviousTripHashtagCard", module)
   .add("Previous Trips, Empty", () => (
     <PreviousTripHashtagCard data={[]} type="trips" header="Previous Trips">
+      <h1>Previous Trips</h1>
       <h2>None with CoTripper yet!</h2>
       <a href="#">Book a Trip Now!</a>
     </PreviousTripHashtagCard>

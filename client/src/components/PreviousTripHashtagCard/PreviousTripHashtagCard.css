@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
   width: 500px;
   height: 260px;
   border-radius: 6px;
@@ -15,8 +16,27 @@
   padding-left: 25px;
 }
 .trips-content-container h1 {
+  margin-right: 50px;
+  text-align: left;
   font-size: 32px;
   color: #fff;
+}
+.trips-content-container h2 {
+  position: absolute;
+  margin: 3% 20% 0px 24%;
+  /* border: 2px solid black; */
+  font-size: 22px;
+  color: #fff;
+  display: inline-block;
+}
+.trips-content-container a {
+  font-size: 18px;
+  position: absolute;
+  top: 150px;
+  margin: 0px 27% 0px 32%;
+  /* border: 2px solid black; */
+  color: #fff;
+  display: inline-block;
 }
 .no-trips-container {
   position: relative;
@@ -26,15 +46,7 @@
   width: 250px;
   text-align: center;
 }
-.no-trips-container h2 {
-  /* border: 2px solid black; */
-  font-size: 22px;
-  color: #fff;
-}
-.trips-content-container a {
-  font-size: 18px;
-  color: #fff;
-}
+
 .trips-content-container a:hover {
   color: #ffcb06;
 }
