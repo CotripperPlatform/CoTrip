@@ -11,8 +11,8 @@ const InteractionCard = props => {
       <Link to={props.to}>
         <img className={"image-interaction"} src={props.img}></img>
       </Link>
-      <button></button>
-      <button></button>
+      <button className="connect-small" onclick={props.connect}></button>
+      <button className="message-small" onclick={props.message}></button>
     </div>
   );
 };
