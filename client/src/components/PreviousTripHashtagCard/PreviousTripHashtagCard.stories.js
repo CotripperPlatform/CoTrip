@@ -4,7 +4,7 @@ import PreviousTripHashtagCard from "./PreviousTripHashtagCard";
 
 storiesOf("PreviousTripHashtagCard", module)
   .add("Previous Trips, Empty", () => (
-    <PreviousTripHashtagCard data={[]} type="trips" header="Previous Trips">
+    <PreviousTripHashtagCard data={[]} type="trips">
       <h1>Previous Trips</h1>
       <h2>None with CoTripper yet!</h2>
       <a href="#">Book a Trip Now!</a>
@@ -14,8 +14,9 @@ storiesOf("PreviousTripHashtagCard", module)
     <PreviousTripHashtagCard
       data={["New York", "Mexico", "Wakanda", "Hawaii", "Japan", "Canada", "Italy"]}
       type="trips"
-      header="Previous Trips"
-    />
+    >
+      <h1>Previous Trips</h1>
+    </PreviousTripHashtagCard>
   ))
   .add("Previous Trips, Lots of Data", () => (
     <PreviousTripHashtagCard
@@ -36,7 +37,9 @@ storiesOf("PreviousTripHashtagCard", module)
       ]}
       type="trips"
       header="Previous Trips"
-    />
+    >
+      <h1>Previous Trips</h1>
+    </PreviousTripHashtagCard>
   ))
   .add("Trending Hashtags", () => (
     <PreviousTripHashtagCard

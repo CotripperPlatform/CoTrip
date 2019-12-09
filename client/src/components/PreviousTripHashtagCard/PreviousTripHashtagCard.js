@@ -6,16 +6,30 @@ import "../../App.css";
 const PreviousTripHashtagCard = props => {
   console.log(props);
   // Default Class to apply to Component
-  let classList = `prev-hash-card-container`;
-  let classListHashtags = `prev-hash-card-container hashtags`;
-
-  if (props.data.length === 0 && props.type === "trips") {
-    return (
-      <div className={classList}>
-        <div className="trips-content-container">{props.children}</div>
-      </div>
-    );
+  const classList = `prev-hash-card-container`;
+  const classListHashtags = `prev-hash-card-container hashtags`;
+  let data;
+  // if data is greater than 10 items only get the latest 10 items
+  if (props.data.length > 10) {
+    let dataLength = props.data.length - 1;
+    data = props.data.slice(dataLength - 10, dataLength);
+  } else {
+    data = props.data;
   }
+
+  return (
+    <div className={classList}>
+      <div className="trips-content-container">{props.children}</div>
+      {props.data.length > 0 ? (
+        <div className="trips-names-container">
+          {data.map(item => {
+            return <div className="single-trip-container">{item}</div>;
+          })}
+        </div>
+      ) : null}
+    </div>
+  );
+
   if (props.data.length > 0 && props.type === "trips") {
     if (props.data.length <= 10) {
       return (
@@ -30,8 +44,6 @@ const PreviousTripHashtagCard = props => {
           </div>
         </div>
       );
-
-      // if props.data is greater than 10 trips trim it down to the latest 10 trips
     } else if (props.data.length > 10) {
       let dataLength = props.data.length - 1;
       let trimmedData = props.data.slice(dataLength - 10, dataLength);

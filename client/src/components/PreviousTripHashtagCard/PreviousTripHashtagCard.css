@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-
   width: 500px;
   height: 260px;
   border-radius: 6px;
@@ -38,42 +37,32 @@
   color: #fff;
   display: inline-block;
 }
-.no-trips-container {
-  position: relative;
-  left: 47%;
-  top: 42%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  text-align: center;
-}
-
 .trips-content-container a:hover {
   color: #ffcb06;
 }
 
 .trips-names-container {
-  /* border: 2px solid saddlebrown; */
-  position: relative;
-  left: 47%;
-  top: 30%;
-  width: 350px;
-  height: 220px;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  /* justify-content: center; */
+  /* border: 2px solid saddlebrown; */
+  position: relative;
+  left: 47%;
+  top: 25%;
+  width: 350px;
+  height: 150px;
+  transform: translate(-50%, -50%);
 }
 
 .single-trip-container {
   /* text-align: center; */
+  display: inline-block;
   height: 30px;
   width: 100px;
   /* border: 2px solid black; */
   color: #fff;
   font-size: 20px;
-  padding: 5px 5px 5px 5px;
   bottom: 20%;
 }
 
