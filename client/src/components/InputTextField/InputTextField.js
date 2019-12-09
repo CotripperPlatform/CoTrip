@@ -2,15 +2,15 @@ import React from "react";
 import "./InputTextField.css";
 
 const InputTextField = props => {
-  let { type, name, placeholder, onChange } = props;
-  let classList = `input-field-container-${type}`;
+  let { variation, type, name, placeholder, onChange } = props;
+  let classList = `input-field-container-${variation}`;
   InputTextField.defaultProps = {
-    type: "default"
+    variation: "default"
   };
 
   return (
     <div className={classList}>
-      {type === "search" ? (
+      {variation === "search" ? (
         <svg viewBox="-4 -2 24 24">
           <path
             fill="#bababa"
@@ -18,7 +18,7 @@ const InputTextField = props => {
           />
         </svg>
       ) : null}
-      <input type={props.input} name={name} placeholder={placeholder} onChange={onChange} />
+      <input type={type} name={name} placeholder={placeholder} onChange={onChange} />
     </div>
   );
 };
