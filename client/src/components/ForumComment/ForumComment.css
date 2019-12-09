@@ -16,11 +16,12 @@ font-family: var( --paragraph-font);
 bottom: 0%;
 left: 2.5%;
 font-size: 18px;
+font-weight: var(--banner-weight);
 }
 
 .comment {
 position: absolute;
-left: 13.49%;
+left: 15.49%;
 right: 14.81%;
 top: 03.98%;
 bottom: 96.72%;
@@ -32,12 +33,12 @@ line-height: 119.3%;
 color: var(--black);
 }
 
-.profile {
+img {
 position: absolute;
-left: 3.75%;
-right: 91.04%;
-top: 79.42%;
-bottom: 16.2%;
+left: 1.2%;
+right: 92.04%;
+top: 10.42%;
+bottom: 80.2%;
 }
 
 .date {

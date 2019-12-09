@@ -10,7 +10,8 @@ const ForumComment = (props) => {
 
     return(
         <div className={classList}>
-        <img className="profile" src={props.img}></img>
+        {/* <img className="profile" src={props.img}></img> */}
+        <img src={img} />
         <p className="momName">{props.momName}</p>
           <p className="comment">
           {props.comment} 
