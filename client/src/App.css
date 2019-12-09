@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 :root {
     /* These are all the defaults for CoTripper. Below is an example of usage:
@@ -14,6 +15,7 @@
     --white: #FAFAFA;
     /* Default font */
     --default-font: 'Reem Kufi', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
     /* Images */
     --comment-black: url("../../assets/images/comment_black.png");
     --edit-button: url("../../assets/images/edit_button.png");
