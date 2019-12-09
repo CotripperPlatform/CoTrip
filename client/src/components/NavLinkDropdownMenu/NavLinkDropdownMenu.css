@@ -1,0 +1,14 @@
+.NavLinkDropdownMenu {
+  border: 2px solid gray;
+  margin: 0;
+  padding: 5px;
+  list-style: none;
+}
+.NavLinkDropdownMenu-li {
+  padding: 5px 10px;
+  color: var(--purple);
+  font-family: var(--default-font);
+}
+.NavLinkDropdownMenu-li:hover {
+  background-color: lightgray;
+}

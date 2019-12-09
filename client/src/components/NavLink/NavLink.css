@@ -1,0 +1,22 @@
+.NavLink {
+  background-color: var(--yellow);
+  color: var(--black);
+  font-family: var(--default-font);
+  padding: 20px;
+  position: relative;
+}
+.NavLink:hover {
+  filter: brightness(90%);
+}
+.dropdown-hide {
+  position: absolute;
+  top: -500%;
+  left: 0;
+  width: 100%;
+}
+.dropdown-show {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
