@@ -1,4 +1,5 @@
 
 .Navbar {
-
+    color: var(--yellow);
+    width: 100vw;
 }
