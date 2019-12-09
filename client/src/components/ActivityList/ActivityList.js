@@ -57,11 +57,11 @@ class ActivityList extends Component {
     return (
       <div className={this.state.classList}>
         <div className="activities-container">
-          <span className="activity-header">Activities for Mom</span>
+          <h1 className="activity-header">Activities for Mom</h1>
           {this.renderMomActivities()}
         </div>
         <div className="activities-container">
-          <span className="activity-header">Activities for Mom & Kids</span>
+          <h1 className="activity-header">Activities for Mom & Kids</h1>
           {this.renderKidsActivities()}
         </div>
       </div>

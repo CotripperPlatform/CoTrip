@@ -1,10 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
-
 .activity-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0px 40px;
+  box-sizing: border-box;
 }
 
 .activities-container {
@@ -12,12 +7,10 @@
 }
 
 .activity-header {
-  font-family: "Reem Kufi", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: var(--default-font);
   font-size: 36px;
   line-height: 54px;
-  color: #6a4c93;
+  color: var(--purple);
 }
 
 .activity-container {
@@ -39,21 +32,26 @@
 }
 
 .activities {
-  font-family: "Reem Kufi", sans-serif;
-  font-style: normal;
-  font-weight: normal;
+  font-family: var(--default-font);
   font-size: 24px;
   line-height: 36px;
-  color: #fafafa;
+  color: var(--white);
   text-align: center;
 }
 
 .mom {
-  background: #6a4c93;
+  background-color: var(--purple);
 }
 
 .kids {
-  background: #d1495b;
+  background-color: var(--red);
+}
+
+@media all and (min-width: 1025px) {
+  .activity-list {
+    width: 1280px;
+    margin-left: 40px;
+  }
 }
 
 @media all and (max-width: 1024px) and (min-width: 721px) {
