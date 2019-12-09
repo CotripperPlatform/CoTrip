@@ -1,5 +1,6 @@
 import React from "react";
 import "./PreviousTripHashtagCard.css";
+import "../../App.css";
 
 // Function based React Component
 const PreviousTripHashtagCard = props => {
@@ -13,10 +14,7 @@ const PreviousTripHashtagCard = props => {
       <div className={classList}>
         <div className="trips-content-container">
           <h1>Previous Trips</h1>
-          <div className="no-trips-container">
-            <h2>None with CoTripper yet!</h2>
-            <a href="#">Book a Trip Now!</a>
-          </div>
+          <div className="no-trips-container">{props.children}</div>
         </div>
       </div>
     );
