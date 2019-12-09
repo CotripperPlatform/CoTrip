@@ -41,7 +41,7 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Next"}
-        color={'blacks'}
+        color={"blacks"}
         color="Pink"
         clickCallback={pillClick}
         width={"50%"}
@@ -57,7 +57,7 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Button"}
-        color={'blacks'}
+        color={"blacks"}
         color="Pink"
         clickCallback={pillClick}
         width={"50%"}
@@ -73,7 +73,7 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Button"}
-        color={'blacks'}
+        color={"blacks"}
         size="Medium"
         color="Pink"
         clickCallback={pillClick}
@@ -89,7 +89,7 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Button"}
-        color={'blacks'}
+        color={"blacks"}
         size="Large"
         color="Pink"
         clickCallback={pillClick}
@@ -105,7 +105,7 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Button"}
-        color={'blacks'}
+        color={"blacks"}
         icon
         size="Large"
         color="Pink"
@@ -122,7 +122,7 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Button"}
-        color={'Purple'}
+        color={"Purple"}
         icon
         active={true}
         iconOffset
@@ -140,8 +140,8 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Button"}
-        color={'blacks'}
-        icon={'pink'}
+        color={"blacks"}
+        icon={"pink"}
         iconOffset
         size="Large"
         clickCallback={pillClick}

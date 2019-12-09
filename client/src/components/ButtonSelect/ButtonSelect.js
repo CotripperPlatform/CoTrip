@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./ButtonSelect.css";
-import heartWhite from './heart-white.svg';
-import heartPink from './heart-pink.svg';
+import heartWhite from "./heart-white.svg";
+import heartPink from "./heart-pink.svg";
 class ButtonSelect extends Component {
   constructor(props) {
     super(props);
@@ -9,9 +9,9 @@ class ButtonSelect extends Component {
     this.configureButtonColor(this.props.color);
 
     // Default CSS class to apply to the Component
-    if(this.props.active){
+    if (this.props.active) {
       this.configureToggle(props);
-    }else{
+    } else {
       this.state = {
         classList: this.configureButtonColor(),
         style: {
@@ -21,24 +21,23 @@ class ButtonSelect extends Component {
         selectId: props.selectId
       };
     }
-
   }
 
-  configureButtonColor=()=>{
-    return `ButtonSelect ButtonIconShadow ButtonSelect${this.props.size} ButtonSelect${this.props.color}`
-  }
+  configureButtonColor = () => {
+    return `ButtonSelect ButtonIconShadow ButtonSelect${this.props.size} ButtonSelect${this.props.color}`;
+  };
 
-  toggleButtonColor=(active)=>{
+  toggleButtonColor = active => {
     let size = this.props.size;
-    size = this.props.color === 'Purple' ? size += ` ButtonSelectPink` : size;
-    if(active===true){
-      return `ButtonSelect ButtonIconShadow ButtonSelect${this.props.size} ButtonSelect${this.props.color}`
-    }else{
-      return `ButtonSelect ButtonIconShadow ButtonSelect${size}`
+    size = this.props.color === "Purple" ? (size += ` ButtonSelectPink`) : size;
+    if (active === true) {
+      return `ButtonSelect ButtonIconShadow ButtonSelect${this.props.size} ButtonSelect${this.props.color}`;
+    } else {
+      return `ButtonSelect ButtonIconShadow ButtonSelect${size}`;
     }
-  }
+  };
 
-  configureToggle=(props)=>{
+  configureToggle = props => {
     this.state = {
       classList: this.configureButtonColor(this.props.active),
       active: this.props.active,
@@ -47,11 +46,10 @@ class ButtonSelect extends Component {
       },
       selectId: props.selectId
     };
-  }
+  };
 
-
-  toggleClick=(evt)=>{
-    console.log("Toggling")
+  toggleClick = evt => {
+    console.log("Toggling");
     let active = !this.state.active;
     let selectedColor = this.props.selectedColor;
     let unselectedColor = this.props.unactiveColor;
@@ -73,29 +71,33 @@ class ButtonSelect extends Component {
         this.props.clickCallback(output);
       }
     );
-  }
+  };
 
-  pillClicked = (evt) => {
-    if(this.props.active){
+  pillClicked = evt => {
+    if (this.props.active) {
       this.toggleClick(evt);
-    }else{
+    } else {
       this.props.clickCallback("cool");
     }
   };
 
-  renderWithHeart=()=>{
-    let iconClass = this.props.iconOffset ? 'ButtonIcon ButtonIconOffset' : 'ButtonIcon';
-    let renderHeart = this.props.icon === 'pink' ? heartPink : heartWhite;
-    return <div onClick={this.pillClicked} className={this.state.classList} style={this.state.style}>
-      {this.props.text}
-      <img src={renderHeart} className={iconClass}></img>
-    </div>
+  renderWithHeart = () => {
+    let iconClass = this.props.iconOffset ? "ButtonIcon ButtonIconOffset" : "ButtonIcon";
+    let renderHeart = this.props.icon === "pink" ? heartPink : heartWhite;
+    return (
+      <div onClick={this.pillClicked} className={this.state.classList} style={this.state.style}>
+        {this.props.text}
+        <img src={renderHeart} className={iconClass}></img>
+      </div>
+    );
   };
 
-  renderWithoutHeart=()=>{
-    return <div onClick={this.pillClicked} className={this.state.classList} style={this.state.style}>
-      {this.props.text}
-    </div>
+  renderWithoutHeart = () => {
+    return (
+      <div onClick={this.pillClicked} className={this.state.classList} style={this.state.style}>
+        {this.props.text}
+      </div>
+    );
   };
 
   render() {
