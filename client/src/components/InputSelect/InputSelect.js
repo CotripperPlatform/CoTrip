@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./InputSelect.css";
 import PropTypes from "prop-types";
+import "../../App.css";
 
 // Class Based React Component
 class InputSelect extends Component {
@@ -30,7 +31,8 @@ class InputSelect extends Component {
       >
         {this.props.options.map(option => (
           <option key={option.value} value={option.value}>
-            {this.props.optionPrefix} {option.title}
+            {this.props.optionPrefix}
+            {option.title}
           </option>
         ))}
       </select>
@@ -38,7 +40,7 @@ class InputSelect extends Component {
   }
 }
 InputSelect.defaultProps = {
-  optionPrefix: "Sort By: ",
+  optionPrefix: "Sort By:  ",
   options: [
     { value: "option1", title: "Option 1" },
     { value: "option2", title: "Option 2" }

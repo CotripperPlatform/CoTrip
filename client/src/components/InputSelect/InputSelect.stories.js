@@ -10,7 +10,7 @@ storiesOf("InputSelect", module)
   .add("Options", () => (
     <InputSelect
       onSelect={handleSelect}
-      optionPrefix={"Sort By: "}
+      optionPrefix={"Sort By:  "}
       options={[
         { value: "location", title: "Location" },
         { value: "date", title: "Date" },
