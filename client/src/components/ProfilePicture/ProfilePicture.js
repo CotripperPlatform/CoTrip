@@ -4,19 +4,20 @@ import { Link } from "react-router-dom";
 
 // Function based React Component
 const ProfilePicture = props => {
+  console.log(props);
   // Default Class to apply to Component
   let classList = `ProfilePicture`;
   let types = ["extra-small", "small", "medium", "large"];
   if (types.includes(props.type)) {
-    classList += `profile-pic-${props.type}`;
+    classList += ` profile-pic-${props.type}`;
   }
 
-  if (this.props.link) {
+  if (props.link) {
     return (
       <div className={classList}>
         {/* this will be a link to the user profile page */}
-        <Link exact={true} to="/">
-          <img src={props.url} alt="profile-picture" />
+        <Link exact={true} to={props.link}>
+          <img className="profile-picture-img" src={props.image} alt="profile-picture" />
         </Link>
       </div>
     );
@@ -24,7 +25,7 @@ const ProfilePicture = props => {
     return (
       <div className={classList}>
         {/* this is the url for the user profile picture */}
-        <img src={props.url} />
+        <img className="profile-picture-img" src={props.image} />
       </div>
     );
   }

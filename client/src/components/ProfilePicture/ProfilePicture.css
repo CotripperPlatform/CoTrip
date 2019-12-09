@@ -1,18 +1,18 @@
 .ProfilePicture {
 }
-.extra-small {
+.profile-pic-extra-small .profile-picture-img {
   height: 67px;
   width: 67px;
 }
-small {
+.profile-pic-small .profile-picture-img {
   height: 90px;
   width: 90px;
 }
-.medium {
+.profile-pic-medium .profile-picture-img {
   height: 150px;
   width: 150px;
 }
-.large {
+.profile-pic-large .profile-picture-img {
   height: 233px;
   width: 233px;
 }
