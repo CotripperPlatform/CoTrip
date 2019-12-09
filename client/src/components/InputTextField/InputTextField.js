@@ -3,7 +3,7 @@ import "./InputTextField.css";
 
 const InputTextField = props => {
   let { type, name, placeholder, onChange } = props;
-  let classList = `input-text-field-container-${type}`;
+  let classList = `input-field-container-${type}`;
   InputTextField.defaultProps = {
     type: "default"
   };

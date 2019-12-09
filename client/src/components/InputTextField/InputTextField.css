@@ -1,45 +1,46 @@
-.input-text-field-container-default input {
+.input-field-container-default input {
   display: flex;
   color: var(--black);
-  width: 455px;
-  height: 55px;
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 3px;
-  padding: 0px 30px;
+  padding: 15px 30px;
+  width: 100%;
+  min-width: 400px;
   font-size: 20px;
   font-family: var(--default-font);
 }
 
-.input-text-field-container-small input {
+.input-field-container-small input {
   color: black;
-  width: 175px;
-  height: 42px;
   background-color: var(--white);
   border: 2px solid white;
   border-radius: 3px;
-  padding: 0px 24px;
-  font-size: 16px;
+  padding: 15px 24px;
+  width: 100%;
+  min-width: 175px;
+  font-size: 18px;
   font-family: var(--default-font);
 }
 
-.input-text-field-container-search svg {
+.input-field-container-search svg {
   position: absolute;
   height: 48px;
   width: 60px;
 }
 
-.input-text-field-container-search input {
+.input-field-container-search input {
   display: flex;
   color: var(--black);
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 3px;
-  padding: 0px 30px;
+  padding: 15px 30px;
+  width: 100%;
+  min-width: 300px;
   font-size: 20px;
   font-family: var(--default-font);
-  width: 300px;
-  height: 50px;
+
   padding-left: 60px;
   -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
