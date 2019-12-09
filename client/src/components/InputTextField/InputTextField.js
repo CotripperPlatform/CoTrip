@@ -1,26 +1,9 @@
 import React from "react";
 import "./InputTextField.css";
-import "../../App.css";
-/**
- * Created by Tyler
- *
- * Props will define the type of input field
- * Input fields include email, password, name, confirm password, city of residence, what is your age?, what is your dream destination, First name,   last name, search my directory, search trips.
- *
- * I think we'll need to implement a function on these to retrieve the data typed in when pressing a submit button. I wasn't sure how to do this with just the standalone components in storybook.
- */
 
-// Class Based React Component
 const InputTextField = props => {
   let { size, type, name, placeholder, onChange } = props;
-  let classList = "input-text-field-container";
-  if (size === "small") {
-    classList = "input-text-field-container-small";
-  } else if (type === "search") {
-    classList = "input-text-field-container search";
-  } else if (size === "small" && type === "search") {
-    classList = "input-text-field-container-small search";
-  }
+  let classList = `input-text-field-container-${type}`;
 
   return (
     <div className={classList}>
