@@ -18,7 +18,7 @@ const InputTextField = props => {
           />
         </svg>
       ) : null}
-      <input type="text" name={name} placeholder={placeholder} onChange={onChange} />
+      <input type={props.input} name={name} placeholder={placeholder} onChange={onChange} />
     </div>
   );
 };
