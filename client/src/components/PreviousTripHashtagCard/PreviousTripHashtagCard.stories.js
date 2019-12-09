@@ -3,6 +3,9 @@ import { storiesOf } from "@storybook/react";
 import PreviousTripHashtagCard from "./PreviousTripHashtagCard";
 
 storiesOf("PreviousTripHashtagCard", module)
+  .add("Empty Card", () => (
+    <PreviousTripHashtagCard data={[]} type="trips"></PreviousTripHashtagCard>
+  ))
   .add("Previous Trips, No Data", () => (
     <PreviousTripHashtagCard data={[]} type="trips">
       <h1>Previous Trips</h1>
@@ -66,16 +69,5 @@ storiesOf("PreviousTripHashtagCard", module)
     <PreviousTripHashtagCard data={[]} type="hashtags" header="Trending Hashtags">
       <h1>Trending Hashtags</h1>
       <h2>None with CoTripper yet!</h2>
-    </PreviousTripHashtagCard>
-  ))
-  .add("Empty Card", () => (
-    <PreviousTripHashtagCard data={[]} type="trips"></PreviousTripHashtagCard>
-  ))
-  .add("Previous Trips with Data", () => (
-    <PreviousTripHashtagCard
-      data={["New York", "Mexico", "Wakanda", "Hawaii", "Japan", "Canada", "Italy"]}
-      type="trips"
-    >
-      <h1>Previous Trips</h1>
     </PreviousTripHashtagCard>
   ));

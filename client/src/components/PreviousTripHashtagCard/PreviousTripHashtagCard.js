@@ -19,7 +19,9 @@ const Card = props => {
       <div className="trips-content-container">
         {props.children}
         {props.type === "trips" && props.data.length > 0 ? (
-          <div className="trip-slider-arrow" />
+          <a id="trips-page-anchor" href="">
+            <div className="trip-slider-arrow" />
+          </a>
         ) : null}
       </div>
       {props.data.length > 0 && props.type === "hashtags" ? (

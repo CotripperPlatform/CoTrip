@@ -81,6 +81,7 @@
   box-shadow: 6px 7px 5px -2px rgba(0, 0, 0, 0.64);
   transition: all 0.1s ease-in-out;
   cursor: pointer;
+  z-index: 2;
 }
 .trip-slider-arrow:hover {
   transform: scale(1.1);
@@ -100,4 +101,7 @@
   width: 49%;
   height: 99%;
   background-color: red;
+}
+#trips-page-anchor {
+  position: inherit;
 }
