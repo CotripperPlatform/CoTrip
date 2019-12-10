@@ -1,4 +1,4 @@
-.info-card-container {
+.Card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,32 +8,32 @@
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   font-family: var(--default-font);
 }
-.info-card-purple {
+.Card_purple {
   background-color: var(--purple);
 }
-.info-card-pink {
+.Card_pink {
   background-color: var(--pink);
 }
 
-.info-card-large {
+.Card_large {
   width: 100%;
   min-width: 500px;
   height: 260px;
 }
 
-.info-card-medium {
+.Card_medium {
   width: 100%;
   min-width: 225px;
   height: 150px;
 }
 
-.info-card-small {
+.Card_small {
   width: 100%;
   min-width: 225px;
   height: 125px;
 }
 
-.info-card-container img {
+.Card img {
   display: block;
   max-width: 100%;
   max-height: 100%;
