@@ -16,8 +16,10 @@ const BookTripCard = props => {
   return (
     <Card color="pink" size="large">
       {props.children[0]}
-      {props.children[1]}
-      {props.children[2]}
+      <div>
+        {props.children[1]}
+        {props.children[2]}
+      </div>
       <Link to={props.to}>{props.children[3]}</Link>
     </Card>
   );

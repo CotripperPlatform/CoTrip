@@ -1,4 +1,17 @@
+.Card img {
+  width: 45%;
+  height: 100%;
 
-.BookTripCard {
+}
 
+.Card div {
+  display: flex;
+  justify-content: space-around;
+  height: 60%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Card h3 {
+  text-align: center;
 }
