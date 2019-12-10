@@ -1,4 +1,6 @@
 
-.Connections {
-
+.Connections__heading {
+  font-size: 2rem;
+  font-family: var(--default-font);
+  color: var(--purple)
 }
