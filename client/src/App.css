@@ -17,6 +17,13 @@
     --gray-lite: #E5E5E5;
     --gray-dark: #C4C4C4;
     --green: #12DB00;
+    --white-hover: #FCF0EE;
+    --orange-hover: #FF6A50;
+    --purple-hover: #592D96;
+    --red-hover: #D42E44;
+    --yellow-hover: #F5C000;
+    /* Background Graidients */
+    --yellow-gradient: linear-gradient(#FFCB06 65%, #FFF1C0);
 
     /* Default font */
     --default-font: 'Reem Kufi', sans-serif;
