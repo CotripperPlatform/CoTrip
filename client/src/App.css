@@ -8,6 +8,7 @@
 
   /* Default color palette variables */
   --yellow: #ffcb06;
+  --yellow-dark: #f2bc0f;
   --pink: #fb8370;
   --red: #d1495b;
   --purple: #6a4c93;
@@ -16,6 +17,7 @@
   --gray-lite: #e5e5e5;
   --gray-dark: #c4c4c4;
   --green: #12db00;
+
   /* Default font */
   --default-font: "Reem Kufi", sans-serif;
   --paragraph-font: "Open Sans", sans-serif;
