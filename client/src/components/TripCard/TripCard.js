@@ -1,10 +1,10 @@
 import React from "react";
-import "./ImageCard.css";
+import "./TripCard.css";
 
 // Function based React Component
-const ImageCard = props => {
+const TripCard = props => {
   // Default Class to apply to Component
-  let classList = `ImageCard`;
+  let classList = `TripCard`;
   let image = <img className="backgroundImage" src={props.url} alt="trip background" />;
   let textEls = props.text.map((text, index) => {
     if (index === 0) {
@@ -28,4 +28,4 @@ const ImageCard = props => {
   );
 };
 
-export default ImageCard;
+export default TripCard;
