@@ -10,7 +10,7 @@ const TrendingHashtagCard = props => {
       <div className="hashtag-card-container">
         {props.children}
         <div className="hashtags-container">
-          {data.map((item, key) => {
+          {data.map(item => {
             return <div className="single-hashtag-container">{item}</div>;
           })}
         </div>
