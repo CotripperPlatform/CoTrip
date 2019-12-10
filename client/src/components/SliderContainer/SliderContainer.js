@@ -6,6 +6,7 @@ import southernCaribbean from "../../../../assets/images/southernCaribbean.png";
 import easternCaribbean from "../../../../assets/images/easternCaribbean.png";
 import hawaiiTrees from "../../../../assets/images/hawaii-trees.png";
 import westernCaribbean from "../../../../assets/images/westernCaribbean.png";
+import CarouselDots from "../CarouselDots/CarouselDots.js";
 
 class SliderContainer extends Component {
   constructor(props) {
@@ -27,7 +28,14 @@ class SliderContainer extends Component {
             src={this.props.images[this.state.image_index].url}
             alt={this.props.images[this.state.image_index].alt}
           />
-          <button onClick={this.onClick}>...</button>
+          <div className="SliderContainer__carousel-container">
+            <CarouselDots
+              numberOfDots={this.props.images.length}
+              activeLocation={0}
+              border
+              onStatusChange={this.onClick}
+            />
+          </div>
         </div>
         <div className="SliderContainer__right">
           <p className="SliderContainer__overview-title">Overview</p>
