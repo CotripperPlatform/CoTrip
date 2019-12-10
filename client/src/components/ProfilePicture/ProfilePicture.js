@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 // Function based React Component
 const ProfilePicture = props => {
   // Default Class to apply to Component
-  let classList = "ProfilePicture";
-  let types = ["extra-small", "small", "medium", "large"];
-  if (types.includes(props.type)) {
-    classList += `--${props.type}`;
-  }
+  let classList = `ProfilePicture ProfilePicture--${props.type}`;
 
   return (
     <div className={classList}>
@@ -24,6 +20,10 @@ const ProfilePicture = props => {
       )}
     </div>
   );
+};
+
+ProfilePicture.defaultProps = {
+  type: "medium"
 };
 
 export default ProfilePicture;
