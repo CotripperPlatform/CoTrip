@@ -1,16 +1,9 @@
 import React, { Component } from "react";
 import "./ActivityList.css";
 
-// Class Based React Component
 class ActivityList extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
-
-    // Default CSS class to apply to the Component
-    this.state = {
-      classList: "ActivityList__activity-list"
-    };
     this.momActivityList = ["Spa", "Wine Nights", "Brunch with Other Moms"];
     this.kidsActivityList = [
       "Snorkeling",
@@ -43,15 +36,6 @@ class ActivityList extends Component {
     });
     return <div className="ActivityList__activity-container">{kidsActivities}</div>;
   };
-
-  // Runs after Component is loaded in the broswer
-  componentDidMount() {}
-
-  // Runs after a component has been updated
-  componentDidUpdate() {}
-
-  // Runs right before a component is removed from the DOM
-  componentWillUnmount() {}
 
   render() {
     return (
