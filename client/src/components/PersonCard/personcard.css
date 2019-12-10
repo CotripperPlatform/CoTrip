@@ -20,7 +20,7 @@ left: 35px;
 top: 12px;
 }
 
-.PersonCard__MomName {
+.PersonCard__ProfileName {
 font-family: var(--default-font);
 font-weight: var(--paragraph-weight);
 font-size: 30px;
