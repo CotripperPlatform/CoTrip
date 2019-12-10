@@ -1,0 +1,7 @@
+.PreviousTripsCard_container {
+}
+.PreviousTripCard_container h1 {
+  position: absolute;
+  left: 5%;
+  color: var(--white);
+}
