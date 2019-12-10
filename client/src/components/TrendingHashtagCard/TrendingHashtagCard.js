@@ -3,9 +3,20 @@ import "./TrendingHashtagCard.css";
 import Card from "../InfoCard/InfoCard";
 
 const TrendingHashtagCard = props => {
-  let classList = `hashtag-card-container`;
+  let { data } = props;
 
-  return <Card color="purple"></Card>;
+  return (
+    <Card color="purple">
+      <div className="hashtag-card-container">
+        {props.children}
+        <div className="hashtags-container">
+          {data.map(item => {
+            return <div className="single-hashtag-container">{item}</div>;
+          })}
+        </div>
+      </div>
+    </Card>
+  );
 };
 
 export default TrendingHashtagCard;

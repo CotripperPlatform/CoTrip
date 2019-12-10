@@ -1,2 +1,37 @@
 .hashtag-card-container {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--default-font);
+  border: 2px solid black;
+}
+.hashtag-card-container h1 {
+  border: 2px solid black;
+  position: absolute;
+  color: var(--white);
+  font-weight: 1;
+  display: none;
+}
+
+.hashtags-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 2px solid saddlebrown;
+  position: absolute;
+  left: 47%;
+  width: 350px;
+  height: 150px;
+  transform: translate(-50%, -50%);
+}
+.single-hashtag-container {
+  display: inline-block;
+  height: 30px;
+  width: 100px;
+  color: var(--white);
+  font-size: 20px;
+  bottom: 20%;
 }
