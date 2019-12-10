@@ -13,7 +13,7 @@ const GroupCard = (props) => {
   }
 
   return(
-    <Link className="GroupCard">
+    <Link className="GroupCard" to="#">
       {background}
       <div className="GroupCard__text-container">
         <p className="GroupCard__group-name">{props.name}</p>
