@@ -1,4 +1,3 @@
-
 .Navbar {
     display: flex;
     justify-content: space-between;
@@ -7,6 +6,10 @@
     height: 100px;
     background-color: var(--yellow);
     font-family: var(--default-font);
+}
+
+.hidden {
+  display: none;
 }
 
 .navbar-logo {
