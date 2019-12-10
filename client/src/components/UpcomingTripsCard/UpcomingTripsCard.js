@@ -1,13 +1,10 @@
 
 import React from 'react';
 import "./UpcomingTripsCard.css";
-//import location/trip card
 import { Link } from "react-router-dom";
 
-// Function based React Component
 const UpcomingTripsCard = (props) => {
 
-  // Default Class to apply to Component
   let classList = `UpcomingTripsCard`;
   let details = props.details;
 
