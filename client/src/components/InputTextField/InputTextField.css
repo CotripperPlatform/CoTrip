@@ -1,0 +1,47 @@
+.InputTextField--default input {
+  display: flex;
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 3px;
+  padding: 15px 30px;
+  width: 100%;
+  min-width: 400px;
+  font-size: 20px;
+  font-family: var(--default-font);
+}
+
+.InputTextField--small input {
+  color: black;
+  background-color: var(--white);
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 15px 24px;
+  width: 100%;
+  min-width: 175px;
+  font-size: 18px;
+  font-family: var(--default-font);
+}
+
+.InputTextField--search svg {
+  position: absolute;
+  height: 48px;
+  width: 60px;
+}
+
+.InputTextField--search input {
+  display: flex;
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 3px;
+  padding: 15px 30px;
+  width: 100%;
+  min-width: 300px;
+  font-size: 20px;
+  font-family: var(--default-font);
+  padding-left: 60px;
+  -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+  box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+}
