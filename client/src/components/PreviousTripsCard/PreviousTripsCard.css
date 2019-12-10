@@ -1,4 +1,4 @@
-.PreviousTripsCard_container {
+.PreviousTripsCard__container {
   width: 100%;
   height: 100%;
   position: relative;
@@ -6,12 +6,12 @@
   flex-direction: column;
   font-family: var(--default-font);
 }
-.PreviousTripCard_container h1 {
+.PreviousTripCard__container h1 {
   position: absolute;
   left: 5%;
   color: var(--white);
 }
-.PreviousTripCard_trips {
+.PreviousTripCard__trips {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,13 +21,13 @@
   margin-left: 2%;
   border: 2px solid black;
 }
-.PreviousTripCard_trips div {
+.PreviousTripCard__trips div {
   width: 49%;
   height: 100%;
   background-color: red;
 }
 
-.PreviousTripCard_arrow {
+.PreviousTripCard__arrow {
   position: absolute;
   right: -1%;
   top: 45%;
@@ -42,11 +42,11 @@
   cursor: pointer;
   z-index: 2;
 }
-.PreviousTripCard_arrow:hover {
+.PreviousTripCard__arrow:hover {
   transform: scale(1.1);
 }
 
-.PreviousTripCard_no-trips {
+.PreviousTripCard__no-trips {
   position: absolute;
   left: 10%;
   top: 30%;
@@ -58,7 +58,7 @@
   /* border: 2px solid black; */
 }
 
-.PreviousTripCard_no-trips h2 {
+.PreviousTripCard__no-trips h2 {
   /* position: absolute; */
   margin: 3% 20% 0px 24%;
   /* border: 2px solid black; */
@@ -66,7 +66,7 @@
   color: #fff;
   display: inline-block;
 }
-.PreviousTripCard_no-trips a {
+.PreviousTripCard__no-trips a {
   font-size: 18px;
   /* position: absolute; */
   top: 150px;
@@ -75,6 +75,6 @@
   color: #fff;
   display: inline-block;
 }
-.PreviousTripCard_no-trips a:hover {
+.PreviousTripCard__no-trips a:hover {
   color: #ffcb06;
 }

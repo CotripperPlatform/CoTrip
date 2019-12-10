@@ -8,15 +8,15 @@ const PreviousTripsCard = props => {
 
   return (
     <Card color="purple">
-      <div className="PreviousTripCard_container">{props.children[0]}</div>
+      <div className="PreviousTripCard__container">{props.children[0]}</div>
       {trips ? (
-        <div className="PreviousTripCard_trips">
+        <div className="PreviousTripCard__trips">
           {props.children[1]}
           {props.children[2]}
-          <a href={link} className="PreviousTripCard_arrow" />
+          <a href={link} className="PreviousTripCard__arrow" />
         </div>
       ) : (
-        <div className="PreviousTripCard_no-trips">
+        <div className="PreviousTripCard__no-trips">
           {props.children[1]}
           {props.children[2]}
         </div>
