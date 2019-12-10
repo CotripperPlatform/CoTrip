@@ -1,0 +1,16 @@
+.ProfilePicture--extra-small img {
+  height: 67px;
+  width: 67px;
+}
+.ProfilePicture--small img {
+  height: 90px;
+  width: 90px;
+}
+.ProfilePicture img {
+  height: 150px;
+  width: 150px;
+}
+.ProfilePicture--large img {
+  height: 233px;
+  width: 233px;
+}
