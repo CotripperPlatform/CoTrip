@@ -1,7 +1,7 @@
 .TrendingHashtagCard__container {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11,7 +11,6 @@
   color: var(--white);
   width: 50%;
   padding-left: 5%;
-  border: 2px solid black;
 }
 .TrendingHashtagCard__container h2 {
   width: 50%;
@@ -19,7 +18,8 @@
   color: var(--white);
 }
 .TrendingHashtagCard__hashtags-container {
-  border: 2px solid black;
+  position: relative;
+  bottom: 10%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -30,7 +30,6 @@
   padding: 0% 10% 0% 10%;
 }
 .TrendingHashtagCard__hashtag {
-  /* border: 2px solid black; */
   display: inline-block;
   height: 30px;
   width: 100px;
