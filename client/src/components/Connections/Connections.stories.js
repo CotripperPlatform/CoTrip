@@ -6,36 +6,43 @@ import pic2 from '../../../../assets/images/card_profile2.png'
 import pic3 from '../../../../assets/images/card_profile3.png'
 
 let user1 = {
+  userId: 1,
   userFirstName: 'Paula', 
   userSurname: 'Bannerman', 
   userPic: pic1
 }
 let user2 = {
+  userId: 2,
   userFirstName: 'Jack', 
   userSurname: 'Johnson', 
   userPic: pic2
 }
 let user3 = {
+  userId: 3,
   userFirstName: 'Jenny', 
   userSurname: 'Jones', 
   userPic: pic3
 }
 let user4 = {
+  userId: 4,
   userFirstName: 'Joan', 
   userSurname: 'Rivers', 
   userPic: pic1
 }
 let user5 = {
+  userId: 5,
   userFirstName: 'Freddy', 
   userSurname: 'Mercury', 
   userPic: pic2
 }
 let user6 = {
+  userId: 5,
   userFirstName: 'Leslie', 
   userSurname: 'Knope', 
   userPic: pic3
 }
 let user7 = {
+  userId: 7,
   userFirstName: 'Frank', 
   userSurname: 'Ocean', 
   userPic: pic1

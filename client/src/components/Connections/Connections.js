@@ -30,9 +30,9 @@ class Connections extends Component {
     this.setState({
       userArray: this.props.users.map(person => {
         return (
-          <div className='Connections__div'>
+          <div key={person.userId} className='Connections__div'>
             <ProfilePicture image={person.userPic} />
-            <p className='Connections__heading'></p>
+            <p className='Connections--name'>{person.userFirstName}</p>
           </div>
         )
       })
@@ -50,10 +50,17 @@ class Connections extends Component {
     return (
       <div className='Connections'>
         <h1 className='Connections__heading'>{this.state.Heading}</h1>
-        {this.state.userArray}
+        <ul className='Connections__list'>{this.state.userArray}</ul>
       </div>
     );
   }
 }
+
+// Connections.defaultProps = {
+//   userViewing:false,
+//   users: [user5, user1 , user3, user4, user7]
+// } 
+
+// Is this the best way to bring in placeholder Users?
 
 export default Connections;
