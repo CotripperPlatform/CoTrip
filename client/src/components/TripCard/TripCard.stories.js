@@ -3,5 +3,5 @@ import { storiesOf } from "@storybook/react";
 import TripCard from "./TripCard";
 
 storiesOf("TripCard", module).add("Default", () => (
-  <TripCard url="https://wallpaperaccess.com/full/144067.jpg" text={["Hawaii", "May 2020"]} />
+  <TripCard path="https://wallpaperaccess.com/full/144067.jpg" location="Hawaii" date="May 2020" />
 ));

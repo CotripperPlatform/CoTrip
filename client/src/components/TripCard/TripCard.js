@@ -5,31 +5,12 @@ import Card from "../Card/Card";
 // Function based React Component
 const TripCard = props => {
   // Default Class to apply to Component
-  return <Card size="large" picture={props.path} alt={props.location + props.date}></Card>;
+  return (
+    <Card size="medium" picture={props.path} alt={props.location + props.date}>
+      <h3 className="TripCard__location">{props.location}</h3>
+      <h4 className="TripCard__date">{props.date}</h4>
+    </Card>
+  );
 };
 
 export default TripCard;
-/*
- let classList = `TripCard`;
-  let image = <img className="backgroundImage" src={props.url} alt="trip background" />;
-  let textEls = props.text.map((text, index) => {
-    if (index === 0) {
-      return (
-        <h3 className="first" key={index}>
-          {text}
-        </h3>
-      );
-    }
-    return (
-      <h3 className="textEl" key={index}>
-        {text}
-      </h3>
-    );
-  });
-  return (
-    <div className={classList}>
-      {image}
-      <div className="textHolder">{textEls}</div>
-    </div>
-  );
-  */
