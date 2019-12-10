@@ -1,6 +1,5 @@
 import React from 'react';
 import "./UpcomingEventsCard.css";
-// import { prependOnceListener } from 'cluster';
 import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 
