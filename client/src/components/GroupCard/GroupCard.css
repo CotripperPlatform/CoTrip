@@ -1,10 +1,7 @@
 .GroupCard {
-    width: 17vw;
-    height: 19vh;
+    width: 100%;
+    height: 100%;
     border-radius: 3px;
-    background-color: var(--pink);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    font-family: var(--default-font);
     color: var(--white);
     display: flex;
     flex-direction: column;
@@ -12,8 +9,6 @@
 
 .GroupCard__background-image {
     position: relative;
-    height: 100%;
-    width: 100%;
     border-radius: 3px;
 }
 
@@ -26,11 +21,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 1.2vw;
+    font-size: 85%;
 }
 
 .GroupCard__group-name {
-    font-size: 1.9vw;
+    font-size: 150%;
     padding: 10px;
     font-weight: var(--title-weight);
 }
