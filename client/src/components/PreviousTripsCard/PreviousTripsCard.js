@@ -5,7 +5,6 @@ import Card from "../Card/Card";
 // Function based React Component
 const PreviousTripsCard = props => {
   let { link } = props;
-  console.log(link);
 
   return (
     <Card color="purple">
