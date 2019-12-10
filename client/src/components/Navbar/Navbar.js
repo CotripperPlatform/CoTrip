@@ -15,7 +15,7 @@ const Navbar = (props) => {
 
   return (
     <div className={classList}>
-      <div className="navbar-logo">
+      <div className="Navbar__logo">
         <Logo clickable to="/route" />
       </div>
       <div> 

@@ -8,11 +8,11 @@
     font-family: var(--default-font);
 }
 
-.hidden {
+.Navbar__hidden{
   display: none;
 }
 
-.navbar-logo {
+.NavBar__logo {
     margin: 0 47px;
 }
 
@@ -21,7 +21,5 @@
 }
 
 @media only screen and (max-width: 400px) {
-  .navbar-burger {
-
-  }
+  
 }
