@@ -49,4 +49,9 @@ storiesOf("TrendingHashtagCard", module)
     >
       <h1>Trending Hashtags</h1>
     </TrendingHashtagCard>
+  ))
+  .add("Default, Lots of data", () => (
+    <TrendingHashtagCard data={["#dope", "#torch", "#hawaii", "#kids"]}>
+      <h1>Trending Hashtags</h1>
+    </TrendingHashtagCard>
   ));
