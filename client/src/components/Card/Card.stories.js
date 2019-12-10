@@ -10,4 +10,7 @@ storiesOf("Card", module)
   .add("Info Card, Pink, Small", () => <Card color="pink" size="small" />)
   .add("Info Card, Blank", () => <Card size="large" />)
   .add("Info Card, Blank, Small", () => <Card size="small" />)
-  .add("Info Card, Picture BG, Large", () => <Card picture={image} alt="whoops" size="medium" />);
+  .add("Info Card, Picture BG, Large", () => <Card picture={image} alt="whoops" size="medium" />)
+  .add("Info Card, Picture Hawaii, Large", () => (
+    <Card picture={"https://wallpaperaccess.com/full/144067.jpg"} alt="whoops" size="medium" />
+  ));
