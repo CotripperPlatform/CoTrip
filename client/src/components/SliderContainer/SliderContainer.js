@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./SliderContainer.css";
-// remove this later
-import "../../App.css";
+import PropTypes from "prop-types";
 
 class SliderContainer extends Component {
   constructor(props) {
@@ -30,12 +29,12 @@ class SliderContainer extends Component {
           <p className="SliderContainer__dates-title">Dates</p>
           <p className="SliderContainer__location-title">Location</p>
           <p className="SliderContainer__overview-text">{this.props.overview}</p>
-          <div className="SliderContainer__dates-text">
-            <p>
+          <div className="SliderContainer__dates-container">
+            <p className="SliderContainer__dates-text">
               {this.props.start_date}
               {" -"}
             </p>
-            <p>{this.props.end_date}</p>
+            <p className="SliderContainer__dates-text">{this.props.end_date}</p>
           </div>
           <p className="SliderContainer__location-text">{this.props.location}</p>
         </div>
@@ -55,5 +54,12 @@ SliderContainer.defaultProps = {
   start_date: "Sunday, May 17, 2020",
   end_date: "Monday, May 25, 2020",
   location: "Resort XYZ"
+};
+SliderContainer.propTypes = {
+  images: PropTypes.array,
+  overview: PropTypes.string,
+  start_date: PropTypes.string,
+  end_date: PropTypes.string,
+  location: PropTypes.string
 };
 export default SliderContainer;

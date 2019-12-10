@@ -17,7 +17,7 @@
 .SliderContainer__right {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr;
   justify-items: start;
   align-items: start;
 }
@@ -48,9 +48,11 @@
   font-size: 1.125rem;
   margin-top: 0;
 }
-.SliderContainer__dates-text {
+.SliderContainer__dates-container {
   grid-column: 2 / span 1;
   grid-row: 2 / span 1;
+}
+.SliderContainer__dates-text {
   font-size: 1.125rem;
   margin-top: 0;
 }
