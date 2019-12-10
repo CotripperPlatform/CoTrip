@@ -4,6 +4,10 @@ import Card from "../Card/Card";
 
 const TrendingHashtagCard = props => {
   let { data } = props;
+  if (data.length > 10) {
+    let dataLength = data.length;
+    data = data.slice(dataLength - 10, dataLength);
+  }
 
   return (
     <Card color="purple">

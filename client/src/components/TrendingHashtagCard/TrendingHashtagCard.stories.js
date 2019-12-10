@@ -14,7 +14,14 @@ storiesOf("TrendingHashtagCard", module)
         "#dogs",
         "#italy",
         "#starwars",
-        "#babyyoda"
+        "#babyyoda",
+        "easdgasg",
+        "asgasdg",
+        "asgasdg",
+        "asdgasdg",
+        "asdgsgasijpg",
+        "opppapapa",
+        "shiitt"
       ]}
     >
       <h1>Trending Hashtags</h1>
