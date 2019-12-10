@@ -14,6 +14,6 @@
   white-space: nowrap;
 }
 
-.CommentBody__p span {
+.CommentBody p span {
   display: block;
 }
