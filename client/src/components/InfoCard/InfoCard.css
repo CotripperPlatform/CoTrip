@@ -18,18 +18,19 @@
 .info-card-large {
   width: 100%;
   min-width: 500px;
-  padding: 140px 0px 140px 0px;
+  height: 260px;
 }
 
 .info-card-medium {
   width: 100%;
   min-width: 225px;
+  height: 150px;
 }
 
 .info-card-small {
   width: 100%;
   min-width: 225px;
-  padding: 65px 0px 65px 0px;
+  height: 125px;
 }
 
 .info-card-container img {
