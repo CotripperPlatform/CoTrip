@@ -16,6 +16,8 @@ class Burger extends Component {
 
   clicked = () => {
     this.setState({ active: !this.state.active })
+    // Utilizes a callback in the Navbar to display the menu.
+    // this.props.DisplayMenu()
   };
 
   // Runs after Component is loaded in the broswer
