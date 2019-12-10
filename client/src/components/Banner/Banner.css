@@ -3,16 +3,19 @@
   width: 100vw;
   height: 231px;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  border: 2px solid black;
 }
-.banner-home {
+
+/* .banner-home {
   background-image: var(--home-banner);
   height: 380px;
 }
 .banner-community {
   background-image: var(--community-banner);
+  
 }
 .banner-profile {
   background-image: var(--profile-banner);
-}
+} */
