@@ -1,0 +1,24 @@
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100vw;
+    height: 100px;
+    background-color: var(--yellow);
+    font-family: var(--default-font);
+}
+
+.navbar-logo {
+    margin: 0 47px;
+}
+
+@media only screen and (max-width:1000px) {
+
+}
+
+@media only screen and (max-width: 400px) {
+  .navbar-burger {
+
+  }
+}
