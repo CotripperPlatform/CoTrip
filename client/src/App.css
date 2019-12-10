@@ -1,22 +1,47 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap');
 
-.App-logo {
-  height: 40vmin;
-}
+:root {
+  /* These are all the defaults for CoTripper. Below is an example of usage:
+        background-color: var(--yellow);
+    */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    /* Default color palette variables */
+    --yellow: #FFCB06;
+    --pink: #FB8370;
+    --red: #D1495B;
+    --purple: #6A4C93;
+    --black: #252525;
+    --white: #FAFAFA;
+    --gray-lite: #E5E5E5;
+    --gray-dark: #C4C4C4;
+    --green: #12DB00;
+    /* Default font */
+    --default-font: 'Reem Kufi', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+    /* Images */
+    --comment-black: url("../../assets/images/comment_black.png");
+    --edit-button: url("../../assets/images/edit_button.png");
+    --global-nav-dm: url("../../assets/images/global-nav_dm_icon.png");
+    --global-nav-logo: url("../../assets/images/global-nav_logo_icon.png");
+    --global-nav-search: url("../../assets/images/global-nav_search_icon.png");
+    --heart-pink: url("../../assets/images/heart_pink.png");
+    --heart-white: url("../../assets/images/heart_white.png");
+    --heart-black: url("../../assets/images/heart_black.png");
+    --home-banner: url("../../assets/images/home_banner.png");
+    --profile-banner: url("../../assets/images/profile_banner.png");
+    --community-banner: url("../../assets/images/community_banner.png");
+    --login-logo: url("../../assets/images/login_logo.png");
+    --nav-arrow-purple: url("../../assets/images/nav_arrow_purple.png");
+    --nav-arrow-yellow: url("../../assets/images/nav_arrow_yellow.png");
+    --social-facebook: url("../../assets/images/social_facebook.png");
+    --social-instagram: url("../../assets/images/social_instagram.png");
+    --social-pinterest: url("../../assets/images/social_pinterest.png");
+    --splash-background: url("../../assets/images/splash_background.png");
+    --text-box-search: url("../../assets/images/text_box_search.png");
+    /* Font Weights */
+    --paragraph-weight: 400;
+    --banner-weight: 700;
+    --title-weight: 500;
+}   
 
-.App-link {
-  color: #09d3ac;
-}
