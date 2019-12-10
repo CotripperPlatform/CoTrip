@@ -1,5 +1,7 @@
 .Card {
   position: relative;
+  object-fit: cover;
+  background-repeat: none;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
