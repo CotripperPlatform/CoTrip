@@ -17,6 +17,7 @@ storiesOf('Small Media Cards', module)
   .add("Flight", () => <MediaCard size='small' to='User/:userid/' imageSrc={flight} footerText='Posted By: --user--' />)
 
 storiesOf('Medium Media Cards', module)
+  .add("Default", () => <MediaCard />)
   .add("Books", () => <MediaCard size='medium' to='User/:userid/' imageSrc={books} footerText='Posted By: --user--' />)
   .add("Happiness", () => <MediaCard size='medium' to='User/:userid/' imageSrc={happiness} footerText='Posted By: --user--' />)
   .add("Van", () => <MediaCard size='medium' to='User/:userid/' imageSrc={van} footerText='Posted By: --user--' />)

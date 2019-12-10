@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./MediaCard.css";
+import flight from '../../../../assets/images/media-card-6.png';
 
 // Function based React Component
 const MediaCard = (props) => {
@@ -21,6 +22,13 @@ const MediaCard = (props) => {
       </footer>
     </Link>
   );
+}
+
+MediaCard.defaultProps = {
+  size: 'medium',
+  to: 'User/:userid/',
+  imageSrc: flight,
+  footerText: 'Posted By: --user--'
 }
 
 export default MediaCard;
