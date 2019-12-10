@@ -56,3 +56,6 @@
   background-color: var(--white);
   border: 1px solid var(--pink);
 }
+.button-black-text {
+  color: var(--black);
+}
