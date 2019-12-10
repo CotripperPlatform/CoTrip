@@ -19,10 +19,10 @@
 }
 
 
-.CarouselDot__Border {
+.CarouselDot__border {
   border: 2px solid var(--purple);
 }
 
-.CarouselDot__Active {
+.CarouselDot--active {
   background-color: var(--purple)
 }
