@@ -11,12 +11,12 @@ const PersonCard = (props) => {
 
   return(
     <div className={classList}>
-      <img className="PersonCard__Img" img src={mom} />
-      <p className="PersonCard__ProfileName">{props.PersonCard__ProfileName}</p>
+      <img className="PersonCard__image" img src={mom} />
+      <p className="PersonCard__name">{props.PersonCard__name}</p>
       <div className="PersonCard__MomBoxInfo">
-        <p className="PersonCard__Location">{props.PersonCard__Location}</p>
-        <p className="PersonCard__Interests">
-          {props.PersonCard__Interests}
+        <p className="PersonCard__location">{props.PersonCard__location}</p>
+        <p className="PersonCard__interests">
+          {props.PersonCard__interests}
         </p>
       </div>
     </div>
