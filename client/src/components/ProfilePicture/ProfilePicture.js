@@ -8,7 +8,7 @@ const ProfilePicture = props => {
   let classList = "ProfilePicture";
   let types = ["extra-small", "small", "medium", "large"];
   if (types.includes(props.type)) {
-    classList += ` ${props.type}`;
+    classList += `--${props.type}`;
   }
 
   return (
@@ -17,10 +17,10 @@ const ProfilePicture = props => {
 
       {props.link ? (
         <Link exact={true} to={props.to}>
-          <img className="profile-picture-img" src={props.image} alt="profile-picture" />
+          <img src={props.image} alt="profile-picture" />
         </Link>
       ) : (
-        <img className="profile-picture-img" src={props.image} alt="profile-picture" />
+        <img src={props.image} alt="profile-picture" />
       )}
     </div>
   );
