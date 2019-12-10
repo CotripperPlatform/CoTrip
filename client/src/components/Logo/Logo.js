@@ -7,7 +7,7 @@ const Logo = props => {
   // Default Class to apply to Component
   let classList = `Logo`;
   if (props.small) {
-    classList += ` small-logo`;
+    classList += ` Logo--small`;
   }
   if (props.clickable && props.to) {
     return (
