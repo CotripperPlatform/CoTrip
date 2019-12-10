@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import "./Burger.css";
 
@@ -31,14 +30,21 @@ class Burger extends Component {
   render() {
     console.log(this.state.active);
     return (
-      <div className={this.state.classList} onClick={this.clicked}>
-        <div
-          className={this.state.active ? "burger-line-one burger-line-one-x" : "burger-line-one"}
-        ></div>
-        <div className={this.state.active ? "burger-line-two hidden" : "burger-line-two"}></div>
-        <div
-          className={this.state.active ? "burger-line-one burger-line-three-x" : "burger-line-three"}
-        ></div>
+      <div>
+        <div className={this.state.classList} onClick={this.clicked}>
+          <div className={
+            this.state.active ? "burger-line-one burger-line-one-x" : "burger-line-one"
+          }></div>
+          <div className={
+            this.state.active ? "burger-line-two fade" : "burger-line-two"
+          }></div>
+          <div className={
+            this.state.active ? "burger-line-three burger-line-three-x" : "burger-line-three"
+          }></div>
+        </div>
+        <div>
+          
+        </div>
       </div>
     );
   }

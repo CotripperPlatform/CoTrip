@@ -1,17 +1,19 @@
-.Burger {
-
-}
-
 .burger-line-one, .burger-line-two, .burger-line-three {
     height: 8px;
     width: 50px;
     background-color: var(--black);
     margin: 8px 0;
+    transition: .2s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .2s ease-in-out;
+    -ms-transition: .2s ease-in-out;
+    -o-transition: .2s ease-in-out;
 }
 
-.hidden {
-    visibility: hidden;
+.fade {
+    background-color: rgba(0,0,0,0)
 }
+
 
 .burger-line-one-x {
     transform: translate(0, 16px) rotate(45deg);
@@ -19,6 +21,11 @@
     -moz-transform: translate(0, 16px) rotate(45deg);
     -ms-transform: translate(0, 16px) rotate(45deg);
     -o-transform: translate(0, 16px) rotate(45deg);
+    transition: .1s ease-in-out;
+    -webkit-transition: .1s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
 }
 
 .burger-line-three-x {
@@ -27,4 +34,9 @@
     -moz-transform: translate(0, -16px) rotate(-45deg);
     -ms-transform: translate(0, -16px) rotate(-45deg);
     -o-transform: translate(0, -16px) rotate(-45deg);
+    transition:  .1s ease-in-out;
+    -webkit-transition:  .1s ease-in-out;
+    -moz-transition:  .1s ease-in-out;
+    -ms-transition:  .1s ease-in-out;
+    -o-transition:  .1s ease-in-out;
 }
