@@ -4,13 +4,19 @@
 }
 .ForumPost__top {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   background-color: var(--white);
 }
-.ForumPost__face-card-placeholder {
-  width: 4rem;
+.ForumPost__face-card {
+  display: flex;
+  flex-direction: column;
   border: 2px solid red;
-  height: 8rem;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+.ForumPost__name {
+  font-family: var(--default-font);
+  font-size: 1.2rem;
 }
 .ForumPost__middle {
   display: flex;
