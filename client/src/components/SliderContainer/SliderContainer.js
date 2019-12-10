@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import "./SliderContainer.css";
 import PropTypes from "prop-types";
+import hawaii from "../../../../assets/images/hawaii.png";
+import southernCaribbean from "../../../../assets/images/southernCaribbean.png";
+import easternCaribbean from "../../../../assets/images/easternCaribbean.png";
+import hawaiiTrees from "../../../../assets/images/hawaii-trees.png";
+import westernCaribbean from "../../../../assets/images/westernCaribbean.png";
 
 class SliderContainer extends Component {
   constructor(props) {
@@ -45,9 +50,11 @@ class SliderContainer extends Component {
 
 SliderContainer.defaultProps = {
   images: [
-    { alt: "phil murray", url: "https://www.fillmurray.com/200/300" },
-    { alt: "phil", url: "https://www.fillmurray.com/g/200/300" },
-    { alt: "fill", url: "https://www.fillmurray.com/300/300" }
+    { alt: "hawaii", url: hawaiiTrees },
+    { alt: "hawaii", url: hawaii },
+    { alt: "eastern caribbean", url: easternCaribbean },
+    { alt: "western caribbean", url: westernCaribbean },
+    { alt: "southern caribbean", url: southernCaribbean }
   ],
   overview:
     "Enjoy a week-long stay at a luxury resort! During your stay, explore the resort's amazing ammenities and events, but above all, explore the beautiful islands of Hawaii! It will be a trip for you and your family to remember forever.",
