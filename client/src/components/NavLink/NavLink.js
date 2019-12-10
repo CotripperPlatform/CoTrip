@@ -1,41 +1,40 @@
 import React from 'react';
-import "./NavLink.css";
+import { Link } from 'react-router-dom';
 import NavLinkDropdownMenu from '../NavLinkDropdownMenu/NavLinkDropdownMenu';
-import { Redirect } from 'react-router-dom';
+import "./NavLink.css";
 
 class NavLink extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropdownState: 'dropdown-hide'
+      dropdownVisible: false
     }
-    this.routeTo = this.routeTo.bind(this);
-    this.showDropdown = this.showDropdown.bind(this);
-    this.hideDropdown = this.hideDropdown.bind(this);
+    this.toggleDropdown = this.toggleDropdown.bind(this);
   }
-  // NEED to fix once routes are made
-  routeTo(url) {
-    return <Redirect to={url} />;
+  toggleDropdown() {
+    if (this.state.dropdownVisible) {
+      this.setState({
+        dropdownVisible: false
+      });
+    } else {
+      if (this.props.menuList.length) {
+        this.setState({
+          dropdownVisible: true
+        });
+      }
+    }
   }
-  showDropdown() {
-    this.setState({
-      dropdownState: 'dropdown-show'
-    });
-  }
-  hideDropdown() {
-    this.setState({
-      dropdownState: 'dropdown-hide'
-    });
-  }
+  // NEED to fix Link to= once routes are made
   render() {
-    let classList = `NavLink`;
     return (
-      <div className={classList} onClick={this.routeTo(this.props.url)} onMouseEnter={this.showDropdown} onMouseLeave={this.hideDropdown}>
-        {this.props.text}
-        <div className={this.state.dropdownState}>
-          <NavLinkDropdownMenu menuList={this.props.menuList} />
+      <Link className='NavLink-Link' to={this.props.url}>
+        <div className='NavLink' onMouseEnter={this.toggleDropdown} onMouseLeave={this.toggleDropdown}>
+          <h1>{this.props.text}</h1>
+          <div className={this.state.dropdownVisible ? 'dropdown-show' : 'dropdown-hide'}>
+            <NavLinkDropdownMenu menuList={this.props.menuList} />
+          </div>
         </div>
-      </div>
+      </Link>
     );
   }
 }

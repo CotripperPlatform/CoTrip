@@ -5,11 +5,11 @@ import NavLinkDropdownMenu from './NavLinkDropdownMenu';
 const placeholderDropdownProp = [
   {
     text: 'Explore People',
-    url: 'community people route'
+    url: '/'
   },
   {
     text: 'Join Groups',
-    url: 'community groups route'
+    url: '/'
   }
 ]
 

@@ -2,21 +2,23 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import NavLink from './NavLink';
 
-const placeholderTextProp = "COMMUNITY";
-const placeholderUrl = "community page route";
+const placeholderTextProp = "community";
+const placeholderUrl = "/";
 const placeholderDropdownProp = [
   {
     text: 'Explore People',
-    url: 'community people route'
+    url: '/'
   },
   {
     text: 'Join Groups',
-    url: 'community groups route'
+    url: '/'
   }
 ]
 
 storiesOf('NavLink', module)
   .add("NavLink", () => (
     <NavLink text={placeholderTextProp} url={placeholderUrl} menuList={placeholderDropdownProp} />
-  )
-)
+  ))
+  .add("NavLink w/o Menu", () => (
+    <NavLink text={placeholderTextProp} url={placeholderUrl} menuList={[]} />
+  ))
