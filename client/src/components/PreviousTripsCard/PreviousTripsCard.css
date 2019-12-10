@@ -65,7 +65,7 @@
   margin: 3% 20% 0px 24%;
   /* border: 2px solid black; */
   font-size: 22px;
-  color: #fff;
+  color: var(--white);
   display: inline-block;
 }
 .PreviousTripCard__no-trips a {
@@ -74,9 +74,9 @@
   top: 150px;
   margin: 0px 27% 0px 32%;
   /* border: 2px solid black; */
-  color: #fff;
+  color: var(--white);
   display: inline-block;
 }
 .PreviousTripCard__no-trips a:hover {
-  color: #ffcb06;
+  color: var(--yellow);
 }

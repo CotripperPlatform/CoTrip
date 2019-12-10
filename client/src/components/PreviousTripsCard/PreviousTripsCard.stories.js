@@ -19,4 +19,13 @@ storiesOf("PreviousTripsCard", module)
       <h2>None with CoTripper yet!</h2>
       <a href="/book">Book a Trip Now!</a>
     </PreviousTripsCard>
+  ))
+  .add("Default, One Trip", () => (
+    <PreviousTripsCard
+      trips={true}
+      link="https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1"
+    >
+      <h1>Previous Trips</h1>
+      <div>placeholder</div>
+    </PreviousTripsCard>
   ));
