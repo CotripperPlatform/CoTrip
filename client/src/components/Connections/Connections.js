@@ -19,6 +19,13 @@ class Connections extends Component {
 
   // Runs after Component is loaded in the broswer
   componentDidMount() {
+    // let displayedUsers = this.props.users
+
+    // if(this.props.users.length > 4) {
+    //     displayedUsers = this.props.users.slice(0,4)
+    //     displayedUsers[4]
+    // } 
+
     if (this.props.userViewing === true) {
       this.setState({ Heading: "My Connections" })
     } else if (this.props.userViewing === false) {
@@ -29,10 +36,11 @@ class Connections extends Component {
 
     this.setState({
       userArray: this.props.users.map(person => {
+        let userLastInitial = person.userSurname.slice(0, 1) + '.'
         return (
-          <div key={person.userId} className='Connections__div'>
+          <div key={person.userId} className='Connections__person'>
             <ProfilePicture image={person.userPic} />
-            <p className='Connections--name'>{person.userFirstName}</p>
+            <p className='Connections--name'>{person.userFirstName} {userLastInitial}</p>
           </div>
         )
       })
@@ -50,7 +58,7 @@ class Connections extends Component {
     return (
       <div className='Connections'>
         <h1 className='Connections__heading'>{this.state.Heading}</h1>
-        <ul className='Connections__list'>{this.state.userArray}</ul>
+        <div className='Connections__list'>{this.state.userArray}</div>
       </div>
     );
   }
@@ -61,6 +69,6 @@ class Connections extends Component {
 //   users: [user5, user1 , user3, user4, user7]
 // } 
 
-// Is this the best way to bring in placeholder Users?
+// How do I use defaultProps in this component?
 
 export default Connections;

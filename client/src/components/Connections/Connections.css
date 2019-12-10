@@ -1,15 +1,21 @@
-
 .Connections__heading {
   font-size: 2rem;
   font-family: var(--default-font);
-  color: var(--purple)
-}
-
-.Connections--first-name {
-  font-size: 2rem;
-  font-family: var(--default-font);
+  color: var(--purple);
 }
 
 .Connections__list {
   display: flex;
+  width: 100%;
 }
+
+.Connections__person {
+  margin: 0 2rem 0 0;
+}
+
+.Connections--name {
+  font-size: 2rem;
+  font-family: var(--default-font);
+  text-align: center;
+}
+
