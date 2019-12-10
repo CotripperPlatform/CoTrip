@@ -1,6 +1,6 @@
 .Card {
   position: relative;
-  object-fit: cover;
+  background-size: cover;
   background-repeat: none;
   display: flex;
   flex-direction: column;
