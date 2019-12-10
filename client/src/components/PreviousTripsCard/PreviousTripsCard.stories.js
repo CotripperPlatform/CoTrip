@@ -8,7 +8,7 @@ storiesOf("PreviousTripsCard", module)
       trips={true}
       link="https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1"
     >
-      <h1>Trending Hashtags</h1>
+      <h1>Previous Trips</h1>
       <div>placeholder</div>
       <div>placeholder</div>
     </PreviousTripsCard>
@@ -18,7 +18,7 @@ storiesOf("PreviousTripsCard", module)
       trips={false}
       link="https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1"
     >
-      <h1>Trending Hashtags</h1>
+      <h1>Previous Trips</h1>
       <h2>None with CoTripper yet!</h2>
       <a href="/book">Book a Trip Now!</a>
     </PreviousTripsCard>
