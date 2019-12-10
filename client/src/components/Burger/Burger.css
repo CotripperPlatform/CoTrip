@@ -1,4 +1,4 @@
-.Burger > div {
+.Burger__line {
     height: 8px;
     width: 50px;
     background-color: var(--black);
