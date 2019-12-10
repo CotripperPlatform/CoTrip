@@ -3,7 +3,7 @@ import "./personcard.css";
 import mom from "../Assets/Images/Mom.png"
 
 // Function based React Component
-const IndividualMomBox = (props) => {
+const PersonCard = (props) => {
 
   // Default Class to apply to Component
   let classList = `PersonCard`;
