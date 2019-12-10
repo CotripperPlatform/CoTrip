@@ -4,10 +4,7 @@ import PreviousTripsCard from "./PreviousTripsCard";
 
 storiesOf("PreviousTripsCard", module)
   .add("Default", () => (
-    <PreviousTripsCard
-      trips={true}
-      link="https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1"
-    >
+    <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>
       <div>placeholder</div>
       <div>placeholder</div>
@@ -17,14 +14,11 @@ storiesOf("PreviousTripsCard", module)
     <PreviousTripsCard trips={false}>
       <h1>Previous Trips</h1>
       <h2>None with CoTripper yet!</h2>
-      <a href="/book">Book a Trip Now!</a>
+      <a href="/">Book a Trip Now!</a>
     </PreviousTripsCard>
   ))
   .add("Default, One Trip", () => (
-    <PreviousTripsCard
-      trips={true}
-      link="https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1"
-    >
+    <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>
       <div>placeholder</div>
     </PreviousTripsCard>
