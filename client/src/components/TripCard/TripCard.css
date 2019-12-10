@@ -1,20 +1,28 @@
 .TripCard__date,
 .TripCard__location {
-  font: 1.2vw Helvetica, Sans-Serif;
-  letter-spacing: -1px;
-  width: 100%;
+  font-family: "Reem Kufi";
+  font-style: normal;
+  font-weight: normal;
   text-align: center;
 }
 
 .TripCard__date {
-  color: rgb(242, 235, 235);
+  color: #fafafa;
+  margin-bottom: 5%;
+  margin-top: 14%;
 }
 
 .TripCard__location {
   color: white;
-  font: bold 1.5vw Helvetica, Sans-Serif;
-  margin: 14% 0 5%;
+  font-size: 24px;
+  line-height: 36px;
+  margin: 14% 0 0;
 }
 
 .TripCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
 }
