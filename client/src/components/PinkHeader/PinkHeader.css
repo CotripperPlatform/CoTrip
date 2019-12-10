@@ -1,7 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
+*{
+    font-family: var(--default-font)
+}
 
 .PinkHeader {
-    background-image: url('./cotripper_banner2-01.png');
+    background-image: var(--profile-banner);
     background-repeat:no-repeat;
     background-size: cover;
     width: 1440px;

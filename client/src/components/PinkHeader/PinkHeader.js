@@ -2,10 +2,10 @@
 import React, { Component } from 'react';
 import "./PinkHeader.css";
 import Search from "./search@2x.png"
-
+import '../../App.css';
 
 // Class Based React Component
-class PinkHeader extends Component {
+class Banner extends Component {
   constructor(props) {
     super(props);
     console.log(props);
@@ -99,4 +99,4 @@ class PinkHeader extends Component {
   }
 }
 
-export default PinkHeader;
+export default Banner;
