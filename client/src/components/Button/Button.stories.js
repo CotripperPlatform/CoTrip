@@ -78,7 +78,7 @@ storiesOf("Button", module)
   ))
   .add("Like Button", () => <Button icon={heart} text="Like" type="like" />)
   .add("Comment Button", () => <Button icon={comment} text="Comment" type="comment" />)
-  .add("contained", () => (
+  .add("Like and Comment Buttons in Container", () => (
     <div>
       <Button icon={heart} text="Like" type="like" />
       <Button icon={comment} text="Comment" type="comment" />
