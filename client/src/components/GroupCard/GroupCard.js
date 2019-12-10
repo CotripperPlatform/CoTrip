@@ -1,26 +1,28 @@
-
 import React from 'react';
 import "./GroupCard.css";
+import { Link } from "react-router-dom";
 
 const GroupCard = (props) => {
+
   let background;
+
   if (props.url) {
-    background = <img className="background-image" src={props.url} alt="group background" />;
+    background = <img className="GroupCard__background-image" src={props.url} alt="group background" />;
   } else {
     background = "";
   }
 
   return(
-    <div className="group-card">
+    <Link className="GroupCard">
       {background}
-      <div className="text-container">
-        <p className="group-name">{props.name}</p>
-        <div className="details">
-          <p className="members">{props.members} members</p>
-          <p className="location">{props.location}</p>
+      <div className="GroupCard__text-container">
+        <p className="GroupCard__group-name">{props.name}</p>
+        <div className="GroupCard__details">
+          <p className="GroupCard__members">{props.members} members</p>
+          <p className="GroupCard__location">{props.location}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
