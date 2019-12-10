@@ -4,12 +4,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   font-family: var(--default-font);
 }
 .TrendingHashtagCard__container h1 {
   color: var(--white);
   width: 50%;
   padding-left: 5%;
+  border: 2px solid black;
 }
 .TrendingHashtagCard__container h2 {
   width: 50%;
@@ -24,10 +26,11 @@
   align-items: center;
   justify-content: space-around;
   width: 80%;
-  height: 200px;
+  height: 180px;
   padding: 0% 10% 0% 10%;
 }
 .TrendingHashtagCard__hashtag {
+  /* border: 2px solid black; */
   display: inline-block;
   height: 30px;
   width: 100px;
