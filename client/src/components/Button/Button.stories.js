@@ -1,6 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "./Button";
+import heart from "../../../../assets/images/heart_black.png";
+import comment from "../../../../assets/images/comment_black.png";
 const handleClick = e => {
   console.log("Clicked");
 };
@@ -73,4 +75,12 @@ storiesOf("Button", module)
       textColor={"black"}
       handleClick={handleClick}
     />
+  ))
+  .add("Like Button", () => <Button icon={heart} text="Like" type="like" />)
+  .add("Comment Button", () => <Button icon={comment} text="Comment" type="comment" />)
+  .add("contained", () => (
+    <div>
+      <Button icon={heart} text="Like" type="like" />
+      <Button icon={comment} text="Comment" type="comment" />
+    </div>
   ));

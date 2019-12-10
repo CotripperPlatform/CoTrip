@@ -60,3 +60,21 @@
 .Button--black-text {
   color: var(--black);
 }
+.Button--like {
+  width: 50%;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  min-width: 20rem;
+  background-color: var(--gray-lite);
+}
+.Button--comment {
+  width: 50%;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  min-width: 20rem;
+  background-color: var(--gray-lite);
+}
+.Button--comment img,
+.Button--like img {
+  margin-right: 0.5rem;
+}
