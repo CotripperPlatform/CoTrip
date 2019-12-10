@@ -1,0 +1,50 @@
+.PostBody {
+  background: var(--white);
+  width: 50rem;
+  font-family: var(--paragraph-font);
+  color: var(--black);
+}
+
+.post-body-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-body-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.post-body-top-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.post-body-title {
+  font-family: var(--default-font);
+  font-size: 1.5rem;
+}
+
+.post-body-hashtags {
+  display: flex;
+  width: 20rem;
+  margin: 0.5rem;
+}
+
+.post-body-hashtag-links {
+  font-family: var(--paragraph-font);
+  color: var(--black);
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-left: 0;
+}
+
+.post-body-date {
+  margin-bottom: 0.3rem;
+}
+
+.post-body-text {
+  line-height: 125.3%;
+}
