@@ -3,12 +3,26 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding: 10% 5%;
+  background-color: var(--white);
 }
 
 .image-interaction {
   border-radius: 50% 50%;
-  height: 100%;
-  width: 100%;
+  height: 80%;
+  width: 80%;
 }
 
-.message-small {}
+.InteractionCard a {
+  text-align: center;
+  padding: 5%, 5%;
+}
+
+.InteractionCard Button {
+  margin: 3% 25%;
+
+}
+
+.InteractionCard .Button--small {
+  padding: 3%;
+}
