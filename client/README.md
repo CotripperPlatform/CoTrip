@@ -69,8 +69,8 @@ hygen component-class new --name NameOfComponent
 ```
 .ComponentName
 .ComponentName--modifier
-.ComponentName__elementName
-.ComponentName__elementName--modifier
+.ComponentName__element-name
+.ComponentName__element-name--modifier
 ```
 For example:
 ```
