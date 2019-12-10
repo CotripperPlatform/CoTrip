@@ -67,16 +67,7 @@ hygen component-class new --name NameOfComponent
 
 For icons, we are using font awesome. To integrate it with React we will be using the NPM Package `react-fontawesome`.
 
-#### Getting Started
-This package is for integrating with React. If you aren't using React then it's not going to help you. Head over to our "Get Started" page for some guidance.
-
-#### Usage
-Build a library to reference icons throughout our app more conveniently, being that we want to use our icons in more than one component in our app, right?
-
-So, we will add them to a library (which we will setup in a bit). Do this setup once in some initializing module of your app, adding all of the icons we will use in our app's React components.
-
-To use the icons globally we will have to setup some syntax where our app is initialized, in this case it will be in `App.js`.
-
+##### Usage
 In `App.js` we will add the following:
 ```
 import { library } from '@fortawesome/fontawesome-svg-core'
@@ -91,23 +82,14 @@ library.add(*icons you would like to add to library*)
 To breakdown what is going on above:
 In our call to library.add() we're passing:
 
-- fab: which represents all of the brand icons in @fortawesome/free-brands-svg-icons. So any of the brand icons in that package may be referenced by icon name as a string anywhere else in our app. For example: "apple", "microsoft", "facebook", or "google". You will see below that fab is added to our library call, so this will enable us to use brand icons anywhere so no need to add brand icons individually like we need for regular icons which is explained below.
+- fab: which represents all of the brand icons. So any of the brand icons in that package may be referenced by icon name as a string anywhere else in our app. For example: "apple", "microsoft", "facebook", or "google". 
 - fas: is solid background icons
 
 - far: represents all regular icons, meaning a blank background
 
 - The last import line in the above syntax is where we can call icons individually to be specific in our library (more on that below). 
 
-An example would be such as if we wanted to use a coffee icon we would first do in the import (Please note to see list of icons, once you type "fa" a dropdown list will appear to show a list of icons you would like to choose from):
-```
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-```
-Then we would add that to the library call like so (please note as stated above that fab represents all brand icons so no need to be specific with brand icons like we need to do for regular icons):
-```
-library.add(fab, far, fas, faCoffee)
-```
-
-So to put this all together this is how the syntax in our `App.js` file would look considering the example of using the coffee icon and fab:
+So to put this all together this is how the syntax in our `App.js` file would look like and to add more icons to the library you will just import, add to library, and seperate by commas.
 ```
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -117,66 +99,33 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons'
  
 library.add(fab, far, fas, faCoffee)
 ```
-If you would like to add more icons to the library you will just import and add to library and seperate by commas. To give an example:
-```
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fab } from '@fortawesome/free-brands-svg-icons'
-import { fas } from '@fortawesome/free-solid-svg-icons'
-import { far } from '@fortawesome/free-regular-svg-icons'
-import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons'
- 
-library.add(fab, far, fas, faCheckSquare, faCoffee)
-```
 
-Now that we have the icons in our library we can use it globally throughout the app. Below I  will show you how to use the icons throughout our app in any component/file.
-
-Make sure to have this import syntax in the component you would like to use an icon in:
-```
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-```
-Now that we have the above syntax, lets call an icon!
-
-Suppose we have a beverage component and we want to use the icons that we added to our library in our `app.js` file. It would look something like this:
+To use globally, make sure to have the import syntax in the component you would like to use an icon in. Suppose we have a component and we want to use the icons that we added to our library in our `app.js` file. To use any of these icons:
 ```
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  
-export const beverage = () => (
+export const model = () => (
   <div>
     <FontAwesomeIcon icon="check-square" />
     Favorite beverage: <FontAwesomeIcon icon="coffee" />
-  </div>
-)
-```
-Simple right? Well what if we wanted to use the brand icons, lets say we had a gadget component, we will do this:
-```
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
- 
-export const Gadget = () => (
-  <div>
-    <FontAwesomeIcon icon="check-square" />
-    Popular gadgets come from vendors like:
     <FontAwesomeIcon icon={['fab', 'apple']} />
     <FontAwesomeIcon icon={['fab', 'microsoft']} />
-    <FontAwesomeIcon icon={['fab', 'google']} />
+     <FontAwesomeIcon icon={['far', 'adress-card']} 
   </div>
 )
 ```
-What if we wanted to use the regular icons with no background, i.e. the `far` package, we would do the same as above but with far:
-```
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
- 
-export const PersonID = () => (
-  <div>
-    Popular Id cards like:
-    <FontAwesomeIcon icon={['far', 'adress-card']} />
-  </div>
-)
-```
+### Add Icon/Using With Storybook:
+**Add syntax to stories folder:**
+<img width="1440" alt="Screen Shot 2019-12-10 at 10 55 59 AM" src="https://user-images.githubusercontent.com/54545904/70545540-bb713380-1b3b-11ea-9562-b98b90e940ec.png">
+**Use props in `js` file:**
+<img width="1440" alt="Screen Shot 2019-12-10 at 10 56 09 AM" src="https://user-images.githubusercontent.com/54545904/70545541-bb713380-1b3b-11ea-9974-cdc0f279a653.png">
+**Result in Storybook:**
+<img width="1405" alt="Screen Shot 2019-12-10 at 10 55 43 AM" src="https://user-images.githubusercontent.com/54545904/70545539-bb713380-1b3b-11ea-8a6a-284f2f755d77.png">
 
-Last things to note:
+
+
+**Last things to note:**
 - When searching an icon with `fa` remember a drop down list will show a list of icons, its helpful because you will be able to see what is what instead of guessing, see example screenshot below:
 
 <img width="1276" alt="Screen Shot 2019-12-10 at 3 55 56 AM" src="https://user-images.githubusercontent.com/54545904/70514174-1cc7e100-1b01-11ea-9879-2f8de7776586.png">
