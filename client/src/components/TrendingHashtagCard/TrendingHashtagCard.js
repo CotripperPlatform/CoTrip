@@ -1,6 +1,6 @@
 import React from "react";
 import "./TrendingHashtagCard.css";
-import Card from "../InfoCard/InfoCard";
+import Card from "../Card/Card";
 
 const TrendingHashtagCard = props => {
   let { data } = props;
