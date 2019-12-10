@@ -1,5 +1,13 @@
 .OnboardingOne {
   font-family: var(--default-font);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 72.4%, rgba(255, 255, 255, 0.75) 100%),
+    #ffcb08;
+  width: 100vw;
+  padding: 130px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .OnboardingOne__logo-container {
@@ -14,4 +22,8 @@
 .OnboardingOne__logo {
   min-width: 20vw;
   max-width: 20vw;
+}
+.OnboardingOne__button-container {
+  display: flex;
+  justify-content: center;
 }

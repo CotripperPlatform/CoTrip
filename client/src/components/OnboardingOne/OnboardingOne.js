@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./OnboardingOne.css";
 import InputTextField from "../InputTextField/InputTextField.js";
 import logo from "../../../../assets/images/login_logo.png";
+import Button from "../Button/Button.js";
 
 // Class Based React Component
 class OnboardingOne extends Component {
@@ -47,6 +48,9 @@ class OnboardingOne extends Component {
             name="confirm password"
             placeholder="Confirm Password"
           ></InputTextField>
+        </div>
+        <div className="OnboardingOne__button-container">
+          <Button className="OnboardingOne__button" text="Next"></Button>
         </div>
       </div>
     );
