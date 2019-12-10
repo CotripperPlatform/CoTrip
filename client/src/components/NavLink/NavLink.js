@@ -18,7 +18,6 @@ class NavLink extends React.Component {
       });
     }
   }
-  // NEED to fix Link to= once routes are made
   render() {
     return (
       <div className='NavLink' onMouseEnter={this.toggleDropdown} onMouseLeave={this.toggleDropdown}>
