@@ -9,7 +9,9 @@
 .TripCard__date {
   color: #fafafa;
   margin-bottom: 5%;
-  margin-top: 14%;
+  margin-top: 10%;
+  font-size: 18px;
+  line-height: 27px;
 }
 
 .TripCard__location {
