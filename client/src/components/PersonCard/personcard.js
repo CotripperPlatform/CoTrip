@@ -12,15 +12,18 @@ const PersonCard = (props) => {
   return(
     <div className={classList}>
       <img className="PersonCard__image" img src={mom} />
-      <p className="PersonCard__name">{props.PersonCard__name}</p>
+      <div className="PersonCard__name">{props.PersonCard__name}</div>
       <div className="PersonCard__MomBoxInfo">
-        <p className="PersonCard__location">{props.PersonCard__location}</p>
-        <p className="PersonCard__interests">
-          {props.PersonCard__interests}
-        </p>
+        <div className="PersonCard__location">{props.PersonCard__location}</div>
+        <div className="PersonCard__interests">
+          {props.PersonCard__interests.map(PersonCard__interests => (
+              <a className="PersonCard__interests-links" href={PersonCard__interests.url}>
+                #{PersonCard__interests.PersonCard__interests}
+              </a>
+            ))}
       </div>
     </div>
-  );
-}
+    </div>
+  )};
 
 export default PersonCard;

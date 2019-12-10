@@ -6,5 +6,10 @@ storiesOf('PersonCard', module)
   .add("Default", () => <PersonCard
   PersonCard__name="Lindsay L." 
   PersonCard__location="Washington D.C." 
-  PersonCard__interests="#budgeting #technology #outdoors #traveling"
+  PersonCard__interests={[ 
+  { url: "#", PersonCard__interests: "veganism" },
+  { url: "#", PersonCard__interests: "budgeting" },
+  { url: "#", PersonCard__interests: "travel" },
+  { url: "#", PersonCard__interests: "outdoors"}
+]}
   />)
