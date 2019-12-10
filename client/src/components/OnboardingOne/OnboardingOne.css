@@ -1,0 +1,17 @@
+.OnboardingOne {
+  font-family: var(--default-font);
+}
+
+.OnboardingOne__logo-container {
+  /* background-color: var(--red); */
+  display: flex;
+  justify-content: center;
+}
+
+.OnboardingOne__input-field-container {
+  margin: 2vw 0;
+}
+.OnboardingOne__logo {
+  min-width: 20vw;
+  max-width: 20vw;
+}
