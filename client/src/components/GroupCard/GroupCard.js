@@ -3,16 +3,22 @@ import React from 'react';
 import "./GroupCard.css";
 
 const GroupCard = (props) => {
-
-  let classList = `GroupCard`;
-
+  let background;
+  if (props.url) {
+    background = <img className="background-image" src={props.url} alt="group background" />;
+  } else {
+    background = "";
+  }
 
   return(
-    <div className={classList}>
-      <p className="group-name">{props.name}</p>
-      <div className="info-card-info">
-        <p className="members">{props.members}</p>
-        <p className="location">{props.location}</p>
+    <div className="group-card">
+      {background}
+      <div className="text-container">
+        <p className="group-name">{props.name}</p>
+        <div className="details">
+          <p className="members">{props.members} members</p>
+          <p className="location">{props.location}</p>
+        </div>
       </div>
     </div>
   );

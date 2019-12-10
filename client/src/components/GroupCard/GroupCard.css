@@ -1,4 +1,4 @@
-.GroupCard {
+.group-card {
     width: 220px;
     height: 150px;
     border-radius: 3px;
@@ -10,7 +10,18 @@
     flex-direction: column;
 }
 
-.info-card-info {
+.background-image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.text-container {
+    position: absolute;
+    width: 100%;
+}
+
+.details {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
