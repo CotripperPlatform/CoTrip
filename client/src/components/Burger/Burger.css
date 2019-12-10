@@ -1,21 +1,16 @@
-.burger-line-one, .burger-line-two, .burger-line-three {
+.Burger > div {
     height: 8px;
     width: 50px;
     background-color: var(--black);
     margin: 8px 0;
-    transition: .2s ease-in-out;
+    transition: .1s ease-in-out;
     -webkit-transition: .1s ease-in-out;
-    -moz-transition: .2s ease-in-out;
-    -ms-transition: .2s ease-in-out;
-    -o-transition: .2s ease-in-out;
+    -moz-transition: .1s ease-in-out;
+    -ms-transition: .1s ease-in-out;
+    -o-transition: .1s ease-in-out;
 }
 
-.fade {
-    background-color: rgba(0,0,0,0)
-}
-
-
-.burger-line-one-x {
+.Burger--active .Burger__line:nth-child(1) {
     transform: translate(0, 16px) rotate(45deg);
     -webkit-transform: translate(0, 16px) rotate(45deg);
     -moz-transform: translate(0, 16px) rotate(45deg);
@@ -28,7 +23,11 @@
     -o-transition: .1s ease-in-out;
 }
 
-.burger-line-three-x {
+.Burger--active .Burger__line:nth-child(2) {
+    background-color: rgba(0,0,0,0)
+}
+
+.Burger--active .Burger__line:nth-child(3) {
     transform: translate(0, -16px) rotate(-45deg);
     -webkit-transform: translate(0, -16px) rotate(-45deg);
     -moz-transform: translate(0, -16px) rotate(-45deg);
