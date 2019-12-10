@@ -5,12 +5,14 @@
     color: var(--white);
     display: flex;
     flex-direction: column;
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
-.GroupCard__background-image {
+/* .GroupCard__background-image {
     position: relative;
     border-radius: 3px;
-}
+} */
 
 .GroupCard__text-container {
     position: absolute;

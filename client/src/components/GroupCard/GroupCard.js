@@ -4,19 +4,9 @@ import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 
 const GroupCard = (props) => {
-
-  let background;
-
-  if (props.url) {
-    background = <img className="GroupCard__background-image" src={props.url} alt="group background" />;
-  } else {
-    background = "";
-  }
-
   return(
     <Card color="pink" size="medium">
-      <Link className="GroupCard" to="#">
-        {background}
+      <Link className="GroupCard" to="#" style={{ backgroundImage: `url(${props.picture})` }}>
         <div className="GroupCard__text-container">
           <p className="GroupCard__group-name">{props.name}</p>
           <div className="GroupCard__details">
