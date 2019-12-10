@@ -11,18 +11,18 @@ const ForumComment = (props) => {
     return(
         <div className={classList}>
         {/* <img className="profile" src={props.img}></img> */}
-        <img src={img} />
-        <p className="momName">{props.momName}</p>
-          <p className="comment">
-          {props.comment} 
+        <img className="ForumComment__Img" img src={img} />
+        <p className="ForumComment__MomName">{props.ForumComment__MomName}</p>
+          <p className="ForumComment__Comment">
+          {props.ForumComment__Comment} 
           </p>
-          <p className="date">
-          {props.date} 
+          <p className="ForumComment__Date">
+          {props.ForumComment__Date} 
           </p>
-          <p className="likes">
+          <p className="ForumComment__Likes">
               Likes
           </p>
-          <p className="replies">
+          <p className="ForumComment__Replies">
               Replies
           </p>
         </div>

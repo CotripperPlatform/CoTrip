@@ -10,7 +10,7 @@ box-sizing: border-box;
 border-radius: 3px;
 }
 
-.momName {
+.ForumComment__MomName {
 position: absolute;
 font-family: var( --paragraph-font);
 bottom: 0%;
@@ -19,7 +19,7 @@ font-size: 18px;
 font-weight: var(--banner-weight);
 }
 
-.comment {
+.ForumComment__Comment {
 position: absolute;
 left: 15.49%;
 right: 14.81%;
@@ -33,7 +33,7 @@ line-height: 119.3%;
 color: var(--black);
 }
 
-img {
+.ForumComment__Img {
 position: absolute;
 left: 1.2%;
 right: 92.04%;
@@ -41,7 +41,7 @@ top: 10.42%;
 bottom: 80.2%;
 }
 
-.date {
+.ForumComment__Date {
 position: absolute;
 left: 90.83%;
 right: 40.35%;
@@ -53,17 +53,17 @@ line-height: 19px;
 text-align: right;
 }
 
-.likes {
+.ForumComment__Likes {
 position: absolute;
 font-family: var( --paragraph-font);
 font-size: 13px;
 bottom: 23%;
 top: 65%;
-left: 13.5%;
+left: 15.5%;
 right: 87.5%; 
 }
 
-.replies {
+.ForumComment__Replies {
 position: absolute;
 font-family: var( --paragraph-font);
 font-size: 13px;
@@ -73,7 +73,3 @@ left: 21%;
 right: 83%;       
 }
 
-.date {
-font-family: var( --paragraph-font);
-font-size: 13px;
-}
