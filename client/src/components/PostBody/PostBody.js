@@ -5,23 +5,23 @@ import "./PostBody.css";
 const PostBody = props => {
   return (
     <div className="PostBody">
-      <div className="PostBody--top">
-        <div className="PostBody--top-left">
-          <div className="PostBody--title">{props.title}</div>
-          <div className="PostBody--hashtags">
+      <div className="PostBody__top">
+        <div className="PostBody__top-left">
+          <div className="PostBody__title">{props.title}</div>
+          <div className="PostBody__hashtags">
             {props.hashtags.map(hashtag => (
-              <a className="PostBody--hashtag-links" href={hashtag.url}>
+              <a className="PostBody__hashtag-links" href={hashtag.url}>
                 #{hashtag.title}
               </a>
             ))}
           </div>
         </div>
-        <div className="PostBody--top-right">
-          <div className="PostBody--date">{props.date}</div>
+        <div className="PostBody__top-right">
+          <div className="PostBody__date">{props.date}</div>
           <div>{props.time}</div>
         </div>
       </div>
-      <div className="PostBody--text">{props.body}</div>
+      <div className="PostBody__text">{props.body}</div>
     </div>
   );
 };
