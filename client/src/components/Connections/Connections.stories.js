@@ -1,44 +1,47 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Connections from './Connections';
+import pic1 from '../../../../assets/images/card_profile1.png'
+import pic2 from '../../../../assets/images/card_profile2.png'
+import pic3 from '../../../../assets/images/card_profile3.png'
 
-let user00131 = {
+let user1 = {
   userFirstName: 'Paula', 
   userSurname: 'Bannerman', 
-  userPic: '../../../../assets/images/card_profile1.png'
+  userPic: pic1
 }
-let user00465 = {
+let user2 = {
   userFirstName: 'Jack', 
   userSurname: 'Johnson', 
-  userPic: '../../../../assets/images/card_profile2.png'
+  userPic: pic2
 }
-let user00001 = {
+let user3 = {
   userFirstName: 'Jenny', 
   userSurname: 'Jones', 
-  userPic: '../../../../assets/images/card_profile3.png'
+  userPic: pic3
 }
-let user00001 = {
+let user4 = {
   userFirstName: 'Joan', 
   userSurname: 'Rivers', 
-  userPic: '../../../../assets/images/card_profile3.png'
+  userPic: pic1
 }
-let user00001 = {
+let user5 = {
   userFirstName: 'Freddy', 
   userSurname: 'Mercury', 
-  userPic: '../../../../assets/images/card_profile3.png'
+  userPic: pic2
 }
-let user00001 = {
+let user6 = {
   userFirstName: 'Leslie', 
   userSurname: 'Knope', 
-  userPic: '../../../../assets/images/card_profile3.png'
+  userPic: pic3
 }
-let user00001 = {
+let user7 = {
   userFirstName: 'Frank', 
   userSurname: 'Ocean', 
-  userPic: '../../../../assets/images/card_profile3.png'
+  userPic: pic1
 }
 
 storiesOf('Connections', module)
-.add("User Connections", () => <Connections userViewing={true} users={[user1, user465, user131]}/>)
-.add("Her Connections", () => <Connections userViewing={false} users={[user465, user1 , user131]}/>)
-.add("Members", () => <Connections />)
+.add("User Connections", () => <Connections userViewing={true} users={[user1, user2, user3, user4, user5, user6, user7]}/>)
+.add("Her Connections", () => <Connections userViewing={false} users={[user5, user1 , user3]}/>)
+.add("Members", () => <Connections users={[user7, user4, user2, user1, user5]}/>)

@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import "./Connections.css";
+import ProfilePicture from '../ProfilePicture/ProfilePicture'
 
 
 // Class Based React Component
@@ -11,7 +12,6 @@ class Connections extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "Connections",
       Heading: "Connections"
     };
   }
@@ -30,7 +30,10 @@ class Connections extends Component {
     this.setState({
       userArray: this.props.users.map(person => {
         return (
-          <div className='PersonCard--basic'></div>
+          <div className='Connections__div'>
+            <ProfilePicture image={person.userPic} />
+            <p className='Connections__heading'></p>
+          </div>
         )
       })
     })
@@ -45,8 +48,8 @@ class Connections extends Component {
 
   render() {
     return (
-      <div className={this.state.classList}>
-        <h1 className={`${this.state.classList}__heading`}>{this.state.Heading}</h1>
+      <div className='Connections'>
+        <h1 className='Connections__heading'>{this.state.Heading}</h1>
         {this.state.userArray}
       </div>
     );
