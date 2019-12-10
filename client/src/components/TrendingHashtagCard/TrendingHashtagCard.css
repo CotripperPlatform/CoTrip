@@ -10,16 +10,13 @@
   position: absolute;
   left: 5%;
   color: var(--white);
-  font-weight: 1;
 }
 .hashtag-card-container h2 {
   position: absolute;
   left: 34%;
   top: 40%;
   color: var(--white);
-  font-weight: 1;
 }
-
 .hashtags-container {
   display: flex;
   flex-direction: column;
