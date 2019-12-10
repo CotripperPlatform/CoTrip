@@ -12,21 +12,21 @@
     color: var(--black)
 }
 
-.footer-left, .footer-right, .footer-center {
+.Footer--left, .Footer--right, .Footer--center {
     display: flex;
     text-align: center;
     margin: 3vw;
 }
 
-.footer-left {
+.Footer--left {
     width: 20%;
 }
 
-.footer-center a {
+.Footer--center a {
     text-decoration: none;
 }
 
-.footer-right {
+.Footer--right {
     justify-content: space-around;
     width: 20%;
 }
@@ -37,7 +37,7 @@
         height: 75px;
     }
 
-    .footer-right {
+    .Footer-right {
         flex-direction: column;
         justify-content: right;
         line-height: 20px;
@@ -51,11 +51,11 @@
         height: 150px;
     }
 
-    .footer-left, .footer-center {
+    .Footer--left, .footer--center {
         display: block;
     }
 
-    .footer-center {
+    .Footer--center {
         margin: 0;
     }
 }

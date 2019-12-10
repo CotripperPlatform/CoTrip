@@ -12,13 +12,13 @@ const Footer = (props) => {
   return (
     // These are hard links in the HTLM files and will need to be udpated once we have the info
     <div className={classList}>
-      <div className="footer-left">
+      <div className="Footer--left">
         <a href="">Sitemap</a>
       </div>
-      <div className="footer-center">
+      <div className="Footer--center">
         <a href="mailto:info@cotripper.co?" target="_blank">info@cotripper.co</a>
       </div>
-      <div className="footer-right">
+      <div className="Footer--right">
         <a href="">Instagram</a>
         <a href="">Facebook</a>
         <a href="">Meetup</a>
