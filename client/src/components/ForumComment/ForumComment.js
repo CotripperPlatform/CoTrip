@@ -20,10 +20,10 @@ const ForumComment = (props) => {
           {props.ForumComment__Date} 
           </p>
           <p className="ForumComment__Likes">
-              Likes
+             Likes:{props.ForumComment__Likes}
           </p>
           <p className="ForumComment__Replies">
-              Replies
+              Replies:{props.ForumComment__Replies}
           </p>
         </div>
       );
