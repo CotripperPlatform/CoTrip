@@ -18,17 +18,23 @@ class Connections extends Component {
 
 
   // Runs after Component is loaded in the broswer
-  componentDidMount(){
+  componentDidMount() {
     if (this.props.userViewing === true) {
-      this.setState({ Heading: "My Connections"})
+      this.setState({ Heading: "My Connections" })
     } else if (this.props.userViewing === false) {
       this.setState({ Heading: "Her Connections" })
     } else if (!this.props.userViewing) {
       this.setState({ Heading: "Members" })
     }
-  }
-  //Why isn't this working?
 
+    this.setState({
+      userArray: this.props.users.map(person => {
+        return (
+          <div className='PersonCard--basic'></div>
+        )
+      })
+    })
+  }
 
   // Runs after a component has been updated
   componentDidUpdate() { }
@@ -41,6 +47,7 @@ class Connections extends Component {
     return (
       <div className={this.state.classList}>
         <h1 className={`${this.state.classList}__heading`}>{this.state.Heading}</h1>
+        {this.state.userArray}
       </div>
     );
   }
