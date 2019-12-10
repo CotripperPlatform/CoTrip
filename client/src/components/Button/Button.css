@@ -1,0 +1,61 @@
+.Button {
+  padding: 0.25em 2.7em;
+  background: var(--white);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: var(--default-font);
+  font-size: 24px;
+  text-align: center;
+  color: var(--black);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+.Button:hover {
+  background-color: #fcf0ee;
+}
+.Button--large {
+  padding: 0.13em 2.71em;
+  font-size: 36px;
+}
+.Button--small {
+  padding: 0.42em 3.35em;
+  font-size: 18px;
+}
+.Button--pink {
+  color: var(--white);
+  background-color: var(--pink);
+}
+.Button--pink:hover {
+  background-color: #ff6a50;
+}
+.Button--purple {
+  color: var(--white);
+  background-color: var(--purple);
+}
+.Button--purple:hover {
+  background-color: #592d96;
+}
+.Button--red {
+  color: var(--white);
+  background-color: var(--red);
+}
+.Button--red:hover {
+  background-color: #d42e44;
+}
+.Button--yellow {
+  color: var(--white);
+  background-color: var(--yellow);
+}
+.Button--yellow:hover {
+  background-color: #f5c000;
+}
+.Button--outline {
+  color: var(--pink);
+  background-color: var(--white);
+  border: 1px solid var(--pink);
+}
+.Button--black-text {
+  color: var(--black);
+}
