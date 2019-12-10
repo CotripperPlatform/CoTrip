@@ -1,0 +1,19 @@
+.CommentBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    height: auto;
+    background-color: var(--gray-dark);
+    font-size: 14px;
+    font-family: var(--paragraph-font);
+}
+.Date {
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+p span {
+    display: block;
+}
