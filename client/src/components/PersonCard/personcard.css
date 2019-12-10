@@ -1,7 +1,7 @@
 .PersonCard {
 width: 229px;
 height: 289px;
-border: 1px solid #F2BC0F;
+border: 1px solid var(--yellow);
 background: var(--white);
 position: absolute;
 left: 0%;
@@ -40,7 +40,7 @@ font-weight: var(--title-weight);
 position: absolute;
 left: 17.03%;
 right: 17.03%;
-top: 62.97%;
+top: 63.97%;
 bottom: 0%;
 font-size: 14px;
 line-height: 19px;
@@ -53,8 +53,8 @@ color: var(--black);
 overflow-wrap: break-word;
 position: absolute;
 text-align: center;
-line-height: 20px;
-font-size: 14.75px;
+line-height: 24px;
+font-size: 16px;
 top: 69.9%;
 right: 17.03%;
 bottom: 0%;
