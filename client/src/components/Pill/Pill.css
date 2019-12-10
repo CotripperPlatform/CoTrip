@@ -2,7 +2,7 @@
 .Pill {
   border-radius: 3px;
   padding: 0.5em 2em;
-  font-family: "Reem Kufi";
+  font-family: var(--default-font);
   cursor: pointer;
   font-size: 2em;
   transition: all 0.5s ease;
