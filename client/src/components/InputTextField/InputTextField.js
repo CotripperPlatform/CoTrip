@@ -6,7 +6,7 @@ const InputTextField = props => {
 
   return (
     <input
-      className={`InputTextField__container-${variation}`}
+      className={`InputTextField__container--${variation}`}
       type={type}
       name={name}
       placeholder={placeholder}

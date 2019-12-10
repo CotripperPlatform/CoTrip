@@ -1,4 +1,4 @@
-.InputTextField__container-default {
+.InputTextField__container--default {
   display: flex;
   color: var(--black);
   background-color: var(--white);
@@ -10,7 +10,7 @@
   font-family: var(--default-font);
 }
 
-.InputTextField__container-small {
+.InputTextField__container--small {
   color: black;
   background-color: var(--white);
   border: 2px solid white;
@@ -22,7 +22,7 @@
   font-family: var(--default-font);
 }
 
-.InputTextField__container-search {
+.InputTextField__container--search {
   display: flex;
   color: var(--black);
   background-color: var(--white);
@@ -40,7 +40,7 @@
   box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
 }
 
-.InputTextField__container-search::-webkit-input-placeholder {
+.InputTextField__container--search::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   padding-left: 40px;
 }
