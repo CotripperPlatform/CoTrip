@@ -10,7 +10,7 @@
   font-family: var(--default-font);
 }
 
-.input-field-container-small input {
+.input-field-container-small {
   color: black;
   background-color: var(--white);
   border: 2px solid white;
@@ -32,7 +32,6 @@
   min-width: 400px;
   font-size: 20px;
   font-family: var(--default-font);
-
   background-image: url("../../../../assets/images/global-nav_search_icon.png");
   background-repeat: no-repeat;
   background-position: 15px 10px;
