@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.css";
 
 const Button = props => {
-  let classList = `button button__${props.color} button--${props.size} button__${props.textColor}-text`;
+  let classList = `Button Button__${props.color} Button--${props.size} Button__${props.textColor}-text`;
   return (
     <button className={classList} onClick={() => props.handleClick()}>
       {props.text}
