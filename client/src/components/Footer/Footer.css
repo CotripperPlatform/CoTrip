@@ -37,7 +37,7 @@
         height: 75px;
     }
 
-    .Footer-right {
+    .Footer--right {
         flex-direction: column;
         justify-content: right;
         line-height: 20px;
