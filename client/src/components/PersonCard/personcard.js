@@ -3,14 +3,9 @@ import "./personcard.css";
 import mom from "../Assets/Images/Mom.png"
 
 // Function based React Component
-const PersonCard = (props) => {
-
-  // Default Class to apply to Component
-  let classList = `PersonCard`;
-
-
+const PersonCard = props => {
   return(
-    <div className={classList}>
+    <div className="PersonCard">
       <img className="PersonCard__image" img src={mom} />
       <div className="PersonCard__name">{props.PersonCard__name}</div>
       <div className="PersonCard__MomBoxInfo">

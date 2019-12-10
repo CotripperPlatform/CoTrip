@@ -1,42 +1,29 @@
 .PersonCard {
-    width: 80%;
-    height: 75%;
-    border: 1px solid var(--yellow);
     background: var(--white);
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    width: 13rem;
+    height: 17rem;
+    font-family: var(--paragraph-font);
+    color: var(--black);
+    border: 1px solid var(--yellow);
     box-sizing: border-box;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .PersonCard__image {
-    width: 150px;
-    height: 150px;
+   display: flexbox;
+
 }
 
 .PersonCard__name {
     font-family: var(--default-font);
-    font-weight: var(--paragraph-weight);
+    font-weight: var(--banner-weight);
     line-height: 100%;
-    /* or 36px */
     text-align: center;
-    left: 10.04%;
-    right: 10.48%;
-    top: 46.79%;
-    bottom: 28.03%;
 }
 
 .PersonCard__location {
     font-family: var(--default-font);
     font-weight: var(--title-weight);
-    left: 17.03%;
-    right: 17.03%;
-    top: 63.97%;
-    bottom: 0%;
-    font-size: 14px;
-    line-height: 19px;
     text-align: center;
     color: var(--black);
 }
@@ -45,12 +32,6 @@
 .PersonCard__interests {
     overflow-wrap: break-word;
     text-align: center;
-    line-height: 24px;
-    font-size: 16px;
-    top: 69.9%;
-    right: 17.03%;
-    bottom: 0%;
-    left: 17.03%;
-    font-family: var(--default-font)
-
+    font-family: var(--default-font);
+    text-decoration: none;
 }
