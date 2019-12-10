@@ -1,4 +1,4 @@
-.input-field-container-default input {
+.InputTextField--default input {
   display: flex;
   color: var(--black);
   background-color: var(--white);
@@ -11,7 +11,7 @@
   font-family: var(--default-font);
 }
 
-.input-field-container-small input {
+.InputTextField--small input {
   color: black;
   background-color: var(--white);
   border: 2px solid white;
@@ -23,13 +23,13 @@
   font-family: var(--default-font);
 }
 
-.input-field-container-search svg {
+.InputTextField--search svg {
   position: absolute;
   height: 48px;
   width: 60px;
 }
 
-.input-field-container-search input {
+.InputTextField--search input {
   display: flex;
   color: var(--black);
   background-color: var(--white);
