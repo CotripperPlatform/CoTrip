@@ -10,4 +10,4 @@ storiesOf("InfoCard", module)
   .add("Info Card, Pink, Small", () => <InfoCard color="pink" size="small" />)
   .add("Info Card, Blank", () => <InfoCard size="large" />)
   .add("Info Card, Blank, Small", () => <InfoCard size="small" />)
-  .add("Info Card, Picture BG", () => <InfoCard picture={image} size="large" />);
+  .add("Info Card, Picture BG", () => <InfoCard picture={image} size="small" />);
