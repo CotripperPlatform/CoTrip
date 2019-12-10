@@ -13,14 +13,14 @@ const PreviousTripsCard = props => {
         <div className="PreviousTripCard_trips">
           {props.children[1]}
           {props.children[2]}
+          <a href={link} className="PreviousTripCard_arrow" />
         </div>
-      ) : null}
-      <div className="PreviousTripCard_no-trips">
-        {props.children[1]}
-        {props.children[2]}
-      </div>
-
-      {trips ? <a href={link} className="PreviousTripCard_arrow" /> : null}
+      ) : (
+        <div className="PreviousTripCard_no-trips">
+          {props.children[1]}
+          {props.children[2]}
+        </div>
+      )}
     </Card>
   );
 };

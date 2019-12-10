@@ -9,8 +9,8 @@ storiesOf("PreviousTripsCard", module)
       link="https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1"
     >
       <h1>Trending Hashtags</h1>
-      <div>1</div>
-      <div>2</div>
+      <div>placeholder</div>
+      <div>placeholder</div>
     </PreviousTripsCard>
   ))
   .add("Default, No Trips", () => (
@@ -20,6 +20,6 @@ storiesOf("PreviousTripsCard", module)
     >
       <h1>Trending Hashtags</h1>
       <h2>None with CoTripper yet!</h2>
-      <a href="#">Book a Trip Now!</a>
+      <a href="/book">Book a Trip Now!</a>
     </PreviousTripsCard>
   ));
