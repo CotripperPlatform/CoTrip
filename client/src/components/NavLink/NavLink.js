@@ -24,7 +24,7 @@ class NavLink extends React.Component {
       <div className='NavLink' onMouseEnter={this.toggleDropdown} onMouseLeave={this.toggleDropdown}>
         <Link to={this.props.to}>
         <h1>{this.props.text}</h1>
-        <div className={this.state.dropdownVisible ? 'NavLink__dropdown-show' : 'NavLink__dropdown-hide'}>
+        <div className={this.state.dropdownVisible ? 'NavLink__dropdown NavLink__dropdown-show' : 'NavLink__dropdown'}>
           <NavLinkDropdownMenu menuList={this.props.menuList} />
         </div>
         </Link>

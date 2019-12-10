@@ -16,7 +16,7 @@
   margin: 38px 0 0 0;
   text-transform: uppercase;
 }
-.NavLink__dropdown-hide {
+.NavLink__dropdown {
   position: absolute;
   top: 100%;
   left: 24px;
@@ -25,10 +25,6 @@
   pointer-events: none;
 }
 .NavLink__dropdown-show {
-  position: absolute;
-  top: 100%;
-  left: 24px;
-  width: calc(100% - 24px);
   opacity: 1;
   pointer-events: auto;
 }
