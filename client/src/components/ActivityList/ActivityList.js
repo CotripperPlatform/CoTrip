@@ -9,7 +9,7 @@ class ActivityList extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "activity-list"
+      classList: "ActivityList__activity-list"
     };
     this.momActivityList = ["Spa", "Wine Nights", "Brunch with Other Moms"];
     this.kidsActivityList = [
@@ -25,23 +25,23 @@ class ActivityList extends Component {
   renderMomActivities = () => {
     const momActivities = this.momActivityList.map(activity => {
       return (
-        <div className="activity mom">
-          <span className="activities">{activity}</span>
+        <div className="ActivityList__activity ActivityList__mom">
+          <span className="ActivityList__activities">{activity}</span>
         </div>
       );
     });
-    return <div className="activity-container">{momActivities}</div>;
+    return <div className="ActivityList__activity-container">{momActivities}</div>;
   };
 
   renderKidsActivities = () => {
     const kidsActivities = this.kidsActivityList.map(activity => {
       return (
-        <div className="activity kids">
-          <span className="activities">{activity}</span>
+        <div className="ActivityList__activity ActivityList__kids">
+          <span className="ActivityList__activities">{activity}</span>
         </div>
       );
     });
-    return <div className="activity-container">{kidsActivities}</div>;
+    return <div className="ActivityList__activity-container">{kidsActivities}</div>;
   };
 
   // Runs after Component is loaded in the broswer
@@ -56,12 +56,12 @@ class ActivityList extends Component {
   render() {
     return (
       <div className={this.state.classList}>
-        <div className="activities-container">
-          <h1 className="activity-header">Activities for Mom</h1>
+        <div className="ActivityList__activities-container">
+          <h1 className="ActivityList__activity-header">Activities for Mom</h1>
           {this.renderMomActivities()}
         </div>
-        <div className="activities-container">
-          <h1 className="activity-header">Activities for Mom & Kids</h1>
+        <div className="ActivityList__activities-container">
+          <h1 className="ActivityList__activity-header">Activities for Mom & Kids</h1>
           {this.renderKidsActivities()}
         </div>
       </div>

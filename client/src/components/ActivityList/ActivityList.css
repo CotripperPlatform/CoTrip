@@ -1,25 +1,25 @@
-.activity-list {
+.ActivityList__activity-list {
   box-sizing: border-box;
 }
 
-.activities-container {
+.ActivityList__activities-container {
   padding: 20px 0px;
 }
 
-.activity-header {
+.ActivityList__activity-header {
   font-family: var(--default-font);
   font-size: 36px;
   line-height: 54px;
   color: var(--purple);
 }
 
-.activity-container {
+.ActivityList__activity-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
 
-.activity {
+.ActivityList__activity {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,7 +31,7 @@
   padding: 10px;
 }
 
-.activities {
+.ActivityList__activities {
   font-family: var(--default-font);
   font-size: 24px;
   line-height: 36px;
@@ -39,49 +39,49 @@
   text-align: center;
 }
 
-.mom {
+.ActivityList__mom {
   background-color: var(--purple);
 }
 
-.kids {
+.ActivityList__kids {
   background-color: var(--red);
 }
 
 @media all and (max-width: 1080px) and (min-width: 721px) {
-  .activity-header {
+  .ActivityList__activity-header {
     font-size: 27px;
     line-height: 40px;
   }
-  .activity {
+  .ActivityList__activity {
     width: 135px;
     height: 101px;
     margin: 30px 30px 15px 0px;
     padding: 7px;
   }
-  .activities-container {
+  .ActivityList__activities-container {
     padding: 15px 0px;
   }
-  .activities {
+  .ActivityList__activities {
     font-size: 18px;
     line-height: 27px;
   }
 }
 
 @media all and (max-width: 720px) {
-  .activity-header {
+  .ActivityList__activity-header {
     font-size: 18px;
     line-height: 27px;
   }
-  .activity {
+  .ActivityList__activity {
     width: 90px;
     height: 68px;
     margin: 20px 20px 10px 0px;
     padding: 5px;
   }
-  .activities-container {
+  .ActivityList__activities-container {
     padding: 10px 0px;
   }
-  .activities {
+  .ActivityList__activities {
     font-size: 12px;
     line-height: 18px;
   }
