@@ -14,6 +14,7 @@
     --purple: #6A4C93;
     --black: #252525;
     --white: #FAFAFA;
+    --gray: #808080;
     --gray-lite: #E5E5E5;
     --gray-dark: #C4C4C4;
     --green: #12DB00;
@@ -52,5 +53,4 @@
     --paragraph-weight: 400;
     --banner-weight: 700;
     --title-weight: 500;
-}   
-
+}
