@@ -14,14 +14,7 @@ storiesOf("TrendingHashtagCard", module)
         "#dogs",
         "#italy",
         "#starwars",
-        "#babyyoda",
-        "easdgasg",
-        "asgasdg",
-        "asgasdg",
-        "asdgasdg",
-        "asdgsgasijpg",
-        "opppapapa",
-        "shiitt"
+        "#babyyoda"
       ]}
     >
       <h1>Trending Hashtags</h1>
@@ -31,5 +24,29 @@ storiesOf("TrendingHashtagCard", module)
     <TrendingHashtagCard data={[]}>
       <h1>Trending Hashtags</h1>
       <h2>No Hashtags :(</h2>
+    </TrendingHashtagCard>
+  ))
+  .add("Default, Lots of data", () => (
+    <TrendingHashtagCard
+      data={[
+        "#dope",
+        "#torch",
+        "#hawaii",
+        "#kids",
+        "#cats",
+        "#dogs",
+        "#italy",
+        "#starwars",
+        "#babyyoda",
+        "#gaming",
+        "#sports",
+        "#haikus",
+        "#surfing",
+        "#momfacts",
+        "#dadfacts",
+        "#catfacts"
+      ]}
+    >
+      <h1>Trending Hashtags</h1>
     </TrendingHashtagCard>
   ));
