@@ -4,17 +4,23 @@ import Card from "../Card/Card";
 
 // Function based React Component
 const PreviousTripsCard = props => {
-  let { link } = props;
+  let { link, trips } = props;
 
   return (
     <Card color="purple">
       <div className="PreviousTripCard_container">{props.children[0]}</div>
-      <div className="PreviousTripCard_trips">
+      {trips ? (
+        <div className="PreviousTripCard_trips">
+          {props.children[1]}
+          {props.children[2]}
+        </div>
+      ) : null}
+      <div className="PreviousTripCard_no-trips">
         {props.children[1]}
         {props.children[2]}
       </div>
 
-      <a href={link} className="PreviousTripCard_arrow" />
+      {trips ? <a href={link} className="PreviousTripCard_arrow" /> : null}
     </Card>
   );
 };
