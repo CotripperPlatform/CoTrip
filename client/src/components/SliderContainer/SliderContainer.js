@@ -9,36 +9,36 @@ class SliderContainer extends Component {
     this.state = {
       image_index: 0
     };
+    this.onClick = this.onClick.bind(this);
   }
-
+  onClick = () => {
+    this.setState({ image_index: (this.state.image_index + 1) % this.props.images.length });
+  };
   render() {
-    // setInterval(() => {
-    //   let picIndex = this.state.image_index;
-    //   this.setState({ image_index: (picIndex + 1) % this.props.images.length });
-    // }, 3000);
     return (
       <div className="SliderContainer">
-        <div className="slider-container-left">
+        <div className="SliderContainer__left">
           <img
-            className="slider-image"
+            className="SliderContainer__image"
             src={this.props.images[this.state.image_index].url}
             alt={this.props.images[this.state.image_index].alt}
           />
-          <button>...</button>
+          <button onClick={this.onClick}>...</button>
         </div>
-
-        <p className="slider-overview-title">Overview</p>
-        <p className="slider-dates-title">Dates</p>
-        <p className="slider-location-title">Location</p>
-        <p className="slider-overview-text">{this.props.overview}</p>
-        <div className="slider-dates-text">
-          <p>
-            {this.props.start_date}
-            {" -"}
-          </p>
-          <p>{this.props.end_date}</p>
+        <div className="SliderContainer__right">
+          <p className="SliderContainer__overview-title">Overview</p>
+          <p className="SliderContainer__dates-title">Dates</p>
+          <p className="SliderContainer__location-title">Location</p>
+          <p className="SliderContainer__overview-text">{this.props.overview}</p>
+          <div className="SliderContainer__dates-text">
+            <p>
+              {this.props.start_date}
+              {" -"}
+            </p>
+            <p>{this.props.end_date}</p>
+          </div>
+          <p className="SliderContainer__location-text">{this.props.location}</p>
         </div>
-        <p className="slider-location-text">{this.props.location}</p>
       </div>
     );
   }
@@ -48,7 +48,7 @@ SliderContainer.defaultProps = {
   images: [
     { alt: "phil murray", url: "https://www.fillmurray.com/200/300" },
     { alt: "phil", url: "https://www.fillmurray.com/g/200/300" },
-    { alt: "fill", url: "https://www.fillmurray.com/200/300" }
+    { alt: "fill", url: "https://www.fillmurray.com/300/300" }
   ],
   overview:
     "Enjoy a week-long stay at a luxury resort! During your stay, explore the resort's amazing ammenities and events, but above all, explore the beautiful islands of Hawaii! It will be a trip for you and your family to remember forever.",
