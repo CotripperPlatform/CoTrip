@@ -10,7 +10,7 @@ const PostBody = props => {
           <div className="PostBody__title">{props.title}</div>
           <div className="PostBody__hashtags">
             {props.hashtags.map(hashtag => (
-              <a className="PostBody__hashtag-links" href={hashtag.url}>
+              <a className="PostBody__hashtag-links" key={hashtag.title} href={hashtag.url}>
                 #{hashtag.title}
               </a>
             ))}
