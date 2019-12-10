@@ -29,13 +29,19 @@ class CarouselDots extends Component {
     return classList;
   }
 
-
   render() {
     let numberOfDots = this.props.numberOfDots;
     let activeLocation = this.state.activeLocation;
-        let dots = [];
-    for (let i = 0; i <= numberOfDots-1; i++) {
-      let dot = <div key={i} id={i} onClick={this.dotClicked} className={this.generateClassList(i==activeLocation)} />
+    let dots = [];
+    for (let i = 0; i <= numberOfDots - 1; i++) {
+      let dot = (
+        <div
+          key={i}
+          id={i}
+          onClick={this.dotClicked}
+          className={this.generateClassList(i == activeLocation)}
+        />
+      );
       dots.push(dot);
     }
 
