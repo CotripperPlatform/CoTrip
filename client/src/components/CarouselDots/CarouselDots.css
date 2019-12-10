@@ -5,3 +5,24 @@
   align-items: flex-start;
   transition: all 0.5s ease;
 }
+
+
+.CarouselDot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: var(--white);
+  border-radius: 20px;
+}
+
+
+.CarouselDot__Border {
+  border: 2px solid var(--purple);
+}
+
+.CarouselDot__Active {
+  background-color: var(--purple)
+}
