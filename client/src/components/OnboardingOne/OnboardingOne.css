@@ -15,7 +15,8 @@
   display: flex;
   justify-content: center;
 }
-
+.OnboardingOne-header-container {
+}
 .OnboardingOne__input-field-container {
   margin: 2vw 0;
 }

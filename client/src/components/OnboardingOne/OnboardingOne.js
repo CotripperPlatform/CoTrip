@@ -28,29 +28,33 @@ class OnboardingOne extends Component {
   render() {
     return (
       <div className={this.state.classList}>
-        <div className="OnboardingOne__logo-container">
-          <img className="OnboardingOne__logo" src={logo} alt="" />
-        </div>
+        <div className="OnboardingOne-container">
+          <div className="OnboardingOne__logo-container">
+            <img className="OnboardingOne__logo" src={logo} alt="" />
+          </div>
+          <div className="OnboardingOne-header-container">
+            <h1 className="OnboardingOne-header">Step One</h1>
+          </div>
 
-        <h1>Step One</h1>
-        <div className="OnboardingOne__input-field-container">
-          <InputTextField type="text" name="name" placeholder="Name"></InputTextField>
-        </div>
-        <div className="OnboardingOne__input-field-container">
-          <InputTextField type="text" name="email" placeholder="Email"></InputTextField>
-        </div>
-        <div className="OnboardingOne__input-field-container">
-          <InputTextField type="text" name="password" placeholder="Password"></InputTextField>
-        </div>
-        <div className="OnboardingOne__input-field-container">
-          <InputTextField
-            type="text"
-            name="confirm password"
-            placeholder="Confirm Password"
-          ></InputTextField>
-        </div>
-        <div className="OnboardingOne__button-container">
-          <Button className="OnboardingOne__button" text="Next"></Button>
+          <div className="OnboardingOne__input-field-container">
+            <InputTextField type="text" name="name" placeholder="Name"></InputTextField>
+          </div>
+          <div className="OnboardingOne__input-field-container">
+            <InputTextField type="text" name="email" placeholder="Email"></InputTextField>
+          </div>
+          <div className="OnboardingOne__input-field-container">
+            <InputTextField type="text" name="password" placeholder="Password"></InputTextField>
+          </div>
+          <div className="OnboardingOne__input-field-container">
+            <InputTextField
+              type="text"
+              name="confirm password"
+              placeholder="Confirm Password"
+            ></InputTextField>
+          </div>
+          <div className="OnboardingOne__button-container">
+            <Button className="OnboardingOne__button" text="Next"></Button>
+          </div>
         </div>
       </div>
     );
