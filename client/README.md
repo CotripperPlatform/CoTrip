@@ -64,9 +64,7 @@ hygen component-class new --name NameOfComponent
 ```
 
 #### Icons
-
-For icons, we are using font awesome. To integrate it with React we will be using the NPM Package `react-fontawesome`.
-
+Please see below.
 ##### Usage
 In `App.js` we will add the following:
 ```
@@ -79,15 +77,6 @@ import { *icons you would like to use here* } from '@fortawesome/free-solid-svg-
 library.add(*icons you would like to add to library*)
 ```
 
-To breakdown what is going on above:
-In our call to library.add() we're passing:
-
-- fab: which represents all of the brand icons. So any of the brand icons in that package may be referenced by icon name as a string anywhere else in our app. For example: "apple", "microsoft", "facebook", or "google". 
-- fas: is solid background icons
-
-- far: represents all regular icons, meaning a blank background
-
-- The last import line in the above syntax is where we can call icons individually to be specific in our library (more on that below). 
 
 So to put this all together this is how the syntax in our `App.js` file would look like and to add more icons to the library you will just import, add to library, and seperate by commas.
 ```
