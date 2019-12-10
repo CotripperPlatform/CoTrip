@@ -1,10 +1,6 @@
-.NavLink-Link {
-  text-decoration: none;
-}
 .NavLink {
   height: 100px;
   background-color: var(--yellow);
-  color: var(--black);
   font-family: var(--default-font);
   padding: 24px 100px 24px 24px;
   position: relative;
@@ -12,11 +8,15 @@
 .NavLink:hover {
   filter: brightness(90%);
 }
+.NavLink a {
+  text-decoration: none;
+  color: var(--black);
+}
 .NavLink h1 {
   margin: 38px 0 0 0;
   text-transform: uppercase;
 }
-.dropdown-hide {
+.NavLink__dropdown-hide {
   position: absolute;
   top: 100%;
   left: 24px;
@@ -24,7 +24,7 @@
   opacity: 0;
   pointer-events: none;
 }
-.dropdown-show {
+.NavLink__dropdown-show {
   position: absolute;
   top: 100%;
   left: 24px;

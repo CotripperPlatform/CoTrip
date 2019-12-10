@@ -7,18 +7,18 @@ const placeholderUrl = "/";
 const placeholderDropdownProp = [
   {
     text: 'Explore People',
-    url: '/'
+    to: '/'
   },
   {
     text: 'Join Groups',
-    url: '/'
+    to: '/'
   }
 ]
 
 storiesOf('NavLink', module)
   .add("NavLink", () => (
-    <NavLink text={placeholderTextProp} url={placeholderUrl} menuList={placeholderDropdownProp} />
+    <NavLink text={placeholderTextProp} to={placeholderUrl} menuList={placeholderDropdownProp} />
   ))
   .add("NavLink w/o Menu", () => (
-    <NavLink text={placeholderTextProp} url={placeholderUrl} menuList={[]} />
+    <NavLink text={placeholderTextProp} to={placeholderUrl} menuList={[]} />
   ))

@@ -5,7 +5,7 @@ import "./NavLinkDropdownMenu.css";
 const NavLinkDropdownMenu = (props) => (
   <ul className='NavLinkDropdownMenu'>
     {props.menuList.map(li => 
-      <Link to={li.url}>
+      <Link to={li.to}>
         <li>{li.text}</li>
       </Link>
     )}

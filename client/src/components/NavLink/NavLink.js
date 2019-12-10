@@ -12,29 +12,23 @@ class NavLink extends React.Component {
     this.toggleDropdown = this.toggleDropdown.bind(this);
   }
   toggleDropdown() {
-    if (this.state.dropdownVisible) {
+    if (this.props.menuList.length) {
       this.setState({
-        dropdownVisible: false
+        dropdownVisible: !this.state.dropdownVisible
       });
-    } else {
-      if (this.props.menuList.length) {
-        this.setState({
-          dropdownVisible: true
-        });
-      }
     }
   }
   // NEED to fix Link to= once routes are made
   render() {
     return (
-      <Link className='NavLink-Link' to={this.props.url}>
-        <div className='NavLink' onMouseEnter={this.toggleDropdown} onMouseLeave={this.toggleDropdown}>
-          <h1>{this.props.text}</h1>
-          <div className={this.state.dropdownVisible ? 'dropdown-show' : 'dropdown-hide'}>
-            <NavLinkDropdownMenu menuList={this.props.menuList} />
-          </div>
+      <div className='NavLink' onMouseEnter={this.toggleDropdown} onMouseLeave={this.toggleDropdown}>
+        <Link to={this.props.to}>
+        <h1>{this.props.text}</h1>
+        <div className={this.state.dropdownVisible ? 'NavLink__dropdown-show' : 'NavLink__dropdown-hide'}>
+          <NavLinkDropdownMenu menuList={this.props.menuList} />
         </div>
-      </Link>
+        </Link>
+      </div>
     );
   }
 }
