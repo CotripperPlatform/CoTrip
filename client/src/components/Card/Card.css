@@ -44,3 +44,23 @@
   left: 0;
   right: 0;
 }
+
+.Card__discover-true {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  background: none;
+  border: 3px dashed var(--purple);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.Card a {
+  font-size: 22px;
+  width: 55%;
+  text-decoration: none;
+  text-align: center;
+  margin-left: 20%;
+}
