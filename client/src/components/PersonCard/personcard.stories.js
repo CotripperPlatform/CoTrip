@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 
 storiesOf('PersonCard', module)
   .add("Default", () => <PersonCard
-  momName="Lindsay L." 
-  location="Washington D.C." 
-  interests="#budgeting #technology #outdoors #traveling"
+  PersonCard__MomName="Lindsay L." 
+  PersonCard__Location="Washington D.C." 
+  PersonCard__Interests="#budgeting #technology #outdoors #traveling"
   />)
