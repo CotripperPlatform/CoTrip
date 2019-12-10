@@ -1,0 +1,44 @@
+.Card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  font-family: var(--default-font);
+}
+.Card--purple {
+  background-color: var(--purple);
+}
+.Card--pink {
+  background-color: var(--pink);
+}
+
+.Card--large {
+  width: 100%;
+  min-width: 500px;
+  height: 260px;
+}
+
+.Card--medium {
+  width: 100%;
+  min-width: 225px;
+  height: 150px;
+}
+
+.Card--small {
+  width: 100%;
+  min-width: 225px;
+  height: 125px;
+}
+
+.Card img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

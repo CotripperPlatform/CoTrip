@@ -1,4 +1,4 @@
-.button {
+.Button {
   padding: 0.25em 2.7em;
   background: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -11,51 +11,70 @@
   transition-duration: 0.3s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
+  white-space: nowrap;
 }
-.button:hover {
-  background-color: #fcf0ee;
+.Button:hover {
+  background-color: var(--white-hover);
 }
-.button-large {
+.Button--large {
   padding: 0.13em 2.71em;
   font-size: 36px;
 }
-.button-small {
+.Button--small {
   padding: 0.42em 3.35em;
   font-size: 18px;
 }
-.button-pink {
+.Button--pink {
   color: var(--white);
   background-color: var(--pink);
 }
-.button-pink:hover {
-  background-color: #ff6a50;
+.Button--pink:hover {
+  background-color: var(--pink-hover);
 }
-.button-purple {
+.Button--purple {
   color: var(--white);
   background-color: var(--purple);
 }
-.button-purple:hover {
-  background-color: #592d96;
+.Button--purple:hover {
+  background-color: var(--purple-hover);
 }
-.button-red {
+.Button--red {
   color: var(--white);
   background-color: var(--red);
 }
-.button-red:hover {
-  background-color: #d42e44;
+.Button--red:hover {
+  background-color: var(--red-hover);
 }
-.button-yellow {
+.Button--yellow {
   color: var(--white);
   background-color: var(--yellow);
 }
-.button-yellow:hover {
-  background-color: #f5c000;
+.Button--yellow:hover {
+  background-color: var(--yellow-hover);
 }
-.button-outline {
+.Button--outline {
   color: var(--pink);
   background-color: var(--white);
   border: 1px solid var(--pink);
 }
-.button-black-text {
+.Button--black-text {
   color: var(--black);
+}
+.Button--like {
+  width: 50%;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  min-width: 20rem;
+  background-color: var(--gray-lite);
+}
+.Button--comment {
+  width: 50%;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  min-width: 20rem;
+  background-color: var(--gray-lite);
+}
+.Button--comment img,
+.Button--like img {
+  margin-right: 0.5rem;
 }
