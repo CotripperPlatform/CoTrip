@@ -4,6 +4,6 @@ import Burger from './Burger';
 
 storiesOf('Burger', module)
   .add("Default", () => (
-    <Burger />
+    <Burger clicked=""/>
   )
 )

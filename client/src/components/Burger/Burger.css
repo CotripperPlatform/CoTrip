@@ -1,4 +1,30 @@
-
 .Burger {
 
+}
+
+.burger-line-one, .burger-line-two, .burger-line-three {
+    height: 8px;
+    width: 50px;
+    background-color: var(--black);
+    margin: 8px 0;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.burger-line-one-x {
+    transform: translate(0, 16px) rotate(45deg);
+    -webkit-transform: translate(0, 16px) rotate(45deg);
+    -moz-transform: translate(0, 16px) rotate(45deg);
+    -ms-transform: translate(0, 16px) rotate(45deg);
+    -o-transform: translate(0, 16px) rotate(45deg);
+}
+
+.burger-line-three-x {
+    transform: translate(0, -16px) rotate(-45deg);
+    -webkit-transform: translate(0, -16px) rotate(-45deg);
+    -moz-transform: translate(0, -16px) rotate(-45deg);
+    -ms-transform: translate(0, -16px) rotate(-45deg);
+    -o-transform: translate(0, -16px) rotate(-45deg);
 }
