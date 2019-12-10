@@ -1,0 +1,39 @@
+.ForumPost {
+  display: flex;
+  flex-direction: column;
+}
+.ForumPost__top {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--white);
+}
+.ForumPost__face-card-placeholder {
+  width: 4rem;
+  border: 2px solid red;
+  height: 8rem;
+}
+.ForumPost__middle {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+  height: 2rem;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  background-color: var(--white);
+}
+.ForumPost__bottom {
+  border: 2px solid red;
+  height: 2rem;
+  background-color: var(--gray-lite);
+}
+.ForumPost__topic-pills {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ForumPost__likes-comments {
+  display: flex;
+  justify-content: space-evenly;
+}
+.ForumPost__likes-comments p {
+  margin-right: 0.5rem;
+}
