@@ -41,7 +41,6 @@ storiesOf("ButtonSelect", module)
       />
       <ButtonSelect
         text={"Next"}
-        color={"blacks"}
         color="Pink"
         clickCallback={pillClick}
         width={"50%"}

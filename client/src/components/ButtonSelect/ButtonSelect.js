@@ -38,14 +38,14 @@ class ButtonSelect extends Component {
   };
 
   configureToggle = props => {
-    this.state = {
+    this.setState({
       classList: this.configureButtonColor(this.props.active),
       active: this.props.active,
       style: {
         width: props.width
       },
       selectId: props.selectId
-    };
+    });
   };
 
   toggleClick = evt => {
