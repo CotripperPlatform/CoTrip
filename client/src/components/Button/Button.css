@@ -1,4 +1,4 @@
-.button {
+.Button {
   padding: 0.25em 2.7em;
   background: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -12,50 +12,50 @@
   -webkit-transition-property: background-color;
   transition-property: background-color;
 }
-.button:hover {
+.Button:hover {
   background-color: #fcf0ee;
 }
-.button-large {
+.Button--large {
   padding: 0.13em 2.71em;
   font-size: 36px;
 }
-.button-small {
+.Button--small {
   padding: 0.42em 3.35em;
   font-size: 18px;
 }
-.button-pink {
+.Button--pink {
   color: var(--white);
   background-color: var(--pink);
 }
-.button-pink:hover {
+.Button--pink:hover {
   background-color: #ff6a50;
 }
-.button-purple {
+.Button--purple {
   color: var(--white);
   background-color: var(--purple);
 }
-.button-purple:hover {
+.Button--purple:hover {
   background-color: #592d96;
 }
-.button-red {
+.Button--red {
   color: var(--white);
   background-color: var(--red);
 }
-.button-red:hover {
+.Button--red:hover {
   background-color: #d42e44;
 }
-.button-yellow {
+.Button--yellow {
   color: var(--white);
   background-color: var(--yellow);
 }
-.button-yellow:hover {
+.Button--yellow:hover {
   background-color: #f5c000;
 }
-.button-outline {
+.Button--outline {
   color: var(--pink);
   background-color: var(--white);
   border: 1px solid var(--pink);
 }
-.button-black-text {
+.Button--black-text {
   color: var(--black);
 }
