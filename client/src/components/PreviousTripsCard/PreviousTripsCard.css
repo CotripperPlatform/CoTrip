@@ -18,14 +18,14 @@
   justify-content: space-between;
   width: 90%;
   height: 100%;
-  margin-top: 14%;
   margin-left: 2%;
   margin-bottom: 5%;
   border: 2px solid black;
 }
+
 .PreviousTripCard__trips div {
   position: relative;
-  width: 49%;
+  width: 49.5%;
   height: 100%;
   background-color: red;
 }
@@ -33,7 +33,7 @@
 .PreviousTripCard__arrow {
   position: absolute;
   right: -1%;
-  top: 45%;
+  top: 53%;
   background-color: #ffcb06;
   width: 35px;
   height: 50px;
@@ -50,15 +50,14 @@
 }
 
 .PreviousTripCard__no-trips {
-  position: absolute;
-  left: 10%;
-  top: 30%;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 80%;
-  height: 50%;
-  /* border: 2px solid black; */
+  height: 30%;
+  text-align: center;
+  margin-left: 8%;
 }
 
 .PreviousTripCard__no-trips h2 {
