@@ -107,7 +107,6 @@ exports[`Storyshots Button Comment Button 1`] = `
   >
     <button
       className="Button Button--color Button--size Button--textColor-text Button--comment"
-      data-test="Button"
       onClick={[Function]}
     >
       <img
@@ -145,7 +144,6 @@ exports[`Storyshots Button Large Default Button 1`] = `
   >
     <button
       className="Button Button--color Button--large Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -179,7 +177,6 @@ exports[`Storyshots Button Large Outline Button 1`] = `
   >
     <button
       className="Button Button--outline Button--large Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -213,7 +210,6 @@ exports[`Storyshots Button Large Pink Button 1`] = `
   >
     <button
       className="Button Button--pink Button--large Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -247,7 +243,6 @@ exports[`Storyshots Button Large Purple Button 1`] = `
   >
     <button
       className="Button Button--purple Button--large Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -281,7 +276,6 @@ exports[`Storyshots Button Large Red Button 1`] = `
   >
     <button
       className="Button Button--red Button--large Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -315,7 +309,6 @@ exports[`Storyshots Button Large Yellow Button 1`] = `
   >
     <button
       className="Button Button--yellow Button--large Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -349,7 +342,6 @@ exports[`Storyshots Button Large Yellow w/ Black Text Button 1`] = `
   >
     <button
       className="Button Button--yellow Button--large Button--black-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -383,7 +375,6 @@ exports[`Storyshots Button Like Button 1`] = `
   >
     <button
       className="Button Button--color Button--size Button--textColor-text Button--like"
-      data-test="Button"
       onClick={[Function]}
     >
       <img
@@ -422,7 +413,6 @@ exports[`Storyshots Button Like and Comment Buttons in Container 1`] = `
     <div>
       <button
         className="Button Button--color Button--size Button--textColor-text Button--like"
-        data-test="Button"
         onClick={[Function]}
       >
         <img
@@ -433,7 +423,6 @@ exports[`Storyshots Button Like and Comment Buttons in Container 1`] = `
       </button>
       <button
         className="Button Button--color Button--size Button--textColor-text Button--comment"
-        data-test="Button"
         onClick={[Function]}
       >
         <img
@@ -472,7 +461,6 @@ exports[`Storyshots Button Normal Default Button 1`] = `
   >
     <button
       className="Button Button--color Button--size Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -506,7 +494,6 @@ exports[`Storyshots Button Normal Outline Button 1`] = `
   >
     <button
       className="Button Button--outline Button--size Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -540,7 +527,6 @@ exports[`Storyshots Button Normal Pink Button 1`] = `
   >
     <button
       className="Button Button--pink Button--size Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -574,7 +560,6 @@ exports[`Storyshots Button Normal Purple Button 1`] = `
   >
     <button
       className="Button Button--purple Button--size Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -608,7 +593,6 @@ exports[`Storyshots Button Normal Red Button 1`] = `
   >
     <button
       className="Button Button--red Button--size Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -642,7 +626,6 @@ exports[`Storyshots Button Normal Yellow Button 1`] = `
   >
     <button
       className="Button Button--yellow Button--size Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -676,7 +659,6 @@ exports[`Storyshots Button Normal Yellow w/ Black Text Button 1`] = `
   >
     <button
       className="Button Button--yellow Button--size Button--black-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -710,7 +692,6 @@ exports[`Storyshots Button Small Default Button 1`] = `
   >
     <button
       className="Button Button--color Button--small Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -744,7 +725,6 @@ exports[`Storyshots Button Small Outline Button 1`] = `
   >
     <button
       className="Button Button--outline Button--small Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -778,7 +758,6 @@ exports[`Storyshots Button Small Pink Button 1`] = `
   >
     <button
       className="Button Button--pink Button--small Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -812,7 +791,6 @@ exports[`Storyshots Button Small Purple Button 1`] = `
   >
     <button
       className="Button Button--purple Button--small Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -846,7 +824,6 @@ exports[`Storyshots Button Small Red Button 1`] = `
   >
     <button
       className="Button Button--red Button--small Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -880,7 +857,6 @@ exports[`Storyshots Button Small Yellow Button 1`] = `
   >
     <button
       className="Button Button--yellow Button--small Button--textColor-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -914,7 +890,6 @@ exports[`Storyshots Button Small Yellow w/ Black Text Button 1`] = `
   >
     <button
       className="Button Button--yellow Button--small Button--black-text Button--none"
-      data-test="Button"
       onClick={[Function]}
     >
       Submit
@@ -1235,35 +1210,29 @@ exports[`Storyshots CarouselDots Onboarding Step 2 1`] = `
     >
       <div
         className="CarouselDots"
-        data-test="CarouselDots"
       >
         <div
           className="CarouselDot   CarouselDot--active  "
-          data-test="dot"
           id={1}
           onClick={[Function]}
         />
         <div
           className="CarouselDot   "
-          data-test="dot"
           id={2}
           onClick={[Function]}
         />
         <div
           className="CarouselDot   "
-          data-test="dot"
           id={3}
           onClick={[Function]}
         />
         <div
           className="CarouselDot   "
-          data-test="dot"
           id={4}
           onClick={[Function]}
         />
         <div
           className="CarouselDot   "
-          data-test="dot"
           id={5}
           onClick={[Function]}
         />
@@ -1305,35 +1274,29 @@ exports[`Storyshots CarouselDots Without Border 1`] = `
     >
       <div
         className="CarouselDots"
-        data-test="CarouselDots"
       >
         <div
           className="CarouselDot  CarouselDot__border   "
-          data-test="dot"
           id={1}
           onClick={[Function]}
         />
         <div
           className="CarouselDot  CarouselDot__border   "
-          data-test="dot"
           id={2}
           onClick={[Function]}
         />
         <div
           className="CarouselDot  CarouselDot__border   CarouselDot--active  "
-          data-test="dot"
           id={3}
           onClick={[Function]}
         />
         <div
           className="CarouselDot  CarouselDot__border   "
-          data-test="dot"
           id={4}
           onClick={[Function]}
         />
         <div
           className="CarouselDot  CarouselDot__border   "
-          data-test="dot"
           id={5}
           onClick={[Function]}
         />
@@ -2744,10 +2707,8 @@ exports[`Storyshots NavLink NavLink 1`] = `
         >
           <ul
             className="NavLinkDropdownMenu"
-            data-test="NavLinkDropdownMenu"
           >
             <a
-              data-test="navLink"
               href="/"
               onClick={[Function]}
             >
@@ -2756,7 +2717,6 @@ exports[`Storyshots NavLink NavLink 1`] = `
               </li>
             </a>
             <a
-              data-test="navLink"
               href="/"
               onClick={[Function]}
             >
@@ -2812,7 +2772,6 @@ exports[`Storyshots NavLink NavLink w/o Menu 1`] = `
         >
           <ul
             className="NavLinkDropdownMenu"
-            data-test="NavLinkDropdownMenu"
           />
         </div>
       </a>
@@ -2846,10 +2805,8 @@ exports[`Storyshots NavLinkDropdownMenu NavLinkDropdownMenu 1`] = `
   >
     <ul
       className="NavLinkDropdownMenu"
-      data-test="NavLinkDropdownMenu"
     >
       <a
-        data-test="navLink"
         href="/"
         onClick={[Function]}
       >
@@ -2858,7 +2815,6 @@ exports[`Storyshots NavLinkDropdownMenu NavLinkDropdownMenu 1`] = `
         </li>
       </a>
       <a
-        data-test="navLink"
         href="/"
         onClick={[Function]}
       >
@@ -3930,18 +3886,15 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
-        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
         </h1>
         <div
           className="TrendingHashtagCard__hashtags-container"
-          data-test="hashtagContainer"
         >
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -3952,7 +3905,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -3963,7 +3915,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -3974,7 +3925,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -3985,7 +3935,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -3996,7 +3945,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4007,7 +3955,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4018,7 +3965,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4029,7 +3975,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4078,18 +4023,15 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
-        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
         </h1>
         <div
           className="TrendingHashtagCard__hashtags-container"
-          data-test="hashtagContainer"
         >
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4100,7 +4042,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4111,7 +4052,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4122,7 +4062,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4171,18 +4110,15 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
-        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
         </h1>
         <div
           className="TrendingHashtagCard__hashtags-container"
-          data-test="hashtagContainer"
         >
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4193,7 +4129,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4204,7 +4139,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4215,7 +4149,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4226,7 +4159,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4237,7 +4169,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4248,7 +4179,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4259,7 +4189,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4270,7 +4199,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4281,7 +4209,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
-            data-test="hashtags"
           >
             <a
               href="/"
@@ -4330,7 +4257,6 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
-        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
@@ -4340,7 +4266,6 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
         </h2>
         <div
           className="TrendingHashtagCard__hashtags-container"
-          data-test="hashtagContainer"
         />
       </div>
     </div>

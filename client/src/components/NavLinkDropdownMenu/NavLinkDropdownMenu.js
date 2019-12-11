@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import "./NavLinkDropdownMenu.css";
 
 const NavLinkDropdownMenu = props => (
-  <ul data-test="NavLinkDropdownMenu" className="NavLinkDropdownMenu">
+  <ul className="NavLinkDropdownMenu">
     {props.menuList.map(li => (
-      <Link to={li.to} data-test="navLink">
+      <Link to={li.to}>
         <li>{li.text}</li>
       </Link>
     ))}
