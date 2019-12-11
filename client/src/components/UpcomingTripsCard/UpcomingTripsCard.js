@@ -2,20 +2,21 @@
 import React from 'react';
 import "./UpcomingTripsCard.css";
 import { Link } from "react-router-dom";
+import Card from "../Card/Card";
 
 const UpcomingTripsCard = (props) => {
 
-  let classList = `UpcomingTripsCard`;
   let details = props.details;
 
   return(
-    <div className={classList}>
+    <Card color="pink" className="UpcomingTripsCard">
       <header>{props.header}</header>
-      <div className="info">
+      <div className="UpcomingTripsCard__info">
         {/* placeholder: */}
-        <div className="InfoCard"></div>
-        <div className="text-info">
-          <p className="general-information">General Information:</p>
+        <Card size="small" className="UpcomingTripsCard__trip-card" />
+        {/* <div className="InfoCard"></div> */}
+        <div className="UpcomingTripsCard__text-info">
+          <p className="UpcomingTripsCard__general-information">General Information:</p>
           <ul>
             {details.map(detail => {
               return <li>~{detail}</li>
@@ -23,8 +24,8 @@ const UpcomingTripsCard = (props) => {
           </ul>
         </div>
       </div>
-      <Link className="link" to={props.url}>{props.linkText}</Link>
-    </div>
+      <Link className="UpcomingTripsCard__link" to={props.url}>{props.linkText}</Link>
+    </Card>
   );
 }
 

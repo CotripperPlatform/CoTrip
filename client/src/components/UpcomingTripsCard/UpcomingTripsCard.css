@@ -1,50 +1,42 @@
 .UpcomingTripsCard {
-    height: 275px;
-    width: 500px;
-    padding: 20px 10px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: var(--pink);
-    color: white;
+    height: 100%;
     font-family: var(--default-font);
     display: flex;
     flex-direction: column;
 }
 
 header {
-    font-size: 36px;
-    font-weight: bold;
-    padding-left: 20px;
+    font-size: 225%;
+    padding: 2% 0% 0% 5%;
+    color: var(--white);
 }
 
-.info {
+.UpcomingTripsCard__info {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px;
+    padding: 0px 10px;
+    color: var(--white);
 }
 
-.general-information {
-    font-size: 24px;
+.UpcomingTripsCard__general-information {
+    font-size: 150%;
     font-weight: bold;
-    line-height: .5;
+    line-height: .3;
+    margin: 10% 0% 0% 0%;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
     font-family: var(--paragraph-font);
+    font-size: 90%;
+    line-height: 1.75;
 }
 
-.InfoCard {
-    width: 220px;
-    height: 150px;
-    background-color: white;
-}
-
-.link {
+.UpcomingTripsCard__link {
     text-align: center;
-    justify-content: center;
-    font-size: 18px;
-    padding: 10px;
-    color: white;
+    font-size: 100%;
+    color: var(--white);
+    padding: 1%;
 }
