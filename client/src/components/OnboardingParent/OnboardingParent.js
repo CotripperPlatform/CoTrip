@@ -2,7 +2,7 @@ import React from "react";
 import "./OnboardingParent.css";
 import Logo from "../Logo/Logo.js";
 import CarouselDots from "../CarouselDots/CarouselDots";
-// Class Based React Component
+
 const OnboardingParent = props => {
   return (
     <div className="OnboardingParent">
