@@ -1,16 +1,35 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import NavLinkDropdownMenu from './NavLinkDropdownMenu.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow } from "enzyme";
+import NavLinkDropdownMenu from "./NavLinkDropdownMenu.js";
+import { findByTestAttribute } from "../../../../utils/utlis";
 
-// We will describe a block of tests
-describe('NavLinkDropdownMenu component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<NavLinkDropdownMenu />)
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
-  })
-})
+const setUp = (props = {}) => {
+  const component = shallow(<NavLinkDropdownMenu {...props} />);
+  return component;
+};
+describe("NavLinkDropdownMenu component", () => {
+  let wrapper;
+  beforeEach(() => {
+    const props = {
+      menuList: [
+        {
+          text: "Test Text1",
+          to: "/Test Link1"
+        },
+        {
+          text: "Test Text2",
+          to: "/Test Link"
+        }
+      ]
+    };
+    wrapper = setUp(props);
+  });
+  it("Should render as expected", () => {
+    const component = findByTestAttribute(wrapper, "NavLinkDropdownMenu");
+    expect(component.length).toBe(1);
+  });
+  it("Should render links", () => {
+    const component = findByTestAttribute(wrapper, "navLink");
+    expect(component.length).toBe(2);
+  });
+});
