@@ -32,7 +32,7 @@
   position: absolute;
   right: -1%;
   top: 53%;
-  background-color: #ffcb06;
+  background-color: var(--yellow-dark);
   width: 35px;
   height: 50px;
   clip-path: polygon(0 0, 80% 50%, 0 100%, 0 80%, 45% 50%, 0 20%);
@@ -45,6 +45,7 @@
 }
 .PreviousTripCard__arrow:hover {
   transform: scale(1.1);
+  background-color: var(--yellow);
 }
 
 .PreviousTripCard__no-trips {
