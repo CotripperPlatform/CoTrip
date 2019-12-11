@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Card from "./Card";
-import image from "../../../../assets/images/card_small3.png"; //here for example
+import image from "../../assets/images/card_small3.png"; //here for example
 
 storiesOf("Card", module)
   .add("Info Card, Purple", () => <Card color="purple" size="large" />)

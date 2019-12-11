@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./MediaCard.css";
-import flight from '../../../../assets/images/media-card-6.png';
+import flight from '../../assets/images/media-card-6.png';
 
 // Function based React Component
 const MediaCard = (props) => {
