@@ -5,7 +5,7 @@ import hawaii from "../../assets/images/hawaii.png";
 import southernCaribbean from "../../assets/images/southernCaribbean.png";
 import easternCaribbean from "../../assets/images/easternCaribbean.png";
 import hawaiiTrees from "../../assets/images/hawaii-trees.png";
-import westernCaribbean from "../../assets/images/greece.png";
+import greece from "../../assets/images/greece.png";
 import CarouselDots from "../CarouselDots/CarouselDots.js";
 
 class TripDetails extends Component {
@@ -60,7 +60,7 @@ TripDetails.defaultProps = {
     { alt: "hawaii", src: hawaiiTrees },
     { alt: "hawaii", src: hawaii },
     { alt: "eastern caribbean", src: easternCaribbean },
-    { alt: "western caribbean", src: westernCaribbean },
+    { alt: "greece", src: greece },
     { alt: "southern caribbean", src: southernCaribbean }
   ],
   overview:

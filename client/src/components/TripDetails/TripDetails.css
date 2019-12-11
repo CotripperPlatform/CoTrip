@@ -9,6 +9,7 @@
 .TripDetails__left {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 60%;
 }
 .TripDetails__carousel-container {
@@ -17,7 +18,8 @@
   justify-content: space-evenly;
 }
 .TripDetails__image {
-  width: 100%;
+  width: 40rem;
+  height: 30rem;
 }
 .TripDetails__right {
   display: grid;
