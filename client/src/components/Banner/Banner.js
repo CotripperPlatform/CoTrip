@@ -12,9 +12,3 @@ const Banner = props => {
 };
 
 export default Banner;
-
-
-// const Banner = props => {
-//   let classlist = `banner banner-${props.bannerType}`;
-//   return <div className={classlist}>{props.children}</div>;
-// };
