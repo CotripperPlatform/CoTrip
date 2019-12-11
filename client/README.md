@@ -62,17 +62,21 @@ To generate a **class** component, run the following
 ```sh
 hygen component-class new --name NameOfComponent
 ```
+
 ### CSS Class Names
 
 - To avoid style conflicts we want to make sure all our CSS selectors are unique.
-- This will be the naming convention, based on BEM. [https://css-tricks.com/bem-101/]
+- This will be the naming convention, based on [BEM](https://css-tricks.com/bem-101/).
+
 ```
 .ComponentName
 .ComponentName--modifier
 .ComponentName__element-name
 .ComponentName__element-name--modifier
 ```
+
 For example:
+
 ```
 .CommentBody {
   color: var(--green);
@@ -90,4 +94,3 @@ For example:
   font-size: 1rem;
 }
 ```
-
