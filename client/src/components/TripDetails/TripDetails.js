@@ -30,7 +30,7 @@ class TripDetails extends Component {
           <div className="TripDetails__carousel-container">
             <CarouselDots
               numberOfDots={this.props.images.length}
-              activeLocation={0}
+              activeLocation={1}
               border
               onStatusChange={this.onClick}
             />
