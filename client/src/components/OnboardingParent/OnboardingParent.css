@@ -5,6 +5,9 @@
   width: 100vw;
   display: flex;
   justify-content: center;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .OnboardingParent__wrapper {
   display: flex;
