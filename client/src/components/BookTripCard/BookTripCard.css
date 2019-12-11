@@ -6,7 +6,7 @@
 
 .Card div {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 60%;
   width: 80%;
   margin: 0 auto;
@@ -14,4 +14,10 @@
 
 .Card h3 {
   text-align: center;
+}
+
+.Card h1 {
+  text-align: left;
+  padding-left: 5%;
+
 }
