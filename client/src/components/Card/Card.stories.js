@@ -15,7 +15,7 @@ storiesOf("Card", module)
     <Card picture={"https://wallpaperaccess.com/full/144067.jpg"} alt="whoops" size="medium" />
   ))
   .add("Card, Discover New Groups", () => (
-    <Card discover={true} size="medium">
+    <Card outline={true} size="medium">
       <a href="/">Discover New Groups</a>
     </Card>
   ));
