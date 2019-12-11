@@ -2,6 +2,7 @@ import React from 'react';
 import "./Navbar.css";
 import Logo from "../Logo/Logo"
 import Burger from "../Burger/Burger"
+import ProfilePicture from "../ProfilePicture/ProfilePicture"
 
 // Function based React Component
 const Navbar = (props) => {
@@ -19,7 +20,8 @@ const Navbar = (props) => {
       <div className="Navbar__logo">
         <Logo clickable to="/route" />
       </div>
-      <div className="Navbar__burger"> 
+      <ProfilePicture type="small" link="#" image={Image} />
+      <div className="Navbar__burger">
         <Burger menuShow="DisplayMenu" />
       </div>
     </div>
