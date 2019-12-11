@@ -28,7 +28,6 @@ describe("Button component", () => {
   it("Should emit callback on click event", () => {
     const button = findByTestAttribute(wrapper, ".Button");
     button.simulate("click");
-    // const callback = mockFunction.mock.calls.length;
     expect(mockFunction).toHaveBeenCalled();
   });
 });
