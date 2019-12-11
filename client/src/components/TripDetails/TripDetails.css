@@ -81,7 +81,6 @@
   .TripDetails__left {
     width: 100%;
   }
-
   .TripDetails__right {
     width: 100%;
     display: flex;
@@ -98,5 +97,12 @@
   .TripDetails .CarouselDot {
     height: 1rem;
     width: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .TripDetails__image {
+    width: 25rem;
+    height: 18rem;
   }
 }
