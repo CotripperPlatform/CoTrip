@@ -59,3 +59,18 @@
 .ForumPost__likes-comments p {
   margin-right: 0.5rem;
 }
+
+@media only screen and (max-width: 800px) {
+  .ForumPost {
+    width: 20rem;
+  }
+  .ForumPost__top,
+  .ForumPost__middle,
+  .ForumPost__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ForumPost__topic-pills {
+    display: none;
+  }
+}
