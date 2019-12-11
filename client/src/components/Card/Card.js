@@ -5,7 +5,8 @@ const Card = props => {
   let { size = "large", color = "purple", picture = null, outline = false } = props;
   return (
     <div
-      className={`Card Card--${color} Card--${size} Card__outline-${outline}`}
+      className={`Card Card--${color} Card--${size}
+      ${outline ? `Card__outline` : ""}`}
       style={{ backgroundImage: `url(${picture})` }}
     >
       {props.children}

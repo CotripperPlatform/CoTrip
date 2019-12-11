@@ -45,7 +45,7 @@
   right: 0;
 }
 
-.Card__outline-true {
+.Card__outline {
   position: relative;
   display: flex;
   justify-content: center;
