@@ -1,0 +1,15 @@
+.SignUpAd {
+  height: 30vh;
+  background-color: var(--yellow);
+  width: 100vw;
+}
+
+.SignUpAd .inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 10%;
+}
+
+.inputs input {
+  margin: 0 5%;
+}
