@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import "./LoginPage.css";
 
@@ -11,13 +10,16 @@ class LoginPage extends Component{
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "LoginPage"
+      username: "",
+      password: ""
     };
   }
 
 
   // Runs after Component is loaded in the broswer
-  componentDidMount(){}
+  componentDidMount(){
+    console.log("Component did mount");
+  }
 
 
   // Runs after a component has been updated
@@ -29,7 +31,7 @@ class LoginPage extends Component{
 
   render(){
     return(
-      <div className={this.state.classList}>
+      <div className="LoginPage">
         LoginPage
       </div>
     );
