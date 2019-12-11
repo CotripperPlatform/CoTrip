@@ -34,15 +34,14 @@ class LoginPage extends Component{
 
   render(){
     return(
-      
-      <div className="LoginPage">
-        <Logo className="Logo"/>
-        <InputTextField name="email" placeholder="Email" width="90%"/>
-        <InputTextField name="password" placeholder="Password"/>
-        <p id="ForgotPass">Forgot your password?</p>
-        <Button id="button" text="Login"/>
-      </div>
-      
+        <div className="LoginPage">
+          <Logo className="LogoLogin"/>
+          <InputTextField name="email" placeholder="Email" width="90%"/>
+          <InputTextField name="password" placeholder="Password"/>
+          <p className="ForgotPass">Forgot your password?</p>
+          <p className="ForgotPass">Need an account?</p>
+          <Button id="button" text="Login"/>
+        </div>
     );
   }
 }
