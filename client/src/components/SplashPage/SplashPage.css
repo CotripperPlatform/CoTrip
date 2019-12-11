@@ -1,6 +1,7 @@
 .SplashPage {
-  background: var(--splash-background) no-repeat fixed;
-  background-size: cover;
+  height: 100%;
+  background: var(--splash-background-mobile) no-repeat center center fixed;
+  background-size: 100% 100%;
   font-family: var(--default-font);
   color: var(--black);
   text-align: center;
@@ -9,11 +10,17 @@
   justify-content: center;
 }
 .SplashPage h1 {
-  margin: 1em 0 0 0;
+  margin: 2em 0 0 0;
 }
 .SplashPage p, .SplashPage__button-margin--small, .SplashPage__button-margin {
   margin: 1em;
 }
 .SplashPage__button-margin--small a button {
   min-width: 208.55px;
+}
+@media only screen and (min-width: 576px) {
+  .SplashPage {
+    background: var(--splash-background) no-repeat center center fixed;
+    background-size: 100% 100%;
+  }
 }
