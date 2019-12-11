@@ -18,24 +18,25 @@
 }
 
 .Card--large {
-  width: 100%;
+  width: 1rem;
   min-width: 500px;
   height: 260px;
 }
 
 .Card--medium {
-  width: 100%;
+  width: 1rem;
   min-width: 225px;
   height: 150px;
 }
 
 .Card--small {
-  width: 100%;
+  width: 1rem;
   min-width: 225px;
   height: 125px;
 }
 
 .Card img {
+  width: 1rem;
   display: block;
   max-width: 100%;
   max-height: 100%;
@@ -43,4 +44,34 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.Card__outline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1rem;
+  background: none;
+  border: 3px dashed var(--purple);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.Card__discover-link {
+  text-align: center;
+  margin-left: 22%;
+  margin-right: 22%;
+  transition: transform 0.3s;
+}
+
+.Card__discover-link a {
+  font-size: 24px;
+  width: 55%;
+  text-decoration: none;
+}
+
+.Card__discover-link a:hover {
+  color: var(--yellow);
+  transform: scale(1.1, 1.1);
 }
