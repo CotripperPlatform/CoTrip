@@ -1,4 +1,6 @@
-.banner {
+.banner{
+  padding: 0;
+  margin: 0 auto;
   width: 100%;
   width: 100vw;
   height: 231px;
@@ -6,16 +8,20 @@
   background-size: cover;
   background-repeat: no-repeat;
   border: 2px solid black;
+  text-align: center;
+  font-family: var(--default-font);  
+  font-size: 48px;
+  font-style: normal;
+  font-weight: normal;
+  color: #FAFAFA;
+  line-height: 72px;
 }
 
-/* .banner-home {
-  background-image: var(--home-banner);
-  height: 380px;
+h3{
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
-.banner-community {
-  background-image: var(--community-banner);
-  
+
+input{
+  margin-top: -50px;
 }
-.banner-profile {
-  background-image: var(--profile-banner);
-} */
