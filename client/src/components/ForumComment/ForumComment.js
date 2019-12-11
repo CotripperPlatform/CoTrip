@@ -12,7 +12,7 @@ const ForumComment = (props) => {
         <div className={classList}>
         {/* <img className="profile" src={props.img}></img> */}
         <img className="ForumComment__Img" img src={img} />
-        <p className="ForumComment__MomName">{props.ForumComment__MomName}</p>
+        <p className="ForumComment__Name">{props.ForumComment__Name}</p>
           <p className="ForumComment__Comment">
           {props.ForumComment__Comment} 
           </p>
