@@ -26,6 +26,7 @@ class CarouselDots extends Component {
       let classList = "CarouselDot ";
       let dot = (
         <div
+          data-test={`dot`}
           key={i}
           id={i}
           onClick={this.handleClick}
@@ -38,7 +39,7 @@ class CarouselDots extends Component {
     }
 
     return (
-      <div className={"CarouselDots"} style={this.state.style}>
+      <div className={"CarouselDots"} data-test="CarouselDots" style={this.state.style}>
         {dots}
       </div>
     );
