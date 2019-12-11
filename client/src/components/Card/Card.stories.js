@@ -10,12 +10,19 @@ storiesOf("Card", module)
   .add("Card, Pink, Small", () => <Card color="pink" size="small" />)
   .add("Card, Blank", () => <Card size="large" />)
   .add("Card, Blank, Small", () => <Card size="small" />)
-  .add("Card, Picture BG, Large", () => <Card picture={image} alt="whoops" size="medium" />)
-  .add("Card, Picture Hawaii, Large", () => (
+  .add("Card, Picture BG, Medium", () => <Card picture={image} alt="whoops" size="medium" />)
+  .add("Card, Picture Hawaii, Medium", () => (
     <Card picture={"https://wallpaperaccess.com/full/144067.jpg"} alt="whoops" size="medium" />
   ))
   .add("Card, Discover New Groups", () => (
     <Card outline size="medium">
       <a href="/">Discover New Groups</a>
     </Card>
+  ))
+  .add("Large Card with Small Card inside", () => (
+    <div>
+      <Card color="purple" size="large">
+        <Card color="pink" size="small" />
+      </Card>
+    </div>
   ));
