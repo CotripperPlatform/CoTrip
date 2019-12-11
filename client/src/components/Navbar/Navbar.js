@@ -20,9 +20,13 @@ const Navbar = (props) => {
       <div className="Navbar__logo">
         <Logo clickable to="/route" />
       </div>
-      <ProfilePicture type="small" link="#" image={Image} />
-      <div className="Navbar__burger">
-        <Burger menuShow="DisplayMenu" />
+      <div className="Navbar__main">
+        <div className="Navbar__profile">
+          <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
+        </div>
+        <div className="Navbar__burger">
+          <Burger menuShow="DisplayMenu" />
+        </div>
       </div>
     </div>
   );

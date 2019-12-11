@@ -3,13 +3,24 @@
     justify-content: space-between;
     align-items: center;
     min-width: 100vw;
-    height: 100px;
+    height: 128px;
     background-color: var(--yellow);
     font-family: var(--default-font);
 }
 
 .Navbar__logo {
   margin: 0 47px;
+}
+
+.Navbar__main {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  margin: 47px 0 0 0;
+}
+
+.Navbar__profile {
+  margin: 0 26px 0 0;
 }
 
 .Navbar__burger {
@@ -19,9 +30,7 @@
 
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
-  .Navbar__burger {
-    display: block;
-  }
+  
 }
 
 /* Extra Large devices */
@@ -41,6 +50,13 @@
 
 /* Small devices */
 @media only screen and (max-width: 576px) {
+  .Navbar__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
   .Navbar__burger {
     display: block;
   }
