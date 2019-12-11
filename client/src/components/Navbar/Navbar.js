@@ -23,7 +23,38 @@ const Navbar = (props) => {
       </div>
       <div className="Navbar__main">
         <div className="Navbar__menu">
-          <NavLink text="Book A Trip" to="/" menuList={[]} />
+          <NavLink
+            text="My Directory"
+            to="/"
+            menuList={[
+              { text: "Link 1", to: "/" },
+              { text: "Link 2", to: "/" }
+            ]}
+          />
+          <NavLink
+            text="Community"
+            to="/"
+            menuList={[
+              { text: "Link 1", to: "/" },
+              { text: "Link 2", to: "/" }
+            ]}
+          />
+          <NavLink
+            text="Forum"
+            to="/"
+            menuList={[
+              { text: "Link 1", to: "/" },
+              { text: "Link 2", to: "/" }
+            ]}
+          />
+          <NavLink
+            text="Book A Trip"
+            to="/"
+            menuList={[
+              { text: "Link 1", to: "/" },
+              { text: "Link 2", to: "/" }
+            ]}
+          />
         </div>
         <div className="Navbar__profile">
           <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
