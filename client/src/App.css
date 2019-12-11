@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap");
 
 :root {
   /* These are all the defaults for CoTripper. Below is an example of usage:
@@ -8,14 +8,24 @@
 
     /* Default color palette variables */
     --yellow: #FFCB06;
+    --yellow-dark: #F2BC0F;
     --pink: #FB8370;
     --red: #D1495B;
     --purple: #6A4C93;
     --black: #252525;
     --white: #FAFAFA;
+    --gray: #808080;
     --gray-lite: #E5E5E5;
     --gray-dark: #C4C4C4;
     --green: #12DB00;
+    --white-hover: #FCF0EE;
+    --orange-hover: #FF6A50;
+    --purple-hover: #592D96;
+    --red-hover: #D42E44;
+    --yellow-hover: #F5C000;
+    /* Background Graidients */
+    --yellow-gradient: linear-gradient(#FFCB06 65%, #FFF1C0);
+
     /* Default font */
     --default-font: 'Reem Kufi', sans-serif;
     --paragraph-font: 'Open Sans', sans-serif;
@@ -43,5 +53,4 @@
     --paragraph-weight: 400;
     --banner-weight: 700;
     --title-weight: 500;
-}   
-
+}
