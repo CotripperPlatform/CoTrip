@@ -74,7 +74,9 @@
   /* border: 2px solid black; */
   color: var(--white);
   display: inline-block;
+  transition: all 0.1s ease-in-out;
 }
 .PreviousTripCard__no-trips a:hover {
+  transform: scale(1.1);
   color: var(--yellow);
 }
