@@ -64,7 +64,8 @@
     flex-direction: column;
   }
   .PostBody__text,
-  .PostBody__top-right {
+  .PostBody__top-right,
+  .PostBody__hashtags {
     font-size: 0.8rem;
   }
 }
