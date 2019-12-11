@@ -58,10 +58,16 @@
 }
 
 .Card a {
-  font-size: 22px;
+  font-size: 24px;
   width: 55%;
   text-decoration: none;
   text-align: center;
   margin-left: 22%;
   margin-right: 22%;
+  transition: transform 0.3s;
+}
+
+.Card a:hover {
+  color: var(--yellow);
+  transform: scale(1.1, 1.1);
 }
