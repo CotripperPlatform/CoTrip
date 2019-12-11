@@ -15,6 +15,7 @@
 .Navbar__main {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   height: 80px;
   margin: 47px 0 0 0;
 }
