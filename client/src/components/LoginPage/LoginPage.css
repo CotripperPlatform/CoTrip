@@ -1,4 +1,41 @@
+@import "../InputTextField/InputTextField.css";
+@import "../Button/Button.css";
+
+* {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--yellow);
+}
+
+html, main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 
 .LoginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
 
+.Logo {
+    height: 240px;
+    width: 240px;
+}
+
+.InputTextField__container--default {
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+.Button {
+    width: 50%;
+}
+
+p {
+    text-align: center;
 }

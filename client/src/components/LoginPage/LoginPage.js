@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import InputTextField from "../InputTextField/InputTextField";
+import Button from "../Button/Button";
+import Logo from "../Logo/Logo";
 import "./LoginPage.css";
 
 
@@ -17,23 +20,29 @@ class LoginPage extends Component{
 
 
   // Runs after Component is loaded in the broswer
-  componentDidMount(){
+  componentDidMount() {
     console.log("Component did mount");
   }
 
 
   // Runs after a component has been updated
-  componentDidUpdate(){}
+  componentDidUpdate() {}
 
 
   // Runs right before a component is removed from the DOM
-  componentWillUnmount(){}
+  componentWillUnmount() {}
 
   render(){
     return(
+      
       <div className="LoginPage">
-        LoginPage
+        <Logo className="Logo"/>
+        <InputTextField name="email" placeholder="Email"/>
+        <InputTextField name="password" placeholder="Password"/>
+        <p>Forgot your password?</p>
+        <Button id="button" text="Submit"/>
       </div>
+      
     );
   }
 }

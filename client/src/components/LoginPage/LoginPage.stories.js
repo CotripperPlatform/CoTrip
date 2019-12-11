@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import LoginPage from './LoginPage';
 
 storiesOf('LoginPage', module)
-  .add("Default", () => (
+  .add("LoginPage", () => (
     <LoginPage />
   )
 )
