@@ -9,6 +9,13 @@
   width: 100%;
 }
 
+.Connections__link {
+  color: var(--blue-lite);
+  font-size: 2rem;
+  font-family: var(--default-font);
+  font-weight: normal;
+}
+
 .Connections__person {
   margin: 0 2rem 0 0;
 }

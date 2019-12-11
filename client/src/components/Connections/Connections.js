@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import "./Connections.css";
 import ProfilePicture from '../ProfilePicture/ProfilePicture'
 
@@ -8,7 +9,6 @@ import ProfilePicture from '../ProfilePicture/ProfilePicture'
 class Connections extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
 
     // Default CSS class to apply to the Component
     this.state = {
@@ -27,14 +27,25 @@ class Connections extends Component {
     }
 
     this.setState({
-      userArray: this.props.users.map(person => {
+      userArray: this.props.users.map((person, index) => {
         let userLastInitial = person.userSurname.slice(0, 1) + '.'
-        return (
-          <div key={person.userId} className='Connections__person'>
-            <ProfilePicture image={person.userPic} />
-            <p className='Connections--name'>{person.userFirstName} {userLastInitial}</p>
-          </div>
-        )
+        if (index < 4) {
+          return (
+            <div key={person.userId} className='Connections__person'>
+              <ProfilePicture image={person.userPic} />
+              <p className='Connections--name'>{person.userFirstName} {userLastInitial}</p>
+            </div>
+          )
+        } else if (index === 4) {
+          return (
+            <div className='Connections__person'>
+              <Link className='Connections__link' to={this.props.to}>
+                {this.props.extraUsers}
+              </Link>
+            </div>
+          )
+        }
+        else return null
       })
     })
   }
@@ -56,11 +67,11 @@ class Connections extends Component {
   }
 }
 
-// Connections.defaultProps = {
-//   userViewing:false,
-//   users: [user5, user1 , user3, user4, user7]
-// } 
+Connections.defaultProps = {
+  userViewing: false,
+  extraUsers: 'View More',
+  to: 'PATH'
+} 
 
-// How do I use defaultProps in this component?
 
 export default Connections;

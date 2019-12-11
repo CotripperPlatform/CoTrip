@@ -7,48 +7,64 @@ import pic3 from '../../../../assets/images/card_profile3.png'
 
 let user1 = {
   userId: 1,
-  userFirstName: 'Paula', 
-  userSurname: 'Bannerman', 
+  userFirstName: 'Paula',
+  userSurname: 'Bannerman',
   userPic: pic1
 }
 let user2 = {
   userId: 2,
-  userFirstName: 'Jack', 
-  userSurname: 'Johnson', 
+  userFirstName: 'Jack',
+  userSurname: 'Johnson',
   userPic: pic2
 }
 let user3 = {
   userId: 3,
-  userFirstName: 'Jenny', 
-  userSurname: 'Jones', 
+  userFirstName: 'Jenny',
+  userSurname: 'Jones',
   userPic: pic3
 }
 let user4 = {
   userId: 4,
-  userFirstName: 'Joan', 
-  userSurname: 'Rivers', 
+  userFirstName: 'Joan',
+  userSurname: 'Rivers',
   userPic: pic1
 }
 let user5 = {
   userId: 5,
-  userFirstName: 'Freddy', 
-  userSurname: 'Mercury', 
+  userFirstName: 'Freddy',
+  userSurname: 'Mercury',
   userPic: pic2
 }
 let user6 = {
   userId: 5,
-  userFirstName: 'Leslie', 
-  userSurname: 'Knope', 
+  userFirstName: 'Leslie',
+  userSurname: 'Knope',
   userPic: pic3
 }
 let user7 = {
   userId: 7,
-  userFirstName: 'Frank', 
-  userSurname: 'Ocean', 
+  userFirstName: 'Frank',
+  userSurname: 'Ocean',
   userPic: pic1
 }
 
 storiesOf('Connections', module)
-.add("User Connections", () => <Connections userViewing={true} users={[user1, user2, user3, user4, user5, user6, user7]}/>)
-.add("Her Connections", () => <Connections userViewing={false} users={[user5, user1 , user3]}/>)
-.add("Members", () => <Connections users={[user7, user4, user2, user1, user5]}/>)
+  .add("User Connections", () =>
+    <Connections
+      to='User/userid/connections'
+      userViewing={true}
+      users={[user1, user2, user3, user4, user5, user6, user7]}
+      extraUsers="See More">
+    </Connections>)
+  .add("Her Connections", () =>
+    <Connections
+      to='User/userid/connections'
+      userViewing={false}
+      users={[user5, user1, user3]}
+      extraUsers='See All'>
+    </Connections>)
+  .add("Members", () =>
+    <Connections to='User/userid/connections'
+      users={[user7, user4, user2, user1, user5]}
+      extraUsers="View All"
+    />)
