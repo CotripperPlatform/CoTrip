@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "./Button";
-import heart from "../../../../assets/images/heart_black.png";
-import comment from "../../../../assets/images/comment_black.png";
+import heart from "../../assets/images/heart_black.png";
+import comment from "../../assets/images/comment_black.png";
 const handleClick = e => {
   console.log("Clicked");
 };
