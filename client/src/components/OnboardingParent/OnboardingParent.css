@@ -12,6 +12,11 @@
   justify-content: center;
   align-items: center;
 }
-.test {
+.OnboardingParent__carousel-dots-container {
   width: 200px;
+}
+.OnboardingParent .Logo {
+  width: 16.5rem;
+  height: 16.5rem;
+  background-size: contain;
 }

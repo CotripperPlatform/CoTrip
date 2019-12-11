@@ -7,9 +7,9 @@ const OnboardingParent = props => {
   return (
     <div className="OnboardingParent">
       <div className="OnboardingParent__wrapper">
-        <Logo />
+        <Logo className="OnboardingParent__logo" />
         {props.children}
-        <div className="test">
+        <div className="OnboardingParent__carousel-dots-container">
           <CarouselDots
             numberOfDots={3}
             activeLocation={3}
