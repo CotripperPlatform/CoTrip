@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, configure } from 'enzyme'
-import Icon from './Icon.js.js.js.js.js.js.js.js.js.js'
-import InputTextField from './InputTextField.js.js.js.js.js.js.js.js.js.js.js'
+import Icon from './Icon.js.js.js.js.js.js.js.js.js.js.js'
+import InputTextField from './InputTextField.js.js.js.js.js.js.js.js.js.js.js.js'
 import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
 
