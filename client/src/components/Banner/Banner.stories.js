@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Banner from "./Banner";
+import InputTextField from "../InputTextField/InputTextField"
 
 import { checkPropTypes } from "prop-types";
 
@@ -26,7 +27,7 @@ storiesOf("Banner", module)
   .add("Community Banner with input", () =>
     <Banner bannerType='var(--community-banner)'>
       <h3>Community: People</h3>
-      <input/>
+      <InputTextField type="text" variation="search" name="search directory" placeholder="Search My Directory"/>
     </Banner>
   )
 
