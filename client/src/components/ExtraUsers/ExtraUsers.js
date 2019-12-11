@@ -1,12 +1,12 @@
 
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import "./ExtraUsers.css";
 
 
 // Class Based React Component
-class ExtraUsers extends Component{
-  constructor(props){
+class ExtraUsers extends Component {
+  constructor(props) {
     super(props);
     console.log(props);
 
@@ -21,13 +21,11 @@ class ExtraUsers extends Component{
   howManyMore(theArray) {
     if (theArray.length > 4) {
       let extraValue = theArray.length - 4
-      return (
-        <div className='ExtraUsers__text'>+{extraValue}</div>
-      )
+      return extraValue
     }
   }
   // Runs after Component is loaded in the broswer
-  componentDidMount(){
+  componentDidMount() {
     this.setState({
       extraUsersValue: this.howManyMore(this.props.users)
     })
@@ -36,17 +34,19 @@ class ExtraUsers extends Component{
 
 
   // Runs after a component has been updated
-  componentDidUpdate(){}
+  componentDidUpdate() { }
 
 
   // Runs right before a component is removed from the DOM
-  componentWillUnmount(){}
+  componentWillUnmount() { }
 
   render() {
-    return(
-      <Link to={this.props.to} className='ExtraUsers'>
-        {this.state.extraUsersValue}
-      </Link>
+    return (
+      <div className='ExtraUsers'>
+        <Link style={{textDecoration: 'none'}} to={this.props.to} className='ExtraUsers__text'>
+          +{this.state.extraUsersValue}
+        </Link>
+      </div>
     );
   }
 }
