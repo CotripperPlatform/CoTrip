@@ -63,8 +63,7 @@ To generate a **class** component, run the following
 hygen component-class new --name NameOfComponent
 ```
 
-#### Icons
-##### Usage
+#### Using the icon component
 In `App.js` we will add the following and if you would like to add more icons to the library you will just import, add to library, and seperate by commas like below.
 ```
 import { library } from ‘@fortawesome/fontawesome-svg-core’
@@ -74,10 +73,11 @@ import { far } from ‘@fortawesome/free-regular-svg-icons’
 import { faCoffee } from ‘@fortawesome/free-solid-svg-icons’
 library.add(fab, far, fas, faCoffee)
 ```
-To use globally, make sure to have the import syntax in the component you would like to use an icon in. To use any of these icons:
+To use globally, make sure to have the import syntax in the component you would like to use an icon in. To use any of these icons in a component file in your app, here is an example:
 ```
 import React from ‘react’
 import { FontAwesomeIcon } from ‘@fortawesome/react-fontawesome’
+
 export const model = () => (
   <div>
     <FontAwesomeIcon icon=“check-square” />
@@ -88,12 +88,31 @@ export const model = () => (
   </div>
 )
 ```
-### Add Icon/Using With Storybook:
-**Add syntax to stories folder:**
-<img width="1440" alt="Screen Shot 2019-12-10 at 10 55 59 AM" src="https://user-images.githubusercontent.com/54545904/70625134-c8e7f580-1bef-11ea-9072-75b3584650e4.png">
+### Using Icons With Storybook:
+**Add syntax to stories file:**
+```
+import { library } from ‘@fortawesome/fontawesome-svg-core’
+import { fab } from ‘@fortawesome/free-brands-svg-icons’
+import { fas } from ‘@fortawesome/free-solid-svg-icons’
+import { far } from ‘@fortawesome/free-regular-svg-icons’
+import { faCoffee } from ‘@fortawesome/free-solid-svg-icons’
+library.add(fab, far, fas, faCoffee)
+```
 
-**Use props in JS file:**
-<img width="1440" alt="Screen Shot 2019-12-10 at 10 56 09 AM" src="https://user-images.githubusercontent.com/54545904/70625139-cb4a4f80-1bef-11ea-858f-5c909e74b793.png">
+**Use syntax in JS file:**
+```
+import React, {Component} from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+const Icon = (props) => (
+  <div>
+    <FontAwesomeIcon icon={ props.icon} />
+  </div>
+)
+
+
+export default Icon;
+```
 
 - You can always go to [font awesome](https://fontawesome.com/) for icons and their names as well.
 
