@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import InputTextField from "../InputTextField/InputTextField";
 import Button from "../Button/Button";
-import Logo from "../Logo/Logo";
+//import Logo from "../Logo/Logo";
 import "./LoginPage.css";
-
+import LogoImg from "../../assets/images/login_logo.png";
 
 // Class Based React Component
 class LoginPage extends Component{
@@ -35,8 +35,8 @@ class LoginPage extends Component{
   render(){
     return(
         <div className="LoginPage">
-          <Logo className="LogoLogin"/>
-          <InputTextField name="email" placeholder="Email" width="90%"/>
+          <img className="LogoLogin" src={LogoImg}></img>
+          <InputTextField name="email" placeholder="Email"/>
           <InputTextField name="password" placeholder="Password"/>
           <p className="ForgotPass">Forgot your password?</p>
           <p className="ForgotPass">Need an account?</p>

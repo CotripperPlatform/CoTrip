@@ -24,10 +24,10 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <nav>
+        {/* <nav>
           <Link to="/">Splash</Link>
           <Link to="/login">Login</Link>
-        </nav>
+        </nav> */}
         <main>
           <Route path="/" exact render={this.splash}></Route>
           <Route path="/login" exact render={this.login}></Route>
