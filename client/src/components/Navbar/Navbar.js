@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./Navbar.css";
 import Logo from "../Logo/Logo";
 import Burger from "../Burger/Burger";
@@ -6,14 +6,12 @@ import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import NavLink from "../NavLink/NavLink";
 
 // Function based React Component
-const Navbar = (props) => {
-
+const Navbar = props => {
   // Default Class to apply to Component
   let classList = `Navbar`;
-  let menuShow = false;
 
-  const DisplayMenu = () => {
-    menuShow = !menuShow;
+  function handleClick() {
+    console.log("clicked");
   }
 
   return (
@@ -63,10 +61,10 @@ const Navbar = (props) => {
         </div>
       </div>
       <div className="Navbar__burger">
-        <Burger menuShow="DisplayMenu" />
+        <Burger onClick={handleClick} active={false} />
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
