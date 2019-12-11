@@ -11,7 +11,7 @@ const ProfilePicture = props => {
     <div className={classList}>
       {/* this will be a link to the user profile page */}
 
-      {props.link ? (
+      {props.to ? (
         <Link exact={true} to={props.to}>
           <img src={props.image} alt="profile-picture" />
         </Link>
