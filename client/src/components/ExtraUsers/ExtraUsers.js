@@ -12,7 +12,8 @@ class ExtraUsers extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "ExtraUsers"
+      classList: "ExtraUsers",
+      extraUsersValue: null
     };
 
     this.howManyMore = this.howManyMore.bind(this)
@@ -30,8 +31,6 @@ class ExtraUsers extends Component {
       extraUsersValue: this.howManyMore(this.props.users)
     })
   }
-
-
 
   // Runs after a component has been updated
   componentDidUpdate() { }
@@ -51,4 +50,8 @@ class ExtraUsers extends Component {
   }
 }
 
+ExtraUsers.defaultPropsm = {
+  to: 'PATH',
+  users: [1,2,3,4,5,6,7,8,9,0]
+}
 export default ExtraUsers;
