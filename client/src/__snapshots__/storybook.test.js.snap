@@ -3659,15 +3659,18 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
+        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
         </h1>
         <div
           className="TrendingHashtagCard__hashtags-container"
+          data-test="hashtagContainer"
         >
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3678,6 +3681,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3688,6 +3692,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3698,6 +3703,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3708,6 +3714,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3718,6 +3725,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3728,6 +3736,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3738,6 +3747,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3748,6 +3758,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3796,15 +3807,18 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
+        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
         </h1>
         <div
           className="TrendingHashtagCard__hashtags-container"
+          data-test="hashtagContainer"
         >
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3815,6 +3829,7 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3825,6 +3840,7 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3835,6 +3851,7 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3883,15 +3900,18 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
+        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
         </h1>
         <div
           className="TrendingHashtagCard__hashtags-container"
+          data-test="hashtagContainer"
         >
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3902,6 +3922,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3912,6 +3933,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3922,6 +3944,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3932,6 +3955,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3942,6 +3966,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3952,6 +3977,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3962,6 +3988,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3972,6 +3999,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -3982,6 +4010,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
           </div>
           <div
             className="TrendingHashtagCard__hashtag"
+            data-test="hashtags"
           >
             <a
               href="/"
@@ -4030,6 +4059,7 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
     >
       <div
         className="TrendingHashtagCard__container"
+        data-test="cardContainer"
       >
         <h1>
           Trending Hashtags
@@ -4039,6 +4069,7 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
         </h2>
         <div
           className="TrendingHashtagCard__hashtags-container"
+          data-test="hashtagContainer"
         />
       </div>
     </div>

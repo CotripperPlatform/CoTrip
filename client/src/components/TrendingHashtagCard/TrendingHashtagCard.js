@@ -10,13 +10,13 @@ const TrendingHashtagCard = props => {
   }
 
   return (
-    <Card color="purple">
-      <div className="TrendingHashtagCard__container">
+    <Card data-test="TrendingHashtagCard" color="purple">
+      <div data-test="cardContainer" className="TrendingHashtagCard__container">
         {props.children}
-        <div className="TrendingHashtagCard__hashtags-container">
+        <div data-test="hashtagContainer" className="TrendingHashtagCard__hashtags-container">
           {data.map(item => {
             return (
-              <div className="TrendingHashtagCard__hashtag">
+              <div data-test="hashtags" className="TrendingHashtagCard__hashtag">
                 <a href="/"> {item}</a>
               </div>
             );
