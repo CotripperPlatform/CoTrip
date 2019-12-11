@@ -1,0 +1,24 @@
+.UpcomingEventsCard {
+    height: 100%;
+    border-radius: 3px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.UpcomingEventsCard__name {
+    font-size: 155%;
+}
+
+.UpcomingEventsCard__date,
+.UpcomingEventsCard__time,
+.UpcomingEventsCard__location {
+    font-family: var(--paragraph-font);
+    font-size: 85%;
+}
+
+.UpcomingEventsCard__location {
+    padding-top: 5px;
+}
