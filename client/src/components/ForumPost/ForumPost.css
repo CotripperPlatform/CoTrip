@@ -4,7 +4,7 @@
 }
 .ForumPost__top {
   display: flex;
-  padding: 1rem 1rem 0 1rem;
+  padding: 1rem;
   background-color: var(--white);
 }
 .ForumPost__top-middle {
@@ -15,6 +15,10 @@
 .ForumPost .Button {
   border: 1px solid rgba(37, 37, 37, 0.5);
   border-radius: 3px;
+  font-size: 1rem;
+}
+.ForumPost .Button img {
+  height: 1.5rem;
 }
 .ForumPost__face-card {
   display: flex;
@@ -25,9 +29,11 @@
 .ForumPost__name {
   font-family: var(--default-font);
   font-size: 1.2rem;
+  margin: 0;
 }
 .ForumPost .Pill {
   margin-left: 0.5rem;
+  padding-top: -0.5rem;
 }
 .ForumPost__middle {
   display: flex;

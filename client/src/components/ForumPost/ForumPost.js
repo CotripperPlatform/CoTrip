@@ -7,67 +7,52 @@ import Image from "../../../../assets/images/profile_large.png";
 import heart from "../../../../assets/images/heart_black.png";
 import comment from "../../../../assets/images/comment_black.png";
 import Pill from "../Pill/Pill.js";
+import PropTypes from "prop-types";
 
 // Function based React Component
 const ForumPost = props => {
-  // Default Class to apply to Component
-  let classList = `ForumPost`;
-
   return (
-    <div className={classList}>
+    <div className="ForumPost">
       <div className="ForumPost__top-middle">
         <div className="ForumPost__top">
           <div className="ForumPost__face-card">
-            <ProfilePicture type="small" link="#" image={props.image} />
+            <ProfilePicture type="small" link={props.to} image={props.image} />
             <p className="ForumPost__name">{props.name}</p>
           </div>
-          <PostBody />
+          {props.post ? <PostBody props={props.post} /> : <PostBody />}
         </div>
         <div className="ForumPost__middle">
           <div className="ForumPost__topic-pills">
-            <Pill
-              text={"Topic"}
-              active={false}
-              size={"small"}
-              color={"red"}
-              inactiveColor={"pink"}
-              onClick={props.pillClick}
-              selectId={0}
-            />
-            <Pill
-              text={"Topic"}
-              active={false}
-              size={"small"}
-              color={"red"}
-              inactiveColor={"pink"}
-              onClick={props.pillClick}
-              selectId={0}
-            />
-            <Pill
-              text={"Topic"}
-              active={false}
-              size={"small"}
-              color={"red"}
-              inactiveColor={"pink"}
-              onClick={props.pillClick}
-              selectId={0}
-            />
+            {props.topics
+              ? props.topics.map(topic => (
+                  <Pill
+                    key={topic}
+                    text={topic}
+                    active={false}
+                    size={"small"}
+                    color={"red"}
+                    inactiveColor={"pink"}
+                    onClick={props.pillClick}
+                    selectId={0}
+                  />
+                ))
+              : null}
           </div>
           <div className="ForumPost__likes-comments">
             <p>
               {props.likes}
-              {" likes"}
+              {" Likes"}
             </p>
             <p>
               {props.comments}
-              {" comments"}
+              {" Comments"}
             </p>
           </div>
         </div>
       </div>
       <div className="ForumPost__bottom">
-        <Button icon={heart} text="Like" type="like" onClick={props.onClick} />
-        <Button icon={comment} text="Comment" type="comment" onClick={props.onClick} />
+        <Button icon={heart} text="Like" type="like" handleClick={props.likeClick} />
+        <Button icon={comment} text="Comment" type="comment" handleClick={props.commentClick} />
       </div>
     </div>
   );
@@ -75,6 +60,19 @@ const ForumPost = props => {
 
 ForumPost.defaultProps = {
   image: Image,
-  name: "Lexi R."
+  name: "Lexi R.",
+  likes: 0,
+  comments: 0
+};
+ForumPost.propTypes = {
+  commentClick: PropTypes.func.isRequired,
+  likeClick: PropTypes.func.isRequired,
+  pillClick: PropTypes.func.isRequired,
+  to: PropTypes.string,
+  likes: PropTypes.number,
+  comments: PropTypes.number,
+  name: PropTypes.string,
+  image: PropTypes.string,
+  topics: PropTypes.array
 };
 export default ForumPost;
