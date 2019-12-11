@@ -1,0 +1,22 @@
+.OnboardingParent {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 72.4%, rgba(255, 255, 255, 0.75) 100%),
+    #ffcb08;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.OnboardingParent__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.OnboardingParent__carousel-dots-container {
+  width: 12.5rem;
+}
+.OnboardingParent .Logo {
+  width: 16.5rem;
+  height: 16.5rem;
+  background-size: contain;
+}

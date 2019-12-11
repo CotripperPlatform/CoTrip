@@ -1,6 +1,11 @@
 .Logo {
+<<<<<<< HEAD
   background-image: url("../../../../assets/images/login_logo.png");
   background-size: contain;
+=======
+  background-image: url("../../assets/images/login_logo.png");
+  background-size: cover;
+>>>>>>> develop
   background-repeat: no-repeat;
   background-position: center;
   width: 4rem;
