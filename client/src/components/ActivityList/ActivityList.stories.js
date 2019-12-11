@@ -12,6 +12,14 @@ let kidsActivityList = [
   "Beaches"
 ];
 
-storiesOf("ActivityList", module).add("Default", () => (
-  <ActivityList momActivityList={momActivityList} kidsActivityList={kidsActivityList} />
-));
+storiesOf("ActivityList", module)
+  .add("Activities for Moms", () => (
+    <ActivityList type="mom" label="Activities for Moms" momActivityList={momActivityList} />
+  ))
+  .add("Activities for Moms & Kids", () => (
+    <ActivityList
+      type="kids"
+      label="Activities for Moms & Kids"
+      kidsActivityList={kidsActivityList}
+    />
+  ));
