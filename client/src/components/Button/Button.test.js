@@ -13,10 +13,10 @@ describe("Button component", () => {
   beforeEach(() => {
     mockFunction = jest.fn();
     const props = {
-      text: "Test Text",
-      color: "Test Color",
-      size: "Test Size",
-      textColor: "Test Text Color",
+      text: "Submit",
+      color: "pink",
+      size: "large",
+      textColor: "black",
       handleClick: mockFunction
     };
     wrapper = setUp(props);

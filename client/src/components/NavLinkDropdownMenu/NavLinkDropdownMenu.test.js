@@ -13,12 +13,12 @@ describe("NavLinkDropdownMenu component", () => {
     const props = {
       menuList: [
         {
-          text: "Test Text1",
-          to: "/Test Link1"
+          text: "About",
+          to: "/"
         },
         {
-          text: "Test Text2",
-          to: "/Test Link"
+          text: "Home",
+          to: "/"
         }
       ]
     };

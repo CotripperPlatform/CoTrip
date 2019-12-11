@@ -13,17 +13,17 @@ describe("TrendingHashtagCard component", () => {
     beforeEach(() => {
       const props = {
         data: [
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1"
+          "#beach",
+          "#snorkeling",
+          "#daytrip",
+          "#sun",
+          "#fun",
+          "#family",
+          "#biking",
+          "#travel",
+          "#hiking",
+          "#sightseeing",
+          "#cotrip"
         ]
       };
       wrapper = setUp(props);
