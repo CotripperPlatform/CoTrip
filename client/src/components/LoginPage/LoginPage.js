@@ -37,10 +37,10 @@ class LoginPage extends Component{
       
       <div className="LoginPage">
         <Logo className="Logo"/>
-        <InputTextField name="email" placeholder="Email"/>
+        <InputTextField name="email" placeholder="Email" width="90%"/>
         <InputTextField name="password" placeholder="Password"/>
-        <p>Forgot your password?</p>
-        <Button id="button" text="Submit"/>
+        <p id="ForgotPass">Forgot your password?</p>
+        <Button id="button" text="Login"/>
       </div>
       
     );
