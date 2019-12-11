@@ -1,15 +1,15 @@
 import React from 'react';
-import PersonCard from './personcard';
+import PersonCard from './PersonCard';
 import { storiesOf } from '@storybook/react';
 
 storiesOf('PersonCard', module)
   .add("Default", () => <PersonCard
-  PersonCard__name="Lindsay L." 
-  PersonCard__location="Washington D.C." 
-  PersonCard__interests={[ 
-  { url: "#", PersonCard__interests: "veganism" },
-  { url: "#", PersonCard__interests: "budgeting" },
-  { url: "#", PersonCard__interests: "travel" },
-  { url: "#", PersonCard__interests: "outdoors"}
+  name="Lindsay L." 
+  location="Washington D.C." 
+  interests={[ 
+  { url: "#", interests: "veganism" },
+  { url: "#", interests: "budgeting" },
+  { url: "#", interests: "travel" },
+  { url: "#", interests: "outdoors"}
 ]}
   />)
