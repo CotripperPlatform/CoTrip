@@ -1,5 +1,4 @@
 .NavLink {
-  background-color: var(--yellow);
   font-family: var(--default-font);
   padding: 0 0 28px 24px;
   position: relative;
@@ -10,7 +9,6 @@
 }
 .NavLink h1 {
   margin: 0;
-  margin: 54px 0 0 0;
   text-transform: uppercase;
 }
 .NavLink__dropdown {
