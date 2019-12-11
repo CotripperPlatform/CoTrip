@@ -38,3 +38,9 @@
   bottom: 20%;
   padding: 2px 0px 2px 0px;
 }
+.TrendingHashtagCard__hashtag a {
+  color: var(--white);
+}
+.TrendingHashtagCard__hashtag a:hover {
+  color: var(--yellow);
+}
