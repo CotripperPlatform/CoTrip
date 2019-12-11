@@ -17,11 +17,30 @@
   display: none;
 }
 
-@media only screen and (max-width:1000px) {
+/* Touch screen devices */
+@media (hover: none) and (pointer: coarse) {
+  .Navbar__burger {
+    display: block;
+  }
+}
+
+/* Extra Large devices */
+@media only screen and (max-width: 1200px) {
 
 }
 
-@media only screen and (max-width: 400px) {
+/* Large devices */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Medium devices */
+@media only screen and (max-width: 768px) {
+  
+}
+
+/* Small devices */
+@media only screen and (max-width: 576px) {
   .Navbar__burger {
     display: block;
   }
