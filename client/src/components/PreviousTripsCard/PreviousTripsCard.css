@@ -15,10 +15,11 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 90%;
-  height: 100%;
+  width: 0rem;
+  height: 1rem;
   margin-left: 2%;
   margin-bottom: 5%;
+  /* border: 2px solid black; */
 }
 
 .PreviousTripCard__arrow {
@@ -72,4 +73,27 @@
 .PreviousTripCard__no-trips a:hover {
   transform: scale(1.1);
   color: var(--yellow);
+}
+
+@media only screen and (max-width: 576px) {
+  .PreviousTripCard__trip-two {
+    display: none;
+  }
+  .PreviousTripCard__trips {
+    width: 0rem;
+    height: 0rem;
+    margin-left: 2%;
+    margin-top: -5%;
+  }
+
+  .PreviousTripCard__container h1 {
+    color: var(--white);
+    width: 80%;
+    padding-left: 5%;
+    transform: scale(0.8);
+  }
+
+  .PreviousTripCard__arrow {
+    top: 50%;
+  }
 }

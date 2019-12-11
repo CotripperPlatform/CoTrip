@@ -17,7 +17,7 @@ const PreviousTripsCard = props => {
       {trips ? (
         <div className="PreviousTripCard__trips">
           {tripsItemOne}
-          {tripsItemTwo}
+          <span className="PreviousTripCard__trip-two">{tripsItemTwo}</span>
           <a href={link} className="PreviousTripCard__arrow" />
         </div>
       ) : (
