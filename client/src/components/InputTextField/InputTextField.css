@@ -1,47 +1,50 @@
-.InputTextField--default input {
+.InputTextField__container--default {
   display: flex;
   color: var(--black);
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 3px;
-  padding: 15px 30px;
+  padding: 1rem 2rem;
   width: 100%;
   min-width: 400px;
+  max-width: 400px;
   font-size: 20px;
   font-family: var(--default-font);
 }
 
-.InputTextField--small input {
+.InputTextField__container--small {
   color: black;
   background-color: var(--white);
   border: 2px solid white;
   border-radius: 3px;
-  padding: 15px 24px;
+  padding: 1rem 1.5rem;
   width: 100%;
-  min-width: 175px;
+  max-width: 220px;
   font-size: 18px;
   font-family: var(--default-font);
 }
 
-.InputTextField--search svg {
-  position: absolute;
-  height: 48px;
-  width: 60px;
-}
-
-.InputTextField--search input {
+.InputTextField__container--search {
   display: flex;
   color: var(--black);
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 3px;
-  padding: 15px 30px;
-  width: 100%;
+  padding: 1rem 0rem 1rem 4rem;
   min-width: 300px;
+  max-width: 400px;
+  width: 100%;
   font-size: 20px;
   font-family: var(--default-font);
-  padding-left: 60px;
+  background-image: url("../../assets/images/global-nav_search_icon.png");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
   -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+}
+
+.InputTextField__container--search::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  padding-left: 0rem;
 }
