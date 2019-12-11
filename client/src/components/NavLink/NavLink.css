@@ -1,0 +1,26 @@
+.NavLink {
+  height: 72px;
+  font-family: var(--default-font);
+  padding: 24px 76px 24px 24px;
+  position: relative;
+}
+.NavLink a {
+  text-decoration: none;
+  color: var(--black);
+}
+.NavLink h1 {
+  margin: 54px 0 0 0;
+  text-transform: uppercase;
+}
+.NavLink__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 24px;
+  width: calc(100% - 24px);
+  opacity: 0;
+  pointer-events: none;
+}
+.NavLink__dropdown-show {
+  opacity: 1;
+  pointer-events: auto;
+}
