@@ -10,7 +10,7 @@
 }
 
 .Navbar__logo {
-  margin: 0 47px;
+  margin: 0 0 0 47px;
 }
 
 .Navbar__main {
@@ -19,13 +19,15 @@
   align-items: flex-start;
   height: 80px;
   margin: 47px 0 0 0;
+  width: 100%;
 }
 
 .Navbar__menu {
-  margin-top: 4px;
+  margin-top: 13px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: flex-start;
+  padding: 0 40px 0 0;
 }
 
 .Navbar__profile {
@@ -49,7 +51,16 @@
 
 /* Large devices */
 @media only screen and (max-width: 992px) {
+  .Navbar__main {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
 
+  .Navbar__burger {
+    display: block;
+  }
 }
 
 /* Medium devices */
@@ -59,14 +70,5 @@
 
 /* Small devices */
 @media only screen and (max-width: 576px) {
-  .Navbar__main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-
-  .Navbar__burger {
-    display: block;
-  }
+  
 }

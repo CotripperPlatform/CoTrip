@@ -56,12 +56,14 @@ const Navbar = (props) => {
             ]}
           />
         </div>
-        <div className="Navbar__profile">
-          <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
+        <div Navbar__right>
+          <div className="Navbar__profile">
+            <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
+          </div>
         </div>
-        <div className="Navbar__burger">
-          <Burger menuShow="DisplayMenu" />
-        </div>
+      </div>
+      <div className="Navbar__burger">
+        <Burger menuShow="DisplayMenu" />
       </div>
     </div>
   );
