@@ -12,7 +12,7 @@ const ProfilePicture = props => {
       {/* this will be a link to the user profile page */}
 
       {props.to ? (
-        <Link exact={true} to={props.to}>
+        <Link to={props.to}>
           <img src={props.image} alt="profile-picture" />
         </Link>
       ) : (
