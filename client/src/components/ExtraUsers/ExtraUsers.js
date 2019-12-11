@@ -7,22 +7,18 @@ import "./ExtraUsers.css";
 function ExtraUsers(props) {
   let extraUsersValue = null
 
-  function howManyMore(theArray) {
-    if (theArray.length > 4) {
-      let extraValue = theArray.length - 4
-      return extraValue
-    }
-  }
+  if (props.users.length > 4) {
+     extraUsersValue = props.users.length - 4
+     return (
+      <div className='ExtraUsers'>
+        <Link to={props.to} className='ExtraUsers__text'>
+          +{extraUsersValue}
+        </Link>
+      </div>
+    );
+  } else return null
 
-  extraUsersValue = howManyMore(props.users)
-
-  return (
-    <div className='ExtraUsers'>
-      <Link to={props.to} className='ExtraUsers__text'>
-        +{extraUsersValue}
-      </Link>
-    </div>
-  );
+ 
 }
 
 ExtraUsers.defaultProps = {
