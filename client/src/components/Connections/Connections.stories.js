@@ -61,7 +61,7 @@ storiesOf('Connections', module)
       to='User/userid/connections'
       userViewing={false}
       users={[user5, user1, user3]}
-      extraUsers='See All'>
+      extraUsers='See More'>
     </Connections>)
   .add("Members", () =>
     <Connections to='User/userid/connections'

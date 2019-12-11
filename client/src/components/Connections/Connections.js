@@ -50,13 +50,6 @@ class Connections extends Component {
     })
   }
 
-  // Runs after a component has been updated
-  componentDidUpdate() { }
-
-
-  // Runs right before a component is removed from the DOM
-  componentWillUnmount() { }
-
   render() {
     return (
       <div className='Connections'>
@@ -68,8 +61,7 @@ class Connections extends Component {
 }
 
 Connections.defaultProps = {
-  userViewing: false,
-  extraUsers: 'View More',
+  extraUsers: 'View All',
   to: 'PATH'
 } 
 
