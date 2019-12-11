@@ -1,5 +1,5 @@
 .NavLinkDropdownMenu {
-  box-shadow: 0 4px 20px -3px var(--gray);
+  box-shadow: 0 4px 10px -5px var(--gray);
   margin: 0;
   padding: 12px 0;
   list-style: none;
@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 .NavLinkDropdownMenu li {
-  font-size: 32px;
+  font-size: 24px;
   padding: 15px 24px;
   color: var(--purple);
   font-family: var(--default-font);
