@@ -21,13 +21,6 @@
   margin-bottom: 5%;
 }
 
-.PreviousTripCard__trips div {
-  position: relative;
-  width: 49.5%;
-  height: 100%;
-  background-color: red;
-}
-
 .PreviousTripCard__arrow {
   position: absolute;
   right: -1%;

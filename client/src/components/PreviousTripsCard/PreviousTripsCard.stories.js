@@ -1,13 +1,15 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import PreviousTripsCard from "./PreviousTripsCard";
+import TripCard from "../TripCard/TripCard";
+import example1 from "../../../../assets/images/card_small2.png";
 
 storiesOf("PreviousTripsCard", module)
   .add("Default, Two Trips", () => (
     <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>
-      <div>placeholder</div>
-      <div>placeholder</div>
+      <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+      <TripCard src={example1} location="Puerto Rico" date="April 2019" />
     </PreviousTripsCard>
   ))
   .add("Default, One Trip", () => (
