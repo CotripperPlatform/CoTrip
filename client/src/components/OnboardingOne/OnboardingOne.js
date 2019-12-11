@@ -19,7 +19,7 @@ class OnboardingOne extends Component {
   // Runs after Component is loaded in the broswer
   componentDidMount() {}
 
-  // Runs after a component has been updated
+  // Runs after a component has`               ` been updated
   componentDidUpdate() {}
 
   // Runs right before a component is removed from the DOM
@@ -28,7 +28,7 @@ class OnboardingOne extends Component {
   render() {
     return (
       <div className={this.state.classList}>
-        <div className="OnboardingOne-container">
+        <div className="">
           <div className="OnboardingOne__logo-container">
             <img className="OnboardingOne__logo" src={logo} alt="" />
           </div>
