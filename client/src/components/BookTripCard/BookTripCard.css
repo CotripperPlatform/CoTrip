@@ -1,0 +1,22 @@
+.Card img {
+  width: 45%;
+  height: 100%;
+
+}
+
+.Card div {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Card h3 {
+  text-align: center;
+}
+
+.Card h1 {
+  text-align: left;
+  padding-left: 5%;
+
+}

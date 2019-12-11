@@ -1,15 +1,33 @@
 .SignUpAd {
-  height: 30vh;
+  height: 37vh;
   background-color: var(--yellow);
   width: 100vw;
+  text-align: center;
+  font-family: var(--default-font);
+  letter-spacing: .1rem;
 }
 
 .SignUpAd .inputs {
   display: flex;
   justify-content: space-between;
-  padding: 5% 10%;
+  padding: 0 10%;
+  margin-top: 2rem;
 }
 
 .inputs input {
   margin: 0 5%;
+}
+
+
+.SignUpAd button {
+  margin-top: 3rem;
+  border: none;
+}
+
+.SignUpAd button:hover {
+  background-color: #df7362;
+}
+
+.SignUpAd h2 {
+  padding-top: 1rem;
 }
