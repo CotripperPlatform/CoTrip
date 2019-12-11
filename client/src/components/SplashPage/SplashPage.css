@@ -1,7 +1,5 @@
 .SplashPage {
-  width: 100vw;
-  height: 100vh;
-  background: var(--splash-background) no-repeat center center fixed;
+  background: var(--splash-background) no-repeat fixed;
   background-size: cover;
   font-family: var(--default-font);
   color: var(--black);
