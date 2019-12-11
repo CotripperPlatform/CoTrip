@@ -19,6 +19,7 @@
 }
 .ForumPost .Button img {
   height: 1.5rem;
+  padding: 0;
 }
 .ForumPost__face-card {
   display: flex;
@@ -33,7 +34,8 @@
 }
 .ForumPost .Pill {
   margin-left: 0.5rem;
-  padding-top: -0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
 }
 .ForumPost__middle {
   display: flex;

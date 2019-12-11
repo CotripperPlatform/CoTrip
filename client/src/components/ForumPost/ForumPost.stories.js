@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ForumPost from "./ForumPost";
+import Profile from "../../../../assets/images/card_profile3.png";
 
 const onClick = () => {
   console.log("clicked");
@@ -20,6 +21,17 @@ storiesOf("ForumPost", module)
       likes={8}
       comments={5}
       topics={["Parenting", "Vacation", "Topic"]}
-      post={[{ title: "What An Amazing Trip!" }]}
+      image={Profile}
+      post={{
+        title: "What An Amazing Trip!",
+        date: "May 4",
+        time: "2:00pm",
+        hashtags: [
+          { url: "#", title: "Traveling" },
+          { url: "#", title: "GoodTimes" }
+        ],
+        body:
+          "My son and I went on this trip and had the greatest time! If you can go, I would highly recommend it!"
+      }}
     />
   ));
