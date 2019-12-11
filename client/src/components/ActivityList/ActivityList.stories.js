@@ -14,12 +14,8 @@ let kidsActivityList = [
 
 storiesOf("ActivityList", module)
   .add("Activities for Moms", () => (
-    <ActivityList type="mom" label="Activities for Moms" momActivityList={momActivityList} />
+    <ActivityList color="purple" label="Activities for Moms" activities={momActivityList} />
   ))
   .add("Activities for Moms & Kids", () => (
-    <ActivityList
-      type="kids"
-      label="Activities for Moms & Kids"
-      kidsActivityList={kidsActivityList}
-    />
+    <ActivityList color="red" label="Activities for Moms & Kids" activities={kidsActivityList} />
   ));
