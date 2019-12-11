@@ -10,17 +10,8 @@ class ActivityList extends Component {
   }
 
   render() {
-    let momActivityList = ["Spa", "Wine Nights", "Brunch with Other Moms"];
-    let kidsActivityList = [
-      "Snorkeling",
-      "Hiking",
-      "Island Hopping",
-      "Hawaiian Luaus",
-      "Food Markets",
-      "Beaches"
-    ];
-    function renderMomActivities() {
-      const momActivities = momActivityList.map(activity => {
+    const renderMomActivities = () => {
+      const momActivities = this.props.momActivityList.map(activity => {
         return (
           <div className="ActivityList__activity ActivityList__mom">
             <span className="ActivityList__activities">{activity}</span>
@@ -28,10 +19,10 @@ class ActivityList extends Component {
         );
       });
       return <div className="ActivityList__activity-container">{momActivities}</div>;
-    }
+    };
 
-    function renderKidsActivities() {
-      const kidsActivities = kidsActivityList.map(activity => {
+    const renderKidsActivities = () => {
+      const kidsActivities = this.props.kidsActivityList.map(activity => {
         return (
           <div className="ActivityList__activity ActivityList__kids">
             <span className="ActivityList__activities">{activity}</span>
@@ -39,7 +30,7 @@ class ActivityList extends Component {
         );
       });
       return <div className="ActivityList__activity-container">{kidsActivities}</div>;
-    }
+    };
     return (
       <div className={this.state.classList}>
         <div className="ActivityList__activities-container">
