@@ -1,69 +1,52 @@
-
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 import "./Connections.css";
 import ProfilePicture from '../ProfilePicture/ProfilePicture'
 
+// function Based React Component
+function Connections(props) {
+  let heading = "Connections"
 
-// Class Based React Component
-class Connections extends Component {
-  constructor(props) {
-    super(props);
 
-    // Default CSS class to apply to the Component
-    this.state = {
-      Heading: "Connections"
-    };
+  if (props.userViewing === true) {
+    heading = "My Connections"
+  } else if (props.userViewing === false) {
+    heading = "Her Connections"
+  } else if (!props.userViewing) {
+    heading = "Members"
   }
-  // Runs after Component is loaded in the broswer
-  componentDidMount() {
 
-    if (this.props.userViewing === true) {
-      this.setState({ Heading: "My Connections" })
-    } else if (this.props.userViewing === false) {
-      this.setState({ Heading: "Her Connections" })
-    } else if (!this.props.userViewing) {
-      this.setState({ Heading: "Members" })
+  let userArray = props.users.map((person, index) => {
+    let userLastInitial = person.userSurname.slice(0, 1) + '.'
+    if (index < 4) {
+      return (
+        <div key={person.userId} className='Connections__person'>
+          <ProfilePicture image={person.userPic} />
+          <p className='Connections--name'>{person.userFirstName} {userLastInitial}</p>
+        </div>
+      )
+    } else if (index === 4) {
+      return (
+        <div className='Connections__person'>
+          <Link className='Connections__link' to={props.to}>
+            {props.extraUsers}
+          </Link>
+        </div>
+      )
     }
-
-    this.setState({
-      userArray: this.props.users.map((person, index) => {
-        let userLastInitial = person.userSurname.slice(0, 1) + '.'
-        if (index < 4) {
-          return (
-            <div key={person.userId} className='Connections__person'>
-              <ProfilePicture image={person.userPic} />
-              <p className='Connections--name'>{person.userFirstName} {userLastInitial}</p>
-            </div>
-          )
-        } else if (index === 4) {
-          return (
-            <div className='Connections__person'>
-              <Link className='Connections__link' to={this.props.to}>
-                {this.props.extraUsers}
-              </Link>
-            </div>
-          )
-        }
-        else return null
-      })
-    })
-  }
-
-  render() {
-    return (
-      <div className='Connections'>
-        <h1 className='Connections__heading'>{this.state.Heading}</h1>
-        <div className='Connections__list'>{this.state.userArray}</div>
-      </div>
-    );
-  }
+    else return null
+  })
+  return (
+    <div className='Connections'>
+      <h1 className='Connections__heading'>{heading}</h1>
+      <div className='Connections__list'>{userArray}</div>
+    </div>
+  );
 }
 
 Connections.defaultProps = {
   extraUsers: 'View All',
   to: 'PATH'
-} 
-
+}
 
 export default Connections;
