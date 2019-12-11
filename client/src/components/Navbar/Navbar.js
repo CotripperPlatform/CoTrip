@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Navbar.css";
 import Logo from "../Logo/Logo"
+import Burger from "../Burger/Burger"
 
 // Function based React Component
 const Navbar = (props) => {
@@ -18,8 +19,8 @@ const Navbar = (props) => {
       <div className="Navbar__logo">
         <Logo clickable to="/route" />
       </div>
-      <div> 
-        {/* <Burger menuShow="DisplayMenu" /> */}
+      <div className="Navbar__burger"> 
+        <Burger menuShow="DisplayMenu" />
       </div>
     </div>
   );

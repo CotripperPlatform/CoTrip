@@ -8,12 +8,13 @@
     font-family: var(--default-font);
 }
 
-.Navbar__hidden{
-  display: none;
+.Navbar__logo {
+  margin: 0 47px;
 }
 
-.NavBar__logo {
-    margin: 0 47px;
+.Navbar__burger {
+  margin: 0 47px;
+  display: none;
 }
 
 @media only screen and (max-width:1000px) {
@@ -21,5 +22,7 @@
 }
 
 @media only screen and (max-width: 400px) {
-  
+  .Navbar__burger {
+    display: block;
+  }
 }
