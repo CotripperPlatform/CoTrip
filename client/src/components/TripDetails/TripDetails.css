@@ -102,7 +102,7 @@
 
 @media only screen and (max-width: 600px) {
   .TripDetails__image {
-    width: 25rem;
-    height: 18rem;
+    width: 20rem;
+    height: 15rem;
   }
 }
