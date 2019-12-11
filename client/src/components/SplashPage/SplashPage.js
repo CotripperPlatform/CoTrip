@@ -8,8 +8,12 @@ const SplashPage = () => {
     <div className='SplashPage'>
       <h1>CoTripper</h1>
       <p>Book trips, meet moms, and experience family travel together!</p>
-      <Link to='/login'><Button text="Login" /></Link>
-      <Link to='/register'><Button text="Register" color="purple" /></Link>
+      <div className='SplashPage__button-margin--small'>
+        <Link to='/login'><Button text="Login" /></Link>
+      </div>
+      <div className='SplashPage__button-margin'>
+        <Link to='/register'><Button text="Register" color="purple" /></Link>
+      </div>
     </div>
   );
 }
