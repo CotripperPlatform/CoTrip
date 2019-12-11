@@ -52,20 +52,20 @@ let testUsers =
 storiesOf('Connections', module)
   .add("User Connections", () =>
     <Connections
-      to='User/userid/connections'
+      to="User/userid/connections"
       userViewing={true}
       users={testUsers}
       extraUsers="See More">
     </Connections>)
   .add("Her Connections", () =>
     <Connections
-      to='User/userid/connections'
+      to="User/userid/connections"
       userViewing={false}
       users={testUsers.slice(0, 3)}
       extraUsers='See More'>
     </Connections>)
   .add("Members", () =>
-    <Connections to='User/userid/connections'
+    <Connections to="User/userid/connections"
       users={testUsers.slice(0, 6)}
       extraUsers="View All"
     />)
