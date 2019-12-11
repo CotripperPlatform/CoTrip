@@ -37,15 +37,4 @@ describe("TrendingHashtagCard component", () => {
       expect(component.length).toBe(10);
     });
   });
-
-  // describe("Have NO props", () => {
-  //   let wrapper;
-  //   beforeEach(() => {
-  //     wrapper = setUp();
-  //   });
-  //   it("Should not render", () => {
-  //     const component = findByTestAttribute(wrapper, "dot");
-  //     expect(component.length).toBe(0);
-  //   });
-  // });
 });
