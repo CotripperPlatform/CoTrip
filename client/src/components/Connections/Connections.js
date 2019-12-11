@@ -15,16 +15,8 @@ class Connections extends Component {
       Heading: "Connections"
     };
   }
-
-
   // Runs after Component is loaded in the broswer
   componentDidMount() {
-    // let displayedUsers = this.props.users
-
-    // if(this.props.users.length > 4) {
-    //     displayedUsers = this.props.users.slice(0,4)
-    //     displayedUsers[4]
-    // } 
 
     if (this.props.userViewing === true) {
       this.setState({ Heading: "My Connections" })
