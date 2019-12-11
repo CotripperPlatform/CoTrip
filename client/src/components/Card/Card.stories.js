@@ -16,7 +16,6 @@ storiesOf("Card", module)
   ))
   .add("Card, Discover New Groups", () => (
     <Card discover={true} size="medium">
-      {" "}
-      <a href="/">Discover New Groups</a>{" "}
+      <a href="/">Discover New Groups</a>
     </Card>
   ));
