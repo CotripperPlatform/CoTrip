@@ -6,5 +6,5 @@ import { checkPropTypes } from "prop-types";
 const handleClick = e => console.log("clicked");
 
 storiesOf("InteractionCard", module).add("Default", () => (
-  <InteractionCard link="/route" handleClick={handleClick} />
+  <InteractionCard to="/route" onClick={handleClick} />
 ));
