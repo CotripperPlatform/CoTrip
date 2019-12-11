@@ -1,16 +1,26 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import Button from './Button.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow } from "enzyme";
+import Button from "./Button.js";
 
-// We will describe a block of tests
-describe('Button component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<Button />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
-  })
-})
+const setUp = (props = {}) => {
+  const component = shallow(<Button {...props} />);
+  return component;
+};
+describe("Button component", () => {
+  let component;
+  beforeEach(() => {
+    component = setUp();
+  });
+  it("Should render as expected", () => {
+    const defaultClass = component.find(".Button");
+    expect(defaultClass.length).toBe(1);
+    const defaultColorClass = component.find(".Button--color");
+    expect(defaultColorClass.length).toBe(1);
+    const defaultTextColorClass = component.find(".Button--textColor-text");
+    expect(defaultTextColorClass.length).toBe(1);
+    const defaultSizeClass = component.find(".Button--size");
+    expect(defaultSizeClass.length).toBe(1);
+    const defaultTypeClass = component.find(".Button--none");
+    expect(defaultTypeClass.length).toBe(1);
+  });
+});
