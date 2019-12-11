@@ -8,20 +8,27 @@ const setUp = (props = {}) => {
   return component;
 };
 describe("Button component", () => {
-  let component;
+  let wrapper;
+  let mockFunction;
   beforeEach(() => {
-    component = setUp();
+    mockFunction = jest.fn();
+    const props = {
+      text: "Test Text",
+      color: "Test Color",
+      size: "Test Size",
+      textColor: "Test Text Color",
+      handleClick: mockFunction
+    };
+    wrapper = setUp(props);
   });
   it("Should render as expected", () => {
-    const defaultClass = findByTestAttribute(component, "Button");
-    expect(defaultClass.length).toBe(1);
-    const defaultColorClass = component.find(".Button--color");
-    expect(defaultColorClass.length).toBe(1);
-    const defaultTextColorClass = component.find(".Button--textColor-text");
-    expect(defaultTextColorClass.length).toBe(1);
-    const defaultSizeClass = component.find(".Button--size");
-    expect(defaultSizeClass.length).toBe(1);
-    const defaultTypeClass = component.find(".Button--none");
-    expect(defaultTypeClass.length).toBe(1);
+    const button = findByTestAttribute(wrapper, "Button");
+    expect(button.length).toBe(1);
+  });
+  it("Should emit callback on click event", () => {
+    const button = findByTestAttribute(wrapper, "Button");
+    button.simulate("click");
+    const callback = mockFunction.mock.calls.length;
+    expect(callback).toBe(1);
   });
 });
