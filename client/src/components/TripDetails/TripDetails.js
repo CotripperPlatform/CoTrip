@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./TripDetails.css";
 import PropTypes from "prop-types";
-import hawaii from "../../../../assets/images/hawaii.png";
-import southernCaribbean from "../../../../assets/images/southernCaribbean.png";
-import easternCaribbean from "../../../../assets/images/easternCaribbean.png";
-import hawaiiTrees from "../../../../assets/images/hawaii-trees.png";
-import westernCaribbean from "../../../../assets/images/westernCaribbean.png";
+import hawaii from "../../assets/images/hawaii.png";
+import southernCaribbean from "../../assets/images/southernCaribbean.png";
+import easternCaribbean from "../../assets/images/easternCaribbean.png";
+import hawaiiTrees from "../../assets/images/hawaii-trees.png";
+import westernCaribbean from "../../assets/images/greece.png";
 import CarouselDots from "../CarouselDots/CarouselDots.js";
 
 class TripDetails extends Component {

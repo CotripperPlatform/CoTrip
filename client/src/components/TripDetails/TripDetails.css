@@ -17,8 +17,6 @@
   justify-content: space-evenly;
 }
 .TripDetails__image {
-  /* width: 50rem; */
-  /* height: 37rem; */
   width: 100%;
 }
 .TripDetails__right {
