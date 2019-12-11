@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ProfilePicture from "./ProfilePicture.js";
-import Image from "../../../../assets/images/profile_large.png";
+import Image from "../../assets/images/profile_large.png";
 
 storiesOf("ProfilePicture", module)
   .add("Extra Small with Link", () => <ProfilePicture type="extra-small" to="#" image={Image} />)
