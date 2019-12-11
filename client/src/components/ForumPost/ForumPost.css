@@ -7,14 +7,15 @@
   padding: 1rem;
   background-color: var(--white);
 }
-.ForumPost__top-middle {
-  border: 1px solid rgba(37, 37, 37, 0.5);
-  border-radius: 3px;
-  padding-bottom: 0.5rem;
-}
+.ForumPost__top-middle,
 .ForumPost .Button {
   border: 1px solid rgba(37, 37, 37, 0.5);
   border-radius: 3px;
+}
+.ForumPost__top-middle {
+  padding-bottom: 0.5rem;
+}
+.ForumPost .Button {
   font-size: 1rem;
 }
 .ForumPost .Button img {
@@ -49,14 +50,12 @@
   height: 2rem;
   background-color: var(--gray-lite);
 }
-.ForumPost__topic-pills {
-  display: flex;
-  justify-content: space-evenly;
-}
+.ForumPost__topic-pills,
 .ForumPost__likes-comments {
   display: flex;
   justify-content: space-evenly;
 }
+
 .ForumPost__likes-comments p {
   margin-right: 0.5rem;
 }
