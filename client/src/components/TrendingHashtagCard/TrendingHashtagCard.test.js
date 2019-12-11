@@ -1,16 +1,51 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import TrendingHashtagCard from './TrendingHashtagCard.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow } from "enzyme";
+import TrendingHashtagCard from "./TrendingHashtagCard.js";
+import { findByTestAttribute } from "../../../../utils/utlis";
 
-// We will describe a block of tests
-describe('TrendingHashtagCard component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<TrendingHashtagCard />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
-  })
-})
+const setUp = (props = {}) => {
+  const component = shallow(<TrendingHashtagCard {...props} />);
+  return component;
+};
+describe("TrendingHashtagCard component", () => {
+  describe("Have props", () => {
+    let wrapper;
+    beforeEach(() => {
+      const props = {
+        data: [
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1",
+          "Test1"
+        ]
+      };
+      wrapper = setUp(props);
+    });
+    it("Should render without errors", () => {
+      const component = findByTestAttribute(wrapper, "TrendingHashtagCard");
+      expect(component.length).toBe(1);
+    });
+    it("Should render dots", () => {
+      const component = findByTestAttribute(wrapper, "hashtags");
+      expect(component.length).toBe(10);
+    });
+  });
+
+  // describe("Have NO props", () => {
+  //   let wrapper;
+  //   beforeEach(() => {
+  //     wrapper = setUp();
+  //   });
+  //   it("Should not render", () => {
+  //     const component = findByTestAttribute(wrapper, "dot");
+  //     expect(component.length).toBe(0);
+  //   });
+  // });
+});
