@@ -5,11 +5,11 @@
   border: 2px solid var(--white);
   border-radius: 3px;
   padding: 15px 30px;
-  max-width: 400px;
   width: 100%;
+  min-width: 400px;
+  max-width: 400px;
   font-size: 20px;
   font-family: var(--default-font);
-  /* border: 2px solid black; */
 }
 
 .InputTextField__container--small {
@@ -31,7 +31,9 @@
   border: 2px solid var(--white);
   border-radius: 3px;
   padding: 15px 30px 15px 30px;
-  min-width: 400px;
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
   font-size: 20px;
   font-family: var(--default-font);
   background-image: url("../../../../assets/images/global-nav_search_icon.png");
