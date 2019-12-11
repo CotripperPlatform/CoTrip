@@ -1,8 +1,8 @@
-import React from './node_modules/react'
-import { shallow, configure } from './node_modules/enzyme'
-import Icon from './Icon.js.js.js.js.js.js.js.js.js'
-import InputTextField from './InputTextField.js.js.js.js.js.js.js.js.js.js'
-import Adapter from './node_modules/enzyme-adapter-react-16';
+import React from 'react'
+import { shallow, configure } from 'enzyme'
+import Icon from './Icon.js.js.js.js.js.js.js.js.js.js'
+import InputTextField from './InputTextField.js.js.js.js.js.js.js.js.js.js.js'
+import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
 
 // We will describe a block of tests

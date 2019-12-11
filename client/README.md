@@ -64,6 +64,37 @@ hygen component-class new --name NameOfComponent
 ```
 
 #### Icons
-Please see below.
+##### Usage
+In `App.js` we will add the following and if you would like to add more icons to the library you will just import, add to library, and seperate by commas like below.
+```
+import { library } from ‘@fortawesome/fontawesome-svg-core’
+import { fab } from ‘@fortawesome/free-brands-svg-icons’
+import { fas } from ‘@fortawesome/free-solid-svg-icons’
+import { far } from ‘@fortawesome/free-regular-svg-icons’
+import { faCoffee } from ‘@fortawesome/free-solid-svg-icons’
+library.add(fab, far, fas, faCoffee)
+```
+To use globally, make sure to have the import syntax in the component you would like to use an icon in. To use any of these icons:
+```
+import React from ‘react’
+import { FontAwesomeIcon } from ‘@fortawesome/react-fontawesome’
+export const model = () => (
+  <div>
+    <FontAwesomeIcon icon=“check-square” />
+    Favorite beverage: <FontAwesomeIcon icon=“coffee” />
+    <FontAwesomeIcon icon={[‘fab’, ‘apple’]} />
+    <FontAwesomeIcon icon={[‘fab’, ‘microsoft’]} />
+     <FontAwesomeIcon icon={[‘far’, ‘adress-card’]}
+  </div>
+)
+```
+### Add Icon/Using With Storybook:
+**Add syntax to stories folder:**
+<img width="1440" alt="Screen Shot 2019-12-10 at 10 55 59 AM" src="https://user-images.githubusercontent.com/54545904/70625134-c8e7f580-1bef-11ea-9072-75b3584650e4.png">
+
+**Use props in JS file:**
+<img width="1440" alt="Screen Shot 2019-12-10 at 10 56 09 AM" src="https://user-images.githubusercontent.com/54545904/70625139-cb4a4f80-1bef-11ea-858f-5c909e74b793.png">
+
+- You can always go to [font awesome](https://fontawesome.com/) for icons and their names as well.
 
 - If you would like to learn more about the react font awesome npm package please visit the [package page](https://www.npmjs.com/package/@fortawesome/react-fontawesome)
