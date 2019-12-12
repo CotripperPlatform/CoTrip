@@ -1,36 +1,11 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-=======
 @import url("https://fonts.googleapis.com/css?family=Reem+Kufi&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap");
->>>>>>> develop
 
 :root {
   /* These are all the defaults for CoTripper. Below is an example of usage:
         background-color: var(--yellow);
     */
 
-<<<<<<< HEAD
-    /* Default color palette variables */
-    --yellow: #FFCB06;
-    --pink: #FB8370;
-    --red: #D1495B;
-    --purple: #6A4C93;
-    --black: #252525;
-    --white: #FAFAFA;
-    --gray-lite: #E5E5E5;
-    --gray-dark: #C4C4C4;
-    /* Default font */
-    --default-font: 'Reem Kufi', sans-serif;
-    --paragraph-font: 'Open Sans', sans-serif;
-    
-    /* Font Weights */
-    --paragraph-weight: 400;
-    --banner-weight: 700;
-    --title-weight: 500;
-}   
-=======
   /* Default color palette variables */
   --yellow: #ffcb06;
   --yellow-dark: #f2bc0f;
@@ -79,4 +54,3 @@
   --banner-weight: 700;
   --title-weight: 500;
 }
->>>>>>> develop

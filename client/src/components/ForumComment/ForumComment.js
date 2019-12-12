@@ -1,7 +1,6 @@
 import React from 'react';
 import "./ForumComment.css";
 import  '../../App.css';
-import img from "../../Assets/mom.png";
 
 
 export default function ForumComment(props) {
