@@ -8,35 +8,29 @@ const setUp = (props = {}) => {
   return component;
 };
 describe("Burger component", () => {
-  describe("Have props", () => {
-    let wrapper;
-    beforeEach(() => {
-      const props = {
-        numberOfDots: 3,
-        activeLocation: "Test Active",
-        border: true,
-        onStatusChange: "Test Change Function"
-      };
-      wrapper = setUp(props);
-    });
-    it("Should render without errors", () => {
-      const component = findByTestAttribute(wrapper, ".Burger");
-      expect(component.length).toBe(1);
-    });
+  let wrapper;
+  it("Should render with active true", () => {
+    const props = {
+      active: true
+    };
+    wrapper = setUp(props);
+    const component = findByTestAttribute(wrapper, ".Burger--active");
+    expect(component.length).toBe(1);
   });
-
-  describe("Have NO props", () => {
-    let wrapper;
-    beforeEach(() => {
-      wrapper = setUp();
-    });
-    it("Should not render active", () => {
-      const component = findByTestAttribute(wrapper, ".Burger--active");
-      expect(component.length).toBe(0);
-    });
-    it("Should not render inactive", () => {
-      const component = findByTestAttribute(wrapper, ".Burger--active");
-      expect(component.length).toBe(0);
-    });
+  it("Should render with active false", () => {
+    const props = {
+      active: false
+    };
+    wrapper = setUp(props);
+    const component = findByTestAttribute(wrapper, ".Burger");
+    expect(component.length).toBe(1);
+  });
+  it("Should render without props", () => {
+    const props = {
+      active: null
+    };
+    wrapper = setUp(props);
+    const component = findByTestAttribute(wrapper, ".Burger");
+    expect(component.length).toBe(1);
   });
 });
