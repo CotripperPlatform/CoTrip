@@ -1,16 +1,66 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import InputSelect from './InputSelect.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow } from "enzyme";
+import InputSelect from "./InputSelect.js";
+import checkPropTypes from "check-prop-types";
 
-// We will describe a block of tests
-describe('InputSelect component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<InputSelect />)
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
-  })
-})
+import { findByTestAttribute } from "../../../../utils/utils";
+
+const setUp = props => {
+  const component = shallow(<InputSelect {...props} />);
+  return component;
+};
+
+describe("InputSelect component", () => {
+  let wrapper;
+  let mockFunction = jest.fn();
+  beforeEach(() => {
+    const props = {
+      onSelect: mockFunction,
+      optionPrefix: "Sort By:  ",
+      options: [
+        { value: "location", title: "Location" },
+        { value: "date", title: "Date" },
+        { value: "type", title: "Type" }
+      ]
+    };
+    wrapper = setUp(props);
+  });
+  describe("Checking PropTypes", () => {
+    const expectedProps = {
+      onSelect: mockFunction,
+      optionPrefix: "Sort By:  ",
+      options: [
+        { value: "location", title: "Location" },
+        { value: "date", title: "Date" },
+        { value: "type", title: "Type" }
+      ]
+    };
+    it("Should not throw a warning", () => {
+      const propsError = checkPropTypes(
+        InputSelect.propTypes,
+        expectedProps,
+        "props",
+        InputSelect.name
+      );
+      expect(propsError).toBe(undefined);
+    });
+  });
+  describe("Has Props", () => {
+    it("Should render without error", () => {
+      const component = findByTestAttribute(wrapper, ".InputSelect");
+      expect(component.length).toBe(1);
+    });
+  });
+  // describe("Has NO Props", () => {
+  //   let wrapper;
+  //   let mockFunction;
+  //   beforeEach(() => {
+  //     const props = null;
+  //     wrapper = setUp(props);
+  //   });
+  //   it("Should render without error", () => {
+  //     const component = findByTestAttribute(wrapper, ".InputSelect");
+  //     expect(component.length).toBe(1);
+  //   });
+  // });
+});
