@@ -96,4 +96,9 @@
   .PreviousTripCard__arrow {
     top: 50%;
   }
+
+  .PreviousTripCard__arrow {
+    right: -0.5%;
+    transform: scale(0.9);
+  }
 }
