@@ -22,10 +22,10 @@
 
 .PreviousTripCard__arrow {
   position: absolute;
-  right: -1%;
+  right: 0%;
   top: 53%;
   background-color: var(--yellow-dark);
-  width: 35px;
+  width: 25px;
   height: 50px;
   clip-path: polygon(0 0, 80% 50%, 0 100%, 0 80%, 45% 50%, 0 20%);
   -webkit-box-shadow: 6px 7px 5px -2px rgba(0, 0, 0, 0.64);
