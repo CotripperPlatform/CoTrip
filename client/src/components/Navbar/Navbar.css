@@ -48,11 +48,13 @@
   margin: -17px auto;
 }
 
-.Navbar__link-4 {
-  display: flex;
-  justify-content: center;
+.Navbar__link-item {
+  margin: 0 20px;
 }
 
+.Navbar__hidden {
+  display: none;
+}
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
   

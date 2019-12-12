@@ -9,16 +9,15 @@ import { checkPropTypes } from "prop-types";
 // Function based React Component
 const Navbar = props => {
   // Default Class to apply to Component
-  let classList = `Navbar`;
 
   return (
-    <div className={classList}>
+    <div className="Navbar">
       <div className="Navbar__logo">
         <Logo clickable to="/route" />
       </div>
       <div className="Navbar__main">
         <div className="Navbar__menu">
-          <div Navbar__link-1>
+          <div className="Navbar__link-item">
             <NavLink
               text="My Directory"
               to="/"
@@ -27,9 +26,9 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle"></div>
+            <div className="Navbar__triangle Navbar__hidden"></div>
           </div>
-          <div Navbar__link-2>
+          <div className="Navbar__link-item">
             <NavLink
               text="Community"
               to="/"
@@ -38,9 +37,9 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle"></div>
+            <div className="Navbar__triangle Navbar__hidden"></div>
           </div>
-          <div Navbar__link-3>
+          <div className="Navbar__link-item">
             <NavLink
               text="Forum"
               to="/"
@@ -51,7 +50,7 @@ const Navbar = props => {
             />
             <div className="Navbar__triangle"></div>
           </div>
-          <div Navbar__link-4>
+          <div className="Navbar__link-item">
             <NavLink
               text="Book A Trip"
               to="/"
@@ -60,7 +59,7 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle"></div>
+            <div className="Navbar__triangle Navbar__hidden"></div>
           </div>
         </div>
         <div className="Navbar__right">
