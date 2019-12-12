@@ -4,15 +4,12 @@ import Logo from "../Logo/Logo";
 import Burger from "../Burger/Burger";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import NavLink from "../NavLink/NavLink";
+import { checkPropTypes } from "prop-types";
 
 // Function based React Component
 const Navbar = props => {
   // Default Class to apply to Component
   let classList = `Navbar`;
-
-  function handleClick() {
-    console.log("clicked");
-  }
 
   return (
     <div className={classList}>
@@ -61,7 +58,7 @@ const Navbar = props => {
         </div>
       </div>
       <div className="Navbar__burger">
-        <Burger onClick={handleClick} active={false} />
+        <Burger onClick={props.burgerClick} active={props.showCondensedMenu} />
       </div>
     </div>
   );
