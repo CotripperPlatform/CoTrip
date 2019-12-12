@@ -9,21 +9,21 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 library.add(fab, far, fas, faCheckSquare, faHeart, faTable, faComment, faCaretRight, faCaretLeft, faSearch, faAngleLeft, faAngleRight, faCommentDots  )
 
 class App extends Component {
-  home = () => {
+  splash = () => {
     return (
-      <div className="App">
+      <div className='splash'>
         <h1>Welcome to CoTrip</h1>
       </div>
     );
   };
   render() {
     return (
-      <div>
+      <div className='App'>
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/">Splash</Link>
         </nav>
         <main>
-          <Route path="/" exact render={this.home}></Route>
+          <Route path="/" exact render={this.splash}></Route>
         </main>
       </div>
     );
