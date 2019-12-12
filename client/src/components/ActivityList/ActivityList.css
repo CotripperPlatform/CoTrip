@@ -5,7 +5,7 @@
 }
 .ActivityList__header {
   font-family: var(--default-font);
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   color: var(--purple);
 }
 .ActivityList__activities-container {
@@ -14,12 +14,12 @@
   flex-wrap: wrap;
 }
 .ActivityList .Card {
-  min-width: 10rem;
-  height: 7.19rem;
-  margin: 2.5rem 2.5rem 0 0;
-  border-radius: 3px;
-  padding: 0.62rem;
-  font-size: 1.5rem;
+  min-width: 6rem;
+  height: 4.32rem;
+  margin: 1.5rem 1.5rem 0 0;
+  border-radius: 1.8px;
+  padding: 0.37rem;
+  font-size: 0.9rem;
   color: var(--white);
   box-shadow: none;
   text-align: center;
@@ -33,13 +33,44 @@
   background-color: var(--red);
 }
 
-@media all and (max-width: 320px) {
-}
 @media all and (min-width: 321px) and (max-width: 576px) {
+  .ActivityList__header {
+    font-size: 1.75rem;
+  }
+  .ActivityList .Card {
+    min-width: 7rem;
+    height: 5.03rem;
+    margin: 1.75rem 1.75rem 0 0;
+    border-radius: 2.1px;
+    padding: 0.43rem;
+    font-size: 1.2rem;
+  }
 }
 @media all and (min-width: 577px) and (max-width: 768px) {
+  .ActivityList__header {
+    font-size: 2rem;
+  }
+  .ActivityList .Card {
+    min-width: 8rem;
+    height: 5.75rem;
+    margin: 2rem 2rem 0 0;
+    border-radius: 2.4px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
 }
 @media all and (min-width: 769px) and (max-width: 992px) {
+  .ActivityList__header {
+    font-size: 2.25rem;
+  }
+  .ActivityList .Card {
+    min-width: 9rem;
+    height: 6.47rem;
+    margin: 2.5rem 2.5rem 0 0;
+    border-radius: 2.7px;
+    padding: 0.56rem;
+    font-size: 1.5rem;
+  }
 }
 @media all and (min-width: 993px) {
   .ActivityList__header {
@@ -49,6 +80,7 @@
     min-width: 10rem;
     height: 7.19rem;
     margin: 2.5rem 2.5rem 0 0;
+    border-radius: 3px;
     padding: 0.62rem;
     font-size: 1.5rem;
   }
