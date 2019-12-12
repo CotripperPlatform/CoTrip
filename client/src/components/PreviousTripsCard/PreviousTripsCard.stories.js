@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import PreviousTripsCard from "./PreviousTripsCard";
 import TripCard from "../TripCard/TripCard";
 import Card from "../Card/Card";
-import example1 from "../../../../assets/images/card_small2.png";
+import example1 from "../../assets/images/card_small2.png";
 
 storiesOf("PreviousTripsCard", module)
   .add("Default, Two Trips", () => (
