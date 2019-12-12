@@ -1,20 +1,33 @@
-import React, { Component } from "react";
+import React from "react";
 import "./OnboardingPills.css";
 import Pill from "../Pill/Pill";
 
-class OnboardingPills extends Component {
-  constructor(props) {
-    super(props);
-    console.log(props);
+const pillList = [
+  "Parenting",
+  "Teens",
+  "Arts",
+  "Traveling",
+  "Primary School",
+  "Sports",
+  "Meetups",
+  "Secondary School",
+  "Flights",
+  "Infants",
+  "Budgeting",
+  "Health & Wellness"
+];
 
-    this.state = {
-      classList: "OnboardingPills"
-    };
-  }
+const OnboardingPills = props => {
+  let classList = `OnboardingPills`;
+  const renderPills = pillList.map((pill, index) => {
+    return <Pill className="OnboardingPills__pill-container" key={index} text={pill} />;
+  });
 
-  render() {
-    return <Pill />;
-  }
-}
+  return (
+    <div className={classList}>
+      <div className="OnboardingPills__inner-container">{renderPills}</div>
+    </div>
+  );
+};
 
 export default OnboardingPills;
