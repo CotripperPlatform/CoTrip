@@ -11,7 +11,7 @@ const NewUserUpload = () => {
   return (
     <div className='NewUserUpload'>
       <p className='NewUserUpload__p'>Upload a profile photo</p>
-      <Button text="browse files" color="pink" size="small" handleClick={handleClick} />
+      <Button text="Browse Files" color="pink" size="extra-small" handleClick={handleClick} />
     </div>
   );
 };

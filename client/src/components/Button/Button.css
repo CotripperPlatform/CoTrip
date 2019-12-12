@@ -21,6 +21,10 @@
   padding: 0.13em 2.71em;
   font-size: 36px;
 }
+.Button--extra-small {
+  padding: 0.30em 2.35em;
+  font-size: 15px;
+}
 .Button--small {
   padding: 0.42em 3.35em;
   font-size: 18px;
