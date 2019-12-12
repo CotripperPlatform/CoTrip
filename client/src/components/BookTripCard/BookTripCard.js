@@ -15,12 +15,12 @@ const BookTripCard = props => {
 
   return (
     <Card color="pink" size="large">
-      {props.children[0]}
-      <div>
-        {props.children[1]}
-        {props.children[2]}
+      {title}
+      <div className="container">
+        {image1}
+        {image2}
       </div>
-      <Link to={props.to}>{props.children[3]}</Link>
+      <Link to={props.to}>{link}</Link>
     </Card>
   );
 };
