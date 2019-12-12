@@ -30,3 +30,25 @@
 .OnboardingOne .Button {
   width: 11.4rem;
 }
+
+@media all and (max-width: 320px) {
+  .OnboardingOne__container {
+    width: 0.5rem;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+  }
+  .OnboardingOne .InputTextField__container--default {
+    min-width: 11.5rem;
+    max-width: 11.5rem;
+    font-size: 1rem;
+    width: 0.5rem;
+    padding: 0.7rem 1.4rem;
+  }
+  .OnboardingOne__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

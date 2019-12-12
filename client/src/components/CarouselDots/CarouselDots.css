@@ -6,7 +6,6 @@
   transition: all 0.5s ease;
 }
 
-
 .CarouselDot {
   display: inline-block;
   width: 20px;
@@ -18,11 +17,10 @@
   border-radius: 20px;
 }
 
-
 .CarouselDot__border {
   border: 2px solid var(--purple);
 }
 
 .CarouselDot--active {
-  background-color: var(--purple)
+  background-color: var(--purple);
 }
