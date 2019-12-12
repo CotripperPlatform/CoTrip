@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import TripCard from "./TripCard";
-import example1 from "../../../../assets/images/card_small2.png";
+import example1 from "../../assets/images/card_small2.png";
 
 storiesOf("TripCard", module)
   .add("Default", () => (
