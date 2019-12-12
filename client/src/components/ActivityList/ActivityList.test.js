@@ -11,6 +11,6 @@ describe('ActivityList component', () => {
     // Shallow rendering renders a component without rendering any of its children
     const component = shallow(<ActivityList />)
     // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
+  // expect(component.contains('Your name')).toBe(true)
   })
 })

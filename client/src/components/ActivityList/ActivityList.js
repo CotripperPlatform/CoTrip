@@ -1,46 +1,23 @@
-import React, { Component } from "react";
+import React from "react";
+import Card from "../Card/Card";
 import "./ActivityList.css";
 
-class ActivityList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      classList: "ActivityList"
-    };
-  }
-
-  render() {
-    const renderActivities = () => {
-      if (this.props.type === "mom") {
-        const momActivities = this.props.momActivityList.map((activity, index) => {
-          return (
-            <div key={index} className="ActivityList__activity ActivityList__mom">
-              <span className="ActivityList__activities">{activity}</span>
-            </div>
-          );
-        });
-        return <div className="ActivityList__activity-container">{momActivities}</div>;
-      } else if (this.props.type === "kids") {
-        const kidsActivities = this.props.kidsActivityList.map((activity, index) => {
-          return (
-            <div key={index} className="ActivityList__activity ActivityList__kids">
-              <span className="ActivityList__activities">{activity}</span>
-            </div>
-          );
-        });
-        return <div className="ActivityList__activity-container">{kidsActivities}</div>;
-      }
-    };
-
+const ActivityList = props => {
+  let classList = `ActivityList`;
+  let activities = props.activities.map((activity, index) => {
     return (
-      <div className={this.state.classList}>
-        <div className="ActivityList__activities-container">
-          <h1 className="ActivityList__activity-header">{this.props.label}</h1>
-          {renderActivities()}
-        </div>
-      </div>
+      <Card key={index} size="small" className={classList}>
+        {activity}
+      </Card>
     );
-  }
-}
+  });
+
+  return (
+    <div className={classList}>
+      <header className="ActivityList__header">Activities for Mom</header>
+      {activities}}
+    </div>
+  );
+};
 
 export default ActivityList;
