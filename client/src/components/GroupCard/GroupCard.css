@@ -7,21 +7,20 @@
     background-repeat: no-repeat;
 }
 
-/* .GroupCard__text-container {
+.GroupCard__text-container {
     position: absolute;
-    width: 19rem;
-    background-color: red;
-} */
+    width: 14rem;
+}
 
 .GroupCard__details {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .GroupCard__group-name {
-    font-size: 150%;
-    padding: 10px;
+    font-size: 1.5rem;
+    padding: .7rem;
     font-weight: var(--title-weight);
 }
