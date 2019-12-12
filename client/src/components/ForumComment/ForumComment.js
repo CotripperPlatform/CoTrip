@@ -2,7 +2,6 @@ import React from 'react';
 import "./ForumComment.css";
 import  '../../App.css';
 import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
-import image from "../Assets/images/profile_large.png";
 
 
 export default function ForumComment(props) {
@@ -15,14 +14,14 @@ export default function ForumComment(props) {
             <p className="ForumComment__name">{props.name}</p>
           </div>
           {props.comment ? (
-            <CommentBody
+            <ForumComment
               name={props.comment.name}
               date={props.comment.date}
               time={props.comment.time}
               body={props.comment.body}
             />
           ) : (
-            <CommentBody />
+            <ForumComment />
           )}
         </div>
         </div>
