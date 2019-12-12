@@ -4,7 +4,7 @@
     flex-direction: column;
 }
 
-header {
+.UpcomingTripsCard__header {
     font-size: 2.25rem;
     text-align: center;
     color: var(--white);
@@ -41,7 +41,7 @@ ul {
 }
 
 @media screen and (max-width: 576px) {
-    header {
+    .UpcomingTripsCard__header {
         padding: .3rem;
     }
     
