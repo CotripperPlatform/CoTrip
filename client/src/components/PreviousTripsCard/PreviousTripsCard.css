@@ -89,17 +89,15 @@
   .PreviousTripCard__container h1 {
     color: var(--white);
     width: 80%;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     transform: scale(1);
     text-align: center;
   }
 
   .PreviousTripCard__arrow {
-    top: 50%;
-  }
-
-  .PreviousTripCard__arrow {
-    right: -0.5%;
+    width: 32px;
+    top: 1rem;
+    left: 13.5rem;
     transform: scale(0.9);
   }
 }
