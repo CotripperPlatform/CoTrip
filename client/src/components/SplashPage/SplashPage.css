@@ -1,7 +1,8 @@
 .SplashPage {
-  height: 100%;
-  background: var(--splash-background-mobile) no-repeat center center fixed;
-  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  background: var(--splash-background-mobile) no-repeat center -40px fixed;
+  background-size: cover;
   font-family: var(--default-font);
   color: var(--black);
   text-align: center;
@@ -21,6 +22,12 @@
 @media only screen and (min-width: 576px) {
   .SplashPage {
     background: var(--splash-background) no-repeat center center fixed;
-    background-size: 100% 100%;
+    background-size: cover;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .SplashPage {
+    background: var(--splash-background) no-repeat center top fixed;
+    background-size: cover;
   }
 }
