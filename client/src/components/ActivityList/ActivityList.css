@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 80rem;
   height: 13.75rem;
+  padding: 1.25rem;
 }
 .ActivityList__header {
   font-family: var(--default-font);
@@ -13,18 +13,25 @@
 .ActivityList__activities-container {
   display: inline-block;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 .ActivityList .Card {
-  min-width: 11.25rem;
-  height: 8.45rem;
+  min-width: 10rem;
+  height: 7.19rem;
   justify-content: center;
   align-items: center;
-  background-color: var(--red);
+  margin: 2.5rem 2.5rem 0 0;
   border-radius: 3px;
+  padding: 0.62rem;
   box-shadow: none;
   font-size: 1.5rem;
   font-weight: var(--title-weight);
+  text-align: center;
   color: var(--white);
+}
+.ActivityList--purple .Card {
+  background-color: var(--purple);
+}
+.ActivityList--red .Card {
+  background-color: var(--red);
 }

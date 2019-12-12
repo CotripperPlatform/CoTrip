@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 import "./ActivityList.css";
 
 const ActivityList = props => {
+  let { title, color } = props;
   let activities = props.activities.map((activity, index) => {
     return (
       <Card key={index} size="small" className="ActivityList__card">
@@ -12,8 +13,8 @@ const ActivityList = props => {
   });
 
   return (
-    <div className="ActivityList">
-      <header className="ActivityList__header">Activities for Mom</header>
+    <div className={`ActivityList ActivityList--${color}`}>
+      <header className="ActivityList__header">{title}</header>
       <div className="ActivityList__activities-container">{activities}</div>
     </div>
   );
