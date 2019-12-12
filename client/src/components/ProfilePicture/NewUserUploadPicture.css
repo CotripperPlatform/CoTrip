@@ -1,0 +1,19 @@
+.NewUserUpload {
+  height: 233px;
+  width: 233px;
+  border: solid var(--yellow) 1px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.NewUserUpload__p {
+  font-family: var(--default-font);
+  font-size: 1.5rem;
+  font-weight: var(--title-weight);
+  color: var(--purple);
+  text-align: center;
+}
+
+

@@ -31,6 +31,10 @@
   /* Default font */
   --default-font: "Reem Kufi", sans-serif;
   --paragraph-font: "Open Sans", sans-serif;
+  /* Font Weights */
+  --paragraph-weight: 400;
+  --banner-weight: 700;
+  --title-weight: 500;
   /* Images */
   --comment-black: url("./assets/images/comment_black.png");
   --edit-button: url("./assets/images/edit_button.png");
@@ -51,8 +55,4 @@
   --social-pinterest: url("./assets/images/social_pinterest.png");
   --splash-background: url("./assets/images/splash_background.png");
   --text-box-search: url("./assets/images/text_box_search.png");
-  /* Font Weights */
-  --paragraph-weight: 400;
-  --banner-weight: 700;
-  --title-weight: 500;
 }
