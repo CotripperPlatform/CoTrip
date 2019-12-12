@@ -35,6 +35,12 @@
   height: 125px;
 }
 
+.Card--extra-small {
+  width: 1rem;
+  min-width: 180px;
+  height: 140px;
+}
+
 .Card img {
   width: 1rem;
   display: block;
