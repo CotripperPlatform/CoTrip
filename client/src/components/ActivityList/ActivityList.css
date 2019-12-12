@@ -1,4 +1,5 @@
-.ActivityList {
+.ActivityList .Card {
+  background-color: red;
 }
 .ActivityList__header {
   font-family: var(--default-font);
