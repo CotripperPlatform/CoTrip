@@ -1,12 +1,12 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import MediaCard from './MediaCard';
-import books from '../../../../assets/images/media-card-1.png'
-import happiness from '../../../../assets/images/media-card-2.png';
-import van from '../../../../assets/images/media-card-3.png';
-import nightSky from '../../../../assets/images/media-card-4.png';
-import waterfall from '../../../../assets/images/media-card-5.png';
-import flight from '../../../../assets/images/media-card-6.png';
+import books from '../../assets/images/media-card-1.png'
+import happiness from '../../assets/images/media-card-2.png';
+import van from '../../assets/images/media-card-3.png';
+import nightSky from '../../assets/images/media-card-4.png';
+import waterfall from '../../assets/images/media-card-5.png';
+import flight from '../../assets/images/media-card-6.png';
 
 storiesOf('Media Cards', module)
   .add("Default", () => <MediaCard />)

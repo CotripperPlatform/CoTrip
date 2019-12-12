@@ -48,3 +48,24 @@
 .PostBody__text {
   line-height: 125.3%;
 }
+
+@media only screen and (max-width: 800px) {
+  .PostBody {
+    width: 17rem;
+  }
+  .PostBody__top-right {
+    flex-direction: row;
+  }
+  .PostBody__date {
+    margin-bottom: 0;
+    margin-right: 0.3rem;
+  }
+  .PostBody__top {
+    flex-direction: column;
+  }
+  .PostBody__text,
+  .PostBody__top-right,
+  .PostBody__hashtags {
+    font-size: 0.8rem;
+  }
+}
