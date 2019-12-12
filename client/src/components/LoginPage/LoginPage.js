@@ -1,49 +1,36 @@
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import InputTextField from "../InputTextField/InputTextField";
 import Button from "../Button/Button";
 //import Logo from "../Logo/Logo";
 import "./LoginPage.css";
 import LogoImg from "../../assets/images/login_logo.png";
 
-// Class Based React Component
-class LoginPage extends Component{
-  constructor(props){
-    super(props);
-    console.log(props);
+const LoginPage = (props) => {
+  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-    // Default CSS class to apply to the Component
-    this.state = {
-      username: "",
-      password: ""
-    };
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(email, password);
   }
 
-
-  // Runs after Component is loaded in the broswer
-  componentDidMount() {
-    console.log("Component did mount");
+  function handleClick(e) {
+    e.preventDefault();
   }
 
-
-  // Runs after a component has been updated
-  componentDidUpdate() {}
-
-
-  // Runs right before a component is removed from the DOM
-  componentWillUnmount() {}
-
-  render(){
-    return(
-        <div className="LoginPage">
-          <img className="LogoLogin" src={LogoImg}></img>
-          <InputTextField name="email" placeholder="Email"/>
-          <InputTextField name="password" placeholder="Password"/>
-          <p className="ForgotPass">Forgot your password?</p>
-          <p className="ForgotPass">Need an account?</p>
-          <Button id="button" text="Login"/>
-        </div>
-    );
-  }
+  return(
+      <form className="LoginPageForm" onSubmit={handleSubmit}>
+        <img className="LogoLogin" src={LogoImg} alt="CoTripper"></img>
+        <InputTextField name="email" placeholder="Email" value={email}
+            onChange={e => setEmail(e.target.value)}/>
+        <InputTextField name="password" placeholder="Password" value={password}
+            onChange={e => setPassword(e.target.value)}/>
+        <p className="ForgotPass">Forgot your password?</p>
+        <p className="ForgotPass">Need an account?</p>
+        <Button id="button" text="Login" onClick={handleClick}/>
+      </form>
+  );
 }
 
 export default LoginPage;
