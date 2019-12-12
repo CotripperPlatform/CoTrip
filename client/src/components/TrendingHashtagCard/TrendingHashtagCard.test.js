@@ -37,4 +37,26 @@ describe("TrendingHashtagCard component", () => {
       expect(component.length).toBe(10);
     });
   });
+  describe("Data is empty", () => {
+    const props = {
+      data: []
+    };
+    let wrapper = setUp(props);
+    it("Should render without errors", () => {
+      const component = findByTestAttribute(wrapper, ".TrendingHashtagCard__hashtag");
+      expect(component.length).toBe(0);
+    });
+  });
+  describe("Have NO props", () => {
+    let wrapper;
+    beforeEach(() => {
+      const props = {
+        data: null
+      };
+      wrapper = setUp(props);
+    });
+    it("Should render without errors", () => {
+      expect(wrapper.length).toBe(1);
+    });
+  });
 });
