@@ -5,7 +5,7 @@ import "./ActivityList.css";
 const ActivityList = props => {
   let activities = props.activities.map((activity, index) => {
     return (
-      <Card key={index} className="ActivityList__card">
+      <Card key={index} size="small" className="ActivityList__card">
         {activity}
       </Card>
     );
@@ -14,7 +14,7 @@ const ActivityList = props => {
   return (
     <div className="ActivityList">
       <header className="ActivityList__header">Activities for Mom</header>
-      {activities}
+      <div className="ActivityList__activities-container">{activities}</div>
     </div>
   );
 };

@@ -1,6 +1,30 @@
-.ActivityList .Card {
-  background-color: red;
+.ActivityList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80rem;
+  height: 13.75rem;
 }
 .ActivityList__header {
   font-family: var(--default-font);
+  font-size: 2.25rem;
+  color: var(--purple);
+}
+.ActivityList__activities-container {
+  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ActivityList .Card {
+  min-width: 11.25rem;
+  height: 8.45rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+  border-radius: 3px;
+  box-shadow: none;
+  font-size: 1.5rem;
+  font-weight: var(--title-weight);
+  color: var(--white);
 }
