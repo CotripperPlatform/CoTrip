@@ -1,6 +1,8 @@
 import React from 'react';
 import "./ForumComment.css";
 import  '../../App.css';
+import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
+import image from "../Assets/images/profile_large.png";
 
 
 export default function ForumComment(props) {
