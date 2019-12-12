@@ -63,7 +63,7 @@
   }
 
   .Navbar__logo {
-    margin: 0 0 0 44%;
+    margin: 0 0 0 45%;
   }
 }
 
@@ -75,6 +75,6 @@
 /* Small devices */
 @media only screen and (max-width: 576px) {
   .Navbar__logo {
-    margin: 0 0 0 37%;
+    margin: 0 0 0 40%;
   }
 }
