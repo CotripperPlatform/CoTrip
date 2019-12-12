@@ -25,4 +25,6 @@ storiesOf("Card", module)
         <Card color="pink" size="small" />
       </Card>
     </div>
-  ));
+  ))
+  .add("Card, Purple, Smedium", () => <Card color="purple" size="extra-small" />)
+  .add("Card, Red, Smedium", () => <Card color="red" size="extra-small" />);
