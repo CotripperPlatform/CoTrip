@@ -10,7 +10,7 @@ const InteractionCard = props => {
   // Default Class to apply to Component
   return (
     <div className="InteractionCard">
-      <ProfilePicture to="#" image={Image} />
+      <ProfilePicture to={props.to} image={Image} />
       <Button text="Connect" color="pink" size="small" onClick={props.handleClick} />
       <Button text="Message" color="outline" size="small" onClick={props.handleClick} />
     </div>
