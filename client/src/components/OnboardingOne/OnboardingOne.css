@@ -1,32 +1,32 @@
 .OnboardingOne {
   font-family: var(--default-font);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 72.4%, rgba(255, 255, 255, 0.75) 100%),
-    #ffcb08;
-  width: 100vw;
-  padding: 50px 0;
+}
+.OnboardingOne__wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
-
-.OnboardingOne__logo-container {
-  /* background-color: var(--red); */
+.OnboardingOne__form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.OnboardingOne-header-container {
-}
-.OnboardingOne__input-field-container {
-  margin: 2vw 0;
-}
-.OnboardingOne__logo {
-  min-width: 20vw;
-  max-width: 20vw;
+.OnboardingOne__header {
   margin: 0;
-  padding: 0;
+}
+.OnboardingOne__container {
+  margin: 1rem 0;
 }
 .OnboardingOne__button-container {
   display: flex;
   justify-content: center;
+  margin: 1rem 0;
+}
+.OnboardingOne .InputTextField__container--default {
+  height: 1rem;
+  width: 22.5rem;
+}
+
+.OnboardingOne .Button {
+  width: 11.4rem;
 }

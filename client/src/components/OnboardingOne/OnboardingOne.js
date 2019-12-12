@@ -4,31 +4,51 @@ import InputTextField from "../InputTextField/InputTextField.js";
 import Button from "../Button/Button.js";
 import OnboardingParent from "../OnboardingParent/OnboardingParent";
 
-// Class Based React Component
 class OnboardingOne extends Component {
   constructor(props) {
     super(props);
     console.log(props);
 
-    // Default CSS class to apply to the Component
     this.state = {
       classList: "OnboardingOne"
     };
   }
 
-  // Runs after Component is loaded in the broswer
-  componentDidMount() {}
-
-  // Runs after a component has`               ` been updated
-  componentDidUpdate() {}
-
-  // Runs right before a component is removed from the DOM
-  componentWillUnmount() {}
-
   render() {
     return (
       <OnboardingParent>
-        <div className={this.state.classList}></div>
+        <div className={this.state.classList}>
+          <div className="OnboardingOne__wrapper">
+            <form className="OnboardingOne__form" action="">
+              <h1 className="OnboardingOne__header">Step One</h1>
+              <div className="OnboardingOne__container">
+                <InputTextField type="text" name="name" placeholder="Name"></InputTextField>
+              </div>
+              <div className="OnboardingOne__container">
+                <InputTextField type="text" name="email" placeholder="Email"></InputTextField>
+              </div>
+              <div className="OnboardingOne__container">
+                <InputTextField type="text" name="password" placeholder="Password"></InputTextField>
+              </div>
+              <div className="OnboardingOne__container">
+                <InputTextField
+                  className="OnboardingOne__container"
+                  type="text"
+                  name="confirm password"
+                  placeholder="Confirm Password"
+                ></InputTextField>
+              </div>
+              <div className="OnboardingOne__button-container">
+                <Button
+                  className="OnboardingOne__button"
+                  text="Next"
+                  size="small"
+                  handleClick={() => this.props.handleClick}
+                ></Button>
+              </div>
+            </form>
+          </div>
+        </div>
       </OnboardingParent>
     );
   }
