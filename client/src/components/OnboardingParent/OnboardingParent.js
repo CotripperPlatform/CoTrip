@@ -13,7 +13,6 @@ const OnboardingParent = props => {
           <CarouselDots
             numberOfDots={3}
             activeLocation={3}
-            border
             onStatusChange={() => props.statusChange}
           />
         </div>

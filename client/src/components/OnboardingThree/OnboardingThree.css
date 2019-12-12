@@ -11,11 +11,10 @@
 }
 
 img {
-  margin-bottom: 30px;
-  width: 200px;
+  margin-bottom: 20px;
 }
 .InputTextField__container--default {
-  margin-bottom: 4%;
+  margin-bottom: 5%;
 }
 
 .onboarding-three-text {
@@ -27,20 +26,26 @@ img {
   color: var(--black);
   font-family: var(--default-font);
 }
-
+.Button {
+  position: relative;
+  top: -2rem;
+  margin-top: 8%;
+}
 .onboarding-three-link {
   color: var(--black);
   font-size: 18px;
   line-height: 27px;
   text-align: center;
   position: relative;
+  top: 2rem;
+  margin-bottom: 5%;
 }
-/* .filler-btn {
-  width: 302px;
-  height: 65px;
-  background-color: var(--white);
-  border-radius: 3px;
-  font-size: 36px;
-  font-family: var(--default-font);
-  margin-top: 30px;
-} */
+.CarouselDots {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+  position: relative;
+  top: -4rem;
+}
