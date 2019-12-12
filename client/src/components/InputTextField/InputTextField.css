@@ -4,12 +4,13 @@
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 3px;
-  padding: 1rem 2rem;
+  padding: 0.7rem 2rem;
   width: 100%;
   min-width: 400px;
   max-width: 400px;
   font-size: 20px;
   font-family: var(--default-font);
+  border: 2px solid black;
 }
 
 .InputTextField__container--small {
