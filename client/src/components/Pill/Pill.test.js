@@ -13,9 +13,9 @@ describe('Pill component', () => {
 	// we will write one individual test
   it('Should render defaults without errors if no props are given to the component', () => {
     const wrapper = mount(<Pill/>)
-
-
-    expect(wrapper.find('.Pill').exists()).toBe(true)
+    let {text, size, color, inactiveColor, selectId, shadow} = wrapper.props();
+    let propsAreCorrect = text == "Default" && size == "large" && color == "pink" && inactiveColor == 'red' && selectId == 0 && shadow == '';
+    expect(propsAreCorrect).toBe(true)
   })
   it("Should change colors upon click when the active prop is set", ()=>{
 
