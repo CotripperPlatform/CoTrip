@@ -4,9 +4,9 @@ import { storiesOf } from '@storybook/react';
 
 storiesOf('PersonCard', module)
   .add("Default", () => <PersonCard
-  name="Lindsay L." 
-  location="Washington D.C." 
-  interests={[ 
+  PersonCard__name="Lindsay L." 
+  PersonCard__location="Washington D.C." 
+  PersonCard__interests={[ 
   { url: "#", interests: "veganism" },
   { url: "#", interests: "budgeting" },
   { url: "#", interests: "travel" },
