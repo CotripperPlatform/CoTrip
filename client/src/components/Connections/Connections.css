@@ -20,6 +20,15 @@
   margin: 0 2rem 0 0;
 }
 
+.Connections__person__div {
+  height: 148px;
+  width: 148px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
 .Connections--name {
   font-size: 2rem;
   font-family: var(--default-font);
