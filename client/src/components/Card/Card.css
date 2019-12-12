@@ -19,7 +19,7 @@
 
 .Card--large {
   width: 1rem;
-  min-width: 500px;
+  min-width: 31rem;
   height: 260px;
 }
 
@@ -71,7 +71,15 @@
   text-decoration: none;
 }
 
+.Card__discover-link:hover {
+  transform: scale(1.1);
+}
 .Card__discover-link a:hover {
   color: var(--yellow);
-  transform: scale(1.1, 1.1);
+}
+
+@media only screen and (max-width: 576px) {
+  .Card--large {
+    min-width: 16rem;
+  }
 }
