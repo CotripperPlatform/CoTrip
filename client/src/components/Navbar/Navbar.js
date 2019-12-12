@@ -18,38 +18,50 @@ const Navbar = props => {
       </div>
       <div className="Navbar__main">
         <div className="Navbar__menu">
-          <NavLink
-            text="My Directory"
-            to="/"
-            menuList={[
-              { text: "Link 1", to: "/" },
-              { text: "Link 2", to: "/" }
-            ]}
-          />
-          <NavLink
-            text="Community"
-            to="/"
-            menuList={[
-              { text: "Link 1", to: "/" },
-              { text: "Link 2", to: "/" }
-            ]}
-          />
-          <NavLink
-            text="Forum"
-            to="/"
-            menuList={[
-              { text: "Link 1", to: "/" },
-              { text: "Link 2", to: "/" }
-            ]}
-          />
-          <NavLink
-            text="Book A Trip"
-            to="/"
-            menuList={[
-              { text: "Link 1", to: "/" },
-              { text: "Link 2", to: "/" }
-            ]}
-          />
+          <div Navbar__link-1>
+            <NavLink
+              text="My Directory"
+              to="/"
+              menuList={[
+                { text: "Link 1", to: "/" },
+                { text: "Link 2", to: "/" }
+              ]}
+            />
+            <div className="Navbar__triangle"></div>
+          </div>
+          <div Navbar__link-2>
+            <NavLink
+              text="Community"
+              to="/"
+              menuList={[
+                { text: "Link 1", to: "/" },
+                { text: "Link 2", to: "/" }
+              ]}
+            />
+            <div className="Navbar__triangle"></div>
+          </div>
+          <div Navbar__link-3>
+            <NavLink
+              text="Forum"
+              to="/"
+              menuList={[
+                { text: "Link 1", to: "/" },
+                { text: "Link 2", to: "/" }
+              ]}
+            />
+            <div className="Navbar__triangle"></div>
+          </div>
+          <div Navbar__link-4>
+            <NavLink
+              text="Book A Trip"
+              to="/"
+              menuList={[
+                { text: "Link 1", to: "/" },
+                { text: "Link 2", to: "/" }
+              ]}
+            />
+            <div className="Navbar__triangle"></div>
+          </div>
         </div>
         <div className="Navbar__right">
           <div className="Navbar__profile">

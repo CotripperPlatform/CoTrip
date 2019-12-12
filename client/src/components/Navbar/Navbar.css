@@ -39,6 +39,20 @@
   display: none;
 }
 
+.Navbar__triangle {
+  width: 0;
+  height: 0;
+  border-left: 31px solid transparent;
+  border-right: 31px solid transparent;
+  border-bottom: 21px solid var(--purple);
+  margin: -17px auto;
+}
+
+.Navbar__link-4 {
+  display: flex;
+  justify-content: center;
+}
+
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
   
