@@ -89,6 +89,6 @@
 
 @media only screen and (max-width: 576px) {
   .Card--large {
-    min-width: 16rem;
+    min-width: 17rem;
   }
 }
