@@ -3,38 +3,37 @@ import "./ForumComment.css";
 import  '../../App.css';
 import img from "../../Assets/mom.png";
 
-//Function based React Component
-const ForumComment = (props) => {
 
-    let classList = `ForumComment`;
-
-    return(
-        <div className={classList}>
-        {/* <img className="profile" src={props.img}></img> */}
-        <img className="ForumComment__Img" img src={img} />
-        <p className="ForumComment__Name">{props.ForumComment__Name}</p>
-          <p className="ForumComment__Comment">
-          {props.ForumComment__Comment} 
-          </p>
-          <p className="ForumComment__Date">
-          {props.ForumComment__Date} 
-          </p>
-          <p className="ForumComment__Likes">
-             Likes:{props.ForumComment__Likes}
-          </p>
-          <p className="ForumComment__Replies">
-              Replies:{props.ForumComment__Replies}
-          </p>
+export default function ForumComment(props) {
+  return (
+    <div className="ForumComment">
+      <div className="ForumComment__top-middle">
+        <div className="ForumComment__top">
+          <div className="ForumComment__face-card">
+            <ProfilePicture type="small" link={props.to} image={props.image} />
+            <p className="ForumComment__name">{props.name}</p>
+          </div>
+          {props.comment ? (
+            <CommentBody
+              name={props.comment.name}
+              date={props.comment.date}
+              time={props.comment.time}
+              body={props.comment.body}
+            />
+          ) : (
+            <CommentBody />
+          )}
         </div>
-      );
-    }
-
-
-
-
-
-
-
-
-
-export default ForumComment;
+        </div>
+      <div className="ForumComment__likes-comments">
+            <p>
+              {props.likes}
+              {" Likes"}
+            </p>
+            <p>
+              {props.replies}
+              {" Replies"}
+            </p>
+        </div>
+        </div>
+        )};
