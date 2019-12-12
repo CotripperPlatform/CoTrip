@@ -16,6 +16,9 @@
 .Card--pink {
   background-color: var(--pink);
 }
+.Card--red {
+  background-color: var(--red);
+}
 
 .Card--large {
   width: 1rem;
