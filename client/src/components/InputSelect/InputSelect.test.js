@@ -51,16 +51,9 @@ describe("InputSelect component", () => {
       expect(component.length).toBe(1);
     });
   });
-  // describe("Has NO Props", () => {
-  //   let wrapper;
-  //   let mockFunction;
-  //   beforeEach(() => {
-  //     const props = null;
-  //     wrapper = setUp(props);
-  //   });
-  //   it("Should render without error", () => {
-  //     const component = findByTestAttribute(wrapper, ".InputSelect");
-  //     expect(component.length).toBe(1);
-  //   });
-  // });
+  describe("State", () => {
+    it("Should have the initial state of select", () => {
+      expect(wrapper.state()).toEqual({ value: "select" });
+    });
+  });
 });
