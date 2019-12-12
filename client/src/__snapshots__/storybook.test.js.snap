@@ -1,0 +1,5634 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Burger Default - active 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Burger Burger--active"
+      onClick={[Function]}
+    >
+      <div
+        className="Burger__line"
+      />
+      <div
+        className="Burger__line"
+      />
+      <div
+        className="Burger__line"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Burger Default - inactive 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Burger false"
+      onClick={[Function]}
+    >
+      <div
+        className="Burger__line"
+      />
+      <div
+        className="Burger__line"
+      />
+      <div
+        className="Burger__line"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Comment Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--color Button--size Button--textColor-text Button--comment"
+      onClick={[Function]}
+    >
+      <img
+        alt="Comment"
+        src="comment_black.png"
+      />
+      Comment
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Default Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--color Button--large Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Outline Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--outline Button--large Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Pink Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--pink Button--large Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Purple Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--purple Button--large Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Red Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--red Button--large Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Yellow Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--yellow Button--large Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Large Yellow w/ Black Text Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--yellow Button--large Button--black-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Like Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--color Button--size Button--textColor-text Button--like"
+      onClick={[Function]}
+    >
+      <img
+        alt="Like"
+        src="heart_black.png"
+      />
+      Like
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Like and Comment Buttons in Container 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      <button
+        className="Button Button--color Button--size Button--textColor-text Button--like"
+        onClick={[Function]}
+      >
+        <img
+          alt="Like"
+          src="heart_black.png"
+        />
+        Like
+      </button>
+      <button
+        className="Button Button--color Button--size Button--textColor-text Button--comment"
+        onClick={[Function]}
+      >
+        <img
+          alt="Comment"
+          src="comment_black.png"
+        />
+        Comment
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Default Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--color Button--size Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Outline Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--outline Button--size Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Pink Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--pink Button--size Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Purple Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--purple Button--size Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Red Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--red Button--size Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Yellow Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--yellow Button--size Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Normal Yellow w/ Black Text Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--yellow Button--size Button--black-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Default Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--color Button--small Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Outline Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--outline Button--small Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Pink Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--pink Button--small Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Purple Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--purple Button--small Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Red Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--red Button--small Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Yellow Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--yellow Button--small Button--textColor-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button Small Yellow w/ Black Text Button 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <button
+      className="Button Button--yellow Button--small Button--black-text Button--none"
+      onClick={[Function]}
+    >
+      Submit
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Blank 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Blank, Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--small
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Discover New Groups 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--medium
+      Card__outline"
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <div
+        className="Card__discover-link"
+      >
+        <a
+          href="/"
+        >
+          Discover New Groups
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Picture BG, Medium 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--medium
+      "
+      style={
+        Object {
+          "backgroundImage": "url(card_small3.png)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Picture Hawaii, Medium 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--medium
+      "
+      style={
+        Object {
+          "backgroundImage": "url(https://wallpaperaccess.com/full/144067.jpg)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Pink 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--pink Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Pink, Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--pink Card--small
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Purple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Purple, Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--small
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card, Purple, Smedium 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--extra-small
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Large Card with Small Card inside 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div>
+      <div
+        className="Card Card--purple Card--large
+      "
+        style={
+          Object {
+            "backgroundImage": "url(null)",
+          }
+        }
+      >
+         
+        <div
+          className="Card Card--pink Card--small
+      "
+          style={
+            Object {
+              "backgroundImage": "url(null)",
+            }
+          }
+        >
+           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots CarouselDots Onboarding Step 2 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#FFCB08",
+        }
+      }
+    >
+      <div
+        className="CarouselDots"
+      >
+        <div
+          className="CarouselDot   CarouselDot--active  "
+          id={1}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot   "
+          id={2}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot   "
+          id={3}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot   "
+          id={4}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot   "
+          id={5}
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots CarouselDots Without Border 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "#FAFAFA",
+        }
+      }
+    >
+      <div
+        className="CarouselDots"
+      >
+        <div
+          className="CarouselDot  CarouselDot__border   "
+          id={1}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot  CarouselDot__border   "
+          id={2}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot  CarouselDot__border   CarouselDot--active  "
+          id={3}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot  CarouselDot__border   "
+          id={4}
+          onClick={[Function]}
+        />
+        <div
+          className="CarouselDot  CarouselDot__border   "
+          id={5}
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Comment Body 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="CommentBody"
+    >
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+      </p>
+      <div
+        className="CommentBody__date"
+      >
+        <p>
+          <span>
+            December 9
+          </span>
+          <span>
+            10:08 am
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ExtraUsers 2 Extra Users 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ExtraUsers"
+    >
+      <a
+        className="ExtraUsers__text"
+        href="/Inbox/Recipients"
+        onClick={[Function]}
+      >
+        +
+        2
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ExtraUsers 4 Extra Users  1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ExtraUsers"
+    >
+      <a
+        className="ExtraUsers__text"
+        href="/Inbox/Recipients"
+        onClick={[Function]}
+      >
+        +
+        4
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ExtraUsers No Extra Users 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots Footer Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Footer"
+    >
+      <div
+        className="Footer--left"
+      >
+        <a
+          href=""
+        >
+          Sitemap
+        </a>
+      </div>
+      <div
+        className="Footer--center"
+      >
+        <a
+          href="mailto:info@cotripper.co?"
+          target="_blank"
+        >
+          info@cotripper.co
+        </a>
+      </div>
+      <div
+        className="Footer--right"
+      >
+        <a
+          href=""
+        >
+          Instagram
+        </a>
+        <a
+          href=""
+        >
+          Facebook
+        </a>
+        <a
+          href=""
+        >
+          Meetup
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ForumPost Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ForumPost"
+    >
+      <div
+        className="ForumPost__top-middle"
+      >
+        <div
+          className="ForumPost__top"
+        >
+          <div
+            className="ForumPost__face-card"
+          >
+            <div
+              className="ProfilePicture ProfilePicture--small"
+            >
+              <img
+                alt="profile-picture"
+                src="profile_large.png"
+              />
+            </div>
+            <p
+              className="ForumPost__name"
+            >
+              Lexi R.
+            </p>
+          </div>
+          <div
+            className="PostBody"
+          >
+            <div
+              className="PostBody__top"
+            >
+              <div
+                className="PostBody__top-left"
+              >
+                <div
+                  className="PostBody__title"
+                >
+                  Post Title: Sed ut perspiciatus unde omnis?
+                </div>
+                <div
+                  className="PostBody__hashtags"
+                >
+                  <a
+                    className="PostBody__hashtag-links"
+                    href="#"
+                  >
+                    #
+                    DCMoms
+                  </a>
+                  <a
+                    className="PostBody__hashtag-links"
+                    href="#"
+                  >
+                    #
+                    museumtrips
+                  </a>
+                  <a
+                    className="PostBody__hashtag-links"
+                    href="#"
+                  >
+                    #
+                    DIY
+                  </a>
+                </div>
+              </div>
+              <div
+                className="PostBody__top-right"
+              >
+                <div
+                  className="PostBody__date"
+                >
+                  August 19
+                </div>
+                <div>
+                  6:00 pm
+                </div>
+              </div>
+            </div>
+            <div
+              className="PostBody__text"
+            >
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+            </div>
+          </div>
+        </div>
+        <div
+          className="ForumPost__middle"
+        >
+          <div
+            className="ForumPost__topic-pills"
+          />
+          <div
+            className="ForumPost__likes-comments"
+          >
+            <p>
+              0
+               Likes
+            </p>
+            <p>
+              0
+               Comments
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ForumPost__bottom"
+      >
+        <button
+          className="Button Button--color Button--size Button--textColor-text Button--like"
+          onClick={[Function]}
+        >
+          <img
+            alt="Like"
+            src="heart_black.png"
+          />
+          Like
+        </button>
+        <button
+          className="Button Button--color Button--size Button--textColor-text Button--comment"
+          onClick={[Function]}
+        >
+          <img
+            alt="Comment"
+            src="comment_black.png"
+          />
+          Comment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ForumPost Forum Post with Custom Props 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ForumPost"
+    >
+      <div
+        className="ForumPost__top-middle"
+      >
+        <div
+          className="ForumPost__top"
+        >
+          <div
+            className="ForumPost__face-card"
+          >
+            <div
+              className="ProfilePicture ProfilePicture--small"
+            >
+              <img
+                alt="profile-picture"
+                src="card_profile3.png"
+              />
+            </div>
+            <p
+              className="ForumPost__name"
+            >
+              Chantal
+            </p>
+          </div>
+          <div
+            className="PostBody"
+          >
+            <div
+              className="PostBody__top"
+            >
+              <div
+                className="PostBody__top-left"
+              >
+                <div
+                  className="PostBody__title"
+                >
+                  What An Amazing Trip!
+                </div>
+                <div
+                  className="PostBody__hashtags"
+                >
+                  <a
+                    className="PostBody__hashtag-links"
+                    href="#"
+                  >
+                    #
+                    Traveling
+                  </a>
+                  <a
+                    className="PostBody__hashtag-links"
+                    href="#"
+                  >
+                    #
+                    GoodTimes
+                  </a>
+                </div>
+              </div>
+              <div
+                className="PostBody__top-right"
+              >
+                <div
+                  className="PostBody__date"
+                >
+                  May 4
+                </div>
+                <div>
+                  2:00pm
+                </div>
+              </div>
+            </div>
+            <div
+              className="PostBody__text"
+            >
+              My son and I went on this trip and had the greatest time! If you can go, I would highly recommend it!
+            </div>
+          </div>
+        </div>
+        <div
+          className="ForumPost__middle"
+        >
+          <div
+            className="ForumPost__topic-pills"
+          >
+            <div
+              className="Pill Pill--small Pill__pink"
+              onClick={[Function]}
+            >
+              Parenting
+              <div />
+            </div>
+            <div
+              className="Pill Pill--small Pill__pink"
+              onClick={[Function]}
+            >
+              Vacation
+              <div />
+            </div>
+            <div
+              className="Pill Pill--small Pill__pink"
+              onClick={[Function]}
+            >
+              Topic
+              <div />
+            </div>
+          </div>
+          <div
+            className="ForumPost__likes-comments"
+          >
+            <p>
+              8
+               Likes
+            </p>
+            <p>
+              5
+               Comments
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        className="ForumPost__bottom"
+      >
+        <button
+          className="Button Button--color Button--size Button--textColor-text Button--like"
+          onClick={[Function]}
+        >
+          <img
+            alt="Like"
+            src="heart_black.png"
+          />
+          Like
+        </button>
+        <button
+          className="Button Button--color Button--size Button--textColor-text Button--comment"
+          onClick={[Function]}
+        >
+          <img
+            alt="Comment"
+            src="comment_black.png"
+          />
+          Comment
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots GroupCard Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--pink Card--medium
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <a
+        className="GroupCard"
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundImage": "url(undefined)",
+          }
+        }
+      >
+        <div
+          className="GroupCard__text-container"
+        >
+          <p
+            className="GroupCard__group-name"
+          >
+            Group Name
+          </p>
+          <div
+            className="GroupCard__details"
+          >
+            <p
+              className="GroupCard__members"
+            >
+              # of 
+               members
+            </p>
+            <p
+              className="GroupCard__location"
+            >
+              Location, State
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots GroupCard Example 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--pink Card--medium
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <a
+        className="GroupCard"
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundImage": "url(https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80)",
+          }
+        }
+      >
+        <div
+          className="GroupCard__text-container"
+        >
+          <p
+            className="GroupCard__group-name"
+          >
+            DIY with your kids
+          </p>
+          <div
+            className="GroupCard__details"
+          >
+            <p
+              className="GroupCard__members"
+            >
+              98
+               members
+            </p>
+            <p
+              className="GroupCard__location"
+            >
+              Boston, MA
+            </p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputSelect Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <select
+      className="InputSelect"
+      onChange={[Function]}
+      value="select"
+    >
+      <option
+        value="option1"
+      >
+        Sort By:  
+        Option 1
+      </option>
+      <option
+        value="option2"
+      >
+        Sort By:  
+        Option 2
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputSelect Options 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <select
+      className="InputSelect"
+      onChange={[Function]}
+      value="select"
+    >
+      <option
+        value="location"
+      >
+        Sort By:  
+        Location
+      </option>
+      <option
+        value="date"
+      >
+        Sort By:  
+        Date
+      </option>
+      <option
+        value="type"
+      >
+        Sort By:  
+        Type
+      </option>
+    </select>
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Age 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="age"
+      placeholder="What is your age?"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField City 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="city"
+      placeholder="City of Residence"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Confirm Password 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="confirm password"
+      placeholder="Confirm Password"
+      type="password"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Dream 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="dream"
+      placeholder="What is your dream destination(s)?"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Email 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="email"
+      placeholder="Email"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Email Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--small"
+      name="email"
+      placeholder="Email"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField First Name, Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--small"
+      name="first name"
+      placeholder="First Name"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Last Name, Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--small"
+      name="last name"
+      placeholder="Last Name"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Name 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="name"
+      placeholder="Name"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Password 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--default"
+      name="password"
+      placeholder="Password"
+      type="password"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Search Directory 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--search"
+      name="search directory"
+      placeholder="Search Directory"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InputTextField Search Trips 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <input
+      className="InputTextField__container--search"
+      name="search trips"
+      placeholder="Search Trips"
+      type="text"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots InteractionCard Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="InteractionCard"
+    >
+      <div
+        className="ProfilePicture ProfilePicture--medium"
+      >
+        <a
+          href="/route"
+          onClick={[Function]}
+        >
+          <img
+            alt="profile-picture"
+            src="profile_large.png"
+          />
+        </a>
+      </div>
+      <button
+        className="Button Button--pink Button--small Button--textColor-text Button--none"
+        onClick={[Function]}
+      >
+        Connect
+      </button>
+      <button
+        className="Button Button--outline Button--small Button--textColor-text Button--none"
+        onClick={[Function]}
+      >
+        Message
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Logo Clickable Default Route Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Logo Logo--small"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Logo Clickable Route as Prop 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Logo"
+    >
+      <a
+        href="/route"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Logo Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Logo"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Logo Small 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Logo Logo--small"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-6.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Large Books 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-1.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Large Flight 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-6.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Large Happiness 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-2.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Large Night Sky 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-4.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Large Van 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-3.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Large Waterfall 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-5.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Medium Books 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-1.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Medium Flight 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-6.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Medium Happiness 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-2.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Medium Night Sky 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-4.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Medium Van 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-3.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Medium Waterfall 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-5.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Small Books 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-1.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Small Flight 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-6.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Small Happiness 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-2.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Small Night Sky 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-4.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Small Van 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-3.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Media Cards Small Waterfall 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-5.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots NavLink NavLink 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="NavLink"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <h1>
+          community
+        </h1>
+        <div
+          className="NavLink__dropdown"
+        >
+          <ul
+            className="NavLinkDropdownMenu"
+          >
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <li>
+                Explore People
+              </li>
+            </a>
+            <a
+              href="/"
+              onClick={[Function]}
+            >
+              <li>
+                Join Groups
+              </li>
+            </a>
+          </ul>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots NavLink NavLink w/o Menu 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="NavLink"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <h1>
+          community
+        </h1>
+        <div
+          className="NavLink__dropdown"
+        >
+          <ul
+            className="NavLinkDropdownMenu"
+          />
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots NavLinkDropdownMenu NavLinkDropdownMenu 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <ul
+      className="NavLinkDropdownMenu"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <li>
+          Explore People
+        </li>
+      </a>
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <li>
+          Join Groups
+        </li>
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Navbar Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Navbar"
+    >
+      <div
+        className="navbar-logo"
+      >
+        <div
+          className="Logo"
+        >
+          <a
+            href="/route"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots OnboardingParent Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="OnboardingParent"
+    >
+      <div
+        className="OnboardingParent__wrapper"
+      >
+        <div
+          className="Logo"
+        />
+        <div
+          className="OnboardingParent__carousel-dots-container"
+        >
+          <div
+            className="CarouselDots"
+          >
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={1}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={2}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   CarouselDot--active  "
+              id={3}
+              onClick={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pill Community People Pill (Toggle) 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Pill Pill--large Pill--shadow Pill__purple "
+      onClick={[Function]}
+    >
+      Traveling
+      <img
+        className="Pill--icon Pill--icon-offset"
+        src="heart-white.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pill Hashtag Border Pill Pink with Heart 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Pill Pill--large Pill--shadow Pill--border__pink "
+      onClick={[Function]}
+    >
+      #hashtags
+      <img
+        className="Pill--icon"
+        src="heart-pink.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pill Hashtag Border Pill Purple 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Pill Pill--large Pill--shadow Pill--border__purple "
+      onClick={[Function]}
+    >
+      #hashtags
+      <img
+        className="Pill--icon Pill--icon-offset"
+        src="heart-white.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pill Onboarding Pill 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Pill Pill--large Pill__white"
+      onClick={[Function]}
+    >
+      Traveling
+      <div />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pill Pill with Pink Heart Offset 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Pill Pill--large Pill__undefined "
+      onClick={[Function]}
+    >
+      Traveling
+      <img
+        className="Pill--icon Pill--icon-offset"
+        src="heart-pink.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Pill Pill with White Heart 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Pill Pill--medium Pill__pink "
+      onClick={[Function]}
+    >
+      Traveling
+      <img
+        className="Pill--icon"
+        src="heart-white.svg"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PostBody Custom Post 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="PostBody"
+    >
+      <div
+        className="PostBody__top"
+      >
+        <div
+          className="PostBody__top-left"
+        >
+          <div
+            className="PostBody__title"
+          >
+            What An Amazing Trip!
+          </div>
+          <div
+            className="PostBody__hashtags"
+          >
+            <a
+              className="PostBody__hashtag-links"
+              href="#"
+            >
+              #
+              DCMoms
+            </a>
+            <a
+              className="PostBody__hashtag-links"
+              href="#"
+            >
+              #
+              Hashtags
+            </a>
+            <a
+              className="PostBody__hashtag-links"
+              href="#"
+            >
+              #
+              CoTrippers
+            </a>
+          </div>
+        </div>
+        <div
+          className="PostBody__top-right"
+        >
+          <div
+            className="PostBody__date"
+          >
+            May 3
+          </div>
+          <div>
+            2:00 pm
+          </div>
+        </div>
+      </div>
+      <div
+        className="PostBody__text"
+      >
+        Lorem ipsum dolor sit amet, mei autem patrioque cu, pri at omittam incorrupte. Dico rationibus assueverit vis te. Vidit exerci facilisis ne qui. Ei sed partem dissentias, ea pri sanctus partiendo vituperatoribus, ei erant graeco nam. Eu vix nostro voluptua. Ut case possit sed, duo malorum omnesque liberavisse ei.
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots PostBody Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="PostBody"
+    >
+      <div
+        className="PostBody__top"
+      >
+        <div
+          className="PostBody__top-left"
+        >
+          <div
+            className="PostBody__title"
+          >
+            Post Title: Sed ut perspiciatus unde omnis?
+          </div>
+          <div
+            className="PostBody__hashtags"
+          >
+            <a
+              className="PostBody__hashtag-links"
+              href="#"
+            >
+              #
+              DCMoms
+            </a>
+            <a
+              className="PostBody__hashtag-links"
+              href="#"
+            >
+              #
+              museumtrips
+            </a>
+            <a
+              className="PostBody__hashtag-links"
+              href="#"
+            >
+              #
+              DIY
+            </a>
+          </div>
+        </div>
+        <div
+          className="PostBody__top-right"
+        >
+          <div
+            className="PostBody__date"
+          >
+            August 19
+          </div>
+          <div>
+            6:00 pm
+          </div>
+        </div>
+      </div>
+      <div
+        className="PostBody__text"
+      >
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Extra Small with Link 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--extra-small"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="profile-picture"
+          src="profile_large.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Extra-Small Static 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--extra-small"
+    >
+      <img
+        alt="profile-picture"
+        src="profile_large.png"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Large Static 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--large"
+    >
+      <img
+        alt="profile-picture"
+        src="profile_large.png"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Large with Link 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--large"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="profile-picture"
+          src="profile_large.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Medium Static 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--medium"
+    >
+      <img
+        alt="profile-picture"
+        src="profile_large.png"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Medium with Link 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--medium"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="profile-picture"
+          src="profile_large.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Small Static 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--small"
+    >
+      <img
+        alt="profile-picture"
+        src="profile_large.png"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots ProfilePicture Small with Link 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="ProfilePicture ProfilePicture--small"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+      >
+        <img
+          alt="profile-picture"
+          src="profile_large.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SplashPage SplashPage 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="SplashPage"
+    >
+      <h1>
+        CoTripper
+      </h1>
+      <p>
+        Book trips, meet moms, and experience family travel together!
+      </p>
+      <a
+        href="/login"
+        onClick={[Function]}
+      >
+        <button
+          className="Button Button--color Button--size Button--textColor-text Button--none"
+          onClick={[Function]}
+        >
+          Login
+        </button>
+      </a>
+      <a
+        href="/register"
+        onClick={[Function]}
+      >
+        <button
+          className="Button Button--purple Button--size Button--textColor-text Button--none"
+          onClick={[Function]}
+        >
+          Register
+        </button>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TrendingHashtagCard Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <div
+        className="TrendingHashtagCard__container"
+      >
+        <h1>
+          Trending Hashtags
+        </h1>
+        <div
+          className="TrendingHashtagCard__hashtags-container"
+        >
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #dope
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #torch
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #hawaii
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #kids
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #cats
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #dogs
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #italy
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #starwars
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #babyyoda
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <div
+        className="TrendingHashtagCard__container"
+      >
+        <h1>
+          Trending Hashtags
+        </h1>
+        <div
+          className="TrendingHashtagCard__hashtags-container"
+        >
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #dope
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #torch
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #hawaii
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #kids
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <div
+        className="TrendingHashtagCard__container"
+      >
+        <h1>
+          Trending Hashtags
+        </h1>
+        <div
+          className="TrendingHashtagCard__hashtags-container"
+        >
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #italy
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #starwars
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #babyyoda
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #gaming
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #sports
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #haikus
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #surfing
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #momfacts
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #dadfacts
+            </a>
+          </div>
+          <div
+            className="TrendingHashtagCard__hashtag"
+          >
+            <a
+              href="/"
+            >
+              #catfacts
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--purple Card--large
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <div
+        className="TrendingHashtagCard__container"
+      >
+        <h1>
+          Trending Hashtags
+        </h1>
+        <h2>
+          No Hashtags :(
+        </h2>
+        <div
+          className="TrendingHashtagCard__hashtags-container"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TripCard Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--medium
+      "
+      style={
+        Object {
+          "backgroundImage": "url(https://wallpaperaccess.com/full/144067.jpg)",
+        }
+      }
+    >
+       
+      <div
+        className="TripCard"
+      >
+        <h3
+          className="TripCard__location"
+        >
+          Hawaii
+        </h3>
+        <h4
+          className="TripCard__date"
+        >
+          May 2020
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TripCard Puerto Rico 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--undefined Card--medium
+      "
+      style={
+        Object {
+          "backgroundImage": "url(card_small2.png)",
+        }
+      }
+    >
+       
+      <div
+        className="TripCard"
+      >
+        <h3
+          className="TripCard__location"
+        >
+          Puerto Rico
+        </h3>
+        <h4
+          className="TripCard__date"
+        >
+          April 2019
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TripDetails Custom props slider container 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="TripDetails"
+    >
+      <div
+        className="TripDetails__left"
+      >
+        <img
+          alt="beach"
+          className="TripDetails__image"
+          src="https://blog1.fkimg.com/wp-content/uploads/2017/07/Willemstad_TA4023579-768x519.jpg"
+        />
+        <div
+          className="TripDetails__carousel-container"
+        >
+          <div
+            className="CarouselDots"
+          >
+            <div
+              className="CarouselDot  CarouselDot__border   CarouselDot--active  "
+              id={1}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={2}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={3}
+              onClick={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="TripDetails__right"
+      >
+        <h2
+          className="TripDetails__overview-title"
+        >
+          Overview
+        </h2>
+        <p
+          className="TripDetails__overview-text"
+        >
+          This is an overview of a really fun trip I have planned. Definitely check it out. I bet you'd wanna go here.
+        </p>
+        <h2
+          className="TripDetails__dates-title"
+        >
+          Dates
+        </h2>
+        <div
+          className="TripDetails__dates-container"
+        >
+          <p
+            className="TripDetails__dates-text"
+          >
+            May 4 2020
+             -
+          </p>
+          <p
+            className="TripDetails__dates-text"
+          >
+            May 14 2020
+          </p>
+        </div>
+        <h2
+          className="TripDetails__location-title"
+        >
+          Location
+        </h2>
+        <p
+          className="TripDetails__location-text"
+        >
+          the best place
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TripDetails Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="TripDetails"
+    >
+      <div
+        className="TripDetails__left"
+      >
+        <img
+          alt="hawaii"
+          className="TripDetails__image"
+          src="hawaii-trees.png"
+        />
+        <div
+          className="TripDetails__carousel-container"
+        >
+          <div
+            className="CarouselDots"
+          >
+            <div
+              className="CarouselDot  CarouselDot__border   CarouselDot--active  "
+              id={1}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={2}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={3}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={4}
+              onClick={[Function]}
+            />
+            <div
+              className="CarouselDot  CarouselDot__border   "
+              id={5}
+              onClick={[Function]}
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        className="TripDetails__right"
+      >
+        <h2
+          className="TripDetails__overview-title"
+        >
+          Overview
+        </h2>
+        <p
+          className="TripDetails__overview-text"
+        >
+          Enjoy a week-long stay at a luxury resort! During your stay, explore the resort's amazing ammenities and events, but above all, explore the beautiful islands of Hawaii! It will be a trip for you and your family to remember forever.
+        </p>
+        <h2
+          className="TripDetails__dates-title"
+        >
+          Dates
+        </h2>
+        <div
+          className="TripDetails__dates-container"
+        >
+          <p
+            className="TripDetails__dates-text"
+          >
+            Sunday, May 17, 2020
+             -
+          </p>
+          <p
+            className="TripDetails__dates-text"
+          >
+            Monday, May 25, 2020
+          </p>
+        </div>
+        <h2
+          className="TripDetails__location-title"
+        >
+          Location
+        </h2>
+        <p
+          className="TripDetails__location-text"
+        >
+          Resort XYZ
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UpcomingEventsCard Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--pink Card--small
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <a
+        className="UpcomingEventsCard"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="UpcomingEventsCard__name"
+        >
+          Upcoming Event
+        </span>
+        <span
+          className="UpcomingEventsCard__date"
+        >
+          Date: 
+          Month Day
+        </span>
+        <span
+          className="UpcomingEventsCard__time"
+        >
+          Time: 
+          Time
+        </span>
+        <span
+          className="UpcomingEventsCard__location"
+        >
+          Location: 
+          City, State
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UpcomingEventsCard Example 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="Card Card--pink Card--small
+      "
+      style={
+        Object {
+          "backgroundImage": "url(null)",
+        }
+      }
+    >
+       
+      <a
+        className="UpcomingEventsCard"
+        href="/"
+        onClick={[Function]}
+      >
+        <span
+          className="UpcomingEventsCard__name"
+        >
+          DC Mom Playdates
+        </span>
+        <span
+          className="UpcomingEventsCard__date"
+        >
+          Date: 
+          August 24th
+        </span>
+        <span
+          className="UpcomingEventsCard__time"
+        >
+          Time: 
+          4:30pm
+        </span>
+        <span
+          className="UpcomingEventsCard__location"
+        >
+          Location: 
+          Washington, DC
+        </span>
+      </a>
+    </div>
+  </div>
+</div>
+`;
