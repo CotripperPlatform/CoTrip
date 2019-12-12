@@ -32,7 +32,7 @@ describe("TrendingHashtagCard component", () => {
       const component = findByTestAttribute(wrapper, ".TrendingHashtagCard__container");
       expect(component.length).toBe(1);
     });
-    it("Should render dots", () => {
+    it("Should render hashtags", () => {
       const component = findByTestAttribute(wrapper, ".TrendingHashtagCard__hashtag");
       expect(component.length).toBe(10);
     });
