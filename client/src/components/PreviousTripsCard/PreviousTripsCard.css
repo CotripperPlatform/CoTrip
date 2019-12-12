@@ -15,9 +15,9 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 92%;
+  width: 90%;
   height: 100%;
-  margin-left: 1%;
+  margin-left: 3%;
   /* border: 2px solid black; */
 }
 
@@ -39,6 +39,9 @@
 .PreviousTripCard__arrow:hover {
   transform: scale(1.1);
   background-color: var(--yellow);
+}
+.PreviousTripCard__trips a {
+  color: var(--white);
 }
 
 .PreviousTripCard__no-trips {
