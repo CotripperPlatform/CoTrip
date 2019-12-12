@@ -4,17 +4,11 @@ import SplashPage from "./components/SplashPage/SplashPage";
 import "./App.css";
 
 class App extends Component {
-  splash = () => {
-    return <SplashPage />;
-  };
   render() {
     return (
       <div className='App'>
-        {/* <nav>
-          <Link to="/">Splash</Link>
-        </nav> */}
         <main>
-          <Route path="/" exact render={this.splash}></Route>
+          <Route path="/" exact component={SplashPage}></Route>
         </main>
       </div>
     );
