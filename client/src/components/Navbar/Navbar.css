@@ -31,11 +31,11 @@
 }
 
 .Navbar__profile {
-  margin: 0 26px 0 0;
+  margin: -5px 26px 0 0;
 }
 
 .Navbar__burger {
-  margin: 0 47px;
+  margin: 0 20px;
   display: none;
 }
 
@@ -61,6 +61,10 @@
   .Navbar__burger {
     display: block;
   }
+
+  .Navbar__logo {
+    margin: 0 0 0 44%;
+  }
 }
 
 /* Medium devices */
@@ -70,5 +74,7 @@
 
 /* Small devices */
 @media only screen and (max-width: 576px) {
-  
+  .Navbar__logo {
+    margin: 0 0 0 37%;
+  }
 }

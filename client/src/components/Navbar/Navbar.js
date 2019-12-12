@@ -51,7 +51,7 @@ const Navbar = props => {
             ]}
           />
         </div>
-        <div Navbar__right>
+        <div className="Navbar__right">
           <div className="Navbar__profile">
             <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
           </div>
