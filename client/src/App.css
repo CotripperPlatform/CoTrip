@@ -6,51 +6,51 @@
         background-color: var(--yellow);
     */
 
-    /* Default color palette variables */
-    --yellow: #FFCB06;
-    --yellow-dark: #F2BC0F;
-    --pink: #FB8370;
-    --red: #D1495B;
-    --purple: #6A4C93;
-    --black: #252525;
-    --white: #FAFAFA;
-    --gray: #808080;
-    --gray-lite: #E5E5E5;
-    --gray-dark: #C4C4C4;
-    --green: #12DB00;
-    --white-hover: #FCF0EE;
-    --orange-hover: #FF6A50;
-    --purple-hover: #592D96;
-    --red-hover: #D42E44;
-    --yellow-hover: #F5C000;
-    /* Background Graidients */
-    --yellow-gradient: linear-gradient(#FFCB06 65%, #FFF1C0);
+  /* Default color palette variables */
+  --yellow: #ffcb06;
+  --yellow-dark: #f2bc0f;
+  --pink: #fb8370;
+  --red: #d1495b;
+  --purple: #6a4c93;
+  --black: #252525;
+  --white: #fafafa;
+  --gray: #808080;
+  --gray-lite: #e5e5e5;
+  --gray-dark: #c4c4c4;
+  --green: #12db00;
+  --white-hover: #fcf0ee;
+  --orange-hover: #ff6a50;
+  --purple-hover: #592d96;
+  --red-hover: #d42e44;
+  --yellow-hover: #f5c000;
+  /* Background Graidients */
+  --yellow-gradient: linear-gradient(#ffcb06 65%, #fff1c0);
 
-    /* Default font */
-    --default-font: 'Reem Kufi', sans-serif;
-    --paragraph-font: 'Open Sans', sans-serif;
-    /* Images */
-    --comment-black: url("./assets/images/comment_black.png");
-    --edit-button: url("./assets/images/edit_button.png");
-    --global-nav-dm: url("./assets/images/global-nav_dm_icon.png");
-    --global-nav-logo: url("./assets/images/global-nav_logo_icon.png");
-    --global-nav-search: url("./assets/images/global-nav_search_icon.png");
-    --heart-pink: url("./assets/images/heart_pink.png");
-    --heart-white: url("./assets/images/heart_white.png");
-    --heart-black: url("./assets/images/heart_black.png");
-    --home-banner: url("./assets/images/home_banner.png");
-    --profile-banner: url("./assets/images/profile_banner.png");
-    --community-banner: url("./assets/images/community_banner.png");
-    --login-logo: url("./assets/images/login_logo.png");
-    --nav-arrow-purple: url("./assets/images/nav_arrow_purple.png");
-    --nav-arrow-yellow: url("./assets/images/nav_arrow_yellow.png");
-    --social-facebook: url("./assets/images/social_facebook.png");
-    --social-instagram: url("./assets/images/social_instagram.png");
-    --social-pinterest: url("./assets/images/social_pinterest.png");
-    --splash-background: url("./assets/images/splash_background.png");
-    --text-box-search: url("./assets/images/text_box_search.png");
-    /* Font Weights */
-    --paragraph-weight: 400;
-    --banner-weight: 700;
-    --title-weight: 500;
+  /* Default font */
+  --default-font: "Reem Kufi", sans-serif;
+  --paragraph-font: "Open Sans", sans-serif;
+  /* Images */
+  --comment-black: url("./assets/images/comment_black.png");
+  --edit-button: url("./assets/images/edit_button.png");
+  --global-nav-dm: url("./assets/images/global-nav_dm_icon.png");
+  --global-nav-logo: url("./assets/images/global-nav_logo_icon.png");
+  --global-nav-search: url("./assets/images/global-nav_search_icon.png");
+  --heart-pink: url("./assets/images/heart_pink.png");
+  --heart-white: url("./assets/images/heart_white.png");
+  --heart-black: url("./assets/images/heart_black.png");
+  --home-banner: url("./assets/images/home_banner.png");
+  --profile-banner: url("./assets/images/profile_banner.png");
+  --community-banner: url("./assets/images/community_banner.png");
+  --login-logo: url("./assets/images/login_logo.png");
+  --nav-arrow-purple: url("./assets/images/nav_arrow_purple.png");
+  --nav-arrow-yellow: url("./assets/images/nav_arrow_yellow.png");
+  --social-facebook: url("./assets/images/social_facebook.png");
+  --social-instagram: url("./assets/images/social_instagram.png");
+  --social-pinterest: url("./assets/images/social_pinterest.png");
+  --splash-background: url("./assets/images/splash_background.png");
+  --text-box-search: url("./assets/images/text_box_search.png");
+  /* Font Weights */
+  --paragraph-weight: 400;
+  --banner-weight: 700;
+  --title-weight: 500;
 }
