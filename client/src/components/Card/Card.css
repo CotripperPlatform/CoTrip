@@ -22,7 +22,7 @@
 
 .Card--large {
   width: 1rem;
-  min-width: 31rem;
+  min-width: 32rem;
   height: 260px;
 }
 
@@ -89,6 +89,6 @@
 
 @media only screen and (max-width: 576px) {
   .Card--large {
-    min-width: 16rem;
+    min-width: 17rem;
   }
 }
