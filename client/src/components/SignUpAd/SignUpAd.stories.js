@@ -3,7 +3,10 @@ import { storiesOf } from "@storybook/react";
 import SignUpAd from "./SignUpAd";
 import { tsPropertySignature } from "@babel/types";
 
-const handleClick = e => console.log("clicked");
+const handleClick = e => {
+  e.preventDefault();
+  console.log("clicked");
+};
 
 storiesOf("SignUpAd", module).add("Default", () => (
   <SignUpAd onClick={handleClick}>
