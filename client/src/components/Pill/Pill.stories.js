@@ -28,6 +28,11 @@ storiesOf("Pill", module)
       selectId={0}
     />
   ))
+  .add("Default Props", () => (
+    <Pill
+      onClick={pillClick}
+    />
+  ))
   .add("Pill with Pink Heart Offset", () => (
     <Pill
       text={"Traveling"}
