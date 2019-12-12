@@ -1,5 +1,6 @@
 .ForumComment {
     display: flex;
+    flex-direction: column;
     background-color: var(--gray-dark);
     border: 1px solid rgba(37, 37, 37, 0.5);
     box-sizing: border-box;
@@ -7,13 +8,9 @@
 }
 
 .ForumComment__Name {
-    display: flex;
-    flex-wrap: nowrap;
-    margin-top: 5.2em;
-    margin-left: -2em;
+    font-family: var(--default-font);
     font-size: 1.2rem;
-    font-family: var( --paragraph-font);
-    font-weight: var(--banner-weight);
+    margin: 0;
 }
 
 .ForumComment__Comment {
@@ -35,23 +32,27 @@
 .ForumComment__Likes {
     font-family: var( --paragraph-font);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-end;
+    width: 100%;
+    margin-left: -5rem;
 }
 
 .ForumComment__Replies {
     font-family: var( --paragraph-font);
     display: flex;
-    align-items: flex-end; 
-    margin-bottom: 1em; 
+    margin-left: 4rem;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 .ForumComment__Date {
     font-family: var( --paragraph-font);
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: flex-start;
-    margin-right: -7rem;
+    margin-right: -15.5rem;
 }
 
 
