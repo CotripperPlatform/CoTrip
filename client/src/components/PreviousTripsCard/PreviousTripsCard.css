@@ -82,15 +82,16 @@
   .PreviousTripCard__trips {
     width: 0rem;
     height: 0rem;
-    margin-left: 2%;
-    margin-top: -5%;
+    margin-left: 1rem;
+    margin-top: -1rem;
   }
 
   .PreviousTripCard__container h1 {
     color: var(--white);
     width: 80%;
-    padding-left: 5%;
-    transform: scale(0.8);
+    padding-left: 1.5rem;
+    transform: scale(1);
+    text-align: center;
   }
 
   .PreviousTripCard__arrow {
