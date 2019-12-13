@@ -23,6 +23,8 @@
   --purple-hover: #592d96;
   --red-hover: #d42e44;
   --yellow-hover: #f5c000;
+  --pink-hover: #f86048;
+
   /* Background Graidients */
   --yellow-gradient: linear-gradient(#ffcb06 65%, #fff1c0);
 
@@ -48,6 +50,7 @@
   --social-instagram: url("./assets/images/social_instagram.png");
   --social-pinterest: url("./assets/images/social_pinterest.png");
   --splash-background: url("./assets/images/splash_background.png");
+  --splash-background-mobile: url("./assets/images/splash_background_mobile.png");
   --text-box-search: url("./assets/images/text_box_search.png");
   /* Font Weights */
   --paragraph-weight: 400;
