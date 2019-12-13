@@ -6,18 +6,24 @@ const ForumComment = props => {
     return (
         <div className="ForumComment">
            <ProfilePicture type="small" link={props.to} image={props.image} />
-           <p className="ForumComment__name">{props.name}</p>
+        <div className="ForumComment__name">
+            {props.name}
+        </div>
+        <div className="ForumComment__date">
             {props.date}
             {props.time}
+        </div>
+        <div className="ForumComment__body">
             {props.body}
-        <div className="ForumPost__likes-replies">
+        </div>
+        <div className="ForumComment__likes-replies">
            <p>
              {props.likes}
              {" Likes"}
              {props.replies}
              {" Replies" }
            </p>
-           </div>
+         </div>
          </div>
     );
 };

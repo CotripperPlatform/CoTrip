@@ -1,4 +1,40 @@
 .ForumComment {
     display: flex;
-    flex-direction: column;
+    background-color: var(--gray-dark);
+    font-family: var(--paragraph-font);
+    padding-top: .8em;
+    padding-bottom: .8em;
   }
+
+.ForumComment__name {
+    display: flex;
+    font-family: var(--default-font);
+    font-size: 1.2rem;
+    flex-wrap: nowrap;
+  }
+
+.ForumComment__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    height: auto;
+    background-color: var(--gray-dark);
+    font-size: 14px;
+    font-family: var(--paragraph-font);
+}
+
+.ForumComment__date {
+    display: flex;
+    align-items: flex-start;
+    justify-items: flex-end;
+}
+
+.ForumComment__likes-replies p{
+    display: flex;
+    justify-items: flex-start;
+
+  }
+
+  
