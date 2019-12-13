@@ -59,6 +59,7 @@
 .Navbar__hidden {
   display: none;
 }
+
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
   
