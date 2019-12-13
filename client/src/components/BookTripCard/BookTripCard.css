@@ -1,12 +1,12 @@
 .Card div {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
+  margin: 0rem 0rem 0rem 0.5rem;
 }
 
 .Card h3 {
   text-align: center;
-  margin: .7em auto;
+  margin: .7rem auto;
 }
 
 .Card a:visited {
@@ -23,7 +23,7 @@
 .Card .container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 29.5rem;
 }
 
 .Card {
