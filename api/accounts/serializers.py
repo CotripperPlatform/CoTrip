@@ -7,7 +7,7 @@ class UserSerializer(serializers.ModelSerializer):
     # add hyperlinked related fields to create profile when creating user
     class Meta:
         model = User
-        fields = ('username', 'password', 'email', Profile)
+        fields = ('username', 'password', 'email')
 
 
 class TokenSerializer(serializers.Serializer):
