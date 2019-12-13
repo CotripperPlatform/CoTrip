@@ -11,7 +11,11 @@ const HomePage = props => {
       <nav>
         <NavBar></NavBar>
       </nav>
-      <div className="content"></div>
+      <div className="HomePage__content">
+        <div className="placeholder-welcome">
+          <h1>WELCOME USER</h1>
+        </div>
+      </div>
       <footer className="HomePage__footer-wrapper">
         <Footer />
       </footer>
