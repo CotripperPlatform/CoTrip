@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, configure } from 'enzyme'
+import { shallow, configure, mount } from 'enzyme'
 import UpcomingEventsCard from './UpcomingEventsCard.js'
 import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
