@@ -6,11 +6,6 @@
   width: 100vw;
   overflow-x: hidden;
 }
-@media only screen and (max-width: 992px) {
-  .HomePage__wrapper {
-    overflow-x: scroll;
-  }
-}
 
 .HomePage__content {
   flex: 1;
@@ -187,3 +182,42 @@
   border: 2px solid var(--yellow);
   background-color: var(--yellow);
 }
+
+/**
+|--------------------------------------------------
+| These contents are on the bottom of the page:
+| CoTripper Scrapbook
+|--------------------------------------------------
+*/
+
+/**
+|--------------------------------------------------
+| Media Queries
+|--------------------------------------------------
+*/
+
+@media only screen and (max-width: 992px) {
+  .HomePage__wrapper {
+    overflow-x: scroll;
+  }
+  .HomePage__groupcard-2 {
+    display: none;
+  }
+  .HomePage__groupcard-3 {
+    display: none;
+  }
+  .HomePage__arrow {
+    margin-right: 30rem;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .HomePage__groupcard-3 {
+    display: none;
+  }
+}
+
+/**
+|--------------------------------------------------
+| Media Queries
+|--------------------------------------------------
+*/
