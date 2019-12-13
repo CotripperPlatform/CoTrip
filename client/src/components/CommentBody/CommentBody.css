@@ -27,4 +27,13 @@ p span {
   display: block;
 }
 
-@media only screen and (max-width: 992px)
+@media only screen and (max-width: 768px) {
+  .CommentBody {
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .CommentBody {
+    width: 10rem;
+  }
+}
