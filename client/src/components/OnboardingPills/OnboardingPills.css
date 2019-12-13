@@ -4,9 +4,7 @@
 }
 .OnboardingPills__inner-container {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  background: orange;
   justify-content: center;
 }
 .OnboardingPills .Pill {
@@ -15,4 +13,6 @@
   font-size: 1.25rem;
   margin: 0.5rem;
   padding: 0;
+  line-height: 2;
+  user-select: none;
 }
