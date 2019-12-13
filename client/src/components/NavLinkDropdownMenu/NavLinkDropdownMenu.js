@@ -12,4 +12,8 @@ const NavLinkDropdownMenu = (props) => (
   </ul>
 );
 
+NavLinkDropdownMenu.defaultProps = {
+  menuList: []
+};
+
 export default NavLinkDropdownMenu;
