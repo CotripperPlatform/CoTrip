@@ -41,8 +41,13 @@ const HomePage = props => {
               />
               <a href="/" className="HomePage__arrow" />
             </div>
-
-            <div className="HomePage__people-container"></div>
+            <h1 className="HomePage__suggested-header">Suggested People</h1>
+            <div className="HomePage__people-container">
+              <div className="placeholder-person-card"></div>
+              <div className="placeholder-person-card"></div>
+              <div className="placeholder-person-card"></div>
+              <a href="/" className="HomePage__arrow" />
+            </div>
           </span>
 
           <span className="HomePage__top-cards-container"></span>
