@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.NewUserUpload__p {
+.NewUserUpload p {
   margin: 4rem auto .6rem auto;
   width: 75%;
   font-family: var(--default-font);
