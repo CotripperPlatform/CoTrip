@@ -19,3 +19,16 @@
   height: 23rem;
   border: 2px solid black;
 }
+
+.HomePage__suggestions-container {
+  height: 48rem;
+  width: 60rem;
+  border: 5px solid blue;
+  margin-left: 3rem;
+}
+.HomePage__top-cards-container {
+  height: 48rem;
+  width: 40rem;
+  border: 5px solid blue;
+  margin-right: 3rem;
+}

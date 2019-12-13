@@ -7,7 +7,7 @@ import Footer from "../../components/Footer/Footer";
 
 const HomePage = props => {
   return (
-    <div className="HomePage__wrapper">
+    <body className="HomePage__wrapper">
       <nav>
         <NavBar></NavBar>
       </nav>
@@ -15,11 +15,15 @@ const HomePage = props => {
         <div className="placeholder-welcome">
           <h1>WELCOME USER</h1>
         </div>
+        <div>
+          <div className="HomePage__suggestions-container"></div>
+          <div className="HomePage__top-cards-container"></div>
+        </div>
       </div>
       <footer className="HomePage__footer-wrapper">
         <Footer />
       </footer>
-    </div>
+    </body>
   );
 };
 
