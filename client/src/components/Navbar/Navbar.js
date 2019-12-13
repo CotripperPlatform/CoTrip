@@ -88,9 +88,9 @@ Navbar.propTypes = {
 Navbar.defaultProps = {
   showCondensedMenu: false,
   menu1: "Navbar_show",
-  menu2: "Navbar_show",
-  menu3: "Navbar_show",
-  menu4: "Navbar_show",
+  menu2: "",
+  menu3: "",
+  menu4: "",
 };
 
 export default Navbar;
