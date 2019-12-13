@@ -122,7 +122,10 @@
   margin-right: 4rem;
 }
 .HomePage__cards-container {
-  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35rem;
   width: 45rem;
   border: 3px solid goldenrod;
   margin: 1rem;

@@ -6,6 +6,7 @@ import NavBar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import GroupCard from "../../components/GroupCard/GroupCard";
+import TrendingHashtagCard from "../../components/TrendingHashtagCard/TrendingHashtagCard";
 
 const HomePage = props => {
   return (
@@ -51,7 +52,27 @@ const HomePage = props => {
           </span>
 
           <span className="HomePage__top-cards-wrapper">
-            <div className="HomePage__cards-container"></div>
+            <div className="HomePage__cards-container">
+              <Card color="pink">
+                <h1>Book A Trip</h1>
+                <h1>placeholder</h1>
+              </Card>
+              <TrendingHashtagCard
+                data={[
+                  "#dope",
+                  "#torch",
+                  "#hawaii",
+                  "#kids",
+                  "#cats",
+                  "#dogs",
+                  "#italy",
+                  "#starwars",
+                  "#babyyoda"
+                ]}
+              >
+                <h1>Trending Hashtags</h1>
+              </TrendingHashtagCard>
+            </div>
           </span>
         </div>
       </div>
