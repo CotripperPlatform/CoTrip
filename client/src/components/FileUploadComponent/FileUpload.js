@@ -1,15 +1,27 @@
 import React from "react";
 import './FileUpload.css'
-import Button from '../Button/Button'
 
 const FileUpload = (props) => {
+  if (props.context === "userPhoto") {
+    return (
+      <div className='NewUserUpload'>
+        <p>Upload a profile photo</p>
+        <label for="inputTypeFile" className="FileUpload__label" >{props.buttonLabel}</label>
+        <input type="file" id="inputTypeFile" className='FileUpload' ></input>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <label for="inputTypeFile" className="FileUpload__label" >{props.buttonLabel}</label>
+        <input type="file" id="inputTypeFile" className='FileUpload' ></input>
+      </div>
+    )
+  }
+}
 
-  return (
-    <div className='NewUserUpload'>
-      <p>Upload a profile photo</p>
-      <Button text="Browse Files" color="pink" size="extra-small" handleClick={props.handleClick} />
-    </div>
-  );
-};
+FileUpload.defaultProps = {
+  buttonLabel: "Browse Files"
+}
 
 export default FileUpload;
