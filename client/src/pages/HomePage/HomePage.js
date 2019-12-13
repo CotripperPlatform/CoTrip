@@ -87,9 +87,15 @@ const HomePage = props => {
           <div className="HomePage__scrapbook-cards-container">
             <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
             <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            <span className="HomePage__groupcard-2">
+              <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            </span>
+            <span className="HomePage__groupcard-3">
+              <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            </span>
+            <span className="HomePage__groupcard-3">
+              <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            </span>
           </div>
         </span>
       </div>

@@ -49,7 +49,7 @@
 .HomePage__suggestions-container {
   height: 50rem;
   width: 60rem;
-  /* border: 5px solid blue; */
+  border: 5px solid blue;
   margin-left: 8rem;
 }
 .HomePage__suggested-header {
@@ -65,7 +65,7 @@
   width: 50rem;
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
-  /* border: 5px solid red; */
+  border: 5px solid red;
 }
 
 .HomePage__people-container {
@@ -76,7 +76,7 @@
   width: 50rem;
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
-  /* border: 5px solid red; */
+  border: 5px solid red;
 }
 
 .HomePage__arrow {
@@ -102,7 +102,7 @@
 .placeholder-person-card {
   width: 220px;
   height: 300px;
-  /* border: 3px solid gray; */
+  border: 3px solid gray;
   box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.64);
 }
 /**
@@ -121,7 +121,7 @@
 .HomePage__top-cards-wrapper {
   height: 50rem;
   width: 50rem;
-  /* border: 5px solid green; */
+  border: 5px solid green;
   margin-right: 4rem;
 }
 .HomePage__cards-container {
@@ -130,7 +130,7 @@
   justify-content: space-between;
   height: 35rem;
   width: 33rem;
-  /* border: 3px solid goldenrod; */
+  border: 3px solid goldenrod;
   margin: 1rem;
 }
 /**
@@ -158,12 +158,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* border: 1px solid brown; */
 }
 .HomePage__scrapbook-container {
   height: 25rem;
   width: 86vw;
-  /* border: 5px solid blue; */
   margin-left: 8rem;
+  border: 1px solid brown;
 }
 .HomePage__scrapbook-cards-container {
   display: flex;
@@ -171,7 +172,7 @@
   justify-content: space-around;
   width: 95rem;
   height: 18rem;
-  /* border: 1px solid brown; */
+  border: 1px solid brown;
   margin: 1rem 1rem 1rem 2rem;
 }
 
@@ -208,6 +209,30 @@
   }
   .HomePage__arrow {
     margin-right: 30rem;
+  }
+  .HomePage__suggestions-container {
+    width: 18rem;
+    margin-left: 1rem;
+  }
+  .HomePage__top-cards-wrapper {
+    height: 50rem;
+    width: 30rem;
+    margin-right: 1rem;
+  }
+  .HomePage__cards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 35rem;
+    width: 23rem;
+  }
+  .HomePage__scrapbook-container {
+    margin-left: 1rem;
+  }
+  .HomePage__scrapbook-cards-container {
+    width: 35rem;
+
+    margin: 0rem 0rem 0rem 0rem;
   }
 }
 @media only screen and (max-width: 1080px) {
