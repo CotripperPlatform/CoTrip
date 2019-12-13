@@ -1,7 +1,7 @@
 
 from django.shortcuts import render, redirect
 from rest_framework import generics
-from .serializers import UserSerializer, TokenSerializer
+from .serializers import UserSerializer, TokenSerializer, ProfileSerializer
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from rest_framework_jwt.settings import api_settings
@@ -64,3 +64,15 @@ class RegisterUsersView(generics.ListCreateAPIView):
             username=username, password=password, email=email
         )
         return Response(status=status.HTTP_201_CREATED)
+
+
+class ProfileList(generics.ListCreateAPIView):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+
+def update_profile(request, user_id):
+    user = User.objects.get(pk=user_id)
+    user.profile.first_name = 'tory'
+    user.profile.last_name = 'klingenstein'
+    user.save()
