@@ -1,19 +1,17 @@
-
-import React from 'react';
+import React from "react";
 import "./HomePage.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-// Function based React Component
-const HomePage = (props) => {
+import NavBar from "../../components/Navbar/Navbar";
 
-  // Default Class to apply to Component
-  let classList = `HomePage`;
-
-
-  return(
-    <div className={classList}>
-      HomePage
+const HomePage = props => {
+  return (
+    <div className="home-page-wrapper">
+      <nav>
+        <NavBar />
+      </nav>
     </div>
   );
-}
+};
 
 export default HomePage;
