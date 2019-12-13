@@ -1,7 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ProfilePicture from "./ProfilePicture.js";
-import NewUserUpload from "./NewUserUploadPicture"
 import Image from "../../assets/images/profile_large.png";
 
 storiesOf("Profile Picture", module)
@@ -13,6 +12,3 @@ storiesOf("Profile Picture", module)
   .add("Small Static", () => <ProfilePicture type="small" image={Image} />)
   .add("Medium Static", () => <ProfilePicture image={Image} />)
   .add("Large Static", () => <ProfilePicture type="large" image={Image} />);
-
-storiesOf("New User Upload", module)
-  .add("New User Upload", () => <NewUserUpload></NewUserUpload>)
