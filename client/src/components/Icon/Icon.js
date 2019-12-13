@@ -5,7 +5,7 @@ import "./Icon.css";
 
 const Icon = (props) => (
   <div>
-    <FontAwesomeIcon icon={ props.icon} />
+    <FontAwesomeIcon icon={ props.icon} size={props.size}/>
   </div>
 )
 
