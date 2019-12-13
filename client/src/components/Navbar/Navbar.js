@@ -5,6 +5,7 @@ import Burger from "../Burger/Burger";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import NavLink from "../NavLink/NavLink";
 import Icon from "../Icon/Icon";
+import PropTypes from "prop-types";
 
 // Function based React Component
 const Navbar = props => {
@@ -73,6 +74,15 @@ const Navbar = props => {
       </div>
     </div>
   );
+};
+
+Navbar.propTypes = {
+  showCondensedMenu: PropTypes.bool,
+  burgerClick: PropTypes.func.isRequired
+};
+
+Navbar.defaultProps = {
+  showCondensedMenu: false
 };
 
 export default Navbar;
