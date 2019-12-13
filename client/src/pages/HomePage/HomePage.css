@@ -151,9 +151,14 @@
 |--------------------------------------------------
 */
 
+.HomePage__scrapbook-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .HomePage__scrapbook-container {
-  height: 50rem;
-  width: 60rem;
+  height: 25rem;
+  width: 86vw;
   border: 5px solid blue;
   margin-left: 8rem;
 }

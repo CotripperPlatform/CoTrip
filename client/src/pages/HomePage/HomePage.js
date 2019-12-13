@@ -76,7 +76,12 @@ const HomePage = props => {
           </span>
         </div>
       </div>
-      <span className="HomePage__scrapbook-container"></span>
+      <div className="HomePage__scrapbook-wrapper">
+        <span className="HomePage__scrapbook-container">
+          <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
+        </span>
+      </div>
+
       <footer className="HomePage__footer-wrapper">
         <Footer />
       </footer>
