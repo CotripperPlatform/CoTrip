@@ -1,8 +1,8 @@
 import React from "react";
-import './NewUserUploadPicture.css'
+import './FileUpload.css'
 import Button from '../Button/Button'
 
-const NewUserUpload = (props) => {
+const FileUpload = (props) => {
 
   return (
     <div className='NewUserUpload'>
@@ -12,4 +12,4 @@ const NewUserUpload = (props) => {
   );
 };
 
-export default NewUserUpload;
+export default FileUpload;
