@@ -26,3 +26,5 @@ body {
 p span {
   display: block;
 }
+
+@media only screen and (max-width: 992px)
