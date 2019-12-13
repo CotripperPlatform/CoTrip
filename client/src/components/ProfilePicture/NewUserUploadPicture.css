@@ -4,9 +4,6 @@
   border: solid var(--yellow) 1px;
   border-radius: 50%;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 .NewUserUpload__p {
@@ -16,7 +13,6 @@
   font-size: 1.5rem;
   font-weight: var(--title-weight);
   color: var(--purple);
-  /* text-align: center; */
 }
 
 
