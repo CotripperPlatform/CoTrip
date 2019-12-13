@@ -50,7 +50,9 @@ const HomePage = props => {
             </div>
           </span>
 
-          <span className="HomePage__top-cards-container"></span>
+          <span className="HomePage__top-cards-wrapper">
+            <div className="HomePage__cards-container"></div>
+          </span>
         </div>
       </div>
       <footer className="HomePage__footer-wrapper">

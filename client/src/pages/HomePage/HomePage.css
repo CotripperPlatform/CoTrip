@@ -115,11 +115,17 @@
 | trending hashtags.
 |--------------------------------------------------
 */
-.HomePage__top-cards-container {
+.HomePage__top-cards-wrapper {
   height: 60rem;
   width: 50rem;
   border: 5px solid green;
   margin-right: 4rem;
+}
+.HomePage__cards-container {
+  height: 50rem;
+  width: 45rem;
+  border: 3px solid goldenrod;
+  margin: 1rem;
 }
 /**
 |--------------------------------------------------
