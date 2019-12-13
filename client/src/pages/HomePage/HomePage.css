@@ -44,7 +44,7 @@
 }
 
 .HomePage__suggestions-container {
-  height: 60rem;
+  height: 50rem;
   width: 60rem;
   border: 5px solid blue;
   margin-left: 8rem;
@@ -116,7 +116,7 @@
 |--------------------------------------------------
 */
 .HomePage__top-cards-wrapper {
-  height: 60rem;
+  height: 50rem;
   width: 50rem;
   border: 5px solid green;
   margin-right: 4rem;
@@ -126,7 +126,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 35rem;
-  width: 45rem;
+  width: 33rem;
   border: 3px solid goldenrod;
   margin: 1rem;
 }
@@ -143,3 +143,17 @@
 | Suggested groups/people, book a trip and trending hashtags
 |--------------------------------------------------
 */
+
+/**
+|--------------------------------------------------
+| These contents are on the bottom of the page:
+| CoTripper Scrapbook
+|--------------------------------------------------
+*/
+
+.HomePage__scrapbook-container {
+  height: 50rem;
+  width: 60rem;
+  border: 5px solid blue;
+  margin-left: 8rem;
+}

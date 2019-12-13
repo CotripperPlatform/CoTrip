@@ -76,6 +76,7 @@ const HomePage = props => {
           </span>
         </div>
       </div>
+      <span className="HomePage__scrapbook-container"></span>
       <footer className="HomePage__footer-wrapper">
         <Footer />
       </footer>
