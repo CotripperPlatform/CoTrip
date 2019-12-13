@@ -71,4 +71,14 @@ class Pill extends Component {
   }
 }
 
+Pill.defaultProps = {
+  text:"Default",
+  size:"large",
+  color:"pink",
+  inactiveColor:"red",
+  selectId:0,
+  shadow:""
+
+
+}
 export default Pill;
