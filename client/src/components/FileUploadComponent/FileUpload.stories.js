@@ -4,5 +4,11 @@ import FileUpload from "./FileUpload"
 
 
 storiesOf("File Upload", module)
-  .add("Default", () => <FileUpload></FileUpload>)
-  .add("New User Upload", () => <FileUpload context="userPhoto" buttonLabel="Browse Files"></FileUpload>)
+  .add("Default", () =>
+    <FileUpload>
+    </FileUpload>)
+  .add("New User Upload", () =>
+    <FileUpload
+      context="userPhoto"
+      buttonLabel="Browse Files">
+    </FileUpload>)

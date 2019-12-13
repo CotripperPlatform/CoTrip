@@ -2,9 +2,16 @@ import React from "react";
 import './FileUpload.css'
 
 const FileUpload = (props) => {
+
+  function handleChange(eo) {
+    eo.preventDefault()
+    eo.persist()
+    console.log(eo)
+  }
+
   if (props.context === "userPhoto") {
     return (
-      <div className='NewUserUpload'>
+      <div onChange={handleChange} className='NewUserUpload'>
         <p>Upload a profile photo</p>
         <label for="inputTypeFile" className="FileUpload__label" >{props.buttonLabel}</label>
         <input type="file" id="inputTypeFile" className='FileUpload' ></input>
@@ -12,7 +19,7 @@ const FileUpload = (props) => {
     );
   } else {
     return (
-      <div>
+      <div onChange={handleChange}>
         <label for="inputTypeFile" className="FileUpload__label" >{props.buttonLabel}</label>
         <input type="file" id="inputTypeFile" className='FileUpload' ></input>
       </div>
@@ -21,7 +28,7 @@ const FileUpload = (props) => {
 }
 
 FileUpload.defaultProps = {
-  buttonLabel: "Browse Files"
+  buttonLabel: "Browse Files",
 }
 
 export default FileUpload;
