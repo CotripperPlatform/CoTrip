@@ -8,18 +8,17 @@ from ..cotrip_app.models import Topic
 class Profile(models.Model):
     user = models.OneToOneField(
         User,
-        on_delete=models.CASCADE,
-        primary_key=True,
+        on_delete=models.CASCADE
     )
-    # add profile pic, its a must
-    # add connections, list of users?
-    first_name = models.CharField(max_length=200)
-    last_name = models.CharField(max_length=200)
-    city_of_residence = models.CharField(max_length=200)
+    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    first_name = models.CharField(max_length=200, default=null)
+    last_name = models.CharField(max_length=200, default=null)
+    city_of_residence = models.CharField(max_length=200, defaul=null)
     # topics = models.ManyToManyField(Topic)
+    # add connections, list of users?
     age = models.IntegerField()
 
     def __str__(self):
-        return self.first_name + " " + self.last_name
+        return f'{self.first_name} {self.last_name} Profile'
 
 
