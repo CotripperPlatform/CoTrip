@@ -30,8 +30,12 @@
   padding: 0 40px 0 0;
 }
 
-.Navbar__profile {
+.Navbar__right {
   margin: -5px 26px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
 }
 
 .Navbar__burger {
@@ -49,7 +53,7 @@
 }
 
 .Navbar__link-item {
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 .Navbar__hidden {

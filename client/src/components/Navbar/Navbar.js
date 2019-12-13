@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import Burger from "../Burger/Burger";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import NavLink from "../NavLink/NavLink";
-import { checkPropTypes } from "prop-types";
+import Icon from "../Icon/Icon";
 
 // Function based React Component
 const Navbar = props => {
@@ -63,9 +63,9 @@ const Navbar = props => {
           </div>
         </div>
         <div className="Navbar__right">
-          <div className="Navbar__profile">
-            <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
-          </div>
+          <Icon icon={"search"} />
+          <Icon icon={["far", "comment-dots"]} />
+          <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
         </div>
       </div>
       <div className="Navbar__burger">
