@@ -1,19 +1,28 @@
-.CommentBody {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 60%;
-    height: auto;
-    background-color: var(--gray-dark);
-    font-size: 14px;
-    font-family: var(--paragraph-font);
+body {
+  text-align: center;
 }
+
+.CommentBody {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50rem;
+  height: auto;
+  background-color: var(--gray-dark);
+  font-size: 14px;
+  font-family: var(--paragraph-font);
+}
+
+.CommentBody p {
+  text-align: left;
+}
+
 .Date {
-    margin-left: 10px;
-    white-space: nowrap;
+  margin-left: 10px;
+  white-space: nowrap;
 }
 
 p span {
-    display: block;
+  display: block;
 }
