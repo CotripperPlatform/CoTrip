@@ -14,11 +14,10 @@ describe("CarouselDots component", () => {
     numberOfDots={3}
     activeLocation={1}
     onStatusChange={jest.fn()}/>);
-    console.log(component.debug())
     expect(component.find('.CarouselDot').length).toBe(3);
 
   });
-  
+
   it("Component should switch from dot 1 to dot 2 upon clicking 2nd dot", () => {
     function callback(val){
     }
