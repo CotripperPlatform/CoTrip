@@ -9,7 +9,6 @@ class Profile(models.Model):
         User,
         on_delete=models.CASCADE, primary_key=True
     )
-
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=200, default='')
     last_name = models.CharField(max_length=200, default='')

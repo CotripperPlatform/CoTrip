@@ -71,8 +71,7 @@ class ProfileList(generics.ListCreateAPIView):
     serializer_class = ProfileSerializer
 
 
-def update_profile(request, user_id):
-    user = User.objects.get(pk=user_id)
-    user.profile.first_name = 'tory'
-    user.profile.last_name = 'klingenstein'
-    user.save()
+class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
+    # permission_classes = (permissions.IsAuthenticated,)
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
