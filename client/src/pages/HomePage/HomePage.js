@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import GroupCard from "../../components/GroupCard/GroupCard";
 import TrendingHashtagCard from "../../components/TrendingHashtagCard/TrendingHashtagCard";
+import MediaCard from "../../components/MediaCard/MediaCard";
 
 const HomePage = props => {
   return (
@@ -79,6 +80,8 @@ const HomePage = props => {
       <div className="HomePage__scrapbook-wrapper">
         <span className="HomePage__scrapbook-container">
           <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
+          <div className="HomePage__scrapbook-cards-container"></div>
+          {/* <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" /> */}
         </span>
       </div>
 

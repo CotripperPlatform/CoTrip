@@ -162,3 +162,11 @@
   border: 5px solid blue;
   margin-left: 8rem;
 }
+.HomePage__scrapbook-cards-container {
+  display: flex;
+  flex-direction: row;
+  width: 95rem;
+  height: 18rem;
+  border: 1px solid brown;
+  margin: 1rem 1rem 1rem 2rem;
+}
