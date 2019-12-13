@@ -5,7 +5,7 @@ import InputTextField from "../InputTextField/InputTextField";
 import Button from "../Button/Button";
 
 const handleClick = e => {
-  console.log("Clicked");
+  alert("Clicked");
 };
 
 storiesOf("Banner", module)

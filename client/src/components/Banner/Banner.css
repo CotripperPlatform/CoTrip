@@ -1,4 +1,4 @@
-.banner{
+.Banner{
   padding: 0;
   margin: 0 auto;
   width: 100%;
@@ -32,7 +32,9 @@
   margin: 0 auto;
 }
 
-input{
+.Banner .InputTextField__container--search{
   margin: 0 auto;
 }
+
+
 
