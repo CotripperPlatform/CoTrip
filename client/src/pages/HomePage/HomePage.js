@@ -39,14 +39,14 @@ const HomePage = props => {
                 location="Boston, MA"
                 picture="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
               />
-              <a href="/" className="HomePage__arrow" />
+              <a href="/home" className="HomePage__arrow" />
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
               <div className="placeholder-person-card"></div>
               <div className="placeholder-person-card"></div>
               <div className="placeholder-person-card"></div>
-              <a href="/" className="HomePage__arrow" />
+              <a href="/home" className="HomePage__arrow lower-people" />
             </div>
           </span>
 

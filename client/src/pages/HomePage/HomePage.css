@@ -47,7 +47,7 @@
   height: 60rem;
   width: 60rem;
   border: 5px solid blue;
-  margin-left: 4rem;
+  margin-left: 8rem;
 }
 .HomePage__suggested-header {
   font-family: var(--default-font);
@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 30rem;
+  height: 20rem;
   width: 50rem;
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
@@ -87,6 +87,10 @@
   box-shadow: 6px 7px 5px -2px rgba(0, 0, 0, 0.64);
   transition: all 0.1s ease-in-out;
   cursor: pointer;
+}
+/* for suggested people */
+.lower-people {
+  margin-top: 8rem;
 }
 .HomePage__arrow:hover {
   transform: scale(1.1);
