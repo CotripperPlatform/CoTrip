@@ -11,7 +11,6 @@ django = "*"
 psycopg2-binary = "*"
 autopep8 = "*"
 djangorestframework-simplejwt = "*"
-djangorestframework-jwt = "*"
 pillow = "*"
 
 [requires]
