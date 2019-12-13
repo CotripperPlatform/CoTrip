@@ -20,6 +20,19 @@
   border: 2px solid black;
 }
 
+/**
+|--------------------------------------------------
+| These contents are the top items on the page:
+| Suggested groups/people, book a trip and trending hashtags
+|--------------------------------------------------
+*/
+
+/**
+|--------------------------------------------------
+| Contents on left side top of page. Suggested groups
+| and suggested people
+|--------------------------------------------------
+*/
 .HomePage_top-items-wrapper {
   display: flex;
   flex-direction: row;
@@ -44,9 +57,28 @@
   border: 5px solid red;
 }
 
+/**
+|--------------------------------------------------
+| Contents on right side top of page. Book a trip and
+| trending hashtags.
+|--------------------------------------------------
+*/
 .HomePage__top-cards-container {
   height: 48rem;
   width: 50rem;
-  border: 5px solid blue;
+  border: 5px solid green;
   margin-right: 4rem;
 }
+/**
+|--------------------------------------------------
+| Contents on right side top of page. Book a trip and
+| trending hashtags.
+|--------------------------------------------------
+*/
+
+/**
+|--------------------------------------------------
+| These contents are the top items on the page:
+| Suggested groups/people, book a trip and trending hashtags
+|--------------------------------------------------
+*/
