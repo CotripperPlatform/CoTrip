@@ -1,11 +1,6 @@
 .OnboardingOne {
   font-family: var(--default-font);
 }
-.OnboardingOne__wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .OnboardingOne__form {
   display: flex;
   flex-direction: column;
@@ -20,7 +15,6 @@
 .OnboardingOne__button-container {
   display: flex;
   justify-content: center;
-  margin: 1rem 0;
 }
 .OnboardingOne .InputTextField__container--default {
   height: 1rem;
@@ -28,27 +22,37 @@
 }
 
 .OnboardingOne .Button {
-  width: 11.4rem;
+  width: 18.875rem;
+  height: 4.07rem;
+  font-size: 2.25rem;
+  padding: 0;
+  margin: 2rem 0;
 }
 
 @media all and (max-width: 320px) {
   .OnboardingOne__container {
-    width: 0.5rem;
     flex-direction: column;
     display: flex;
-    justify-content: center;
+    margin: 0.5rem 0;
+  }
+  .OnboardingOne__header {
+    font-size: 1.5rem;
   }
   .OnboardingOne .InputTextField__container--default {
     min-width: 11.5rem;
     max-width: 11.5rem;
     font-size: 1rem;
-    width: 0.5rem;
+    height: 0.5rem;
     padding: 0.7rem 1.4rem;
   }
-  .OnboardingOne__wrapper {
+  .OnboardingOne__form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+  }
+  .OnboardingOne .Button {
+    width: 11.4rem;
+    height: 2.46rem;
+    font-size: 1.35rem;
   }
 }
