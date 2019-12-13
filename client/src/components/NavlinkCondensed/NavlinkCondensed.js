@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import React from 'react';
 import "./NavlinkCondensed.css";
 
@@ -9,9 +9,20 @@ const NavlinkCondensed = (props) => {
   let classList = `NavlinkCondensed`;
 
 
-  return(
+  return (
     <div className={classList}>
-      NavlinkCondensed
+      <Link to="/">
+        <h2>My Directory</h2>
+      </Link>
+      <Link to="/">
+        <h2>Community</h2>
+      </Link>
+      <Link to="/">
+        <h2>Forum</h2>
+      </Link>
+      <Link to="/">
+        <h2>Book A Trip</h2>
+      </Link>
     </div>
   );
 }

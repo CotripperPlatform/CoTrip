@@ -1,4 +1,21 @@
-
 .NavlinkCondensed {
+  background-color: var(--white);
+  box-shadow: 0 4px 10px -5px var(--gray);
+  color: var(--purple);
+  font-family: var(--default-font);
+  padding: 10px 0;
+}
 
+.NavlinkCondensed h2 {
+    padding: 5px 20px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+
+.NavlinkCondensed a {
+    text-decoration: none;
+}
+
+.NavlinkCondensed h2:hover {
+    background-color: var(--gray-lite);
 }
