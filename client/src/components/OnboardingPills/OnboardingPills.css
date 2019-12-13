@@ -13,6 +13,7 @@
   font-size: 1.25rem;
   margin: 0.5rem;
   padding: 0;
+  box-shadow: none;
   line-height: 2;
   user-select: none;
 }
