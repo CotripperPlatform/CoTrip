@@ -32,6 +32,18 @@
   border: 5px solid blue;
   margin-left: 4rem;
 }
+.HomePage__suggested-header {
+  margin-left: 2rem;
+}
+.HomePage__group-cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 24rem;
+  width: 50rem;
+  border: 5px solid red;
+}
+
 .HomePage__top-cards-container {
   height: 48rem;
   width: 50rem;
