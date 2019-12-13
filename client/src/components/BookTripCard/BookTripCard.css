@@ -10,7 +10,7 @@
 }
 
 .Card a:visited {
-  color: #f4f4f4;
+  color: var(--white)
 }
 
 .Card h1 {
@@ -27,5 +27,11 @@
 }
 
 .Card {
-  color: #f4f4f4;
+  color: var(--white);
+}
+
+@media only screen and (max-width:576px) {
+  .Card span {
+    display: none;
+  }
 }
