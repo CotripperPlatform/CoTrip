@@ -5,7 +5,9 @@ import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
 const ForumComment = props => {
     return (
         <div className="ForumComment">
+            <div className="ForumComment__image">
            <ProfilePicture type="small" link={props.to} image={props.image} />
+           </div>
         <div className="ForumComment__name">
             {props.name}
         </div>
@@ -19,7 +21,7 @@ const ForumComment = props => {
         <div className="ForumComment__likes-replies">
            <p>
              {props.likes}
-             {" Likes"}
+             {" Likes "}
              {props.replies}
              {" Replies" }
            </p>
