@@ -898,7 +898,11 @@ exports[`Storyshots Button Small Yellow w/ Black Text Button 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Blank 1`] = `
+=======
+exports[`Storyshots Card Info Card, Blank 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -922,6 +926,7 @@ exports[`Storyshots Card Card, Blank 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--undefined Card--large
       "
       style={
@@ -970,11 +975,24 @@ exports[`Storyshots Card Card, Blank, Small 1`] = `
     >
        
     </div>
+=======
+      className="Card Card--undefined Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Discover New Groups 1`] = `
+=======
+exports[`Storyshots Card Info Card, Blank, Small 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -998,6 +1016,7 @@ exports[`Storyshots Card Card, Discover New Groups 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--undefined Card--medium
       Card__outline"
       style={
@@ -1017,11 +1036,24 @@ exports[`Storyshots Card Card, Discover New Groups 1`] = `
         </a>
       </div>
     </div>
+=======
+      className="Card Card--undefined Card--small"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Picture BG, Medium 1`] = `
+=======
+exports[`Storyshots Card Info Card, Picture BG, Large 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1045,21 +1077,33 @@ exports[`Storyshots Card Card, Picture BG, Medium 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--undefined Card--medium
       "
+=======
+      className="Card Card--undefined Card--medium"
+>>>>>>> pill-test
       style={
         Object {
           "backgroundImage": "url(card_small3.png)",
         }
       }
+<<<<<<< HEAD
     >
        
     </div>
+=======
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Picture Hawaii, Medium 1`] = `
+=======
+exports[`Storyshots Card Info Card, Picture Hawaii, Large 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1083,13 +1127,18 @@ exports[`Storyshots Card Card, Picture Hawaii, Medium 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--undefined Card--medium
       "
+=======
+      className="Card Card--undefined Card--medium"
+>>>>>>> pill-test
       style={
         Object {
           "backgroundImage": "url(https://wallpaperaccess.com/full/144067.jpg)",
         }
       }
+<<<<<<< HEAD
     >
        
     </div>
@@ -1131,11 +1180,18 @@ exports[`Storyshots Card Card, Pink 1`] = `
     >
        
     </div>
+=======
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Pink, Small 1`] = `
+=======
+exports[`Storyshots Card Info Card, Pink 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1159,6 +1215,7 @@ exports[`Storyshots Card Card, Pink, Small 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--pink Card--small
       "
       style={
@@ -1169,11 +1226,24 @@ exports[`Storyshots Card Card, Pink, Small 1`] = `
     >
        
     </div>
+=======
+      className="Card Card--pink Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Purple 1`] = `
+=======
+exports[`Storyshots Card Info Card, Pink, Small 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1197,6 +1267,7 @@ exports[`Storyshots Card Card, Purple 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--large
       "
       style={
@@ -1207,11 +1278,24 @@ exports[`Storyshots Card Card, Purple 1`] = `
     >
        
     </div>
+=======
+      className="Card Card--pink Card--small"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Purple, Small 1`] = `
+=======
+exports[`Storyshots Card Info Card, Purple 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1235,6 +1319,7 @@ exports[`Storyshots Card Card, Purple, Small 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--small
       "
       style={
@@ -1245,11 +1330,24 @@ exports[`Storyshots Card Card, Purple, Small 1`] = `
     >
        
     </div>
+=======
+      className="Card Card--purple Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Card Card, Purple, Smedium 1`] = `
+=======
+exports[`Storyshots Card Info Card, Purple, Small 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1273,6 +1371,7 @@ exports[`Storyshots Card Card, Purple, Smedium 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--extra-small
       "
       style={
@@ -1334,6 +1433,15 @@ exports[`Storyshots Card Large Card with Small Card inside 1`] = `
         </div>
       </div>
     </div>
+=======
+      className="Card Card--purple Card--small"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
@@ -1512,6 +1620,7 @@ exports[`Storyshots Comment Body 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots ExtraUsers 2 Extra Users 1`] = `
 <div
   style={
@@ -1616,6 +1725,8 @@ exports[`Storyshots ExtraUsers No Extra Users 1`] = `
 </div>
 `;
 
+=======
+>>>>>>> pill-test
 exports[`Storyshots Footer Default 1`] = `
 <div
   style={
@@ -1685,7 +1796,11 @@ exports[`Storyshots Footer Default 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots ForumPost Default 1`] = `
+=======
+exports[`Storyshots GroupCard Default 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -1709,6 +1824,7 @@ exports[`Storyshots ForumPost Default 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="ForumPost"
     >
       <div
@@ -2080,6 +2196,46 @@ exports[`Storyshots GroupCard Default 1`] = `
               className="GroupCard__location"
             >
               Location, State
+=======
+      className="Card Card--pink Card--medium"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+      <a
+        className="GroupCard"
+        href="/"
+        onClick={[Function]}
+        style={
+          Object {
+            "backgroundImage": "url(undefined)",
+          }
+        }
+      >
+        <div
+          className="GroupCard__text-container"
+        >
+          <p
+            className="GroupCard__group-name"
+          >
+            Group Name
+          </p>
+          <div
+            className="GroupCard__details"
+          >
+            <p
+              className="GroupCard__members"
+            >
+              # of 
+               members
+            </p>
+            <p
+              className="GroupCard__location"
+            >
+              Location, State
+>>>>>>> pill-test
             </p>
           </div>
         </div>
@@ -2113,6 +2269,7 @@ exports[`Storyshots GroupCard Example 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--pink Card--medium
       "
       style={
@@ -2122,6 +2279,15 @@ exports[`Storyshots GroupCard Example 1`] = `
       }
     >
        
+=======
+      className="Card Card--pink Card--medium"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <a
         className="GroupCard"
         href="/"
@@ -2654,7 +2820,11 @@ exports[`Storyshots InputTextField Search Trips 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots InteractionCard Default 1`] = `
+=======
+exports[`Storyshots Large Media Cards Happiness 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -2677,6 +2847,7 @@ exports[`Storyshots InteractionCard Default 1`] = `
       }
     }
   >
+<<<<<<< HEAD
     <div
       className="InteractionCard"
     >
@@ -2706,6 +2877,29 @@ exports[`Storyshots InteractionCard Default 1`] = `
         Message
       </button>
     </div>
+=======
+    <a
+      className="MediaCard MediaCard--large"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-2.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+>>>>>>> pill-test
   </div>
 </div>
 `;
@@ -3752,6 +3946,57 @@ exports[`Storyshots Media Cards Small Waterfall 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
+=======
+exports[`Storyshots Medium Media Cards Happiness 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <a
+      className="MediaCard MediaCard--medium"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-2.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+>>>>>>> pill-test
 exports[`Storyshots NavLink NavLink 1`] = `
 <div
   style={
@@ -3955,7 +4200,11 @@ exports[`Storyshots Navbar Default 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots OnboardingParent Default 1`] = `
+=======
+exports[`Storyshots Pill Community People Pill (Toggle) 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -3979,6 +4228,7 @@ exports[`Storyshots OnboardingParent Default 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="OnboardingParent"
     >
       <div
@@ -4011,12 +4261,26 @@ exports[`Storyshots OnboardingParent Default 1`] = `
           </div>
         </div>
       </div>
+=======
+      className="Pill Pill--large Pill--shadow Pill__purple "
+      onClick={[Function]}
+    >
+      Traveling
+      <img
+        className="Pill--icon Pill--icon-offset"
+        src="heart-white.svg"
+      />
+>>>>>>> pill-test
     </div>
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Pill Community People Pill (Toggle) 1`] = `
+=======
+exports[`Storyshots Pill Default Props 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -4040,6 +4304,7 @@ exports[`Storyshots Pill Community People Pill (Toggle) 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Pill Pill--large Pill--shadow Pill__purple "
       onClick={[Function]}
     >
@@ -4048,6 +4313,12 @@ exports[`Storyshots Pill Community People Pill (Toggle) 1`] = `
         className="Pill--icon Pill--icon-offset"
         src="heart-white.svg"
       />
+=======
+      className="Pill Pill--undefined Pill__undefined "
+      onClick={[Function]}
+    >
+      <div />
+>>>>>>> pill-test
     </div>
   </div>
 </div>
@@ -4434,7 +4705,12 @@ exports[`Storyshots ProfilePicture Extra Small with Link 1`] = `
       className="ProfilePicture ProfilePicture--extra-small"
     >
       <a
+<<<<<<< HEAD
         href="/"
+=======
+        exact={true}
+        href=""
+>>>>>>> pill-test
         onClick={[Function]}
       >
         <img
@@ -4544,7 +4820,12 @@ exports[`Storyshots ProfilePicture Large with Link 1`] = `
       className="ProfilePicture ProfilePicture--large"
     >
       <a
+<<<<<<< HEAD
         href="/"
+=======
+        exact={true}
+        href=""
+>>>>>>> pill-test
         onClick={[Function]}
       >
         <img
@@ -4619,7 +4900,12 @@ exports[`Storyshots ProfilePicture Medium with Link 1`] = `
       className="ProfilePicture ProfilePicture--medium"
     >
       <a
+<<<<<<< HEAD
         href="/"
+=======
+        exact={true}
+        href=""
+>>>>>>> pill-test
         onClick={[Function]}
       >
         <img
@@ -4694,7 +4980,12 @@ exports[`Storyshots ProfilePicture Small with Link 1`] = `
       className="ProfilePicture ProfilePicture--small"
     >
       <a
+<<<<<<< HEAD
         href="/"
+=======
+        exact={true}
+        href=""
+>>>>>>> pill-test
         onClick={[Function]}
       >
         <img
@@ -4707,7 +4998,11 @@ exports[`Storyshots ProfilePicture Small with Link 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots SplashPage SplashPage 1`] = `
+=======
+exports[`Storyshots Small Media Cards Happiness 1`] = `
+>>>>>>> pill-test
 <div
   style={
     Object {
@@ -4730,6 +5025,7 @@ exports[`Storyshots SplashPage SplashPage 1`] = `
       }
     }
   >
+<<<<<<< HEAD
     <div
       className="SplashPage"
     >
@@ -4762,6 +5058,59 @@ exports[`Storyshots SplashPage SplashPage 1`] = `
         </button>
       </a>
     </div>
+=======
+    <a
+      className="MediaCard MediaCard--small"
+      href="/User/:userid/"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundImage": "url(media-card-2.png)",
+          "backgroundSize": "cover",
+        }
+      }
+    >
+      <footer
+        className="MediaCard__footer"
+      >
+        <p
+          className="MediaCard__footer-text"
+        >
+          Posted By: --user--
+        </p>
+      </footer>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots SplashPage Default 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": "0",
+      "display": "flex",
+      "left": "0",
+      "overflow": "auto",
+      "position": "fixed",
+      "right": "0",
+      "top": "0",
+    }
+  }
+>
+  <div
+    style={
+      Object {
+        "margin": "auto",
+        "maxHeight": "100%",
+      }
+    }
+  >
+    <div
+      className="SplashPage"
+    />
+>>>>>>> pill-test
   </div>
 </div>
 `;
@@ -4790,6 +5139,7 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--large
       "
       style={
@@ -4799,6 +5149,15 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
       }
     >
        
+=======
+      className="Card Card--purple Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <div
         className="TrendingHashtagCard__container"
       >
@@ -4814,6 +5173,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #dope
             </a>
           </div>
@@ -4823,6 +5186,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #torch
             </a>
           </div>
@@ -4832,6 +5199,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #hawaii
             </a>
           </div>
@@ -4841,6 +5212,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #kids
             </a>
           </div>
@@ -4850,6 +5225,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #cats
             </a>
           </div>
@@ -4859,6 +5238,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #dogs
             </a>
           </div>
@@ -4868,6 +5251,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #italy
             </a>
           </div>
@@ -4877,6 +5264,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #starwars
             </a>
           </div>
@@ -4886,6 +5277,10 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #babyyoda
             </a>
           </div>
@@ -4920,6 +5315,7 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--large
       "
       style={
@@ -4929,6 +5325,15 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
       }
     >
        
+=======
+      className="Card Card--purple Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <div
         className="TrendingHashtagCard__container"
       >
@@ -4944,6 +5349,10 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #dope
             </a>
           </div>
@@ -4953,6 +5362,10 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #torch
             </a>
           </div>
@@ -4962,6 +5375,10 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #hawaii
             </a>
           </div>
@@ -4971,6 +5388,10 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #kids
             </a>
           </div>
@@ -5005,6 +5426,7 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--large
       "
       style={
@@ -5014,6 +5436,15 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
       }
     >
        
+=======
+      className="Card Card--purple Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <div
         className="TrendingHashtagCard__container"
       >
@@ -5029,6 +5460,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #italy
             </a>
           </div>
@@ -5038,6 +5473,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #starwars
             </a>
           </div>
@@ -5047,6 +5486,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #babyyoda
             </a>
           </div>
@@ -5056,6 +5499,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #gaming
             </a>
           </div>
@@ -5065,6 +5512,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #sports
             </a>
           </div>
@@ -5074,6 +5525,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #haikus
             </a>
           </div>
@@ -5083,6 +5538,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #surfing
             </a>
           </div>
@@ -5092,6 +5551,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #momfacts
             </a>
           </div>
@@ -5101,6 +5564,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #dadfacts
             </a>
           </div>
@@ -5110,6 +5577,10 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
+<<<<<<< HEAD
+=======
+               
+>>>>>>> pill-test
               #catfacts
             </a>
           </div>
@@ -5144,6 +5615,7 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--purple Card--large
       "
       style={
@@ -5153,6 +5625,15 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
       }
     >
        
+=======
+      className="Card Card--purple Card--large"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <div
         className="TrendingHashtagCard__container"
       >
@@ -5171,6 +5652,7 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots TripCard Default 1`] = `
 <div
   style={
@@ -5499,6 +5981,8 @@ exports[`Storyshots TripDetails Default 1`] = `
 </div>
 `;
 
+=======
+>>>>>>> pill-test
 exports[`Storyshots UpcomingEventsCard Default 1`] = `
 <div
   style={
@@ -5523,6 +6007,7 @@ exports[`Storyshots UpcomingEventsCard Default 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--pink Card--small
       "
       style={
@@ -5532,6 +6017,15 @@ exports[`Storyshots UpcomingEventsCard Default 1`] = `
       }
     >
        
+=======
+      className="Card Card--pink Card--small"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <a
         className="UpcomingEventsCard"
         href="/"
@@ -5590,6 +6084,7 @@ exports[`Storyshots UpcomingEventsCard Example 1`] = `
     }
   >
     <div
+<<<<<<< HEAD
       className="Card Card--pink Card--small
       "
       style={
@@ -5599,6 +6094,15 @@ exports[`Storyshots UpcomingEventsCard Example 1`] = `
       }
     >
        
+=======
+      className="Card Card--pink Card--small"
+      style={
+        Object {
+          "backgroundImage": "url(undefined)",
+        }
+      }
+    >
+>>>>>>> pill-test
       <a
         className="UpcomingEventsCard"
         href="/"
