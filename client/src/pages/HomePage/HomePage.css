@@ -165,6 +165,7 @@
 .HomePage__scrapbook-cards-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   width: 95rem;
   height: 18rem;
   border: 1px solid brown;

@@ -80,8 +80,13 @@ const HomePage = props => {
       <div className="HomePage__scrapbook-wrapper">
         <span className="HomePage__scrapbook-container">
           <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
-          <div className="HomePage__scrapbook-cards-container"></div>
-          {/* <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" /> */}
+          <div className="HomePage__scrapbook-cards-container">
+            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
+          </div>
         </span>
       </div>
 
