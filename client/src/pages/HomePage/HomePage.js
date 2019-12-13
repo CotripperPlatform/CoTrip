@@ -41,7 +41,10 @@ const HomePage = props => {
               />
               <a href="/" className="HomePage__arrow" />
             </div>
+
+            <div className="HomePage__people-container"></div>
           </span>
+
           <span className="HomePage__top-cards-container"></span>
         </div>
       </div>

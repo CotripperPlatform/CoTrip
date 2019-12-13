@@ -18,6 +18,10 @@
   width: 100vw;
   height: 23rem;
   border: 2px solid black;
+  margin-bottom: 3rem;
+  -webkit-box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.45);
+  box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.45);
 }
 
 /**
@@ -58,6 +62,18 @@
   margin: 1rem;
   border: 5px solid red;
 }
+
+.HomePage__people-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 30rem;
+  width: 50rem;
+  padding: 0rem 0rem 1rem 0rem;
+  margin: 1rem;
+  border: 5px solid red;
+}
+
 .HomePage__arrow {
   background-color: var(--yellow-dark);
   margin-top: 3rem;
