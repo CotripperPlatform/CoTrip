@@ -15,7 +15,7 @@ const HomePage = props => {
         <div className="placeholder-welcome">
           <h1>WELCOME USER</h1>
         </div>
-        <div>
+        <div className="HomePage_top-items-wrapper">
           <div className="HomePage__suggestions-container"></div>
           <div className="HomePage__top-cards-container"></div>
         </div>

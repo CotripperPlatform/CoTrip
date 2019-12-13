@@ -20,15 +20,21 @@
   border: 2px solid black;
 }
 
+.HomePage_top-items-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .HomePage__suggestions-container {
   height: 48rem;
   width: 60rem;
   border: 5px solid blue;
-  margin-left: 3rem;
+  margin-left: 4rem;
 }
 .HomePage__top-cards-container {
   height: 48rem;
-  width: 40rem;
+  width: 50rem;
   border: 5px solid blue;
-  margin-right: 3rem;
+  margin-right: 4rem;
 }
