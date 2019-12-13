@@ -7,7 +7,6 @@ function handleClick() {
   console.log("clicked");
 }
 
-storiesOf("Navbar", module)
-  .add("Default", () => (
-    <Navbar profileImage={ProfileImage} burgerClick={handleClick} showCondensedMenu={false} />
-  ));
+storiesOf("Navbar", module).add("Default", () => (
+  <Navbar profileImage={ProfileImage} burgerClick={handleClick} showCondensedMenu={false} menu2="Navbar__show" />
+));

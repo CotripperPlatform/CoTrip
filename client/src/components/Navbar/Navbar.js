@@ -27,7 +27,7 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle Navbar__hidden"></div>
+            <div className={`Navbar__triangle ${props.menu1}`}></div>
           </div>
           <div className="Navbar__link-item">
             <NavLink
@@ -38,7 +38,7 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle Navbar__hidden"></div>
+            <div className={`Navbar__triangle ${props.menu2}`}></div>
           </div>
           <div className="Navbar__link-item">
             <NavLink
@@ -49,7 +49,7 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle"></div>
+            <div className={`Navbar__triangle ${props.menu3}`}></div>
           </div>
           <div className="Navbar__link-item">
             <NavLink
@@ -60,7 +60,7 @@ const Navbar = props => {
                 { text: "Link 2", to: "/" }
               ]}
             />
-            <div className="Navbar__triangle Navbar__hidden"></div>
+            <div className={`Navbar__triangle ${props.menu4}`}></div>
           </div>
         </div>
         <div className="Navbar__right">
@@ -78,11 +78,19 @@ const Navbar = props => {
 
 Navbar.propTypes = {
   showCondensedMenu: PropTypes.bool,
+  menu1: PropTypes.string,
+  menu2: PropTypes.string,
+  menu3: PropTypes.string,
+  menu4: PropTypes.string,
   burgerClick: PropTypes.func.isRequired
 };
 
 Navbar.defaultProps = {
-  showCondensedMenu: false
+  showCondensedMenu: false,
+  menu1: "Navbar_show",
+  menu2: "Navbar_show",
+  menu3: "Navbar_show",
+  menu4: "Navbar_show",
 };
 
 export default Navbar;
