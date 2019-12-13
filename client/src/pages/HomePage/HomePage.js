@@ -81,16 +81,19 @@ const HomePage = props => {
         <span className="HomePage__scrapbook-container">
           <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
           <div className="HomePage__scrapbook-cards-container">
-            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="User/:userid/" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
           </div>
         </span>
       </div>
 
       <footer className="HomePage__footer-wrapper">
+        <div className="placeholder-footer-block">
+          <h1>Bottom footer component</h1>
+        </div>
         <Footer />
       </footer>
     </body>
