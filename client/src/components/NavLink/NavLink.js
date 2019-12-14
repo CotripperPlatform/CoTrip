@@ -42,9 +42,8 @@ class NavLink extends React.Component {
   }
 }
 NavLink.defaultProps = {
-  placeholderTextProp: "community",
-  placeholderUrl: "/",
-  placeholderDropdownProp: [
+  text: "community",
+  menuList: [
     {
       text: "Explore People",
       to: "/"
