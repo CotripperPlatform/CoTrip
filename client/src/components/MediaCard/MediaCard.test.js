@@ -1,16 +1,40 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import MediaCard from './MediaCard.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow, configure } from "enzyme";
+import MediaCard from "./MediaCard.js";
+import flight from "../../assets/images/media-card-6.png";
 
-// We will describe a block of tests
-describe('MediaCard component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<MediaCard />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
-  })
-})
+describe("MediaCard component", () => {
+  const setUp = props => {
+    const component = shallow(<MediaCard {...props} />);
+    return component;
+  };
+  describe("Has Props", () => {
+    let wrapper;
+    beforeEach(() => {
+      const props = {
+        size: "large",
+        to: "User/:userid/",
+        imageSrc: { flight },
+        footerText: "Posted By: CoTripper"
+      };
+      wrapper = setUp(props);
+    });
+    it("Should render as expected", () => {
+      expect(wrapper.find(".MediaCard").length).toBe(1);
+    });
+    it("Should render footer element", () => {
+      expect(wrapper.find(".MediaCard__footer").length).toBe(1);
+    });
+  });
+
+  describe("Has NO Props", () => {
+    let wrapper;
+    beforeEach(() => (wrapper = setUp()));
+    it("Should render as expected", () => {
+      expect(wrapper.find(".MediaCard").length).toBe(1);
+    });
+    it("Should render footer element", () => {
+      expect(wrapper.find(".MediaCard__footer").length).toBe(1);
+    });
+  });
+});
