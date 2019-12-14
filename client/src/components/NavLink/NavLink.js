@@ -25,7 +25,7 @@ class NavLink extends React.Component {
         onMouseEnter={this.toggleDropdown}
         onMouseLeave={this.toggleDropdown}
       >
-        <Link to={this.props.to}>
+        <div>
           <h1>{this.props.text}</h1>
           <div
             className={
@@ -36,7 +36,7 @@ class NavLink extends React.Component {
           >
             <NavLinkDropdownMenu menuList={this.props.menuList.length ? this.props.menuList : []} />
           </div>
-        </Link>
+        </div>
       </div>
     );
   }
