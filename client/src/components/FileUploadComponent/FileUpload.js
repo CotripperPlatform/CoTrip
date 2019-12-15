@@ -7,8 +7,8 @@ class FileUpload extends Component {
     super(props)
 
     this.state = {
-      file: null,
-      renderThis: null
+      renderThis: null,
+      style: null
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -17,10 +17,19 @@ class FileUpload extends Component {
   handleChange(eo) {
     eo.preventDefault()
     eo.persist()
-    this.setState({ 
-      file: eo.target.files,
-      renderThis: <ProfilePicture to="#" image={this.state.file} />
-    })
+    let files = eo.target.files
+    console.warn("data files", files)
+    let reader = new FileReader();
+    reader.readAsDataURL(files[0]);
+    reader.onload = (eo) => {
+      console.warn("img data ", eo.target.result)
+      console.log(this.state)
+      this.setState({
+        style: { backgroundImage: `url(${eo.target.result})` },
+        renderThis: <div className='NewUserUpload' to="#" image={this.state.file} />
+      })
+      console.log(this.state)
+    }
   }
 
   componentDidMount() {
