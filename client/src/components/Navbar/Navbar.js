@@ -64,8 +64,8 @@ const Navbar = props => {
           </div>
         </div>
         <div className="Navbar__right">
-          <Icon icon={"search"} />
-          <Icon icon={["far", "comment-dots"]} />
+          <Icon icon={"search"} size="2x" />
+          <Icon icon={["far", "comment-dots"]} size="2x" />
           <ProfilePicture type="extra-small" link="#" image={props.profileImage} />
         </div>
       </div>

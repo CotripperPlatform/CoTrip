@@ -27,7 +27,7 @@
   display: flex;
   justify-content: left;
   align-items: flex-start;
-  padding: 0 40px 0 0;
+  padding: 0 20px 0 0;
 }
 
 .Navbar__right {
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 15%;
+  width: 17%;
 }
 
 .Navbar__burger {
@@ -97,7 +97,7 @@
 /* Small devices */
 @media only screen and (max-width: 576px) {
   .Navbar__logo {
-    margin: 0 0 0 43%;
+    margin: 0 0 0 40%;
   }
   .Navbar {
     height: 75px;
