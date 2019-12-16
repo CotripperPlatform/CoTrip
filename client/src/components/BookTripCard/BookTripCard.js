@@ -14,13 +14,15 @@ const BookTripCard = props => {
   ];
 
   return (
-    <Card color="pink" size="large">
-      {title}
-      <div className="container">
+    <Card color="pink">
+      <div className="BookTripCard__title-wrapper">{title}</div>
+      <div className="BookTripCard__content-wrapper">
         {image1}
         <span>{image2}</span>
       </div>
-      <Link to={props.to}>{link}</Link>
+      <div className="BookTripCard__trip-link">
+        <a href="/">Book a Trip Now!</a>
+      </div>
     </Card>
   );
 };
