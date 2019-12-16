@@ -55,6 +55,8 @@ class MemberProfilePage extends Component{
     <TripCard src={example2} location="Hawaii" date="May 2020" />
     <TripCard src={example1} location="Puerto Rico" date="April 2019" />
   </BookTripCard>
+  </div>
+  <div className="trip-card">
     <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>
       <TripCard src={example1} location="Puerto Rico" date="April 2019" />
@@ -65,6 +67,7 @@ class MemberProfilePage extends Component{
       />
     </PreviousTripsCard>
     </div>
+    
         </div>
         </div>
       </div>
