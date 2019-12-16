@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.apps import apps
-# from ..cotrip_app.models import Topic
 
 
 class Profile(models.Model):
@@ -13,9 +12,6 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=200, blank=True)
     last_name = models.CharField(max_length=200, blank=True)
     city_of_residence = models.CharField(max_length=200, blank=True)
-    # topics = models.ManyToManyField(Topic)
-    # add connections, list of users?
-    # trips = models.ManyToManyField(Trip)
     age = models.IntegerField(blank=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
