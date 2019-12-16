@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import example1 from "../../assets/images/card_small2.png";
 import example2 from "../../assets/images/Hawaii-resort.jpg";
@@ -36,14 +36,14 @@ const HomePage = props => {
                 name="DIY with your kids"
                 members="98"
                 location="Boston, MA"
-                picture="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
+                picture={example1}
               />
               <span className="HomePage__groupcard-2">
                 <GroupCard
                   name="DIY with your kids"
                   members="98"
                   location="Boston, MA"
-                  picture="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
+                  picture={example1}
                 />
               </span>
               <span className="HomePage__groupcard-3">
@@ -51,7 +51,7 @@ const HomePage = props => {
                   name="DIY with your kids"
                   members="98"
                   location="Boston, MA"
-                  picture="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
+                  picture={example1}
                 />
               </span>
               <a href="/home" className="HomePage__arrow" />
@@ -92,26 +92,32 @@ const HomePage = props => {
         </div>
 
         <div className="HomePage__mobile-wrapper">
-          <Card color="yellow" size="mobile" picture={people}>
-            <div>
+          <Link to="/">
+            <Card color="yellow" size="mobile" picture={people}>
               <h2>Suggested Groups</h2>
-            </div>
-          </Card>
-          <Card color="pink" size="mobile" picture={people}>
-            <div>
-              <h2>Book a Trip</h2>
-            </div>
-          </Card>
-          <Card color="red" size="mobile" picture={people}>
-            <div>
-              <h2>Suggested People</h2>
-            </div>
-          </Card>
-          <Card color="purple" size="mobile" picture={people}>
-            <div>
-              <h2>Trending Hashtags</h2>
-            </div>
-          </Card>
+            </Card>
+          </Link>
+          <Link to="/">
+            <Card color="pink" size="mobile" picture={people}>
+              <div>
+                <h2>Book a Trip</h2>
+              </div>
+            </Card>
+          </Link>
+          <Link to="/">
+            <Card color="red" size="mobile" picture={people}>
+              <div>
+                <h2>Suggested People</h2>
+              </div>
+            </Card>
+          </Link>
+          <Link to="/">
+            <Card color="purple" size="mobile" picture={people}>
+              <div>
+                <h2>Trending Hashtags</h2>
+              </div>
+            </Card>
+          </Link>
         </div>
       </div>
       <div className="HomePage__scrapbook-wrapper">
