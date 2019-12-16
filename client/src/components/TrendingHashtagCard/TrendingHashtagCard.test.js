@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import TrendingHashtagCard from "./TrendingHashtagCard.js";
-import { findByTestAttribute } from "../../../../utils/utlis";
+import { findByTestAttribute } from "../../../../utils/utils";
 
 const setUp = (props = {}) => {
   const component = shallow(<TrendingHashtagCard {...props} />);
@@ -13,39 +13,50 @@ describe("TrendingHashtagCard component", () => {
     beforeEach(() => {
       const props = {
         data: [
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1",
-          "Test1"
+          "#beach",
+          "#snorkeling",
+          "#daytrip",
+          "#sun",
+          "#fun",
+          "#family",
+          "#biking",
+          "#travel",
+          "#hiking",
+          "#sightseeing",
+          "#cotrip"
         ]
       };
       wrapper = setUp(props);
     });
     it("Should render without errors", () => {
-      const component = findByTestAttribute(wrapper, "TrendingHashtagCard");
+      const component = findByTestAttribute(wrapper, ".TrendingHashtagCard__container");
       expect(component.length).toBe(1);
     });
-    it("Should render dots", () => {
-      const component = findByTestAttribute(wrapper, "hashtags");
+    it("Should render hashtags", () => {
+      const component = findByTestAttribute(wrapper, ".TrendingHashtagCard__hashtag");
       expect(component.length).toBe(10);
     });
   });
-
-  // describe("Have NO props", () => {
-  //   let wrapper;
-  //   beforeEach(() => {
-  //     wrapper = setUp();
-  //   });
-  //   it("Should not render", () => {
-  //     const component = findByTestAttribute(wrapper, "dot");
-  //     expect(component.length).toBe(0);
-  //   });
-  // });
+  describe("Data is empty", () => {
+    const props = {
+      data: []
+    };
+    let wrapper = setUp(props);
+    it("Should render without errors", () => {
+      const component = findByTestAttribute(wrapper, ".TrendingHashtagCard__hashtag");
+      expect(component.length).toBe(0);
+    });
+  });
+  describe("Have NO props", () => {
+    let wrapper;
+    beforeEach(() => {
+      const props = {
+        data: null
+      };
+      wrapper = setUp(props);
+    });
+    it("Should render without errors", () => {
+      expect(wrapper.length).toBe(1);
+    });
+  });
 });

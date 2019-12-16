@@ -148,7 +148,7 @@ dmypy.json
 .LSOverride
 
 # Icon must end with two \r
-Icon
+!Icon
 
 # Thumbnails
 ._*
@@ -246,7 +246,7 @@ typings/
 .nuxt
 
 # react / gatsby 
-public/
+# public/
 
 # vuepress build output
 .vuepress/dist
@@ -400,5 +400,5 @@ $RECYCLE.BIN/
 
 # Jest Testing Snapshots
 browser/src/__snapshots__
-
+*.snap
 # End of https://www.gitignore.io/api/vim,node,code,react,linux,macos,python,django,windows,sublimetext

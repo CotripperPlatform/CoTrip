@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import CarouselDots from "./CarouselDots.js";
-import { findByTestAttribute } from "../../../../utils/utlis";
+import { findByTestAttribute } from "../../../../utils/utils";
 
 const setUp = (props = {}) => {
   const component = shallow(<CarouselDots {...props} />);
@@ -20,11 +20,11 @@ describe("CarouselDots component", () => {
       wrapper = setUp(props);
     });
     it("Should render without errors", () => {
-      const component = findByTestAttribute(wrapper, "CarouselDots");
+      const component = findByTestAttribute(wrapper, ".CarouselDots");
       expect(component.length).toBe(1);
     });
     it("Should render dots", () => {
-      const component = findByTestAttribute(wrapper, "dot");
+      const component = findByTestAttribute(wrapper, ".CarouselDot");
       expect(component.length).toBe(3);
     });
   });
