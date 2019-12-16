@@ -16,9 +16,7 @@ const HomePage = props => {
         <NavBar></NavBar>
       </nav>
       <div className="HomePage__content">
-        <div className="placeholder-welcome">
-          <h1>WELCOME USER</h1>
-        </div>
+        <div className="placeholder-welcome">Welcome User</div>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
