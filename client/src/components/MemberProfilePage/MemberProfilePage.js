@@ -38,6 +38,9 @@ class MemberProfilePage extends Component{
           <div>
             <InteractionCard></InteractionCard>
           </div>
+          <div>
+            
+          </div>
           <div></div>
         </div>
         <div classname="right"></div>
