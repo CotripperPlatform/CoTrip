@@ -1,10 +1,11 @@
 import React from "react";
 import { shallow, configure, mount } from "enzyme";
 import CarouselDots from "./CarouselDots.js";
-import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });
 
-// We will describe a block of tests
+const setUp = (props = {}) => {
+  const component = shallow(<CarouselDots {...props} />);
+  return component;
+};
 describe("CarouselDots component", () => {
   // we will write one individual test
   it("Component should render the number of dots supplied in the properties", () => {
@@ -28,6 +29,7 @@ describe("CarouselDots component", () => {
     component.find('.CarouselDot').at(1).simulate('click');
 
     expect(component.state().activeLocation).toBe(2);
+
 
 
   });
