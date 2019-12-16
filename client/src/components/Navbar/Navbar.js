@@ -47,6 +47,7 @@ class Navbar extends Component {
   }
 
   // Creates the menu. If a 1 is passed into the function, drop down menus are created.
+  // Once link end points are known, they can be put into state and put in via this function
   setMenu = (type) => {
     if (type === 1) {
       return this.state.menuItems.map((item, key) => (
