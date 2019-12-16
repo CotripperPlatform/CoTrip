@@ -21,7 +21,7 @@ const BookTripCard = props => {
         <span>{image2}</span>
       </div>
       <div className="BookTripCard__trip-link">
-        <a href="/">Book a Trip Now!</a>
+        <Link href="/">Book a Trip Now!</Link>
       </div>
     </Card>
   );
