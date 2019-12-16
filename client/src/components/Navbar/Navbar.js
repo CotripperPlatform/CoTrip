@@ -13,7 +13,7 @@ class Navbar extends Component {
     super(props);
     // Default CSS class to apply to the Component
     this.state = {
-      burgerClick: false,
+      condensedMenuActive: false,
       condensedMenu: "",
       // pageMark controls the triangle that marks which page the user is on.
       // Passing 0-3 as a prop into this component controls where it displays.
@@ -29,10 +29,10 @@ class Navbar extends Component {
   }
 
   // Handles activating the hamburger animation and displays the menu.
-  handleBurgerClick = () => {
-    this.setState({burgerClick: !this.state.burgerClick})
-    if (this.state.burgerClick === false) {
-      this.setState({condensedMenu: "Navbar__show"})
+  handleCondensedMenuClick = () => {
+    this.setState({ condensedMenuActive: !this.state.condensedMenuActive });
+    if (this.state.condensedMenuActive === false) {
+      this.setState({ condensedMenu: "Navbar__show" });
     } else {
       this.setState({ condensedMenu: "" });
     }
@@ -93,7 +93,7 @@ class Navbar extends Component {
           </div>
         </div>
         <div className="Navbar__burger">
-          <Burger onClick={this.handleBurgerClick} active={this.state.burgerClick} />
+          <Burger onClick={this.handleCondensedMenuClick} active={this.state.condensedMenuActive} />
           <div className={`Navbar__condensed-menu ${this.state.condensedMenu}`}>
             {this.setMenu()}
           </div>
