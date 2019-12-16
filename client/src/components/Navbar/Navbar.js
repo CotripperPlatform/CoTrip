@@ -17,9 +17,13 @@ class Navbar extends Component {
       condensedMenu: "",
       // pageMark controls the triangle that marks which page the user is on.
       // Passing 0-3 as a prop into this component controls where it displays.
-      pageMark: ["Navbar__show","","",""],
-      // menuItems are careated in order of the following array. 
-      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"]
+      pageMark: ["Navbar__show", "", "", ""],
+      // menuItems are careated in order of the following array.
+      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
+      // The link end points for each menu item.
+      menuLinks: ["/", "/", "/", "/"],
+      // Each item in this array is a set for the dropdown on each menu link.
+      menuDropDown: [[], [], [], []]
     };
   }
 
@@ -52,7 +56,7 @@ class Navbar extends Component {
     if (type === 1) {
       return this.state.menuItems.map((item, key) => (
         <div className="Navbar__link-item">
-          <NavLink text={item} to="/" menuList={[]} />
+          <NavLink text={item} to={this.state.menuLinks[key]} menuList={this.state.menuDropDown[key]} />
           <div className={`Navbar__triangle ${this.state.pageMark[key]}`}></div>
         </div>
       ));
