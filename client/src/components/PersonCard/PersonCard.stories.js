@@ -1,11 +1,11 @@
 import React from 'react';
 import PersonCard from './PersonCard';
-import Image from "../../assets/images/profile_large.png";
+import image from "../../assets/images/card_profile2.png";
 import { storiesOf } from '@storybook/react';
 
 storiesOf('PersonCard', module)
 .add("Default", () => <PersonCard
-  image type="large" image={Image} 
+  image={image}
   name="Lindsay L." 
   location="Washington D.C." 
   interests={[ 

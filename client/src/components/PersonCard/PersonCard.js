@@ -1,15 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "./PersonCard.css";
-import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
+import ProfilePicture from "../ProfilePicture/ProfilePicture";
 
 // Function based React Component
 const PersonCard = props => {
   return(
     <div className="PersonCard">
-      <div className="image">
-      <ProfilePicture type="medium" link={props.to} image={props.image} />
-      </div>
+      <img className="image" src={props.image}/>
       <div className="name">{props.name}</div>
         <div className="location">{props.location}</div>
         <div className="interests">
