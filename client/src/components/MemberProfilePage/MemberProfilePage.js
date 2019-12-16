@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import "./MemberProfilePage.css";
 import Nav from "../Navbar/Navbar"
 import InteractionCard from "../InteractionCard/InteractionCard"
-
+import PreviousTripsCard from "../PreviousTripsCard/PreviousTripsCard"
+import TripCard from "../TripCard/TripCard"
+import example1 from "../../assets/images/card_small2.png";
 
 // Class Based React Component
 class MemberProfilePage extends Component{
@@ -34,8 +36,9 @@ class MemberProfilePage extends Component{
       <div className={this.state.classList}>
         <Nav></Nav>
         <div className="banner">bioootch</div>
+        <div className="page">
         <div className="left">
-          <div>
+          <div className="interaction-div">
             <InteractionCard></InteractionCard>
           </div>
           <div>
@@ -43,7 +46,20 @@ class MemberProfilePage extends Component{
           </div>
           <div></div>
         </div>
-        <div classname="right"></div>
+        <div className="right">
+        <div className="trip-card">
+    <PreviousTripsCard trips={true} link="/">
+      <h1>Previous Trips</h1>
+      <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+      <TripCard
+        src="https://wallpaperaccess.com/full/144067.jpg"
+        location="Hawaii"
+        date="May 2020"
+      />
+    </PreviousTripsCard>
+    </div>
+        </div>
+        </div>
       </div>
     );
   }
