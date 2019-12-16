@@ -25,6 +25,7 @@ const UpcomingTripsCard = (props) => {
   );
 }
 UpcomingTripsCard.defaultProps = {
+  url:'',
   src:"https://wallpaperaccess.com/full/144067.jpg",
   location:'Stolkholm, Sweden',
   date:"April 20th, 1969",

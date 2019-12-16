@@ -14,8 +14,8 @@ describe('UpcomingTripsCard component', () => {
   })
   it('Component should have properties', ()=>{
     const component = mount(<BrowserRouter><UpcomingTripsCard/></BrowserRouter>)
-    let {src, location, date, details } = component.props();
-    let propsLoaded = typeof src === 'string' && typeof location == 'string' && typeof date == 'string' && typeof details == 'string';
+    let {src, location, date, details } = component.find('UpcomingTripsCard').props();
+    let propsLoaded = typeof src == 'string' && typeof location == 'string' && typeof date == 'string' && typeof details == 'object';
     expect(propsLoaded).toBe(true);
   })
 })
