@@ -62,7 +62,7 @@ storiesOf('Connections', module)
       to="User/userid/connections"
       userViewing={false}
       users={testUsers.slice(0, 3)}
-      extraUsers='See More'>
+      extraUsers="See More">
     </Connections>)
   .add("Members", () =>
     <Connections to="User/userid/connections"
