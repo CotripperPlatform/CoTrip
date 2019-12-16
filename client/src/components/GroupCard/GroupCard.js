@@ -18,5 +18,11 @@ const GroupCard = (props) => {
     </Card>
   );
 }
+GroupCard.defaultProps = {
+  name:'Hello',
+  members: 1337,
+  location: 'Waynesville, OH',
+  picture: null
 
+}
 export default GroupCard;
