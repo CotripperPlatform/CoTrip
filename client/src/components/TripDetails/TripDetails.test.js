@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow, configure } from "enzyme";
-import TripDetails from "./TripDetails.js/index.js";
+import TripDetails from "./TripDetails";
 import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 

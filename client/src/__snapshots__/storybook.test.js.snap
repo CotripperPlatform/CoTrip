@@ -922,11 +922,7 @@ exports[`Storyshots Card Card, Blank 1`] = `
     }
   >
     <div
-<<<<<<< HEAD
       className="Card Card--purple Card--large
-=======
-      className="Card Card--undefined Card--large
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       "
       style={
         Object {
@@ -964,11 +960,7 @@ exports[`Storyshots Card Card, Blank, Small 1`] = `
     }
   >
     <div
-<<<<<<< HEAD
       className="Card Card--purple Card--small
-=======
-      className="Card Card--undefined Card--small
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       "
       style={
         Object {
@@ -978,7 +970,6 @@ exports[`Storyshots Card Card, Blank, Small 1`] = `
     >
        
     </div>
-<<<<<<< HEAD
   </div>
 </div>
 `;
@@ -1026,17 +1017,11 @@ exports[`Storyshots Card Card, Discover New Groups 1`] = `
         </a>
       </div>
     </div>
-=======
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
   </div>
 </div>
 `;
 
-<<<<<<< HEAD
 exports[`Storyshots Card Card, Picture BG, Medium 1`] = `
-=======
-exports[`Storyshots Card Card, Discover New Groups 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
 <div
   style={
     Object {
@@ -1060,58 +1045,7 @@ exports[`Storyshots Card Card, Discover New Groups 1`] = `
     }
   >
     <div
-<<<<<<< HEAD
       className="Card Card--purple Card--medium
-=======
-      className="Card Card--undefined Card--medium
-      Card__outline"
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-        }
-      }
-    >
-       
-      <div
-        className="Card__discover-link"
-      >
-        <a
-          href="/"
-        >
-          Discover New Groups
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Card, Picture BG, Medium 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--medium
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       "
       style={
         Object {
@@ -1149,11 +1083,7 @@ exports[`Storyshots Card Card, Picture Hawaii, Medium 1`] = `
     }
   >
     <div
-<<<<<<< HEAD
       className="Card Card--purple Card--medium
-=======
-      className="Card Card--undefined Card--medium
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       "
       style={
         Object {
@@ -1231,8 +1161,6 @@ exports[`Storyshots Card Card, Pink, Small 1`] = `
     <div
       className="Card Card--pink Card--small
       "
-<<<<<<< HEAD
-=======
       style={
         Object {
           "backgroundImage": "url(null)",
@@ -1393,403 +1321,6 @@ exports[`Storyshots Card Card, Red, Smedium 1`] = `
     >
        
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Blank 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--large"
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-        }
-      }
-    >
-       
-    </div>
-  </div>
-</div>
-`;
-
-<<<<<<< HEAD
-exports[`Storyshots Card Card, Purple 1`] = `
-=======
-exports[`Storyshots Card Info Card, Blank, Small 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-<<<<<<< HEAD
-      className="Card Card--purple Card--large
-      "
-=======
-      className="Card Card--undefined Card--small"
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-        }
-      }
-    >
-       
-    </div>
-  </div>
-</div>
-`;
-
-<<<<<<< HEAD
-exports[`Storyshots Card Card, Purple, Small 1`] = `
-=======
-exports[`Storyshots Card Info Card, Picture BG, Large 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-<<<<<<< HEAD
-      className="Card Card--purple Card--small
-      "
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-=======
-      className="Card Card--undefined Card--medium"
-      style={
-        Object {
-          "backgroundImage": "url(card_small3.png)",
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
-        }
-      }
-    >
-       
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Card, Purple, Smedium 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--purple Card--extra-small
-      "
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-        }
-      }
-    >
-       
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Large Card with Small Card inside 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div>
-      <div
-        className="Card Card--purple Card--large
-      "
-        style={
-          Object {
-            "backgroundImage": "url(null)",
-          }
-        }
-      >
-         
-        <div
-          className="Card Card--pink Card--small
-      "
-          style={
-            Object {
-              "backgroundImage": "url(null)",
-            }
-          }
-        >
-           
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Picture Hawaii, Large 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--medium"
-      style={
-        Object {
-          "backgroundImage": "url(https://wallpaperaccess.com/full/144067.jpg)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Pink 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--pink Card--large"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Pink, Small 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--pink Card--small"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Purple 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--purple Card--large"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Purple, Small 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--purple Card--small"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
   </div>
 </div>
 `;
@@ -2547,13 +2078,15 @@ exports[`Storyshots GroupCard Default 1`] = `
     }
   >
     <div
-      className="Card Card--pink Card--medium"
+      className="Card Card--pink Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <a
         className="GroupCard"
         href="/"
@@ -2618,13 +2151,15 @@ exports[`Storyshots GroupCard Example 1`] = `
     }
   >
     <div
-      className="Card Card--pink Card--medium"
+      className="Card Card--pink Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <a
         className="GroupCard"
         href="/"
@@ -3263,115 +2798,7 @@ exports[`Storyshots Icon Instagram 1`] = `
 </div>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots ExtraUsers 2 Extra Users 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="ExtraUsers"
-    >
-      <a
-        className="ExtraUsers__text"
-        href="/Inbox/Recipients"
-        onClick={[Function]}
-      >
-        +
-        2
-      </a>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ExtraUsers 4 Extra Users  1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="ExtraUsers"
-    >
-      <a
-        className="ExtraUsers__text"
-        href="/Inbox/Recipients"
-        onClick={[Function]}
-      >
-        +
-        4
-      </a>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ExtraUsers No Extra Users 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  />
-</div>
-`;
-
-exports[`Storyshots Footer Default 1`] = `
-=======
 exports[`Storyshots Icon Microsoft 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
 <div
   style={
     Object {
@@ -3417,11 +2844,7 @@ exports[`Storyshots Icon Microsoft 1`] = `
 </div>
 `;
 
-<<<<<<< HEAD
-exports[`Storyshots ForumPost Default 1`] = `
-=======
 exports[`Storyshots Icon Pinterest 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
 <div
   style={
     Object {
@@ -3444,384 +2867,6 @@ exports[`Storyshots Icon Pinterest 1`] = `
       }
     }
   >
-<<<<<<< HEAD
-    <div
-      className="ForumPost"
-    >
-      <div
-        className="ForumPost__top-middle"
-      >
-        <div
-          className="ForumPost__top"
-        >
-          <div
-            className="ForumPost__face-card"
-          >
-            <div
-              className="ProfilePicture ProfilePicture--small"
-            >
-              <img
-                alt="profile-picture"
-                src="profile_large.png"
-              />
-            </div>
-            <p
-              className="ForumPost__name"
-            >
-              Lexi R.
-            </p>
-          </div>
-          <div
-            className="PostBody"
-          >
-            <div
-              className="PostBody__top"
-            >
-              <div
-                className="PostBody__top-left"
-              >
-                <div
-                  className="PostBody__title"
-                >
-                  Post Title: Sed ut perspiciatus unde omnis?
-                </div>
-                <div
-                  className="PostBody__hashtags"
-                >
-                  <a
-                    className="PostBody__hashtag-links"
-                    href="#"
-                  >
-                    #
-                    DCMoms
-                  </a>
-                  <a
-                    className="PostBody__hashtag-links"
-                    href="#"
-                  >
-                    #
-                    museumtrips
-                  </a>
-                  <a
-                    className="PostBody__hashtag-links"
-                    href="#"
-                  >
-                    #
-                    DIY
-                  </a>
-                </div>
-              </div>
-              <div
-                className="PostBody__top-right"
-              >
-                <div
-                  className="PostBody__date"
-                >
-                  August 19
-                </div>
-                <div>
-                  6:00 pm
-                </div>
-              </div>
-            </div>
-            <div
-              className="PostBody__text"
-            >
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit
-            </div>
-          </div>
-        </div>
-        <div
-          className="ForumPost__middle"
-        >
-          <div
-            className="ForumPost__topic-pills"
-          />
-          <div
-            className="ForumPost__likes-comments"
-          >
-            <p>
-              0
-               Likes
-            </p>
-            <p>
-              0
-               Comments
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ForumPost__bottom"
-      >
-        <button
-          className="Button Button--color Button--size Button--textColor-text Button--like"
-          onClick={[Function]}
-        >
-          <img
-            alt="Like"
-            src="heart_black.png"
-          />
-          Like
-        </button>
-        <button
-          className="Button Button--color Button--size Button--textColor-text Button--comment"
-          onClick={[Function]}
-        >
-          <img
-            alt="Comment"
-            src="comment_black.png"
-          />
-          Comment
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ForumPost Forum Post with Custom Props 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="ForumPost"
-    >
-      <div
-        className="ForumPost__top-middle"
-      >
-        <div
-          className="ForumPost__top"
-        >
-          <div
-            className="ForumPost__face-card"
-          >
-            <div
-              className="ProfilePicture ProfilePicture--small"
-            >
-              <img
-                alt="profile-picture"
-                src="card_profile3.png"
-              />
-            </div>
-            <p
-              className="ForumPost__name"
-            >
-              Chantal
-            </p>
-          </div>
-          <div
-            className="PostBody"
-          >
-            <div
-              className="PostBody__top"
-            >
-              <div
-                className="PostBody__top-left"
-              >
-                <div
-                  className="PostBody__title"
-                >
-                  What An Amazing Trip!
-                </div>
-                <div
-                  className="PostBody__hashtags"
-                >
-                  <a
-                    className="PostBody__hashtag-links"
-                    href="#"
-                  >
-                    #
-                    Traveling
-                  </a>
-                  <a
-                    className="PostBody__hashtag-links"
-                    href="#"
-                  >
-                    #
-                    GoodTimes
-                  </a>
-                </div>
-              </div>
-              <div
-                className="PostBody__top-right"
-              >
-                <div
-                  className="PostBody__date"
-                >
-                  May 4
-                </div>
-                <div>
-                  2:00pm
-                </div>
-              </div>
-            </div>
-            <div
-              className="PostBody__text"
-            >
-              My son and I went on this trip and had the greatest time! If you can go, I would highly recommend it!
-            </div>
-          </div>
-        </div>
-        <div
-          className="ForumPost__middle"
-        >
-          <div
-            className="ForumPost__topic-pills"
-          >
-            <div
-              className="Pill Pill--small Pill--shadow Pill__pink"
-              onClick={[Function]}
-            >
-              Parenting
-              <div />
-            </div>
-            <div
-              className="Pill Pill--small Pill--shadow Pill__pink"
-              onClick={[Function]}
-            >
-              Vacation
-              <div />
-            </div>
-            <div
-              className="Pill Pill--small Pill--shadow Pill__pink"
-              onClick={[Function]}
-            >
-              Topic
-              <div />
-            </div>
-          </div>
-          <div
-            className="ForumPost__likes-comments"
-          >
-            <p>
-              8
-               Likes
-            </p>
-            <p>
-              5
-               Comments
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        className="ForumPost__bottom"
-      >
-        <button
-          className="Button Button--color Button--size Button--textColor-text Button--like"
-          onClick={[Function]}
-        >
-          <img
-            alt="Like"
-            src="heart_black.png"
-          />
-          Like
-        </button>
-        <button
-          className="Button Button--color Button--size Button--textColor-text Button--comment"
-          onClick={[Function]}
-        >
-          <img
-            alt="Comment"
-            src="comment_black.png"
-          />
-          Comment
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots GroupCard Default 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--pink Card--medium
-      "
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-        }
-      }
-    >
-       
-      <a
-        className="GroupCard"
-        href="/"
-        onClick={[Function]}
-        style={
-          Object {
-            "backgroundImage": "url(undefined)",
-          }
-        }
-      >
-        <div
-          className="GroupCard__text-container"
-        >
-          <p
-            className="GroupCard__group-name"
-          >
-            Group Name
-          </p>
-          <div
-            className="GroupCard__details"
-          >
-            <p
-              className="GroupCard__members"
-            >
-              # of 
-               members
-            </p>
-            <p
-              className="GroupCard__location"
-            >
-              Location, State
-            </p>
-          </div>
-        </div>
-      </a>
-=======
     <div>
       <svg
         aria-hidden="true"
@@ -3840,7 +2885,6 @@ exports[`Storyshots GroupCard Default 1`] = `
           style={Object {}}
         />
       </svg>
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
     </div>
   </div>
 </div>
@@ -3869,27 +2913,6 @@ exports[`Storyshots Icon Search Glass 1`] = `
       }
     }
   >
-<<<<<<< HEAD
-    <div
-      className="Card Card--pink Card--medium
-      "
-      style={
-        Object {
-          "backgroundImage": "url(null)",
-        }
-      }
-    >
-       
-      <a
-        className="GroupCard"
-        href="/"
-        onClick={[Function]}
-        style={
-          Object {
-            "backgroundImage": "url(https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80)",
-          }
-        }
-=======
     <div>
       <svg
         aria-hidden="true"
@@ -3901,7 +2924,6 @@ exports[`Storyshots Icon Search Glass 1`] = `
         style={Object {}}
         viewBox="0 0 512 512"
         xmlns="http://www.w3.org/2000/svg"
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       >
         <path
           d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
@@ -4407,65 +3429,6 @@ exports[`Storyshots InputTextField Search Trips 1`] = `
 `;
 
 exports[`Storyshots InteractionCard Default 1`] = `
-<<<<<<< HEAD
-=======
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="InteractionCard"
-    >
-      <div
-        className="ProfilePicture ProfilePicture--medium"
-      >
-        <a
-          href="/route"
-          onClick={[Function]}
-        >
-          <img
-            alt="profile-picture"
-            src="profile_large.png"
-          />
-        </a>
-      </div>
-      <button
-        className="Button Button--pink Button--small Button--textColor-text Button--none"
-        onClick={[Function]}
-      >
-        Connect
-      </button>
-      <button
-        className="Button Button--outline Button--small Button--textColor-text Button--none"
-        onClick={[Function]}
-      >
-        Message
-      </button>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Large Media Cards Happiness 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
 <div
   style={
     Object {
@@ -5767,70 +4730,6 @@ exports[`Storyshots Navbar Default 1`] = `
 `;
 
 exports[`Storyshots OnboardingParent Default 1`] = `
-<<<<<<< HEAD
-=======
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="OnboardingParent"
-    >
-      <div
-        className="OnboardingParent__wrapper"
-      >
-        <div
-          className="Logo"
-        />
-        <div
-          className="OnboardingParent__carousel-dots-container"
-        >
-          <div
-            className="CarouselDots"
-          >
-            <div
-              className="CarouselDot  CarouselDot__border   "
-              id={1}
-              onClick={[Function]}
-            />
-            <div
-              className="CarouselDot  CarouselDot__border   "
-              id={2}
-              onClick={[Function]}
-            />
-            <div
-              className="CarouselDot  CarouselDot__border   CarouselDot--active  "
-              id={3}
-              onClick={[Function]}
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Pill Community People Pill (Toggle) 1`] = `
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
 <div
   style={
     Object {
@@ -6340,7 +5239,7 @@ exports[`Storyshots PreviousTripsCard Default, No Trips 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -6397,7 +5296,7 @@ exports[`Storyshots PreviousTripsCard Default, One Trip 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -6417,7 +5316,7 @@ exports[`Storyshots PreviousTripsCard Default, One Trip 1`] = `
         className="PreviousTripCard__trips"
       >
         <div
-          className="Card Card--undefined Card--medium
+          className="Card Card--purple Card--medium
       "
           style={
             Object {
@@ -6445,7 +5344,7 @@ exports[`Storyshots PreviousTripsCard Default, One Trip 1`] = `
           className="PreviousTripCard__trip-two"
         >
           <div
-            className="Card Card--undefined Card--medium
+            className="Card Card--purple Card--medium
       Card__outline"
             style={
               Object {
@@ -6499,7 +5398,7 @@ exports[`Storyshots PreviousTripsCard Default, Two Trips 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -6519,7 +5418,7 @@ exports[`Storyshots PreviousTripsCard Default, Two Trips 1`] = `
         className="PreviousTripCard__trips"
       >
         <div
-          className="Card Card--undefined Card--medium
+          className="Card Card--purple Card--medium
       "
           style={
             Object {
@@ -6547,7 +5446,7 @@ exports[`Storyshots PreviousTripsCard Default, Two Trips 1`] = `
           className="PreviousTripCard__trip-two"
         >
           <div
-            className="Card Card--undefined Card--medium
+            className="Card Card--purple Card--medium
       "
             style={
               Object {
@@ -6876,65 +5775,6 @@ exports[`Storyshots ProfilePicture Small with Link 1`] = `
           alt="profile-picture"
           src="profile_large.png"
         />
-      </a>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots SplashPage SplashPage 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="SplashPage"
-    >
-      <h1>
-        CoTripper
-      </h1>
-      <p>
-        Book trips, meet moms, and experience family travel together!
-      </p>
-      <a
-        href="/login"
-        onClick={[Function]}
-      >
-        <button
-          className="Button Button--color Button--size Button--textColor-text Button--none"
-          onClick={[Function]}
-        >
-          Login
-        </button>
-      </a>
-      <a
-        href="/register"
-        onClick={[Function]}
-      >
-        <button
-          className="Button Button--purple Button--size Button--textColor-text Button--none"
-          onClick={[Function]}
-        >
-          Register
-        </button>
       </a>
     </div>
   </div>
@@ -7370,11 +6210,7 @@ exports[`Storyshots TripCard Default 1`] = `
     }
   >
     <div
-<<<<<<< HEAD
       className="Card Card--purple Card--medium
-=======
-      className="Card Card--undefined Card--medium
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       "
       style={
         Object {
@@ -7426,11 +6262,7 @@ exports[`Storyshots TripCard Puerto Rico 1`] = `
     }
   >
     <div
-<<<<<<< HEAD
       className="Card Card--purple Card--medium
-=======
-      className="Card Card--undefined Card--medium
->>>>>>> e77ca4ef53e328fb2fec4a2e6ca00e2d73a18b31
       "
       style={
         Object {
