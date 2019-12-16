@@ -10,7 +10,6 @@ describe('PostBody component', () => {
   it('Should render props if they are not provided', () => {
     // Shallow rendering renders a component without rendering any of its children
     const component = mount(<PostBody />)
-    console.log(component.props().title);
     let {title, date, time, hashtags} = component.props();
     let hasProps = typeof title === 'string' && typeof date === 'string' && typeof time === 'string' && typeof hashtags === 'object';
     expect(hasProps).toBe(true);
