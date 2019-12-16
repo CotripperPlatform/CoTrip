@@ -10,6 +10,8 @@ function handleClick() {
 storiesOf("Navbar", module).add("Default", () => (
   <Navbar
     profileImage={ProfileImage}
+    searchClick={handleClick}
+    messageClick={handleClick}
     burgerClick={handleClick}
     showCondensedMenu={true}
     condensedMenu="Navbar__show"
