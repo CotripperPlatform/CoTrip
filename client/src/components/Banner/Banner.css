@@ -8,6 +8,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
   font-family: var(--default-font);  
   font-size: 48px;
   font-style: normal;
@@ -16,20 +20,8 @@
   line-height: 72px;
 }
 
-.Banner__header{
-  padding-top: 10px;
-}
-
-.Banner__header2{
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .Banner__header3{
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .Banner .InputTextField__container--search{
