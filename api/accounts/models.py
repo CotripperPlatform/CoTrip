@@ -1,11 +1,25 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import AbstractUser
 from django.apps import apps
+from .managers import CustomUserManager
+
+
+class CustomUser(AbstractUser):
+    username = None
+    email = models.EmailField(('email address'), unique=True)
+
+    USERNAME_FIELD = 'email'
+    REQUIRED_FIELDS = []
+
+    objects = CustomUserManager()
+
+    def __str__(self):
+        return self.email
 
 
 class Profile(models.Model):
     user = models.OneToOneField(
-        User,
+        CustomUser,
         on_delete=models.CASCADE, primary_key=True
     )
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
