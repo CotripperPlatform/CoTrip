@@ -44,6 +44,15 @@
 .OnboardingPage .Button {
   width: 11.4rem;
 }
+.OnboardingPage__text {
+  text-align: center;
+}
+.OnboardingPage__spacer {
+  height: 1rem;
+}
+.OnboardingPage a {
+  color: var(--black);
+}
 @media all and (max-width: 320px) {
   .OnboardingPage__container {
     flex-direction: column;

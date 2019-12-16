@@ -12,6 +12,12 @@ class FilterSettingsForm extends Component {
       tags: []
     };
   }
+  next = () => {
+    this.props.save(this.state);
+    this.props.functionProp();
+  }
+  // NEED to add onChange to save state
+  // NEED to save tags
   render() {
     return (
       <div className="OnboardingPage">
@@ -19,7 +25,7 @@ class FilterSettingsForm extends Component {
           <Logo />
           <h1>This is Onboarding Two</h1>
           <div className="OnboardingPage__button-container">
-            <Button text="Next" size="small" handleClick={this.props.functionProp}></Button>
+            <Button text="Next" size="small" handleClick={this.next}></Button>
           </div>
           <div className="OnboardingPage__carousel-dots-container">
             <CarouselDots

@@ -16,7 +16,9 @@ class App extends Component {
       <div className='App'>
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          {/* <Route path="/login" exact component={LoginPage}></Route> */}
           <Route path="/register" exact component={OnboardingPage}></Route>
+          {/* <Route path="/home" exact component={HomePage}></Route> */}
         </main>
       </div>
     );

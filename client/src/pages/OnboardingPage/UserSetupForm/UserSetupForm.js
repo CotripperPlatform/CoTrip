@@ -11,27 +11,62 @@ class UserSetupForm extends Component {
       name: '',
       email: '',
       password: '',
-      confirmPassword: ''
+      confirmPassword: false
     };
+  }
+  saveName = (e) => {
+    e.preventDefault();
+    this.setState({
+      name: e.target.value
+    });
+  }
+  saveEmail = (e) => {
+    e.preventDefault();
+    this.setState({
+      email: e.target.value
+    });
+  }
+  savePassword = (e) => {
+    e.preventDefault();
+    this.setState({
+      password: e.target.value
+    });
+  }
+  confirmPassword = (e) => {
+    e.preventDefault();
+    if (this.state.password === e.target.value) {
+      this.setState({
+        confirmPassword: !this.state.confirmPassword
+      });
+    }
+  }
+  next = () => {
+    if (this.state.confirmPassword) {
+      this.props.save(this.state);
+      this.props.functionProp();
+    } else {
+      alert('PASSWORDS DONT MATCH');
+    }
   }
   render() {
     return (
       <div className="OnboardingPage">
         <div className="OnboardingPage__wrapper">
           <Logo />
-          <form className="OnboardingPage__form" action="">
+          <div className="OnboardingPage__form">
             <h1 className="OnboardingPage__header">Step One</h1>
             <div className="OnboardingPage__container">
-              <InputTextField type="text" name="name" placeholder="Name"></InputTextField>
+              <InputTextField type="text" name="name" placeholder="Name" onChange={this.saveName}></InputTextField>
             </div>
             <div className="OnboardingPage__container">
-              <InputTextField type="text" name="email" placeholder="Email"></InputTextField>
+              <InputTextField type="text" name="email" placeholder="Email" onChange={this.saveEmail}></InputTextField>
             </div>
             <div className="OnboardingPage__container">
               <InputTextField
                 type="text"
                 name="password"
                 placeholder="Password"
+                onChange={this.savePassword}
               ></InputTextField>
             </div>
             <div className="OnboardingPage__container">
@@ -40,12 +75,13 @@ class UserSetupForm extends Component {
                 type="text"
                 name="confirm password"
                 placeholder="Confirm Password"
+                onChange={this.confirmPassword}
               ></InputTextField>
             </div>
-            <div className="OnboardingPage__button-container" onClick={this.props.funtionProp}>
-              <Button className="OnboardingPage__button" text="Next" size="small" handleClick={this.props.functionProp}></Button>
+            <div className="OnboardingPage__button-container">
+              <Button className="OnboardingPage__button" text="Next" size="small" handleClick={this.next}></Button>
             </div>
-          </form>
+          </div>
           <div className="OnboardingPage__carousel-dots-container">
             <CarouselDots
               numberOfDots={3}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo.js";
@@ -13,13 +14,30 @@ class PersonalSettingsForm extends Component {
       destination: ''
     };
   }
+  // NEED to add saveImage
+  saveAge = (e) => {
+    e.preventDefault();
+    this.setState({
+      age: parseInt(e.target.value)
+    });
+  }
+  saveDestination = (e) => {
+    e.preventDefault();
+    this.setState({
+      destination: e.target.value
+    });
+  }
+  next = () => {
+    this.props.save(this.state);
+    this.props.functionProp();
+  }
   render() {
     return (
       <div className="OnboardingPage">
         <div className="OnboardingPage__wrapper">
           <Logo />
-          <h1 className="OnboardingParent__text">
-            Step Three: Personalize Your Profile (optional){" "}
+          <h1 className="OnboardingPage__text">
+            Step Three: Personalize Your Profile (optional)
           </h1>
           {/* <ProfilePicture
             className="OnboardingParent__profile-image"
@@ -27,10 +45,12 @@ class PersonalSettingsForm extends Component {
             to="#"
             image={Image}
           /> */}
-          <div className="OnboardingParent__spacer"></div>
-          <InputTextField type="text" name="age" placeholder="What is your age?" />
-          <InputTextField type="destination" placeholder="What is your dream destination(s)?" />
-          <Button text="Finish" handleClick={this.props.functionProp}></Button>
+          <InputTextField type="text" name="age" placeholder="What is your age?" onChange={this.saveAge} />
+          <div className="OnboardingPage__spacer"></div>
+          <InputTextField type="destination" placeholder="What is your dream destination(s)?" onChange={this.saveDestination} />
+          <div className="OnboardingPage__spacer"></div>
+          <Button text="Finish" handleClick={this.next}></Button>
+          <div className="OnboardingPage__spacer"></div>
           <div className="OnboardingPage__carousel-dots-container">
             <CarouselDots
               numberOfDots={3}
@@ -38,6 +58,9 @@ class PersonalSettingsForm extends Component {
               onStatusChange={this.statusChange}
             />
           </div>
+          <Link to='/home'>
+            <p>Skip</p>
+          </Link>
         </div>
       </div>
     );

@@ -1,17 +1,17 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import Button from 'components/Button/Button';
 import logo from 'assets/images/login_logo.png';
 import "./SplashPage.css";
 
 function toLogin() {
-  return <Redirect to='/login' />;
+  window.location.href = '/login';
 }
 function toRegister() {
-  return <Redirect to='/register' />;
+  window.location.href = '/register';
 }
 
-const SplashPage = () => {
+const SplashPage = (props) => {
   return (
     <div className='SplashPage'>
       <img src={logo} alt='CoTripper Logo'/>
