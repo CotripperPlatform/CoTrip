@@ -15,7 +15,7 @@ const UpcomingTripsCard = (props) => {
           <p className="UpcomingTripsCard__general-information">General Information:</p>
           <ul className="UpcomingTripsCard__list">
             {props.details.map(detail => {
-              return <li>~{detail}</li>
+              return <li key={detail}>~{detail}</li>
             })}
           </ul>
         </div>
