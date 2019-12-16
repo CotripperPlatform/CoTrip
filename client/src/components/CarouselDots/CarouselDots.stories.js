@@ -18,17 +18,11 @@ let location = 1;
 storiesOf("CarouselDots", module)
   .add("Onboarding Step 2", () => (
     <div style={style1}>
-      <CarouselDots
-        numberOfDots={5}
-        activeLocation={location}
-        onStatusChange={statusChange} />
+      <CarouselDots numberOfDots={5} activeLocation={location} onStatusChange={statusChange} />
     </div>
   ))
   .add("Without Border", () => (
     <div style={style2}>
-      <CarouselDots
-        numberOfDots={5} activeLocation={3}
-        border
-        onStatusChange={statusChange} />
+      <CarouselDots numberOfDots={5} activeLocation={3} border onStatusChange={statusChange} />
     </div>
   ));

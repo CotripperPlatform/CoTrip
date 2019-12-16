@@ -27,7 +27,7 @@
 }
 .Card--large {
   width: 1rem;
-  min-width: 31rem;
+  min-width: 32rem;
   height: 260px;
 }
 
@@ -106,12 +106,10 @@
 }
 
 .Card__discover-link:hover {
-  color: var(--yellow);
   transform: scale(1.1);
 }
 .Card__discover-link a:hover {
   color: var(--yellow);
-  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 576px) {
