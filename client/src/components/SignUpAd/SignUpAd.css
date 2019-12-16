@@ -1,5 +1,5 @@
 .SignUpAd {
-  height: 37vh;
+  height: 47vh;
   background-color: var(--yellow);
   width: 100vw;
   text-align: center;
@@ -14,13 +14,13 @@
   margin-top: 2rem;
 }
 
-.inputs input {
+.SignUpAd input {
   margin: 0 5%;
 }
 
 
 .SignUpAd button {
-  margin-top: 3rem;
+  margin-top: 2rem;
   border: none;
 }
 
@@ -72,7 +72,7 @@
   .SignUpAd button {
     text-align: center;
     font-size: 20px;
-    margin: 2rem auto;
+    margin: 1rem auto;
 
   }
 
@@ -85,9 +85,10 @@
   }
 
   .inputs input {
-    margin: 1.5rem auto;
+    margin: .7rem auto;
     padding: 1rem 4rem;
     max-width: 10rem;
+    max-height: .7rem;
 
   }
 }
@@ -102,6 +103,7 @@
 
   .SignUpAd h2 {
     margin: 0 auto;
+    padding-top: .8rem;
   }
 
   .SignUpAd h3 {
