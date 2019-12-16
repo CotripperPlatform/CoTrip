@@ -1,18 +1,21 @@
 import React from 'react';
 import "./BookATripImage.css";
+import { Link } from "react-router-dom";
 
 const BookATripImage = (props) => {
+  let {cards} = props;
+
   return(
     <div className="BookATripImage">
       <div className="BookATripImage__image-group">
-        <div className="BookATripImage__image-container">
-          {props.images.map(image => {
-            return <img src={require(`../../assets/images/${image}.png`)} className="BookATripImage__image"></img>
-          })}
-          {props.descriptions.map(description => {
-            return <p>{description}</p>
-          })}
-        </div>
+        {cards.map(card => {
+          return (
+            <div className="BookATripImage__image-container">
+              <img src={require(`../../assets/images/${card.image}.png`)} className="BookATripImage__image"></img>,
+              <Link to="#" className="">{card.description}</Link>
+            </div>
+          )
+        })}
       </div>
     </div>
   );
