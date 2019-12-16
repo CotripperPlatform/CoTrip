@@ -16,10 +16,13 @@
 .Card--pink {
   background-color: var(--pink);
 }
+.Card--red {
+  background-color: var(--red);
+}
 
 .Card--large {
   width: 1rem;
-  min-width: 500px;
+  min-width: 32rem;
   height: 260px;
 }
 
@@ -33,6 +36,12 @@
   width: 1rem;
   min-width: 225px;
   height: 125px;
+}
+
+.Card--extra-small {
+  width: 1rem;
+  min-width: 180px;
+  height: 140px;
 }
 
 .Card img {
@@ -71,7 +80,15 @@
   text-decoration: none;
 }
 
+.Card__discover-link:hover {
+  transform: scale(1.1);
+}
 .Card__discover-link a:hover {
   color: var(--yellow);
-  transform: scale(1.1, 1.1);
+}
+
+@media only screen and (max-width: 576px) {
+  .Card--large {
+    min-width: 17rem;
+  }
 }
