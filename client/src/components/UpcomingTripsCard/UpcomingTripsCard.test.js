@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, configure } from 'enzyme'
+import { shallow, configure, mount } from 'enzyme'
 import UpcomingTripsCard from './UpcomingTripsCard.js'
 import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
@@ -8,9 +8,13 @@ configure({adapter: new Adapter()});
 describe('UpcomingTripsCard component', () => {
 	// we will write one individual test
   it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
     const component = shallow(<UpcomingTripsCard />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
+    expect(component.exists()).toBe(true);
+  })
+  it('Component should have properties', ()=>{
+    const component = mount(<UpcomingTripsCard/>)
+    let {src, location, date, details } = component.props();
+    let propsLoaded = typeof src === 'string' && typeof location == 'string' && typeof date == 'string' && typeof details == 'string';
+    expect(propsLoaded).toBe(true);
   })
 })
