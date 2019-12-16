@@ -4,5 +4,11 @@ import BookATripPage from './BookATripPage';
 
 storiesOf('BookATripPage', module)
   .add("Default", () => <BookATripPage
-  
+    images={[
+      "hawaii",
+      "greece",
+      "southernCaribbean",
+      "hawaii",
+      "easternCaribbean"
+    ]}
   />)
