@@ -8,6 +8,7 @@ import Card from "../../components/Card/Card";
 import GroupCard from "../../components/GroupCard/GroupCard";
 import TrendingHashtagCard from "../../components/TrendingHashtagCard/TrendingHashtagCard";
 import MediaCard from "../../components/MediaCard/MediaCard";
+import people from "../../assets/images/add-friend.png";
 
 const HomePage = props => {
   return (
@@ -80,10 +81,26 @@ const HomePage = props => {
         </div>
 
         <div className="HomePage__mobile-wrapper">
-          <div className="HomePage__mobile-card-ph"></div>
-          <div className="HomePage__mobile-card-ph"></div>
-          <div className="HomePage__mobile-card-ph"></div>
-          <div className="HomePage__mobile-card-ph"></div>
+          <Card color="yellow" size="mobile" picture={people}>
+            <div>
+              <h2>Suggested Groups</h2>
+            </div>
+          </Card>
+          <Card color="pink" size="mobile" picture={people}>
+            <div>
+              <h2>Book a Trip</h2>
+            </div>
+          </Card>
+          <Card color="red" size="mobile" picture={people}>
+            <div>
+              <h2>Suggested People</h2>
+            </div>
+          </Card>
+          <Card color="purple" size="mobile" picture={people}>
+            <div>
+              <h2>Trending Hashtags</h2>
+            </div>
+          </Card>
         </div>
       </div>
       <div className="HomePage__scrapbook-wrapper">
