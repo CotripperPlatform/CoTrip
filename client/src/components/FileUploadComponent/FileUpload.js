@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ProfilePicture from '../ProfilePicture/ProfilePicture'
 import './FileUpload.css'
 
 class FileUpload extends Component {
@@ -7,10 +6,14 @@ class FileUpload extends Component {
     super(props)
 
     this.state = {
-      renderThis: null,
-      style: null,
       file: null
     }
+
+    this.handleChange = this.handleChange.bind(this)
+  }
+
+  handleChange(evt) {
+    this.setState({file: evt.target.files[0]}, this.props.handleFile)
   }
 
   render() {
@@ -21,12 +24,12 @@ class FileUpload extends Component {
             <div className='NewUserUpload'>
               <p>{this.props.header}</p>
               <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-              <input accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
+              <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
             </div>
             :
             <div>
               <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-              <input accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
+              <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
             </div>
         }
       </>
@@ -37,7 +40,8 @@ class FileUpload extends Component {
 
 FileUpload.defaultProps = {
   buttonLabel: 'Browse Files',
-  fileType: 'image/*'
+  fileType: 'image/*',
+  handleFile: () => console.log("function handles the file")
 }
 
 export default FileUpload;
