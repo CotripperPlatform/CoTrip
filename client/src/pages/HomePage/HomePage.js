@@ -78,6 +78,13 @@ const HomePage = props => {
             </div>
           </span>
         </div>
+
+        <div className="HomePage__mobile-wrapper">
+          <div className="HomePage__mobile-card-ph"></div>
+          <div className="HomePage__mobile-card-ph"></div>
+          <div className="HomePage__mobile-card-ph"></div>
+          <div className="HomePage__mobile-card-ph"></div>
+        </div>
       </div>
       <div className="HomePage__scrapbook-wrapper">
         <span className="HomePage__scrapbook-container">

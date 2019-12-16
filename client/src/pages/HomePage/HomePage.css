@@ -209,10 +209,22 @@
   .placeholder-welcome {
     height: 6rem;
   }
-}
-@media only screen and (max-width: 1080px) {
-  .HomePage__groupcard-3 {
-    display: none;
+
+  .HomePage__mobile-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 500px;
+    border: 3px solid black;
+    /* margin: 1rem 1rem 1rem 1rem; */
+  }
+
+  .HomePage__mobile-card-ph {
+    width: 165px;
+    height: 205px;
+    border: 1px solid gray;
+    margin: 0rem 1.1rem 0rem 1.1rem;
   }
 }
 
