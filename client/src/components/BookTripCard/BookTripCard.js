@@ -23,6 +23,6 @@ BookTripCard.defaultProps={
   children:[<h1>Book a Trip</h1>,
     <Card size='medium' />,
     <Card size='medium'/>],
-    to:"/"
+    link:"/"
 }
 export default BookTripCard;
