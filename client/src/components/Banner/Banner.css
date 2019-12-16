@@ -8,10 +8,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   font-family: var(--default-font);  
   font-size: 48px;
   font-style: normal;
