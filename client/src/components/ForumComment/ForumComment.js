@@ -5,10 +5,8 @@ import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
 const ForumComment = props => {
     return (
         <div className="ForumComment">
-            <div className="ForumComment_profile">
-            <div className="ForumComment__image">
-           <ProfilePicture type="small" link={props.to} image={props.image} />
-           </div>
+        <div className="ForumComment__profile">
+        <img className="ForumComment__image" src={props.image}/>
         <div className="ForumComment__name">
             {props.name}
         </div>
