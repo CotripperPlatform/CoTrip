@@ -23,6 +23,7 @@ class Navbar extends Component {
       // The link end points for each menu item.
       menuLinks: ["/", "/", "/", "/"],
       // Each item in this array is a set for the dropdown on each menu link.
+      // This is an example for one drop menu item: { text: 'Explore People', to: '/' }
       menuDropDown: [[], [], [], []]
     };
   }
