@@ -17,7 +17,7 @@ class Navbar extends Component {
       condensedMenu: "",
       // pageMark controls the triangle that marks which page the user is on.
       // Passing 0-3 as a prop into this component controls where it displays.
-      pageMark: ["Navbar__show", "", "", ""],
+      pageMark: ["", "", "", ""],
       // menuItems are careated in order of the following array.
       menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
       // The link end points for each menu item.
