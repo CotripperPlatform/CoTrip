@@ -2,12 +2,20 @@ from rest_framework import serializers
 # from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from .models import Profile, CustomUser
+from django.dispatch import receiver
+from django.db.models.signals import post_save
 
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
+    profile = ProfileSerializer()
+    
     class Meta:
         model = CustomUser
-        fields = ('id', 'email')
+        fields = ('id', 'email', 'profile')
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -31,8 +39,12 @@ class LoginSerializer(serializers.Serializer):
         if user and user.is_active:
             return user
 
+@receiver(post_save, sender=CustomUser)
+def create_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance)
 
-class ProfileSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Profile
-        fields = '__all__'
+
+@receiver(post_save, sender=CustomUser)
+def save_profile(sender, instance, **kwargs):
+    instance.profile.save()
