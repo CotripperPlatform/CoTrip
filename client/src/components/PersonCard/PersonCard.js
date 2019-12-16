@@ -7,15 +7,15 @@ import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
 const PersonCard = props => {
   return(
     <div className="PersonCard">
-      <div className="PersonCard__image">
+      <div className="image">
       <ProfilePicture type="medium" link={props.to} image={props.image} />
       </div>
-      <div className="PersonCard__name">{props.PersonCard__name}</div>
-        <div className="PersonCard__location">{props.PersonCard__location}</div>
-        <div className="PersonCard__interests">
-          {props.PersonCard__interests.map(PersonCard__interests => (
-              <Link className="PersonCard__interests-links" href={PersonCard__interests.url}>
-                #{PersonCard__interests.interests}
+      <div className="name">{props.name}</div>
+        <div className="location">{props.location}</div>
+        <div className="interests">
+          {props.interests.map(interests => (
+              <Link className="interests-links" href={interests.url}>
+                #{interests.interests}
               </Link>
             ))}
       </div>
