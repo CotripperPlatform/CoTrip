@@ -10,6 +10,5 @@ storiesOf("BookTripCard", module).add("Default", () => (
     <h1>Book a Trip</h1>
     <TripCard src={example2} location="Hawaii" date="May 2020" />
     <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-    <h3 to="/route">Book a Trip Now!</h3>
   </BookTripCard>
 ));
