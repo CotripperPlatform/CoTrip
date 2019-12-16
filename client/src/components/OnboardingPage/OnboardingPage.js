@@ -21,7 +21,6 @@ class OnboardingPage extends Component {
     this.setState({
       counter: (this.state.counter += 1)
     });
-    alert(this.state.counter);
   };
   renderthis = () => {
     if (this.state.counter == 1) {
@@ -67,6 +66,9 @@ class OnboardingPage extends Component {
       return (
         <OnboardingParent>
           <div className="OnboardingPage-onboarding-two">This is Onboarding Two</div>
+          <div className="OnboardingPage__button-container" onClick={this.handleClick}>
+            <Button className="OnboardingPage__button" text="Next" size="small"></Button>
+          </div>
         </OnboardingParent>
       );
     }
