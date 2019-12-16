@@ -75,6 +75,10 @@
   display: block;
 }
 
+.Navbar__burger, .Navbar__right, .Navbar__logo {
+  cursor: pointer;
+}
+
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
   
