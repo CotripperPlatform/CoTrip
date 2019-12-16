@@ -37,8 +37,13 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 576px) {
+  .Connections__list {
+    width: 80vw;
+  }
+}
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width: 1000px) {
   .Connections__heading {
     text-align: center;
   }
@@ -49,9 +54,5 @@
 
   .Connections__list {
     justify-content: center;
-  }
-
-  .Connections__link {
-    font-size: 1rem;
   }
 }
