@@ -6,6 +6,6 @@ import ProfileImage from "../../assets/images/profile_large.png";
 storiesOf("Navbar", module).add("Default", () => (
   <Navbar
     profileImage={ProfileImage}
-    page={1}
+    page={0}
   />
 ));

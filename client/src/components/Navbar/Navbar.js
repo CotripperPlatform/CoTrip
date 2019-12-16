@@ -46,7 +46,7 @@ class Navbar extends Component {
     this.setState({ pageMark: setPage });
   }
 
-  // Creates the menu
+  // Creates the menu. If a 1 is passed into the function, drop down menus are created.
   setMenu = (type) => {
     if (type === 1) {
       return this.state.menuItems.map((item, key) => (
