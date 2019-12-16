@@ -70,6 +70,10 @@ class Navbar extends Component {
     }
   }
 
+  clickHandler = () => {
+    console.log("Clicked!")
+  }
+
   componentWillMount() {
     this.setPageMarker();
   }
@@ -83,8 +87,8 @@ class Navbar extends Component {
         <div className="Navbar__main">
           <div className="Navbar__menu">{this.setMenu(1)}</div>
           <div className="Navbar__right">
-            <Icon icon={"search"} size="2x" onClick={this.props.searchClick} />
-            <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.props.messageClick} />
+            <Icon icon={"search"} size="2x" onClick={this.clickHandler} />
+            <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.clickHandler} />
             <ProfilePicture type="extra-small" link="#" image={this.props.profileImage} />
           </div>
         </div>
