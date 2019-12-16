@@ -1,21 +1,31 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import Profile
+from django.contrib.auth import authenticate
 
 
 class UserSerializer(serializers.ModelSerializer):
-    # add hyperlinked related fields to create profile when creating user
     class Meta:
         model = User
-        fields = ('username', 'password', 'email', Profile)
+        fields = ('id', 'username', 'email')
 
 
-class TokenSerializer(serializers.Serializer):
-    token = serializers.CharField(max_length=255)
-
-
-class ProfileSerializer(serializers.Serializer):
-
+class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Profile
-        fields = ("first_name", "last_name", "city_of_residence", "topics")
+        model = User
+        fields = ('id', 'username', 'email', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User.objects.create_user(
+            validated_data['username'], validated_data['email'], validated_data['password'])
+        return user
+
+
+class LoginSerializer(serializers.Serializer):
+    username = serializers.CharField()
+    password = serializers.CharField()
+
+    def validate(self, data):
+        user = authenticate(**data)
+        if user and user.is_active:
+            return user
