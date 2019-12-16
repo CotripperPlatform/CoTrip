@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 import React from "react";
 import { Redirect } from "react-router-dom";
 import Button from "../../components/Button/Button";
+=======
+import React from 'react';
+import { Redirect } from 'react-router-dom';
+import Button from 'components/Button/Button';
+import logo from 'assets/images/login_logo.png';
+>>>>>>> develop
 import "./SplashPage.css";
 
 function toLogin() {
@@ -12,7 +19,8 @@ function toRegister() {
 
 const SplashPage = () => {
   return (
-    <div className="SplashPage">
+    <div className='SplashPage'>
+      <img src={logo} alt='CoTripper Logo'/>
       <h1>CoTripper</h1>
       <p>Book trips, meet moms, and experience family travel together!</p>
       <Button text="Login" handleClick={toLogin} />
