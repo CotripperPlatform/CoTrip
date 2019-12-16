@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
+import LoginPage from "./components/LoginPage/LoginPage";
 import "./App.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCheckSquare, faHeart, faTable, faComment, faCaretRight, faCaretLeft, faSearch, faAngleLeft, faAngleRight, faCommentDots } from '@fortawesome/free-solid-svg-icons'
