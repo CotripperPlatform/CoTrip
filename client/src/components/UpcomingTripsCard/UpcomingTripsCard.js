@@ -13,7 +13,7 @@ const UpcomingTripsCard = (props) => {
         <TripCard src={props.src} location={props.location} date={props.date}/>
         <div className="UpcomingTripsCard__text-info">
           <p className="UpcomingTripsCard__general-information">General Information:</p>
-          <ul>
+          <ul className="UpcomingTripsCard__ul">
             {props.details.map(detail => {
               return <li>~{detail}</li>
             })}
