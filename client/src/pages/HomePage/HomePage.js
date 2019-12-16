@@ -2,13 +2,23 @@ import React from "react";
 import "./HomePage.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import example1 from "../../assets/images/card_small2.png";
+import example2 from "../../assets/images/Hawaii-resort.jpg";
+import people from "../../assets/images/add-friend.png";
+import happiness from "../../assets/images/media-card-2.png";
+import van from "../../assets/images/media-card-3.png";
+import nightSky from "../../assets/images/media-card-4.png";
+import waterfall from "../../assets/images/media-card-5.png";
+import flight from "../../assets/images/media-card-6.png";
+
 import NavBar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/Card/Card";
 import GroupCard from "../../components/GroupCard/GroupCard";
 import TrendingHashtagCard from "../../components/TrendingHashtagCard/TrendingHashtagCard";
+import BookTripCard from "../../components/BookTripCard/BookTripCard";
+import TripCard from "../../components/TripCard/TripCard";
 import MediaCard from "../../components/MediaCard/MediaCard";
-import people from "../../assets/images/add-friend.png";
 
 const HomePage = props => {
   return (
@@ -57,10 +67,11 @@ const HomePage = props => {
 
           <span className="HomePage__top-cards-wrapper">
             <div className="HomePage__cards-container">
-              <Card color="pink">
-                <h1>Book A Trip</h1>
-                <h1>placeholder</h1>
-              </Card>
+              <BookTripCard>
+                <h1>Book a Trip</h1>
+                <TripCard src={example2} location="Hawaii" date="May 2020" />
+                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+              </BookTripCard>
               <TrendingHashtagCard
                 data={[
                   "#dope",
@@ -107,16 +118,36 @@ const HomePage = props => {
         <span className="HomePage__scrapbook-container">
           <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
           <div className="HomePage__scrapbook-cards-container">
-            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
-            <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard
+              imageSrc={happiness}
+              size="medium"
+              to="/home"
+              footerText="Posted By: --user--"
+            />
+            <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: --user--" />
             <span className="HomePage__groupcard-2">
-              <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+              <MediaCard
+                imageSrc={nightSky}
+                size="medium"
+                to="/home"
+                footerText="Posted By: --user--"
+              />
             </span>
             <span className="HomePage__groupcard-3">
-              <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+              <MediaCard
+                imageSrc={waterfall}
+                size="medium"
+                to="/home"
+                footerText="Posted By: --user--"
+              />
             </span>
             <span className="HomePage__groupcard-3">
-              <MediaCard size="medium" to="/home" footerText="Posted By: --user--" />
+              <MediaCard
+                imageSrc={flight}
+                size="medium"
+                to="/home"
+                footerText="Posted By: --user--"
+              />
             </span>
           </div>
         </span>
