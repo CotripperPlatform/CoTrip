@@ -18,22 +18,11 @@ class FileUpload extends Component {
 
   render() {
     return (
-      <>
-        {
-          this.props.context ?
             <div className='NewUserUpload'>
               <p>{this.props.header}</p>
               <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
               <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
             </div>
-            :
-            <div>
-              <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-              <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
-            </div>
-        }
-      </>
-
     )
   }
 }
