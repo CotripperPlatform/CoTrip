@@ -8,5 +8,11 @@ function handleClick() {
 }
 
 storiesOf("Navbar", module).add("Default", () => (
-  <Navbar profileImage={ProfileImage} burgerClick={handleClick} showCondensedMenu={false} menu2="Navbar__show" />
+  <Navbar
+    profileImage={ProfileImage}
+    burgerClick={handleClick}
+    showCondensedMenu={true}
+    condensedMenu="Navbar__show"
+    menu2="Navbar__show"
+  />
 ));

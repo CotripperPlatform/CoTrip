@@ -71,6 +71,12 @@ const Navbar = props => {
       </div>
       <div className="Navbar__burger">
         <Burger onClick={props.burgerClick} active={props.showCondensedMenu} />
+        <div className={`Navbar__condensed-menu ${props.condensedMenu}`}>
+          <NavLink text="My Directory" to="/" menuList={[]} />
+          <NavLink text="Community" to="/" menuList={[]} />
+          <NavLink text="Forum" to="/" menuList={[]} />
+          <NavLink text="Book A Trip" to="/" menuList={[]} />
+        </div>
       </div>
     </div>
   );
