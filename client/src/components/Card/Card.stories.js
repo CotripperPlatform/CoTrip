@@ -27,4 +27,9 @@ storiesOf("Card", module)
     </div>
   ))
   .add("Card, Purple, Smedium", () => <Card color="purple" size="extra-small" />)
-  .add("Card, Red, Smedium", () => <Card color="red" size="extra-small" />);
+  .add("Card, Red, Smedium", () => <Card color="red" size="extra-small" />)
+  .add("Card, Red, Mobile", () => (
+    <Card color="red" size="mobile">
+      <h2>Book a Trip</h2>
+    </Card>
+  ));

@@ -43,6 +43,13 @@
   min-width: 180px;
   height: 140px;
 }
+.Card--mobile {
+  text-align: center;
+  color: var(--white);
+  width: 10rem;
+  min-width: 160px;
+  height: 202px;
+}
 
 .Card img {
   width: 1rem;
