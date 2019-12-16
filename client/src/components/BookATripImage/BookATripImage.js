@@ -8,7 +8,9 @@ const BookATripImage = (props) => {
         <div className="BookATripImage__image-container">
           {props.images.map(image => {
             return <img src={require(`../../assets/images/${image}.png`)} className="BookATripImage__image"></img>
-            // <p>{image}</p>
+          })}
+          {props.descriptions.map(description => {
+            return <p>{description}</p>
           })}
         </div>
       </div>
