@@ -8,59 +8,36 @@ class FileUpload extends Component {
 
     this.state = {
       renderThis: null,
-      style: null
-    }
-
-    this.handleChange = this.handleChange.bind(this)
-  }
-
-  handleChange(eo) {
-    eo.preventDefault()
-    eo.persist()
-    let files = eo.target.files
-    console.warn("data files", files)
-    let reader = new FileReader();
-    reader.readAsDataURL(files[0]);
-    reader.onload = (eo) => {
-      console.warn("img data ", eo.target.result)
-      console.log(this.state)
-      this.setState({
-        style: { backgroundImage: `url(${eo.target.result})` },
-        renderThis: <div className='NewUserUpload' to="#" image={this.state.file} />
-      })
-      console.log(this.state)
-    }
-  }
-
-  componentDidMount() {
-    if (this.props.context === "userPhoto") {
-      this.setState({
-        renderThis:
-          <div onChange={this.handleChange} className='NewUserUpload'>
-            <p>Upload a profile photo</p>
-            <label for="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-            <input type="file" id="inputTypeFile" className='FileUpload' ></input>
-          </div>
-      })
-
-    } else {
-      this.setState({
-        renderThis:
-          <div onChange={this.handleChange}>
-            <label for="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-            <input type="file" id="inputTypeFile" className='FileUpload' ></input>
-          </div>
-      })
+      style: null,
+      file: null
     }
   }
 
   render() {
-    return this.state.renderThis
+    return (
+      <>
+        {
+          this.props.context ?
+            <div className='NewUserUpload'>
+              <p>{this.props.header}</p>
+              <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
+              <input accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
+            </div>
+            :
+            <div>
+              <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
+              <input accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
+            </div>
+        }
+      </>
+
+    )
   }
 }
 
 FileUpload.defaultProps = {
-  buttonLabel: 'Browse Files'
+  buttonLabel: 'Browse Files',
+  fileType: 'image/*'
 }
 
 export default FileUpload;

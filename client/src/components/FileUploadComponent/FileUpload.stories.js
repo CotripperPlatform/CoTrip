@@ -9,6 +9,7 @@ storiesOf("File Upload", module)
     </FileUpload>)
   .add("New User Upload", () =>
     <FileUpload
+      header="Upload a profile photo"
       context="userPhoto"
       buttonLabel="Browse Files">
     </FileUpload>)
