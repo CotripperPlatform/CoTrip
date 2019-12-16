@@ -1,49 +1,48 @@
-.OnboardingOne {
+.OnboardingPage {
   font-family: var(--default-font);
   width: 100%;
 }
 
-.OnboardingOne__form {
+.OnboardingPage__form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.OnboardingOne__header {
+.OnboardingPage__header {
   margin: 0;
 }
-.OnboardingOne__container {
+.OnboardingPage__container {
   margin: 1rem 0;
 }
-.OnboardingOne__button-container {
+.OnboardingPage__button-container {
   display: flex;
   justify-content: center;
   margin: 1rem 0;
 }
-.OnboardingOne .InputTextField__container--default {
+.OnboardingPage .InputTextField__container--default {
   height: 1rem;
   width: 22.5rem;
 }
 
-.OnboardingOne .Button {
+.OnboardingPage .Button {
   width: 11.4rem;
 }
 
 @media all and (max-width: 320px) {
-  .OnboardingOne__container {
-    width: 0.5rem;
+  .OnboardingPage__container {
     flex-direction: column;
     display: flex;
     justify-content: center;
     margin: 0.5rem 0;
   }
-  .OnboardingOne .InputTextField__container--default {
+  .OnboardingPage .InputTextField__container--default {
     min-width: 11.5rem;
     max-width: 11.5rem;
     height: 0.5rem;
     font-size: 1rem;
     padding: 0.7rem 1.4rem;
   }
-  .OnboardingOne__form {
+  .OnboardingPage__form {
     display: flex;
     flex-direction: column;
     justify-content: center;
