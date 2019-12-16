@@ -17,9 +17,14 @@
 
 .MemberProfilePage .interaction-div {
   width: 30%;
+  margin: 1.4rem;
 }
 
-.MemberProfilePage .right {}
+.MemberProfilePage .trip-card {
+  margin: 1.4rem;
+}
+
+
 
 .page {
   display: flex;

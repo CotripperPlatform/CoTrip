@@ -6,6 +6,8 @@ import InteractionCard from "../InteractionCard/InteractionCard"
 import PreviousTripsCard from "../PreviousTripsCard/PreviousTripsCard"
 import TripCard from "../TripCard/TripCard"
 import example1 from "../../assets/images/card_small2.png";
+import BookTripCard from "../BookTripCard/BookTripCard"
+import example2 from "../../assets/images/hawaii.png"
 
 // Class Based React Component
 class MemberProfilePage extends Component{
@@ -48,6 +50,11 @@ class MemberProfilePage extends Component{
         </div>
         <div className="right">
         <div className="trip-card">
+        <BookTripCard>
+    <h1>Book a Trip</h1>
+    <TripCard src={example2} location="Hawaii" date="May 2020" />
+    <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+  </BookTripCard>
     <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>
       <TripCard src={example1} location="Puerto Rico" date="April 2019" />
