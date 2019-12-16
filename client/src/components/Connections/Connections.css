@@ -5,6 +5,7 @@
 }
 
 .Connections__list {
+  flex-wrap: wrap;
   display: flex;
   width: 100%;
 }
@@ -29,9 +30,28 @@
   flex-direction: column;
   text-align: center;
 }
+
 .Connections--name {
   font-size: 2rem;
   font-family: var(--default-font);
   text-align: center;
 }
 
+
+@media only screen and (max-width:1000px) {
+  .Connections__heading {
+    text-align: center;
+  }
+
+  .Connections--name {
+    font-size: 1rem;
+  }
+
+  .Connections__list {
+    justify-content: center;
+  }
+
+  .Connections__link {
+    font-size: 1rem;
+  }
+}
