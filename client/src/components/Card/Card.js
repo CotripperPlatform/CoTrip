@@ -10,7 +10,13 @@ const Card = props => {
       style={{ backgroundImage: `url(${picture})` }}
     >
       {" "}
-      {outline ? <div className="Card__discover-link">{props.children}</div> : props.children}
+      {outline ? (
+        <div style={{ backgroundImage: `url(${picture})` }} className="Card__discover-link">
+          {props.children}
+        </div>
+      ) : (
+        <div>{props.children}</div>
+      )}
     </div>
   );
 };
