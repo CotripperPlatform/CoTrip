@@ -7,6 +7,7 @@ import { faCheckSquare, faHeart, faTable, faComment, faCaretRight, faCaretLeft, 
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { fas } from '@fortawesome/free-solid-svg-icons'
 import { far } from '@fortawesome/free-regular-svg-icons'
+import MemberProfilePage from "components/MemberProfilePage/MemberProfilePage";
 library.add(fab, far, fas, faCheckSquare, faHeart, faTable, faComment, faCaretRight, faCaretLeft, faSearch, faAngleLeft, faAngleRight, faCommentDots  )
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
       <div className='App'>
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          <Route path="/member-profile" exact component={MemberProfilePage}></Route>
         </main>
       </div>
     );
