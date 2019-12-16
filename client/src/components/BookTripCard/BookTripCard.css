@@ -17,7 +17,7 @@
   transition: transform 0.5s;
 }
 .BookTripCard__trip-link a {
-  color: var(--purple);
+  color: var(--white);
 }
 .BookTripCard__trip-link a:hover {
   color: var(--yellow);
