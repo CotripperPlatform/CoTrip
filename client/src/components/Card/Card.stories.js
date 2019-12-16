@@ -47,8 +47,8 @@ storiesOf("Card", module)
       </div>
     </Card>
   ))
-  .add("Card, Yellow, Mobile, Hashtags", () => (
-    <Card color="yellow" size="mobile" picture={trends}>
+  .add("Card, Purple, Mobile, Hashtags", () => (
+    <Card color="purple" size="mobile" picture={trends}>
       <div>
         <h2>Trending Hashtags</h2>
       </div>
