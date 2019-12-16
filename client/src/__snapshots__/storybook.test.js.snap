@@ -922,7 +922,7 @@ exports[`Storyshots Card Card, Blank 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--large
+      className="Card Card--purple Card--large
       "
       style={
         Object {
@@ -960,7 +960,7 @@ exports[`Storyshots Card Card, Blank, Small 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--small
+      className="Card Card--purple Card--small
       "
       style={
         Object {
@@ -998,7 +998,7 @@ exports[`Storyshots Card Card, Discover New Groups 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--medium
+      className="Card Card--purple Card--medium
       Card__outline"
       style={
         Object {
@@ -1045,7 +1045,7 @@ exports[`Storyshots Card Card, Picture BG, Medium 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--medium
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -1083,7 +1083,7 @@ exports[`Storyshots Card Card, Picture Hawaii, Medium 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--medium
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -1321,286 +1321,6 @@ exports[`Storyshots Card Card, Red, Smedium 1`] = `
     >
        
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Blank 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--large"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Blank, Small 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--small"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Picture BG, Large 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--medium"
-      style={
-        Object {
-          "backgroundImage": "url(card_small3.png)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Picture Hawaii, Large 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--undefined Card--medium"
-      style={
-        Object {
-          "backgroundImage": "url(https://wallpaperaccess.com/full/144067.jpg)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Pink 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--pink Card--large"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Pink, Small 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--pink Card--small"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Purple 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--purple Card--large"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
-  </div>
-</div>
-`;
-
-exports[`Storyshots Card Info Card, Purple, Small 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="Card Card--purple Card--small"
-      style={
-        Object {
-          "backgroundImage": "url(undefined)",
-        }
-      }
-    />
   </div>
 </div>
 `;
@@ -2358,13 +2078,15 @@ exports[`Storyshots GroupCard Default 1`] = `
     }
   >
     <div
-      className="Card Card--pink Card--medium"
+      className="Card Card--pink Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <a
         className="GroupCard"
         href="/"
@@ -2429,13 +2151,15 @@ exports[`Storyshots GroupCard Example 1`] = `
     }
   >
     <div
-      className="Card Card--pink Card--medium"
+      className="Card Card--pink Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <a
         className="GroupCard"
         href="/"
@@ -3760,54 +3484,6 @@ exports[`Storyshots InteractionCard Default 1`] = `
 </div>
 `;
 
-exports[`Storyshots Large Media Cards Happiness 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <a
-      className="MediaCard MediaCard--large"
-      href="/User/:userid/"
-      onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url(media-card-2.png)",
-          "backgroundSize": "cover",
-        }
-      }
-    >
-      <footer
-        className="MediaCard__footer"
-      >
-        <p
-          className="MediaCard__footer-text"
-        >
-          Posted By: --user--
-        </p>
-      </footer>
-    </a>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Logo Clickable Default Route Small 1`] = `
 <div
   style={
@@ -4850,54 +4526,6 @@ exports[`Storyshots Media Cards Small Waterfall 1`] = `
 </div>
 `;
 
-exports[`Storyshots Medium Media Cards Happiness 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <a
-      className="MediaCard MediaCard--medium"
-      href="/User/:userid/"
-      onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url(media-card-2.png)",
-          "backgroundSize": "cover",
-        }
-      }
-    >
-      <footer
-        className="MediaCard__footer"
-      >
-        <p
-          className="MediaCard__footer-text"
-        >
-          Posted By: --user--
-        </p>
-      </footer>
-    </a>
-  </div>
-</div>
-`;
-
 exports[`Storyshots NavLink NavLink 1`] = `
 <div
   style={
@@ -5223,9 +4851,10 @@ exports[`Storyshots Pill Default Props 1`] = `
     }
   >
     <div
-      className="Pill Pill--undefined Pill__undefined "
+      className="Pill Pill--large Pill--shadow Pill__pink "
       onClick={[Function]}
     >
+      Default
       <div />
     </div>
   </div>
@@ -5330,7 +4959,7 @@ exports[`Storyshots Pill Onboarding Pill 1`] = `
     }
   >
     <div
-      className="Pill Pill--large Pill__white"
+      className="Pill Pill--large Pill--shadow Pill__white"
       onClick={[Function]}
     >
       Traveling
@@ -5364,7 +4993,7 @@ exports[`Storyshots Pill Pill with Pink Heart Offset 1`] = `
     }
   >
     <div
-      className="Pill Pill--large Pill__undefined "
+      className="Pill Pill--large Pill--shadow Pill__pink "
       onClick={[Function]}
     >
       Traveling
@@ -5401,7 +5030,7 @@ exports[`Storyshots Pill Pill with White Heart 1`] = `
     }
   >
     <div
-      className="Pill Pill--medium Pill__pink "
+      className="Pill Pill--medium Pill--shadow Pill__pink "
       onClick={[Function]}
     >
       Traveling
@@ -5610,7 +5239,7 @@ exports[`Storyshots PreviousTripsCard Default, No Trips 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -5667,7 +5296,7 @@ exports[`Storyshots PreviousTripsCard Default, One Trip 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -5687,7 +5316,7 @@ exports[`Storyshots PreviousTripsCard Default, One Trip 1`] = `
         className="PreviousTripCard__trips"
       >
         <div
-          className="Card Card--undefined Card--medium
+          className="Card Card--purple Card--medium
       "
           style={
             Object {
@@ -5715,7 +5344,7 @@ exports[`Storyshots PreviousTripsCard Default, One Trip 1`] = `
           className="PreviousTripCard__trip-two"
         >
           <div
-            className="Card Card--undefined Card--medium
+            className="Card Card--purple Card--medium
       Card__outline"
             style={
               Object {
@@ -5769,7 +5398,7 @@ exports[`Storyshots PreviousTripsCard Default, Two Trips 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -5789,7 +5418,7 @@ exports[`Storyshots PreviousTripsCard Default, Two Trips 1`] = `
         className="PreviousTripCard__trips"
       >
         <div
-          className="Card Card--undefined Card--medium
+          className="Card Card--purple Card--medium
       "
           style={
             Object {
@@ -5817,7 +5446,7 @@ exports[`Storyshots PreviousTripsCard Default, Two Trips 1`] = `
           className="PreviousTripCard__trip-two"
         >
           <div
-            className="Card Card--undefined Card--medium
+            className="Card Card--purple Card--medium
       "
             style={
               Object {
@@ -5879,8 +5508,7 @@ exports[`Storyshots ProfilePicture Extra Small with Link 1`] = `
       className="ProfilePicture ProfilePicture--extra-small"
     >
       <a
-        exact={true}
-        href=""
+        href="/"
         onClick={[Function]}
       >
         <img
@@ -5990,8 +5618,7 @@ exports[`Storyshots ProfilePicture Large with Link 1`] = `
       className="ProfilePicture ProfilePicture--large"
     >
       <a
-        exact={true}
-        href=""
+        href="/"
         onClick={[Function]}
       >
         <img
@@ -6066,8 +5693,7 @@ exports[`Storyshots ProfilePicture Medium with Link 1`] = `
       className="ProfilePicture ProfilePicture--medium"
     >
       <a
-        exact={true}
-        href=""
+        href="/"
         onClick={[Function]}
       >
         <img
@@ -6142,8 +5768,7 @@ exports[`Storyshots ProfilePicture Small with Link 1`] = `
       className="ProfilePicture ProfilePicture--small"
     >
       <a
-        exact={true}
-        href=""
+        href="/"
         onClick={[Function]}
       >
         <img
@@ -6152,84 +5777,6 @@ exports[`Storyshots ProfilePicture Small with Link 1`] = `
         />
       </a>
     </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Small Media Cards Happiness 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <a
-      className="MediaCard MediaCard--small"
-      href="/User/:userid/"
-      onClick={[Function]}
-      style={
-        Object {
-          "backgroundImage": "url(media-card-2.png)",
-          "backgroundSize": "cover",
-        }
-      }
-    >
-      <footer
-        className="MediaCard__footer"
-      >
-        <p
-          className="MediaCard__footer-text"
-        >
-          Posted By: --user--
-        </p>
-      </footer>
-    </a>
-  </div>
-</div>
-`;
-
-exports[`Storyshots SplashPage Default 1`] = `
-<div
-  style={
-    Object {
-      "alignItems": "center",
-      "bottom": "0",
-      "display": "flex",
-      "left": "0",
-      "overflow": "auto",
-      "position": "fixed",
-      "right": "0",
-      "top": "0",
-    }
-  }
->
-  <div
-    style={
-      Object {
-        "margin": "auto",
-        "maxHeight": "100%",
-      }
-    }
-  >
-    <div
-      className="SplashPage"
-    />
   </div>
 </div>
 `;
@@ -6258,13 +5805,15 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large"
+      className="Card Card--purple Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <div
         className="TrendingHashtagCard__container"
       >
@@ -6280,7 +5829,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #dope
             </a>
           </div>
@@ -6290,7 +5838,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #torch
             </a>
           </div>
@@ -6300,7 +5847,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #hawaii
             </a>
           </div>
@@ -6310,7 +5856,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #kids
             </a>
           </div>
@@ -6320,7 +5865,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #cats
             </a>
           </div>
@@ -6330,7 +5874,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #dogs
             </a>
           </div>
@@ -6340,7 +5883,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #italy
             </a>
           </div>
@@ -6350,7 +5892,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #starwars
             </a>
           </div>
@@ -6360,7 +5901,6 @@ exports[`Storyshots TrendingHashtagCard Default 1`] = `
             <a
               href="/"
             >
-               
               #babyyoda
             </a>
           </div>
@@ -6395,13 +5935,15 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large"
+      className="Card Card--purple Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <div
         className="TrendingHashtagCard__container"
       >
@@ -6417,7 +5959,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
-               
               #dope
             </a>
           </div>
@@ -6427,7 +5968,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
-               
               #torch
             </a>
           </div>
@@ -6437,7 +5977,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
-               
               #hawaii
             </a>
           </div>
@@ -6447,7 +5986,6 @@ exports[`Storyshots TrendingHashtagCard Default, Little data 1`] = `
             <a
               href="/"
             >
-               
               #kids
             </a>
           </div>
@@ -6482,13 +6020,15 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large"
+      className="Card Card--purple Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <div
         className="TrendingHashtagCard__container"
       >
@@ -6504,7 +6044,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #italy
             </a>
           </div>
@@ -6514,7 +6053,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #starwars
             </a>
           </div>
@@ -6524,7 +6062,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #babyyoda
             </a>
           </div>
@@ -6534,7 +6071,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #gaming
             </a>
           </div>
@@ -6544,7 +6080,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #sports
             </a>
           </div>
@@ -6554,7 +6089,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #haikus
             </a>
           </div>
@@ -6564,7 +6098,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #surfing
             </a>
           </div>
@@ -6574,7 +6107,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #momfacts
             </a>
           </div>
@@ -6584,7 +6116,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #dadfacts
             </a>
           </div>
@@ -6594,7 +6125,6 @@ exports[`Storyshots TrendingHashtagCard Default, Lots of data 1`] = `
             <a
               href="/"
             >
-               
               #catfacts
             </a>
           </div>
@@ -6629,13 +6159,15 @@ exports[`Storyshots TrendingHashtagCard Default, No Data 1`] = `
     }
   >
     <div
-      className="Card Card--purple Card--large"
+      className="Card Card--purple Card--medium
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <div
         className="TrendingHashtagCard__container"
       >
@@ -6678,7 +6210,7 @@ exports[`Storyshots TripCard Default 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--medium
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -6730,7 +6262,7 @@ exports[`Storyshots TripCard Puerto Rico 1`] = `
     }
   >
     <div
-      className="Card Card--undefined Card--medium
+      className="Card Card--purple Card--medium
       "
       style={
         Object {
@@ -7006,13 +6538,15 @@ exports[`Storyshots UpcomingEventsCard Default 1`] = `
     }
   >
     <div
-      className="Card Card--pink Card--small"
+      className="Card Card--pink Card--small
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <a
         className="UpcomingEventsCard"
         href="/"
@@ -7071,13 +6605,15 @@ exports[`Storyshots UpcomingEventsCard Example 1`] = `
     }
   >
     <div
-      className="Card Card--pink Card--small"
+      className="Card Card--pink Card--small
+      "
       style={
         Object {
-          "backgroundImage": "url(undefined)",
+          "backgroundImage": "url(null)",
         }
       }
     >
+       
       <a
         className="UpcomingEventsCard"
         href="/"

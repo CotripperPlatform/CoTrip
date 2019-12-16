@@ -7,6 +7,7 @@ import easternCaribbean from "../../assets/images/easternCaribbean.png";
 import hawaiiTrees from "../../assets/images/hawaii-trees.png";
 import greece from "../../assets/images/greece.png";
 
+
 const setUp = props =>{
   const component = shallow(<TripDetails {...props}/>);
   return component;

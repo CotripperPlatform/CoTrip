@@ -1,59 +1,29 @@
-import React from "react";
-import { shallow } from "enzyme";
-import InputSelect from "./InputSelect.js";
-import checkPropTypes from "check-prop-types";
+import React from 'react'
+import { shallow, configure, mount, render } from 'enzyme'
+import InputSelect from './InputSelect.js'
+import Adapter from 'enzyme-adapter-react-16';
+configure({adapter: new Adapter()});
 
-import { findByTestAttribute } from "../../../../utils/utils";
 
-const setUp = props => {
-  const component = shallow(<InputSelect {...props} />);
-  return component;
-};
+describe('InputSelect component', () => {
 
-describe("InputSelect component", () => {
-  let wrapper;
-  let mockFunction = jest.fn();
-  beforeEach(() => {
-    const props = {
-      onSelect: mockFunction,
-      optionPrefix: "Sort By:  ",
-      options: [
-        { value: "location", title: "Location" },
-        { value: "date", title: "Date" },
-        { value: "type", title: "Type" }
-      ]
-    };
-    wrapper = setUp(props);
-  });
-  describe("Checking PropTypes", () => {
-    const expectedProps = {
-      onSelect: mockFunction,
-      optionPrefix: "Sort By:  ",
-      options: [
-        { value: "location", title: "Location" },
-        { value: "date", title: "Date" },
-        { value: "type", title: "Type" }
-      ]
-    };
-    it("Should not throw a warning", () => {
-      const propsError = checkPropTypes(
-        InputSelect.propTypes,
-        expectedProps,
-        "props",
-        InputSelect.name
-      );
-      expect(propsError).toBe(undefined);
-    });
-  });
-  describe("Has Props", () => {
-    it("Should render without error", () => {
-      const component = findByTestAttribute(wrapper, ".InputSelect");
-      expect(component.length).toBe(1);
-    });
-  });
-  describe("State", () => {
-    it("Should have the initial state of select", () => {
-      expect(wrapper.state()).toEqual({ value: "select" });
-    });
-  });
-});
+  it('Component should render select element', () => {
+    const component = shallow(<InputSelect />)
+    expect(component.find('select').exists()).toBe(true);
+
+  })
+  it('Component should utilizes default props if none are provided', ()=>{
+    const component = mount(<InputSelect />);
+    let {optionPrefix, options} = component.props();
+    let allPropsRendered = optionPrefix == "Sort By:  " && options.length == 2;
+    expect(allPropsRendered).toBe(true);
+  //  let {optionPrefix, options }
+  })
+  it('Component state value should change once a user as click an option', ()=>{
+    const component = mount(<InputSelect />);
+    expect(component.state().value==="select").toBe(true);
+    component.simulate('change', {target: {value: 'option2'}});
+    expect(component.state().value=="option2").toBe(true);
+
+  })
+})

@@ -15,4 +15,8 @@ const Card = props => {
   );
 };
 
+Card.defaultProps = {
+  color:"purple",
+  size:"medium"
+}
 export default Card;
