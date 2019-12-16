@@ -3,8 +3,8 @@ import { storiesOf } from "@storybook/react";
 import Card from "./Card";
 import image from "../../assets/images/card_small3.png"; //here for example
 import airplane from "../../assets/images/airplane-shape.png";
-import addfriend from "../../assets/images/add-friend.png";
-import trends from "../../assets/images/google-trends (2).png";
+import people from "../../assets/images/add-friend.png";
+import trends from "../../assets/images/trending-hashtags.png";
 import groups from "../../assets/images/protest.png";
 
 storiesOf("Card", module)
@@ -43,7 +43,21 @@ storiesOf("Card", module)
   .add("Card, Yellow, Mobile, Groups", () => (
     <Card color="yellow" size="mobile" picture={groups}>
       <div>
-        <h2>Book a Trip</h2>
+        <h2>Suggested Groups</h2>
+      </div>
+    </Card>
+  ))
+  .add("Card, Yellow, Mobile, Hashtags", () => (
+    <Card color="yellow" size="mobile" picture={trends}>
+      <div>
+        <h2>Trending Hashtags</h2>
+      </div>
+    </Card>
+  ))
+  .add("Card, Red, Mobile, People", () => (
+    <Card color="red" size="mobile" picture={people}>
+      <div>
+        <h2>Suggested People</h2>
       </div>
     </Card>
   ));
