@@ -11,6 +11,7 @@ class Profile(models.Model):
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=200, blank=True)
     last_name = models.CharField(max_length=200, blank=True)
+
     city_of_residence = models.CharField(max_length=200, blank=True)
     age = models.IntegerField(blank=True)
     dream_destination = models.CharField(max_length=200, blank=True)
@@ -20,4 +21,4 @@ class Profile(models.Model):
     facebook_url = models.URLField(blank=True)
 
     def __str__(self):
-        return f'{self.first_name} {self.last_name} Profile'
+        return f' Profile'
