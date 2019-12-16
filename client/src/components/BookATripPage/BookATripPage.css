@@ -1,6 +1,6 @@
-.BookATripPage__image {
-    height: 300px;
-    width: 300px;
-    padding: 30px;
+.BookATripPage__header{
+    font-family: var(--default-font);
+    font-size: 36px;
+    color: var(--purple);
+    padding: 0px 50px;
 }
-
