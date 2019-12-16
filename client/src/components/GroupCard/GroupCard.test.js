@@ -22,7 +22,6 @@ describe('GroupCard component', () => {
   })
   it('Component should render image when picture is provided',()=>{
     const component = mount(<BrowserRouter><GroupCard picture="../../assets/images/card_small5.png" /></BrowserRouter>);
-    console.log(component.find('Link').getDOMNode().style.backgroundImage);
     expect(component.find('Link').getDOMNode().style.backgroundImage=='url(../../assets/images/card_small5.png)').toBe(true);
   })
 })
