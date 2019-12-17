@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ForumPost from "./ForumPost";
-import Profile from "../../assets/images/card_profile3.png";
+import Profile from "../../assets/images/media-card-1.png";
 
 const onClick = () => {
   console.log("clicked");
