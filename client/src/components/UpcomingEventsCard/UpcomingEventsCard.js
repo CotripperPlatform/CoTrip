@@ -16,4 +16,11 @@ const UpcomingEventsCard = (props) => {
   );
 }
 
+UpcomingEventsCard.defaultProps = {
+  name: 'UpcomingEventsCard',
+  date: "",
+  time: "",
+  location: ""
+}
+
 export default UpcomingEventsCard;
