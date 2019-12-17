@@ -13,15 +13,10 @@
   justify-content: space-evenly;
   align-items: center;
 }
-/* .OnboardingPage .Logo {
-  width: 100%;
-  height: 16.5rem;
-  background-size: contain;
-} */
+
 .OnboardingPage__form-container {
   display: flex;
   flex-direction: column;
-
   justify-content: space-evenly;
   align-items: center;
   height: 30vh;
@@ -53,10 +48,6 @@
   justify-content: center;
   margin: 1rem 0;
 }
-.OnboardingPage .InputTextField__container--default {
-  height: 1rem;
-  width: 22.5rem;
-}
 .OnboardingPage .Button {
   width: 11.4rem;
 }
@@ -76,13 +67,7 @@
     justify-content: center;
     margin: 0.5rem 0;
   }
-  .OnboardingPage .InputTextField__container--default {
-    min-width: 11.5rem;
-    max-width: 11.5rem;
-    height: 0.5rem;
-    font-size: 1rem;
-    padding: 0.7rem 1.4rem;
-  }
+
   .OnboardingPage__form {
     justify-content: center;
   }

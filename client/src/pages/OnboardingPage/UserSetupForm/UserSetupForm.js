@@ -61,7 +61,7 @@ class UserSetupForm extends Component {
   };
   render() {
     return (
-      <div className="OnboardingPage__form">
+      <div>
         <h1 className="OnboardingPage__header">Step One</h1>
         <div className="OnboardingPage__container">
           <InputTextField

@@ -4,7 +4,8 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo.js";
 import CarouselDots from "components/CarouselDots/CarouselDots";
-import ProfilePicture from "components/ProfilePicture/ProfilePicture";
+import FileUpload from "components/FileUploadComponent/FileUpload";
+// import handleFile from ""
 class PersonalSettingsForm extends Component {
   constructor(props) {
     super(props);
@@ -31,6 +32,11 @@ class PersonalSettingsForm extends Component {
       <div className="OnboardingPage__wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
         <div className="OnboardingPage__form-container">
+          {/* <FileUpload
+            header="Upload a profile photo"
+            buttonLabel="Browse Files"
+            handleFile={handleFile}
+          ></FileUpload> */}
           <InputTextField
             type="text"
             name="age"
