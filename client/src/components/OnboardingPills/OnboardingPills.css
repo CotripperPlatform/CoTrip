@@ -1,19 +1,6 @@
 .OnboardingPills {
-  display: inline-block;
-  width: 34.6rem;
-}
-.OnboardingPills__inner-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
-.OnboardingPills .Pill {
-  width: 9.75rem;
-  height: 2.45rem;
-  font-size: 1.25rem;
-  margin: 0.5rem;
-  padding: 0;
-  box-shadow: none;
-  line-height: 2;
-  user-select: none;
+  width: 34.6rem;
 }
