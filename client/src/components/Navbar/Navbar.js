@@ -30,7 +30,7 @@ class Navbar extends Component {
 
   // Handles activating the hamburger animation and displays the menu.
   handleCondensedMenuClick = () => {
-    this.setState({ condensedMenuActive: !this.state.condensedMenuActive });
+    this.setState({ condensedMenuActive: !this.state.condensedMenuActive })
     if (this.state.condensedMenuActive === false) {
       this.setState({ condensedMenu: "Navbar__show" });
     } else {
