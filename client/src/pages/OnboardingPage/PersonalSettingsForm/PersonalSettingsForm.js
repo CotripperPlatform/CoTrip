@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo.js";
 import CarouselDots from "components/CarouselDots/CarouselDots";
+import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import FileUpload from "components/FileUploadComponent/FileUpload";
 // import handleFile from ""
 class PersonalSettingsForm extends Component {
@@ -32,11 +33,23 @@ class PersonalSettingsForm extends Component {
       <div className="OnboardingPage__wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
         <div className="OnboardingPage__form-container">
-          {/* <FileUpload
-            header="Upload a profile photo"
-            buttonLabel="Browse Files"
-            handleFile={handleFile}
-          ></FileUpload> */}
+          {this.state.img === "" ? (
+            <FileUpload
+              header="Upload a profile photo"
+              buttonLabel="Browse Files"
+              handleFile={evt => {
+                evt.preventDefault();
+                evt.persist();
+                console.log(evt);
+                let imageUrl = URL.createObjectURL(evt.target.files[0]);
+                this.setState({ img: imageUrl });
+                return imageUrl;
+              }}
+            ></FileUpload>
+          ) : (
+            <ProfilePicture type="medium" image={this.state.img}></ProfilePicture>
+          )}
+
           <InputTextField
             type="text"
             name="age"

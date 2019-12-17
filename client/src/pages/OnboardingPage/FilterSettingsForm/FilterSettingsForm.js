@@ -3,7 +3,7 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo.js";
 import CarouselDots from "components/CarouselDots/CarouselDots";
-
+import OnboardingPills from "components/OnboardingPills/OnboardingPills";
 class FilterSettingsForm extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +16,12 @@ class FilterSettingsForm extends Component {
     this.props.save(this.state);
     this.props.functionProp();
   };
-  // NEED to add onChange to save state
-  // NEED to save tags
+
   render() {
     return (
       <div className="OnboardingPage__wrapper">
-        <h1>This is Onboarding Two</h1>
+        <InputTextField />
+        <OnboardingPills onChange={() => this.props.onChange} />
         <div className="OnboardingPage__button-container">
           <Button text="Next" size="small" handleClick={this.next}></Button>
         </div>

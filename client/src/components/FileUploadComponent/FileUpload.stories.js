@@ -9,9 +9,5 @@ const handleFile = file =>
   );
 
 storiesOf("File Upload", module).add("New User Upload", () => (
-  <FileUpload
-    header="Upload a profile photo"
-    buttonLabel="Browse Files"
-    handleFile={handleFile}
-  ></FileUpload>
+  <FileUpload header="Upload a profile photo" buttonLabel="Browse Files"></FileUpload>
 ));
