@@ -56,14 +56,14 @@ class Navbar extends Component {
   setMenu = (type) => {
     if (type === 1) {
       return this.state.menuItems.map((item, key) => (
-        <div className="Navbar__link-item">
+        <div className="Navbar__link-item" key={key}>
           <NavLink text={item} to={this.state.menuLinks[key]} menuList={this.state.menuDropDown[key]} />
           <div className={`Navbar__triangle ${this.state.pageMark[key]}`}></div>
         </div>
       ));
     } else {
       return this.state.menuItems.map((item, key) => (
-        <div className="Navbar__link-item">
+        <div className="Navbar__link-item" key={key}>
           <NavLink text={item} to="/" menuList={[]} />
         </div>
       ));
