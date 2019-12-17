@@ -1,0 +1,8 @@
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import InboxMessage from "./InboxMessage";
+import Image from "assets/images/profile_large.png";
+
+storiesOf("InboxMessage", module).add("Default", () => (
+  <InboxMessage profilePic={Image} name={"Raymond"} message={"Hello World"} />
+));
