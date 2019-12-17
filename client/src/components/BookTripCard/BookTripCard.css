@@ -1,0 +1,38 @@
+.BookTripCard__content-wrapper {
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem 1rem 1rem 1rem;
+}
+
+.BookTripCard__title-wrapper h1 {
+  padding-left: 0.7rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  color: var(--white);
+}
+
+.BookTripCard__trip-link {
+  margin: 0 auto;
+  transition: transform 0.5s;
+  text-align: center;
+}
+
+.BookTripCard__trip-link a {
+  color: var(--white);
+}
+
+.BookTripCard__trip-link a:hover {
+  color: var(--yellow);
+}
+
+.BookTripCard__trip-link:hover {
+  color: var(--yellow);
+}
+
+@media only screen and (max-width: 576px) {
+  .Card span {
+    display: none;
+  }
+}

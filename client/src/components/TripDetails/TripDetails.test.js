@@ -1,16 +1,62 @@
 import React from "react";
-import { shallow, configure } from "enzyme";
-import TripDetails from "./TripDetails.js/index.js";
-import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });
+import { shallow } from "enzyme";
+import TripDetails from "./TripDetails.js";
+import hawaii from "../../assets/images/hawaii.png";
+import southernCaribbean from "../../assets/images/southernCaribbean.png";
+import easternCaribbean from "../../assets/images/easternCaribbean.png";
+import hawaiiTrees from "../../assets/images/hawaii-trees.png";
+import greece from "../../assets/images/greece.png";
 
-// We will describe a block of tests
+
+const setUp = props =>{
+  const component = shallow(<TripDetails {...props}/>);
+  return component;
+}
 describe("TripDetails component", () => {
-  // we will write one individual test
-  it("should render as expected", () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<TripDetails />);
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
-  });
+  describe('Has Props', ()=>{
+    let wrapper;
+    beforeEach(()=>{
+      const props = {
+        images: [
+          { alt: "hawaii", src: hawaiiTrees },
+          { alt: "hawaii", src: hawaii },
+          { alt: "eastern caribbean", src: easternCaribbean },
+          { alt: "greece", src: greece },
+          { alt: "southern caribbean", src: southernCaribbean }
+        ],
+        overview:
+          "Enjoy a week-long stay at a luxury resort! During your stay, explore the resort's amazing ammenities and events, but above all, explore the beautiful islands of Hawaii! It will be a trip for you and your family to remember forever.",
+        startDate: "Sunday, May 17, 2020",
+        endDate: "Monday, May 25, 2020",
+        location: "Resort XYZ"
+
+      };
+      wrapper = setUp(props);
+    })
+    it('Should render as expected', ()=>{
+      expect(wrapper.find('.TripDetails').length).toBe(1);
+    })
+    it('Should render Carousel Dots', ()=>{
+      expect(wrapper.find('CarouselDots').length).toBe(1);
+    })
+    it('Should render with state at imageindex:0', ()=>{
+      expect(wrapper.state('imageIndex')).toBe(0);
+    })
+  })
+  describe('Has No Props', ()=>{
+    let wrapper;
+    beforeEach(()=>{
+      const props = null;
+      wrapper = setUp(props);
+    })
+    it('Should render as expected', ()=>{
+      expect(wrapper.find('.TripDetails').length).toBe(1);
+    })
+    it('Should render Carousel Dots', ()=>{
+      expect(wrapper.find('CarouselDots').length).toBe(1);
+    })
+    it('Should render with state at imageindex:0', ()=>{
+      expect(wrapper.state('imageIndex')).toBe(0);
+    })
+  })
 });
