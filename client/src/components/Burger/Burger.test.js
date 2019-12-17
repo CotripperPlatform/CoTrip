@@ -1,16 +1,36 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import Burger from './Burger.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow, configure } from "enzyme";
+import Burger from "./Burger.js";
+import { findByTestAttribute } from "../../../../utils/utils";
 
-// We will describe a block of tests
-describe('Burger component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<Burger />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
-  })
-})
+const setUp = (props = {}) => {
+  const component = shallow(<Burger {...props} />);
+  return component;
+};
+describe("Burger component", () => {
+  let wrapper;
+  it("Should render with active true", () => {
+    const props = {
+      active: true
+    };
+    wrapper = setUp(props);
+    const component = findByTestAttribute(wrapper, ".Burger--active");
+    expect(component.length).toBe(1);
+  });
+  it("Should render with active false", () => {
+    const props = {
+      active: false
+    };
+    wrapper = setUp(props);
+    const component = findByTestAttribute(wrapper, ".Burger");
+    expect(component.length).toBe(1);
+  });
+  it("Should render without props", () => {
+    const props = {
+      active: null
+    };
+    wrapper = setUp(props);
+    const component = findByTestAttribute(wrapper, ".Burger");
+    expect(component.length).toBe(1);
+  });
+});
