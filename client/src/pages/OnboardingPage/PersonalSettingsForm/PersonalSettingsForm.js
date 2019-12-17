@@ -15,56 +15,50 @@ class PersonalSettingsForm extends Component {
     };
   }
   // NEED to add saveImage
-  saveAge = e => {
-    e.preventDefault();
+  // saveAge = e => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     age: parseInt(e.target.value)
+  //   });
+  // };
+  // saveDestination = e => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     destination: e.target.value
+  //   });
+  // };
+
+  updateValue = e => {
+    let name = e.target.name;
+    let value = e.target.value;
     this.setState({
-      age: parseInt(e.target.value)
-    });
-  };
-  saveDestination = e => {
-    e.preventDefault();
-    this.setState({
-      destination: e.target.value
+      [name]: value
     });
   };
   next = () => {
-    this.props.save(this.state);
+    this.props.save("personal", this.state);
     this.props.functionProp();
   };
   render() {
     return (
-      <div className="OnboardingPage">
-        <div className="OnboardingPage__wrapper">
-          <Logo />
-          <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
-          {/* <ProfilePicture
-            className="OnboardingParent__profile-image"
-            type="medium"
-            to="#"
-            image={Image}
-          /> */}
-          <InputTextField
-            type="text"
-            name="age"
-            placeholder="What is your age?"
-            onChange={this.saveAge}
-          />
-          <div className="OnboardingPage__spacer"></div>
-          <InputTextField
-            type="destination"
-            placeholder="What is your dream destination(s)?"
-            onChange={this.saveDestination}
-          />
-          <div className="OnboardingPage__spacer"></div>
-          <Button text="Finish" handleClick={this.next}></Button>
-          <div className="OnboardingPage__spacer"></div>
-          <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots numberOfDots={3} activeLocation={this.props.currPage} />
-          </div>
-          <Link to="/home">
-            <p>Skip</p>
-          </Link>
-        </div>
+      <div className="OnboardingPage__wrapper">
+        <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
+
+        <InputTextField
+          type="text"
+          name="age"
+          placeholder="What is your age?"
+          onChange={this.updateValue}
+        />
+        <div className="OnboardingPage__spacer"></div>
+        <InputTextField
+          type="text"
+          placeholder="What is your dream destination(s)?"
+          onChange={this.updateValue}
+        />
+        <div className="OnboardingPage__spacer"></div>
+        <Button text="Finish" handleClick={this.next}></Button>
+        {/* <div className="OnboardingPage__spacer"></div> */}
       </div>
     );
   }

@@ -68,8 +68,6 @@
     padding: 0.7rem 1.4rem;
   }
   .OnboardingPage__form {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
   }
 }

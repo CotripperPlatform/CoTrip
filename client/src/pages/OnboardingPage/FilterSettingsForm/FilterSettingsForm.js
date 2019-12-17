@@ -20,16 +20,10 @@ class FilterSettingsForm extends Component {
   // NEED to save tags
   render() {
     return (
-      <div className="OnboardingPage">
-        <div className="OnboardingPage__wrapper">
-          <Logo />
-          <h1>This is Onboarding Two</h1>
-          <div className="OnboardingPage__button-container">
-            <Button text="Next" size="small" handleClick={this.next}></Button>
-          </div>
-          <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots numberOfDots={3} activeLocation={this.props.currPage} />
-          </div>
+      <div className="OnboardingPage__wrapper">
+        <h1>This is Onboarding Two</h1>
+        <div className="OnboardingPage__button-container">
+          <Button text="Next" size="small" handleClick={this.next}></Button>
         </div>
       </div>
     );
