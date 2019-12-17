@@ -8,6 +8,8 @@ const Logo = props => {
   let classList = `Logo`;
   if (props.small) {
     classList += ` Logo--small`;
+  } else if (props.large) {
+    classList += ` Logo--large`;
   }
   if (props.clickable && props.to) {
     return (
