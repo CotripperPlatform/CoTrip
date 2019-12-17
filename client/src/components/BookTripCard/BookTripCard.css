@@ -16,6 +16,7 @@
 .BookTripCard__trip-link {
   margin: 0 auto;
   transition: transform 0.5s;
+  text-align: center;
 }
 
 .BookTripCard__trip-link a {
