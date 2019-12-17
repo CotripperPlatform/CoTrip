@@ -1,7 +1,7 @@
 .ActivityList {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
 }
 .ActivityList__header {
   font-family: var(--default-font);
@@ -11,12 +11,13 @@
 .ActivityList__activities-container {
   display: inline-block;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .ActivityList .Card {
   min-width: 6rem;
   height: 4.32rem;
-  margin: 1.5rem 1.5rem 0 0;
+  margin: 1.5rem 0.75rem 0 0.75rem;
   border-radius: 1.8px;
   padding: 0.37rem;
   font-size: 0.9rem;
@@ -24,7 +25,6 @@
   box-shadow: none;
   text-align: center;
   justify-content: center;
-  align-items: center;
 }
 .ActivityList--purple .Card {
   background-color: var(--purple);
@@ -33,48 +33,65 @@
   background-color: var(--red);
 }
 
-@media all and (min-width: 321px) and (max-width: 576px) {
+@media all and (min-width: 321px) and (max-width: 575px) {
   .ActivityList__header {
     font-size: 1.75rem;
   }
   .ActivityList .Card {
     min-width: 7rem;
     height: 5.03rem;
-    margin: 1.75rem 1.75rem 0 0;
+    margin: 1.75rem 0.875rem 0 0.875rem;
     border-radius: 2.1px;
     padding: 0.43rem;
     font-size: 1.2rem;
   }
 }
-@media all and (min-width: 577px) and (max-width: 768px) {
+@media all and (min-width: 576px) and (max-width: 767px) {
   .ActivityList__header {
     font-size: 2rem;
+  }
+  .ActivityList__activities-container {
+    max-width: 36rem;
   }
   .ActivityList .Card {
     min-width: 8rem;
     height: 5.75rem;
-    margin: 2rem 2rem 0 0;
+    margin: 2rem 1rem 0 1rem;
     border-radius: 2.4px;
     padding: 0.5rem;
     font-size: 1.2rem;
   }
 }
-@media all and (min-width: 769px) and (max-width: 992px) {
+@media all and (min-width: 768px) and (max-width: 991px) {
   .ActivityList__header {
     font-size: 2.25rem;
+  }
+  .ActivityList__activities-container {
+    max-width: 40rem;
   }
   .ActivityList .Card {
     min-width: 9rem;
     height: 6.47rem;
-    margin: 2.5rem 2.5rem 0 0;
+    margin: 2.5rem 1.25rem 0 1.25rem;
     border-radius: 2.7px;
     padding: 0.56rem;
     font-size: 1.5rem;
   }
 }
-@media all and (min-width: 993px) {
+@media all and (min-width: 992px) {
+  .ActivityList {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .ActivityList__header {
     font-size: 2.25rem;
+  }
+  .ActivityList__activities-container {
+    display: inline-block;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
   .ActivityList .Card {
     min-width: 10rem;
