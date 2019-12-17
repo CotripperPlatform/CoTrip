@@ -8,8 +8,13 @@
 }
 
 .GroupCard__text-container {
-    position: absolute;
+    /* position: absolute; */
+    text-decoration: none;
     width: 14rem;
+}
+
+p {
+    text-decoration: none;
 }
 
 .GroupCard__details {
