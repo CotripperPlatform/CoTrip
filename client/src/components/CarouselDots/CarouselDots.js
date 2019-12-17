@@ -28,7 +28,7 @@ class CarouselDots extends Component {
         <div
           key={i}
           id={i}
-          onClick={this.handleClick}
+          // onClick={this.handleClick}
           className={`CarouselDot ${
             this.props.hasOwnProperty("border") ? " CarouselDot__border " : ""
           } ${i == activeLocation ? " CarouselDot--active " : ""} `}
