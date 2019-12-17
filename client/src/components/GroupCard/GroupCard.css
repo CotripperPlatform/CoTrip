@@ -5,16 +5,12 @@
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 .GroupCard__text-container {
-    /* position: absolute; */
     text-decoration: none;
     width: 14rem;
-}
-
-p {
-    text-decoration: none;
 }
 
 .GroupCard__details {
