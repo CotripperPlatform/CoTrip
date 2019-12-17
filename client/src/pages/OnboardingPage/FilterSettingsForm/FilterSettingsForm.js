@@ -8,14 +8,14 @@ class FilterSettingsForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      city: '',
+      city: "",
       tags: []
     };
   }
   next = () => {
     this.props.save(this.state);
     this.props.functionProp();
-  }
+  };
   // NEED to add onChange to save state
   // NEED to save tags
   render() {
@@ -31,7 +31,7 @@ class FilterSettingsForm extends Component {
             <CarouselDots
               numberOfDots={3}
               activeLocation={this.props.currPage}
-              onStatusChange={this.statusChange}
+              // onStatusChange={this.statusChange}
             />
           </div>
         </div>
