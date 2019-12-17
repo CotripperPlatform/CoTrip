@@ -1,4 +1,19 @@
-
 .Bio {
+  max-width: 40rem;
+  font-family: "Reem Kufi", sans-serif;
+}
 
+.icons--div {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Bio h3,
+h2 {
+  color: #6a4c93;
+}
+
+.Bio span {
+  margin-right: 3%;
 }

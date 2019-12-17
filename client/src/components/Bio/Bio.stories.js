@@ -1,9 +1,22 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import Bio from './Bio';
+import React from "react";
+import { storiesOf } from "@storybook/react";
+import Bio from "./Bio";
 
-storiesOf('Bio', module)
-  .add("Default", () => (
-    <Bio />
-  )
-)
+let people = [
+  {
+    name: "Suzie",
+    bio:
+      "Nec et iriure utamur, per ubique mnesarchum an. At mei exerci voluptaria suscipiantur, ornatus consulatu interesset mei id. Ea possim percipit recteque his. Mea id ludus alterum apeirian, alienum dissentiet ut estLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    hashtags: ["#shred", "#the", "#pow", "#pow"]
+  },
+  { name: "Martha", bio: "sup yall" }
+];
+storiesOf("Bio", module).add("Default", () => (
+  <Bio
+    to=""
+    type="default"
+    name={people[0].name}
+    bio={people[0].bio}
+    hashtags={people[0].hashtags}
+  />
+));
