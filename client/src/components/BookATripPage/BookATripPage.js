@@ -11,8 +11,9 @@ const BookATripPage = (props) => {
   return(
     <div className="BookATripPage">
       <NavBar />
+      <div className="BookATripPage__banner">Book A Trip banner with search bar</div>
       <p className="BookATripPage__header">{props.header}</p>
-      <BookATripImage 
+      <BookATripImage className="BookATripPage__images"
         cards={[
           {"image": "hawaii", "url": "#", "description": "Hawaii May 2020"},
           {"image": "greece", "url": "#", "description": "Greece & Croatia Cruise June 2020"},
@@ -21,7 +22,9 @@ const BookATripPage = (props) => {
           {"image": "easternCaribbean", "url": "#", "description": "Eastern Caribbean Cruise New Year's 2021"}
         ]}
       />
-      <Button text="View Previous Trips" color="pink" size="large"/>
+      <div className="BookATripPage__button-container">
+        <Button text="View Previous Trips" color="pink" size="large"/>
+      </div>
       <Footer />
     </div>
   );

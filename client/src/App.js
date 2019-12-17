@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
+import BookATripPage from "./components/BookATripPage/BookATripPage";
 import "./App.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCheckSquare, faHeart, faTable, faComment, faCaretRight, faCaretLeft, faSearch, faAngleLeft, faAngleRight, faCommentDots } from '@fortawesome/free-solid-svg-icons'
@@ -15,6 +16,7 @@ class App extends Component {
       <div className='App'>
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          <Route path="/Book-A-Trip" exact component={BookATripPage}></Route>
         </main>
       </div>
     );
