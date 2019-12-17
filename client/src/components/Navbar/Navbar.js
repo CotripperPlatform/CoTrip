@@ -53,7 +53,7 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
-          <Logo clickable to="/route" />
+          <Logo clickable to="/" />
         </div>
         <div className="Navbar__burger">
           {/* Handles activating the hamburger animation and displays the menu. */}
@@ -84,7 +84,7 @@ class Navbar extends Component {
           <div className="Navbar__right">
             <Icon icon={"search"} size="2x" onClick={this.clickHandler} />
             <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.clickHandler} />
-            <ProfilePicture type="extra-small" link="#" image={this.props.profileImage} />
+            <ProfilePicture type="extra-small" to="/" image={this.props.profileImage} />
           </div>
         </div>
       </div>
