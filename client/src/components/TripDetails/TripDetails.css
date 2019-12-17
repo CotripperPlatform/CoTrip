@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: space-around;
   font-family: var(--default-font);
   width: 100%;
 }
@@ -24,7 +23,8 @@
   font-size: 2.25rem;
   margin: 0;
 }
-.TripDetails__text {
+.TripDetails__text,
+.TripDetails__dates-text {
   font-size: 1.125rem;
   margin: 0;
 }
@@ -43,10 +43,10 @@
   .TripDetails__container {
     text-align: start;
     line-height: 1.5rem;
-    margin-top: 1rem;
   }
   .TripDetails__title {
     font-size: 1.75rem;
+    margin: 1rem 0;
   }
   .TripDetails__text {
     font-size: 1.25rem;
@@ -58,4 +58,48 @@
   }
 }
 @media only screen and (min-width: 768px) {
+  .TripDetails {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+    font-family: var(--default-font);
+    min-width: 48rem;
+  }
+  .TripDetails__carousel-container {
+    width: 28rem;
+  }
+  .TripDetails__image {
+    width: 28rem;
+    height: 21rem;
+  }
+  .TripDetails__container {
+    line-height: 1.5rem;
+  }
+  .TripDetails__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  .TripDetails__text {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .TripDetails__dates-text {
+    margin: 0;
+  }
+  .TripDetails__dates-container {
+    margin-bottom: 1rem;
+  }
+  .TripDetails__dates-details {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  /* .TripDetails__location-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  } */
 }

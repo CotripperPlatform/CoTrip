@@ -44,11 +44,11 @@ class TripDetails extends Component {
           <div className="TripDetails__container TripDetails__dates-container">
             <h2 className="TripDetails__title">Dates</h2>
             <div className="TripDetails__dates-details">
-              <p className="TripDetails__text">
+              <p className="TripDetails__dates-text">
                 {this.props.startDate}
                 {" -"}
               </p>
-              <p className="TripDetails__text">{this.props.endDate}</p>
+              <p className="TripDetails__dates-text">{this.props.endDate}</p>
             </div>
           </div>
           <div className="TripDetails__container TripDetails__location-container">
