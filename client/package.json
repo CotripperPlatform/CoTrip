@@ -54,6 +54,7 @@
     "babel-loader": "^8.0.6",
     "babel-plugin-macros": "^2.7.1",
     "check-prop-types": "^1.1.2",
+    "cypress": "^3.8.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
