@@ -1,0 +1,132 @@
+.SignUpAd {
+  height: 47vh;
+  background-color: var(--yellow);
+  width: 100vw;
+  text-align: center;
+  font-family: var(--default-font);
+  letter-spacing: .1rem;
+}
+
+.SignUpAd .inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 14rem;
+  margin-top: 2rem;
+}
+
+.SignUpAd input {
+  margin: 0 5%;
+}
+
+
+.SignUpAd button {
+  margin-top: 2rem;
+  border: none;
+}
+
+.SignUpAd button:hover {
+  background-color: #df7362;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+  .SignUpAd h2 {
+    margin: 0 auto;
+  }
+
+  .SignUpAd .inputs {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .inputs input {
+    margin: 0 2rem;
+  }
+
+  .SignUpAd .inputs {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .SignUpAd h2 {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 576px) and (min-width: 321px) {
+  .SignUpAd {
+    height: 70vh;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .SignUpAd button {
+    text-align: center;
+    font-size: 20px;
+    margin: .4rem auto;
+
+  }
+
+  .SignUpAd .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+
+  .inputs input {
+    margin: .7rem auto;
+    padding: 1rem 4rem;
+    max-width: 10rem;
+    max-height: .7rem;
+
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .SignUpAd {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .SignUpAd h2 {
+    margin: 0 auto;
+    padding-top: .8rem;
+  }
+
+  .SignUpAd h3 {
+    margin: 0 auto;
+  }
+
+  .SignUpAd button {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .SignUpAd .inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .inputs input {
+    margin: .5rem auto;
+    padding: 1rem 4rem;
+    max-width: 10rem;
+
+  }
+}
