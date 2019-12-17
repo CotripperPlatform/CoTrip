@@ -145,15 +145,15 @@ const HomePage = props => {
               footerText="Posted By: --user--"
             />
             <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: --user--" />
-            <span className="HomePage__groupcard-2">
-              <MediaCard
-                imageSrc={nightSky}
-                size="medium"
-                to="/home"
-                footerText="Posted By: --user--"
-              />
-            </span>
-            <span className="HomePage__groupcard-3">
+
+            <MediaCard
+              imageSrc={nightSky}
+              size="medium"
+              to="/home"
+              footerText="Posted By: --user--"
+            />
+
+            <span className="HomePage__mediacard-hide">
               <MediaCard
                 imageSrc={waterfall}
                 size="medium"
@@ -161,7 +161,7 @@ const HomePage = props => {
                 footerText="Posted By: --user--"
               />
             </span>
-            <span className="HomePage__groupcard-3">
+            <span className="HomePage__mediacard-hide">
               <MediaCard
                 imageSrc={flight}
                 size="medium"

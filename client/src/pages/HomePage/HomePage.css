@@ -130,9 +130,6 @@
   .HomePage__top-cards-wrapper {
     display: none;
   }
-  .HomePage__groupcard-3 {
-    display: none;
-  }
 }
 
 /**
@@ -161,20 +158,21 @@
   flex-direction: column;
   justify-content: space-between;
   /* border: 1px solid brown; */
+  max-width: 100vw;
 }
 .HomePage__scrapbook-container {
   height: 25rem;
-  width: 86vw;
+  max-width: 100vw;
   margin-left: 8rem;
-  /* border: 1px solid brown; */
+  border: 1px solid brown;
 }
 .HomePage__scrapbook-cards-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 95rem;
+  max-width: 95rem;
   height: 18rem;
-  /* border: 1px solid brown; */
+  border: 1px solid brown;
   margin: 1rem 1rem 1rem 2rem;
 }
 
@@ -227,6 +225,12 @@
   }
   .HomePage__mobile-wrapper a {
     text-decoration: none;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1400px) {
+  .HomePage__mediacard-hide {
+    display: none;
   }
 }
 
