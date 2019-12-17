@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Connections from './Connections';
 import pic1 from '../../assets/images/media-card-1.png'
-import pic2 from '../../assets/images/card_profile2.png'
-import pic3 from '../../assets/images/card_profile3.png'
+import pic2 from '../../assets/images/media-card-2.png'
+import pic3 from '../../assets/images/media-card-3.png'
 
 let testUsers =
   [{
