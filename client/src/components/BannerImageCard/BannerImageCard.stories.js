@@ -5,6 +5,6 @@ import Banner__Image from "./TripBanner.png";
 
 storiesOf('BannerImageCard', module)
   .add("Default", () => (
-    <BannerImageCard background={Banner__Image}/>
+    <BannerImageCard background={Banner__Image} message="Hawaii 2020"/>
   )
 )
