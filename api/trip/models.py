@@ -1,7 +1,4 @@
-from django.contrib.postgres.fields import ArrayField
 from django.db import models
-import sys
-sys.path.append("..")
 
 
 class Trip(models.Model):
