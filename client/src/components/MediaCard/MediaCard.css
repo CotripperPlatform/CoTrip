@@ -1,9 +1,13 @@
 .MediaCard {
   text-decoration: none;
   border-radius: 3px;
-  box-shadow: 0px 5px 5px .5px rgba(0,0,0,0.65);
+  box-shadow: 0px 5px 5px 0.5px rgba(0, 0, 0, 0.65);
   display: flex;
   flex-direction: column-reverse;
+  transition: transform 0.5s;
+}
+.MediaCard:hover {
+  transform: scale(1.02);
 }
 
 .MediaCard--small {
@@ -23,7 +27,7 @@
 
 .MediaCard__footer {
   background: var(--purple);
-  opacity: .8;
+  opacity: 0.8;
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-left-radius: 0px;

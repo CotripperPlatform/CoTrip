@@ -43,7 +43,7 @@ addParameters({
   viewport: { viewports: newViewports }
 });
 
-const req = requireContext("../src/components", true, /\.stories\.js$/);
+const req = requireContext("../src/", true, /\.stories\.js$/);
 
 function loadStories() {
   req.keys().forEach(filename => req(filename));
