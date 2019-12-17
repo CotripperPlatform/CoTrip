@@ -10,12 +10,15 @@
   max-width: 330px;
   font-size: 20px;
   font-family: var(--default-font);
+<<<<<<< HEAD
   /* border: 2px solid black; */
 }
 
 .InputTextField__container--default::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   padding-left: 1rem;
+=======
+>>>>>>> develop
 }
 
 .InputTextField__container--small {
@@ -39,7 +42,7 @@
   padding: 1rem 6rem 1rem 6rem;
   font-size: 20px;
   font-family: var(--default-font);
-  background-image: url("../../../../assets/images/global-nav_search_icon.png");
+  background-image: url("../../assets/images/global-nav_search_icon.png");
   background-repeat: no-repeat;
   background-position: 15px 10px;
   -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
