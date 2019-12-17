@@ -13,16 +13,16 @@ class FileUpload extends Component {
   }
 
   handleChange(evt) {
-    this.setState({file: evt.target.files[0]}, this.props.handleFile)
+    this.setState({ file: evt.target.files[0] }, this.props.handleFile)
   }
 
   render() {
     return (
-            <div className='NewUserUpload'>
-              <p>{this.props.header}</p>
-              <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
-              <input onChange={this.handleChange} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload' ></input>
-            </div>
+      <div className="FileUpload">
+        <h1>{this.props.header}</h1>
+        <label htmlFor="inputTypeFile" className="FileUpload__label" >{this.props.buttonLabel}</label>
+        <input onChange={(evt) => this.handleChange(evt.target.files[0])} accept={this.props.fileType} type="file" id="inputTypeFile" className='FileUpload__input' ></input>
+      </div>
     )
   }
 }

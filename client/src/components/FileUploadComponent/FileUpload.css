@@ -1,4 +1,21 @@
 .FileUpload {
+  height: 233px;
+  width: 233px;
+  border: solid var(--yellow) 1px;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.FileUpload h1 {
+  margin: 4rem auto .6rem auto;
+  width: 75%;
+  font-family: var(--default-font);
+  font-size: 1.5rem;
+  font-weight: var(--title-weight);
+  color: var(--purple);
+}
+
+.FileUpload__input {
   height: .01rem;
   width: .01rem;
 }
@@ -12,21 +29,4 @@
   font-size: 15px;
   color: var(--white);
   background-color: var(--pink);
-}
-
-.NewUserUpload {
-  height: 233px;
-  width: 233px;
-  border: solid var(--yellow) 1px;
-  border-radius: 50%;
-  text-align: center;
-}
-
-.NewUserUpload p {
-  margin: 4rem auto .6rem auto;
-  width: 75%;
-  font-family: var(--default-font);
-  font-size: 1.5rem;
-  font-weight: var(--title-weight);
-  color: var(--purple);
 }
