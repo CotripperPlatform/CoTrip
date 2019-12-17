@@ -30,21 +30,22 @@ class PersonalSettingsForm extends Component {
     return (
       <div className="OnboardingPage__wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
+        <div className="OnboardingPage__form-container">
+          <InputTextField
+            type="text"
+            name="age"
+            placeholder="What is your age?"
+            onChange={this.updateValue}
+          />
 
-        <InputTextField
-          type="text"
-          name="age"
-          placeholder="What is your age?"
-          onChange={this.updateValue}
-        />
-        <div className="OnboardingPage__spacer"></div>
-        <InputTextField
-          type="text"
-          placeholder="What is your dream destination(s)?"
-          onChange={this.updateValue}
-        />
-        <div className="OnboardingPage__spacer"></div>
-        <Button text="Finish" handleClick={this.next}></Button>
+          <InputTextField
+            type="text"
+            placeholder="What is your dream destination(s)?"
+            onChange={this.updateValue}
+          />
+
+          <Button text="Finish" handleClick={this.next}></Button>
+        </div>
       </div>
     );
   }

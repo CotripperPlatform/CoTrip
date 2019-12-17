@@ -75,7 +75,7 @@ class OnboardingPage extends Component {
         <div className="OnboardingPage__wrapper">
           <div className="OnboardingPage__form">
             <div className="OnboardingPage__logo">
-              <Logo />
+              <Logo large />
             </div>
             {this.state.counter === 1
               ? pageSetup
