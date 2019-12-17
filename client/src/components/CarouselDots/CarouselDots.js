@@ -12,7 +12,7 @@ class CarouselDots extends Component {
   }
 
   handleClick = evt => {
-    let index = evt.target.id;
+    let index = parseInt(evt.target.id);
     this.setState({ activeLocation: index }, () => {
       this.props.onStatusChange(index);
     });
@@ -43,6 +43,11 @@ class CarouselDots extends Component {
       </div>
     );
   }
+}
+
+CarouselDots.defaultProps = {
+  numberOfDots: 3,
+  activeLocation: 0
 }
 
 export default CarouselDots;
