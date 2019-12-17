@@ -1,8 +1,7 @@
 from django.urls import path
 from django.conf.urls import include
-from .api import RegisterAPI, LoginAPI, UserAPI
+from .views import RegisterAPI, LoginAPI, UserAPI, ProfileList, ProfileDetail
 from knox import views as knox_views
-from .views import ProfileList, ProfileDetail
 
 urlpatterns = [
     path('auth', include('knox.urls')),
