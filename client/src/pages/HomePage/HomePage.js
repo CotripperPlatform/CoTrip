@@ -23,6 +23,12 @@ import TrendingHashtagCard from "../../components/TrendingHashtagCard/TrendingHa
 import BookTripCard from "../../components/BookTripCard/BookTripCard";
 import TripCard from "../../components/TripCard/TripCard";
 import MediaCard from "../../components/MediaCard/MediaCard";
+import SignUp from "components/SignUpAd/SignUpAd";
+
+const handleClick = e => {
+  e.preventDefault();
+  console.log("clicked");
+};
 
 const HomePage = props => {
   return (
@@ -164,9 +170,10 @@ const HomePage = props => {
       </div>
 
       <footer className="HomePage__footer-wrapper">
-        <div className="placeholder-footer-block">
-          <h1>Bottom footer component</h1>
-        </div>
+        <SignUp onClick={handleClick}>
+          <h2>Never Miss a Trip</h2>
+          <h3>Sign up with your email address to recieve news and updates</h3>
+        </SignUp>
         <Footer />
       </footer>
     </body>
