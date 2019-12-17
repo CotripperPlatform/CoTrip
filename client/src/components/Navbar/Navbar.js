@@ -31,13 +31,9 @@ class Navbar extends Component {
   // Handles activating the hamburger animation and displays the menu.
   handleCondensedMenuClick = () => {
     this.setState({ condensedMenuActive: !this.state.condensedMenuActive })
-    if (this.state.condensedMenuActive === false) {
-      this.setState({ condensedMenu: "Navbar__show" });
-      this.setState({ pageMark: ["", "", "", ""] });
-    } else {
-      this.setState({ condensedMenu: "" });
-      this.setPageMarker();
-    }
+    this.state.condensedMenuActive === false ? 
+    this.setState({ condensedMenu: "Navbar__show", pageMark: ["", "", "", ""] }): 
+    this.setState({ condensedMenu: "" })
   }
 
   // Sets the location of the triangle on the menu.
