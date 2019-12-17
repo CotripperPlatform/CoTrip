@@ -31,6 +31,17 @@ class UserSerializer(serializers.ModelSerializer):
         for key in profile_keys_dictionary: # loops through each key for the profile_data dictionary
             profile[key] = profile_data[key] # assigns the specific key of the new profile to the inputed data at that key
         return user
+    
+    def update(self, instance, validated_data):
+        profile_data = validated_data.pop("profile") # removes and stores profile data
+        instance.email = validated_data.get("email", instance.email) # updates email, if no email given then remains the same
+        instance.save() # saves the object
+        profile_keys = profile_data.keys() # retrieves the dictionary keys of profile
+        
+        for key in profile_keys: # loops through profile keys
+            instance.profile[key] = profile_data.get(f"{key}", instance.profile[key]) # sets each key of the instance's profile to its respective value in profile data. if there is no new value then it is not changed
+        instance.save() # saves object
+        return instance
             
 
 class RegisterSerializer(serializers.ModelSerializer):
