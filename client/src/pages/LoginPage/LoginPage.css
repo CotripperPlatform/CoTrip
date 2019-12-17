@@ -16,7 +16,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -26,14 +26,15 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 75%;
+    width: 55%;
     height: 100%;
     box-sizing: border-box;
 }
 
 .LoginPageLogo {
-    height: 240px;
-    width: 240px;
+    margin: 0 auto;
+    height: 10em;
+    width: 10em;
     box-sizing: border-box;
 }
 
@@ -42,4 +43,33 @@
     margin: 0;
     font-family: var(--default-font);
     box-sizing: border-box;
+}
+
+.LoginPage button {
+    margin: 1rem auto 0 auto;
+    width: 236px;
+    height: 51px;
+  }
+
+@media only screen and (min-width: 576px) {
+
+    .LoginPageMain {
+        padding-top: 10em;
+    }
+
+    .LoginPageLogo {
+        position: absolute;
+        width: 30vh;
+        height: 30vh;
+        top: 8%;
+        left: calc(50% - 15vh);
+    }
+
+    .LoginPage button {
+        width: 302px;
+        height: 65px;
+        font-size: 36px;
+        padding: 0;
+        margin-top: 2.5rem;
+      }
 }
