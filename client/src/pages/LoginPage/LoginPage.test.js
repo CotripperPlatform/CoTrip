@@ -1,6 +1,6 @@
 import React from 'react'
 import { shallow, configure } from 'enzyme'
-import LoginPage from './LoginPage.js'
+import LoginPage from './LoginPage.js.js'
 import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
 

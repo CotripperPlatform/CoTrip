@@ -1,0 +1,45 @@
+
+.LoginPageMain {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background: var(--yellow-gradient);
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPageFormContainer {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPageForm {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 75%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.LoginPageLogo {
+    height: 240px;
+    width: 240px;
+    box-sizing: border-box;
+}
+
+.LoginPageForgotPass {
+    text-align: center;
+    margin: 0;
+    font-family: var(--default-font);
+    box-sizing: border-box;
+}
