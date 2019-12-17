@@ -1,7 +1,7 @@
 .PersonCard {
     background: var(--white);
-    width: 13.5rem;
-    height: 17.5rem;
+    width: 13rem;
+    height: 17rem;
     font-family: var(--paragraph-font);
     color: var(--black);
     border: 1px solid var(--yellow);
@@ -10,38 +10,38 @@
 }
 
 .PersonCard__image {
+<<<<<<< HEAD:client/src/components/PersonCard/PersonCard.css
    display: flex;
    justify-content: center;
    margin-left: .4em;
    margin-top: .4em;
+=======
+   display: flexbox;
+
+>>>>>>> parent of aae6ed0... CSS MAYBE DONE?:client/src/components/PersonCard/personcard.css
 }
 
 .PersonCard__name {
-    display: flex;
     font-family: var(--default-font);
     font-weight: var(--banner-weight);
-    justify-content: center;
-    font-size: 1.8em;
+    line-height: 100%;
+    text-align: center;
 }
 
 .PersonCard__location {
-    display: flex;
-    justify-content: center;
     font-family: var(--default-font);
     font-weight: var(--title-weight);
+    text-align: center;
     color: var(--black);
-    font-size: 1em; 
-    margin-top: -.2em;
 }
 
 
 .PersonCard__interests {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    text-align: center;
     font-family: var(--default-font);
     text-decoration: none;
+<<<<<<< HEAD:client/src/components/PersonCard/PersonCard.css
     font-size: 1em;
 
 }
@@ -50,3 +50,6 @@
     text-decoration: none;
     color: var(--black);
 }
+=======
+}
+>>>>>>> parent of aae6ed0... CSS MAYBE DONE?:client/src/components/PersonCard/personcard.css
