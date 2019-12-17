@@ -1,7 +1,29 @@
-from django.shortcuts import render
-from .models import Topic
+from rest_framework import generics, permissions
+from .serializers import CitySerializer, TopicSerializer
+from .models import City, Topic
+from django.views.generic import ListView, DetailView
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
-# Create your views here.
-def topic_list(request):
-    topics = Topic.objects.all()
-    return render(request, 'cotrip/topics/html', {'topics': topics})
+
+class CityList(generics.ListCreateAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+    # permission_classes = (permissions.IsAuthenticated)
+
+
+class CityDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = City.objects.all()
+    serializer_class = CitySerializer
+    # permission_classes = (permissions.IsAuthenticated)
+
+
+class TopicList(generics.ListCreateAPIView):
+    queryset = Topic.objects.all()
+    serializer_class = TopicSerializer
+    # permission_classes = (permissions.IsAuthenticated)
+
+
+class TopicDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Topic.objects.all()
+    serializer_class = TopicSerializer
+    # permission_classes = (permissions.IsAuthenticated)
