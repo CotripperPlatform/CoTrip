@@ -9,6 +9,11 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = '__all__'
+        extra_kwargs = {
+            'id': {'read_only': False, 'required': True},
+            'slug': {'validators': []},
+        }
+        # fields = ("image", "first_name", "last_name", "city_of_residence", "age", "dream_destination", "bio", "instagram_url", "pinterest_url", "facebook_url")
 
 class UserSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer()
@@ -16,6 +21,20 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ('id', 'email', 'profile')
+        depth = 1
+    
+    def update(self, instance, validated_data):
+        instance.email = validated_data.get('email', instance.email)
+        instance.save()
+
+        profile_update = validated_data.get('profile')
+        profile_instance = profile.objects.get(user=instance)
+        
+        inv_item.name = item.get('name', inv_item.name)
+        inv_item.price = item.get('price', inv_item.price)
+        inv_item.save()
+
+        return instance
 
 
 class RegisterSerializer(serializers.ModelSerializer):
