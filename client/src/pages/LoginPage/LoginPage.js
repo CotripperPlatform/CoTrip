@@ -1,36 +1,34 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Button from "../../components/Button/Button";
-//import Logo from "../Logo/Logo";
+import Logo from "../../components/Logo/Logo";
 import "./LoginPage.css";
-import LogoImg from "../../assets/images/login_logo.png";
-import { faDivide } from '@fortawesome/free-solid-svg-icons';
 
-const LoginPage = (props) => {
-  
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function handleSubmit() {
-    console.log(email, password);
+export default class LoginPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {email: "", password: ""}
   }
 
-  return(
-    <div className="LoginPageMain">
-      <img className="LoginPageLogo" src={LogoImg} alt="CoTripper"></img>
-      <div className="LoginPageFormContainer">
-        <form className="LoginPageForm" onSubmit={handleSubmit}>
-          <InputTextField name="email" placeholder="Email" value={email}
-              onChange={e => setEmail(e.target.value)}/>
-          <InputTextField name="password" placeholder="Password" value={password}
-              onChange={e => setPassword(e.target.value)}/>
-          <p className="LoginPageForgotPass">Forgot your password?</p>
-          <p className="LoginPageForgotPass">Need an account?</p>
-          <Button text="Login" handleClick={handleSubmit}/>
-        </form>
-      </div>
-    </div>
-  );
-}
+  handleChange = (e) => {
+    this.setState({[e.target.name]: e.target.value});
+    console.log(this.state);
+  }
 
-export default LoginPage;
+  render() {
+    return(
+      <div className="LoginPage">
+        <Logo large />
+        <div className="LoginPage__form-container">
+          <form className="LoginPage__form" onSubmit={e => this.props.handleLogin(e, this.state)}>
+            <InputTextField name="email" placeholder="Email" value={this.state.email}
+                onChange={this.handleChange}/>
+            <InputTextField name="password" placeholder="Password"
+                onChange={this.handleChange} value = {this.state.password}/>
+            <Button text="Login" type="submit"/>
+          </form>
+        </div>
+      </div>
+    );
+  }
+}

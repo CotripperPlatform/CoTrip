@@ -1,5 +1,5 @@
 
-.LoginPageMain {
+.LoginPage {
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.LoginPageFormContainer {
+.LoginPage__form-container {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
     align-items: center;
 }
 
-.LoginPageForm {
+.LoginPage__form {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -31,19 +31,6 @@
     box-sizing: border-box;
 }
 
-.LoginPageLogo {
-    margin: 0 auto;
-    height: 10em;
-    width: 10em;
-    box-sizing: border-box;
-}
-
-.LoginPageForgotPass {
-    text-align: center;
-    margin: 0;
-    font-family: var(--default-font);
-    box-sizing: border-box;
-}
 
 .LoginPage button {
     margin: 1rem auto 0 auto;
@@ -53,17 +40,6 @@
 
 @media only screen and (min-width: 576px) {
 
-    .LoginPageMain {
-        padding-top: 10em;
-    }
-
-    .LoginPageLogo {
-        position: absolute;
-        width: 30vh;
-        height: 30vh;
-        top: 8%;
-        left: calc(50% - 15vh);
-    }
 
     .LoginPage button {
         width: 302px;

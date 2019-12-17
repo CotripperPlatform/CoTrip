@@ -8,7 +8,7 @@ const Logo = props => {
   let classList = `Logo`;
   if (props.small) {
     classList += ` Logo--small`;
-  }
+  } 
   if (props.clickable && props.to) {
     return (
       <div className={classList}>
