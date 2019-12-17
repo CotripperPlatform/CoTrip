@@ -81,41 +81,17 @@
 
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
-  
-}
-
-/* Extra Large devices */
-@media only screen and (max-width: 1200px) {
-
-}
-
-/* Large devices */
-@media only screen and (max-width: 992px) {
+  .Navbar__burger {
+    display: block;
+  }
   .Navbar__main {
     display: none;
     justify-content: center;
     align-items: center;
     margin: 0;
   }
-
-  .Navbar__burger {
-    display: block;
-  }
-
   .Navbar__logo {
-    margin: 0 0 0 47%;
-  }
-}
-
-/* Medium devices */
-@media only screen and (max-width: 768px) {
-  
-}
-
-/* Small devices */
-@media only screen and (max-width: 576px) {
-  .Navbar__logo {
-    margin: 0 0 0 44%;
+    margin: 0 0 0 40%;
   }
   .Navbar {
     height: 75px;
@@ -125,8 +101,38 @@
   }
 }
 
-@media only screen and (max-width: 350px) {
+@media (hover: none) and (pointer: coarse) and (max-width: 768px) {
   .Navbar__logo {
-    margin: 0 0 0 40%;
+    margin: 0 0 0 44%;
   }
+}
+
+@media (hover: none) and (pointer: coarse) and (max-width: 1024px) {
+  .Navbar__logo {
+    margin: 0 0 0 47%;
+  }
+}
+
+/* Extra Large devices */
+@media only screen and (max-width: 1200px) {
+
+}
+
+/* Large devices */
+@media only screen and (max-width: 992px) {
+  
+}
+
+/* Medium devices */
+@media only screen and (max-width: 768px) {
+  
+}
+
+/* Small devices */
+@media only screen and (max-width: 576px) {
+  
+}
+
+@media only screen and (max-width: 350px) {
+  
 }
