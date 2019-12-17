@@ -9,11 +9,11 @@ const GroupCard = (props) => {
     <Card color="pink" size="medium" picture={picture}>
       <Link className="GroupCard" to="#">
         <div className="GroupCard__text-container">
-          <p className="GroupCard__group-name">{name}</p>
-          <div className="GroupCard__details">
+          <h2 className="GroupCard__group-name">{name}</h2>
+          <footer className="GroupCard__details">
             <p className="GroupCard__members">{members} members</p>
             <p className="GroupCard__location">{location}</p>
-          </div>
+          </footer>
         </div>
       </Link>
     </Card>
