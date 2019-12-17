@@ -1,0 +1,30 @@
+.TripCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+}
+
+.TripCard__date,
+.TripCard__location {
+  font-family: var(--default-font);
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+
+.TripCard__date {
+  color: var(--gray-lite);
+  margin-bottom: 0.7rem;
+  margin-top: 1.5rem;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.TripCard__location {
+  color: var(--white);
+  font-size: 24px;
+  line-height: 36px;
+  margin: 0 0;
+}

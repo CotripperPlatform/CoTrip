@@ -62,3 +62,56 @@ To generate a **class** component, run the following
 ```sh
 hygen component-class new --name NameOfComponent
 ```
+
+#### Using the `Icon` Component
+
+To use the `Icon` component, first import it, then render it inside your
+component, passing in a string representing the icon you'd like to render for
+the `icon` prop.
+
+```jsx
+import Icon from '../Icon/Icon'
+
+
+function HelloIcon = props => {
+    return (
+        <h3>Hello <Icon icon={"heart"}/></h3>
+    )
+}
+```
+
+You can find the list of icons on the [Font Awesome
+website](https://fontawesome.com/). Note that you only need to pass in the
+icon's name for the `icon` prop.
+
+#### CSS Class Names
+
+- To avoid style conflicts we want to make sure all our CSS selectors are unique.
+- This will be the naming convention, based on [BEM](https://css-tricks.com/bem-101/).
+
+```
+.ComponentName
+.ComponentName--modifier
+.ComponentName__element-name
+.ComponentName__element-name--modifier
+```
+
+For example:
+
+```
+.CommentBody {
+  color: var(--green);
+}
+
+.Logo--small {
+  height: 10rem;
+}
+
+.CommentBody__date {
+  font-size: 2rem;
+}
+
+.CommentBody__main--small {
+  font-size: 1rem;
+}
+```
