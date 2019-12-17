@@ -12,6 +12,11 @@
   /* border: 2px solid black; */
 }
 
+.InputTextField__container--default::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  padding-left: 1rem;
+}
+
 .InputTextField__container--small {
   color: black;
   background-color: var(--white);
