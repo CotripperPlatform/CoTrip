@@ -48,7 +48,7 @@
 .HomePage__suggestions-container {
   height: 50rem;
   width: 60rem;
-  border: 5px solid blue;
+  /* border: 5px solid blue; */
   margin-left: 8rem;
 }
 .HomePage__suggested-header {
@@ -120,7 +120,7 @@
 .HomePage__top-cards-wrapper {
   height: 50rem;
   width: 50rem;
-  border: 5px solid green;
+  /* border: 5px solid green; */
   margin-right: 4rem;
 }
 .HomePage__cards-container {
@@ -129,12 +129,15 @@
   justify-content: space-between;
   height: 35rem;
   width: 33rem;
-  border: 3px solid goldenrod;
+  /* border: 3px solid goldenrod; */
   margin: 1rem;
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
   .HomePage__top-cards-wrapper {
+    display: none;
+  }
+  .HomePage__groupcard-3 {
     display: none;
   }
 }
@@ -218,7 +221,7 @@
     display: none;
   }
   .placeholder-welcome {
-    height: 6rem;
+    height: 12rem;
   }
 
   .HomePage__mobile-wrapper {
