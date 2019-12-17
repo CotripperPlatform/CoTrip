@@ -1,19 +1,15 @@
-.BookATripPage__header{
-    font-family: var(--default-font);
-    font-size: 36px;
-    color: var(--purple);
-    padding: 20px 50px 0px 50px;
-    margin: 0 auto;
-}
-
 .BookATripPage__banner {
     width: 100vw;
     height: 231px;
     background-color: var(--pink);
 }
 
-.BookATripPage__images {
-    background-color: red;
+.BookATripPage__header{
+    font-family: var(--default-font);
+    font-size: 36px;
+    color: var(--purple);
+    padding: 20px 50px 0px 50px;
+    margin: 0 auto;
 }
 
 .BookATripPage__button-container {

@@ -3,6 +3,8 @@ import "./BookATripPage.css";
 import NavBar from "../Navbar/Navbar";
 import BookATripImage from "../BookATripImage/BookATripImage";
 import Banner from "../Banner/Banner";
+import InputTextField from "../InputTextField/InputTextField";
+import Banner__pink from "../Banner/Banner__pink.png";
 import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
 
@@ -11,8 +13,11 @@ const BookATripPage = (props) => {
   return(
     <div className="BookATripPage">
       <NavBar />
-      <div className="BookATripPage__banner">Book A Trip banner with search bar</div>
-      <p className="BookATripPage__header">{props.header}</p>
+      <Banner background={Banner__pink}>
+        <h3 style={{margin: 0}}>Book a Trip</h3>
+        <InputTextField type="text" variation="search" name="search directory" placeholder="Search Trip"/>
+      </Banner>
+      {/* <p className="BookATripPage__header">{props.header}</p> */}
       <BookATripImage className="BookATripPage__images"
         cards={[
           {"image": "hawaii", "url": "#", "description": "Hawaii May 2020"},
