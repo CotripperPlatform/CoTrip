@@ -9,6 +9,7 @@ import van from "assets/images/media-card-3.png";
 import nightSky from "assets/images/media-card-4.png";
 import waterfall from "assets/images/media-card-5.png";
 import flight from "assets/images/media-card-6.png";
+import Banner__purpleBig from "components/Banner/Banner__purple--big.png";
 
 import people from "assets/images/add-friend.png";
 import airplane from "assets/images/airplane-shape.png";
@@ -24,6 +25,7 @@ import BookTripCard from "../../components/BookTripCard/BookTripCard";
 import TripCard from "../../components/TripCard/TripCard";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import SignUp from "components/SignUpAd/SignUpAd";
+import Banner from "components/Banner/Banner";
 
 const handleClick = e => {
   e.preventDefault();
@@ -37,7 +39,9 @@ const HomePage = props => {
         <NavBar></NavBar>
       </nav>
       <div className="HomePage__content">
-        <div className="placeholder-welcome">Welcome User</div>
+        <Banner background={Banner__purpleBig}>
+          <h1>Welcome, Justine!</h1>
+        </Banner>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
