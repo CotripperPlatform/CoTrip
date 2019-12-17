@@ -28,14 +28,6 @@ class Navbar extends Component {
     };
   }
 
-  // Handles activating the hamburger animation and displays the menu.
-  handleCondensedMenuClick = () => {
-    this.setState({ condensedMenuActive: !this.state.condensedMenuActive })
-    this.state.condensedMenuActive === false ? 
-    this.setState({ condensedMenu: "Navbar__show", pageMark: ["", "", "", ""] }): 
-    this.setState({ condensedMenu: "" })
-  }
-
   // Sets the location of the triangle on the menu.
   setPageMarker = () => {
     let setPage = [];
@@ -64,7 +56,16 @@ class Navbar extends Component {
           <Logo clickable to="/route" />
         </div>
         <div className="Navbar__burger">
-          <Burger onClick={this.handleCondensedMenuClick} active={this.state.condensedMenuActive} />
+          {/* Handles activating the hamburger animation and displays the menu. */}
+          <Burger
+            onClick={() => {
+              this.setState({ condensedMenuActive: !this.state.condensedMenuActive });
+              this.state.condensedMenuActive === false
+                ? this.setState({ condensedMenu: "Navbar__show", pageMark: ["", "", "", ""] })
+                : this.setState({ condensedMenu: "" });
+            }}
+            active={this.state.condensedMenuActive}
+          />
         </div>
         <div className={`Navbar__main ${this.state.condensedMenu}`}>
           <div className="Navbar__menu">
