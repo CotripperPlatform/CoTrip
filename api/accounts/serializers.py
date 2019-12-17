@@ -24,13 +24,12 @@ class UserSerializer(serializers.ModelSerializer):
         depth = 1
     
     def create(self, validated_data):
-        profile_data = validated_data.pop("profile")
-        user = CustomUser.objects.create(**validated_data)
-        # profile_data.keys()
-        profile_keys_dictionary = profile_data.keys()
-        profile = Profile.objects.create(user=user)
-        for key in profile_keys_dictionary:
-            profile[key] = profile_data[key]
+        profile_data = validated_data.pop("profile") # removes and stores the profile data from the inputed, validated data
+        user = CustomUser.objects.create(**validated_data) # creates the new CustomUser object
+        profile_keys_dictionary = profile_data.keys() # stores a list with all the keys of the profile_data dictionary
+        profile = Profile.objects.create(user=user) # creates a new Profile object assigned to the new user
+        for key in profile_keys_dictionary: # loops through each key for the profile_data dictionary
+            profile[key] = profile_data[key] # assigns the specific key of the new profile to the inputed data at that key
         return user
             
 
