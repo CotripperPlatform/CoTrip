@@ -4,7 +4,7 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import Logo from "components/Logo/Logo.js";
 import CarouselDots from "components/CarouselDots/CarouselDots";
-
+import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 class PersonalSettingsForm extends Component {
   constructor(props) {
     super(props);
