@@ -1,28 +1,23 @@
 .Banner{
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
   margin: 0 auto;
   width: 100%;
   width: 100vw;
-  height: 231px;
+  min-height: 230px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
   font-family: var(--default-font);  
   font-size: 48px;
-  font-style: normal;
-  font-weight: normal;
   color: #FAFAFA;
   line-height: 72px;
 }
 
-.Banner__header3{
-  margin: 10px auto;
-}
-
-.Banner .InputTextField__container--search{
-  margin: 0 auto;
-}
 
 
 
