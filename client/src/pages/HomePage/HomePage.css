@@ -15,17 +15,6 @@
   margin-top: auto;
 }
 
-.placeholder-welcome {
-  text-align: center;
-  width: 100vw;
-  height: 23rem;
-  background-color: var(--purple);
-  margin-bottom: 3rem;
-  -webkit-box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.45);
-  box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.45);
-}
-
 /**
 |--------------------------------------------------
 | These contents are the top items on the page:
@@ -46,11 +35,14 @@
 }
 
 .HomePage__suggestions-container {
+  opacity: 0;
   height: 50rem;
   width: 60rem;
   /* border: 5px solid blue; */
   margin-left: 8rem;
+  animation: slide-up 0.9s ease forwards;
 }
+
 .HomePage__suggested-header {
   font-family: var(--default-font);
   color: var(--purple);
@@ -122,6 +114,7 @@
   width: 50rem;
   /* border: 5px solid green; */
   margin-right: 4rem;
+  animation: slide-up 0.7s ease forwards;
 }
 .HomePage__cards-container {
   display: flex;
@@ -242,3 +235,19 @@
 | Media Queries
 |--------------------------------------------------
 */
+
+/**
+|--------------------------------------------------
+| Animations
+|--------------------------------------------------
+*/
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    margin-top: 10%;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0%;
+  }
+}
