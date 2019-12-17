@@ -2,14 +2,18 @@ import React from "react";
 import "./HomePage.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import example1 from "../../assets/images/card_small2.png";
-import example2 from "../../assets/images/Hawaii-resort.jpg";
-import people from "../../assets/images/add-friend.png";
-import happiness from "../../assets/images/media-card-2.png";
-import van from "../../assets/images/media-card-3.png";
-import nightSky from "../../assets/images/media-card-4.png";
-import waterfall from "../../assets/images/media-card-5.png";
-import flight from "../../assets/images/media-card-6.png";
+import example1 from "assets/images/card_small2.png";
+import example2 from "assets/images/Hawaii-resort.jpg";
+import happiness from "assets/images/media-card-2.png";
+import van from "assets/images/media-card-3.png";
+import nightSky from "assets/images/media-card-4.png";
+import waterfall from "assets/images/media-card-5.png";
+import flight from "assets/images/media-card-6.png";
+
+import people from "assets/images/add-friend.png";
+import airplane from "assets/images/airplane-shape.png";
+import groups from "assets/images/protest.png";
+import hashtags from "assets/images/trending-hashtags.png";
 
 import NavBar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
@@ -93,12 +97,12 @@ const HomePage = props => {
 
         <div className="HomePage__mobile-wrapper">
           <Link to="/">
-            <Card color="yellow" size="mobile" picture={people}>
+            <Card color="yellow" size="mobile" picture={groups}>
               <h2>Suggested Groups</h2>
             </Card>
           </Link>
           <Link to="/">
-            <Card color="pink" size="mobile" picture={people}>
+            <Card color="pink" size="mobile" picture={airplane}>
               <div>
                 <h2>Book a Trip</h2>
               </div>
@@ -112,7 +116,7 @@ const HomePage = props => {
             </Card>
           </Link>
           <Link to="/">
-            <Card color="purple" size="mobile" picture={people}>
+            <Card color="purple" size="mobile" picture={hashtags}>
               <div>
                 <h2>Trending Hashtags</h2>
               </div>
