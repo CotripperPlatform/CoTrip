@@ -1,0 +1,21 @@
+
+.Groups {
+  width: 70vw;
+}
+.Groups__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Groups h1 {
+  font-family: var(--default-font);
+  color: var(--purple);
+}
+
+.Groups__list__link {
+  color: var(--blue-lite);
+  font-size: 1rem;
+  font-family: var(--default-font);
+  font-weight: normal;
+  margin: auto 0;
+}
