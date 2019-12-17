@@ -5,7 +5,7 @@ import Card from "../Card/Card";
 
 const GroupCard = (props) => {
   let { picture, name, members, location } = props;
-  return(
+  return (
     <Card color="pink" size="medium" picture={picture}>
       <Link className="GroupCard" to="#">
         <div className="GroupCard__text-container">
