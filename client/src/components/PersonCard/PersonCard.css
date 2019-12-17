@@ -10,15 +10,10 @@
 }
 
 .PersonCard__image {
-<<<<<<< HEAD:client/src/components/PersonCard/PersonCard.css
    display: flex;
    justify-content: center;
    margin-left: .4em;
    margin-top: .4em;
-=======
-   display: flexbox;
-
->>>>>>> parent of aae6ed0... CSS MAYBE DONE?:client/src/components/PersonCard/personcard.css
 }
 
 .PersonCard__name {
@@ -26,6 +21,7 @@
     font-weight: var(--banner-weight);
     line-height: 100%;
     text-align: center;
+    font-size: 1.8em;
 }
 
 .PersonCard__location {
@@ -41,7 +37,6 @@
     text-align: center;
     font-family: var(--default-font);
     text-decoration: none;
-<<<<<<< HEAD:client/src/components/PersonCard/PersonCard.css
     font-size: 1em;
 
 }
@@ -50,6 +45,3 @@
     text-decoration: none;
     color: var(--black);
 }
-=======
-}
->>>>>>> parent of aae6ed0... CSS MAYBE DONE?:client/src/components/PersonCard/personcard.css
