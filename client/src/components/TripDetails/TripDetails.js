@@ -37,11 +37,11 @@ class TripDetails extends Component {
           </div>
         </div>
         <div className="TripDetails__right">
-          <div className="TripDetails__overview-container">
+          <div className="TripDetails__container TripDetails__overview-container">
             <h2 className="TripDetails__title">Overview</h2>
             <p className="TripDetails__text">{this.props.overview}</p>
           </div>
-          <div className="TripDetails__dates-container">
+          <div className="TripDetails__container TripDetails__dates-container">
             <h2 className="TripDetails__title">Dates</h2>
             <div className="TripDetails__dates-details">
               <p className="TripDetails__text">
@@ -51,7 +51,7 @@ class TripDetails extends Component {
               <p className="TripDetails__text">{this.props.endDate}</p>
             </div>
           </div>
-          <div className="TripDetails__location-container">
+          <div className="TripDetails__container TripDetails__location-container">
             <h2 className="TripDetails__title">Location</h2>
             <p className="TripDetails__text">{this.props.location}</p>
           </div>

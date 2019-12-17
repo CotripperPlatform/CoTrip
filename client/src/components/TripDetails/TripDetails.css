@@ -45,31 +45,34 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 24rem;
+    width: 36rem;
   }
   .TripDetails__image {
-    width: 24rem;
-    height: 18rem;
+    width: 36rem;
+    height: 27rem;
   }
   .TripDetails__right {
     display: flex;
     flex-direction: column;
     text-align: start;
-    width: 24rem;
+    width: 36rem;
   }
-  .TripDetails__overview-container,
-  .TripDetails__dates-container,
-  .TripDetails__location-container {
+  .TripDetails__container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 1rem 0;
+    flex-direction: column;
+    text-align: start;
+    line-height: 1.5rem;
+    margin-top: 1rem;
   }
-  .TripDetails__location-container .TripDetails__title {
-    line-height: 0.5;
+  .TripDetails__title {
+    font-size: 1.75rem;
   }
   .TripDetails__text {
+    font-size: 1.25rem;
+    margin: 1rem 0 0 0.1rem;
+  }
+  .TripDetails__dates-details {
     display: flex;
-    text-align: end;
+    flex-direction: row;
   }
 }
