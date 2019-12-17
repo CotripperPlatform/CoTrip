@@ -15,10 +15,10 @@ const SplashPage = () => {
   return (
     <div className='SplashPage'>
       <img src={logo} alt='CoTripper Logo'/>
-      <h1>CoTripper</h1>
-      <p>Book trips, meet moms, and experience family travel together!</p>
-      <Button text="Login" handleClick={toLogin} />
-      <Button text="Register" color="purple" handleClick={toRegister} />
+      <h1 data-cy="title">CoTripper</h1>
+      <p data-cy="body" >Book trips, meet moms, and experience family travel together!</p>
+      <Button data-cy="btn1" text="Login" handleClick={toLogin} />
+      <Button data-cy="btn2"text="Register" color="purple" handleClick={toRegister} />
     </div>
   );
 }
