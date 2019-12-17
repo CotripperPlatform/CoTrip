@@ -2,7 +2,7 @@ import React from 'react';
 import "./BookATripPage.css";
 import NavBar from "../Navbar/Navbar";
 import BookATripImage from "../BookATripImage/BookATripImage";
-// import Banner from "../Banner/Banner";
+import Banner from "../Banner/Banner";
 import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
 
