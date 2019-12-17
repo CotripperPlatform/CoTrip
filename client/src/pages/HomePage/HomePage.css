@@ -164,7 +164,7 @@
   height: 25rem;
   max-width: 100vw;
   margin-left: 8rem;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
 }
 .HomePage__scrapbook-cards-container {
   display: flex;
@@ -172,7 +172,7 @@
   justify-content: space-around;
   max-width: 95rem;
   height: 18rem;
-  border: 1px solid brown;
+  /* border: 1px solid brown; */
   margin: 1rem 1rem 1rem 2rem;
 }
 
