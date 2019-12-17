@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import GroupCard from './GroupCard';
+import picture from "../../assets/images/card_small1.png";
 
 storiesOf('GroupCard', module)
   .add("Default", () => <GroupCard
@@ -12,5 +13,5 @@ storiesOf('GroupCard', module)
     name="DIY with your kids"
     members="98"
     location="Boston, MA"
-    picture="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
+    picture={picture}
   />)
