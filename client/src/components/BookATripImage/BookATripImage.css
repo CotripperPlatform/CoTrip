@@ -1,8 +1,7 @@
 .BookATripImage__image-group{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 3rem 0rem;
+    justify-content: flex-start;
 }
 
 .BookATripImage__image-container{
@@ -12,8 +11,8 @@
 }
 
 .BookATripImage__image {
-    height: 25rem;
-    width: 25rem;
+    height: 40rem;
+    width: 40rem;
     padding: 3rem 2rem 2rem 2rem;
 }
 .BookATripImage__link {
