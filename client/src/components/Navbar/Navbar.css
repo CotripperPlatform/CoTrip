@@ -7,7 +7,6 @@
     background-color: var(--yellow);
     font-family: var(--default-font);
     box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    position: relative;
     z-index: auto;
 }
 
@@ -43,18 +42,8 @@
 .Navbar__burger {
   margin: 0 20px;
   display: none;
-}
-
-.Navbar__condensed-menu {
-  display: none;
-  box-shadow: 0 4px 10px -5px var(--gray);
   position: absolute;
   right: 0;
-  background-color: var(--white);
-  margin-top: 35px;
-  padding: 20px 0 0 20px;
-  width: 250px;
-  z-index: -1;
 }
 
 .Navbar__triangle {
@@ -71,46 +60,13 @@
   margin: 0 15px;
 }
 
-.Navbar__show {
-  display: block;
-}
-
 .Navbar__burger, .Navbar__right, .Navbar__logo {
   cursor: pointer;
 }
 
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
-  .Navbar__burger {
-    display: block;
-  }
-  .Navbar__main {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  .Navbar__logo {
-    margin: 0 0 0 40%;
-  }
-  .Navbar {
-    height: 75px;
-  }
-  .Navbar__condensed-menu {
-    margin-top: 10px;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) and (max-width: 768px) {
-  .Navbar__logo {
-    margin: 0 0 0 44%;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) and (max-width: 1024px) {
-  .Navbar__logo {
-    margin: 0 0 0 47%;
-  }
+  
 }
 
 /* Extra Large devices */
@@ -120,7 +76,40 @@
 
 /* Large devices */
 @media only screen and (max-width: 992px) {
-  
+  .Navbar__main {
+    position: relative;
+    top: 92px;
+    display: none;
+    margin: 0;
+    z-index: -1;
+    width: 250px;
+  }
+
+  .Navbar__menu {
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 20px 0 0 0;
+  }
+
+  .Navbar__right {
+    margin: 0;
+    width: 100%;
+    background-color: var(--white);
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+  }
+
+  .Navbar__triangle {
+    visibility: hidden;
+  }
+
+  .Navbar__burger {
+    display: block;
+  }
+
+  .Navbar__logo {
+    margin: 0 0 0 47%;
+  }
 }
 
 /* Medium devices */
@@ -130,9 +119,37 @@
 
 /* Small devices */
 @media only screen and (max-width: 576px) {
-  
+  .Navbar__logo {
+    margin: 0 0 0 44%;
+  }
+  .Navbar {
+    height: 75px;
+  }
+  .Navbar__condensed-menu {
+    margin-top: 10px;
+  }
+  .Navbar__main {
+    top: 67px;
+  }
 }
 
-@media only screen and (max-width: 350px) {
-  
+/* Mobile */
+@media only screen and (max-width: 375px) {
+  .Navbar__logo {
+    margin: 0 0 0 40%;
+  }
+  .Navbar__main {
+    left: -195px;
+    width: 80vw;
+  }
+  .Navbar__menu {
+    width: 100vw;
+  }
+  .Navbar__right {
+    width: 100vw;
+  }
+}
+
+.Navbar__show {
+  display: block;
 }

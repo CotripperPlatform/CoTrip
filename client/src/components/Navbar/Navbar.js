@@ -51,25 +51,6 @@ class Navbar extends Component {
     this.setState({ pageMark: setPage });
   }
 
-  // Creates the menu. If a 1 is passed into the function, drop down menus are created.
-  // Once link end points are known, they can be put into state and put in via this function
-  setMenu = (type) => {
-    if (type === 1) {
-      return this.state.menuItems.map((item, key) => (
-        <div className="Navbar__link-item" key={key}>
-          <NavLink text={item} to={this.state.menuLinks[key]} menuList={this.state.menuDropDown[key]} />
-          <div className={`Navbar__triangle ${this.state.pageMark[key]}`}></div>
-        </div>
-      ));
-    } else {
-      return this.state.menuItems.map((item, key) => (
-        <div className="Navbar__link-item" key={key}>
-          <NavLink text={item} to="/" menuList={[]} />
-        </div>
-      ));
-    }
-  }
-
   clickHandler = () => {
     console.log("Clicked!")
   }
@@ -84,18 +65,26 @@ class Navbar extends Component {
         <div className="Navbar__logo">
           <Logo clickable to="/route" />
         </div>
-        <div className="Navbar__main">
-          <div className="Navbar__menu">{this.setMenu(1)}</div>
+        <div className="Navbar__burger">
+          <Burger onClick={this.handleCondensedMenuClick} active={this.state.condensedMenuActive} />
+        </div>
+        <div className={`Navbar__main ${this.state.condensedMenu}`}>
+          <div className="Navbar__menu">
+            {this.state.menuItems.map((item, key) => (
+              <div className="Navbar__link-item" key={key}>
+                <NavLink
+                  text={item}
+                  to={this.state.menuLinks[key]}
+                  menuList={this.state.menuDropDown[key]}
+                />
+                <div className={`Navbar__triangle ${this.state.pageMark[key]}`}></div>
+              </div>
+            ))}
+          </div>
           <div className="Navbar__right">
             <Icon icon={"search"} size="2x" onClick={this.clickHandler} />
             <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.clickHandler} />
             <ProfilePicture type="extra-small" link="#" image={this.props.profileImage} />
-          </div>
-        </div>
-        <div className="Navbar__burger">
-          <Burger onClick={this.handleCondensedMenuClick} active={this.state.condensedMenuActive} />
-          <div className={`Navbar__condensed-menu ${this.state.condensedMenu}`}>
-            {this.setMenu()}
           </div>
         </div>
       </div>
