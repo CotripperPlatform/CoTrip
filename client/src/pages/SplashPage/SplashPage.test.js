@@ -1,5 +1,5 @@
 import React from 'react'
-import { shallow, configure } from 'enzyme'
+import { shallow, configure, mount} from 'enzyme'
 import SplashPage from './SplashPage.js'
 import Adapter from 'enzyme-adapter-react-16';
 configure({adapter: new Adapter()});
@@ -10,7 +10,6 @@ describe('SplashPage component', () => {
   it('should render as expected', () => {
     // Shallow rendering renders a component without rendering any of its children
     const component = shallow(<SplashPage />)
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
+    expect(component.exists()).toBe(true);
   })
 })

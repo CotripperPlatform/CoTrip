@@ -14,5 +14,11 @@ const InputTextField = props => {
     />
   );
 };
+InputTextField.defaultProps = {
+  type: "text",
+  name: "email",
+  placeholder: "Email",
+  onChange: null
+};
 
 export default InputTextField;
