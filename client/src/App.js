@@ -11,32 +11,12 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 library.add(fab, far, fas, faCheckSquare, faHeart, faTable, faComment, faCaretRight, faCaretLeft, faSearch, faAngleLeft, faAngleRight, faCommentDots  )
 
 class App extends Component {
-  
-  splash = () => {
-    return (
-      <div className='splash'>
-        <h1>Welcome to CoTrip</h1>
-        <SplashPage />
-      </div>
-    );
-  };
-
-  login = () => {
-    return (
-      <LoginPage />
-    );
-  }
-
   render() {
     return (
       <div className='App'>
-        {/* <nav>
-          <Link to="/">Splash</Link>
-          <Link to="/login">Login</Link>
-        </nav> */}
         <main>
-          <Route path="/" exact render={this.splash}></Route>
-          <Route path="/login" exact render={this.login}></Route>
+          <Route path="/" exact component={SplashPage}></Route>
+          <Route path="/login" exact component={LoginPage}></Route>
         </main>
       </div>
     );
