@@ -1,17 +1,21 @@
-
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import "./MemberProfilePage.css";
-import Nav from "../Navbar/Navbar"
-import InteractionCard from "../InteractionCard/InteractionCard"
-import PreviousTripsCard from "../PreviousTripsCard/PreviousTripsCard"
-import TripCard from "../TripCard/TripCard"
+import Nav from "../Navbar/Navbar";
+import InteractionCard from "../InteractionCard/InteractionCard";
+import PreviousTripsCard from "../PreviousTripsCard/PreviousTripsCard";
+import TripCard from "../TripCard/TripCard";
 import example1 from "../../assets/images/card_small2.png";
-import BookTripCard from "../BookTripCard/BookTripCard"
-import example2 from "../../assets/images/hawaii.png"
-
+import BookTripCard from "../BookTripCard/BookTripCard";
+import example2 from "../../assets/images/hawaii.png";
+import Connections from "../Connections/Connections";
+import ProfilePicture from "../ProfilePicture/ProfilePicture";
+import pic1 from "../../assets/images/card_profile1.png";
+import pic2 from "../../assets/images/card_profile2.png";
+import pic3 from "../../assets/images/card_profile3.png";
+import Footer from "../Footer/Footer";
 // Class Based React Component
-class MemberProfilePage extends Component{
-  constructor(props){
+class MemberProfilePage extends Component {
+  constructor(props) {
     super(props);
     console.log(props);
 
@@ -21,55 +25,100 @@ class MemberProfilePage extends Component{
     };
   }
 
-
   // Runs after Component is loaded in the broswer
-  componentDidMount(){}
-
+  componentDidMount() {}
 
   // Runs after a component has been updated
-  componentDidUpdate(){}
-
+  componentDidUpdate() {}
 
   // Runs right before a component is removed from the DOM
-  componentWillUnmount(){}
+  componentWillUnmount() {}
 
-  render(){
-    return(
+  render() {
+    let testUsers = [
+      {
+        userId: 1,
+        userFirstName: "Paula",
+        userSurname: "Bannerman",
+        userPic: pic1
+      },
+      {
+        userId: 2,
+        userFirstName: "Jack",
+        userSurname: "Johnson",
+        userPic: pic2
+      },
+      {
+        userId: 3,
+        userFirstName: "Jenny",
+        userSurname: "Jones",
+        userPic: pic3
+      },
+      {
+        userId: 4,
+        userFirstName: "Joan",
+        userSurname: "Rivers",
+        userPic: pic1
+      },
+      {
+        userId: 5,
+        userFirstName: "Freddy",
+        userSurname: "Mercury",
+        userPic: pic2
+      },
+      {
+        userId: 5,
+        userFirstName: "Leslie",
+        userSurname: "Knope",
+        userPic: pic3
+      },
+      {
+        userId: 7,
+        userFirstName: "Frank",
+        userSurname: "Ocean",
+        userPic: pic1
+      }
+    ];
+    return (
       <div className={this.state.classList}>
         <Nav></Nav>
         <div className="banner">bioootch</div>
         <div className="page">
-        <div className="left">
-          <div className="interaction-div">
-            <InteractionCard></InteractionCard>
+          <div className="left">
+            <div className="interaction-div">
+              <InteractionCard></InteractionCard>
+            </div>
+            <div></div>
+            <div>
+              <Connections
+                to="User/userid/connections"
+                users={testUsers.slice(0, 6)}
+                extraUsers="View All"
+              />
+            </div>
           </div>
-          <div>
-            
+          <div className="right">
+            <div className="trip-card">
+              <BookTripCard>
+                <h1>Book a Trip</h1>
+                <TripCard src={example2} location="Hawaii" date="May 2020" />
+                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+              </BookTripCard>
+            </div>
+            <div className="trip-card">
+              <PreviousTripsCard trips={true} link="/">
+                <h1>Previous Trips</h1>
+                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+                <TripCard
+                  src="https://wallpaperaccess.com/full/144067.jpg"
+                  location="Hawaii"
+                  date="May 2020"
+                />
+              </PreviousTripsCard>
+            </div>
           </div>
-          <div></div>
         </div>
-        <div className="right">
-        <div className="trip-card">
-        <BookTripCard>
-    <h1>Book a Trip</h1>
-    <TripCard src={example2} location="Hawaii" date="May 2020" />
-    <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-  </BookTripCard>
-  </div>
-  <div className="trip-card">
-    <PreviousTripsCard trips={true} link="/">
-      <h1>Previous Trips</h1>
-      <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-      <TripCard
-        src="https://wallpaperaccess.com/full/144067.jpg"
-        location="Hawaii"
-        date="May 2020"
-      />
-    </PreviousTripsCard>
-    </div>
-    
-        </div>
-        </div>
+        <Footer />
       </div>
     );
   }
