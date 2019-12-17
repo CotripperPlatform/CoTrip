@@ -4,6 +4,8 @@ import BookTripCard from "./BookTripCard";
 import TripCard from "../TripCard/TripCard";
 import example1 from "../../assets/images/card_small2.png";
 import example2 from "../../assets/images/Hawaii-resort.jpg";
+import { tsPropertySignature } from "@babel/types";
+
 
 storiesOf("BookTripCard", module).add("Default", () => (
   <BookTripCard>
