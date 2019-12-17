@@ -36,9 +36,14 @@ class UserAPI(generics.RetrieveUpdateAPIView):
         permissions.IsAuthenticated,
     ]
     serializer_class = UserSerializer
+    # queryset = CustomUser.objects.all()
+    lookup_field = "email"
 
     def get_object(self):
         return self.request.user
+    
+    def put(self, request, *args, **kwargs):
+        return self.update(request, *args, **kwargs)
 
 class ProfileList(generics.ListAPIView):
     queryset = Profile.objects.all()

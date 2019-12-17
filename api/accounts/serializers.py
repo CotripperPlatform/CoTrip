@@ -9,10 +9,6 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = '__all__'
-        extra_kwargs = {
-            'id': {'read_only': False, 'required': True},
-            'slug': {'validators': []},
-        }
         # fields = ("image", "first_name", "last_name", "city_of_residence", "age", "dream_destination", "bio", "instagram_url", "pinterest_url", "facebook_url")
 
 class UserSerializer(serializers.ModelSerializer):
@@ -21,21 +17,25 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ('id', 'email', 'profile')
-        depth = 1
+        extra_kwargs = {
+            'profile': {'validators': []},
+        }
+        
     
     def create(self, validated_data):
         profile_data = validated_data.pop("profile") # removes and stores the profile data from the inputed, validated data
         user = CustomUser.objects.create(**validated_data) # creates the new CustomUser object
         profile_keys_dictionary = profile_data.keys() # stores a list with all the keys of the profile_data dictionary
-        profile = Profile.objects.create(user=user) # creates a new Profile object assigned to the new user
+        profile = Profile.objects.create(user=user, **profile_data) # creates a new Profile object assigned to the new user
+        
         for key in profile_keys_dictionary: # loops through each key for the profile_data dictionary
             profile[key] = profile_data[key] # assigns the specific key of the new profile to the inputed data at that key
         return user
     
     def update(self, instance, validated_data):
-        profile_data = validated_data.pop("profile") # removes and stores profile data
         instance.email = validated_data.get("email", instance.email) # updates email, if no email given then remains the same
-        instance.save() # saves the object
+        profile_data = validated_data.pop("profile") # removes and stores profile data
+        # instance.save() # saves the object
         profile_keys = profile_data.keys() # retrieves the dictionary keys of profile
         
         for key in profile_keys: # loops through profile keys
@@ -67,10 +67,14 @@ class LoginSerializer(serializers.Serializer):
 
 @receiver(post_save, sender=CustomUser)
 def create_profile(sender, instance, created, **kwargs):
+    print(created)
     if created:
         Profile.objects.create(user=instance)
 
+# @receiver(post_save, sender=CustomUser)
+# def console_log(sender, instance, created, **kwargs):
+#     print(instance)
 
-@receiver(post_save, sender=CustomUser)
-def save_profile(sender, instance, **kwargs):
-    instance.profile.save()
+# @receiver(post_save, sender=CustomUser)
+# def save_profile(sender, instance, **kwargs):
+#     instance.profile.save()
