@@ -23,19 +23,16 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', 'email', 'profile')
         depth = 1
     
-    def update(self, instance, validated_data):
-        instance.email = validated_data.get('email', instance.email)
-        instance.save()
-
-        profile_update = validated_data.get('profile')
-        profile_instance = profile.objects.get(user=instance)
-        
-        inv_item.name = item.get('name', inv_item.name)
-        inv_item.price = item.get('price', inv_item.price)
-        inv_item.save()
-
-        return instance
-
+    def create(self, validated_data):
+        profile_data = validated_data.pop("profile")
+        user = CustomUser.objects.create(**validated_data)
+        # profile_data.keys()
+        profile_keys_dictionary = profile_data.keys()
+        profile = Profile.objects.create(user=user)
+        for key in profile_keys_dictionary:
+            profile[key] = profile_data[key]
+        return user
+            
 
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
