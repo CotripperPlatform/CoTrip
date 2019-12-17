@@ -17,8 +17,7 @@ class Bio extends Component {
     // Default CSS class to apply to the Component
     this.state = {
       classList: "Bio",
-      isUser: this.props.isUser,
-      isClicked: false
+      isUser: this.props.isUser
     };
   }
   // Runs after Component is loaded in the broswer
