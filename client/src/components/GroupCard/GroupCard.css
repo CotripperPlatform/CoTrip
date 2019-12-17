@@ -8,9 +8,14 @@
     text-decoration: none;
 }
 
-/* The text-container also needed to be flexed. I justified content to space-between. I set the min-height here to 150px, which is the same as the medium card. */
 .GroupCard__text-container {
     min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.GroupCard__details {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,18 +24,9 @@
 .GroupCard__group-name {
     font-size: 1.5rem;
     line-height: 90%;
-    /* Slightly increased the top padding here to move the title a little further from the top of the card. */
     padding: 2.5rem 0rem 1rem 1.2rem;
     font-weight: var(--title-weight);
-    /* Set margin margin-top to zero because we want the actual h2 to be flush against the top of the card so that our space-between works properly. */
     margin-top: 0;
-}
-
-.GroupCard__details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 0.9rem;
 }
 
 .GroupCard__members {

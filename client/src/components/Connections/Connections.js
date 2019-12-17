@@ -21,7 +21,7 @@ function Connections(props) {
     if (index < 4) {
       return (
         <div key={person.userId} className='Connections__person'>
-          <ProfilePicture image={person.userPic} />
+          <ProfilePicture type="small" image={person.userPic} />
           <p className='Connections--name'>{person.userFirstName} {userLastInitial}</p>
         </div>
       )
