@@ -28,11 +28,7 @@ class FilterSettingsForm extends Component {
             <Button text="Next" size="small" handleClick={this.next}></Button>
           </div>
           <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots
-              numberOfDots={3}
-              activeLocation={this.props.currPage}
-              // onStatusChange={this.statusChange}
-            />
+            <CarouselDots numberOfDots={3} activeLocation={this.props.currPage} />
           </div>
         </div>
       </div>

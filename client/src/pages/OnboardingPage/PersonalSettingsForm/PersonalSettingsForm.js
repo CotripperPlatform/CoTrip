@@ -59,11 +59,7 @@ class PersonalSettingsForm extends Component {
           <Button text="Finish" handleClick={this.next}></Button>
           <div className="OnboardingPage__spacer"></div>
           <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots
-              numberOfDots={3}
-              activeLocation={this.props.currPage}
-              // onStatusChange={this.statusChange}
-            />
+            <CarouselDots numberOfDots={3} activeLocation={this.props.currPage} />
           </div>
           <Link to="/home">
             <p>Skip</p>

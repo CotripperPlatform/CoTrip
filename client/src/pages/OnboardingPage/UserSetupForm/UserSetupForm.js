@@ -98,11 +98,7 @@ class UserSetupForm extends Component {
             </div>
           </div>
           <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots
-              numberOfDots={3}
-              activeLocation={this.props.currPage}
-              // onStatusChange={this.statusChange}
-            />
+            <CarouselDots numberOfDots={3} activeLocation={this.props.currPage} />
           </div>
         </div>
       </div>
