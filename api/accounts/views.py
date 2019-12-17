@@ -2,7 +2,7 @@ from rest_framework import generics, permissions
 from rest_framework.response import Response
 from knox.models import AuthToken
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer,ProfileSerializer
-from .models import Profile
+from .models import Profile, CustomUser
 
 
 class RegisterAPI(generics.GenericAPIView):
@@ -31,7 +31,7 @@ class LoginAPI(generics.GenericAPIView):
         })
 
 
-class UserAPI(generics.RetrieveAPIView):
+class UserAPI(generics.RetrieveUpdateAPIView):
     permission_classes = [
         permissions.IsAuthenticated,
     ]
@@ -39,13 +39,17 @@ class UserAPI(generics.RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
-    
-class ProfileList(generics.ListCreateAPIView):
+
+class ProfileList(generics.ListAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
 
-class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
-    permission_classes = [permissions.IsAuthenticated,]
+class ProfileDetail(generics.RetrieveAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
+
+# not added to urls VVV
+class UserList(generics.ListAPIView):
+    serializer_class = UserSerializer
+    queryset = CustomUser.objects.all()
