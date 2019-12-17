@@ -9,27 +9,15 @@
 }
 
 .GroupCard__details {
-    /* display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: 0.9rem; */
-    position: relative;
-    /* padding-top: 15px; */
+    font-size: 0.9rem;
 }
 
 .GroupCard__group-name {
     font-size: 1.5rem;
     line-height: 90%;
-    padding: .7rem 1rem ;
+    padding: 2rem 0rem 1rem 1.2rem;
     font-weight: var(--title-weight);
-}
-
-.GroupCard__members {
-    position: absolute;
-    left: 20px;
-}
-
-.GroupCard__location {
-    position: absolute;
-    right: 20px;
 }
