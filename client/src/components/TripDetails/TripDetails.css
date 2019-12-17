@@ -1,108 +1,40 @@
 .TripDetails {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  font-family: var(--default-font);
-  width: 90%;
-  margin: 0 auto;
-}
-.TripDetails__left {
-  display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 60%;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--default-font);
+  width: 100%;
+  margin: 0 auto;
 }
 .TripDetails__carousel-container {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-evenly;
+  width: 20rem;
 }
 .TripDetails__image {
-  width: 40rem;
-  height: 30rem;
+  width: 20rem;
+  height: 15rem;
 }
 .TripDetails__right {
-  display: grid;
-  grid-template-columns: 1fr 1.5fr;
-  grid-template-rows: 2fr 1fr 1fr;
-  justify-items: start;
-  align-items: start;
-  width: 40%;
+  display: flex;
+  flex-direction: column;
+  width: 19rem;
+  margin: auto;
 }
-.TripDetails__overview-title {
-  grid-column: 1 / span 1;
-  grid-row: 1 / span 1;
+.TripDetails__section-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.TripDetails__title {
   color: var(--purple);
   font-size: 2.25rem;
-  margin: 0 3rem;
+  margin: 0;
 }
-.TripDetails__dates-title {
-  grid-column: 1 / span 1;
-  grid-row: 2 / span 1;
-  color: var(--purple);
-  font-size: 2.25rem;
-  margin: 0 3rem;
-}
-.TripDetails__location-title {
-  grid-column: 1 / span 1;
-  grid-row: 3 / span 1;
-  color: var(--purple);
-  font-size: 2.25rem;
-  margin: 0 3rem;
-}
-.TripDetails__overview-text {
-  grid-column: 2 / span 1;
-  grid-row: 1 / span 1;
+.TripDetails__text {
   font-size: 1.125rem;
-  margin-top: 0.2rem;
-}
-.TripDetails__dates-container {
-  grid-column: 2 / span 1;
-  grid-row: 2 / span 1;
-  margin-top: 0.5rem;
-}
-.TripDetails__dates-text {
-  font-size: 1.125rem;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.TripDetails__location-text {
-  grid-column: 2 / span 1;
-  grid-row: 3 / span 1;
-  font-size: 1.125rem;
-  margin-top: 1rem;
-}
-
-@media only screen and (max-width: 1100px) {
-  .TripDetails {
-    flex-direction: column;
-    align-items: center;
-  }
-  .TripDetails__left {
-    width: 100%;
-  }
-  .TripDetails__right {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .TripDetails h2 {
-    font-size: 1.5rem;
-    align-self: center;
-  }
-  .TripDetails p {
-    font-size: 1rem;
-    align-self: flex-start;
-  }
-  .TripDetails .CarouselDot {
-    height: 1rem;
-    width: 1rem;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .TripDetails__image {
-    width: 20rem;
-    height: 15rem;
-  }
+  margin: 0;
 }
