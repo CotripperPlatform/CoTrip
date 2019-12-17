@@ -16,12 +16,11 @@
 .BookTripCard__trip-link {
   margin: 0 auto;
   transition: transform 0.5s;
+  text-align: center;
 }
 
 .BookTripCard__trip-link a {
   color: var(--white);
-  text-align: center;
-  margin: 0 auto;
 }
 
 .BookTripCard__trip-link a:hover {
