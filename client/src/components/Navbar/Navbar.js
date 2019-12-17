@@ -33,8 +33,10 @@ class Navbar extends Component {
     this.setState({ condensedMenuActive: !this.state.condensedMenuActive })
     if (this.state.condensedMenuActive === false) {
       this.setState({ condensedMenu: "Navbar__show" });
+      this.setState({ pageMark: ["", "", "", ""] });
     } else {
       this.setState({ condensedMenu: "" });
+      this.setPageMarker();
     }
   }
 
