@@ -26,7 +26,7 @@ const GroupsList = (props) => {
           picture="https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1007&q=80"
         />
         </div>
-        <div className="Groups__card--2">
+        <div className="Groups__card--3">
         <GroupCard
           name="Virtual Bookclub"
           members="106"
