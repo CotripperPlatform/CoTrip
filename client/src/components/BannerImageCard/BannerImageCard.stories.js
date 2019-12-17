@@ -4,7 +4,9 @@ import BannerImageCard from './BannerImageCard';
 import Banner__Image from "./TripBanner.png";
 
 storiesOf('BannerImageCard', module)
-  .add("Default", () => (
-    <BannerImageCard background={Banner__Image} message="Hawaii 2020"/>
-  )
-)
+  .add("BannerImageCard", () => (
+    <BannerImageCard background={Banner__Image} />
+  ))
+  .add("BannerImageCard with text", () => (
+    <BannerImageCard background={Banner__Image} message="Hawaii 2020" />
+  ))

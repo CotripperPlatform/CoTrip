@@ -6,7 +6,7 @@ const BannerImageCard = (props) => {
     <div className='BannerImageCard' style={{
       backgroundImage: `url(${props.background})`
     }}>
-      <h2>{props.message}</h2>
+      <h2 className="BannerImageCard__text">{props.message}</h2>
     </div>
   );
 }

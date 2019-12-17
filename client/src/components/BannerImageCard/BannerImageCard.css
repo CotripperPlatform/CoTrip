@@ -14,14 +14,14 @@
     line-height: 72px;
 }
 
-h2{
+.BannerImageCard__text{
     margin: 0; 
     margin-top: 8rem;
     margin-right: 2rem;
 }
 
 @media only screen and (max-width: 576px) {
-    h2 {
+    .BannerImageCard__text {
         margin: 0 auto;
         margin-top: 3rem;
         display: flex;
@@ -33,7 +33,7 @@ h2{
 }
 
 @media only screen and (max-width: 320px) {
-    h2 {
+    .BannerImageCard__text {
         margin: 0 auto;
         margin-top: 2rem;
         display: flex;
