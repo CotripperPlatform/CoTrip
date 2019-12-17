@@ -10,15 +10,12 @@
   max-width: 330px;
   font-size: 20px;
   font-family: var(--default-font);
-<<<<<<< HEAD
   /* border: 2px solid black; */
 }
 
 .InputTextField__container--default::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   padding-left: 1rem;
-=======
->>>>>>> develop
 }
 
 .InputTextField__container--small {
