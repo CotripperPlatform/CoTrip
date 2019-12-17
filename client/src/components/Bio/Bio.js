@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import "./Bio.css";
 import Icon from "../Icon/Icon";
 import { Link } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import InputTextField from "components/InputTextField/InputTextField";
+
+library.add(faEdit);
 // Class Based React Component
 class Bio extends Component {
   constructor(props) {
@@ -10,10 +16,11 @@ class Bio extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "Bio"
+      classList: "Bio",
+      isUser: this.props.isUser,
+      isClicked: false
     };
   }
-
   // Runs after Component is loaded in the broswer
   componentDidMount() {}
 
@@ -24,10 +31,16 @@ class Bio extends Component {
   componentWillUnmount() {}
 
   render() {
+    console.log(this.props.isUser);
+    const isUser = this.state.isUser;
+
     return (
       <div className={this.state.classList}>
         <div>
-          <h2>{this.props.name}</h2>
+          <h2>
+            {this.props.name}
+            {isUser ? <FontAwesomeIcon icon={faEdit} /> : null}
+          </h2>
           <h3>Bio</h3>
           <p>{this.props.bio}</p>
           <h3>Her Interests</h3>

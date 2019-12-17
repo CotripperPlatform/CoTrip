@@ -7,6 +7,11 @@
   width: 30%;
   display: flex;
   justify-content: space-between;
+
+}
+
+.icons--div div {
+  color: #6a4c93;
 }
 
 .Bio h3,
@@ -16,4 +21,9 @@ h2 {
 
 .Bio span {
   margin-right: 3%;
+}
+
+.Bio h2 {
+  display: flex;
+  justify-content: space-between
 }
