@@ -28,7 +28,7 @@ class Navbar extends Component {
     };
   }
 
-  // Sets the location of the triangle on the menu.
+  // Sets the location of the triangle on the menu depending on prop.page
   setPageMarker = () => {
     let setPage = [];
     for (let i = 0; i < 4; i++) {
@@ -69,6 +69,7 @@ class Navbar extends Component {
         </div>
         <div className={`Navbar__main ${this.state.condensedMenu}`}>
           <div className="Navbar__menu">
+            {/* Depending on various items in state, this renders the menu */}
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
                 <NavLink
