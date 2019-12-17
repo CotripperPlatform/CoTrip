@@ -2,6 +2,7 @@
   padding: 0.25em 2.7em;
   background: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: solid rgba(0, 0, 0, 0);
   border-radius: 5px;
   font-family: var(--default-font);
   font-size: 24px;
@@ -19,6 +20,10 @@
 .Button--large {
   padding: 0.13em 2.71em;
   font-size: 36px;
+}
+.Button--extra-small {
+  padding: 0.30em 2.35em;
+  font-size: 15px;
 }
 .Button--small {
   padding: 0.42em 3.35em;

@@ -1,0 +1,76 @@
+.ForumPost {
+  display: flex;
+  flex-direction: column;
+}
+.ForumPost__top {
+  display: flex;
+  padding: 1rem;
+  background-color: var(--white);
+}
+.ForumPost__top-middle,
+.ForumPost .Button {
+  border: 1px solid rgba(37, 37, 37, 0.5);
+  border-radius: 3px;
+}
+.ForumPost__top-middle {
+  padding-bottom: 0.5rem;
+}
+.ForumPost .Button {
+  font-size: 1rem;
+}
+.ForumPost .Button img {
+  height: 1.5rem;
+  padding: 0;
+}
+.ForumPost__face-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 0.5rem;
+  align-items: center;
+}
+.ForumPost__name {
+  font-family: var(--default-font);
+  font-size: 1.2rem;
+  margin: 0;
+}
+.ForumPost .Pill {
+  margin-left: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+}
+.ForumPost__middle {
+  display: flex;
+  justify-content: space-between;
+  height: 2rem;
+  font-family: var(--paragraph-font);
+  font-weight: bold;
+  background-color: var(--white);
+}
+.ForumPost__bottom {
+  height: 2rem;
+  background-color: var(--gray-lite);
+}
+.ForumPost__topic-pills,
+.ForumPost__likes-comments {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.ForumPost__likes-comments p {
+  margin-right: 0.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .ForumPost {
+    width: 20rem;
+  }
+  .ForumPost__top,
+  .ForumPost__middle,
+  .ForumPost__bottom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ForumPost__topic-pills {
+    display: none;
+  }
+}
