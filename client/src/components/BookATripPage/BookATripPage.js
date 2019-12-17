@@ -9,7 +9,6 @@ import Button from "../Button/Button";
 import Footer from "../Footer/Footer";
 
 const BookATripPage = (props) => {
-  let {cards} = props;
   return(
     <div className="BookATripPage">
       <NavBar />
@@ -17,7 +16,7 @@ const BookATripPage = (props) => {
         <h3 style={{margin: 0}}>Book a Trip</h3>
         <InputTextField type="text" variation="search" name="search directory" placeholder="Search Trip"/>
       </Banner>
-      {/* <p className="BookATripPage__header">{props.header}</p> */}
+      <header className="BookATripPage__header">Upcoming Trips</header>
       <BookATripImage className="BookATripPage__images"
         cards={[
           {"image": "hawaii", "url": "#", "description": "Hawaii May 2020"},

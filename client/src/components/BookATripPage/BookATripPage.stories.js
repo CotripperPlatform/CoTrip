@@ -5,6 +5,5 @@ import Banner__pink from "../Banner/Banner__pink.png";
 
 storiesOf('BookATripPage', module)
   .add("Default", () => <BookATripPage
-    header="Upcoming Trips"
     background={Banner__pink}
   />)
