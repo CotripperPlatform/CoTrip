@@ -11,13 +11,8 @@ const LoginPage = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit() {
     console.log(email, password);
-  }
-
-  function handleClick(e) {
-    e.preventDefault();
   }
 
   return(
@@ -31,7 +26,7 @@ const LoginPage = (props) => {
               onChange={e => setPassword(e.target.value)}/>
           <p className="LoginPageForgotPass">Forgot your password?</p>
           <p className="LoginPageForgotPass">Need an account?</p>
-          <Button text="Login" onClick={handleClick}/>
+          <Button text="Login" handleClick={handleSubmit}/>
         </form>
       </div>
     </div>
