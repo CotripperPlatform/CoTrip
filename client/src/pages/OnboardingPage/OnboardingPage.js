@@ -74,7 +74,9 @@ class OnboardingPage extends Component {
       <div className="OnboardingPage">
         <div className="OnboardingPage__wrapper">
           <div className="OnboardingPage__form">
-            <Logo />
+            <div className="OnboardingPage__logo">
+              <Logo />
+            </div>
             {this.state.counter === 1
               ? pageSetup
               : this.state.counter === 2
@@ -84,9 +86,11 @@ class OnboardingPage extends Component {
               <CarouselDots numberOfDots={3} activeLocation={this.state.counter} />
             </div>
             {this.state.counter === 3 ? (
-              <Link to="/home">
-                <p>Skip</p>
-              </Link>
+              <div className="OnboardingPage__skip-link">
+                <Link to="/home">
+                  <p>Skip</p>
+                </Link>
+              </div>
             ) : (
               <div />
             )}
@@ -94,53 +98,6 @@ class OnboardingPage extends Component {
         </div>
       </div>
     );
-
-    if (this.state.counter == 1) {
-      return (
-        <div>
-          <Logo />
-          <UserSetupForm
-            currPage={this.state.counter}
-            save={this.saveSettings}
-            functionProp={this.handleClick}
-          />
-          <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots numberOfDots={3} activeLocation={1} />
-          </div>
-        </div>
-      );
-    } else if (this.state.counter == 2) {
-      return (
-        <div>
-          <Logo />
-          <FilterSettingsForm
-            currPage={this.state.counter}
-            save={this.saveSettings}
-            functionProp={this.handleClick}
-          />
-          <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots numberOfDots={3} activeLocation={2} />
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div>
-          <Logo />
-          <PersonalSettingsForm
-            currPage={this.state.counter}
-            save={this.saveSettings}
-            functionProp={this.handleClick}
-          />
-          <div className="OnboardingPage__carousel-dots-container">
-            <CarouselDots numberOfDots={3} activeLocation={3} />
-          </div>
-          <Link to="/home">
-            <p>Skip</p>
-          </Link>
-        </div>
-      );
-    }
   }
 }
 export default OnboardingPage;

@@ -14,19 +14,6 @@ class PersonalSettingsForm extends Component {
       destination: ""
     };
   }
-  // NEED to add saveImage
-  // saveAge = e => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     age: parseInt(e.target.value)
-  //   });
-  // };
-  // saveDestination = e => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     destination: e.target.value
-  //   });
-  // };
 
   updateValue = e => {
     let name = e.target.name;
@@ -58,7 +45,6 @@ class PersonalSettingsForm extends Component {
         />
         <div className="OnboardingPage__spacer"></div>
         <Button text="Finish" handleClick={this.next}></Button>
-        {/* <div className="OnboardingPage__spacer"></div> */}
       </div>
     );
   }

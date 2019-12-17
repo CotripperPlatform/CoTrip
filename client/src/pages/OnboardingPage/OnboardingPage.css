@@ -18,6 +18,14 @@
   height: 16.5rem;
   background-size: contain;
 } */
+.OnboardingPage__logo {
+  display: flex;
+  justify-content: center;
+}
+.OnboardingPage__skip-link {
+  display: flex;
+  justify-content: center;
+}
 .OnboardingPage__carousel-dots-container {
   margin: 0 auto;
 }
