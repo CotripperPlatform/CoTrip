@@ -2,7 +2,7 @@
   font-family: var(--default-font);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 72.4%, rgba(255, 255, 255, 0.75) 100%),
     #ffcb08;
-  height: 100vh;
+  height: 110vh;
   width: 100vw;
   display: flex;
 }
