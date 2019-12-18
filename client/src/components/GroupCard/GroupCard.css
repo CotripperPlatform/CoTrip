@@ -1,5 +1,5 @@
 .GroupCard {
-  /* position: absolute; */
+  position: absolute;
   border-radius: 3px;
   color: var(--white);
   display: flex;
@@ -9,6 +9,7 @@
   text-decoration: none;
   border: 2px solid black;
   padding: 21px 0;
+  width: 100%;
 }
 
 .GroupCard__text-container {

@@ -43,7 +43,7 @@ const HomePage = props => {
           <h1>Welcome, Justine!</h1>
         </Banner>
         <div className="HomePage_top-items-wrapper">
-          <span className="HomePage__suggestions-container">
+          <div className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
             <div className="HomePage__group-cards-container">
               <GroupCard
@@ -52,22 +52,22 @@ const HomePage = props => {
                 location="Boston, MA"
                 picture={example1}
               />
-              <span className="HomePage__groupcard-2">
+              <div className="HomePage__groupcard-2">
                 <GroupCard
                   name="DIY with your kids"
                   members="98"
                   location="Boston, MA"
                   picture={example1}
                 />
-              </span>
-              <span className="HomePage__groupcard-3">
+              </div>
+              <div className="HomePage__groupcard-3">
                 <GroupCard
                   name="DIY with your kids"
                   members="98"
                   location="Boston, MA"
                   picture={example1}
                 />
-              </span>
+              </div>
               <a href="/home" className="HomePage__arrow" />
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
@@ -77,7 +77,7 @@ const HomePage = props => {
               <div className="placeholder-person-card"></div>
               <a href="/home" className="HomePage__arrow lower-people" />
             </div>
-          </span>
+          </div>
 
           <span className="HomePage__top-cards-wrapper">
             <div className="HomePage__cards-container">
