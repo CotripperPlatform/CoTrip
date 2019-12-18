@@ -5,7 +5,7 @@
   border: 2px solid var(--white);
   border-radius: 3px;
   padding: 0.6rem 7rem 0.6rem 1rem;
-  margin: 1rem 5rem 1rem 5rem;
+  margin: 1rem 0 1rem 0;
   width: 100%;
   max-width: 330px;
   font-size: 20px;
@@ -28,6 +28,7 @@
   max-width: 220px;
   font-size: 18px;
   font-family: var(--default-font);
+  margin: 1rem 0 1rem 0;
 }
 
 .InputTextField__container--search {
@@ -45,6 +46,7 @@
   -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
+  margin: 1rem 0 1rem 0;
 }
 
 .InputTextField__container--search::-webkit-input-placeholder {
