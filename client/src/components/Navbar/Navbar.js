@@ -64,7 +64,6 @@ class Navbar extends Component {
         </div>
         <div className={`Navbar__main ${this.state.condensedMenu}`}>
           <div className="Navbar__menu">
-            {/* Depending on various items in state, this renders the menu */}
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
                 <NavLink
