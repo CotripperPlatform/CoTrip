@@ -4,10 +4,6 @@
 
 ### Code ###
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
 
 ### Django ###
 *.log
@@ -404,4 +400,5 @@ browser/src/__snapshots__
 # Images folder
 api/images
 
+*.snap
 # End of https://www.gitignore.io/api/vim,node,code,react,linux,macos,python,django,windows,sublimetext

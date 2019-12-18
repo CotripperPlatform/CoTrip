@@ -10,7 +10,14 @@ pylint = "*"
 django = "*"
 psycopg2-binary = "*"
 autopep8 = "*"
+<<<<<<< HEAD
 djangorestframework = "*"
+=======
+pillow = "*"
+djangorestframework = "*"
+django-rest-knox = "*"
+django-cors-headers = "*"
+>>>>>>> develop
 
 [requires]
 python_version = "*"

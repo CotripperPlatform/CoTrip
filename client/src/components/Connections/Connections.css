@@ -1,0 +1,54 @@
+.Connections__heading {
+  font-size: 1rem;
+  font-family: var(--default-font);
+  color: var(--purple);
+}
+
+.Connections__list {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+}
+
+.Connections__link {
+  color: var(--blue-lite);
+  font-size: 1rem;
+  font-family: var(--default-font);
+  font-weight: normal;
+}
+
+.Connections__person {
+  margin: 0 1rem 0 0;
+}
+
+.Connections__person__div {
+  height: 148px;
+  width: 148px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Connections--name {
+  font-size: 1rem;
+  font-family: var(--default-font);
+  text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .Connections__list {
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .Connections__heading {
+    text-align: center;
+  }
+
+  .Connections__list {
+    justify-content: center;
+  }
+}
