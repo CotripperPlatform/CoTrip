@@ -13,11 +13,12 @@
 .BookATripImage__image {
     height: 40rem;
     width: 40rem;
-    padding: 3rem 2rem 2rem 2rem;
+    margin: 3rem 2rem 2rem 2rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .BookATripImage__link {
     font-family: var(--default-font);
     font-size: 1.2rem;
@@ -26,9 +27,9 @@
 
 @media screen and (max-width: 320px) {
     .BookATripImage__image {
-        height: 15rem;
-        width: 15rem;
-        padding: 2rem 1rem 1rem 2rem;
+        height: 13rem;
+        width: 13rem;
+        padding: 1rem 1rem 2rem 2rem;
     }
     .BookATripImage__link {
         font-size: 1rem;
@@ -37,8 +38,8 @@
 
 @media screen and (min-width: 576px) and (max-width: 767px) {
     .BookATripImage__image {
-        height: 30rem;
-        width: 30rem;
+        height: 28rem;
+        width: 28rem;
         padding: 2rem 1rem 1rem 2rem;
     }
 }

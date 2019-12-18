@@ -7,16 +7,6 @@ import image3 from "../../assets/images/southernCaribbean.png";
 import image4 from "../../assets/images/easternCaribbean.png";
 
 storiesOf('BookATripImage', module)
-//   .add("Default", () => <BookATripImage
-//     cards={[
-//       {"image": "../../assets/images/hawaii.png", "url": "#", "description": "Hawaii May 2020"},
-//       {"image": "../../assets/images/greece.png", "url": "#", "description": "Greece & Croatia Cruise June 2020"},
-//       {"image": "../../assets/images/southernCaribbean.png", "url": "#", "description": "Southern Caribbean Cruise July 2020"},
-//       {"image": "../../assets/images/hawaii.png", "url": "#", "description": "Hawaii August 2020"},
-//       {"image": "../../assets/images/easternCaribbean.png", "url": "#", "description": "Eastern Caribbean Cruise New Year's 2021"}
-//     ]}
-// />)
-
   .add("Default", () => <BookATripImage
     cards={[
       {"image": image1, "url": "#", "description": "Hawaii May 2020"},
