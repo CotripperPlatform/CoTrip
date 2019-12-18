@@ -6,7 +6,6 @@ import Button from "../Button/Button";
 import Banner__pink from "./Banner__pink.png"
 import Banner__purpleBig from "./Banner__purple--big.png";
 
-
 const handleClick = e => {
   alert("Clicked");
 };
