@@ -8,17 +8,17 @@
   max-width: 14rem;
   display: flex;
   justify-content: space-between;
-  color: #6a4c93;
+  color: var(--purple);
 }
 
 .icons__div div {
-  color: #6a4c93;
+  color: var(--purple);
   margin-top: 1rem;
 }
 
 .Bio .Bio__subheader,
 .Bio__interests {
-  color: #6a4c93;
+  color: var(--purple);
   font-size: 1.4rem;
 }
 
@@ -34,6 +34,7 @@
 .Bio .Bio__header {
   display: flex;
   justify-content: space-between;
+  color: var(--purple)
 }
 
 .Bio .hashtag__container {
