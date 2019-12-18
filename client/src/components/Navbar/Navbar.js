@@ -61,11 +61,13 @@ class Navbar extends Component {
 }
 
 Navbar.propTypes = {
-  page: PropTypes.number
+  page: PropTypes.number,
+  image: PropTypes.string
 };
 
 Navbar.defaultProps = {
-  page: 0
+  page: 0,
+  image: "../../assets/images/profile-picture-1.png"
 };
 
 export default Navbar;
