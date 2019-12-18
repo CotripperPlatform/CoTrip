@@ -49,8 +49,8 @@
 
 .Card--extra-small {
   width: 1rem;
-  min-width: 180px;
-  height: 140px;
+  max-width: 185px;
+  max-height: 135px;
 }
 
 .Card__contents-container img {

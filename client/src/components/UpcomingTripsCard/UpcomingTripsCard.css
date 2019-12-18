@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 1vh 0.1rem;
+  padding: 0vh 0.1rem;
   color: var(--white);
   /* border: 2px solid black; */
 }
@@ -38,11 +38,10 @@
 
 .UpcomingTripsCard__link {
   padding-left: 1.2rem;
-  padding-bottom: 1vh;
-  margin-left: 12.5vw;
-  margin-right: 11.5vw;
+  margin-left: 11vw;
+  margin-right: 9vw;
+  margin-bottom: 1vh;
   font-size: 1vw;
-  /* border: 2px solid black; */
 }
 .UpcomingTripsCard__link a {
   color: var(--white);
