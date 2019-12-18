@@ -19,7 +19,7 @@ const InboxMessage = props => {
   let names = props.conversation.users.map((user, i) => {
     if (i === 2 && props.conversation.users.length > 3) {
       return "...";
-    } else if (i === 2) {
+    } else if (i === props.conversation.users.length - 1) {
       return `${user.name}`;
     } else if (i < 2) {
       return `${user.name}, `;
