@@ -18,3 +18,14 @@
     padding: 50px;
 }
 
+@media only screen and (max-width: 320px){
+    .BookATripPage__header{
+        text-align: center;
+        font-size: 36px;
+    }
+
+    .BookATripPage{
+       width: 100vw;
+    }
+}
+
