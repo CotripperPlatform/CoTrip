@@ -9,7 +9,7 @@ class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
     def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(data=request.data)
+        serializer = self.get_serializer(email=request.data['email'], password=request.data['password']) # change this slightly to ignore an incoming profile field
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         return Response({
@@ -58,3 +58,5 @@ class ProfileDetail(generics.RetrieveAPIView):
 class UserList(generics.ListAPIView):
     serializer_class = UserSerializer
     queryset = CustomUser.objects.all()
+    
+# add view to update a profile, it should only allow a profile to be updated when they have a token saying theyre logged in

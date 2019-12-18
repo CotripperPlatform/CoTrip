@@ -1,5 +1,6 @@
 from rest_framework import serializers
 # from django.contrib.auth.models import User
+from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.contrib.auth import authenticate
 from .models import Profile, CustomUser
 from django.dispatch import receiver
@@ -18,7 +19,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ('id', 'email', 'profile')
         extra_kwargs = {
-            'profile': {'validators': []},
+            'profile': {'user':{'validators': [UnicodeUsernameValidator()]}},
         }
         
     
@@ -75,6 +76,8 @@ def create_profile(sender, instance, created, **kwargs):
 # def console_log(sender, instance, created, **kwargs):
 #     print(instance)
 
-# @receiver(post_save, sender=CustomUser)
-# def save_profile(sender, instance, **kwargs):
-#     instance.profile.save()
+@receiver(post_save, sender=CustomUser)
+def save_profile(sender, instance, **kwargs):
+    instance.profile.save()
+    
+# add receiver that when the user is created, a profile is also created from the request object which should include a profile field with a dictionary with all fields necascary to build a profile
