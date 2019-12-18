@@ -1,16 +1,16 @@
 import React from 'react';
 import "./BookATripPage.css";
-import NavBar from "../../components/Navbar/Navbar";
-import BookATripImage from "../../components/BookATripImage/BookATripImage";
-import Banner from "../../components/Banner/Banner";
-import InputTextField from "../../components/InputTextField/InputTextField";
-import Banner__pink from "../../components/Banner/Banner__pink.png";
+import NavBar from "components/Navbar/Navbar";
+import BookATripImage from "components/BookATripImage/BookATripImage";
+import Banner from "components/Banner/Banner";
+import InputTextField from "components/InputTextField/InputTextField";
+import Banner__pink from "components/Banner/Banner__pink.png";
 import image1 from "assets/images/hawaii.png";
 import image2 from "assets/images/greece.png";
 import image3 from "assets/images/southernCaribbean.png";
 import image4 from "assets/images/easternCaribbean.png";
-import Button from "../../components/Button/Button";
-import Footer from "../../components/Footer/Footer";
+import Button from "components/Button/Button";
+import Footer from "components/Footer/Footer";
 
 const BookATripPage = (props) => {
   return(
