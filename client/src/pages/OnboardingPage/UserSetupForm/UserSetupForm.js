@@ -14,24 +14,7 @@ class UserSetupForm extends Component {
       confirmPassword: false
     };
   }
-  // saveName = e => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     name: e.target.value
-  //   });
-  // };
-  // saveEmail = e => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     email: e.target.value
-  //   });
-  // };
-  // savePassword = e => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     password: e.target.value
-  //   });
-  // };
+
   updateValue = e => {
     let name = e.target.name;
     let value = e.target.value;

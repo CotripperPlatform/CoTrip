@@ -13,14 +13,23 @@ class FilterSettingsForm extends Component {
     };
   }
   next = () => {
-    this.props.save(this.state);
+    // this.props.save(this.state);
     this.props.functionProp();
+    this.props.save("filter", this.state);
+  };
+  updateValue = e => {
+    let city = e.target.name;
+    let value = e.target.value;
+    this.setState({
+      [city]: value
+    });
+    console.log(e.target.value);
   };
 
   render() {
     return (
       <div className="OnboardingPage__wrapper">
-        <InputTextField />
+        <InputTextField name="city" type="text" placeholder="City" onChange={this.updateValue} />
         <OnboardingPills onChange={() => this.props.onChange} />
         <div className="OnboardingPage__button-container">
           <Button text="Next" size="small" handleClick={this.next}></Button>
