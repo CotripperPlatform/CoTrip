@@ -4,9 +4,8 @@
   justify-content: space-between;
   box-sizing: border-box;
   padding: 1rem;
-  width: 26.19rem;
+  width: 100%;
   height: calc(71px+2rem);
-  border: 1px solid var(--black);
   font-family: var(--paragraph-font);
 }
 

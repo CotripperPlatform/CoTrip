@@ -1,4 +1,23 @@
+.ComponentInbox__container {
+  display: flex;
+  flex-direction: column;
+  border: var(--black) solid 1px;
+  height: 40rem;
+  width: 30rem;
+}
 
-.ComponentInbox {
+.ComponentInbox__inbox-line {
+  border-bottom: var(--black) solid 1px;
+  height: 6rem;
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.ComponentInbox__inbox {
+  font-family: var(--default-font);
+}
+
+.ComponentInbox__message {
 }
