@@ -2,6 +2,9 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import InboxMessage from "./InboxMessage";
 import defaultPic from "assets/images/profile-picture-1.png";
+import defaultPic2 from "assets/images/profile-picture-2.png";
+import defaultPic3 from "assets/images/profile-picture-3.png";
+
 
 const conversation1 = {
   thread: [
@@ -25,7 +28,7 @@ const conversation2 = {
   ],
   users: [
     { name: "Justine", profilePic: defaultPic, to: "/" },
-    { name: "Michelle", profilePic: defaultPic, to: "/" }
+    { name: "Michelle", profilePic: defaultPic2, to: "/" }
   ]
 };
 const conversation3 = {
@@ -37,8 +40,8 @@ const conversation3 = {
   ],
   users: [
     { name: "Justine", profilePic: defaultPic, to: "/" },
-    { name: "Michelle", profilePic: defaultPic, to: "/" },
-    { name: "Becky", profilePic: defaultPic, to: "/" }
+    { name: "Michelle", profilePic: defaultPic2, to: "/" },
+    { name: "Becky", profilePic: defaultPic3, to: "/" }
   ]
 };
 const conversation4 = {
@@ -54,8 +57,8 @@ const conversation4 = {
   ],
   users: [
     { name: "Justine", profilePic: defaultPic, to: "/" },
-    { name: "Michelle", profilePic: defaultPic, to: "/" },
-    { name: "Becky", profilePic: defaultPic, to: "/" },
+    { name: "Michelle", profilePic: defaultPic2, to: "/" },
+    { name: "Becky", profilePic: defaultPic3, to: "/" },
     { name: "Bola", profilePic: defaultPic, to: "/" }
   ]
 };
@@ -72,7 +75,7 @@ const conversation5 = {
   ],
   users: [
     { name: "Justine", profilePic: defaultPic, to: "/" },
-    { name: "Michelle", profilePic: defaultPic, to: "/" },
+    { name: "Michelle", profilePic: defaultPic2, to: "/" },
     { name: "Becky", profilePic: defaultPic, to: "/" },
     { name: "Bola", profilePic: defaultPic, to: "/" },
     { name: "Justine", profilePic: defaultPic, to: "/" },
