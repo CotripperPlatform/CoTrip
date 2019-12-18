@@ -5,9 +5,9 @@
   flex-direction: column;
   /* padding: 0.7rem; */
   text-decoration: none;
-  width: 100%;
-  padding: 1vh 0vw 1vh 0vw;
-  margin: 0 3vw 0 1vw;
+  width: 90%;
+  padding: 1vh 0vw 1vh 1vw;
+  margin: 0 3vw 0 0vw;
   border: 2px solid black;
 }
 
