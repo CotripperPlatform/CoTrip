@@ -9,8 +9,9 @@
 }
 .TrendingHashtagCard__container h1 {
   color: var(--white);
-  width: 50%;
+
   padding-left: 5%;
+  font-size: 2vw;
 }
 .TrendingHashtagCard__container h2 {
   width: 50%;

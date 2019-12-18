@@ -26,21 +26,21 @@
   background-color: var(--yellow);
 }
 .Card--large {
-  width: 1rem;
-  min-width: 32rem;
-  height: 260px;
+  width: 28vw;
+  /* min-width: 32rem; */
+  /* height: 260px; */
 }
 
 .Card--medium {
-  width: 1rem;
-  min-width: 225px;
-  height: 150px;
+  width: 12vw;
+  /* min-width: 225px;
+  height: 150px; */
 }
 
 .Card--small {
-  width: 1rem;
-  min-width: 225px;
-  height: 125px;
+  width: 10vw;
+  /* min-width: 225px;
+  height: 125px; */
 }
 
 .Card--extra-small {

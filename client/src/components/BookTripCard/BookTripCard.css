@@ -11,6 +11,7 @@
   margin-bottom: 0.5rem;
   text-align: left;
   color: var(--white);
+  font-size: 2vw;
 }
 
 .BookTripCard__trip-link {
