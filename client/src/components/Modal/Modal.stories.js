@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Modal from './Modal';
-import "../../App.css";
 
 function handleConfirm(evt) {
   evt.preventDefault()

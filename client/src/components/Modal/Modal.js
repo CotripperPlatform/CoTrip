@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Modal.css";
-import "../../App.css";
+
 
 
 // Class Based React Component
@@ -8,31 +8,25 @@ class Modal extends Component {
   constructor(props) {
     super(props);
     console.log(props);
-
-    // Default CSS class to apply to the Component
-    this.state = {
-      classList: "Modal",
-    };
   }
-  // Runs after Component is loaded in the broswer
-  componentDidMount() { }
+  
   render() {
     return (
-      <div className={this.state.classList}>
-        <div className="modal-header">
-          <span className="close-modal-button" onClick={this.props.onClose}>×</span>
+      <div className="Modal">
+        <div>
+          <span className="Modal__closeButton" onClick={this.props.onClose}>×</span>
         </div>
-        <div className="modal-body">
-          <div className="modal-message">
+        <div className="Modal__body">
+          <div className="Modal__message">
             <h3>{this.props.message}</h3>
           </div>
         </div>
-        <div className="modal-footer">
-          <div className="cancel-box">
-            <button className="cancel-button" onClick={this.props.onCancel}>{this.props.cancelText}</button>
+        <div className="Modal__footer">
+          <div className="Modal__footerButtons">
+            <button className="Modal__footerButtonCancel" onClick={this.props.onCancel}>{this.props.cancelText}</button>
           </div>
-          <div className="cancel-box">
-            <button className="confirm-button" onClick={this.props.onConfirm}>{this.props.confirmText}</button>
+          <div className="Modal__footerButtons">
+            <button className="Modal__footerButtonConfirm" onClick={this.props.onConfirm}>{this.props.confirmText}</button>
           </div>
         </div>
       </div>

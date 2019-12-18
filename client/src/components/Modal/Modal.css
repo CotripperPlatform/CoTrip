@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--default-font);
-}
-
 .Modal {
     width: 582px;
     height: 309px;
@@ -15,25 +6,24 @@
     border-radius: 3px;
     display: flex;
     flex-direction: column;
+    font-family: var(--default-font);
 }
 
-.close-modal-button {
+.Modal__closeButton{
     color: black;
     cursor: pointer;
     float: right;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
     font-weight: var(--title-weight);
     font-size: 53px;
     line-height: 56px;
 }
 
-.modal-body {
+.Modal__body {
     width: 100%;
     height: 60%;
 }
 
-.modal-message{
+.Modal__message{
     width: 90%;
     height: 100%;
     margin: 0 auto;
@@ -46,18 +36,18 @@ h3{
     line-height: 57px;
 }
 
-.modal-footer{
+.Modal__footer{
     width: 100%;
     height: 23%;
     display: flex;
     flex-direction: row;
 }
 
-.cancel-box{
+.Modal__footerButtons{
     width: 100%;
 }
 
-.confirm-button{
+.Modal__footerButtonConfirm{
     border: 1px solid rgba(250, 250, 250, 0.25);
     width: 100%;
     height: 100%;
@@ -70,7 +60,7 @@ h3{
     text-transform: uppercase;
 }
 
-.cancel-button{
+.Modal__footerButtonCancel{
     border: 1px solid rgba(37, 37, 37, 0.25);
     width: 100%;
     height: 100%;
