@@ -11,7 +11,7 @@ const BookATripImage = (props) => {
         {cards.map(card => {
           return (
               <div className="BookATripImage__image-container">
-                <img src={require(`../../assets/images/${card.image}.png`)} className="BookATripImage__image"></img>
+                <img src={require(`${card.image}`)} className="BookATripImage__image"></img>
                 <div><Link to={card.url} className="BookATripImage__link">{card.description}</Link></div>
               </div>
           )
