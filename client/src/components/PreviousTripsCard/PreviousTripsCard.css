@@ -12,8 +12,8 @@
   width: 27vw;
   height: 100%;
   margin-left: 0.5vw;
-
-  padding-bottom: 3vh;
+  /* border: 2px solid black; */
+  padding: 2vh 0 4vh 0;
 }
 
 .PreviousTripCard__arrow {
