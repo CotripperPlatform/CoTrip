@@ -42,7 +42,8 @@ class App extends Component {
     super(props);
     this.state = {
       logged_in: localStorage.getItem("token") ? true : false,
-      email: ""
+      email: "",
+      first_name: ""
     };
   }
   componentDidMount() {
@@ -55,7 +56,7 @@ class App extends Component {
         .then(res => res.json())
         .then(json => {
           console.log(json);
-          this.setState({ email: json.email });
+          this.setState({ email: json.email, first_name: json.profile.first_name });
         });
     }
   }
@@ -74,7 +75,8 @@ class App extends Component {
         localStorage.setItem("token", json.token);
         this.setState({
           logged_in: true,
-          email: json.user.email
+          email: json.user.email,
+          first_name: json.user.profile.first_name
         });
       })
       .catch(err => {
@@ -95,7 +97,8 @@ class App extends Component {
         localStorage.setItem("token", json.token);
         this.setState({
           logged_in: true,
-          email: json.user.email
+          email: json.user.email,
+          first_name: json.user.profile.first_name
         });
       })
       .catch(err => {
@@ -116,7 +119,7 @@ class App extends Component {
             path="/coming_soon"
             exact
             render={routerProps => (
-              <ComingSoonPage handle_logout={this.handle_logout} {...routerProps} />
+              <ComingSoonPage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
