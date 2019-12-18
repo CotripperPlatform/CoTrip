@@ -3,7 +3,8 @@ import { storiesOf } from "@storybook/react";
 import BookTripCard from "./BookTripCard";
 import TripCard from "../TripCard/TripCard";
 import example1 from "../../assets/images/card_small2.png";
-import example2 from "../../assets/images/Hawaii-resort.jpg";
+import example2 from "../../assets/images/card_small3.png";
+
 import { tsPropertySignature } from "@babel/types";
 
 storiesOf("BookTripCard", module).add("Default", () => (

@@ -15,7 +15,7 @@
 
 .BookTripCard__trip-link {
   text-align: center;
-  /* border: 2px solid black; */
+
   padding-top: 1.2vh;
   padding-bottom: 1.9vh;
 }
@@ -41,7 +41,6 @@
     display: flex;
     justify-content: space-around;
     margin: 1rem 1.2rem 1rem 1.2rem;
-    /* border: 2px solid black; */
   }
   .BookTripCard__title-wrapper h1 {
     font-size: 8vw;

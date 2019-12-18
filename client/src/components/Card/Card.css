@@ -81,8 +81,6 @@
   text-align: center;
   width: 80%;
   margin-left: 0.9rem;
-
-  border: 2px solid black;
 }
 
 .Card__outline {
@@ -91,7 +89,6 @@
   max-width: 225px;
   background: none;
   border: 3px dashed var(--purple);
-  /* border: 2px solid black; */
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
