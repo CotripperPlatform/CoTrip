@@ -6,7 +6,7 @@ const ActivityList = props => {
   let { title, color } = props;
   let activities = props.activities.map((activity, index) => {
     return (
-      <Card key={index} size="small" color={color} className="ActivityList__card">
+      <Card key={index} size="extra-small" color={color} className="ActivityList__card">
         {activity}
       </Card>
     );
