@@ -141,12 +141,10 @@
   }
   .HomePage__top-cards-wrapper {
     width: 75vw;
-    border: 2px solid black;
     margin: 1vh 0vw 1vh 10vw;
   }
   .HomePage__cards-container {
     width: 70vw;
-    border: 2px solid black;
   }
 }
 
@@ -192,14 +190,6 @@
   height: 18rem;
   /* border: 1px solid brown; */
   margin: 1rem 1rem 1rem 2rem;
-}
-
-.placeholder-footer-block {
-  text-align: center;
-  width: 100vw;
-  height: 20rem;
-  border: 2px solid var(--yellow);
-  background-color: var(--yellow);
 }
 
 /**
