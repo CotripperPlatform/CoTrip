@@ -24,3 +24,16 @@
 .UpcomingEventsCard__location {
   line-height: 2.5;
 }
+
+/* Mobile */
+@media only screen and (max-width: 375px) {
+  .UpcomingEventsCard__name  {
+    font-size: 1.1rem
+  }
+  .UpcomingEventsCard__location {
+    line-height: 1.2rem;
+  }
+  .UpcomingEventsCard {
+    padding: .5rem;
+  }
+}
