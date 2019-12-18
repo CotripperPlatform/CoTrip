@@ -69,7 +69,7 @@ Navbar.propTypes = {
 Navbar.defaultProps = {
   page: 0,
   image: "../../assets/images/profile-picture-1.png",
-  to: "/"
+  to: this.props.profileUrl
 };
 
 export default Navbar;
