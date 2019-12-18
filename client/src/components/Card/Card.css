@@ -38,6 +38,7 @@
   width: 14.2vw;
   max-width: 225px;
   max-height: 150px;
+  min-width: 180px;
   margin: 0 0.1vw 0 0.1vw;
 }
 

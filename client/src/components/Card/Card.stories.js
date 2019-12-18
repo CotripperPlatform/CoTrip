@@ -23,9 +23,7 @@ storiesOf("Card", module)
   .add("Card, Blank", () => <Card size="large" />)
   .add("Card, Blank, Small", () => <Card size="small" />)
   .add("Card, Picture BG, Medium", () => <Card picture={image} alt="whoops" size="medium" />)
-  .add("Card, Picture Hawaii, Medium", () => (
-    <Card picture={"https://wallpaperaccess.com/full/144067.jpg"} alt="whoops" size="medium" />
-  ))
+  .add("Card, Picture Hawaii, Medium", () => <Card picture={image} alt="whoops" size="medium" />)
   .add("Card, Discover New Groups", () => (
     <Card outline size="medium">
       <a href="/">Discover New Groups</a>

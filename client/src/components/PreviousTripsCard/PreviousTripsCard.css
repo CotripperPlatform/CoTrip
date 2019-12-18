@@ -9,16 +9,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 27vw;
-  height: 100%;
-  margin-left: 0.5vw;
-  /* border: 2px solid black; */
-  padding: 2vh 0 4vh 0;
+  margin: 0rem 1.1rem 0rem 0.7rem;
+  padding: 2vh 0.5vw 4vh 0;
 }
 
 .PreviousTripCard__arrow {
   position: absolute;
-  right: 0%;
+  margin-left: 27.4vw;
   top: 53%;
   background-color: var(--yellow-dark);
   width: 25px;
@@ -69,15 +66,37 @@
   color: var(--yellow);
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 1076px) {
   .PreviousTripCard__trip-two {
     display: none;
   }
   .PreviousTripCard__trips {
-    width: 0rem;
-    height: 0rem;
-    margin-left: 1rem;
-    margin-top: -1rem;
+    margin: 0rem 2vw 0rem 6vw;
+    padding: 2vh 0.5vw 4vh 0;
+  }
+
+  .PreviousTripCard__container h1 {
+    color: var(--white);
+    width: 80%;
+    padding-left: 1rem;
+    transform: scale(1);
+    text-align: center;
+  }
+
+  .PreviousTripCard__arrow {
+    width: 32px;
+    top: 1rem;
+    left: 13.5rem;
+    transform: scale(0.9);
+  }
+}
+@media only screen and (max-width: 176px) {
+  .PreviousTripCard__trip-two {
+    display: none;
+  }
+  .PreviousTripCard__trips {
+    margin: 0rem 2vw 0rem 10vw;
+    padding: 2vh 0.5vw 4vh 0;
   }
 
   .PreviousTripCard__container h1 {
