@@ -9,6 +9,7 @@
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   font-family: var(--default-font);
+  border: 2px solid black;
 }
 .Card--purple {
   background-color: var(--purple);
@@ -52,8 +53,15 @@
   height: 140px;
 }
 
-.Card__contents-container {
+.Card__contents-container img {
   /* border: 2px solid black; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.Card__contents-container {
+  position: relative;
+  width: 100%;
 }
 
 .Card--mobile {
@@ -77,20 +85,8 @@
   border: 2px solid black;
 }
 
-.Card img {
-  width: 1rem;
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
 .Card__outline {
   padding: 5vh 0 7vh 0;
-
   background: none;
   border: 3px dashed var(--purple);
   -webkit-box-shadow: none;

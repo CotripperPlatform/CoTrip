@@ -8,7 +8,6 @@ const Card = props => {
     <div
       className={`Card Card--${color} Card--${size}
       ${outline ? `Card__outline` : ""}`}
-      style={{ backgroundImage: `url(${picture})` }}
     >
       {" "}
       {outline ? (

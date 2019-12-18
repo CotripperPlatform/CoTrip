@@ -57,11 +57,11 @@
 }
 
 .PreviousTripCard__no-trips h2 {
-  margin: 3% 20% 0px 24%;
-
+  margin: 15vh 6vw 0 8vw;
   font-size: 22px;
   color: var(--white);
   display: inline-block;
+  border: 2px solid black;
 }
 .PreviousTripCard__no-trips a {
   font-size: 18px;
