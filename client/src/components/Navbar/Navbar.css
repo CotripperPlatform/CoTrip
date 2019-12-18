@@ -152,3 +152,7 @@
 .Navbar__show {
   display: block;
 }
+
+.Navbar__hide {
+  display: none;
+}
