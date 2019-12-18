@@ -13,6 +13,7 @@
   -webkit-transition-property: background-color;
   transition-property: background-color;
   white-space: nowrap;
+  max-width: 100vw;
 }
 .Button:hover {
   background-color: var(--white-hover);
