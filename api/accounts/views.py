@@ -9,9 +9,12 @@ class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
     def post(self, request, *args, **kwargs):
+        profile_data = request.data.pop('profile')
         serializer = self.get_serializer(data=request.data) # change this slightly to ignore an incoming profile field
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
+        profile = Profile.objects.create(user=user, **profile_data)
+        
         return Response({
             "user": UserSerializer(user, context=self.get_serializer_context()).data,
             "token": AuthToken.objects.create(user)[1]
