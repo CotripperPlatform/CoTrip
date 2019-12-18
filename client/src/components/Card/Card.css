@@ -67,8 +67,7 @@
 
 .Card--mobile {
   display: flex;
-  flex-direction: column-reverse;
-  background-size: auto;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-position-x: 2.7em;
   background-position-y: 2.5rem;
@@ -78,10 +77,20 @@
   max-width: 160px;
   max-height: 202px;
 }
+.Card--mobile img {
+  transform: scaleX(0.5);
+  border: 2px solid black;
+  margin: 3vh 0 0 0;
+}
 .Card--mobile div {
   text-align: center;
-  width: 80%;
-  margin-left: 0.9rem;
+  /* border: 2px solid black; */
+  width: 100%;
+}
+.Card--mobile h2 {
+  text-align: center;
+  border: 2px solid black;
+  padding-bottom: 3vh;
 }
 
 .Card__outline {
