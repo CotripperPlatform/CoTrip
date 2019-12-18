@@ -3,7 +3,7 @@
   font-family: var(--default-font)
 }
 
-.icons__div {
+.Bio .icons__div {
   max-width: 14rem;
   display: flex;
   justify-content: space-between;
@@ -38,5 +38,5 @@
 .Bio .hashtag__container {
   display: flex;
   font-style: italic;
-
+  font-family: var(--paragraph-font)
 }
