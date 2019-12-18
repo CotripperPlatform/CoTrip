@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import OnboardingPage from "pages/OnboardingPage/OnboardingPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";

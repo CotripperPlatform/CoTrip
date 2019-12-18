@@ -14,7 +14,7 @@ class PersonalSettingsForm extends Component {
       email: this.props.setup.email,
       password: this.props.setup.password,
       profile: {
-        img: "",
+        image: "",
         age: 0,
         destination: "",
         name: this.props.setup.name,
