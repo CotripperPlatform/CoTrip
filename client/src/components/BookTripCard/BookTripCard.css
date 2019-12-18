@@ -14,11 +14,10 @@
 }
 
 .BookTripCard__trip-link {
-  transition: transform 0.5s;
   text-align: center;
   /* border: 2px solid black; */
   padding-top: 1.2vh;
-  padding-bottom: 1.5vh;
+  padding-bottom: 1.9vh;
 }
 
 .BookTripCard__trip-link a {
