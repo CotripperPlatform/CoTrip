@@ -1,8 +1,10 @@
 .TripCard {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  /* border: 2px solid black; */
+  border: 2px solid black;
+  width: 100%;
 }
 
 .TripCard__date,
@@ -17,13 +19,11 @@
 .TripCard__date {
   color: var(--gray-lite);
   font-size: 1vw;
-
-  padding: 5vh 0 0 0;
+  margin: 7vh 0 0 0;
 }
 
 .TripCard__location {
   color: var(--white);
   font-size: 1.4vw;
-
   margin: 0 0;
 }

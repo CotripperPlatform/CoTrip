@@ -17,7 +17,7 @@
   width: 27vw;
   height: 100%;
   margin-left: 0.5vw;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   padding-bottom: 2.8vh;
 }
 
@@ -61,7 +61,7 @@
   font-size: 22px;
   color: var(--white);
   display: inline-block;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .PreviousTripCard__no-trips a {
   font-size: 18px;
