@@ -1,6 +1,7 @@
 .Bio {
   max-width: 40rem;
-  font-family: var(--default-font)
+  font-family: var(--default-font);
+  max-width: 100%;
 }
 
 .Bio .icons__div {
