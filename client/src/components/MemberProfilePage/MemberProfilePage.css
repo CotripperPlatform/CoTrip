@@ -15,6 +15,12 @@
 
 }
 
+.MemberProfilePage .Groups__list {
+  width: 100%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
 .MemberProfilePage .interaction-div {
   min-width: 5rem;
   max-width: 10rem;
@@ -36,7 +42,11 @@
 }
 
 .MemberProfilePage .BookTripCard__content-wrapper {
-  width: 90%
+  width: 90%;
+}
+
+.MemberProfilePage .Groups__header {
+  padding-left: 5%;
 }
 
 @media only screen and (max-width:720px) {

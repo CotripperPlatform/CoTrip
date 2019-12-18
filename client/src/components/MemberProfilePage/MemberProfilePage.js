@@ -15,6 +15,7 @@ import Footer from "../Footer/Footer";
 import InputTextField from "../InputTextField/InputTextField";
 import Banner__pink from "../Banner/Banner__pink.png";
 import Banner from "../Banner/Banner";
+import GroupsList from "../GroupsList/GroupsList";
 // Class Based React Component
 class MemberProfilePage extends Component {
   constructor(props) {
@@ -127,6 +128,9 @@ class MemberProfilePage extends Component {
               </PreviousTripsCard>
             </div>
           </div>
+        </div>
+        <div ClassName="groups__div">
+          <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
         </div>
         <Footer />
       </div>
