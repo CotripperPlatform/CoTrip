@@ -21,7 +21,7 @@ const BookATripPage = () => {
         <InputTextField type="text" variation="search" name="search directory" placeholder="Search Trip"/>
       </Banner>
       <header className="BookATripPage__header">Upcoming Trips</header>
-      <BookATripImage className="BookATripPage__images"
+      <BookATripImage
         cards={[
           {"image": image1, "url": "#", "description": "Hawaii May 2020"},
           {"image": image2, "url": "#", "description": "Greece & Croatia Cruise June 2020"},
