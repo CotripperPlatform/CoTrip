@@ -20,11 +20,6 @@ class Navbar extends Component {
       pageMark: ["", "", "", ""],
       // menuItems are careated in order of the following array.
       menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
-      // The link end points for each menu item.
-      menuLinks: ["/", "/", "/", "/"],
-      // Each item in this array is a set for the dropdown on each menu link.
-      // This is an example for one drop menu item: { text: 'Explore People', to: '/' }
-      menuDropDown: [[], [], [], []]
     };
   }
 
@@ -74,8 +69,8 @@ class Navbar extends Component {
               <div className="Navbar__link-item" key={key}>
                 <NavLink
                   text={item}
-                  to={this.state.menuLinks[key]}
-                  menuList={this.state.menuDropDown[key]}
+                  to={"/"}
+                  menuList={[]}
                 />
                 <div className={`Navbar__triangle ${this.state.pageMark[key]}`}></div>
               </div>
