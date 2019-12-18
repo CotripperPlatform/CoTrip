@@ -5,11 +5,22 @@
     flex-direction: column;
     background-size: cover;
     background-repeat: no-repeat;
+    text-decoration: none;
 }
 
 .GroupCard__text-container {
-    position: absolute;
-    width: 14rem;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.GroupCard__group-name {
+    font-size: 1.5rem;
+    line-height: 90%;
+    padding: 2.5rem 0rem 1rem 1.2rem;
+    font-weight: var(--title-weight);
+    margin-top: 0;
 }
 
 .GroupCard__details {
@@ -19,8 +30,10 @@
     font-size: 0.9rem;
 }
 
-.GroupCard__group-name {
-    font-size: 1.5rem;
-    padding: .7rem;
-    font-weight: var(--title-weight);
+.GroupCard__members {
+    margin: 0.2rem;
+}
+
+.GroupCard__location {
+    margin: 0.2rem;
 }
