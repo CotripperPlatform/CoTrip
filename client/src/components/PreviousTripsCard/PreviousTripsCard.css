@@ -84,33 +84,15 @@
   }
 
   .PreviousTripCard__arrow {
-    width: 32px;
-    top: 1rem;
-    left: 13.5rem;
-    transform: scale(0.9);
+    margin-left: 20vw;
   }
 }
 @media only screen and (max-width: 176px) {
-  .PreviousTripCard__trip-two {
-    display: none;
-  }
   .PreviousTripCard__trips {
     margin: 0rem 2vw 0rem 10vw;
     padding: 2vh 0.5vw 4vh 0;
   }
-
-  .PreviousTripCard__container h1 {
-    color: var(--white);
-    width: 80%;
-    padding-left: 1rem;
-    transform: scale(1);
-    text-align: center;
-  }
-
   .PreviousTripCard__arrow {
-    width: 32px;
-    top: 1rem;
-    left: 13.5rem;
-    transform: scale(0.9);
+    margin-left: 65vw;
   }
 }
