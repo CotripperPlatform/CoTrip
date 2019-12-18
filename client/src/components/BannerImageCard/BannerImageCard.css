@@ -33,14 +33,8 @@
 }
 
 @media only screen and (max-width: 320px) {
-    .BannerImageCard__text {
-        margin: 0 auto;
+    .BannerImageCard__text { 
         margin-top: 2rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        text-align: center;
         font-size: 3rem;
     }
 }

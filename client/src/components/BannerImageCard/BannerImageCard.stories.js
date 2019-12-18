@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import BannerImageCard from './BannerImageCard';
-import Banner__Image from "./TripBanner.png";
+import Banner__Image from "../../assets/images/TripBanner.png";
 
 storiesOf('BannerImageCard', module)
   .add("BannerImageCard", () => (
