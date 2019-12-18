@@ -23,13 +23,13 @@ const BookATripPage = (props) => {
       <header className="BookATripPage__header">Upcoming Trips</header>
       <BookATripImage className="BookATripPage__images"
         cards={[
-          {"image": "https://cdn.aarp.net/content/dam/aarp/money/budgeting_savings/2016/04/1140-yeager-sell-your-used-books.imgcache.rev6feda141288df73e8fd100822bb375ea.jpg", "url": "#", "description": "Hawaii May 2020"},
+          {"image": image1, "url": "#", "description": "Hawaii May 2020"},
           {"image": image2, "url": "#", "description": "Greece & Croatia Cruise June 2020"},
           {"image": image3, "url": "#", "description": "Southern Caribbean Cruise July 2020"},
           {"image": image1, "url": "#", "description": "Hawaii May 2020"},
           {"image": image4, "url": "#", "description": "Eastern Caribbean Cruise New Year's 2021"}
         ]}
-      >{props.children}</BookATripImage>
+      />
       <div className="BookATripPage__button-container">
         <Button text="View Previous Trips" color="pink" size="large"/>
       </div>
