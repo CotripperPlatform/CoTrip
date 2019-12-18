@@ -59,3 +59,12 @@
         margin: 0;
     }
 }
+
+@media only screen and (max-width: 320px) {
+  .Footer--left a {
+    margin: 0 auto;  
+  }
+  .Footer div {
+    margin: 0;
+  }
+}

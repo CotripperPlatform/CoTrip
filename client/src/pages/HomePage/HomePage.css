@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .HomePage__wrapper {
   display: flex;
   flex-direction: column;
@@ -242,6 +246,30 @@
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .HomePage__mobile-wrapper {
+    height: calc(100% - 116px);
+    padding: 0;
+    margin: 10px;
+  }
+  .HomePage__mobile-wrapper a {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+  }
+  .HomePage__mobile-wrapper a div {
+    width: 140px;
+    height: 170px;
+    margin: auto;
+  }
+  .HomePage__mobile-wrapper a div h2 {
+    width: 100%;
+    margin: auto;
+  }
+  .HomePage__footer-wrapper div h3, h5 {
+    margin: 0;
+  }
+}
 /**
 |--------------------------------------------------
 | Media Queries

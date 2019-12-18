@@ -18,3 +18,17 @@
   line-height: 72px;
   margin-bottom: 3rem;
 }
+
+@media only screen and (max-width: 320px) {
+  .Banner {
+    margin: 0;
+    padding: 0;
+    min-height: unset;
+    font-size: unset;
+    line-height: unset;
+  }
+  .Banner h1 {
+    margin: 0;
+    width: 130px;
+  }
+}
