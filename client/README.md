@@ -80,6 +80,25 @@ function HelloIcon = props => {
 }
 ```
 
+You can change the size of the icon by passing the prop size:
+
+```jsx
+import Icon from '../Icon/Icon'
+
+
+function HelloIcon = props => {
+    return (
+        <h3>Hello <Icon icon={"heart"} size={"lg"}/></h3>
+    )
+}
+```
+
+This is a list of sizes that you can use:
+* xs 
+* sm 
+* lg 
+* 2x - 10x
+
 You can find the list of icons on the [Font Awesome
 website](https://fontawesome.com/). Note that you only need to pass in the
 icon's name for the `icon` prop.
