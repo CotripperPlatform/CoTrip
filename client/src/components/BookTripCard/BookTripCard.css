@@ -2,23 +2,22 @@
   color: var(--white);
   display: flex;
   justify-content: space-between;
-  margin: 1rem 1.2rem 1rem 1.2rem;
-  /* border: 2px solid black; */
+  margin: 0rem 1.2rem 0rem 1.2rem;
+  border: 2px solid black;
 }
 
 .BookTripCard__title-wrapper h1 {
   padding-left: 1.2rem;
   text-align: left;
   color: var(--white);
-  font-size: 2vw;
-  /* border: 2px solid black; */
+  font-size: 1.7vw;
+  margin: 2vh 0 1vh 0;
 }
 
 .BookTripCard__trip-link {
-  margin: 0rem 0 0.5rem 0;
   transition: transform 0.5s;
   text-align: center;
-  /* border: 2px solid black; */
+  border: 2px solid black;
 }
 
 .BookTripCard__trip-link a {

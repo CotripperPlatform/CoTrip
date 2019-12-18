@@ -27,14 +27,16 @@
 }
 .Card--large {
   width: 32vw;
+  max-width: 500px;
+  max-height: 275px;
   /* min-width: 32rem; */
   /* height: 260px; */
 }
 
 .Card--medium {
   width: 14.2vw;
-  /* min-width: 225px;
-  height: 150px; */
+  max-width: 225px;
+  /* height: 150px;  */
 }
 
 .Card--small {
