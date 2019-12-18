@@ -7,11 +7,11 @@
 }
 
 .BookTripCard__title-wrapper h1 {
-  padding-left: 0.7rem;
+  padding-left: 1.2rem;
   text-align: left;
   color: var(--white);
   font-size: 2vw;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .BookTripCard__trip-link {

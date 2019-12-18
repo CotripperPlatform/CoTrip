@@ -48,6 +48,11 @@
   min-width: 180px;
   height: 140px;
 }
+
+.Card__contents-container img {
+  padding: 2.2vh 0 2.2vh 0;
+}
+
 .Card--mobile {
   display: flex;
   flex-direction: column-reverse;
