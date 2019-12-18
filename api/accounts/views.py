@@ -9,7 +9,7 @@ class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
     def post(self, request, *args, **kwargs):
-        serializer = self.get_serializer(email=request.data['email'], password=request.data['password']) # change this slightly to ignore an incoming profile field
+        serializer = self.get_serializer(data=request.data) # change this slightly to ignore an incoming profile field
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         return Response({

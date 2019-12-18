@@ -1,6 +1,5 @@
 from rest_framework import serializers
 # from django.contrib.auth.models import User
-from django.contrib.auth.validators import UnicodeUsernameValidator
 from django.contrib.auth import authenticate
 from .models import Profile, CustomUser
 from django.dispatch import receiver
@@ -19,7 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
         model = CustomUser
         fields = ('id', 'email', 'profile')
         extra_kwargs = {
-            'profile': {'user':{'validators': [UnicodeUsernameValidator()]}},
+            'profile': {'validators': []},
         }
         
     
@@ -68,9 +67,9 @@ class LoginSerializer(serializers.Serializer):
 
 @receiver(post_save, sender=CustomUser)
 def create_profile(sender, instance, created, **kwargs):
-    print(created)
     if created:
-        Profile.objects.create(user=instance)
+        profile = Profile.objects.create(user=instance)
+        print(sender)
 
 # @receiver(post_save, sender=CustomUser)
 # def console_log(sender, instance, created, **kwargs):
