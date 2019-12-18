@@ -13,7 +13,12 @@ class PersonalSettingsForm extends Component {
     this.state = {
       img: "",
       age: 0,
-      destination: ""
+      destination: "",
+      email: this.props.setup.email,
+      name: this.props.setup.name,
+      password: this.props.setup.password,
+      city: this.props.filter.city,
+      topics: this.props.filter.tags
     };
   }
 
@@ -27,6 +32,7 @@ class PersonalSettingsForm extends Component {
   next = () => {
     this.props.save("personal", this.state);
     this.props.functionProp();
+    this.props.handleSignup(this.state);
   };
   render() {
     return (
@@ -59,6 +65,7 @@ class PersonalSettingsForm extends Component {
 
           <InputTextField
             type="text"
+            name="destination"
             placeholder="What is your dream destination(s)?"
             onChange={this.updateValue}
           />

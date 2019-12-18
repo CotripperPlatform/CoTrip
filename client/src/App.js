@@ -76,14 +76,13 @@ class App extends Component {
           logged_in: true,
           email: json.user.email
         });
-        return <Redirect to={"/coming_soon"} />;
       })
       .catch(err => {
         console.log(err);
       });
   };
-  handle_signup = (e, data) => {
-    e.preventDefault();
+  handle_signup = data => {
+    // e.preventDefault();
     fetch("http://localhost:8000/auth/register", {
       method: "POST",
       headers: {
@@ -99,6 +98,9 @@ class App extends Component {
           logged_in: true,
           email: json.user.email
         });
+      })
+      .catch(err => {
+        console.log(err);
       });
   };
   handle_logout = () => {
@@ -110,8 +112,6 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
-          {/* <Route path="/login" exact component={LoginPage}></Route> */}
-          <Route path="/register" exact component={OnboardingPage}></Route>
           {/* <Route path="/home" exact component={HomePage}></Route> */}
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
@@ -119,6 +119,13 @@ class App extends Component {
             exact
             render={routerProps => (
               <LoginPage handleLogin={this.handle_login} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/register"
+            exact
+            render={routerProps => (
+              <OnboardingPage handleSignup={this.handle_signup} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>

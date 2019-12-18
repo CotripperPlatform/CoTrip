@@ -67,6 +67,8 @@ class OnboardingPage extends Component {
           currPage={this.state.counter}
           save={this.saveSettings}
           functionProp={this.handleClick}
+          handleSignup={this.props.handleSignup}
+          {...this.state}
         />
       </div>
     );
@@ -85,7 +87,7 @@ class OnboardingPage extends Component {
             <div className="OnboardingPage__carousel-dots-container">
               <CarouselDots numberOfDots={3} activeLocation={this.state.counter} />
             </div>
-            {this.state.counter === 3 ? (
+            {/* {this.state.counter === 3 ? (
               <div className="OnboardingPage__skip-link">
                 <Link to="/home">
                   <p>Skip</p>
@@ -93,7 +95,7 @@ class OnboardingPage extends Component {
               </div>
             ) : (
               <div />
-            )}
+            )} */}
           </div>
         </div>
       </div>
