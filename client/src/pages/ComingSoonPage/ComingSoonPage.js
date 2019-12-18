@@ -12,8 +12,9 @@ const ComingSoonPage = props => {
   return (
     <div className="ComingSoonPage__wrapper">
       <span></span>
-      <Button text="Logout" handleClick={handleClick} />
       <h1>Coming Soon!</h1>
+      <h2>Welcome to this page, {props.first_name}</h2>
+      <Button text="Logout" handleClick={handleClick} />
       <span></span>
     </div>
   );
