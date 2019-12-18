@@ -1,10 +1,10 @@
 .Bio {
   max-width: 40rem;
-  font-family: "Reem Kufi", sans-serif;
+  font-family: var(--default-font)
 }
 
 .icons__div {
-  max-width: 10rem;
+  max-width: 14rem;
   display: flex;
   justify-content: space-between;
   color: #6a4c93;
@@ -18,6 +18,12 @@
 .Bio .Bio__subheader,
 .Bio__interests {
   color: #6a4c93;
+  font-size: 1.4rem;
+}
+
+.Bio .Bio__paragraph {
+  font-family: var(--paragraph-font);
+
 }
 
 .Bio .Bio__span {
@@ -27,4 +33,10 @@
 .Bio .Bio__header {
   display: flex;
   justify-content: space-between;
+}
+
+.Bio .hashtag__container {
+  display: flex;
+  font-style: italic;
+
 }
