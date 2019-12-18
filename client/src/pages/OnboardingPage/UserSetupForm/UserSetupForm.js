@@ -49,8 +49,16 @@ class UserSetupForm extends Component {
         <div className="OnboardingPage__container">
           <InputTextField
             type="text"
-            name="name"
-            placeholder="Name"
+            name="first_name"
+            placeholder="First Name"
+            onChange={this.updateValue}
+          ></InputTextField>
+        </div>
+        <div className="OnboardingPage__container">
+          <InputTextField
+            type="text"
+            name="last_name"
+            placeholder="Last Name"
             onChange={this.updateValue}
           ></InputTextField>
         </div>

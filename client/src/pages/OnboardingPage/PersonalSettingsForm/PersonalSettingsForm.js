@@ -16,9 +16,10 @@ class PersonalSettingsForm extends Component {
       profile: {
         image: "",
         age: 0,
-        destination: "",
-        name: this.props.setup.name,
-        city: this.props.filter.city,
+        dream_destination: "",
+        first_name: this.props.setup.first_name,
+        last_name: this.props.setup.last_name,
+        city_of_residence: this.props.filter.city,
         topics: this.props.filter.tags
       }
     };
@@ -51,7 +52,7 @@ class PersonalSettingsForm extends Component {
                 evt.persist();
                 console.log(evt);
                 let imageUrl = URL.createObjectURL(evt.target.files[0]);
-                this.setState({ profile: { ...this.state.profile, img: imageUrl }});
+                this.setState({ profile: { ...this.state.profile, img: imageUrl } });
                 return imageUrl;
               }}
             ></FileUpload>
@@ -68,7 +69,7 @@ class PersonalSettingsForm extends Component {
 
           <InputTextField
             type="text"
-            name="destination"
+            name="dream_destination"
             placeholder="What is your dream destination(s)?"
             onChange={this.updateValue}
           />
