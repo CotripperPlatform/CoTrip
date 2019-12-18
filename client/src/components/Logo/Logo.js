@@ -8,18 +8,20 @@ const Logo = props => {
   let classList = `Logo`;
   if (props.small) {
     classList += ` Logo--small`;
+  } else if (props.large) {
+    classList += ` Logo--large`;
   }
   if (props.clickable && props.to) {
     return (
-      <div className={classList}>
-        <Link to={props.to} />
-      </div>
+      <Link to={props.to}>
+        <div className={classList}></div>
+      </Link>
     );
   } else if (props.clickable) {
     return (
-      <div className={classList}>
-        <Link to="/" />
-      </div>
+      <Link to="/">
+        <div className={classList}></div>
+      </Link>
     );
   } else {
     return <div className={classList}></div>;

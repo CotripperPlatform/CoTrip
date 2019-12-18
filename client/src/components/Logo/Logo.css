@@ -11,3 +11,17 @@
   width: 2rem;
   height: 2rem;
 }
+
+.Logo--large {
+  margin: 0 auto;
+  width: 13.5rem;
+  height: 13.5rem;
+  align-self: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .Logo--large {
+    width: 10rem;
+    height: 10rem;
+  }
+}

@@ -5,6 +5,10 @@ import BookATripImage from "../../components/BookATripImage/BookATripImage";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__pink from "../../components/Banner/Banner__pink.png";
+import image1 from "assets/images/hawaii.png";
+import image2 from "assets/images/greece.png";
+import image3 from "assets/images/southernCaribbean.png";
+import image4 from "assets/images/easternCaribbean.png";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 
@@ -19,11 +23,11 @@ const BookATripPage = (props) => {
       <header className="BookATripPage__header">Upcoming Trips</header>
       <BookATripImage className="BookATripPage__images"
         cards={[
-          {"image": "hawaii", "url": "#", "description": "Hawaii May 2020"},
-          {"image": "greece", "url": "#", "description": "Greece & Croatia Cruise June 2020"},
-          {"image": "southernCaribbean", "url": "#", "description": "Southern Caribbean Cruise July 2020"},
-          {"image": "hawaii", "url": "#", "description": "Hawaii May 2020"},
-          {"image": "easternCaribbean", "url": "#", "description": "Eastern Caribbean Cruise New Year's 2021"}
+          {"image": image1, "url": "#", "description": "Hawaii May 2020"},
+          {"image": image2, "url": "#", "description": "Greece & Croatia Cruise June 2020"},
+          {"image": image3, "url": "#", "description": "Southern Caribbean Cruise July 2020"},
+          {"image": image1, "url": "#", "description": "Hawaii May 2020"},
+          {"image": image4, "url": "#", "description": "Eastern Caribbean Cruise New Year's 2021"}
         ]}
       />
       <div className="BookATripPage__button-container">

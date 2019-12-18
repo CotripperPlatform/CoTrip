@@ -3,7 +3,7 @@ import "./ForumPost.css";
 import PostBody from "../PostBody/PostBody.js";
 import Button from "../Button/Button.js";
 import ProfilePicture from "../ProfilePicture/ProfilePicture.js";
-import Image from "../../assets/images/profile_large.png";
+import Image from "../../assets/images/profile-picture-5.png";
 import heart from "../../assets/images/heart_black.png";
 import comment from "../../assets/images/comment_black.png";
 import Pill from "../Pill/Pill.js";
