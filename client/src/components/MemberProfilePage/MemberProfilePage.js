@@ -8,11 +8,13 @@ import example1 from "../../assets/images/card_small2.png";
 import BookTripCard from "../BookTripCard/BookTripCard";
 import example2 from "../../assets/images/hawaii.png";
 import Connections from "../Connections/Connections";
-import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import pic1 from "../../assets/images/card_profile1.png";
 import pic2 from "../../assets/images/card_profile2.png";
 import pic3 from "../../assets/images/card_profile3.png";
 import Footer from "../Footer/Footer";
+import InputTextField from "../InputTextField/InputTextField";
+import Banner__pink from "../Banner/Banner__pink.png";
+import Banner from "../Banner/Banner";
 // Class Based React Component
 class MemberProfilePage extends Component {
   constructor(props) {
@@ -82,7 +84,15 @@ class MemberProfilePage extends Component {
     return (
       <div className={this.state.classList}>
         <Nav></Nav>
-        <div className="banner">bioootch</div>
+        <Banner background={Banner__pink}>
+          <h3 style={{ margin: 0 }}>User Profile</h3>
+          <InputTextField
+            type="text"
+            variation="search"
+            name="search directory"
+            placeholder="Search My Directory"
+          />
+        </Banner>
         <div className="page">
           <div className="left">
             <div className="interaction-div">
