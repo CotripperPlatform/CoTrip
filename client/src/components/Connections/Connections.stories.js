@@ -1,9 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Connections from './Connections';
-import pic1 from '../../assets/images/card_profile1.png'
-import pic2 from '../../assets/images/card_profile2.png'
-import pic3 from '../../assets/images/card_profile3.png'
+import pic1 from '../../assets/images/profile-picture-1.png'
+import pic2 from '../../assets/images/profile-picture-2.png'
+import pic3 from '../../assets/images/profile-picture-3.png'
+import pic4 from '../../assets/images/profile-picture-4.png'
+import pic5 from '../../assets/images/profile-picture-5.png'
 
 let testUsers =
   [{
@@ -28,25 +30,25 @@ let testUsers =
     userId: 4,
     userFirstName: 'Joan',
     userSurname: 'Rivers',
-    userPic: pic1
+    userPic: pic4
   },
   {
     userId: 5,
-    userFirstName: 'Freddy',
+    userFirstName: 'Freida',
     userSurname: 'Mercury',
-    userPic: pic2
+    userPic: pic5
   },
   {
     userId: 5,
     userFirstName: 'Leslie',
     userSurname: 'Knope',
-    userPic: pic3
+    userPic: pic5
   },
   {
     userId: 7,
-    userFirstName: 'Frank',
+    userFirstName: 'Frankie',
     userSurname: 'Ocean',
-    userPic: pic1
+    userPic: pic4
   }]
 
 storiesOf('Connections', module)
