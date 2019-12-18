@@ -16,7 +16,7 @@ class Trip(models.Model):
 
 class Activity(models.Model):
     trip = models.ForeignKey(
-        Trip, on_delete=models.PROTECT, related_name='activities')
+        Trip, on_delete=models.PROTECT, related_name='trip_activities')
     activity = models.CharField(max_length=250)
     appropriate_for_kids = models.BooleanField()
 
