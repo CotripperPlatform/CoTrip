@@ -53,14 +53,14 @@ class ProfileDetail(generics.RetrieveAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     
-class ProfileUpdate(generics.RetrieveUpdateAPIView, UpdateModelMixin):
+class ProfileUpdate(generics.RetrieveUpdateAPIView):
     permission_classes = [
         permissions.IsAuthenticated,
     ]
     serializer_class = ProfileSerializer
     
     def get_object(self):
-        return self.partial_update(self, self.request)
+        return self.request.user.profile
     
     
 # not added to urls VVV
