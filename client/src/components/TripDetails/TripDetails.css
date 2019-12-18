@@ -47,7 +47,7 @@
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 1279px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .TripDetails {
     display: flex;
     flex-direction: row;
@@ -76,7 +76,7 @@
     font-size: 1rem;
   }
 }
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 992px) {
   .TripDetails {
     box-sizing: border-box;
     display: flex;
@@ -91,7 +91,7 @@
     height: 100%;
   }
   .TripDetails__right {
-    width: 30%;
+    width: 38%;
   }
   .TripDetails__container,
   .TripDetails__dates-container {
@@ -109,11 +109,11 @@
   }
   .TripDetails__title {
     font-size: 2.25rem;
-    min-width: 12rem;
+    min-width: 40%;
   }
   .TripDetails__text {
     display: flex;
     flex-wrap: wrap;
-    min-width: 18rem;
+    max-width: 60%;
   }
 }
