@@ -21,7 +21,7 @@
   text-align: center;
 }
 
-.Groups h1 {
+.Groups__header {
   font-family: var(--default-font);
   color: var(--purple);
 }

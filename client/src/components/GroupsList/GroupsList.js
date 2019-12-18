@@ -11,7 +11,7 @@ let cardImage3 = "https://images.unsplash.com/photo-1453749024858-4bca89bd9edc?i
 const GroupsList = (props) => {
   return (
     <div className="Groups">
-      <h1>{props.heading}</h1>
+      <h1 className="Groups__header">{props.heading}</h1>
       <div className="Groups__list">
         <div className="Groups__card--1">
           <GroupCard
