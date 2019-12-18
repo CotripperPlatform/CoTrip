@@ -34,7 +34,19 @@
 }
 
 @media only screen and (max-width: 576px) {
-  .Card span {
+  .BookTripCard__image-right {
     display: none;
+  }
+  .BookTripCard__content-wrapper {
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 1.2rem 1rem 1.2rem;
+    /* border: 2px solid black; */
+  }
+  .BookTripCard__title-wrapper h1 {
+    font-size: 8vw;
+    text-align: center;
+    margin-right: 1rem;
   }
 }
