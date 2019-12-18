@@ -57,14 +57,13 @@
     flex-direction: row;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
   .TripDetails {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     text-align: start;
-    font-family: var(--default-font);
     min-width: 48rem;
   }
   .TripDetails__carousel-container {
@@ -91,15 +90,86 @@
   .TripDetails__dates-container {
     margin-bottom: 1rem;
   }
-  .TripDetails__dates-details {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-  }
-  /* .TripDetails__location-container {
+}
+@media only screen and (min-width: 992px) and (max-width: 1279px) {
+  .TripDetails {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    text-align: start;
+    font-family: var(--default-font);
+    min-width: 58rem;
+  }
+  .TripDetails__carousel-container {
+    width: 36rem;
+  }
+  .TripDetails__image {
+    width: 36rem;
+    height: 27rem;
+  }
+  .TripDetails__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .TripDetails__dates-container {
+    margin-bottom: 1rem;
+  }
+  .TripDetails__location-container {
     align-items: baseline;
-  } */
+  }
+  .TripDetails__title {
+    font-size: 2.25rem;
+    margin: 0 1rem 1rem 0;
+  }
+  .TripDetails__text {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+  .TripDetails__dates-text {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .TripDetails {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .TripDetails__carousel-container {
+    width: 56.25%;
+  }
+  .TripDetails__image {
+    width: 100%;
+    height: 100%;
+  }
+  .TripDetails__right {
+    width: 33.7%;
+  }
+  .TripDetails__container,
+  .TripDetails__dates-container {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    width: 100%;
+  }
+  .TripDetails__dates-container,
+  .TripDetails__location-container {
+    margin-top: 3rem;
+  }
+  .TripDetails__location-container {
+    align-items: center;
+  }
+  .TripDetails__title {
+    font-size: 2.25rem;
+    min-width: 12rem;
+  }
+  .TripDetails__text {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 18rem;
+  }
 }
