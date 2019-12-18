@@ -1,48 +1,47 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import "./App.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import {
-  faCheckSquare,
-  faHeart,
-  faTable,
-  faComment,
-  faCaretRight,
-  faCaretLeft,
-  faSearch,
-  faAngleLeft,
-  faAngleRight,
-  faCommentDots
-} from "@fortawesome/free-solid-svg-icons";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { fas } from "@fortawesome/free-solid-svg-icons";
-import { far } from "@fortawesome/free-regular-svg-icons";
-library.add(
-  fab,
-  far,
-  fas,
-  faCheckSquare,
-  faHeart,
-  faTable,
-  faComment,
-  faCaretRight,
-  faCaretLeft,
-  faSearch,
-  faAngleLeft,
-  faAngleRight,
-  faCommentDots
-);
+// import { library } from "@fortawesome/fontawesome-svg-core";
+// import {
+//   faCheckSquare,
+//   faHeart,
+//   faTable,
+//   faComment,
+//   faCaretRight,
+//   faCaretLeft,
+//   faSearch,
+//   faAngleLeft,
+//   faAngleRight,
+//   faCommentDots
+// } from "@fortawesome/free-solid-svg-icons";
+// import { fab } from "@fortawesome/free-brands-svg-icons";
+// import { fas } from "@fortawesome/free-solid-svg-icons";
+// import { far } from "@fortawesome/free-regular-svg-icons";
+// library.add(
+//   fab,
+//   far,
+//   fas,
+//   faCheckSquare,
+//   faHeart,
+//   faTable,
+//   faComment,
+//   faCaretRight,
+//   faCaretLeft,
+//   faSearch,
+//   faAngleLeft,
+//   faAngleRight,
+//   faCommentDots
+// );
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       logged_in: localStorage.getItem("token") ? true : false,
-      email: "",
-      message: ""
+      email: ""
     };
   }
   componentDidMount() {
@@ -74,13 +73,12 @@ class App extends Component {
         localStorage.setItem("token", json.token);
         this.setState({
           logged_in: true,
-          email: json.user.email,
-          message: ""
+          email: json.user.email
         });
+        return <Redirect to={"/coming_soon"} />;
       })
       .catch(err => {
         console.log(err);
-        this.setState({ message: "Please enter valid email and password" });
       });
   };
   handle_signup = (e, data) => {
