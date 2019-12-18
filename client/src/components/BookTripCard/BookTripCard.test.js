@@ -1,16 +1,50 @@
 import React from 'react'
-import { shallow, configure } from 'enzyme'
+import { shallow } from 'enzyme'
 import BookTripCard from './BookTripCard.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import Card from "../Card/Card";
 
-// We will describe a block of tests
-describe('BookTripCard component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<BookTripCard />)
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
+const setUp = (props) => {
+  const component = shallow(<BookTripCard {...props}/>);
+  return component;
+}
+describe("BookTripCard component", () => {
+  describe('Has props', ()=>{
+    let wrapper;
+    beforeEach(()=>{
+      const props = {
+        children:[<h1>Book a Trip</h1>,
+          <Card size='medium' />,
+          <Card size='medium'/>],
+          to:"/"
+      }
+      
+      wrapper = setUp(props)
+    })
+    it('Should render as expected', ()=>{
+     
+      expect(wrapper.find('.BookTripCard__title-wrapper').length).toBe(1);
+    })
+    it('Should render trip title',()=>{
+      expect(wrapper.find('.BookTripCard__title-wrapper').text()).toBe('Book a Trip');
+    })
+    it('Should render second trip',()=>{
+      expect(wrapper.find('.BookTripCard__content-wrapper').length).toBe(1);
+    })
   })
-})
+  describe('Has NO props', ()=>{
+    let wrapper;
+    beforeEach(()=>{
+  
+      wrapper = setUp()
+    })
+    it('Should render as expected', ()=>{
+      expect(wrapper.find('.BookTripCard__title-wrapper').length).toBe(1);
+    })
+    it('Should render trip title',()=>{
+      expect(wrapper.find('.BookTripCard__title-wrapper').text()).toBe('Book a Trip');
+    })
+    it('Should render second trip',()=>{
+      expect(wrapper.find('.BookTripCard__content-wrapper').length).toBe(1);
+    })
+  })
+});
