@@ -14,6 +14,9 @@
     height: 40rem;
     width: 40rem;
     padding: 3rem 2rem 2rem 2rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .BookATripImage__link {
     font-family: var(--default-font);
