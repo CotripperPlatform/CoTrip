@@ -29,6 +29,20 @@ import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
 
+const personCard = (
+  <PersonCard
+    image={image}
+    name="Lindsay L."
+    location="Washington D.C."
+    interests={[
+      { url: "#", interests: "veganism" },
+      { url: "#", interests: "budgeting" },
+      { url: "#", interests: "travel" },
+      { url: "#", interests: "outdoors" }
+    ]}
+  />
+);
+
 const handleClick = e => {
   e.preventDefault();
   console.log("clicked");
@@ -74,39 +88,9 @@ const HomePage = props => {
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
-              <PersonCard
-                image={image}
-                name="Lindsay L."
-                location="Washington D.C."
-                interests={[
-                  { url: "#", interests: "veganism" },
-                  { url: "#", interests: "budgeting" },
-                  { url: "#", interests: "travel" },
-                  { url: "#", interests: "outdoors" }
-                ]}
-              />
-              <PersonCard
-                image={image}
-                name="Lindsay L."
-                location="Washington D.C."
-                interests={[
-                  { url: "#", interests: "veganism" },
-                  { url: "#", interests: "budgeting" },
-                  { url: "#", interests: "travel" },
-                  { url: "#", interests: "outdoors" }
-                ]}
-              />
-              <PersonCard
-                image={image}
-                name="Lindsay L."
-                location="Washington D.C."
-                interests={[
-                  { url: "#", interests: "veganism" },
-                  { url: "#", interests: "budgeting" },
-                  { url: "#", interests: "travel" },
-                  { url: "#", interests: "outdoors" }
-                ]}
-              />
+              {personCard}
+              {personCard}
+              {personCard}
               <a href="/home" className="HomePage__arrow lower-people" />
             </div>
           </span>
