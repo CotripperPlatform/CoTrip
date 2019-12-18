@@ -19,8 +19,7 @@ class PersonalSettingsForm extends Component {
         dream_destination: "",
         first_name: this.props.setup.first_name,
         last_name: this.props.setup.last_name,
-        city_of_residence: this.props.filter.city,
-        topics: this.props.filter.tags
+        city_of_residence: this.props.filter.city
       }
     };
   }
