@@ -20,7 +20,6 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 library.add(
-  faEdit,
   fab,
   far,
   fas,
@@ -33,7 +32,8 @@ library.add(
   faSearch,
   faAngleLeft,
   faAngleRight,
-  faCommentDots
+  faCommentDots,
+  faEdit
 );
 
 storiesOf("Icon", module)
@@ -52,4 +52,5 @@ storiesOf("Icon", module)
   .add("Angle Left", () => <Icon icon={"angle-left"} />)
   .add("Angle Right", () => <Icon icon={"angle-right"} />)
   .add("Comment Dots", () => <Icon icon={"comment-dots"} />)
-  .add("Comment Dots Regular", () => <Icon icon={["far", "comment-dots"]} />);
+  .add("Comment Dots Regular", () => <Icon icon={["far", "comment-dots"]} />)
+  .add("Edit", () => <Icon icon={"edit"} />);

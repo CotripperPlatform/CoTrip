@@ -24,6 +24,6 @@ storiesOf("Bio", module).add("Default", () => (
     name={people[0].name}
     bio={people[0].bio}
     hashtags={people[0].hashtags}
-    isUser={people[0].isUser}
+    isCurrentUser={people[0].isUser}
   />
 ));

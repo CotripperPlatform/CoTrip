@@ -3,27 +3,28 @@
   font-family: "Reem Kufi", sans-serif;
 }
 
-.icons--div {
-  width: 30%;
+.icons__div {
+  max-width: 10rem;
   display: flex;
   justify-content: space-between;
-
-}
-
-.icons--div div {
   color: #6a4c93;
 }
 
-.Bio h3,
-h2 {
+.icons__div div {
+  color: #6a4c93;
+  margin-top: 1rem;
+}
+
+.Bio .Bio__subheader,
+.Bio__interests {
   color: #6a4c93;
 }
 
-.Bio span {
+.Bio .Bio__span {
   margin-right: 3%;
 }
 
-.Bio h2 {
+.Bio .Bio__header {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
