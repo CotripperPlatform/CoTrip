@@ -36,7 +36,7 @@ class TripDetails extends Component {
             />
           </div>
         </div>
-        <div className="TripDetails__right">
+        <div className="TripDetails__information">
           <div className="TripDetails__container TripDetails__overview-container">
             <h2 className="TripDetails__title">Overview</h2>
             <p className="TripDetails__text">{this.props.overview}</p>
