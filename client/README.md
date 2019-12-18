@@ -93,7 +93,11 @@ function HelloIcon = props => {
 }
 ```
 
-This is a list of sizes that you can use: xs, sm, lg, 2x - 10x.
+This is a list of sizes that you can use:
+* xs 
+* sm 
+* lg 
+* 2x - 10x
 
 You can find the list of icons on the [Font Awesome
 website](https://fontawesome.com/). Note that you only need to pass in the
