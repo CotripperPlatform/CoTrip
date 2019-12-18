@@ -140,11 +140,13 @@
     width: 60vw;
   }
   .HomePage__top-cards-wrapper {
-    width: 55vw;
+    width: 75vw;
+    border: 2px solid black;
+    margin: 1vh 0vw 1vh 10vw;
   }
   .HomePage__cards-container {
-    margin: 1vh 0vw 1vh 2vw;
-    width: 60vw;
+    width: 70vw;
+    border: 2px solid black;
   }
 }
 
