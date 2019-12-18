@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0 0.5vw 0 0.5vw;
-  border: 2px solid black;
 }
 
 .BookTripCard__title-wrapper h1 {
@@ -18,7 +17,6 @@
   text-align: center;
   padding-top: 1.2vh;
   padding-bottom: 1.9vh;
-  border: 2px solid black;
 }
 
 .BookTripCard__trip-link a {
@@ -33,7 +31,7 @@
   color: var(--yellow);
 }
 
-@media only screen and (max-width: 1076px) {
+@media only screen and (max-width: 1176px) {
   .BookTripCard__image-right {
     display: none;
   }
