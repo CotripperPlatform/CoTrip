@@ -14,7 +14,6 @@ class Navbar extends Component {
     // Default CSS class to apply to the Component
     this.state = {
       condensedMenuActive: false,
-      condensedMenu: "",
       // pageMark controls the triangle that marks which page the user is on.
       // Passing 0-3 as a prop into this component controls where it displays.
       pageMark: ["", "", "", ""],
