@@ -55,22 +55,18 @@ class Navbar extends Component {
           <Burger
             onClick={() => {
               this.setState({ condensedMenuActive: !this.state.condensedMenuActive });
-              this.state.condensedMenuActive === false
-                ? this.setState({ condensedMenu: "Navbar__show", pageMark: ["", "", "", ""] })
-                : this.setState({ condensedMenu: "" });
+              !this.state.condensedMenuActive
+                ? this.setState({ pageMark: ["", "", "", ""] })
+                : "";
             }}
             active={this.state.condensedMenuActive}
           />
         </div>
-        <div className={`Navbar__main ${this.state.condensedMenu}`}>
+        <div className={`Navbar__main ${this.state.condensedMenuActive && `Navbar__show`}`}>
           <div className="Navbar__menu">
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
-                <NavLink
-                  text={item}
-                  to={"/"}
-                  menuList={[]}
-                />
+                <NavLink text={item} to={"/"} menuList={[]} />
                 <div className={`Navbar__triangle ${this.state.pageMark[key]}`}></div>
               </div>
             ))}
