@@ -43,7 +43,11 @@ class App extends Component {
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
-          <Route path="/hawaii-2020" exact component={Hawaii2020}></Route>
+          <Route path="/hawaii-2020" exact
+            render={routerProps => (
+              <Hawaii2020 {...routerProps} />
+            )}>
+          </Route>
         </main>
       </div>
     );

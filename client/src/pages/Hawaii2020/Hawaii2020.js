@@ -23,18 +23,25 @@ const Hawaii2020 = (props) => {
 
   return(
     <div className="Hawaii2020">
-      <NavBar/>
+      <NavBar />
       <Banner background={Banner__pink}>
         <h3>Trip: Hawaii 2020</h3>
       </Banner>
-      <BannerImageCard background={Banner__Image} message="Hawaii 2020" />
-      <TripDetails />
-      <ActivityList title="Activities for Moms" activities={momActivities} color="purple" />
-      <ActivityList title="Activities for Moms & Kids" activities={kidsActivities} color="red" />
-      <div className="Hawaii2020__button-container">
-        <Button text="Book Now" color="pink" size="large" />
+      <div className="Hawaii2020__BannerImageCard-container">
+        <BannerImageCard className="Hawaii2020__BannerImageCard" background={Banner__Image} message="Hawaii 2020" />
       </div>
-      <Footer />
+      <div className="Hawaii2020__body-container">
+        <TripDetails className="Hawaii2020__TripDetails"/>
+        <div className="Hawaii2020__ActivityList-container">
+          <ActivityList className="Hawaii2020__ActivityList" title="Activities for Moms" activities={momActivities} color="purple" />
+        </div>
+        <div className="Hawaii2020__ActivityList-container"></div>
+          <ActivityList className="Hawaii2020__ActivityList" title="Activities for Moms & Kids" activities={kidsActivities} color="red" />
+        </div>
+        <div className="Hawaii2020__button-container">
+          <Button text="Book Now" color="pink" size="large" />
+        </div>
+      <Footer className="Hawaii2020__Footer" />
     </div>
   );
 }
