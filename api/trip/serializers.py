@@ -11,7 +11,7 @@ class ActivitySerializer(serializers.ModelSerializer):
 class TripSerializer(serializers.ModelSerializer):
     activities = ActivitySerializer(
         many=True,
-        # read_only=True
+        read_only=True
     )
 
     class Meta:
@@ -19,11 +19,5 @@ class TripSerializer(serializers.ModelSerializer):
         fields = ('title', 'start_date', 'end_date', 'duration_days',
                   'type_of_stay', 'activities', 'children_welcome')
 
-    def create(self, validated_data):
-        activity_data = validated_data.pop('trip_activities')
-        trip = Trip.objects.create(**validated_data)
-        for activity_data in activity_data:
-            Activity.objects.create(trip=trip, **activity_data)
-        return trip
 
 
