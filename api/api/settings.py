@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     "rest_framework",
     "knox",
+    "cotrip_app",
     "accounts",
     'corsheaders',
     'trip'
