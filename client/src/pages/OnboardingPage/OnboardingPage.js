@@ -70,6 +70,7 @@ class OnboardingPage extends Component {
           handleSignup={this.props.handleSignup}
           {...this.state}
           logged_in={this.props.logged_in}
+          history={this.props.history}
         />
       </div>
     );

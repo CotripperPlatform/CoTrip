@@ -4,7 +4,7 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import OnboardingPage from "pages/OnboardingPage/OnboardingPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import Button from "components/Button/Button";
+// import Button from "components/Button/Button";
 import "./App.css";
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import {
@@ -106,16 +106,21 @@ class App extends Component {
   handle_logout = () => {
     localStorage.removeItem("token");
     this.setState({ logged_in: false, email: "" });
-    return <Redirect to="/login" />;
   };
   render() {
     return (
       <div className="App">
-        <Button text="logout" handleClick={this.handle_logout} />
+        {/* <Button text="logout" handleClick={this.handle_logout} /> */}
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           {/* <Route path="/home" exact component={HomePage}></Route> */}
-          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+          <Route
+            path="/coming_soon"
+            exact
+            render={routerProps => (
+              <ComingSoonPage handle_logout={this.handle_logout} {...routerProps} />
+            )}
+          ></Route>
           <Route
             path="/login"
             exact

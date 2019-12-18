@@ -35,11 +35,9 @@ class PersonalSettingsForm extends Component {
     this.props.save("personal", this.state);
     this.props.functionProp();
     this.props.handleSignup(this.state);
+    this.props.history.push("/coming_soon");
   };
   render() {
-    if (this.props.logged_in) {
-      this.props.history.push("/coming_soon");
-    }
     return (
       <div className="OnboardingPage__wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
