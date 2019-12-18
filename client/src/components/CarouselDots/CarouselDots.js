@@ -18,6 +18,14 @@ class CarouselDots extends Component {
     });
   };
 
+  componentDidUpdate(props) {
+    if (this.props.activeLocation !== props.activeLocation) {
+      this.setState({
+        activeLocation: this.props.activeLocation
+      });
+    }
+  }
+
   render() {
     let numberOfDots = this.props.numberOfDots;
     let activeLocation = this.state.activeLocation;
@@ -28,7 +36,7 @@ class CarouselDots extends Component {
         <div
           key={i}
           id={i}
-          onClick={this.handleClick}
+          // onClick={this.handleClick}
           className={`CarouselDot ${
             this.props.hasOwnProperty("border") ? " CarouselDot__border " : ""
           } ${i == activeLocation ? " CarouselDot--active " : ""} `}
@@ -48,6 +56,6 @@ class CarouselDots extends Component {
 CarouselDots.defaultProps = {
   numberOfDots: 3,
   activeLocation: 0
-}
+};
 
 export default CarouselDots;

@@ -11,6 +11,9 @@ const Logo = props => {
   } else if (props.large) {
     classList += ` Logo--large`;
   }
+  if (props.large) {
+    classList += " Logo--large";
+  }
   if (props.clickable && props.to) {
     return (
       <Link to={props.to}>

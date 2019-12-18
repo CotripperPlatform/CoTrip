@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
+import OnboardingPage from "pages/OnboardingPage/OnboardingPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import "./App.css";
@@ -109,6 +110,9 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          {/* <Route path="/login" exact component={LoginPage}></Route> */}
+          <Route path="/register" exact component={OnboardingPage}></Route>
+          {/* <Route path="/home" exact component={HomePage}></Route> */}
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
             path="/login"
