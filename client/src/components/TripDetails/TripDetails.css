@@ -3,20 +3,20 @@
   flex-direction: column;
   text-align: center;
   font-family: var(--default-font);
-  width: 100%;
 }
 .TripDetails__carousel-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 20rem;
+  width: 100%;
 }
 .TripDetails__image {
-  width: 20rem;
-  height: 15rem;
+  width: 100%;
+  height: 100%;
 }
 .TripDetails__right {
-  width: 19rem;
+  width: 95%;
+  margin: 0 auto;
 }
 .TripDetails__title {
   color: var(--purple);
@@ -38,7 +38,7 @@
     height: 27rem;
   }
   .TripDetails__right {
-    width: 36rem;
+    width: 95%;
   }
   .TripDetails__container {
     text-align: start;
