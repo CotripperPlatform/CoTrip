@@ -1,16 +1,46 @@
 import React from 'react'
-import { shallow, configure } from 'enzyme'
+import { shallow } from 'enzyme'
 import ExtraUsers from './ExtraUsers.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
 
-// We will describe a block of tests
+const setUp = (props = {}) => {
+  const component = shallow(<ExtraUsers {...props} />);
+  return component;
+};
 describe('ExtraUsers component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<ExtraUsers />)
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
-  })
+	describe("Have props", () => {
+    describe('More than 4 users',()=>{
+    it("Should render without errors", () => {
+      const props = {
+        to: 'PATH',
+        users: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+      };
+      let wrapper = setUp(props);
+      const component = wrapper.find(".ExtraUsers");
+      expect(component.length).toBe(1);
+    });
+    })
+    describe('4 or less users',()=>{
+      it("Should not render", () => {
+        const props = {
+          to: 'PATH',
+          users: [1, 2, 3, 4]
+        };
+        let wrapper = setUp(props);
+        const component = wrapper.find(".ExtraUsers");
+        expect(component.length).toBe(0);
+      });
+      })
+    
+  });
+
+  describe("Have NO props", () => {
+    let wrapper;
+    beforeEach(() => {
+      wrapper = setUp();
+    });
+    it("Should not render", () => {
+      const component = wrapper.find(".ExtraUsers");
+      expect(component.length).toBe(1);
+    });
+  });
 })

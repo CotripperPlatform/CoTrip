@@ -16,10 +16,18 @@
 .Card--pink {
   background-color: var(--pink);
 }
-
+.Card--red {
+  background-color: var(--red);
+}
+.Card--pink {
+  background-color: var(--pink);
+}
+.Card--yellow {
+  background-color: var(--yellow);
+}
 .Card--large {
   width: 1rem;
-  min-width: 31rem;
+  min-width: 32rem;
   height: 260px;
 }
 
@@ -33,6 +41,31 @@
   width: 1rem;
   min-width: 225px;
   height: 125px;
+}
+
+.Card--extra-small {
+  width: 1rem;
+  min-width: 180px;
+  height: 140px;
+}
+.Card--mobile {
+  display: flex;
+  flex-direction: column-reverse;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position-x: 2.7em;
+  background-position-y: 2.5rem;
+  text-align: center;
+  color: var(--white);
+  width: 10rem;
+  min-width: 160px;
+  height: 202px;
+}
+.Card--mobile div {
+  text-align: center;
+  width: 80%;
+  margin-left: 0.9rem;
+  height: 6rem;
 }
 
 .Card img {
@@ -59,6 +92,7 @@
 }
 
 .Card__discover-link {
+  color: black;
   text-align: center;
   margin-left: 22%;
   margin-right: 22%;
@@ -67,7 +101,9 @@
 
 .Card__discover-link a {
   font-size: 24px;
-  width: 55%;
+  width: 10rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   text-decoration: none;
 }
 
@@ -80,6 +116,6 @@
 
 @media only screen and (max-width: 576px) {
   .Card--large {
-    min-width: 16rem;
+    min-width: 17rem;
   }
 }
