@@ -32,12 +32,13 @@ export default class LoginPage extends Component {
             />
             <InputTextField
               name="password"
+              type="password"
               placeholder="Password"
               onChange={this.handleChange}
               value={this.state.password}
             />
 
-            <input text="Login" type="submit" />
+            <input className="LoginPage__submit" text="Login" type="submit" />
           </form>
         </div>
       </div>

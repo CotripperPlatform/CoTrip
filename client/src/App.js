@@ -4,39 +4,38 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import OnboardingPage from "pages/OnboardingPage/OnboardingPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-// import Button from "components/Button/Button";
 import "./App.css";
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import {
-//   faCheckSquare,
-//   faHeart,
-//   faTable,
-//   faComment,
-//   faCaretRight,
-//   faCaretLeft,
-//   faSearch,
-//   faAngleLeft,
-//   faAngleRight,
-//   faCommentDots
-// } from "@fortawesome/free-solid-svg-icons";
-// import { fab } from "@fortawesome/free-brands-svg-icons";
-// import { fas } from "@fortawesome/free-solid-svg-icons";
-// import { far } from "@fortawesome/free-regular-svg-icons";
-// library.add(
-//   fab,
-//   far,
-//   fas,
-//   faCheckSquare,
-//   faHeart,
-//   faTable,
-//   faComment,
-//   faCaretRight,
-//   faCaretLeft,
-//   faSearch,
-//   faAngleLeft,
-//   faAngleRight,
-//   faCommentDots
-// );
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faCheckSquare,
+  faHeart,
+  faTable,
+  faComment,
+  faCaretRight,
+  faCaretLeft,
+  faSearch,
+  faAngleLeft,
+  faAngleRight,
+  faCommentDots
+} from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import { far } from "@fortawesome/free-regular-svg-icons";
+library.add(
+  fab,
+  far,
+  fas,
+  faCheckSquare,
+  faHeart,
+  faTable,
+  faComment,
+  faCaretRight,
+  faCaretLeft,
+  faSearch,
+  faAngleLeft,
+  faAngleRight,
+  faCommentDots
+);
 
 class App extends Component {
   constructor(props) {
@@ -110,7 +109,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <Button text="logout" handleClick={this.handle_logout} /> */}
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           {/* <Route path="/home" exact component={HomePage}></Route> */}

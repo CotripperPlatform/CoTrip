@@ -7,7 +7,7 @@ const ComingSoonPage = props => {
   // Default Class to apply to Component
   const handleClick = () => {
     props.handle_logout();
-    props.history.push("/login");
+    props.history.push("/");
   };
   return (
     <div className="ComingSoonPage__wrapper">
