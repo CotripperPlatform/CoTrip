@@ -88,10 +88,8 @@
 }
 
 .Card__outline {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 1rem;
+  padding: 5vh 0 7vh 0;
+
   background: none;
   border: 3px dashed var(--purple);
   -webkit-box-shadow: none;
@@ -102,8 +100,6 @@
 .Card__discover-link {
   color: black;
   text-align: center;
-  margin-left: 22%;
-  margin-right: 22%;
   transition: transform 0.3s;
 }
 
