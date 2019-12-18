@@ -1,0 +1,20 @@
+.Banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin: 0 auto;
+  width: 100%;
+  width: 100vw;
+  min-height: 230px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-family: var(--default-font);
+  font-size: 48px;
+  color: #fafafa;
+  line-height: 72px;
+  margin-bottom: 3rem;
+}

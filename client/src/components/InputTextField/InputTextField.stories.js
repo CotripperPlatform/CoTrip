@@ -33,4 +33,26 @@ storiesOf("InputTextField", module)
   ))
   .add("Search Trips", () => (
     <InputTextField type="text" variation="search" name="search trips" placeholder="Search Trips" />
+  ))
+  .add("Search Trips, Many", () => (
+    <div>
+      <InputTextField
+        type="text"
+        variation="search"
+        name="search trips"
+        placeholder="Search Trips"
+      />
+      <InputTextField
+        type="text"
+        variation="search"
+        name="search trips"
+        placeholder="Search Trips"
+      />
+      <InputTextField
+        type="text"
+        variation="search"
+        name="search trips"
+        placeholder="Search Trips"
+      />
+    </div>
   ));
