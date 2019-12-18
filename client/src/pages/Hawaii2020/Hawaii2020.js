@@ -1,14 +1,14 @@
 import React from 'react';
 import "./Hawaii2020.css";
-import NavBar from "../../components/Navbar/Navbar";
-import Banner from "../../components/Banner/Banner";
-import Banner__pink from "../../components/Banner/Banner__pink.png";
-import BannerImageCard from "../../components/BannerImageCard/BannerImageCard";
-import Banner__Image from "../../assets/images/TripBanner.png";
-import TripDetails from "../../components/TripDetails/TripDetails";
-import ActivityList from "../../components/ActivityList/ActivityList";
-import Button from "../../components/Button/Button";
-import Footer from "../../components/Footer/Footer";
+import NavBar from "components/Navbar/Navbar";
+import Banner from "components/Banner/Banner";
+import Banner__pink from "components/Banner/Banner__pink.png";
+import BannerImageCard from "components/BannerImageCard/BannerImageCard";
+import Banner__Image from "assets/images/TripBanner.png";
+import TripDetails from "components/TripDetails/TripDetails";
+import ActivityList from "components/ActivityList/ActivityList";
+import Button from "components/Button/Button";
+import Footer from "components/Footer/Footer";
 
 const Hawaii2020 = (props) => {
   let momActivities = ["Spa", "Wine Nights", "Brunch with Other Moms"];
