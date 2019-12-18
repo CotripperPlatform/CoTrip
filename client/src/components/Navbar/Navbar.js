@@ -14,33 +14,13 @@ class Navbar extends Component {
     // Default CSS class to apply to the Component
     this.state = {
       condensedMenuActive: false,
-      // pageMark controls the triangle that marks which page the user is on.
-      // Passing 0-3 as a prop into this component controls where it displays.
-      pageMark: ["", "", "", ""],
       // menuItems are careated in order of the following array.
       menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
     };
   }
 
-  // Sets the location of the triangle on the menu depending on prop.page
-  setPageMarker = () => {
-    let setPage = [];
-    for (let i = 0; i < 4; i++) {
-      if (i === this.props.page) {
-        setPage.push("Navbar__show");
-      } else {
-        setPage.push("");
-      }
-    }
-    this.setState({ pageMark: setPage });
-  }
-
   clickHandler = () => {
     console.log("Clicked!")
-  }
-
-  componentWillMount() {
-    this.setPageMarker();
   }
 
   render() {
@@ -63,8 +43,9 @@ class Navbar extends Component {
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
                 <NavLink text={item} to={"/"} menuList={[]} />
-                <div className={`Navbar__triangle ${this.state.pageMark[key]} 
-                  ${this.state.condensedMenuActive && `Navbar__hide`}`}></div>
+                {this.props.page === key && (
+                  <div className={`Navbar__triangle`}></div>
+                )}
               </div>
             ))}
           </div>
@@ -84,7 +65,7 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-  page: 1
+  page: 0
 };
 
 export default Navbar;

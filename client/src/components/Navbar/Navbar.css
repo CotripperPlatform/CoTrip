@@ -47,7 +47,6 @@
 }
 
 .Navbar__triangle {
-  display: none;
   width: 0;
   height: 0;
   border-left: 31px solid transparent;
@@ -108,11 +107,17 @@
   .Navbar__logo {
     margin: 0 0 0 47%;
   }
+  
+  .Navbar__triangle {
+    display: none;  
+  }
 }
 
 /* Medium devices */
 @media only screen and (max-width: 768px) {
-  
+  .Navbar__triangle {
+    display: none;  
+  }
 }
 
 /* Small devices */
@@ -125,6 +130,10 @@
   }
   .Navbar__main {
     top: 210px;
+  }
+
+  .Navbar__triangle {
+    display: none;
   }
 }
 
@@ -146,6 +155,10 @@
   .Navbar__right {
     width: 100vw;
     padding-bottom: 20px;
+  }
+
+  .Navbar__triangle {
+    display: none;
   }
 }
 
