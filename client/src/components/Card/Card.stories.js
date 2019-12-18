@@ -8,8 +8,16 @@ import trends from "../../assets/images/trending-hashtags.png";
 import groups from "../../assets/images/protest.png";
 
 storiesOf("Card", module)
-  .add("Card, Purple", () => <Card color="purple" size="large" />)
-  .add("Card, Purple, Small", () => <Card color="purple" size="small" />)
+  .add("Card, Purple", () => (
+    <Card color="purple" size="large">
+      <span>hello</span>
+    </Card>
+  ))
+  .add("Card, Purple, Small", () => (
+    <Card color="purple" size="small">
+      <span>hello</span>
+    </Card>
+  ))
   .add("Card, Pink", () => <Card color="pink" size="large" />)
   .add("Card, Pink, Small", () => <Card color="pink" size="small" />)
   .add("Card, Blank", () => <Card size="large" />)

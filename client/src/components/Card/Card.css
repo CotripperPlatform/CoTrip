@@ -65,14 +65,15 @@
   text-align: center;
   color: var(--white);
   width: 10rem;
-  min-width: 160px;
-  height: 202px;
+  max-width: 160px;
+  max-height: 202px;
 }
 .Card--mobile div {
   text-align: center;
   width: 80%;
   margin-left: 0.9rem;
-  height: 6rem;
+
+  border: 2px solid black;
 }
 
 .Card img {
