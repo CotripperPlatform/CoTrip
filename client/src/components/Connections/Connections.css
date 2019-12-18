@@ -1,5 +1,5 @@
 .Connections__heading {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: var(--default-font);
   color: var(--purple);
 }
@@ -12,13 +12,13 @@
 
 .Connections__link {
   color: var(--blue-lite);
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: var(--default-font);
   font-weight: normal;
 }
 
 .Connections__person {
-  margin: 0 2rem 0 0;
+  margin: 0 1rem 0 0;
 }
 
 .Connections__person__div {
@@ -32,7 +32,7 @@
 }
 
 .Connections--name {
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: var(--default-font);
   text-align: center;
 }
@@ -46,10 +46,6 @@
 @media only screen and (max-width: 1000px) {
   .Connections__heading {
     text-align: center;
-  }
-
-  .Connections--name {
-    font-size: 1rem;
   }
 
   .Connections__list {
