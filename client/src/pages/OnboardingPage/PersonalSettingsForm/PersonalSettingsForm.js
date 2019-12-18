@@ -30,6 +30,7 @@ class PersonalSettingsForm extends Component {
   };
   next = () => {
     this.props.save("personal", this.state);
+    console.log(this.state);
     this.props.functionProp();
     this.props.handleSignup(this.state);
     this.props.history.push("/coming_soon");
@@ -66,7 +67,7 @@ class PersonalSettingsForm extends Component {
           <InputTextField
             type="text"
             name="dream_destination"
-            placeholder="What is your dream destination(s)?"
+            placeholder="What is your dream destination?"
             onChange={this.updateValue}
           />
 

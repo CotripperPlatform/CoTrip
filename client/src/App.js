@@ -43,7 +43,8 @@ class App extends Component {
     this.state = {
       logged_in: localStorage.getItem("token") ? true : false,
       email: "",
-      first_name: ""
+      first_name: "",
+      image: ""
     };
   }
   componentDidMount() {
@@ -56,7 +57,11 @@ class App extends Component {
         .then(res => res.json())
         .then(json => {
           console.log(json);
-          this.setState({ email: json.email, first_name: json.profile.first_name });
+          this.setState({
+            email: json.email,
+            first_name: json.profile.first_name,
+            image: json.profile.image
+          });
         });
     }
   }
@@ -75,7 +80,8 @@ class App extends Component {
         this.setState({
           logged_in: true,
           email: json.user.email,
-          first_name: json.user.profile.first_name
+          first_name: json.user.profile.first_name,
+          image: json.user.profile.image
         });
       })
       .catch(err => {
@@ -97,7 +103,8 @@ class App extends Component {
         this.setState({
           logged_in: true,
           email: json.user.email,
-          first_name: json.user.profile.first_name
+          first_name: json.user.profile.first_name,
+          image: json.user.profile.image
         });
       })
       .catch(err => {
@@ -106,7 +113,7 @@ class App extends Component {
   };
   handle_logout = () => {
     localStorage.removeItem("token");
-    this.setState({ logged_in: false, email: "" });
+    this.setState({ logged_in: false, email: "", first_name: "", image: "" });
   };
   render() {
     return (
