@@ -39,7 +39,7 @@ class PersonalSettingsForm extends Component {
   };
   render() {
     return (
-      <div className="OnboardingPage__wrapper">
+      <div className="OnboardingPage__inner-wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
         <div className="OnboardingPage__form-container">
           {this.state.profile.img === "" ? (
