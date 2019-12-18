@@ -1,4 +1,5 @@
 from rest_framework import generics, permissions
+from rest_framework.mixins import UpdateModelMixin
 from rest_framework.response import Response
 from knox.models import AuthToken
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer,ProfileSerializer
@@ -52,17 +53,16 @@ class ProfileDetail(generics.RetrieveAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     
-class ProfileUpdate(generics.RetrieveUpdateAPIView):
+class ProfileUpdate(generics.RetrieveUpdateAPIView, UpdateModelMixin):
     permission_classes = [
         permissions.IsAuthenticated,
     ]
-    serializer_class = ProfileSerializer(partial=True)
+    serializer_class = ProfileSerializer
     
     def get_object(self):
-        return self.request.user.profile
+        return self.partial_update(self, self.request)
     
-
-
+    
 # not added to urls VVV
 class UserList(generics.ListAPIView):
     serializer_class = UserSerializer
