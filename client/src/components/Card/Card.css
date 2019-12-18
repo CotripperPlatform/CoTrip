@@ -51,8 +51,8 @@
   height: 140px;
 }
 
-.Card__contents-container img {
-  padding: 2.2vh 0 2.2vh 0;
+.Card__contents-container {
+  /* border: 2px solid black; */
 }
 
 .Card--mobile {

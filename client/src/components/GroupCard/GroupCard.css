@@ -1,39 +1,46 @@
 .GroupCard {
-    border-radius: 3px;
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-decoration: none;
+  border-radius: 3px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  border: 2px solid black;
+  padding-top: 4.5vh;
 }
 
 .GroupCard__text-container {
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vh 0 1vh 0;
+  border: 2px solid black;
 }
 
 .GroupCard__group-name {
-    font-size: 1.5rem;
-    line-height: 90%;
-    padding: 2.5rem 0rem 1rem 1.2rem;
-    font-weight: var(--title-weight);
-    margin-top: 0;
+  font-size: 1.3vw;
+  /* line-height: 90%; */
+  padding: 0rm 0rem 0rem 1.2rem;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+  font-weight: var(--title-weight);
+  border: 2px solid black;
 }
 
 .GroupCard__details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 0.9rem;
 }
 
 .GroupCard__members {
-    margin: 0.2rem;
+  margin: 0.2rem;
+  /* border: 2px solid black; */
 }
 
 .GroupCard__location {
-    margin: 0.2rem;
+  margin: 0.2rem;
+  /* border: 2px solid black; */
 }
