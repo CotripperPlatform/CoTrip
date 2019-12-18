@@ -17,6 +17,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  width: 50vw;
+  border: 2px solid black;
 }
 
 .LoginPage__form {
@@ -49,4 +51,10 @@
 
 .LoginPage__submit:hover {
   background-color: var(--white-hover);
+}
+
+@media screen and (max-width: 420px) {
+  .LoginPage__form-container {
+    width: 95vw;
+  }
 }
