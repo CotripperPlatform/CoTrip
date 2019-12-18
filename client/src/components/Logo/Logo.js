@@ -13,15 +13,15 @@ const Logo = props => {
   }
   if (props.clickable && props.to) {
     return (
-      <div className={classList}>
-        <Link to={props.to} />
-      </div>
+      <Link to={props.to}>
+        <div className={classList}></div>
+      </Link>
     );
   } else if (props.clickable) {
     return (
-      <div className={classList}>
-        <Link to="/" />
-      </div>
+      <Link to="/">
+        <div className={classList}></div>
+      </Link>
     );
   } else {
     return <div className={classList}></div>;
