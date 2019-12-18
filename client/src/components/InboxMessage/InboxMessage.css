@@ -10,6 +10,24 @@
   font-family: var(--paragraph-font);
 }
 
+.InboxMessage__profilePics {
+  display: flex;
+  position: relative;
+}
+.InboxMessage__child:nth-child(1) {
+  z-index: 0;
+}
+.InboxMessage__child:nth-child(2) {
+  position: absolute;
+  left: 2.5rem;
+  z-index: -1;
+}
+.InboxMessage__child:nth-child(3) {
+  position: absolute;
+  left: 5rem;
+  z-index: -2;
+}
+
 .InboxMessage__conversation {
   display: flex;
   flex-direction: column;
@@ -24,5 +42,8 @@
 }
 
 .InboxMessage__message {
-  /* height: 30px; */
+  height: 46px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
