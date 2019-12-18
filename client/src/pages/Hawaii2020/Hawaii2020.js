@@ -2,7 +2,9 @@ import React from 'react';
 import "./Hawaii2020.css";
 import NavBar from "../../components/Navbar/Navbar";
 import Banner from "../../components/Banner/Banner";
-import Banner__pink from "../../components/Banner/Banner__pink.png"
+import Banner__pink from "../../components/Banner/Banner__pink.png";
+import BannerImageCard from "../../components/BannerImageCard/BannerImageCard";
+import Banner__Image from "../../assets/images/TripBanner.png";
 import TripDetails from "../../components/TripDetails/TripDetails";
 import ActivityList from "../../components/ActivityList/ActivityList";
 import Button from "../../components/Button/Button";
@@ -25,6 +27,7 @@ const Hawaii2020 = (props) => {
       <Banner background={Banner__pink}>
         <h3>Trip: Hawaii 2020</h3>
       </Banner>
+      <BannerImageCard background={Banner__Image} message="Hawaii 2020" />
       <TripDetails />
       <ActivityList title="Activities for Moms" activities={momActivities} color="purple" />
       <ActivityList title="Activities for Moms & Kids" activities={kidsActivities} color="red" />
