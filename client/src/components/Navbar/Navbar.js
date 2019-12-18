@@ -24,6 +24,17 @@ class Navbar extends Component {
   }
 
   render() {
+    this.propTypes = {
+      page: PropTypes.number,
+      image: PropTypes.string,
+      to: PropTypes.string
+    };
+
+    this.defaultProps = {
+      page: 0,
+      image: "../../assets/images/profile-picture-1.png",
+      to: this.props.profileUrl
+    };
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
@@ -59,17 +70,5 @@ class Navbar extends Component {
     );
   }
 }
-
-Navbar.propTypes = {
-  page: PropTypes.number,
-  image: PropTypes.string,
-  to: PropTypes.string
-};
-
-Navbar.defaultProps = {
-  page: 0,
-  image: "../../assets/images/profile-picture-1.png",
-  to: "/"
-};
 
 export default Navbar;
