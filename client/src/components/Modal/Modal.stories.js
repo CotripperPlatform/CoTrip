@@ -10,10 +10,6 @@ function handleJoin(evt) {
   evt.preventDefault()
   alert('Joined!')
 }
-function handleCancel (evt){
-  evt.preventDefault()
-  alert('Canceled!')
-}
 function handleClose (evt){
   evt.preventDefault()
   alert('Modal Closed!')
@@ -25,7 +21,7 @@ storiesOf('Modal', module)
           confirmText={"Confirm"} 
           cancelText={"Cancel"}
           onConfirm={handleConfirm} 
-          onCancel={handleCancel}
+          onCancel={handleClose}
           onClose={handleClose}/>
   )
   .add("Join Modal", () =>
@@ -33,6 +29,6 @@ storiesOf('Modal', module)
             confirmText={"Join"} 
             cancelText={"Cancel"}
             onConfirm={handleJoin} 
-            onCancel={handleCancel}
+            onCancel={handleClose}
             onClose={handleClose}/>
   ) 
