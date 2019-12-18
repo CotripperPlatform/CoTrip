@@ -12,7 +12,7 @@ import image4 from "assets/images/easternCaribbean.png";
 import Button from "components/Button/Button";
 import Footer from "components/Footer/Footer";
 
-const BookATripPage = (props) => {
+const BookATripPage = () => {
   return(
     <div className="BookATripPage">
       <NavBar />
