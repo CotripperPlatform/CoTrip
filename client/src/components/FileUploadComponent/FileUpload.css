@@ -1,6 +1,7 @@
 .FileUpload {
   height: 180px;
   width: 180px;
+  margin: 0 0 10px 0;
   border: solid var(--yellow) 1px;
   border-radius: 50%;
   text-align: center;

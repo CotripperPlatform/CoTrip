@@ -1,11 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "@storybook/router";
 import UserSetupForm from "./UserSetupForm/UserSetupForm";
 import FilterSettingsForm from "./FilterSettingsForm/FilterSettingsForm";
 import PersonalSettingsForm from "./PersonalSettingsForm/PersonalSettingsForm";
-import InputTextField from "components/InputTextField/InputTextField";
-import Button from "components/Button/Button";
-import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import "./OnboardingPage.css";
 import Logo from "components/Logo/Logo.js";
 import CarouselDots from "components/CarouselDots/CarouselDots";
