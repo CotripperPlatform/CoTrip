@@ -32,12 +32,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 3vh;
+  /* border: 3px solid black; */
 }
 
 .HomePage__suggestions-container {
   opacity: 0;
-  height: 50rem;
-  width: 60rem;
+  max-width: 70vw;
   /* border: 5px solid blue; */
   margin-left: 8rem;
   animation: slide-up 0.9s ease forwards;
@@ -52,8 +53,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 10rem;
-  width: 50rem;
+  width: 45vw;
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
   /* border: 5px solid red; */
@@ -64,7 +64,7 @@
   flex-direction: row;
   justify-content: space-around;
   height: 20rem;
-  width: 50rem;
+  width: 45vw;
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
   /* border: 5px solid red; */
@@ -90,12 +90,7 @@
   transform: scale(1.1);
   background-color: var(--yellow);
 }
-.placeholder-person-card {
-  width: 220px;
-  height: 300px;
-  /* border: 3px solid gray; */
-  box-shadow: 0px 7px 5px -2px rgba(0, 0, 0, 0.64);
-}
+
 /**
 |--------------------------------------------------
 | Contents on left side top of page. Suggested groups
@@ -110,10 +105,8 @@
 |--------------------------------------------------
 */
 .HomePage__top-cards-wrapper {
-  height: 50rem;
-  width: 50rem;
+  width: 43vw;
   /* border: 5px solid green; */
-  margin-right: 4rem;
   animation: slide-up 0.7s ease forwards;
 }
 .HomePage__cards-container {
@@ -121,14 +114,37 @@
   flex-direction: column;
   justify-content: space-between;
   height: 35rem;
-  width: 33rem;
+  width: 30vw;
   /* border: 3px solid goldenrod; */
   margin: 1rem;
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
+  .HomePage_top-items-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 2vh;
+  }
+  .HomePage__group-cards-container {
+    width: 60vw;
+  }
+  .HomePage__cards-container {
+    display: flex;
+    flex-direction: row;
+    height: 20rem;
+  }
+  .HomePage__people-container {
+    width: 60vw;
+  }
   .HomePage__top-cards-wrapper {
-    display: none;
+    width: 55vw;
+  }
+  .HomePage__cards-container {
+    margin: 1vh 0vw 1vh 2vw;
+    width: 60vw;
   }
 }
 
