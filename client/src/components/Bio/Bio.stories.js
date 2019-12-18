@@ -11,7 +11,7 @@ let people = [
     facebook: "www.facebook.com",
     instagram: "www.instagram.com",
     pinterest: "www.pinterest.com",
-    isUser: true
+    isCurrentUser: true
   },
   { name: "Martha", bio: "sup yall" }
 ];
@@ -25,7 +25,7 @@ storiesOf("Bio", module).add("Default", () => (
     name={people[0].name}
     bio={people[0].bio}
     hashtags={people[0].hashtags}
-    isCurrentUser={people[0].isUser}
+    isCurrentUser={people[0].isCurrentUser}
     onClick={console.log("Hello")}
   />
 ));
