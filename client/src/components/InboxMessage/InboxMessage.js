@@ -3,6 +3,7 @@ import "./InboxMessage.css";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import defaultPic from "assets/images/profile-picture-1.png";
 import defaultPic2 from "assets/images/profile-picture-2.png";
+
 import ExtraUsers from "../ExtraUsers/ExtraUsers";
 
 // Function based React Component
@@ -20,7 +21,7 @@ const InboxMessage = props => {
   let names = props.conversation.users.map((user, i) => {
     if (i === 2 && props.conversation.users.length > 3) {
       return "...";
-    } else if (i === props.conversation.users.length - 1) {
+    } else if (i === props.conversation.users.length - 1 && i <= 2) {
       return `${user.name}`;
     } else if (i < 2) {
       return `${user.name}, `;
@@ -42,7 +43,7 @@ InboxMessage.defaultProps = {
   conversation: {
     thread: [
       {
-        message: "Hey, girl! Just wanted to see if you are going on this trip.",
+        message: "Hey, girl! Just wanted to see if you are going on this trippppppp. Hey, girl! Just wanted to see if you are going on this trip.",
         user: "props.users[0]"
       },
       {

@@ -9,10 +9,10 @@
 }
 
 .ExtraUsers__text {
-  padding: 0 .5rem 0 0;
+  padding: 0 .8rem 0 0;
   text-decoration: none;
   color: var(--white);
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: var(--paragraph-weight);
   font-family: var(--default-font);
   text-decoration: none;
