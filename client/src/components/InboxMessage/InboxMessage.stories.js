@@ -4,5 +4,5 @@ import InboxMessage from "./InboxMessage";
 import Image from "assets/images/profile_large.png";
 
 storiesOf("InboxMessage", module).add("Default", () => (
-  <InboxMessage profilePic={Image} name={"Raymond"} message={"Hello World"} />
+  <InboxMessage profilePic={Image} name={"Raymond"} message={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod..."} />
 ));
