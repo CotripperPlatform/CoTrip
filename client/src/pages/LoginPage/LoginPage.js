@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import InputTextField from "../../components/InputTextField/InputTextField";
-// import Button from "../../components/Button/Button";
 import Logo from "../../components/Logo/Logo";
 import "./LoginPage.css";
 
@@ -13,17 +12,18 @@ export default class LoginPage extends Component {
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
+  handleSubmit = e => {
+    e.preventDefault();
+    this.props.handleLogin(this.state);
+    this.props.history.push("/coming_soon");
+  };
 
   render() {
-    if (this.props.logged_in) {
-      this.props.history.push("/coming_soon");
-    }
-
     return (
       <div className="LoginPage">
         <Logo large />
         <div className="LoginPage__form-container">
-          <form className="LoginPage__form" onSubmit={e => this.props.handleLogin(e, this.state)}>
+          <form className="LoginPage__form" onSubmit={this.handleSubmit}>
             <InputTextField
               name="email"
               placeholder="Email"

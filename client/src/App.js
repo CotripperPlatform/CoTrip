@@ -60,8 +60,7 @@ class App extends Component {
         });
     }
   }
-  handle_login = (e, data) => {
-    e.preventDefault();
+  handle_login = data => {
     fetch("http://localhost:8000/auth/login", {
       method: "POST",
       headers: {
