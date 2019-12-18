@@ -31,8 +31,6 @@
   max-width: 500px;
   min-width: 200px;
   max-height: 275px;
-  /* min-width: 32rem; */
-  /* height: 260px; */
 }
 .Card--medium {
   width: 14.2vw;
@@ -126,7 +124,7 @@
     margin: 1.75rem 0.875rem 0 0.875rem;
     border-radius: 2.1px;
     padding: 0.43rem;
-    font-size: 1.2rem;
+    font-size: 1.2vw;
   }
   .Card--large {
     min-width: 17rem;
