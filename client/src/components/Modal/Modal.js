@@ -8,7 +8,7 @@ class Modal extends Component {
   
   render() {
     return (
-      <div className="Modal">
+      <div className="Modal" style={{transform: this.props.showModal ? 'translateY(0vh)' : 'translateY(-100vh)', opacity: this.props.showModal ? '1' : '0'}}>
         <div className="Modal__close">
           <a href="#" className="Modal__closeButton" onClick={this.props.onClose}>×</a>
         </div>
@@ -19,7 +19,7 @@ class Modal extends Component {
         </div>
         <div className="Modal__footer">
           <div className="Modal__footerButtons">
-            <button className="Modal__footerButtonCancel" onClick={this.props.onCancel}>{this.props.cancelText}</button>
+            <button className="Modal__footerButtonCancel" onClick={this.props.onClose}>{this.props.cancelText}</button>
           </div>
           <div className="Modal__footerButtons">
             <button className="Modal__footerButtonConfirm" onClick={this.props.onConfirm}>{this.props.confirmText}</button>

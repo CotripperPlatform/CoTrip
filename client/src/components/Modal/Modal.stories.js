@@ -14,15 +14,19 @@ function handleClose (evt){
   evt.preventDefault()
   alert('Modal Closed!')
 }
+function showModal (evt){
+  evt.preventDefault()
+  alert('Modal Opened')
+}
 
 storiesOf('Modal', module)
   .add("Follow Modal", () => 
     <Modal message={"Are you sure you want to follow"} 
           confirmText={"Confirm"} 
           cancelText={"Cancel"}
-          onConfirm={handleConfirm} 
-          onCancel={handleClose}
-          onClose={handleClose}/>
+          onConfirm={handleConfirm}
+          onClose={handleClose}
+          showModal={showModal}/>
   )
   .add("Join Modal", () =>
     <Modal  message={"Are you sure you want to Join"} 
@@ -30,5 +34,6 @@ storiesOf('Modal', module)
             cancelText={"Cancel"}
             onConfirm={handleJoin} 
             onCancel={handleClose}
-            onClose={handleClose}/>
+            onClose={handleClose}
+            showModal={showModal}/>
   ) 
