@@ -10,7 +10,7 @@ import ActivityList from "components/ActivityList/ActivityList";
 import Button from "components/Button/Button";
 import Footer from "components/Footer/Footer";
 
-const Hawaii2020 = (props) => {
+const Hawaii2020 = () => {
   let momActivities = ["Spa", "Wine Nights", "Brunch with Other Moms"];
   let kidsActivities = [
     "Snorkeling",
