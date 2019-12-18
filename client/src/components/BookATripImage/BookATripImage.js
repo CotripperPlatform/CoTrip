@@ -8,6 +8,7 @@ const BookATripImage = (props) => {
     <div className="BookATripImage">
       <div className="BookATripImage__image-group">
         {props.cards.map(card => {
+          // console.log(card.image)
           return (
               <div className="BookATripImage__image-container">
                 <div className="BookATripImage__image" style={{ backgroundImage: `url(${card.image})`}}></div>
