@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
+import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -13,8 +14,12 @@ import {
   faSearch,
   faAngleLeft,
   faAngleRight,
+<<<<<<< HEAD
   faCommentDots,
   faEdit
+=======
+  faCommentDots
+>>>>>>> bc5111f4908849e763736299a6b51084b7f014d2
 } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -32,8 +37,12 @@ library.add(
   faSearch,
   faAngleLeft,
   faAngleRight,
+<<<<<<< HEAD
   faCommentDots,
   faEdit
+=======
+  faCommentDots
+>>>>>>> bc5111f4908849e763736299a6b51084b7f014d2
 );
 
 class App extends Component {
@@ -42,6 +51,7 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
         </main>
       </div>
     );

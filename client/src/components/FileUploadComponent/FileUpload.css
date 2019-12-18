@@ -4,6 +4,7 @@
   border: solid var(--yellow) 1px;
   border-radius: 50%;
   text-align: center;
+  background: var(--white);
 }
 
 .FileUpload h1 {
