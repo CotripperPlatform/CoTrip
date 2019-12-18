@@ -1,16 +1,45 @@
 import React from "react";
-import { shallow, configure } from "enzyme";
-import TripCard from "./TripCard.js.js";
-import Adapter from "enzyme-adapter-react-16";
-configure({ adapter: new Adapter() });
+import { shallow } from "enzyme";
+import TripCard from "./TripCard"
+import example1 from "../../assets/images/card_small2.png";
 
-// We will describe a block of tests
+const setUp = props => {
+  const component = shallow(<TripCard {...props}/>);
+  return component;
+}
 describe("TripCard component", () => {
-  // we will write one individual test
-  it("should render as expected", () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<TripCard />);
-    // We create an assertion within the test that checks if our component renders our name prop
-    // expect(component.contains('Your name')).toBe(true)
-  });
+  describe('Has props', ()=>{
+    let wrapper;
+    beforeEach(()=>{
+      const props = {
+        src:{example1},
+        location:'Hawaii',
+        date:"May 2020"
+      }
+      wrapper = setUp(props)
+    })
+    it('Should render as expected', ()=>{
+      expect(wrapper.find('Card').length).toBe(1);
+      expect(wrapper.find('.TripCard').length).toBe(1);
+    })
+    it('Should render trip location',()=>{
+      expect(wrapper.find('h3').length).toBe(1);
+      expect(wrapper.find('h3').text()).toEqual('Hawaii');
+    })
+    it('Should render trip date',()=>{
+      expect(wrapper.find('h4').length).toBe(1);
+      expect(wrapper.find('h4').text()).toEqual('May 2020');
+    })
+  })
+  describe('Has NO props', ()=>{
+    let wrapper;
+    beforeEach(()=>{
+      const props = null;
+      wrapper = setUp(props)
+    })
+    it('Should render as expected', ()=>{
+      expect(wrapper.find('Card').length).toBe(1);
+      expect(wrapper.find('.TripCard').length).toBe(1);
+    })
+  })
 });
