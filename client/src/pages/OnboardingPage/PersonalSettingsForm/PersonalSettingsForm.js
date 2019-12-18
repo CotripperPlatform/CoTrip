@@ -39,10 +39,10 @@ class PersonalSettingsForm extends Component {
   };
   render() {
     return (
-      <div className="OnboardingPage__wrapper">
+      <div className="OnboardingPage__inner-wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
         <div className="OnboardingPage__form-container">
-          {this.state.img === "" ? (
+          {this.state.profile.img === "" ? (
             <FileUpload
               header="Upload a profile photo"
               buttonLabel="Browse Files"
@@ -51,12 +51,12 @@ class PersonalSettingsForm extends Component {
                 evt.persist();
                 console.log(evt);
                 let imageUrl = URL.createObjectURL(evt.target.files[0]);
-                this.setState({ img: imageUrl });
+                this.setState({ profile: { ...this.state.profile, img: imageUrl }});
                 return imageUrl;
               }}
             ></FileUpload>
           ) : (
-            <ProfilePicture type="medium" image={this.state.img}></ProfilePicture>
+            <ProfilePicture type="medium" image={this.state.profile.img}></ProfilePicture>
           )}
 
           <InputTextField
