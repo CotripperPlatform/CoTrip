@@ -32,9 +32,17 @@ describe('Splash Page', ()=>{
             cy.get('button')
                 .eq(1)  
                 .click()
-      
-        
+        })
+        it('Should redirect on click',()=>{
+            cy.get('button')
+                .eq(0)  
+                .click()
+    
+            cy.get('button')
+                .eq(1)  
+                .click()
         })
 
     })
+    
 })
