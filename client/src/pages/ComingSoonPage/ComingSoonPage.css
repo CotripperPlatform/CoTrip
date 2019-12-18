@@ -1,0 +1,14 @@
+.ComingSoonPage__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--yellow);
+  height: 100vh;
+  width: 100vw;
+  font-family: var(--default-font);
+  font-size: 5vw;
+  color: var(--white);
+}
+.ComingSoonPage__wrapper h1 {
+  padding-top: 20vh;
+}

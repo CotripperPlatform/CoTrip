@@ -60,6 +60,9 @@ class Pill extends Component {
     } else {
       classList += activeColor;
     }
+    if (this.props.hasOwnProperty("onboarding")) {
+      classList += " Pill--onboarding";
+    }
 
     let conditionalIcon = this.props.icon ? this.renderHeart() : <div />;
     return (
@@ -72,13 +75,11 @@ class Pill extends Component {
 }
 
 Pill.defaultProps = {
-  text:"Default",
-  size:"large",
-  color:"pink",
-  inactiveColor:"red",
-  selectId:0,
-  shadow:""
-
-
-}
+  text: "Default",
+  size: "large",
+  color: "pink",
+  inactiveColor: "red",
+  selectId: 0,
+  shadow: ""
+};
 export default Pill;
