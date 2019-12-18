@@ -24,17 +24,6 @@ class Navbar extends Component {
   }
 
   render() {
-    this.propTypes = {
-      page: PropTypes.number,
-      image: PropTypes.string,
-      to: PropTypes.string
-    };
-
-    this.defaultProps = {
-      page: 0,
-      image: "../../assets/images/profile-picture-1.png",
-      to: this.props.profileUrl
-    };
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
@@ -63,12 +52,24 @@ class Navbar extends Component {
           <div className="Navbar__right">
             <Icon icon={"search"} size="2x" onClick={this.clickHandler} />
             <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.clickHandler} />
-            <ProfilePicture type="extra-small" to={this.props.profileUrl} image={this.props.profileImage} />
+            <ProfilePicture type="extra-small" to={this.props.to} image={this.props.profileImage} />
           </div>
         </div>
       </div>
     );
   }
 }
+
+Navbar.propTypes = {
+  page: PropTypes.number,
+  image: PropTypes.string,
+  to: PropTypes.string
+};
+
+Navbar.defaultProps = {
+  page: 0,
+  image: "../../assets/images/profile-picture-1.png",
+  to: "/"
+};
 
 export default Navbar;

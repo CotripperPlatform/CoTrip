@@ -5,7 +5,7 @@ import ProfileImage from "../../assets/images/profile-picture-1.png";
 
 storiesOf("Navbar", module).add("Default", () => (
   <Navbar
-    profileUrl={"/"}
+    to={"/"}
     profileImage={ProfileImage}
     page={0}
   />
