@@ -6,8 +6,8 @@
   padding: 1rem;
   width: 26.19rem;
   height: calc(71px+2rem);
-  border: 1px solid black;
-  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid var(--black);
+  font-family: var(--paragraph-font);
 }
 
 .InboxMessage__conversation {
@@ -20,10 +20,9 @@
 }
 
 .InboxMessage__name {
-  font-weight: 900;
+  font-weight: var(--banner-weight);
 }
 
 .InboxMessage__message {
-  font-weight: 100;
-  height: 30px;
+  /* height: 30px; */
 }
