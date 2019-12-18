@@ -15,6 +15,10 @@ export default class LoginPage extends Component {
   };
 
   render() {
+    if (this.props.logged_in) {
+      this.props.history.push("/coming_soon");
+    }
+
     return (
       <div className="LoginPage">
         <Logo large />

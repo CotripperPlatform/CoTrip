@@ -69,6 +69,7 @@ class OnboardingPage extends Component {
           functionProp={this.handleClick}
           handleSignup={this.props.handleSignup}
           {...this.state}
+          logged_in={this.props.logged_in}
         />
       </div>
     );

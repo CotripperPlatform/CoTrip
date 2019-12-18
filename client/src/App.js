@@ -4,6 +4,7 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import OnboardingPage from "pages/OnboardingPage/OnboardingPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import Button from "components/Button/Button";
 import "./App.css";
 // import { library } from "@fortawesome/fontawesome-svg-core";
 // import {
@@ -82,7 +83,6 @@ class App extends Component {
       });
   };
   handle_signup = data => {
-    // e.preventDefault();
     fetch("http://localhost:8000/auth/register", {
       method: "POST",
       headers: {
@@ -105,11 +105,13 @@ class App extends Component {
   };
   handle_logout = () => {
     localStorage.removeItem("token");
-    this.setState({ logged_in: false, username: "" });
+    this.setState({ logged_in: false, email: "" });
+    return <Redirect to="/login" />;
   };
   render() {
     return (
       <div className="App">
+        <Button text="logout" handleClick={this.handle_logout} />
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           {/* <Route path="/home" exact component={HomePage}></Route> */}
@@ -125,7 +127,11 @@ class App extends Component {
             path="/register"
             exact
             render={routerProps => (
-              <OnboardingPage handleSignup={this.handle_signup} {...routerProps} {...this.state} />
+              <OnboardingPage
+                handleSignup={this.handle_signup}
+                {...routerProps}
+                logged_in={this.state.logged_in}
+              />
             )}
           ></Route>
         </main>

@@ -11,14 +11,16 @@ class PersonalSettingsForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      img: "",
-      age: 0,
-      destination: "",
       email: this.props.setup.email,
-      name: this.props.setup.name,
       password: this.props.setup.password,
-      city: this.props.filter.city,
-      topics: this.props.filter.tags
+      profile: {
+        img: "",
+        age: 0,
+        destination: "",
+        name: this.props.setup.name,
+        city: this.props.filter.city,
+        topics: this.props.filter.tags
+      }
     };
   }
 
@@ -26,7 +28,7 @@ class PersonalSettingsForm extends Component {
     let name = e.target.name;
     let value = e.target.value;
     this.setState({
-      [name]: value
+      profile: { ...this.state.profile, [name]: value }
     });
   };
   next = () => {
@@ -35,6 +37,9 @@ class PersonalSettingsForm extends Component {
     this.props.handleSignup(this.state);
   };
   render() {
+    if (this.props.logged_in) {
+      this.props.history.push("/coming_soon");
+    }
     return (
       <div className="OnboardingPage__wrapper">
         <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
