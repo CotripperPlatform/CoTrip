@@ -79,7 +79,7 @@
 }
 .Card--mobile img {
   transform: scaleX(0.5);
-  border: 2px solid black;
+
   margin: 3vh 0 0 0;
 }
 .Card--mobile div {
@@ -89,8 +89,9 @@
 }
 .Card--mobile h2 {
   text-align: center;
-  border: 2px solid black;
-  padding-bottom: 3vh;
+  /* border: 2px solid black; */
+  margin-left: 3vw;
+  width: 60%;
 }
 
 .Card__outline {
@@ -128,5 +129,8 @@
 @media only screen and (max-width: 576px) {
   .Card--large {
     min-width: 17rem;
+  }
+  .Card--mobile h2 {
+    margin-left: 6vw;
   }
 }
