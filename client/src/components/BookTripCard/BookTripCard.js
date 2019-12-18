@@ -12,7 +12,7 @@ const BookTripCard = props => {
     <Card color="pink">
       <div className="BookTripCard__title-wrapper">{title}</div>
       <div className="BookTripCard__content-wrapper">
-        <div className="BookTripCard__image-left">{image2}</div>
+        <div className="BookTripCard__image-left">{image1}</div>
 
         <div className="BookTripCard__image-right">{image2}</div>
       </div>

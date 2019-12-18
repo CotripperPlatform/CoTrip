@@ -86,9 +86,12 @@
 }
 
 .Card__outline {
-  padding: 5vh 0 7vh 0;
+  padding: 3vh 0 5vh 0;
+  width: 14.2vw;
+  max-width: 225px;
   background: none;
   border: 3px dashed var(--purple);
+  /* border: 2px solid black; */
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;

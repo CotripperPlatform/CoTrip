@@ -9,7 +9,7 @@ import { tsPropertySignature } from "@babel/types";
 storiesOf("BookTripCard", module).add("Default", () => (
   <BookTripCard>
     <h1>Book a Trip</h1>
-    <TripCard src="hello" location="Hawaii" date="May 2020" />
+    <TripCard src={example1} location="Hawaii" date="May 2020" />
     <TripCard src={example2} location="Puerto Rico" date="April 2019" />
   </BookTripCard>
 ));

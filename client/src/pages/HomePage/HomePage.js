@@ -3,7 +3,7 @@ import "./HomePage.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import example1 from "assets/images/card_small2.png";
-import example2 from "assets/images/Hawaii-resort.jpg";
+import example2 from "assets/images/card_small3.png";
 import happiness from "assets/images/media-card-2.png";
 import van from "assets/images/media-card-3.png";
 import nightSky from "assets/images/media-card-4.png";
@@ -57,7 +57,7 @@ const HomePage = props => {
                   name="DIY with your kids"
                   members="98"
                   location="Boston, MA"
-                  picture={example1}
+                  picture={example2}
                 />
               </div>
               <div className="HomePage__groupcard-3">
@@ -83,8 +83,8 @@ const HomePage = props => {
             <div className="HomePage__cards-container">
               <BookTripCard>
                 <h1>Book a Trip</h1>
-                <TripCard src={example2} location="Hawaii" date="May 2020" />
-                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+                <TripCard src={example1} location="Hawaii" date="May 2020" />
+                <TripCard src={example2} location="Puerto Rico" date="April 2019" />
               </BookTripCard>
               <TrendingHashtagCard
                 data={[

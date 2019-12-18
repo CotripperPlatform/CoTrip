@@ -9,7 +9,7 @@ const Card = props => {
       className={`Card Card--${color} Card--${size}
       ${outline ? `Card__outline` : ""}`}
     >
-      {picture ? <img src={picture} alt="whoops" /> : null} {props.children}{" "}
+      {picture ? <img src={picture} alt="hey" /> : null} {props.children}{" "}
       {outline ? (
         <div className="Card__discover-link">{props.children}</div>
       ) : (
