@@ -26,13 +26,13 @@
   background-color: var(--yellow);
 }
 .Card--large {
-  width: 28vw;
+  width: 32vw;
   /* min-width: 32rem; */
   /* height: 260px; */
 }
 
 .Card--medium {
-  width: 12vw;
+  width: 14.2vw;
   /* min-width: 225px;
   height: 150px; */
 }
