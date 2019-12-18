@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
-import BookATripPage from "./components/BookATripPage/BookATripPage";
+import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
