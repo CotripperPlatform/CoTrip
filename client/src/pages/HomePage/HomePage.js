@@ -10,6 +10,7 @@ import nightSky from "assets/images/media-card-4.png";
 import waterfall from "assets/images/media-card-5.png";
 import flight from "assets/images/media-card-6.png";
 import Banner__purpleBig from "components/Banner/Banner__purple--big.png";
+import image from "../../assets/images/card_profile2.png";
 
 import people from "assets/images/add-friend.png";
 import airplane from "assets/images/airplane-shape.png";
@@ -26,6 +27,7 @@ import TripCard from "../../components/TripCard/TripCard";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
+import PersonCard from "components/PersonCard/PersonCard";
 
 const handleClick = e => {
   e.preventDefault();
@@ -72,9 +74,39 @@ const HomePage = props => {
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
-              <div className="placeholder-person-card"></div>
-              <div className="placeholder-person-card"></div>
-              <div className="placeholder-person-card"></div>
+              <PersonCard
+                image={image}
+                name="Lindsay L."
+                location="Washington D.C."
+                interests={[
+                  { url: "#", interests: "veganism" },
+                  { url: "#", interests: "budgeting" },
+                  { url: "#", interests: "travel" },
+                  { url: "#", interests: "outdoors" }
+                ]}
+              />
+              <PersonCard
+                image={image}
+                name="Lindsay L."
+                location="Washington D.C."
+                interests={[
+                  { url: "#", interests: "veganism" },
+                  { url: "#", interests: "budgeting" },
+                  { url: "#", interests: "travel" },
+                  { url: "#", interests: "outdoors" }
+                ]}
+              />
+              <PersonCard
+                image={image}
+                name="Lindsay L."
+                location="Washington D.C."
+                interests={[
+                  { url: "#", interests: "veganism" },
+                  { url: "#", interests: "budgeting" },
+                  { url: "#", interests: "travel" },
+                  { url: "#", interests: "outdoors" }
+                ]}
+              />
               <a href="/home" className="HomePage__arrow lower-people" />
             </div>
           </span>
