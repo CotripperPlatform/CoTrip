@@ -26,11 +26,22 @@ class FilterSettingsForm extends Component {
     console.log(e.target.value);
   };
 
+  test = val => {
+    let selectedPills = [];
+    val.pills.map(pill => {
+      if (pill.selected == true) {
+        selectedPills.push(pill.value);
+        console.log(selectedPills);
+      }
+    });
+    this.setState({ tags: selectedPills });
+  };
+
   render() {
     return (
       <div className="OnboardingPage__wrapper">
         <InputTextField name="city" type="text" placeholder="City" onChange={this.updateValue} />
-        <OnboardingPills onChange={() => this.props.onChange} />
+        <OnboardingPills onChange={this.test} />
         <div className="OnboardingPage__button-container">
           <Button text="Next" size="small" handleClick={this.next}></Button>
         </div>
