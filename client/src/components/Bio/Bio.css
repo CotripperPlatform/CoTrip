@@ -39,5 +39,7 @@
 .Bio .hashtag__container {
   display: flex;
   font-style: italic;
-  font-family: var(--paragraph-font)
+  font-family: var(--paragraph-font);
+  max-width: 100%;
+  flex-wrap: wrap;
 }
