@@ -1,4 +1,10 @@
-
-.FunctionalModal {
-
+.FunctionalModal__openModalButton{
+    border: solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    color: var(--black);
+    background-color: var(--yellow);
+    text-align: center;
+    font-family: var(--default-font);
+    font-size: 24px;
+    padding: 0.30em 2.35em;
 }

@@ -7,13 +7,14 @@ storiesOf('FunctionalModal', module)
     <FunctionalModal 
     message={"Are you sure you want to follow"} 
     confirmText={"Confirm"} 
-    cancelText={"Cancel"}/>
+    cancelText={"Cancel"}
+    buttonText={"Follow"}/>
   ))
   .add("Join Functional Modal", () => (
     <FunctionalModal 
     message={"Are you sure you want to join"} 
     confirmText={"join"} 
-    cancelText={"Cancel"}/>
-  )
-)
+    cancelText={"Cancel"}
+    buttonText={"Join"}/>
+  ))
 

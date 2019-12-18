@@ -31,8 +31,7 @@ class FunctionalModal extends Component{
   render(){
     return(
       <div className="FunctionalModal">
-        {this.state.showModal ? <div onClick={this.handleCloseModal}></div> : null}
-        {this.state.showModal ? null : <a href="#" className="FunctionalModal__openModal" onClick={this.handleOpenModal}>Click to show modal</a>}
+        {this.state.showModal ? null : <button className="FunctionalModal__openModalButton" onClick={this.handleOpenModal}>{this.props.buttonText}</button>}
         <Modal message={this.props.message}
           showModal={this.state.showModal}
           confirmText={this.props.confirmText} 
