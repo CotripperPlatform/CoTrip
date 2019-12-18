@@ -1,7 +1,9 @@
 .PreviousTripCard__container h1 {
   color: var(--white);
   padding-left: 5%;
-  border: 2px solid black;
+  padding-top: 2vh;
+  /* border: 2px solid black; */
+  margin: 0;
 }
 .PreviousTripCard__trips {
   display: flex;
@@ -10,8 +12,8 @@
   width: 27vw;
   height: 100%;
   margin-left: 0.5vw;
-  border: 2px solid black;
-  padding-bottom: 2.8vh;
+
+  padding-bottom: 3vh;
 }
 
 .PreviousTripCard__arrow {
@@ -38,32 +40,29 @@
 }
 
 .PreviousTripCard__no-trips {
-  /* position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 80%;
-  height: 30%;
-  text-align: center;
-  margin-left: 8%;
-  border: 2px solid black; */
+  /* border: 2px solid black;  */
 }
 
 .PreviousTripCard__no-trips h2 {
-  margin: 15vh 6vw 0 8vw;
-  font-size: 22px;
+  margin: 1vh 0 0 0;
+  text-align: center;
+  padding: 4vh 0 2vh 0;
+  font-size: 1.5vw;
+  width: 100%;
   color: var(--white);
-  display: inline-block;
   /* border: 2px solid black; */
 }
 .PreviousTripCard__no-trips a {
-  font-size: 18px;
-  top: 150px;
-  margin: 0px 27% 0px 32%;
-
+  font-size: 1.1vw;
+  margin: 0 10vw 2vh 11vw;
+  padding-bottom: 6vh;
   color: var(--white);
   display: inline-block;
   transition: all 0.1s ease-in-out;
+
+  /* border: 2px solid black; */
 }
 .PreviousTripCard__no-trips a:hover {
   transform: scale(1.1);
