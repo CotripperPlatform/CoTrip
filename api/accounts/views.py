@@ -19,27 +19,6 @@ class RegisterAPI(generics.GenericAPIView):
             "user": UserSerializer(user, context=self.get_serializer_context()).data,
             "token": AuthToken.objects.create(user)[1]
         })
-        
-# Example json input for RegisterAPI^^^
-
-# {
-#     "email": "bigguy@gmail.com",
-#     "password": "airtravel",
-#     "profile": {
-#         "image": "http://127.0.0.1:8000/media/default.jpg",
-#         "first_name": "Mike",
-#         "last_name": "J",
-#         "city_of_residence": "Chicago",
-#         "age": 50,
-#         "dream_destination": "Chicago",
-#         "bio": "I hang out with loony tunes",
-#         "instagram_url": "",
-#         "pinterest_url": "",
-#         "facebook_url": ""
-#     }
-# }
-
-
 
 class LoginAPI(generics.GenericAPIView):
     serializer_class = LoginSerializer
@@ -77,7 +56,7 @@ class ProfileUpdate(generics.RetrieveUpdateAPIView):
     permission_classes = [
         permissions.IsAuthenticated,
     ]
-    serializer_class = ProfileSerializer
+    serializer_class = ProfileSerializer(partial=True)
     
     def get_object(self):
         return self.request.user.profile
