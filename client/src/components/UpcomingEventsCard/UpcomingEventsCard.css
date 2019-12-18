@@ -1,23 +1,27 @@
 .UpcomingEventsCard {
-    border-radius: 3px;
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    padding: .7rem;
-    text-decoration: none;
+  border-radius: 3px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  /* padding: 0.7rem; */
+  text-decoration: none;
+  width: 100%;
+  padding: 1vh 0vw 1vh 0vw;
+  margin: 0 3vw 0 1vw;
+  border: 2px solid black;
 }
 
 .UpcomingEventsCard__name {
-    font-size: 1.55rem;
+  font-size: 1.55rem;
 }
 
 .UpcomingEventsCard__date,
 .UpcomingEventsCard__time,
 .UpcomingEventsCard__location {
-    font-family: var(--paragraph-font);
-    font-size: .85rem;
+  font-family: var(--paragraph-font);
+  font-size: 0.85rem;
 }
 
 .UpcomingEventsCard__location {
-    line-height: 2.5;
+  line-height: 2.5;
 }
