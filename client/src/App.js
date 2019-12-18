@@ -41,7 +41,7 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
-          <Route path="/comingsoon" exact component={ComingSoonPage}></Route>
+          <Route path="/coming-soon" exact component={ComingSoonPage}></Route>
         </main>
       </div>
     );
