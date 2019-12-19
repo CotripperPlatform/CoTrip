@@ -42,7 +42,6 @@
 .Navbar__burger {
   margin: 0 20px;
   display: none;
-  position: absolute;
   right: 0;
 }
 
