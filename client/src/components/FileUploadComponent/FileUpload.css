@@ -1,6 +1,7 @@
 .FileUpload {
-  height: 233px;
-  width: 233px;
+  height: 180px;
+  width: 180px;
+  margin: 0 0 10px 0;
   border: solid var(--yellow) 1px;
   border-radius: 50%;
   text-align: center;
@@ -8,7 +9,7 @@
 }
 
 .FileUpload h1 {
-  margin: 4rem auto .6rem auto;
+  margin: 2rem auto .6rem auto;
   width: 75%;
   font-family: var(--default-font);
   font-size: 1.5rem;
@@ -26,7 +27,7 @@
   border: solid rgba(0, 0, 0, 0);
   border-radius: 5px;
   font-family: var(--default-font);
-  padding: 0.30em 2.35em;
+  padding: 0.20em 1.35em;
   font-size: 15px;
   color: var(--white);
   background-color: var(--pink);
