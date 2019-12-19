@@ -26,67 +26,67 @@
   background-color: var(--yellow);
 }
 .Card--large {
-  width: 28vw;
-  /* min-width: 32rem; */
-  /* height: 260px; */
+  width: 32vw;
+  max-width: 500px;
+  min-width: 200px;
+  max-height: 275px;
 }
 .Card--medium {
-  width: 12vw;
-  /* min-width: 225px;
-  height: 150px; */
+  width: 14.2vw;
+  max-width: 225px;
+  max-height: 150px;
+  min-width: 180px;
+  margin: 0 0.1vw 0 0.1vw;
 }
 .Card--small {
-  width: 10vw;
-  /* min-width: 225px;
-  height: 125px; */
+  max-width: 225px;
+  max-height: 125px;
 }
 .Card--extra-small {
-  color: var(--white);
-  box-shadow: none;
-  text-align: center;
-  justify-content: center;
-  min-width: 6rem;
-  max-width: 6rem;
-  height: 4.32rem;
-  margin: 1.5rem 0.75rem 0 0.75rem;
-  border-radius: 1.8px;
-  padding: 0.37rem;
-  font-size: 0.9rem;
+  width: 1rem;
+  max-width: 185px;
+  max-height: 135px;
 }
+
+.Card__contents-container img {
+  max-height: 100%;
+}
+.Card__contents-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .Card--mobile {
   display: flex;
-  flex-direction: column-reverse;
-  background-size: auto;
+  flex-direction: column;
   background-repeat: no-repeat;
   background-position-x: 2.7em;
   background-position-y: 2.5rem;
   text-align: center;
   color: var(--white);
   width: 10rem;
-  min-width: 160px;
-  height: 202px;
+  max-width: 160px;
+  max-height: 202px;
+}
+.Card--mobile img {
+  transform: scaleX(0.5);
+  margin: 3vh 0 0 0;
 }
 .Card--mobile div {
   text-align: center;
-  width: 80%;
-  margin-left: 0.9rem;
-  height: 6rem;
+
+  padding-bottom: 3vh;
+  width: 100%;
 }
-.Card img {
-  width: 1rem;
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.Card--mobile h2 {
+  text-align: center;
+  width: 100%;
 }
 .Card__outline {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 1rem;
+  padding: 3vh 0 5vh 0;
+  width: 14.2vw;
+  max-width: 225px;
   background: none;
   border: 3px dashed var(--purple);
   -webkit-box-shadow: none;
@@ -96,8 +96,6 @@
 .Card__discover-link {
   color: black;
   text-align: center;
-  margin-left: 22%;
-  margin-right: 22%;
   transition: transform 0.3s;
 }
 .Card__discover-link a {
@@ -121,7 +119,7 @@
     margin: 1.75rem 0.875rem 0 0.875rem;
     border-radius: 2.1px;
     padding: 0.43rem;
-    font-size: 1.2rem;
+    font-size: 1.2;
   }
   .Card--large {
     min-width: 17rem;

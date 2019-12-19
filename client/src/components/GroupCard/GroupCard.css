@@ -1,39 +1,67 @@
 .GroupCard {
-    border-radius: 3px;
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-decoration: none;
+  position: absolute;
+  color: var(--white);
+  text-decoration: none;
+  width: 100%;
 }
 
 .GroupCard__text-container {
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1vh 0 0vh 0;
+  width: 100%;
 }
 
 .GroupCard__group-name {
-    font-size: 1.5rem;
-    line-height: 90%;
-    padding: 2.5rem 0rem 1rem 1.2rem;
-    font-weight: var(--title-weight);
-    margin-top: 0;
+  font-size: 1.4rem;
+  padding: 0 0rem 0rem 1.2rem;
+  margin-top: 0vh;
+  margin-bottom: 6vh;
+  max-width: 100%;
+  max-height: 6vh;
+  font-weight: var(--title-weight);
 }
 
 .GroupCard__details {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 1rem;
 }
 
 .GroupCard__members {
-    margin: 0.2rem;
+  margin: 0.2rem;
 }
 
 .GroupCard__location {
-    margin: 0.2rem;
+  margin: 0.2rem;
+}
+
+/* Medium devices */
+@media only screen and (max-width: 1452px) {
+  .GroupCard__group-name {
+    font-size: 1.4rem;
+  }
+  .GroupCard__text-container {
+    margin: -2vh 0 0vh 0;
+  }
+
+  .GroupCard__group-name {
+    padding: 3vh 0rem 0rem 1.2rem;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 976px) {
+  .GroupCard__group-name {
+    font-size: 1.4rem;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 375px) {
+  .GroupCard__group-name {
+    font-size: 1rem;
+  }
 }
