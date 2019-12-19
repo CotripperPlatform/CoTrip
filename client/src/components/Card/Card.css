@@ -45,18 +45,19 @@
   max-height: 125px;
 }
 .Card--extra-small {
+  color: var(--white);
+  min-width: 180px;
+  box-shadow: none;
+  height: 140px;
+  text-align: center;
+  justify-content: center;
   min-width: 6rem;
   max-width: 6rem;
-  min-height: 4.32rem;
-  max-height: 4.32rem;
+  height: 4.32rem;
   margin: 1.5rem 0.75rem 0 0.75rem;
   border-radius: 1.8px;
   padding: 0.37rem;
   font-size: 0.9rem;
-  color: var(--white);
-  box-shadow: none;
-  text-align: center;
-  justify-content: center;
 }
 
 .Card__contents-container img {
@@ -126,8 +127,7 @@
   .Card--extra-small {
     min-width: 7rem;
     max-width: 7rem;
-    min-height: 5.03rem;
-    max-height: 5.03rem;
+    height: 5.03rem;
     margin: 1.75rem 0.875rem 0 0.875rem;
     border-radius: 2.1px;
     padding: 0.43rem;
@@ -141,8 +141,7 @@
   .Card--extra-small {
     min-width: 8rem;
     max-width: 8rem;
-    min-height: 5.75rem;
-    max-height: 5.75rem;
+    height: 5.75rem;
     margin: 2rem 1rem 0 1rem;
     border-radius: 2.4px;
     padding: 0.5rem;
@@ -153,8 +152,7 @@
   .Card--extra-small {
     min-width: 9rem;
     max-width: 9rem;
-    min-height: 6.47rem;
-    max-height: 6.47rem;
+    height: 6.47rem;
     margin: 2.5rem 1.25rem 0 1.25rem;
     border-radius: 2.7px;
     padding: 0.56rem;
@@ -165,8 +163,7 @@
   .Card--extra-small {
     min-width: 10rem;
     max-width: 10rem;
-    min-height: 7.19rem;
-    max-height: 7.19rem;
+    height: 7.19rem;
     margin: 2.5rem 2.5rem 0 0;
     border-radius: 3px;
     padding: 0.62rem;
