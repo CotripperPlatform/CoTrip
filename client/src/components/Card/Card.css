@@ -2,6 +2,7 @@
   position: relative;
   background-size: cover;
   background-repeat: none;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
@@ -9,6 +10,7 @@
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   font-family: var(--default-font);
+  min-height: 9.5rem;
 }
 .Card--purple {
   background-color: var(--purple);
@@ -61,13 +63,13 @@
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;
-  background-position-x: 2.7em;
-  background-position-y: 2.5rem;
+  background-size: 80%;
   text-align: center;
   color: var(--white);
   width: 10rem;
   max-width: 160px;
   max-height: 202px;
+  min-height: 200px;
 }
 .Card--mobile img {
   transform: scaleX(0.5);
