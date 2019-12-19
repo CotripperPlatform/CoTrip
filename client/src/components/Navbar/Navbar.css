@@ -78,10 +78,11 @@
   .Navbar__main {
     position: relative;
     height: 370px;
-    top: 240px;
+    top: 237px;
     display: none;
     margin: 0;
-    z-index: -1;
+    /* Temporarily removed because it's going under the banner image */
+    /* z-index: -1; */
     width: 250px;
     box-shadow: 0 4px 10px -5px var(--gray);
   }
