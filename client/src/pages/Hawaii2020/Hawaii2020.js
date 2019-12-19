@@ -1,6 +1,7 @@
 import React from "react";
 import "./Hawaii2020.css";
 import NavBar from "components/Navbar/Navbar";
+import people from "assets/images/add-friend.png";
 import Banner from "components/Banner/Banner";
 import Banner__pink from "components/Banner/Banner__pink.png";
 import BannerImageCard from "components/BannerImageCard/BannerImageCard";
@@ -25,7 +26,7 @@ const Hawaii2020 = props => {
 
   return (
     <div className="Hawaii2020">
-      <NavBar />
+      <NavBar profileImage={people}/>
       <Banner background={Banner__pink}>
         <h3>Trip: {tripName} 2020</h3>
       </Banner>
