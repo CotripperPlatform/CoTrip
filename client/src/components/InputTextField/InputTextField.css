@@ -18,6 +18,9 @@
   .InputTextField__container--default {
     max-width: 70vw;
   }
+  .InputTextField__container--search {
+    max-width: 70vw;
+  }
 }
 
 .InputTextField__container--default::-webkit-input-placeholder {
