@@ -40,7 +40,13 @@ class FilterSettingsForm extends Component {
   render() {
     return (
       <div className="OnboardingPage__wrapper">
-        <InputTextField name="city" type="text" placeholder="City" onChange={this.updateValue} />
+        <InputTextField
+          name="city"
+          type="text"
+          placeholder="City of residence"
+          onChange={this.updateValue}
+        />
+        <p>Topics of interest</p>
         <OnboardingPills onChange={this.test} />
         <div className="OnboardingPage__button-container">
           <Button text="Next" size="small" handleClick={this.next}></Button>
