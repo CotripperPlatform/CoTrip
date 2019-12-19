@@ -35,11 +35,18 @@ class UserSetupForm extends Component {
     }
   };
   next = () => {
-    if (this.state.confirmPassword) {
+    let regexEmail = /.+@.+\..+/;
+    if (
+      this.state.confirmPassword &&
+      this.state.email.match(regexEmail) &&
+      this.state.password.length >= 6
+    ) {
       this.props.save("setup", this.state);
-      this.props.functionProp();
+      this.props.handleClick();
     } else {
-      alert("PASSWORDS DONT MATCH");
+      alert(
+        "Error: Registration failed. Please make sure: \n you have entered a valid email address \n your password information matches \n your password length is greater than 6 characters"
+      );
     }
   };
   render() {
