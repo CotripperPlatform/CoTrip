@@ -9,7 +9,6 @@
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   font-family: var(--default-font);
-  /* border: 2px solid black; */
 }
 .Card--purple {
   background-color: var(--purple);
@@ -50,11 +49,9 @@
 }
 
 .Card__contents-container img {
-  /* border: 2px solid black; */
   max-height: 100%;
 }
 .Card__contents-container {
-  /* border: 2px solid black; */
   position: relative;
   max-width: 100%;
   max-height: 100%;
@@ -74,18 +71,16 @@
 }
 .Card--mobile img {
   transform: scaleX(0.5);
-
   margin: 3vh 0 0 0;
 }
 .Card--mobile div {
   text-align: center;
-  /* border: 2px solid black; */
-  padding-bottom: 2vh;
+
+  padding-bottom: 3vh;
   width: 100%;
 }
 .Card--mobile h2 {
   text-align: center;
-  border: 2px solid black;
   width: 100%;
 }
 .Card__outline {
