@@ -8,14 +8,16 @@ import example1 from "../../assets/images/card_small2.png";
 import BookTripCard from "../BookTripCard/BookTripCard";
 import example2 from "../../assets/images/hawaii.png";
 import Connections from "../Connections/Connections";
-import pic1 from "../../assets/images/card_profile1.png";
-import pic2 from "../../assets/images/card_profile2.png";
-import pic3 from "../../assets/images/card_profile3.png";
+import pic1 from "../../assets/images/profile-picture-1.png";
+import pic2 from "../../assets/images/profile-picture-2.png";
+import pic3 from "../../assets/images/profile-picture-3.png";
+import pic4 from "../../assets/images/profile-picture-4.png";
 import Footer from "../Footer/Footer";
 import InputTextField from "../InputTextField/InputTextField";
 import Banner__pink from "../Banner/Banner__pink.png";
 import Banner from "../Banner/Banner";
 import GroupsList from "../GroupsList/GroupsList";
+import Bio from "../Bio/Bio";
 // Class Based React Component
 class MemberProfilePage extends Component {
   constructor(props) {
@@ -38,6 +40,19 @@ class MemberProfilePage extends Component {
   componentWillUnmount() {}
 
   render() {
+    let people = [
+      {
+        name: "Suzie",
+        bio:
+          "Nec et iriure utamur, per ubique mnesarchum an. At mei exerci voluptaria suscipiantur, ornatus consulatu interesset mei id. Ea possim percipit recteque his. Mea id ludus alterum apeirian, alienum dissentiet ut estLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        hashtags: ["#parenting", "#teenages", "#health&wellness", "#Hawaii2020"],
+        facebook: "www.facebook.com",
+        instagram: "www.instagram.com",
+        pinterest: "www.pinterest.com",
+        isCurrentUser: true
+      },
+      { name: "Martha", bio: "sup yall" }
+    ];
     let testUsers = [
       {
         userId: 1,
@@ -61,7 +76,7 @@ class MemberProfilePage extends Component {
         userId: 4,
         userFirstName: "Joan",
         userSurname: "Rivers",
-        userPic: pic1
+        userPic: pic4
       },
       {
         userId: 5,
@@ -99,15 +114,22 @@ class MemberProfilePage extends Component {
             <div className="interaction-div">
               <InteractionCard></InteractionCard>
             </div>
-            <div></div>
             <div>
-              <Connections
-                to="User/userid/connections"
-                users={testUsers.slice(0, 6)}
-                extraUsers="View All"
+              <Bio
+                instagram={people[0].intagram}
+                facebook={people[0].facebook}
+                pinterest={people[0].pinterest}
+                type="default"
+                name={people[0].name}
+                bio={people[0].bio}
+                hashtags={people[0].hashtags}
+                isCurrentUser={people[0].isCurrentUser}
+                onClick={console.log("Hello")}
               />
             </div>
+            <div></div>
           </div>
+
           <div className="right">
             <div className="trip-card">
               <BookTripCard>
@@ -128,6 +150,13 @@ class MemberProfilePage extends Component {
               </PreviousTripsCard>
             </div>
           </div>
+        </div>
+        <div>
+          <Connections
+            to="User/userid/connections"
+            users={testUsers.slice(0, 6)}
+            extraUsers="View All"
+          />
         </div>
         <div ClassName="groups__div">
           <GroupsList heading="Her Groups" moreGroups="View All" to="/" />

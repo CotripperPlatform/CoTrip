@@ -15,6 +15,10 @@
 
 }
 
+.left {
+  display: flex;
+}
+
 .MemberProfilePage .Groups__list {
   width: 100%;
   padding-left: 5%;
