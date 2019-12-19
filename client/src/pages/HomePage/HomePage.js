@@ -56,7 +56,7 @@ const HomePage = props => {
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
-          <h1>Welcome, {props.first_name}!</h1>
+          {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
         </Banner>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
