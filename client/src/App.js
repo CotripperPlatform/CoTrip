@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
+import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
@@ -124,6 +125,10 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          <Route path="/book-a-trip" exact render={routerProps => (
+            <BookATripPage {...routerProps}/>)}>
+          </Route>
+          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
             path="/coming_soon"
             exact

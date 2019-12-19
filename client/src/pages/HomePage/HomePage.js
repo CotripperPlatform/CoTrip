@@ -4,13 +4,18 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import example1 from "assets/images/card_small2.png";
 import example2 from "assets/images/Hawaii-resort.jpg";
+import card1 from "assets/images/card-image-3.png";
+import card2 from "assets/images/card-image-2.png";
+import card3 from "assets/images/card-image.png";
 import happiness from "assets/images/media-card-2.png";
 import van from "assets/images/media-card-3.png";
 import nightSky from "assets/images/media-card-4.png";
 import waterfall from "assets/images/media-card-5.png";
 import flight from "assets/images/media-card-6.png";
 import Banner__purpleBig from "components/Banner/Banner__purple--big.png";
-import image from "../../assets/images/card_profile2.png";
+import image1 from "../../assets/images/profile-picture-1.png";
+import image2 from "../../assets/images/profile-picture-5.png";
+import image3 from "../../assets/images/profile-picture-4.png";
 
 import people from "assets/images/add-friend.png";
 import airplane from "assets/images/airplane-shape.png";
@@ -29,16 +34,40 @@ import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
 
-const personCard = (
+const personCard1 = (
   <PersonCard
-    image={image}
-    name="Lindsay L."
-    location="Washington D.C."
+    image={image1}
+    name="Justine P."
+    location="Pittsburg, PA"
     interests={[
-      { url: "#", interests: "veganism" },
       { url: "#", interests: "budgeting" },
       { url: "#", interests: "travel" },
       { url: "#", interests: "outdoors" }
+    ]}
+  />
+);
+const personCard2 = (
+  <PersonCard
+    image={image2}
+    name="Sarah V."
+    location="Stockholm, Sweden"
+    interests={[
+      { url: "#", interests: "veganism" },
+      { url: "#", interests: "budgeting" },
+      { url: "#", interests: "music" },
+      { url: "#", interests: "outdoors" }
+    ]}
+  />
+);
+const personCard3 = (
+  <PersonCard
+    image={image3}
+    name="Blossom D."
+    location="Washington D.C."
+    interests={[
+      { url: "#", interests: "education" },
+      { url: "#", interests: "outdoors" },
+      { url: "#", interests: "software development" },
     ]}
   />
 );
@@ -66,31 +95,31 @@ const HomePage = props => {
                 name="DIY with your kids"
                 members="98"
                 location="Boston, MA"
-                picture={example1}
+                picture={card1}
               />
               <span className="HomePage__groupcard-2">
                 <GroupCard
-                  name="DIY with your kids"
-                  members="98"
-                  location="Boston, MA"
-                  picture={example1}
+                  name="Mystery Stories!"
+                  members="213"
+                  location="NYC"
+                  picture={card2}
                 />
               </span>
               <span className="HomePage__groupcard-3">
                 <GroupCard
-                  name="DIY with your kids"
+                  name="Bay Cruise"
                   members="98"
-                  location="Boston, MA"
-                  picture={example1}
+                  location="Lisbon"
+                  picture={card3}
                 />
               </span>
               <a href="/home" className="HomePage__arrow" />
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
-              {personCard}
-              {personCard}
-              {personCard}
+              {personCard1}
+              {personCard2}
+              {personCard3}
               <a href="/home" className="HomePage__arrow lower-people" />
             </div>
           </span>
@@ -104,15 +133,16 @@ const HomePage = props => {
               </BookTripCard>
               <TrendingHashtagCard
                 data={[
-                  "#dope",
-                  "#torch",
+                  "#art",
                   "#hawaii",
-                  "#kids",
-                  "#cats",
+                  "#food",
+                  "#vacation",
+                  "#boats",
+                  "#crafts",
+                  "#parks",
                   "#dogs",
                   "#italy",
-                  "#starwars",
-                  "#babyyoda"
+                  "#yoga",
                 ]}
               >
                 <h1>Trending Hashtags</h1>
@@ -156,15 +186,15 @@ const HomePage = props => {
               imageSrc={happiness}
               size="medium"
               to="/home"
-              footerText="Posted By: --user--"
+              footerText="Posted By: Paula"
             />
-            <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: Carmen" />
 
             <MediaCard
               imageSrc={nightSky}
               size="medium"
               to="/home"
-              footerText="Posted By: --user--"
+              footerText="Posted By: Krystin"
             />
 
             <span className="HomePage__mediacard-hide">
@@ -172,7 +202,7 @@ const HomePage = props => {
                 imageSrc={waterfall}
                 size="medium"
                 to="/home"
-                footerText="Posted By: --user--"
+                footerText="Posted By: Paul"
               />
             </span>
             <span className="HomePage__mediacard-hide">
@@ -180,7 +210,7 @@ const HomePage = props => {
                 imageSrc={flight}
                 size="medium"
                 to="/home"
-                footerText="Posted By: --user--"
+                footerText="Posted By: Fiona"
               />
             </span>
           </div>
