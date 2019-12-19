@@ -99,17 +99,17 @@ const HomePage = props => {
               />
               <span className="HomePage__groupcard-2">
                 <GroupCard
-                  name="DIY with your kids"
-                  members="98"
-                  location="Boston, MA"
+                  name="Mystery Stories!"
+                  members="213"
+                  location="NYC"
                   picture={card2}
                 />
               </span>
               <span className="HomePage__groupcard-3">
                 <GroupCard
-                  name="DIY with your kids"
+                  name="Bay Cruise"
                   members="98"
-                  location="Boston, MA"
+                  location="Lisbon"
                   picture={card3}
                 />
               </span>
@@ -133,15 +133,16 @@ const HomePage = props => {
               </BookTripCard>
               <TrendingHashtagCard
                 data={[
-                  "#dope",
-                  "#torch",
+                  "#art",
                   "#hawaii",
-                  "#kids",
-                  "#cats",
+                  "#food",
+                  "#vacation",
+                  "#boats",
+                  "#crafts",
+                  "#parks",
                   "#dogs",
                   "#italy",
-                  "#starwars",
-                  "#babyyoda"
+                  "#yoga",
                 ]}
               >
                 <h1>Trending Hashtags</h1>
@@ -185,15 +186,15 @@ const HomePage = props => {
               imageSrc={happiness}
               size="medium"
               to="/home"
-              footerText="Posted By: --user--"
+              footerText="Posted By: Paula"
             />
-            <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: --user--" />
+            <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: Carmen" />
 
             <MediaCard
               imageSrc={nightSky}
               size="medium"
               to="/home"
-              footerText="Posted By: --user--"
+              footerText="Posted By: Krystin"
             />
 
             <span className="HomePage__mediacard-hide">
@@ -201,7 +202,7 @@ const HomePage = props => {
                 imageSrc={waterfall}
                 size="medium"
                 to="/home"
-                footerText="Posted By: --user--"
+                footerText="Posted By: Paul"
               />
             </span>
             <span className="HomePage__mediacard-hide">
@@ -209,7 +210,7 @@ const HomePage = props => {
                 imageSrc={flight}
                 size="medium"
                 to="/home"
-                footerText="Posted By: --user--"
+                footerText="Posted By: Fiona"
               />
             </span>
           </div>
