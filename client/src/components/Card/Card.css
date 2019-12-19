@@ -46,18 +46,16 @@
 }
 .Card--extra-small {
   color: var(--white);
-  min-width: 180px;
+  min-width: 7rem;
+  max-width: 7rem;
+  min-height: 5rem;
+  font-size: 0.9rem;
   box-shadow: none;
-  height: 140px;
   text-align: center;
   justify-content: center;
-  min-width: 6rem;
-  max-width: 6rem;
-  height: 4.32rem;
   margin: 1.5rem 0.75rem 0 0.75rem;
   border-radius: 1.8px;
   padding: 0.37rem;
-  font-size: 0.9rem;
 }
 
 .Card__contents-container img {
