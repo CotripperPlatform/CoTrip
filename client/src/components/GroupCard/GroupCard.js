@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 import "./GroupCard.css";
 import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 
-const GroupCard = (props) => {
+const GroupCard = props => {
   let { picture, name, members, location } = props;
   return (
-    <Card color="pink" size="medium" picture={picture}>
+    <Card size="medium" picture={picture}>
       <Link className="GroupCard" to="#">
         <div className="GroupCard__text-container">
           <h2 className="GroupCard__group-name">{name}</h2>
@@ -18,6 +18,6 @@ const GroupCard = (props) => {
       </Link>
     </Card>
   );
-}
+};
 
 export default GroupCard;
