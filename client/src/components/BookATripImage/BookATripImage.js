@@ -25,5 +25,7 @@ const BookATripImage = props => {
     </div>
   );
 };
-
+BookATripImage.defaultProps = {
+  cards: []
+};
 export default BookATripImage;
