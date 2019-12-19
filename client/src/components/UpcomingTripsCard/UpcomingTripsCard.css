@@ -5,20 +5,24 @@
 }
 
 .UpcomingTripsCard__header {
-  font-size: 2vw;
+  font-size: 2.2rem;
   text-align: left;
   color: var(--white);
   padding: 2vh 0 0 1.2rem;
-  /* border: 2px solid black; */
+  margin-right: 5vw;
+}
+.UpcomingTripsCard__contents-container {
+  border: 2px solid black;
+  padding-bottom: 1vh;
 }
 
 .UpcomingTripsCard__info {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0vh 0.1rem;
+  padding: 0;
+  margin: -0.5rem;
   color: var(--white);
-  /* border: 2px solid black; */
 }
 
 .UpcomingTripsCard__general-information {
@@ -37,11 +41,10 @@
 }
 
 .UpcomingTripsCard__link {
-  padding-left: 1.2rem;
-  margin-left: 11vw;
-  margin-right: 9vw;
-  margin-bottom: 1vh;
+  text-align: center;
   font-size: 1vw;
+
+  width: 100%;
 }
 .UpcomingTripsCard__link a {
   color: var(--white);
@@ -59,7 +62,8 @@
   }
 
   .UpcomingTripsCard__header {
-    margin: 0 0 1vh 0;
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .UpcomingTripsCard__link {
@@ -72,7 +76,7 @@
 /* Medium devices */
 @media only screen and (max-width: 768px) {
   .UpcomingTripsCard__header {
-    font-size: 2.4vw;
+    font-size: 1.7rem;
   }
   .UpcomingTripsCard__link {
     font-size: 1rem;
@@ -82,7 +86,7 @@
 /* Small devices */
 @media only screen and (max-width: 576px) {
   .UpcomingTripsCard__header {
-    font-size: 3vw;
+    font-size: 1.7rem;
   }
   .UpcomingTripsCard__link {
     font-size: 1rem;
@@ -92,7 +96,7 @@
 /* Mobile */
 @media only screen and (max-width: 375px) {
   .UpcomingTripsCard__header {
-    font-size: 5.5vw;
+    font-size: 1.4rem;
   }
   .UpcomingTripsCard__link {
     font-size: 1rem;
