@@ -1,23 +1,23 @@
 import React, { Component } from "react";
 import "./MemberProfilePage.css";
-import Navbar from "../Navbar/Navbar";
-import InteractionCard from "../InteractionCard/InteractionCard";
-import PreviousTripsCard from "../PreviousTripsCard/PreviousTripsCard";
-import TripCard from "../TripCard/TripCard";
+import Navbar from "../../components/Navbar/Navbar";
+import InteractionCard from "../../components/InteractionCard/InteractionCard";
+import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
+import TripCard from "../../components/TripCard/TripCard";
 import example1 from "../../assets/images/card_small2.png";
-import BookTripCard from "../BookTripCard/BookTripCard";
+import BookTripCard from "../../components/BookTripCard/BookTripCard";
 import example2 from "../../assets/images/hawaii.png";
-import Connections from "../Connections/Connections";
+import Connections from "../../components/Connections/Connections";
 import pic1 from "../../assets/images/profile-picture-1.png";
 import pic2 from "../../assets/images/profile-picture-2.png";
 import pic3 from "../../assets/images/profile-picture-3.png";
 import pic4 from "../../assets/images/profile-picture-4.png";
-import Footer from "../Footer/Footer";
-import InputTextField from "../InputTextField/InputTextField";
+import Footer from "../../components/Footer/Footer";
+import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__pink from "../Banner/Banner__pink.png";
-import Banner from "../Banner/Banner";
-import GroupsList from "../GroupsList/GroupsList";
-import Bio from "../Bio/Bio";
+import Banner from "../../components/Banner/Banner";
+import GroupsList from "../../components/GroupsList/GroupsList";
+import Bio from "../../components/Bio/Bio";
 // Class Based React Component
 class MemberProfilePage extends Component {
   constructor(props) {

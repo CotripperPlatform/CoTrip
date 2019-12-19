@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
+import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {

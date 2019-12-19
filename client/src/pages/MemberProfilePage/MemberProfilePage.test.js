@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow, configure } from "enzyme";
-import MemberProfilePage from "./MemberProfilePage.js";
+import MemberProfilePage from "./MemberProfilePage.js.js";
 import Adapter from "enzyme-adapter-react-16";
 configure({ adapter: new Adapter() });
 
