@@ -1,7 +1,7 @@
-# CoTripper
+# CoTripper Backend
 
 CoTripper: an app to facilitate organized group travel experiences for
-single-mothers.
+single-mothers. This repository is dedicated to the backend functionality that covers user authentication, connecting to frontend for functionality, and keep a database for topics, trip information, etc. 
 
 ## Getting Started
 
@@ -14,6 +14,14 @@ For setup and installation instructions, see the readmes for the API and Client:
 - [API Readme](./client/README.md)
 - [Client Readme](./api/README.md)
 
+### Dependencies
+
+You will need the following installed locally on your machine:
+
+- [ `pipenv` ](https://github.com/pypa/pipenv)
+- [ `pyenv` ](https://github.com/pyenv/pyenv)
+- [ `node` ](https://nodejs.org/en/) (>11.0.0)
+
 ### Coding Style
 
 We use [ `Prettier` ](https://prettier.io/) for JavaScript and [ `autopep8`
@@ -22,9 +30,24 @@ your editor is set to automatically format on save.
 
 Poorly formatted code will not be merged.
 
+
 ## Deployment
 
 TBC
+
+## Languages/Technologies Utilized
+* Python
+* Django
+* PostgreSQL
+
+## Models 
+
+* Topic
+* City
+
+## Next Steps
+
+* 
 
 ## Contributing
 
