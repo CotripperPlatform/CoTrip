@@ -3,8 +3,8 @@ import { storiesOf } from "@storybook/react";
 import Banner from "./Banner";
 import InputTextField from "../InputTextField/InputTextField";
 import Button from "../Button/Button";
-import Banner__pink from "./Banner__pink.png"
-import Banner__purpleBig from "./Banner__purple--big.png";
+import Banner__pink from "../../assets/images/Banner__pink.png"
+import Banner__purpleBig from "../../assets/images/Banner__purple--big.png";
 
 const handleClick = e => {
   alert("Clicked");
