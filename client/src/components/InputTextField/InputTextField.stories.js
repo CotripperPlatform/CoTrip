@@ -36,23 +36,8 @@ storiesOf("InputTextField", module)
   ))
   .add("Search Trips, Many", () => (
     <div>
-      <InputTextField
-        type="text"
-        variation="search"
-        name="search trips"
-        placeholder="Search Trips"
-      />
-      <InputTextField
-        type="text"
-        variation="search"
-        name="search trips"
-        placeholder="Search Trips"
-      />
-      <InputTextField
-        type="text"
-        variation="search"
-        name="search trips"
-        placeholder="Search Trips"
-      />
+      <InputTextField type="text" name="email" placeholder="Email" />
+      <InputTextField type="text" name="email" placeholder="Email" />
+      <InputTextField type="text" name="email" placeholder="Email" />
     </div>
   ));
