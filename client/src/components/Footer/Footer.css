@@ -25,6 +25,8 @@
 
 .Footer--left {
   width: 20%;
+  justify-content: space-evenly;
+  text-decoration: underline;
 }
 
 .Footer--center a {

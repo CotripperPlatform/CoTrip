@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
-import Logo from "components/Logo/Logo.js";
-import CarouselDots from "components/CarouselDots/CarouselDots";
 import OnboardingPills from "components/OnboardingPills/OnboardingPills";
 class FilterSettingsForm extends Component {
   constructor(props) {
@@ -40,7 +38,13 @@ class FilterSettingsForm extends Component {
   render() {
     return (
       <div className="OnboardingPage__wrapper">
-        <InputTextField name="city" type="text" placeholder="City" onChange={this.updateValue} />
+        <InputTextField
+          name="city"
+          type="text"
+          placeholder="City of residence"
+          onChange={this.updateValue}
+        />
+        <p>Topics of interest</p>
         <OnboardingPills onChange={this.test} />
         <div className="OnboardingPage__button-container">
           <Button text="Next" size="small" handleClick={this.next}></Button>

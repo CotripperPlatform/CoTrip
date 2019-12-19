@@ -14,8 +14,7 @@ export default class LoginPage extends Component {
   };
   handleSubmit = e => {
     e.preventDefault();
-    this.props.handleLogin(this.state);
-    this.props.history.push("/home");
+    this.props.handleLogin(this.state, this.props.history);
   };
 
   render() {
