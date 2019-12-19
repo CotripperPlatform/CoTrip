@@ -3,7 +3,7 @@ import "./InteractionCard.css";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import Button from "../Button/Button";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
-import Image from "../../assets/images/profile_large.png";
+import Image from "../../assets/images/profile-picture-5.png";
 
 // Function based React Component
 
