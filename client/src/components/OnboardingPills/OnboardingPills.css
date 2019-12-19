@@ -1,0 +1,6 @@
+.OnboardingPills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 34.6rem;
+}

@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Button from "./Button";
-import heart from "../../../../assets/images/heart_black.png";
-import comment from "../../../../assets/images/comment_black.png";
+import heart from "../../assets/images/heart_black.png";
+import comment from "../../assets/images/comment_black.png";
 const handleClick = e => {
   console.log("Clicked");
 };
@@ -14,10 +14,15 @@ storiesOf("Button", module)
   .add("Large Default Button", () => (
     <Button text="Submit" size="large" handleClick={handleClick} />
   ))
+  .add("Extra Small Pink Button", () => (
+    <Button text="Submit" color="pink" size="extra-small" handleClick={handleClick} />
+  ))
   .add("Small Pink Button", () => (
     <Button text="Submit" color="pink" size="small" handleClick={handleClick} />
   ))
-  .add("Normal Pink Button", () => <Button text="Submit" color="pink" handleClick={handleClick} />)
+  .add("Normal Pink Button", () => (
+    <Button text="Submit" color="pink" handleClick={handleClick} />
+  ))
   .add("Large Pink Button", () => (
     <Button text="Submit" color="pink" size="large" handleClick={handleClick} />
   ))

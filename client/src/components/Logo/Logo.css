@@ -1,5 +1,5 @@
 .Logo {
-  background-image: url("../../../../assets/images/login_logo.png");
+  background-image: url("../../assets/images/login_logo.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -10,4 +10,18 @@
 .Logo--small {
   width: 2rem;
   height: 2rem;
+}
+
+.Logo--large {
+  margin: 0 auto;
+  width: 13.5rem;
+  height: 13.5rem;
+  align-self: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .Logo--large {
+    width: 10rem;
+    height: 10rem;
+  }
 }
