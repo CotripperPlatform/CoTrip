@@ -14,7 +14,7 @@ class FilterSettingsForm extends Component {
   }
   next = () => {
     // this.props.save(this.state);
-    this.props.functionProp();
+    this.props.handleClick();
     this.props.save("filter", this.state);
   };
   updateValue = e => {
