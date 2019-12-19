@@ -33,12 +33,8 @@ library.add(
   faSearch,
   faAngleLeft,
   faAngleRight,
-<<<<<<< HEAD
   faCommentDots,
   faEdit
-=======
-  faCommentDots
->>>>>>> bc5111f4908849e763736299a6b51084b7f014d2
 );
 
 class App extends Component {

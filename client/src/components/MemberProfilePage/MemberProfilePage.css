@@ -17,16 +17,26 @@
 
 .left {
   display: flex;
+
+}
+
+.MemberProfilePage .bottom__lists {
+  padding: 4%;
+}
+
+.MemberProfilePage .Bio__div {}
+
+.MemberProfilePage .Connections__heading {
+  text-align: left;
 }
 
 .MemberProfilePage .Groups__list {
   width: 100%;
-  padding-left: 5%;
   padding-bottom: 5%;
 }
 
 .MemberProfilePage .interaction-div {
-  min-width: 5rem;
+  min-width: 10rem;
   max-width: 10rem;
   margin: 1.4rem;
 }
@@ -49,9 +59,7 @@
   width: 90%;
 }
 
-.MemberProfilePage .Groups__header {
-  padding-left: 5%;
-}
+
 
 @media only screen and (max-width:720px) {
   .page {

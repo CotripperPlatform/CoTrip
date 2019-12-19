@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./MemberProfilePage.css";
-import Nav from "../Navbar/Navbar";
+import Navbar from "../Navbar/Navbar";
 import InteractionCard from "../InteractionCard/InteractionCard";
 import PreviousTripsCard from "../PreviousTripsCard/PreviousTripsCard";
 import TripCard from "../TripCard/TripCard";
@@ -44,12 +44,12 @@ class MemberProfilePage extends Component {
       {
         name: "Suzie",
         bio:
-          "Nec et iriure utamur, per ubique mnesarchum an. At mei exerci voluptaria suscipiantur, ornatus consulatu interesset mei id. Ea possim percipit recteque his. Mea id ludus alterum apeirian, alienum dissentiet ut estLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "Nec et iriure utamur, per ubique mnesarchum an. At mei exerci voluptaria suscipiantur, ornatus consulatu interesset mei id. Ea possim percipit recteque his. Mea id ludus alterum apeirian, alienum dissentiet ut estLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         hashtags: ["#parenting", "#teenages", "#health&wellness", "#Hawaii2020"],
         facebook: "www.facebook.com",
         instagram: "www.instagram.com",
         pinterest: "www.pinterest.com",
-        isCurrentUser: true
+        isCurrentUser: false
       },
       { name: "Martha", bio: "sup yall" }
     ];
@@ -99,7 +99,7 @@ class MemberProfilePage extends Component {
     ];
     return (
       <div className={this.state.classList}>
-        <Nav></Nav>
+        <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
         <Banner background={Banner__pink}>
           <h3 style={{ margin: 0 }}>User Profile</h3>
           <InputTextField
@@ -114,7 +114,7 @@ class MemberProfilePage extends Component {
             <div className="interaction-div">
               <InteractionCard></InteractionCard>
             </div>
-            <div>
+            <div className="Bio__div">
               <Bio
                 instagram={people[0].intagram}
                 facebook={people[0].facebook}
@@ -151,14 +151,14 @@ class MemberProfilePage extends Component {
             </div>
           </div>
         </div>
-        <div>
-          <Connections
-            to="User/userid/connections"
-            users={testUsers.slice(0, 6)}
-            extraUsers="View All"
-          />
-        </div>
-        <div ClassName="groups__div">
+        <div className="bottom__lists">
+          <div ClassName="groups__div">
+            <Connections
+              to="User/userid/connections"
+              users={testUsers.slice(0, 6)}
+              extraUsers="View All"
+            />
+          </div>
           <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
         </div>
         <Footer />
