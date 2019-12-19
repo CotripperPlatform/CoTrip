@@ -123,29 +123,27 @@ const HomePage = props => {
 
         <div className="HomePage__mobile-wrapper">
           <Link to="/">
-            <Card color="yellow" size="mobile" picture={groups}>
+            <Card color="yellow" size="mobile">
+              <img src={groups} />
               <h2>Suggested Groups</h2>
             </Card>
           </Link>
           <Link to="/">
-            <Card color="pink" size="mobile" picture={airplane}>
-              <div>
-                <h2>Book a Trip</h2>
-              </div>
+            <Card color="pink" size="mobile">
+              <img src={airplane} />
+              <h2>Book a Trip</h2>
             </Card>
           </Link>
           <Link to="/">
-            <Card color="red" size="mobile" picture={people}>
-              <div>
-                <h2>Suggested People</h2>
-              </div>
+            <Card color="red" size="mobile">
+              <img src={people} />
+              <h2>Suggested People</h2>
             </Card>
           </Link>
           <Link to="/">
-            <Card color="purple" size="mobile" picture={hashtags}>
-              <div>
-                <h2>Trending Hashtags</h2>
-              </div>
+            <Card color="purple" size="mobile">
+              <img src={hashtags} />
+              <h2>Trending Hashtags</h2>
             </Card>
           </Link>
         </div>

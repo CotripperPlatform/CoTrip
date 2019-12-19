@@ -2,18 +2,20 @@ import React from "react";
 import "./Card.css";
 
 const Card = props => {
-  let { size = "large", color = "", picture = null, outline = false } = props;
-
+  let { size = "large", color, picture = null, outline = false } = props;
   return (
     <div
       className={`Card Card--${color} Card--${size}
       ${outline ? `Card__outline` : ""}`}
+      style={{ backgroundImage: `url(${picture})` }}
     >
-      {picture ? <img src={picture} alt="hey" /> : null} {props.children}{" "}
+      {" "}
       {outline ? (
-        <div className="Card__discover-link">{props.children}</div>
+        <div className="Card__discover-link">
+          {props.children} style={{ backgroundImage: `url(${picture})` }}
+        </div>
       ) : (
-        <div className="Card__contents-container"> </div>
+        props.children
       )}
     </div>
   );
