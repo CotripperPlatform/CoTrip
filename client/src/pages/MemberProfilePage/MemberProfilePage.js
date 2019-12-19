@@ -1,23 +1,27 @@
 import React, { Component } from "react";
 import "./MemberProfilePage.css";
-import Navbar from "../../components/Navbar/Navbar";
-import InteractionCard from "../../components/InteractionCard/InteractionCard";
-import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
-import TripCard from "../../components/TripCard/TripCard";
-import example1 from "../../assets/images/card_small2.png";
-import BookTripCard from "../../components/BookTripCard/BookTripCard";
+
 import example2 from "../../assets/images/hawaii.png";
-import Connections from "../../components/Connections/Connections";
 import pic1 from "../../assets/images/profile-picture-1.png";
 import pic2 from "../../assets/images/profile-picture-2.png";
 import pic3 from "../../assets/images/profile-picture-3.png";
 import pic4 from "../../assets/images/profile-picture-4.png";
+import example1 from "../../assets/images/card_small2.png";
+
+import Navbar from "../../components/Navbar/Navbar";
+import InteractionCard from "../../components/InteractionCard/InteractionCard";
+import UpcomingTrip from "components/UpcomingTripsCard/UpcomingTripsCard";
+import BookTripCard from "../../components/BookTripCard/BookTripCard";
+import Connections from "../../components/Connections/Connections";
 import Footer from "../../components/Footer/Footer";
 import InputTextField from "../../components/InputTextField/InputTextField";
-import Banner__pink from "../Banner/Banner__pink.png";
+import Banner__pink from "../../components/Banner/Banner__pink.png";
 import Banner from "../../components/Banner/Banner";
 import GroupsList from "../../components/GroupsList/GroupsList";
 import Bio from "../../components/Bio/Bio";
+import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
+import TripCard from "components/TripCard/TripCard";
+
 // Class Based React Component
 class MemberProfilePage extends Component {
   constructor(props) {
@@ -109,58 +113,58 @@ class MemberProfilePage extends Component {
             placeholder="Search My Directory"
           />
         </Banner>
-        <div className="page">
-          <div className="left">
-            <div className="interaction-div">
-              <InteractionCard></InteractionCard>
-            </div>
-            <div className="Bio__div">
-              <Bio
-                instagram={people[0].intagram}
-                facebook={people[0].facebook}
-                pinterest={people[0].pinterest}
-                type="default"
-                name={people[0].name}
-                bio={people[0].bio}
-                hashtags={people[0].hashtags}
-                isCurrentUser={people[0].isCurrentUser}
-                onClick={console.log("Hello")}
-              />
-            </div>
-            <div></div>
-          </div>
-
-          <div className="right">
-            <div className="trip-card">
-              <BookTripCard>
-                <h1>Book a Trip</h1>
-                <TripCard src={example2} location="Hawaii" date="May 2020" />
-                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-              </BookTripCard>
-            </div>
-            <div className="trip-card">
-              <PreviousTripsCard trips={true} link="/">
-                <h1>Previous Trips</h1>
-                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-                <TripCard
-                  src="https://wallpaperaccess.com/full/144067.jpg"
-                  location="Hawaii"
-                  date="May 2020"
+        <div className="MemberProfilePage__page-contents">
+          <div className="MemberProfilePage__left-top">
+            <div className="MemberProfilePage__left-contents">
+              <div className="interaction-div">
+                <InteractionCard></InteractionCard>
+              </div>
+              <div className="MemberProfilePage__bio-container">
+                <Bio
+                  instagram={people[0].intagram}
+                  facebook={people[0].facebook}
+                  pinterest={people[0].pinterest}
+                  type="default"
+                  name={people[0].name}
+                  bio={people[0].bio}
+                  hashtags={people[0].hashtags}
+                  isCurrentUser={people[0].isCurrentUser}
+                  onClick={console.log("Hello")}
                 />
-              </PreviousTripsCard>
+              </div>
+              <div></div>
             </div>
-          </div>
-        </div>
-        <div className="bottom__lists">
-          <div ClassName="groups__div">
             <Connections
+              userViewing={false}
               to="User/userid/connections"
               users={testUsers.slice(0, 6)}
               extraUsers="View All"
             />
           </div>
+
+          <div className="MemberProfilePage__right-contents">
+            <UpcomingTrip>
+              <h1>Book a Trip</h1>
+              <TripCard src={example2} location="Hawaii" date="May 2020" />
+              <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+            </UpcomingTrip>
+
+            <PreviousTripsCard trips={true} link="/">
+              <h1>Previous Trips</h1>
+              <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+              <TripCard
+                src="https://wallpaperaccess.com/full/144067.jpg"
+                location="Hawaii"
+                date="May 2020"
+              />
+            </PreviousTripsCard>
+          </div>
+        </div>
+
+        <div ClassName="MemberProfilePage__group-div">
           <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
         </div>
+
         <Footer />
       </div>
     );

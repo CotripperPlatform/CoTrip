@@ -134,6 +134,7 @@ class App extends Component {
             render={routerProps => <BookATripPage {...routerProps} />}
           ></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+          <Route path="/member-page" exact component={MemberPage}></Route>
           <Route
             path="/coming_soon"
             exact
