@@ -56,7 +56,7 @@ const HomePage = props => {
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
-          <h1>Welcome, Justine!</h1>
+          <h1>Welcome, {props.first_name}!</h1>
         </Banner>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
@@ -192,7 +192,7 @@ const HomePage = props => {
           <h2>Never Miss a Trip</h2>
           <h3>Sign up with your email address to recieve news and updates</h3>
         </SignUp>
-        <Footer />
+        <Footer history={props.history} handle_logout={props.handle_logout} />
       </footer>
     </body>
   );

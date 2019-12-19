@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
+import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -145,7 +146,13 @@ class App extends Component {
               />
             )}
           ></Route>
-          <Route path="/home" exact component={HomePage}></Route>
+          <Route
+            path="/home"
+            exact
+            render={routerProps => (
+              <HomePage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
         </main>
       </div>
     );
