@@ -83,3 +83,9 @@
 .Button--like img {
   margin-right: 0.5rem;
 }
+
+@media only screen and (max-width: 576px){
+  .Button--large {
+    padding: 0.13em 0.15em;
+  }
+}
