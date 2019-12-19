@@ -19,5 +19,7 @@ const ActivityList = props => {
     </div>
   );
 };
-
+ActivityList.defaultProps = {
+  activities: []
+};
 export default ActivityList;

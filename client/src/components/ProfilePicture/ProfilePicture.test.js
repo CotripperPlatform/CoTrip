@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow, configure, mount } from 'enzyme'
 import ProfilePicture from './ProfilePicture.js'
 import Adapter from 'enzyme-adapter-react-16';
-import image from "../../assets/images/profile_large.png";
+import image from "../../assets/images/profile-picture-1.png";
 import { BrowserRouter as Router } from "react-router-dom";
 configure({adapter: new Adapter()});
 
