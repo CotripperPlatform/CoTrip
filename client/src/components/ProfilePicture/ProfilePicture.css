@@ -1,16 +1,20 @@
 .ProfilePicture--extra-small img {
+  border-radius: 50%;
   height: 67px;
   width: 67px;
 }
 .ProfilePicture--small img {
+  border-radius: 50%;
   height: 90px;
   width: 90px;
 }
 .ProfilePicture--medium img {
+  border-radius: 50%;
   height: 150px;
   width: 150px;
 }
 .ProfilePicture--large img {
+  border-radius: 50%;
   height: 233px;
   width: 233px;
 }

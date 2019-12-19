@@ -2,6 +2,7 @@
   position: relative;
   background-size: cover;
   background-repeat: none;
+  background-position: center center;
   display: flex;
   flex-direction: column;
   border-radius: 6px;
@@ -9,6 +10,7 @@
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
   font-family: var(--default-font);
+  min-height: 9.5rem;
 }
 .Card--purple {
   background-color: var(--purple);
@@ -26,79 +28,88 @@
   background-color: var(--yellow);
 }
 .Card--large {
-  width: 1rem;
-  min-width: 32rem;
-  height: 260px;
+  width: 32vw;
+  max-width: 500px;
+  min-width: 200px;
+  max-height: 275px;
 }
-
 .Card--medium {
-  width: 1rem;
-  min-width: 225px;
-  height: 150px;
-}
-
-.Card--small {
-  width: 1rem;
-  min-width: 225px;
-  height: 125px;
-}
-
-.Card--extra-small {
-  width: 1rem;
+  width: 14.2vw;
+  max-width: 225px;
+  max-height: 150px;
   min-width: 180px;
-  height: 140px;
+  margin: 0 0.1vw 0 0.1vw;
 }
+.Card--small {
+  max-width: 225px;
+  max-height: 125px;
+}
+.Card--extra-small {
+  color: var(--white);
+  min-width: 180px;
+  box-shadow: none;
+  height: 140px;
+  text-align: center;
+  justify-content: center;
+  min-width: 6rem;
+  max-width: 6rem;
+  height: 4.32rem;
+  margin: 1.5rem 0.75rem 0 0.75rem;
+  border-radius: 1.8px;
+  padding: 0.37rem;
+  font-size: 0.9rem;
+}
+
+.Card__contents-container img {
+  max-height: 100%;
+}
+.Card__contents-container {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .Card--mobile {
   display: flex;
-  flex-direction: column-reverse;
-  background-size: auto;
+  flex-direction: column;
   background-repeat: no-repeat;
-  background-position-x: 2.7em;
-  background-position-y: 2.5rem;
+  background-size: 80%;
   text-align: center;
   color: var(--white);
   width: 10rem;
-  min-width: 160px;
-  height: 202px;
+  max-width: 160px;
+  max-height: 202px;
+  min-height: 200px;
+}
+.Card--mobile img {
+  transform: scaleX(0.5);
+  margin: 3vh 0 0 0;
 }
 .Card--mobile div {
   text-align: center;
-  width: 80%;
-  margin-left: 0.9rem;
-  height: 6rem;
-}
 
-.Card img {
-  width: 1rem;
-  display: block;
-  max-width: 100%;
-  max-height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  padding-bottom: 3vh;
+  width: 100%;
 }
-
+.Card--mobile h2 {
+  text-align: center;
+  width: 100%;
+}
 .Card__outline {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 1rem;
+  padding: 3vh 0 5vh 0;
+  width: 14.2vw;
+  max-width: 225px;
   background: none;
   border: 3px dashed var(--purple);
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-
 .Card__discover-link {
   color: black;
   text-align: center;
-  margin-left: 22%;
-  margin-right: 22%;
   transition: transform 0.3s;
 }
-
 .Card__discover-link a {
   font-size: 24px;
   width: 10rem;
@@ -106,16 +117,56 @@
   margin-right: 2rem;
   text-decoration: none;
 }
-
 .Card__discover-link:hover {
   transform: scale(1.1);
 }
 .Card__discover-link a:hover {
   color: var(--yellow);
 }
-
-@media only screen and (max-width: 576px) {
+@media only screen and (min-width: 321px) and (max-width: 575px) {
+  .Card--extra-small {
+    min-width: 7rem;
+    max-width: 7rem;
+    height: 5.03rem;
+    margin: 1.75rem 0.875rem 0 0.875rem;
+    border-radius: 2.1px;
+    padding: 0.43rem;
+    font-size: 1.2rem;
+  }
   .Card--large {
     min-width: 17rem;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .Card--extra-small {
+    min-width: 8rem;
+    max-width: 8rem;
+    height: 5.75rem;
+    margin: 2rem 1rem 0 1rem;
+    border-radius: 2.4px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .Card--extra-small {
+    min-width: 9rem;
+    max-width: 9rem;
+    height: 6.47rem;
+    margin: 2.5rem 1.25rem 0 1.25rem;
+    border-radius: 2.7px;
+    padding: 0.56rem;
+    font-size: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .Card--extra-small {
+    min-width: 10rem;
+    max-width: 10rem;
+    height: 7.19rem;
+    margin: 2.5rem 2.5rem 0 0;
+    border-radius: 3px;
+    padding: 0.62rem;
+    font-size: 1.5rem;
   }
 }
