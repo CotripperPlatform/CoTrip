@@ -1,0 +1,48 @@
+
+.Groups {
+  width: 70vw;
+}
+.Groups__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Groups__card--1, .Groups__card--2, .Groups__card--3 {
+  margin: 1em 1em 0 0;
+} 
+
+.Groups__card--4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 125px;
+  height: 150px;
+  text-align: center;
+}
+
+.Groups__header {
+  font-family: var(--default-font);
+  color: var(--purple);
+}
+
+.Groups__list__link {
+  color: var(--blue-lite);
+  font-size: 1rem;
+  font-family: var(--default-font);
+  font-weight: normal;
+}
+
+@media only screen and (max-width: 576px) {
+  .Groups {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Groups__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
