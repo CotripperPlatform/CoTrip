@@ -9,7 +9,6 @@
   text-align: left;
   color: var(--white);
   padding: 2vh 0 0 1.2rem;
-  margin-bottom: -2vh;
   /* border: 2px solid black; */
 }
 
@@ -50,7 +49,8 @@
 
 /* Large devices */
 @media only screen and (max-width: 992px) {
-  .UpcomingTripsCard__general-information, .UpcomingTripsCard__list {
+  .UpcomingTripsCard__general-information,
+  .UpcomingTripsCard__list {
     display: none;
   }
 
@@ -63,7 +63,7 @@
   }
 
   .UpcomingTripsCard__link {
-    font-size: .8rem;
+    font-size: 0.8rem;
     padding: 0;
     margin: 1vh auto;
   }
