@@ -1,0 +1,41 @@
+.ForumComment {
+  display: flex;
+  background-color: var(--gray-dark);
+  border: 1px solid var(--black);
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+.ForumComment__image {
+  width: 6.5em;
+  display: flex;
+  height: 6.5em;
+  margin-top: 1em;
+  margin-left: 0.25em;
+}
+
+.ForumComment__name {
+  font-family: var(--default-font);
+  font-size: 1.2rem;
+  margin-left: 1em;
+  padding-bottom: 1.25em;
+}
+
+.ForumComment__date {
+  display: flex;
+  justify-content: flex-end;
+  font-family: var(--paragraph-font);
+  margin-left: 1em;
+  margin-top: 1em;
+}
+
+.ForumComment__body {
+  display: flex;
+  font-family: var(--paragraph-font);
+  color: var(--black);
+  padding: 1em 0em 0em 1em;
+  font-size: 0.9em;
+  flex-direction: column;
+  white-space: pre-wrap;
+  align-items: flex-start;
+}

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import HomePage from "../src/pages/HomePage/HomePage";
+import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -41,7 +42,11 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+<<<<<<< HEAD
           <Route path="/home" exact component={HomePage}></Route>
+=======
+          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+>>>>>>> develop
         </main>
       </div>
     );
