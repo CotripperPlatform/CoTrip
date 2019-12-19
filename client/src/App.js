@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
-import OnboardingPage from "pages/OnboardingPage/OnboardingPage";
+import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import "./App.css";
@@ -120,7 +120,6 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
-          {/* <Route path="/home" exact component={HomePage}></Route> */}
           <Route
             path="/coming_soon"
             exact
@@ -146,6 +145,7 @@ class App extends Component {
               />
             )}
           ></Route>
+          <Route path="/home" exact component={HomePage}></Route>
         </main>
       </div>
     );
