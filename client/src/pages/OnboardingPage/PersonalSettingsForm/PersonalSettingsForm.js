@@ -32,8 +32,7 @@ class PersonalSettingsForm extends Component {
     this.props.save("personal", this.state);
     console.log(this.state);
     this.props.functionProp();
-    this.props.handleSignup(this.state);
-    this.props.history.push("/home");
+    this.props.handleSignup(this.state, this.props.history);
   };
   render() {
     return (
