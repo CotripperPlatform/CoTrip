@@ -36,10 +36,11 @@ class UserSetupForm extends Component {
   };
   next = () => {
     let regexEmail = /.+@.+\..+/;
+    let regexPassword = /(^(?=.*[a-z])(?=.*[A-Z])(\S{6,}))/;
     if (
       this.state.confirmPassword &&
       this.state.email.match(regexEmail) &&
-      this.state.password.length >= 6
+      this.state.password.match(regexPassword)
     ) {
       this.props.save("setup", this.state);
       this.props.handleClick();
