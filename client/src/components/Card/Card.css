@@ -45,9 +45,19 @@
   max-height: 125px;
 }
 .Card--extra-small {
-  width: 1rem;
-  max-width: 185px;
-  max-height: 135px;
+  color: var(--white);
+  min-width: 180px;
+  box-shadow: none;
+  height: 140px;
+  text-align: center;
+  justify-content: center;
+  min-width: 6rem;
+  max-width: 6rem;
+  height: 4.32rem;
+  margin: 1.5rem 0.75rem 0 0.75rem;
+  border-radius: 1.8px;
+  padding: 0.37rem;
+  font-size: 0.9rem;
 }
 
 .Card__contents-container img {
@@ -121,7 +131,7 @@
     margin: 1.75rem 0.875rem 0 0.875rem;
     border-radius: 2.1px;
     padding: 0.43rem;
-    font-size: 1.2;
+    font-size: 1.2rem;
   }
   .Card--large {
     min-width: 17rem;
