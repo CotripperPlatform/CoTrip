@@ -2,15 +2,22 @@
   display: flex;
   color: var(--black);
   background-color: var(--white);
-  border: 2px solid var(--white);
+  border: 2px solid var(--black);
   border-radius: 3px;
-  padding: 0.6rem 7rem 0.6rem 1rem;
-  margin: 1rem 0 1rem 0;
+  padding: 1vh 10vw 1vh 1vw;
+  margin: 0 0 2vh 0;
   width: 100%;
-  max-width: 330px;
-  font-size: 20px;
+  max-width: 25vw;
+
+  font-size: calc(16px + 2 * ((100vw - 320px) / 680));
   font-family: var(--default-font);
   /* border: 2px solid black; */
+}
+
+@media screen and (max-width: 420px) {
+  .InputTextField__container--default {
+    max-width: 70vw;
+  }
 }
 
 .InputTextField__container--default::-webkit-input-placeholder {
