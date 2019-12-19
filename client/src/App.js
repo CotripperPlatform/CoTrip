@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
+import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import Hawaii2020 from "./pages/Hawaii2020/Hawaii2020";
@@ -43,7 +44,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      logged_in: localStorage.getItem("token") ? true : false,
+      logged_in:
+        localStorage.getItem("token") && localStorage.getItem("token") != undefined ? true : false,
       email: "",
       first_name: "",
       image: ""
@@ -67,7 +69,7 @@ class App extends Component {
         });
     }
   }
-  handle_login = data => {
+  handle_login = (data, history) => {
     fetch("http://localhost:8000/auth/login", {
       method: "POST",
       headers: {
@@ -78,19 +80,20 @@ class App extends Component {
       .then(res => res.json())
       .then(json => {
         console.log(json.token);
-        localStorage.setItem("token", json.token);
+        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
         this.setState({
-          logged_in: true,
+          logged_in: json.token != undefined ? true : false,
           email: json.user.email,
           first_name: json.user.profile.first_name,
           image: json.user.profile.image
         });
+        history.push("/home");
       })
       .catch(err => {
         console.log(err);
       });
   };
-  handle_signup = data => {
+  handle_signup = (data, history) => {
     fetch("http://localhost:8000/auth/register", {
       method: "POST",
       headers: {
@@ -101,13 +104,14 @@ class App extends Component {
       .then(res => res.json())
       .then(json => {
         console.log(json);
-        localStorage.setItem("token", json.token);
+        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
         this.setState({
-          logged_in: true,
+          logged_in: json.token != undefined ? true : false,
           email: json.user.email,
           first_name: json.user.profile.first_name,
           image: json.user.profile.image
         });
+        history.push("/home");
       })
       .catch(err => {
         console.log(err);
@@ -128,6 +132,9 @@ class App extends Component {
             exact
             render={routerProps => <Hawaii2020 tripName={"Hawaii"} {...routerProps} />}
           ></Route>
+          <Route path="/book-a-trip" exact render={routerProps => (
+            <BookATripPage {...routerProps}/>)}>
+          </Route>
           <Route
             path="/coming_soon"
             exact
