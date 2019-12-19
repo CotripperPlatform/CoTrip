@@ -1,3 +1,7 @@
+.BookATripPage {
+    overflow: hidden;
+}
+
 .BookATripPage__banner {
     width: 100vw;
     height: 231px;

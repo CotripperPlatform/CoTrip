@@ -11,7 +11,7 @@ import Footer from "../Footer/Footer";
 const BookATripPage = (props) => {
   return(
     <div className="BookATripPage">
-      <NavBar />
+      <NavBar page={3} />
       <Banner background={Banner__pink}>
         <h3 style={{margin: 0}}>Book a Trip</h3>
         <InputTextField type="text" variation="search" name="search directory" placeholder="Search Trip"/>
