@@ -90,6 +90,7 @@ class App extends Component {
       })
       .catch(err => {
         console.log(err);
+        alert("Please enter valid email and password");
       });
   };
   handle_signup = (data, history) => {
@@ -125,9 +126,11 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
-          <Route path="/book-a-trip" exact render={routerProps => (
-            <BookATripPage {...routerProps}/>)}>
-          </Route>
+          <Route
+            path="/book-a-trip"
+            exact
+            render={routerProps => <BookATripPage {...routerProps} />}
+          ></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
             path="/coming_soon"
