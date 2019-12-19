@@ -123,19 +123,11 @@ class App extends Component {
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
-<<<<<<< HEAD
           <Route
             path="/hawaii-2020"
             exact
             render={routerProps => <Hawaii2020 tripName={"Hawaii"} {...routerProps} />}
           ></Route>
-=======
-          <Route path="/hawaii-2020" exact
-            render={routerProps => (
-              <Hawaii2020 {...routerProps} />
-            )}>
-          </Route>
->>>>>>> 662e17a9f52981b94437d9a2c85753f89e88d51d
           <Route
             path="/coming_soon"
             exact
