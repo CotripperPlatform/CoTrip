@@ -42,11 +42,8 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
-<<<<<<< HEAD
           <Route path="/home" exact component={HomePage}></Route>
-=======
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
->>>>>>> develop
         </main>
       </div>
     );
