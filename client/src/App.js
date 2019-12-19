@@ -3,12 +3,9 @@ import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
-<<<<<<< HEAD
 import Hawaii2020 from "./pages/Hawaii2020/Hawaii2020";
-=======
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
->>>>>>> develop
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -125,14 +122,12 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
-<<<<<<< HEAD
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route path="/hawaii-2020" exact
             render={routerProps => (
               <Hawaii2020 {...routerProps} />
             )}>
           </Route>
-=======
           <Route
             path="/coming_soon"
             exact
@@ -165,7 +160,6 @@ class App extends Component {
               <HomePage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
             )}
           ></Route>
->>>>>>> develop
         </main>
       </div>
     );
