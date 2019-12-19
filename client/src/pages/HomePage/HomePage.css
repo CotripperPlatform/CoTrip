@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   width: 100vw;
   overflow-x: hidden;
+  /* border: 2px solid black; */
 }
 
 .HomePage__content {
