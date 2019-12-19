@@ -24,7 +24,7 @@ class OnboardingPills extends Component {
         pills: updateArray
       },
       () => {
-        this.props.onChange(this.state.pills);
+        this.props.onChange(this.state);
       }
     );
   };
