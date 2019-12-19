@@ -44,7 +44,7 @@ class OnboardingPage extends Component {
         <UserSetupForm
           currPage={this.state.counter}
           save={this.saveSettings}
-          functionProp={this.handleClick}
+          handleClick={this.handleClick}
         />
       </div>
     );
@@ -53,7 +53,7 @@ class OnboardingPage extends Component {
         <FilterSettingsForm
           currPage={this.state.counter}
           save={this.saveSettings}
-          functionProp={this.handleClick}
+          handleClick={this.handleClick}
         />
       </div>
     );
@@ -62,7 +62,7 @@ class OnboardingPage extends Component {
         <PersonalSettingsForm
           currPage={this.state.counter}
           save={this.saveSettings}
-          functionProp={this.handleClick}
+          handleClick={this.handleClick}
           handleSignup={this.props.handleSignup}
           {...this.state}
           logged_in={this.props.logged_in}

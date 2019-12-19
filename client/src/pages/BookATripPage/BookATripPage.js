@@ -1,6 +1,7 @@
 import React from 'react';
 import "./BookATripPage.css";
 import NavBar from "../../components/Navbar/Navbar";
+import people from "assets/images/add-friend.png";
 import BookATripImage from "../../components/BookATripImage/BookATripImage";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
@@ -15,7 +16,7 @@ import Footer from "../../components/Footer/Footer";
 const BookATripPage = (props) => {
   return(
     <div className="BookATripPage">
-      <NavBar page={3} />
+      <NavBar page={3} profileImage={people} />
       <Banner background={Banner__pink}>
         <h3 style={{margin: 0}}>Book a Trip</h3>
         <InputTextField type="text" variation="search" name="search directory" placeholder="Search Trip"/>

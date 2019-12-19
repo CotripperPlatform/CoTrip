@@ -28,7 +28,7 @@ function Connections(props) {
       );
     } else if (index === 4) {
       return (
-        <div key={person.userId} className="Connections__person">
+        <div className="Connections__person">
           <div className="Connections__person__div">
             <Link className="Connections__link" to={props.to}>
               {props.extraUsers}
