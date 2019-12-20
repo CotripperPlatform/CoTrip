@@ -203,7 +203,7 @@ const HomePage = props => {
       </div>
 
       <footer className="HomePage__footer-wrapper">
-        <SignUp onClick={handleClick}>
+        <SignUp>
           <h2>Never Miss a Trip</h2>
           <h3>Sign up with your email address to recieve news and updates</h3>
         </SignUp>
