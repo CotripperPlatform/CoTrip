@@ -30,5 +30,13 @@ const PreviousTripsCard = props => {
     </Card>
   );
 };
-
+PreviousTripsCard.defaultProps = {
+  trips: false,
+  link: "/",
+  children: [
+    <h1>Previous Trips</h1>,
+    <h2>None with CoTripper yet!</h2>,
+    <a href="/">Book a Trip Now!</a>
+  ]
+};
 export default PreviousTripsCard;

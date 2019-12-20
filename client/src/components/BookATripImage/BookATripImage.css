@@ -1,0 +1,45 @@
+.BookATripImage__image-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.BookATripImage__image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.BookATripImage__image {
+    height: 40rem;
+    width: 40rem;
+    margin: 3rem 2rem 2rem 2rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.BookATripImage__link {
+    font-family: var(--default-font);
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+@media screen and (max-width: 320px) {
+    .BookATripImage__image {
+        height: 13rem;
+        width: 13rem;
+        padding: 1rem 1rem 2rem 2rem;
+    }
+    .BookATripImage__link {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .BookATripImage__image {
+        height: 28rem;
+        width: 28rem;
+        padding: 2rem 1rem 1rem 2rem;
+    }
+}

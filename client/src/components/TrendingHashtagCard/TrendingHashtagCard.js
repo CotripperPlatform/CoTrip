@@ -17,7 +17,7 @@ const TrendingHashtagCard = props => {
           {data.map((item, index) => {
             return (
               <div key={index} className="TrendingHashtagCard__hashtag">
-                <a href="/">{item}</a>
+                <a href="/coming_soon">{item}</a>
               </div>
             );
           })}
@@ -25,6 +25,10 @@ const TrendingHashtagCard = props => {
       </div>
     </Card>
   );
+};
+
+TrendingHashtagCard.defaultProps = {
+  data: []
 };
 
 export default TrendingHashtagCard;
