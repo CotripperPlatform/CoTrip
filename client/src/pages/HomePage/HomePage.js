@@ -17,7 +17,7 @@ import image1 from "../../assets/images/profile-picture-1.png";
 import image2 from "../../assets/images/profile-picture-5.png";
 import image3 from "../../assets/images/profile-picture-4.png";
 
-import people from "assets/images/add-friend.png";
+import people from "assets/images/profile_default.svg";
 import airplane from "assets/images/airplane-shape.png";
 import groups from "assets/images/protest.png";
 import hashtags from "assets/images/trending-hashtags.png";
