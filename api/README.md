@@ -22,39 +22,51 @@ git clone git@github.com:CotripperPlatform/CoTrip.git
 
 2. Run command `pipenv install` this will set up the virtual environment and install dependencies listed in the pipfile.
 
-3. Run command `pipenv install django` to install django, listed in pipfile
+3. Run the virtual shell `pipenv shell`
 
-4. Run command `pipenv install psycopg2-binary` to install a PostgreSQL database adapter for Python
-
-5. Run command `pipenv install django-rest-framework` to install a necessary dependency to turn tables into JSON objects for the API
-
-6. Run command `pipenv install django-rest-knox` to install Django Knox, the dependency used for authentication of the user
-
-7. Run command `pipenv install Pillow` to install dependency used for importing images
-
-8. Run command `pipenv install django-cors-header` to allow in-browser requests to database from other origins.
-
-9. Run the virtual shell `pipenv shell`
-
-10. Run the following command in the shell to load the sql file into postgres
+4. Run the following command in the shell to load the sql file into postgres
 
 ```
 psql -U postgres -f settings.sql
+```
+
+5. Run the following command in the shell to migrate models into newly created database
+
+```
+python3 manage.py migrate
+```
+
+6. Run the following command in the shell to run the python server
+
+```
+python3 manage.py runserver
 ```
 
 ## API Description
 
 ### Serializers
 
-- Purpose: Define the API representation
+- Purpose: Serializers are used to transform various data types into JSON or XML, which is the style of storage used in most API's. In the case of the backend of this project, we were taking querysets and model instances and converting them to JSON objects to be stored in our CoTripper API.
+
+To read more about Django Serializers-
+https://www.django-rest-framework.org/api-guide/serializers/
 
 ### Views
 
-- Purpose: Define the view behavior
+- Purpose: Views are a way of performing the most basic functionality of the internet, being you send a request (http, fetch) and get back a response (what's viewed on your webpage, data from an API, etc.) In this project, views gave complete CRUD (Create, Read, Update, Delete) functionality to the User and Profile models.
 
 ### Urls
 
-- Purpose: Define making between URLs and views
+- Purpose: URL's are created so various aspects of the datasets, or a certain CRUD function can be accessed through a URL, giving a direct path for the front-end to fetch from. The paths that exist in CoTripper are represented in the table below...
+  | Path | Description |
+  | :----------------------: | ------------------------------------------------- |
+  | `auth` | home route for authentication
+  | `auth/register` | register a new authenticated user |
+  | `auth/login` | login authenticated user|
+  | `auth/user` | view authenticated user |
+  | `auth/logout` | logout authenticated user |
+  | `profile` | view list of existing profiles |
+  | `profile/<ink:pk>` | find, update, or delete a profile by it's primary key |
 
 ## API Deployment
 
