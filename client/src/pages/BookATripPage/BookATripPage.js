@@ -1,7 +1,7 @@
 import React from "react";
 import "./BookATripPage.css";
 import NavBar from "../../components/Navbar/Navbar";
-import people from "assets/images/add-friend.png";
+import people from "assets/images/profile_default.svg";
 import BookATripImage from "../../components/BookATripImage/BookATripImage";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
@@ -30,7 +30,7 @@ const BookATripPage = props => {
       <BookATripImage
         className="BookATripPage__images"
         cards={[
-          { image: image1, url: "#", description: "Hawaii May 2020" },
+          { image: image1, url: "/hawaii-2020", description: "Hawaii May 2020" },
           { image: image2, url: "#", description: "Greece & Croatia Cruise June 2020" },
           { image: image3, url: "#", description: "Southern Caribbean Cruise July 2020" },
           { image: image1, url: "#", description: "Hawaii May 2020" },
@@ -40,7 +40,7 @@ const BookATripPage = props => {
       <div className="BookATripPage__button-container">
         <Button text="View Previous Trips" color="pink" size="large" />
       </div>
-      <Footer />
+      <Footer history={props.history} handle_logout={props.handle_logout}/>
     </div>
   );
 };

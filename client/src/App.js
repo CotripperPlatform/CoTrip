@@ -134,15 +134,19 @@ class App extends Component {
           <Route
             path="/hawaii-2020"
             exact
-            render={routerProps => <Hawaii2020 tripName={"Hawaii"} {...routerProps} />}
+            render={routerProps => <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />}
           ></Route>
           <Route
             path="/book-a-trip"
             exact
-            render={routerProps => <BookATripPage {...routerProps} />}
+            render={routerProps => <BookATripPage handle_logout={this.handle_logout} {...routerProps} />}
           ></Route>
-          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
-          <Route path="/member-page" exact component={MemberPage}></Route>
+         
+          <Route
+            path="/member-page"
+            exact
+            render={routerProps => <MemberPage  handle_logout={this.handle_logout} {...routerProps} />}
+          ></Route>
           <Route
             path="/coming_soon"
             exact

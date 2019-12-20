@@ -47,8 +47,7 @@ class MemberProfilePage extends Component {
     let people = [
       {
         name: "Suzie",
-        bio:
-          "Nec et iriure utamur, per ubique mnesarchum an. At mei exerci voluptaria suscipiantur, ornatus consulatu interesset mei id. Ea possim percipit recteque his. Mea id ludus alterum apeirian, alienum dissentiet ut estLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        bio: "My daughter Brittany and I have been a CoTripper member for a while now and love everything about it. I work as an HR director and Brittany will be entering 8th grade this fall. We really enjoy hiking and jamming out to Lizzo. We love sharing our travel experiences and connecting with like-minded people. Hope to hear from you.",
         hashtags: ["#parenting", "#teenages", "#health&wellness", "#Hawaii2020"],
         facebook: "www.facebook.com",
         instagram: "www.instagram.com",
@@ -143,7 +142,7 @@ class MemberProfilePage extends Component {
           </div>
 
           <div className="MemberProfilePage__right-contents">
-            <UpcomingTrip>
+            <UpcomingTrip details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}>
               <h1>Book a Trip</h1>
               <TripCard src={example2} location="Hawaii" date="May 2020" />
               <TripCard src={example1} location="Puerto Rico" date="April 2019" />
@@ -165,7 +164,7 @@ class MemberProfilePage extends Component {
           <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
         </div>
 
-        <Footer />
+        <Footer history={this.props.history} handle_logout={this.props.handle_logout}/>
       </div>
     );
   }

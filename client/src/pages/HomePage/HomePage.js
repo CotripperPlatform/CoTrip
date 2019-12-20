@@ -81,7 +81,7 @@ const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
       <nav>
-        <NavBar profileImage={people}></NavBar>
+        <NavBar to={"/member-page"} profileImage={people}></NavBar>
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>

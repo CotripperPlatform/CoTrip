@@ -1,7 +1,7 @@
 import React from "react";
 import "./Hawaii2020.css";
 import NavBar from "components/Navbar/Navbar";
-import people from "assets/images/add-friend.png";
+import people from "assets/images/profile_default.svg";
 import Banner from "components/Banner/Banner";
 import Banner__pink from "assets/images/Banner__pink.png";
 import BannerImageCard from "components/BannerImageCard/BannerImageCard";
@@ -44,7 +44,7 @@ const Hawaii2020 = props => {
       <div className="Hawaii2020__button-container">
         <Button text="Book Now" color="pink" size="large" />
       </div>
-      <Footer />
+      <Footer history={props.history} handle_logout={props.handle_logout}/>
     </div>
   );
 };
