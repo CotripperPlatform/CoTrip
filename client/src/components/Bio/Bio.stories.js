@@ -26,6 +26,6 @@ storiesOf("Bio", module).add("Default", () => (
     bio={people[0].bio}
     hashtags={people[0].hashtags}
     isCurrentUser={people[0].isCurrentUser}
-    onClick={console.log("Hello")}
+    onClick={() => console.log("Hello")}
   />
 ));

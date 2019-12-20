@@ -36,5 +36,14 @@ const Bio = props => {
     </div>
   );
 };
+Bio.defaultProps = {
+  name: "",
+  bio: "",
+  hashtags: [],
+  facebook: "www.facebook.com",
+  instagram: "www.instagram.com",
+  pinterest: "www.pinterest.com",
+  isCurrentUser: true
+};
 
 export default Bio;

@@ -26,8 +26,6 @@ import TripCard from "components/TripCard/TripCard";
 class MemberProfilePage extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
-
     // Default CSS class to apply to the Component
     this.state = {
       classList: "MemberProfilePage"
@@ -129,7 +127,7 @@ class MemberProfilePage extends Component {
                   bio={people[0].bio}
                   hashtags={people[0].hashtags}
                   isCurrentUser={people[0].isCurrentUser}
-                  onClick={console.log("Hello")}
+                  onClick={() => console.log("Hello")}
                 />
               </div>
               <div></div>
