@@ -47,7 +47,8 @@ class MemberProfilePage extends Component {
     let people = [
       {
         name: "Suzie",
-        bio: "My daughter Brittany and I have been a CoTripper member for a while now and love everything about it. I work as an HR director and Brittany will be entering 8th grade this fall. We really enjoy hiking and jamming out to Lizzo. We love sharing our travel experiences and connecting with like-minded people. Hope to hear from you.",
+        bio:
+          "My daughter Brittany and I have been a CoTripper member for a while now and love everything about it. I work as an HR director and Brittany will be entering 8th grade this fall. We really enjoy hiking and jamming out to Lizzo. We love sharing our travel experiences and connecting with like-minded people. Hope to hear from you.",
         hashtags: ["#parenting", "#teenages", "#health&wellness", "#Hawaii2020"],
         facebook: "www.facebook.com",
         instagram: "www.instagram.com",
@@ -135,14 +136,16 @@ class MemberProfilePage extends Component {
             </div>
             <Connections
               userViewing={false}
-              to="User/userid/connections"
+              to="/home"
               users={testUsers.slice(0, 6)}
               extraUsers="View All"
             />
           </div>
 
           <div className="MemberProfilePage__right-contents">
-            <UpcomingTrip details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}>
+            <UpcomingTrip
+              details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
+            >
               <h1>Book a Trip</h1>
               <TripCard src={example2} location="Hawaii" date="May 2020" />
               <TripCard src={example1} location="Puerto Rico" date="April 2019" />
@@ -164,7 +167,7 @@ class MemberProfilePage extends Component {
           <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
         </div>
 
-        <Footer history={this.props.history} handle_logout={this.props.handle_logout}/>
+        <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
       </div>
     );
   }
