@@ -11,7 +11,7 @@
   justify-content: space-between;
   margin: 0rem 1.1rem 0rem 0rem;
   padding: 2vh 0.5vw 4vh 0.5vw;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .PreviousTripCard__arrow {
@@ -24,8 +24,8 @@
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   z-index: 2;
-  border: 2px solid green;
-  margin-top: 4vh;
+  /* border: 2px solid green;  */
+  margin-top: 4.5vh;
 }
 .PreviousTripCard__arrow:hover {
   transform: scale(1.1);
