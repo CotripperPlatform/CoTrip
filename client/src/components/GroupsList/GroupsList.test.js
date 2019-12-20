@@ -1,16 +1,42 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import GroupsList from './GroupsList.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow } from "enzyme";
+import GroupsList from "./GroupsList.js";
 
-// We will describe a block of tests
-describe('GroupsList component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<GroupsList />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
-  })
-})
+const setUp = props => {
+  const component = shallow(<GroupsList {...props} />);
+  return component;
+};
+describe("GroupsList component", () => {
+  let wrapper;
+  describe("Has Props", () => {
+    beforeEach(() => {
+      const props = {
+        heading: "Her Groups",
+        moreGroups: "View All",
+        to: "/"
+      };
+      wrapper = setUp(props);
+    });
+    it("Should render as expected", () => {
+      const component = wrapper.find(".Groups");
+      expect(component.length).toBe(1);
+    });
+    it("Should render expected Groupcard", () => {
+      const component = wrapper.find("GroupCard");
+      expect(component.length).toBe(3);
+    });
+  });
+  describe("Has NO Props", () => {
+    beforeEach(() => {
+      wrapper = setUp();
+    });
+    it("Should render as expected", () => {
+      const component = wrapper.find(".Groups");
+      expect(component.length).toBe(1);
+    });
+    it("Should render expected Groupcard", () => {
+      const component = wrapper.find("GroupCard");
+      expect(component.length).toBe(3);
+    });
+  });
+});
