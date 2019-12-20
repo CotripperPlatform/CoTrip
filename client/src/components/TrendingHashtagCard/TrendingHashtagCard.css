@@ -34,13 +34,12 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0vh 0 0vh 0vw;
-  height: 23vh;
-  /* border: 2px solid black; */
 }
+
 .TrendingHashtagCard__hashtag {
   color: var(--white);
   font-size: 1.4rem;
+  padding: 2px 0 2px 0;
 }
 .TrendingHashtagCard__hashtag a {
   color: var(--white);
