@@ -68,6 +68,10 @@ https://www.django-rest-framework.org/api-guide/serializers/
   | `profile` | view list of existing profiles |
   | `profile/<ink:pk>` | find, update, or delete a profile by it's primary key |
 
+## Authentication
+
+-Purpose: Authentication is using identifying credentials associated with a request to get an appropriate response. In this project, from the Django Rest Framework, we used Django Knox. Django Knox takes use of encrypted tokens generated from a password, and is used to give security and protection to user information.
+
 ## API Deployment
 
 - Deployed on Heroku
