@@ -27,6 +27,7 @@
   width: 1rem;
   min-width: 225px;
   height: 150px;
+  margin: 0 2px 0 2px;
 }
 
 .Card--small {
