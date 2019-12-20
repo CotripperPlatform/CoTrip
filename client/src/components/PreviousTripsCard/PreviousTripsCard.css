@@ -9,23 +9,22 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0rem 1.1rem 0rem 0rem;
-  padding: 2vh 0.5vw 4vh 0.5vw;
+  padding: 2vh 0vw 4vh 0vw;
   /* border: 2px solid black; */
 }
 
 .PreviousTripCard__arrow {
   background-color: var(--yellow-dark);
-  padding-left: 2vw;
+  /* padding-left: 1vw; */
   margin-left: 0.5vw;
-  width: 25px;
+  width: 30px;
   height: 50px;
   clip-path: polygon(0 0, 80% 50%, 0 100%, 0 80%, 45% 50%, 0 20%);
   transition: all 0.1s ease-in-out;
   cursor: pointer;
   z-index: 2;
-  /* border: 2px solid green;  */
-  margin-top: 4.5vh;
+  /* border: 2px solid green; */
+  margin-top: 6vh;
 }
 .PreviousTripCard__arrow:hover {
   transform: scale(1.1);

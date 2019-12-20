@@ -34,18 +34,11 @@
   max-height: 275px;
 }
 .Card--medium {
-<<<<<<< HEAD
-  width: 1rem;
-  min-width: 225px;
-  height: 150px;
-  margin: 0 2px 0 2px;
-=======
   width: 14.2vw;
   max-width: 225px;
   max-height: 150px;
   min-width: 180px;
-  margin: 0 0.1vw 0 0.1vw;
->>>>>>> develop
+  margin: 0 0.2vw 0 0.2vw;
 }
 .Card--small {
   max-width: 225px;
