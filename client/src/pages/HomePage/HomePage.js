@@ -18,6 +18,7 @@ import image2 from "../../assets/images/profile-picture-5.png";
 import image3 from "../../assets/images/profile-picture-4.png";
 
 import people from "assets/images/profile_default.svg";
+import suggestedPeople from "assets/images/add-friend.png";
 import airplane from "assets/images/airplane-shape.png";
 import groups from "assets/images/protest.png";
 import hashtags from "assets/images/trending-hashtags.png";
@@ -156,7 +157,7 @@ const HomePage = props => {
           </Link>
           <Link to="/">
             <Card color="red" size="mobile">
-              <img src={people} />
+              <img src={suggestedPeople} />
               <h2>Suggested People</h2>
             </Card>
           </Link>
