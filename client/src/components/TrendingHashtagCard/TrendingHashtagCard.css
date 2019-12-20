@@ -20,13 +20,21 @@
   padding-left: 35%;
   color: var(--white);
 }
+
+.TrendingHashtagCard__columns-wrapper {
+  display: flex;
+  justify-content: space-around;
+  /* border: 2px solid black; */
+  width: 60%;
+  margin: 0 5vw 0 5vw;
+}
+
 .TrendingHashtagCard__hashtags-container {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 0vh 0 0vh 5vw;
-  width: 100%;
+  padding: 0vh 0 0vh 0vw;
   height: 23vh;
   /* border: 2px solid black; */
 }
