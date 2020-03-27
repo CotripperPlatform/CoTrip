@@ -11,8 +11,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 For setup and installation instructions, see the readmes for the API and Client:
 
-- [API Readme](./client/README.md)
-- [Client Readme](./api/README.md)
+- [API Readme](./api/README.md)
+- [Client Readme](./client/README.md)
 
 ### Dependencies
 
