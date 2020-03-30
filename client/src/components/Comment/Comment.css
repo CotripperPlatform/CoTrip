@@ -1,8 +1,4 @@
-body {
-  text-align: center;
-}
-
-.CommentBody {
+.Comment_body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,42 +11,47 @@ body {
   padding: 1.2rem;
 }
 
-.CommentBody p {
-  text-align: left;
+.Comment_h4 {
+  margin: 0;
 }
 
-.CommentBody_item {
+.Comment_section {
   margin: 0.7rem;
-  text-align: left;
   height: 90%;
   margin-bottom: 0;
+}
+
+.Comment_section_1 {
+  text-align: center;
+}
+
+.Comment_section_2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 9rem;
 }
 
-.CommentBody_center_item {
+.Comment_section_2_p {
+  margin: 0;
 }
 
-.CommentBody_name {
-  text-align: center !important;
-  margin-bottom: 0;
-  font-size: 18px;
+.Comment_section_3 {
+  white-space: nowrap;
+  text-align: right;
 }
-.CommentBody_activity {
+
+.Comment_section_3_p {
+  margin: 0;
+}
+
+.Comment_div {
+  display: flex;
+}
+
+.Comment_article {
   text-align: left;
   margin-right: 0.8rem;
   margin-top: 0.5rem;
   display: flex;
-}
-
-.Date {
-  white-space: nowrap;
-}
-
-p span {
-  display: block;
 }
 
 @media only screen and (max-width: 768px) {
