@@ -9,7 +9,7 @@ describe('SignUpAd component', () => {
 	// we will write one individual test
   it('should render as expected', () => {
     // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<SignUpAd />)
+    const component = shallow(<SignUpAd ><div></div><div></div></SignUpAd>)
     // We create an assertion within the test that checks if our component renders our name prop
   // expect(component.contains('Your name')).toBe(true)
   })

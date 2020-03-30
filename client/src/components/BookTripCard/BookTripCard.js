@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const BookTripCard = props => {
   // Default Class to apply to Component
-  console.log(props);
+
   let [title, image1, image2] = [props.children[0], props.children[1], props.children[2]];
 
   return (
