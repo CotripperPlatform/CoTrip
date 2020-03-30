@@ -19,6 +19,30 @@ body {
   text-align: left;
 }
 
+.CommentBody_item {
+  margin: 0.7rem;
+  text-align: left;
+  height: 90%;
+  margin-bottom: 0;
+}
+
+.CommentBody_center_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 11.3rem;
+}
+
+.CommentBody_name {
+  text-align: center !important;
+}
+.CommentBody_activity {
+  text-align: left;
+  margin-right: 0.4rem;
+  margin-top: 0.5rem;
+  display: flex;
+}
+
 .Date {
   white-space: nowrap;
 }

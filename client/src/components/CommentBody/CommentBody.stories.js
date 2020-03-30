@@ -7,6 +7,18 @@ const body =
 const date = "December 9";
 const time = "10:08 am";
 const link = "#";
+const name = "Colleen";
+const likes = 2;
+const replies = 0;
 storiesOf("Comment", module).add("Body", () => (
-  <CommentBody body={body} date={date} time={time} to={link} image={Image} />
+  <CommentBody
+    body={body}
+    date={date}
+    time={time}
+    to={link}
+    image={Image}
+    name={name}
+    likes={likes}
+    replies={replies}
+  />
 ));
