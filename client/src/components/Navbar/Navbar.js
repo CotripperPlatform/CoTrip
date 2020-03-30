@@ -27,7 +27,7 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
-          <Logo clickable to="/" />
+          <Logo clickable to="/home" />
         </div>
         <div className="Navbar__burger">
           {/* Handles activating the hamburger animation and displays the menu. */}
@@ -42,7 +42,7 @@ class Navbar extends Component {
           <div className="Navbar__menu">
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
-                <NavLink text={item} to={"/"} menuList={[]} />
+                <NavLink text={item} to={"/book-a-trip"} menuList={[]} />
                 {this.props.page === key && (
                   <div className={`Navbar__triangle`}></div>
                 )}

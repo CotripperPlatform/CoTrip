@@ -36,16 +36,17 @@ class UserSetupForm extends Component {
   };
   next = () => {
     let regexEmail = /.+@.+\..+/;
+    let regexPassword = /(^(?=.*[a-z])(?=.*[A-Z])(\S{6,}))/;
     if (
       this.state.confirmPassword &&
       this.state.email.match(regexEmail) &&
-      this.state.password.length >= 6
+      this.state.password.match(regexPassword)
     ) {
       this.props.save("setup", this.state);
       this.props.handleClick();
     } else {
       alert(
-        "Error: Registration failed. Please make sure: \n you have entered a valid email address \n your password information matches \n your password length is greater than 6 characters"
+        "Error: Registration failed. Please make sure: \n you have entered a valid email address \n your password information matches \n your password length is greater than 6 characters and includes at least one uppercase letter and at least one lowercase letter"
       );
     }
   };
