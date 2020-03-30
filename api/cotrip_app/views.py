@@ -5,12 +5,12 @@ from .serializers import LocationSerializer
 from rest_framework import permissions
 # Create your views here.
 
-class LocationList(generics.ListApiView):
+class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
-class LocationDetail(generics.RetrieveUpdateDestroyAPIView):
+class LocationDetail(generics.ListAPIView):
     queryset = Location.objects.all()
-    serializer_class = BookSerializer
+    serializer_class = LocationSerializer
     permission_classes = (permissions.IsAuthenticated)
 
