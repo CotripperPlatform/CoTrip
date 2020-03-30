@@ -35,5 +35,6 @@ p span {
 @media only screen and (max-width: 320px) {
   .CommentBody {
     width: 10rem;
+    flex-direction: column;
   }
 }
