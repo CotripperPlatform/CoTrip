@@ -13,7 +13,7 @@ const CommentBody = props => {
       <p>{body}</p>
       <div className="CommentBody__date">
         <p>
-          <span>{date}</span>
+          <span className="Date">{date}</span>
           <span>{time}</span>
         </p>
       </div>

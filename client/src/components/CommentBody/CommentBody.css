@@ -12,6 +12,7 @@ body {
   background-color: var(--gray-dark);
   font-size: 14px;
   font-family: var(--paragraph-font);
+  padding: 1.2rem;
 }
 
 .CommentBody p {
@@ -19,7 +20,6 @@ body {
 }
 
 .Date {
-  margin-left: 10px;
   white-space: nowrap;
 }
 
