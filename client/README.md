@@ -21,7 +21,7 @@ After you have cloned the repository, you'll need to need to make sure that you
 work for the correct branch for the part of the project that you are assigned
 to. Here's an example:
 
-`git checkout development` will change your current branch to development.
+`git checkout develop` will change your current branch to development.
 
 Then you will need to run the following to install dependencies:
 
@@ -79,6 +79,25 @@ function HelloIcon = props => {
     )
 }
 ```
+
+You can change the size of the icon by passing the prop size:
+
+```jsx
+import Icon from '../Icon/Icon'
+
+
+function HelloIcon = props => {
+    return (
+        <h3>Hello <Icon icon={"heart"} size={"lg"}/></h3>
+    )
+}
+```
+
+This is a list of sizes that you can use:
+* xs 
+* sm 
+* lg 
+* 2x - 10x
 
 You can find the list of icons on the [Font Awesome
 website](https://fontawesome.com/). Note that you only need to pass in the

@@ -17,6 +17,7 @@ const PreviousTripsCard = props => {
       {trips ? (
         <div className="PreviousTripCard__trips">
           {tripsItemOne}
+
           <span className="PreviousTripCard__trip-two">{tripsItemTwo}</span>
           <a href={link} className="PreviousTripCard__arrow" />
         </div>
@@ -29,5 +30,13 @@ const PreviousTripsCard = props => {
     </Card>
   );
 };
-
+PreviousTripsCard.defaultProps = {
+  trips: false,
+  link: "/",
+  children: [
+    <h1>Previous Trips</h1>,
+    <h2>None with CoTripper yet!</h2>,
+    <a href="/">Book a Trip Now!</a>
+  ]
+};
 export default PreviousTripsCard;
