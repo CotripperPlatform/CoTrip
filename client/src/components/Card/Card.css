@@ -35,9 +35,7 @@
 
 .Card--large {
   width: 32vw;
-  max-width: 500px;
   min-width: 200px;
-  max-height: 275px;
 }
 
 .Card--medium {
