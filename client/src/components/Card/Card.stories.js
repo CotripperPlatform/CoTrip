@@ -15,7 +15,7 @@ storiesOf("Card", module)
   ))
   .add("Card, Purple, Small", () => (
     <Card color="purple" size="small">
-      <span>Welcome</span>
+      <span>Welcome </span>
     </Card>
   ))
   .add("Card, Pink", () => <Card color="pink" size="large" />)

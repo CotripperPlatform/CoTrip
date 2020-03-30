@@ -40,18 +40,17 @@
 
 .Card--medium {
   width: 14.2vw;
-  max-width: 225px;
-  max-height: 150px;
   min-width: 180px;
-  margin: 0 0.2vw 0 0.2vw;
+  margin: 0 0.2rem 0 0.2rem;
 }
 
 .Card--small {
-  max-width: 225px;
-  max-height: 125px;
+  width: 150%;
+  max-width: 100px;
+  height: 68px;
 }
 
-.Card--extra-small {
+.Card--extra--small {
   color: var(--white);
   min-width: 7rem;
   max-width: 7rem;
@@ -65,11 +64,11 @@
   padding: 0.37rem;
 }
 
-.Card__contents-container img {
+.Card__image {
   max-height: 100%;
 }
 
-.Card__contents-container {
+.Card__contents {
   position: relative;
   max-width: 100%;
   max-height: 100%;
@@ -88,18 +87,18 @@
   min-height: 200px;
 }
 
-.Card--mobile img {
+.Card__image--mobile {
   transform: scaleX(0.5);
   margin: 3vh 0 0 0;
 }
 
-.Card--mobile div {
+.Card__content--mobile {
   text-align: center;
   padding-bottom: 3vh;
   width: 100%;
 }
 
-.Card--mobile h2 {
+.Card__title--mobile h2 {
   text-align: center;
   width: 100%;
 }
@@ -110,18 +109,13 @@
   max-width: 225px;
   background: none;
   border: 3px dashed var(--purple);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 
-.Card__discover-link {
-  color: black;
+.Card__discover {
+  color: var(--black);
   text-align: center;
   transition: transform 0.3s;
-}
-
-.Card__discover-link a {
   font-size: 24px;
   width: 10rem;
   margin-left: 2rem;
@@ -129,13 +123,11 @@
   text-decoration: none;
 }
 
-.Card__discover-link:hover {
+.Card__discover:hover {
   transform: scale(1.1);
-}
-
-.Card__discover-link a:hover {
   color: var(--yellow);
 }
+
 
 @media only screen and (min-width: 321px) and (max-width: 575px) {
   .Card--extra-small {
