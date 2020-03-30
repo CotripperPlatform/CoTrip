@@ -1,0 +1,96 @@
+.PreviousTripCard__container h1 {
+  color: var(--white);
+  padding-left: 5%;
+  padding-top: 2vh;
+  /* border: 2px solid black; */
+  margin: 0;
+}
+.PreviousTripCard__trips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vh 0vw 4vh 0vw;
+  /* border: 2px solid black; */
+}
+
+.PreviousTripCard__arrow {
+  background-color: var(--yellow-dark);
+  /* padding-left: 1vw; */
+  margin-left: 0.5vw;
+  width: 30px;
+  height: 50px;
+  clip-path: polygon(0 0, 80% 50%, 0 100%, 0 80%, 45% 50%, 0 20%);
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+  /* border: 2px solid green; */
+  margin-top: 6vh;
+}
+.PreviousTripCard__arrow:hover {
+  transform: scale(1.1);
+  background-color: var(--yellow);
+}
+.PreviousTripCard__trips a {
+  color: var(--white);
+}
+
+.PreviousTripCard__no-trips {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black;  */
+}
+
+.PreviousTripCard__no-trips h2 {
+  margin: 1vh 0 0 0;
+  text-align: center;
+  padding: 4vh 0 2vh 0;
+  font-size: 1.5vw;
+  width: 100%;
+  color: var(--white);
+  /* border: 2px solid black; */
+}
+.PreviousTripCard__no-trips a {
+  font-size: 1.1vw;
+  margin: 0 10vw 2vh 11vw;
+  padding-bottom: 6vh;
+  color: var(--white);
+  display: inline-block;
+  transition: all 0.1s ease-in-out;
+
+  /* border: 2px solid black; */
+}
+.PreviousTripCard__no-trips a:hover {
+  transform: scale(1.1);
+  color: var(--yellow);
+}
+
+@media only screen and (max-width: 1076px) {
+  .PreviousTripCard__trip-two {
+    display: none;
+  }
+  .PreviousTripCard__trips {
+    margin: 0rem 2vw 0rem 6vw;
+    padding: 2vh 0.5vw 4vh 0;
+  }
+
+  .PreviousTripCard__container h1 {
+    color: var(--white);
+    width: 80%;
+    padding-left: 1rem;
+    transform: scale(1);
+    text-align: center;
+  }
+
+  .PreviousTripCard__arrow {
+    margin-left: 20vw;
+  }
+}
+@media only screen and (max-width: 176px) {
+  .PreviousTripCard__trips {
+    margin: 0rem 2vw 0rem 10vw;
+    padding: 2vh 0.5vw 4vh 0;
+  }
+  .PreviousTripCard__arrow {
+    margin-left: 65vw;
+  }
+}

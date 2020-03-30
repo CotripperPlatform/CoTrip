@@ -1,11 +1,7 @@
 import React from "react";
 import "./CommentBody.css";
 
-// Function based React Component
 const CommentBody = props => {
-  // Default Class to apply to Component
-  // No props right now but when there is data we can use
-  // this.props.comment and this.props.date
   const { body, date, time } = props;
 
   return (
