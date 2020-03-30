@@ -1,0 +1,48 @@
+.Message__message-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 26.19rem;
+  height: calc(71px+2rem);
+  font-family: var(--paragraph-font);
+}
+
+.Message__profilePics {
+  display: flex;
+  position: relative;
+}
+.Message__child:nth-child(1) {
+  z-index: 0;
+}
+.Message__child:nth-child(2) {
+  position: absolute;
+  left: 2.5rem;
+  z-index: -1;
+}
+.Message__child:nth-child(3) {
+  position: absolute;
+  left: 5rem;
+  z-index: -2;
+}
+
+.Message__conversation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
+  padding: 1 0;
+  align-items: stretch;
+}
+
+.Message__name {
+  font-weight: var(--banner-weight);
+}
+
+.Message__message {
+  height: 46px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

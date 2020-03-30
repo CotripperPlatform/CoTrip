@@ -1,17 +1,18 @@
 .ExtraUsers {
   background: var(--purple);
-  height: 150px;
-  width: 150px;
+  height: 67px;
+  width: 67px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 100%;
 }
 
 .ExtraUsers__text {
+  padding: 0 .8rem 0 0;
   text-decoration: none;
   color: var(--white);
-  font-size: 5rem;
+  font-size: 1.5rem;
   font-weight: var(--paragraph-weight);
   font-family: var(--default-font);
   text-decoration: none;
