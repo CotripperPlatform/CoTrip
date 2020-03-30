@@ -24,21 +24,23 @@ body {
   text-align: left;
   height: 90%;
   margin-bottom: 0;
-}
-
-.CommentBody_center_item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 11.3rem;
+  height: 9rem;
+}
+
+.CommentBody_center_item {
 }
 
 .CommentBody_name {
   text-align: center !important;
+  margin-bottom: 0;
+  font-size: 18px;
 }
 .CommentBody_activity {
   text-align: left;
-  margin-right: 0.4rem;
+  margin-right: 0.8rem;
   margin-top: 0.5rem;
   display: flex;
 }

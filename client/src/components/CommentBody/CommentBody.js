@@ -7,12 +7,12 @@ const CommentBody = props => {
   // Default Class to apply to Component
   // No props right now but when there is data we can use
   // this.props.comment and this.props.date
-  const { body, date, time, to, image, name, likes, replies } = props;
+  const { body, date, time, to, image, name, likes, replies, type } = props;
 
   return (
     <div className="CommentBody">
       <span className="CommentBody_item">
-        <ProfilePicture to={to} image={image} />
+        <ProfilePicture type={type} to={to} image={image} />
         <p className="CommentBody_name">{name}</p>
       </span>
       <span className="CommentBody_item CommentBody_center_item">
