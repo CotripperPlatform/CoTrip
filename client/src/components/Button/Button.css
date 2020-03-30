@@ -26,8 +26,8 @@
   font-size: 15px;
 }
 .Button--small {
-  padding: 0.42em 4.35em;
-  font-size: 20px;
+  padding: 0.22em 3.85em;
+  font-size: 22px;
 }
 .Button--pink {
   color: var(--white);
