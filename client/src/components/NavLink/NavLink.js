@@ -26,7 +26,9 @@ class NavLink extends React.Component {
         onMouseLeave={this.toggleDropdown}
       >
         <div>
-          <h1>{this.props.text}</h1>
+          <Link to={this.props.to} >
+            <h1>{this.props.text}</h1>
+          </Link>
           <div
             className={
               this.state.dropdownVisible
@@ -43,6 +45,7 @@ class NavLink extends React.Component {
 }
 NavLink.defaultProps = {
   text: "community",
+  to:'',
   menuList: [
     {
       text: "Explore People",

@@ -48,14 +48,8 @@ describe("TrendingHashtagCard component", () => {
     });
   });
   describe("Have NO props", () => {
-    let wrapper;
-    beforeEach(() => {
-      const props = {
-        data: null
-      };
-      wrapper = setUp(props);
-    });
     it("Should render without errors", () => {
+      let wrapper = setUp();
       expect(wrapper.length).toBe(1);
     });
   });
