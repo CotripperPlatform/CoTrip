@@ -13,7 +13,7 @@ let kidsActivities = [
   "Beaches"
 ];
 
-storiesOf("ActivityList", module)
+storiesOf("hello", module)
   .add("Activities for Moms", () => (
     <ActivityList title="Activities for Moms" activities={momActivities} color="purple" />
   ))
