@@ -10,9 +10,21 @@ const Card = props => {
       style={{ backgroundImage: `url(${picture})` }}
     >
       {" "}
-      {outline ? <div className="Card__discover-link">{props.children}</div> : props.children}
+      {outline ? (
+        <div className="Card__discover-link" >
+          {props.children}
+        </div>
+      ) : (
+        props.children
+      )}
     </div>
   );
 };
 
+Card.defaultProps = {
+  color: "purple",
+  size: "large",
+  picture: null,
+  outline: null
+};
 export default Card;

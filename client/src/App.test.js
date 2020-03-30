@@ -1,23 +1,22 @@
-import React from 'react';
-import renderer from 'react-test-renderer';
-import { shallow, render, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-import App from './App';
+import React from "react";
+import { shallow } from "enzyme";
+import App from "./App";
 
-configure({adapter: new Adapter()});
-
-describe('App component', () => {
-  test('is an Object', () => {
-    const component = shallow(<App />);
-    expect(component).toEqual(Object.prototype);
+const setUp = (props = {}) => {
+  const component = shallow(<App />);
+  return component;
+};
+describe("App component", () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = setUp();
   });
-  test('snapshot renders', () => {
-    const component = renderer.create(<App />);
-    let tree = component.toJSON();
+  test("Is an Object", () => {
+    const wrapper = setUp();
+    expect(wrapper).toEqual(Object.prototype);
+  });
+  test("Snapshot renders", () => {
+    const tree = setUp();
     expect(tree).toMatchSnapshot();
-  });
-  test('contains a header element', () => {
-    const component = render(<App />);
-    expect(component['0'].children[0].name).toBe('header');
   });
 });
