@@ -2,6 +2,10 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Bio from "./Bio";
 
+export default {
+  title: "Layout/Bio"
+};
+
 let people = [
   {
     name: "Suzie",
@@ -16,7 +20,7 @@ let people = [
   { name: "Martha", bio: "sup yall" }
 ];
 
-storiesOf("Bio", module).add("Default", () => (
+storiesOf("Layout/Bio", module).add("Default", () => (
   <Bio
     instagram={people[0].intagram}
     facebook={people[0].facebook}

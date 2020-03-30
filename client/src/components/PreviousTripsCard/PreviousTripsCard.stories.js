@@ -6,7 +6,11 @@ import Card from "../Card/Card";
 import example1 from "../../assets/images/card_small2.png";
 import example2 from "../../assets/images/card_small3.png";
 
-storiesOf("PreviousTripsCard", module)
+export default {
+  title: "Cards/PreviousTripsCard"
+};
+
+storiesOf("Cards/PreviousTripsCard", module)
   .add("Default, Two Trips", () => (
     <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>

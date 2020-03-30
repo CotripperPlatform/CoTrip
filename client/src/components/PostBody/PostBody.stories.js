@@ -2,7 +2,11 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import PostBody from "./PostBody";
 
-storiesOf("PostBody", module)
+export default {
+  title: "Layout/PostBody"
+};
+
+storiesOf("Layout/PostBody", module)
   .add("Default", () => <PostBody />)
   .add("Custom Post", () => (
     <PostBody

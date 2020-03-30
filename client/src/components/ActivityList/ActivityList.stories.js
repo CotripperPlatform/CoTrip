@@ -13,7 +13,11 @@ let kidsActivities = [
   "Beaches"
 ];
 
-storiesOf("hello", module)
+export default {
+  title: "Layout/Activities List"
+};
+
+storiesOf("Layout/Activities List", module)
   .add("Activities for Moms", () => (
     <ActivityList title="Activities for Moms" activities={momActivities} color="purple" />
   ))

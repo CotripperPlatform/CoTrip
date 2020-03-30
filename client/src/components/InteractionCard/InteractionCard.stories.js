@@ -5,6 +5,10 @@ import { checkPropTypes } from "prop-types";
 
 const handleClick = e => console.log("clicked");
 
-storiesOf("InteractionCard", module).add("Default", () => (
+export default {
+  title: "Cards/InteractionCard"
+};
+
+storiesOf("Cards/InteractionCard", module).add("Default", () => (
   <InteractionCard to="/route" onClick={handleClick} />
 ));

@@ -13,6 +13,10 @@ const placeholderDropdownProp = [
   }
 ];
 
-storiesOf("NavLinkDropdownMenu", module).add("NavLinkDropdownMenu", () => (
+export default {
+  title: "Layout/NavLinkDropdownMenu"
+};
+
+storiesOf("Layout/NavLinkDropdownMenu", module).add("NavLinkDropdownMenu", () => (
   <NavLinkDropdownMenu menuList={placeholderDropdownProp} />
 ));

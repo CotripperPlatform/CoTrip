@@ -7,7 +7,11 @@ import people from "../../assets/images/add-friend.png";
 import trends from "../../assets/images/trending-hashtags.png";
 import groups from "../../assets/images/protest.png";
 
-storiesOf("Card", module)
+export default {
+  title: "Cards/Card"
+};
+
+storiesOf("Cards/Card", module)
   .add("Card, Purple", () => (
     <Card color="purple" size="large">
       <span>hello</span>

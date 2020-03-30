@@ -2,10 +2,14 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import InputSelect from "./InputSelect";
 
+export default {
+  title: "Atoms/InputSelect"
+};
+
 const handleSelect = props => {
   console.log(props);
 };
-storiesOf("InputSelect", module)
+storiesOf("Atoms/InputSelect", module)
   .add("Default", () => <InputSelect onSelect={handleSelect} />)
   .add("Options", () => (
     <InputSelect

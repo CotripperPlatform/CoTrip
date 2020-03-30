@@ -36,7 +36,11 @@ library.add(
   faEdit
 );
 
-storiesOf("Icon", module)
+export default {
+  title: "Layout/Icon"
+};
+
+storiesOf("Layout/Icon", module)
   .add("Coffee", () => <Icon icon={"coffee"} />)
   .add("Comment", () => <Icon icon={"comment"} />)
   .add("Heart", () => <Icon icon={"heart"} />)
