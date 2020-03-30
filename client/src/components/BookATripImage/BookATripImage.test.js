@@ -1,16 +1,71 @@
-import React from 'react'
-import { shallow, configure } from 'enzyme'
-import BookATripImage from './BookATripImage.js'
-import Adapter from 'enzyme-adapter-react-16';
-configure({adapter: new Adapter()});
+import React from "react";
+import { shallow } from "enzyme";
+import BookATripImage from "./BookATripImage.js";
+import image1 from "../../assets/images/hawaii.png";
+import image2 from "../../assets/images/greece.png";
+import image3 from "../../assets/images/southernCaribbean.png";
+import image4 from "../../assets/images/easternCaribbean.png";
 
-// We will describe a block of tests
-describe('BookATripImage component', () => {
-	// we will write one individual test
-  it('should render as expected', () => {
-    // Shallow rendering renders a component without rendering any of its children
-    const component = shallow(<BookATripImage />)
-    // We create an assertion within the test that checks if our component renders our name prop
-  // expect(component.contains('Your name')).toBe(true)
-  })
-})
+const setUp = props => {
+  const component = shallow(<BookATripImage {...props} />);
+  return component;
+};
+describe("BookATripImage component", () => {
+  let wrapper;
+  describe("Has Props", () => {
+    describe("5 cards", () => {
+      beforeEach(() => {
+        const props = {
+          cards: [
+            { image: image1, url: "#", description: "Hawaii May 2020" },
+            { image: image2, url: "#", description: "Greece & Croatia Cruise June 2020" },
+            { image: image3, url: "#", description: "Southern Caribbean Cruise July 2020" },
+            { image: image1, url: "#", description: "Hawaii August 2020" },
+            { image: image4, url: "#", description: "Eastern Caribbean Cruise New Year's 2021" }
+          ]
+        };
+        wrapper = setUp(props);
+      });
+      it("Should render as expected", () => {
+        const component = wrapper.find(".BookATripImage");
+        expect(component.length).toBe(1);
+      });
+      it("Should render correct number of images", () => {
+        const component = wrapper.find(".BookATripImage__image-container");
+        expect(component.length).toBe(5);
+      });
+    });
+    describe("2 cards", () => {
+      beforeEach(() => {
+        const props = {
+          cards: [
+            { image: image1, url: "#", description: "Hawaii May 2020" },
+            { image: image2, url: "#", description: "Greece & Croatia Cruise June 2020" }
+          ]
+        };
+        wrapper = setUp(props);
+      });
+      it("Should render as expected", () => {
+        const component = wrapper.find(".BookATripImage");
+        expect(component.length).toBe(1);
+      });
+      it("Should render correct number of images", () => {
+        const component = wrapper.find(".BookATripImage__image-container");
+        expect(component.length).toBe(2);
+      });
+    });
+  });
+  describe("Has NO Props", () => {
+    beforeEach(() => {
+      wrapper = setUp();
+    });
+    it("Should render as expected", () => {
+      const component = wrapper.find(".BookATripImage");
+      expect(component.length).toBe(1);
+    });
+    it("Should render correct number of images", () => {
+      const component = wrapper.find(".BookATripImage__image-container");
+      expect(component.length).toBe(0);
+    });
+  });
+});

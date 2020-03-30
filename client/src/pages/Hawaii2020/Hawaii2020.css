@@ -1,0 +1,17 @@
+.Hawaii2020__BannerImageCard-container{
+    padding-bottom: 50px;
+}
+
+.Hawaii2020__body-container {
+    margin: 0 35px 0 35px;
+}
+
+.Hawaii2020__ActivityList-container {
+    margin-top: 50px;
+}
+
+.Hawaii2020__button-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
