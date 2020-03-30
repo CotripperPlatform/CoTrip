@@ -12,27 +12,34 @@
   font-family: var(--default-font);
   min-height: 9.5rem;
 }
+
 .Card--purple {
   background-color: var(--purple);
 }
+
 .Card--pink {
   background-color: var(--pink);
 }
+
 .Card--red {
   background-color: var(--red);
 }
+
 .Card--pink {
   background-color: var(--pink);
 }
+
 .Card--yellow {
   background-color: var(--yellow);
 }
+
 .Card--large {
   width: 32vw;
   max-width: 500px;
   min-width: 200px;
   max-height: 275px;
 }
+
 .Card--medium {
   width: 14.2vw;
   max-width: 225px;
@@ -40,13 +47,18 @@
   min-width: 180px;
   margin: 0 0.2vw 0 0.2vw;
 }
+
 .Card--small {
   max-width: 225px;
   max-height: 125px;
 }
+
 .Card--extra-small {
   color: var(--white);
-  min-width: 180px;
+  min-width: 7rem;
+  max-width: 7rem;
+  min-height: 5rem;
+  font-size: 0.9rem;
   box-shadow: none;
   text-align: center;
   justify-content: center;
@@ -58,6 +70,7 @@
 .Card__contents-container img {
   max-height: 100%;
 }
+
 .Card__contents-container {
   position: relative;
   max-width: 100%;
@@ -76,20 +89,23 @@
   max-height: 202px;
   min-height: 200px;
 }
+
 .Card--mobile img {
   transform: scaleX(0.5);
   margin: 3vh 0 0 0;
 }
+
 .Card--mobile div {
   text-align: center;
-
   padding-bottom: 3vh;
   width: 100%;
 }
+
 .Card--mobile h2 {
   text-align: center;
   width: 100%;
 }
+
 .Card__outline {
   padding: 3vh 0 5vh 0;
   width: 14.2vw;
@@ -100,11 +116,13 @@
   -moz-box-shadow: none;
   box-shadow: none;
 }
+
 .Card__discover-link {
   color: black;
   text-align: center;
   transition: transform 0.3s;
 }
+
 .Card__discover-link a {
   font-size: 24px;
   width: 10rem;
@@ -112,12 +130,15 @@
   margin-right: 2rem;
   text-decoration: none;
 }
+
 .Card__discover-link:hover {
   transform: scale(1.1);
 }
+
 .Card__discover-link a:hover {
   color: var(--yellow);
 }
+
 @media only screen and (min-width: 321px) and (max-width: 575px) {
   .Card--extra-small {
     min-width: 7rem;
@@ -132,6 +153,7 @@
     min-width: 17rem;
   }
 }
+
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .Card--extra-small {
     min-width: 8rem;
@@ -143,6 +165,7 @@
     font-size: 1.2rem;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .Card--extra-small {
     min-width: 9rem;
@@ -154,6 +177,7 @@
     font-size: 1.5rem;
   }
 }
+
 @media only screen and (min-width: 992px) {
   .Card--extra-small {
     min-width: 10rem;
