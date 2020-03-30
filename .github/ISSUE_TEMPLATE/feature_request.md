@@ -1,11 +1,20 @@
-Related Issue(s):
+---
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
 
-Have you confirmed that there is not already an open issue for this?
+---
 
-Reason for request:
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-Expected behavior:
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-User story:
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
 
-_Please add appropriate label and link pull requests if applicable_
+**Additional context**
+Add any other context or screenshots about the feature request here.

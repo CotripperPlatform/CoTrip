@@ -1,13 +1,38 @@
-Related Issue(s):
+---
+name: Bug report
+about: Create a report to help us improve
+title: ''
+labels: ''
+assignees: ''
 
-Expected Behavior:
+---
 
-Description of bug:
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-Troubleshooting performed:
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-Screenshot(s):
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-Code that you expect is causing bug:
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-_Please add appropriate label and link pull requests if applicable_
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
+
+**Additional context**
+Add any other context about the problem here.
