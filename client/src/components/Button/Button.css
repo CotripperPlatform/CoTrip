@@ -22,12 +22,12 @@
   font-size: 36px;
 }
 .Button--extra-small {
-  padding: 0.30em 2.35em;
+  padding: 0.3em 2.35em;
   font-size: 15px;
 }
 .Button--small {
-  padding: 0.42em 3.35em;
-  font-size: 18px;
+  padding: 0.42em 4.35em;
+  font-size: 20px;
 }
 .Button--pink {
   color: var(--white);
@@ -84,7 +84,7 @@
   margin-right: 0.5rem;
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) {
   .Button--large {
     padding: 0.13em 0.15em;
   }

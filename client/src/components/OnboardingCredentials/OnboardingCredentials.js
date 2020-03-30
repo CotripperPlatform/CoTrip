@@ -6,30 +6,30 @@ import Button from "../Button/Button.js";
 function OnboardingCredentials(props) {
   return (
     <div className={props.classList}>
-      <form className="OnboardingOne__form" action="">
-        <h1 className="OnboardingOne__header">Step One</h1>
-        <div className="OnboardingOne__container">
+      <form className="OnboardingCredentials__form" action="">
+        <h1 className="OnboardingCredentials__header">Step One</h1>
+        <div className="OnboardingCredentials__container">
           <InputTextField type="text" name="name" placeholder="Name"></InputTextField>
         </div>
-        <div className="OnboardingOne__container">
+        <div className="OnboardingCredentials__container">
           <InputTextField type="text" name="email" placeholder="Email"></InputTextField>
         </div>
-        <div className="OnboardingOne__container">
+        <div className="OnboardingCredentials__container">
           <InputTextField type="text" name="password" placeholder="Password"></InputTextField>
         </div>
-        <div className="OnboardingOne__container">
+        <div className="OnboardingCredentials__container">
           <InputTextField
-            className="OnboardingOne__container"
+            className="OnboardingCredentials__container"
             type="text"
             name="confirm password"
             placeholder="Confirm Password"
           ></InputTextField>
         </div>
-        <div className="OnboardingOne__button-container">
+        <div className="OnboardingCredentials__button-container">
           <Button
-            className="OnboardingOne__button"
+            className="OnboardingCredentials__button"
             text="Next"
-            size="large"
+            size="small"
             handleClick={() => props.handleClick}
           ></Button>
         </div>
