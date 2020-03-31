@@ -7,10 +7,10 @@ import example1 from "../../assets/images/card_small2.png";
 import example2 from "../../assets/images/card_small3.png";
 
 export default {
-  title: "Cards/PreviousTripsCard"
+  title: "Layout/Cards/PreviousTripsCard"
 };
 
-storiesOf("Cards/PreviousTripsCard", module)
+storiesOf("Layout/Cards/PreviousTripsCard", module)
   .add("Default, Two Trips", () => (
     <PreviousTripsCard trips={true} link="/">
       <h1>Previous Trips</h1>

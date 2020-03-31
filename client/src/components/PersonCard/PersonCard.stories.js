@@ -4,10 +4,10 @@ import image from "../../assets/images/profile-picture-1.png";
 import { storiesOf } from "@storybook/react";
 
 export default {
-  title: "Cards/PersonCard"
+  title: "Layout/Cards/PersonCard"
 };
 
-storiesOf("Cards/PersonCard", module).add("Default", () => (
+storiesOf("Layout/Cards/PersonCard", module).add("Default", () => (
   <PersonCard
     image={image}
     name="Lindsay L."
