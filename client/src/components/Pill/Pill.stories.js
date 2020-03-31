@@ -6,7 +6,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-storiesOf("Pill", module)
+storiesOf("Atoms/Pill", module)
   .add("Onboarding Pill", () => (
     <Pill
       text={"Traveling"}
@@ -28,11 +28,7 @@ storiesOf("Pill", module)
       selectId={0}
     />
   ))
-  .add("Default Props", () => (
-    <Pill
-      onClick={pillClick}
-    />
-  ))
+  .add("Default Props", () => <Pill onClick={pillClick} />)
   .add("Pill with Pink Heart Offset", () => (
     <Pill
       text={"Traveling"}

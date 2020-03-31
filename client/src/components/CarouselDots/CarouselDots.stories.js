@@ -15,7 +15,7 @@ let style2 = {
 
 let location = 1;
 
-storiesOf("CarouselDots", module)
+storiesOf("Layout/CarouselDots", module)
   .add("Onboarding Step 2", () => (
     <div style={style1}>
       <CarouselDots numberOfDots={5} activeLocation={location} onStatusChange={statusChange} />
