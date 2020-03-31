@@ -3,9 +3,9 @@ import "./Hawaii2020.css";
 import NavBar from "components/Navbar/Navbar";
 import people from "assets/images/add-friend.png";
 import Banner from "components/Banner/Banner";
-import Banner__pink from "components/Banner/Banner__pink.png";
+import Banner__pink from "../../assets/images/Banner__pink.png";
 import BannerImageCard from "components/BannerImageCard/BannerImageCard";
-import Banner__Image from "assets/images/TripBanner.png";
+import Banner__Image from "../../assets/images/TripBanner.png";
 import TripDetails from "components/TripDetails/TripDetails";
 import ActivityList from "components/ActivityList/ActivityList";
 import Button from "components/Button/Button";
@@ -26,7 +26,7 @@ const Hawaii2020 = props => {
 
   return (
     <div className="Hawaii2020">
-      <NavBar page={3} profileImage={people}/>
+      <NavBar page={3} profileImage={people} />
       <Banner background={Banner__pink}>
         <h3>Trip: {tripName} 2020</h3>
       </Banner>

@@ -15,7 +15,7 @@ import BookTripCard from "../../components/BookTripCard/BookTripCard";
 import Connections from "../../components/Connections/Connections";
 import Footer from "../../components/Footer/Footer";
 import InputTextField from "../../components/InputTextField/InputTextField";
-import Banner__pink from "../../components/Banner/Banner__pink.png";
+import Banner__pink from "../../assets/images/Banner__pink.png";
 import Banner from "../../components/Banner/Banner";
 import GroupsList from "../../components/GroupsList/GroupsList";
 import Bio from "../../components/Bio/Bio";
