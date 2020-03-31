@@ -1,16 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Burger.css";
 
-function Burger(props) {
-  return (
-    <div className="burger-container">
-      <div className="div-line"></div>
-      <div className="div-line"></div>
-      <div className="div-line"></div>
-    </div>
-  );
+class Burger extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div className="burger-container">
+        <div className="div-line"></div>
+        <div className="div-line"></div>
+        <div className="div-line"></div>
+      </div>
+    );
+  }
 }
-
 export default Burger;
 
 // burger made
