@@ -1,12 +1,25 @@
 import React from "react";
 import "./Inbox.css";
 
+import {
+  conversation1,
+  conversation2,
+  conversation3,
+  conversation4,
+  conversation5,
+  conversation6
+} from "../InboxMessagePreview/inboxMessagePreviewStoriesData";
+
+import InboxMessagePreview from "../InboxMessagePreview/InboxMessagePreview";
+
 // Function based React Component
 const Inbox = props => {
   // Default Class to apply to Component
   let classList = `Inbox`;
 
-  let messagePreviews = <div>Message!</div>;
+  let messagePreviews = props.conversations.map((conversation, i) => {
+    return <InboxMessagePreview conversation={conversation} key={i} />;
+  });
 
   return (
     <div className={classList}>
@@ -20,3 +33,14 @@ const Inbox = props => {
 };
 
 export default Inbox;
+
+Inbox.defaultProps = {
+  conversations: [
+    conversation1,
+    conversation2,
+    conversation3,
+    conversation4,
+    conversation5,
+    conversation6
+  ]
+};

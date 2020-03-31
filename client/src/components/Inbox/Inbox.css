@@ -4,6 +4,9 @@
   /* need to work on width and height... */
   width: 400px;
   height: 600px;
+
+  position: absolute;
+  z-index: -100;
 }
 .Inbox__header {
   border-bottom: 1px solid rgba(37, 37, 37, 0.25);
