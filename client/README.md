@@ -67,15 +67,15 @@ These are the physical full pages that have been put together.
 
 - When creating a new component and wanting to safely store it, please do so with this Hierarchy in mind.
 
-- For a component to be in the atoms page it would look something like so
+- For a component to be in the atoms Folder it would look something like so
 
 IN STORIES.js
 storiesOf("Atoms/<component_name>", module)
 
-- For a component to be in the Layout page and also in the nav folder within Layout it woud be as such
+- For a component to be in the Atoms Folder and also in the Nav folder within Atoms it woud be as such
 
 IN STORIES.js
-storiesOf("Layout/Nav/<component_name>", module)
+storiesOf("Atoms/Nav/<component_name>", module)
 
 #### Prototype
 
