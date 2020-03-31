@@ -1,44 +1,28 @@
 import React from "react";
 import "./Message.css";
-import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import defaultPic from "assets/images/profile-picture-1.png";
 import defaultPic2 from "assets/images/profile-picture-2.png";
 
-import ExtraUsers from "../ExtraUsers/ExtraUsers";
+import InboxUserProfilesGroup from "../InboxUserProfilesGroup/InboxUserProfilesGroup";
 
 // Function based React Component
 const Message = props => {
   // Default Class to apply to Component
   let classList = `Message`;
-  let profilePics = props.conversation.users.map((user, i) => {
-    if (i < 3) {
-      if (props.conversation.users.length >= 4 && i === 2) {
-        return (
-          <div className="Message__child">
-            <ExtraUsers to="/" users={props.conversation.users} key={i} />
-          </div>
-        );
-      }
-      return (
-        <div className="Message__child">
-          <ProfilePicture type="extra-small" to={user.to} image={user.profilePic} key={i} />
-        </div>
-      );
-    }
-  });
-  let names = props.conversation.users.map((user, i) => {
-    if (i === 2 && props.conversation.users.length > 3) {
-      return "...";
-    } else if (i === props.conversation.users.length - 1 && i <= 2) {
-      return `${user.name}`;
-    } else if (i < 2) {
-      return `${user.name}, `;
-    }
-  });
+
+  // create list of names above message
+  let names = props.conversation.users[0].name;
+  if (props.conversation.users.length > 1) {
+    names = `${names}, ${props.conversation.users[1].name}`;
+  }
+  if (props.conversation.users.length > 2) {
+    names = `${names}, ...`;
+  }
+
   return (
     <div className={classList}>
       <div className="Message__message-container">
-        <div className="Message__profilePics">{profilePics}</div>
+        <InboxUserProfilesGroup users={props.conversation.users} />
         <div className="Message__conversation">
           <div className="Message__name">{names}</div>
           <div className="Message__message">{props.conversation.thread[0].message}</div>
