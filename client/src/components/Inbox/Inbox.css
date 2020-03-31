@@ -7,6 +7,8 @@
 }
 .Inbox__header {
   border-bottom: 1px solid rgba(37, 37, 37, 0.25);
+  display: flex;
+  justify-content: space-between;
 }
 .Inbox__header-text {
   font-size: 36px;
