@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
 import Modal from "./Modal";
 
-function handleConfirm(evt) {
+function handleEvent(evt) {
   evt.preventDefault();
-  alert("Confirmed!");
-}
-function handleJoin(evt) {
-  evt.preventDefault();
-  alert("Joined!");
+  alert("Something Happens");
 }
 function handleClose(evt) {
   evt.preventDefault();
@@ -25,7 +21,7 @@ storiesOf("Modal", module)
       message={"Are you sure you want to follow"}
       confirmText={"Confirm"}
       cancelText={"Cancel"}
-      onConfirm={handleConfirm}
+      onConfirm={handleEvent}
       onClose={handleClose}
       showModal={showModal}
     />
