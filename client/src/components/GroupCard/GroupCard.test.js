@@ -4,7 +4,6 @@ import GroupCard from './GroupCard.js'
 import Adapter from 'enzyme-adapter-react-16';
 import {BrowserRouter} from 'react-router-dom';
 configure({adapter: new Adapter()});
-import {BrowserRouter} from 'react-router-dom';
 
 // We will describe a block of tests
 describe('GroupCard component', () => {
