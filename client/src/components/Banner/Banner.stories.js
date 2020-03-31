@@ -10,10 +10,6 @@ const handleClick = e => {
   alert("Clicked");
 };
 
-export default {
-  title: "Layout/Banner"
-};
-
 storiesOf("Layout/Banner", module)
   .add("Home Banner", () => <Banner background={Banner__purpleBig} />)
   .add("Home Banner with Welcome text", () => (

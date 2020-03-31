@@ -3,10 +3,6 @@ import { storiesOf } from "@storybook/react";
 import UpcomingTripsCard from "./UpcomingTripsCard";
 import background from "../../assets/images/card_small2.png";
 
-export default {
-  title: "Layout/Cards/UpcomingTripsCard"
-};
-
 storiesOf("Layout/Cards/UpcomingTripsCard", module)
   .add("Default", () => (
     <UpcomingTripsCard

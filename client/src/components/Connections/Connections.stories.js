@@ -7,10 +7,6 @@ import pic3 from "../../assets/images/profile-picture-3.png";
 import pic4 from "../../assets/images/profile-picture-4.png";
 import pic5 from "../../assets/images/profile-picture-5.png";
 
-export default {
-  title: "Layout/Connections"
-};
-
 let testUsers = [
   {
     userId: 1,
