@@ -37,10 +37,10 @@ library.add(
 );
 
 export default {
-  title: "Layout/Icon"
+  title: "Atoms/Icon"
 };
 
-storiesOf("Layout/Icon", module)
+storiesOf("Atoms/Icon", module)
   .add("Coffee", () => <Icon icon={"coffee"} />)
   .add("Comment", () => <Icon icon={"comment"} />)
   .add("Heart", () => <Icon icon={"heart"} />)
