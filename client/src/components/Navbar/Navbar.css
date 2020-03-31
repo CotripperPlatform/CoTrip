@@ -1,13 +1,12 @@
 .Navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100vw;
-    height: 128px;
-    background-color: var(--yellow);
-    font-family: var(--default-font);
-    box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
-    z-index: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100vw;
+  height: 128px;
+  background-color: var(--yellow);
+  font-family: var(--default-font);
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.25);
 }
 
 .Navbar__logo {
@@ -21,14 +20,15 @@
   height: 80px;
   margin: 47px 0 0 0;
   width: 100%;
+  z-index: 9;
 }
 
 .Navbar__menu {
-  margin-top: 12px;
   display: flex;
   justify-content: left;
   align-items: flex-start;
   padding: 0 20px 0 0;
+  box-sizing: border-box;
 }
 
 .Navbar__right {
@@ -51,37 +51,39 @@
   border-left: 31px solid transparent;
   border-right: 31px solid transparent;
   border-bottom: 21px solid var(--purple);
-  margin: -17px auto;
+  margin: -5px auto;
 }
 
 .Navbar__link-item {
   margin: 0 15px;
 }
 
-.Navbar__burger, .Navbar__right, .Navbar__logo {
+.Navbar__burger,
+.Navbar__right,
+.Navbar__logo {
   cursor: pointer;
 }
 
 /* Touch screen devices */
 @media (hover: none) and (pointer: coarse) {
-  
 }
 
 /* Extra Large devices */
 @media only screen and (max-width: 1200px) {
-
 }
 
 /* Large devices */
 @media only screen and (max-width: 992px) {
-  .Navbar__main {
+  .Navbar {
     position: relative;
-    height: 370px;
-    top: 237px;
+  }
+  .Navbar__main {
+    position: absolute;
+    min-height: 370px;
+    top: 128px;
+    right: 0;
     display: none;
     margin: 0;
-    /* Temporarily removed because it's going under the banner image */
-    /* z-index: -1; */
     width: 250px;
     box-shadow: 0 4px 10px -5px var(--gray);
   }
@@ -93,7 +95,7 @@
   }
 
   .Navbar__right {
-    margin: 0;
+    padding-top: 15px;
     width: 100%;
     background-color: var(--white);
     justify-content: space-evenly;
@@ -107,16 +109,16 @@
   .Navbar__logo {
     margin: 0 0 0 47%;
   }
-  
+
   .Navbar__triangle {
-    display: none;  
+    display: none;
   }
 }
 
 /* Medium devices */
 @media only screen and (max-width: 768px) {
   .Navbar__triangle {
-    display: none;  
+    display: none;
   }
 }
 
@@ -129,7 +131,7 @@
     height: 75px;
   }
   .Navbar__main {
-    top: 210px;
+    top: 75px;
   }
 
   .Navbar__triangle {
@@ -143,18 +145,7 @@
     margin: 0 0 0 40%;
   }
   .Navbar__main {
-    left: -195px;
-    width: 80vw;
-    height: 80vh;
-    top: 220px;
-    box-shadow: none;
-  }
-  .Navbar__menu {
-    width: 100vw;
-  }
-  .Navbar__right {
-    width: 100vw;
-    padding-bottom: 20px;
+    width: 100%;
   }
 
   .Navbar__triangle {
