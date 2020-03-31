@@ -7,10 +7,6 @@ import people from "../../assets/images/add-friend.png";
 import trends from "../../assets/images/trending-hashtags.png";
 import groups from "../../assets/images/protest.png";
 
-export default {
-  title: "Layout/Cards/Indiviual Cards"
-};
-
 storiesOf("Layout/Cards/Indiviual Cards", module)
   .add("Card, Purple", () => (
     <Card color="purple" size="large">

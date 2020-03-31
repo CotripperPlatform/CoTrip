@@ -2,10 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import CarouselDots from "./CarouselDots";
 
-export default {
-  title: "Layout/CarouselDots"
-};
-
 function statusChange(value) {
   console.log("Status Changed", value);
 }

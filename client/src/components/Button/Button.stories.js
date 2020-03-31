@@ -7,10 +7,6 @@ const handleClick = e => {
   console.log("Clicked");
 };
 
-export default {
-  title: "Atoms/Button"
-};
-
 export const smallDefaultButton = <Button text="Submit" size="small" handleClick={handleClick} />;
 
 storiesOf("Atoms/Button", module)

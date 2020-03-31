@@ -6,10 +6,6 @@ import image2 from "../../assets/images/greece.png";
 import image3 from "../../assets/images/southernCaribbean.png";
 import image4 from "../../assets/images/easternCaribbean.png";
 
-export default {
-  title: "Layout/BookATripImage"
-};
-
 storiesOf("Layout/BookATripImage", module).add("Default", () => (
   <BookATripImage
     cards={[

@@ -2,10 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import Bio from "./Bio";
 
-export default {
-  title: "Layout/Bio"
-};
-
 let people = [
   {
     name: "Suzie",

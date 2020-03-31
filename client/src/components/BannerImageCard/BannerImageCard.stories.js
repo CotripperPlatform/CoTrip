@@ -3,10 +3,6 @@ import { storiesOf } from "@storybook/react";
 import BannerImageCard from "./BannerImageCard";
 import Banner__Image from "../../assets/images/TripBanner.png";
 
-export default {
-  title: "Layout/Cards/BannerImageCard"
-};
-
 storiesOf("Layout/Cards/BannerImageCard", module)
   .add("BannerImageCard", () => <BannerImageCard background={Banner__Image} />)
   .add("BannerImageCard with text", () => (
