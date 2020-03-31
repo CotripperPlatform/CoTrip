@@ -1,9 +1,7 @@
 import React from "react";
-// import "../ForumPost/ForumPost.css";
-// import "../ForumComment/ForumComment.css";
 import "./ForumPostContainer.css";
 import ForumPost from "../ForumPost/ForumPost";
-import ForumComment from "../ForumComment/ForumComment";
+import Comment from '../Comment/Comment'
 
 export default function ForumPostContainer(props) {
   return (
@@ -27,18 +25,18 @@ export default function ForumPostContainer(props) {
         )}
       </div>
       <div>
-        {props.forumComment ? (
-          <ForumComment
-            name={props.forumComment.name}
-            likes={props.forumComment.likes}
-            replies={props.forumComment.replies}
-            image={props.forumComment.image}
-            date={props.forumComment.date}
-            time={props.forumComment.time}
-            body={props.forumComment.body}
+        {props.comment ? (
+          <Comment
+            name={props.comment.name}
+            likes={props.comment.likes}
+            replies={props.comment.replies}
+            image={props.comment.image}
+            date={props.comment.date}
+            time={props.comment.time}
+            body={props.comment.body}
           />
         ) : (
-          <ForumComment />
+          <Comment />
         )}
       </div>
     </div>
