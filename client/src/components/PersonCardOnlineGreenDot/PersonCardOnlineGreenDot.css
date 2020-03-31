@@ -1,16 +1,13 @@
 
 .PersonCardOnlineGreenDot__dot {
     display: flex;
-    /* justify-content: right; */
     background: rgb(101, 214, 64);
     border-radius: 50%;
     border: solid 5px rgb(196, 196, 196);
     z-index: 1;
     position: absolute;
     top: 49%;
-    /* bottom: 47%; */
     left: 52%;
-    /* right: 40%; */
     width: 25px;
     height: 25px;
 }

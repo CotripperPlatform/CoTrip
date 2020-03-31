@@ -7,10 +7,6 @@ import image from "../../assets/images/profile-picture-1.png";
 // Function based React Component
 const PersonCardOnlineGreenDot = props => {
 
-  // Default Class to apply to Component
-  // let classList = `PersonCardOnlineGreenDot`;
-
-
   return(
     <div className="PersonCardOnlineGreenDot">
       <ProfilePicture type="medium" image={props.image} />
