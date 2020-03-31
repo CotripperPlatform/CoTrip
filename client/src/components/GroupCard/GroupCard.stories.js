@@ -6,10 +6,10 @@ import picture2 from "../../assets/images/card_small2.png";
 import picture3 from "../../assets/images/card_small3.png";
 
 export default {
-  title: "Cards/GroupCard"
+  title: "Layout/Cards/GroupCard"
 };
 
-storiesOf("Cards/GroupCard", module)
+storiesOf("Layout/Cards/GroupCard", module)
   .add("Default", () => (
     <GroupCard name="Group Name" members="# of " location="Location, State" picture={picture3} />
   ))

@@ -8,10 +8,10 @@ import trends from "../../assets/images/trending-hashtags.png";
 import groups from "../../assets/images/protest.png";
 
 export default {
-  title: "Cards/Card"
+  title: "Layout/Cards/Indiviual Cards"
 };
 
-storiesOf("Cards/Card", module)
+storiesOf("Layout/Cards/Indiviual Cards", module)
   .add("Card, Purple", () => (
     <Card color="purple" size="large">
       <span>hello</span>
