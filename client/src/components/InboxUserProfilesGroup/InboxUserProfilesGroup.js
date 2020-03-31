@@ -14,13 +14,13 @@ const InboxUserProfilesGroup = props => {
     if (i < 3) {
       if (props.users.length >= 4 && i === 2) {
         return (
-          <div className="InboxUserProfilesGroup__ExtraUsers">
+          <div className="InboxUserProfilesGroup__extra-users">
             <ExtraUsers to="/" users={props.users} key={i} />
           </div>
         );
       }
       return (
-        <div className="InboxUserProfilesGroup__ProfilePicture">
+        <div className="InboxUserProfilesGroup__profile-picture">
           <ProfilePicture type="extra-small" to={user.to} image={user.profilePic} key={i} />
         </div>
       );

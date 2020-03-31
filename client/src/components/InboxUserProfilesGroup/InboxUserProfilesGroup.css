@@ -2,16 +2,16 @@
   display: flex;
   position: relative;
 }
-.InboxUserProfilesGroup__ProfilePicture:first-child {
+.InboxUserProfilesGroup__profile-picture:first-child {
   z-index: 0;
 }
-.InboxUserProfilesGroup__ProfilePicture:nth-child(2) {
+.InboxUserProfilesGroup__profile-picture:nth-child(2) {
   position: absolute;
   left: 2.5rem;
   z-index: -1;
 }
-.InboxUserProfilesGroup__ExtraUsers,
-.InboxUserProfilesGroup__ProfilePicture:nth-child(3) {
+.InboxUserProfilesGroup__extra-users,
+.InboxUserProfilesGroup__profile-picture:nth-child(3) {
   position: absolute;
   left: 5rem;
   z-index: -2;
