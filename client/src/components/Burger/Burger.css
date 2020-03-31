@@ -1,12 +1,12 @@
 .burger-container {
   height: 50px;
   width: 60px;
-  background-color: white;
+  background-color: pink;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
-  border: black 2px solid;
+  border: black 1px solid;
 }
 
 .div-line {
