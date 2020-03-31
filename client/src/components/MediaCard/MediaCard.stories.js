@@ -9,10 +9,10 @@ import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
 
 export default {
-  title: "Cards/Media Cards"
+  title: "Layout/Cards/Media Card"
 };
 
-storiesOf("Cards/Media Cards", module)
+storiesOf("Layout/Cards/Media Card", module)
   .add("Default", () => <MediaCard />)
   .add("Small Books", () => (
     <MediaCard size="small" to="User/:userid/" imageSrc={books} footerText="Posted By: --user--" />
