@@ -10,24 +10,40 @@ const InboxUserProfilesGroup = props => {
   // Default Class to apply to Component
   let classList = `InboxUserProfilesGroup`;
 
-  let profilePics = props.users.map((user, i) => {
-    if (i < 3) {
-      if (props.users.length >= 4 && i === 2) {
-        return (
-          <div className="InboxUserProfilesGroup__extra-users" key={i}>
-            <ExtraUsers to="/" users={props.users} />
-          </div>
-        );
-      }
-      return (
-        <div className="InboxUserProfilesGroup__profile-picture" key={i}>
-          <ProfilePicture type="extra-small" to={user.to} image={user.profilePic} />
+  return (
+    <div className={classList}>
+      <div className="InboxUserProfilesGroup__profile-picture" key={0}>
+        <ProfilePicture
+          type="extra-small"
+          to={props.users[0].to}
+          image={props.users[0].profilePic}
+        />
+      </div>
+      {props.users.length > 1 && (
+        <div className="InboxUserProfilesGroup__profile-picture" key={1}>
+          <ProfilePicture
+            type="extra-small"
+            to={props.users[1].to}
+            image={props.users[1].profilePic}
+          />
         </div>
-      );
-    }
-  });
-
-  return <div className={classList}>{profilePics}</div>;
+      )}
+      {props.users.length === 3 && (
+        <div className="InboxUserProfilesGroup__profile-picture" key={2}>
+          <ProfilePicture
+            type="extra-small"
+            to={props.users[2].to}
+            image={props.users[2].profilePic}
+          />
+        </div>
+      )}
+      {props.users.length > 3 && (
+        <div className="InboxUserProfilesGroup__extra-users" key={3}>
+          <ExtraUsers to="/" users={props.users} />
+        </div>
+      )}
+    </div>
+  );
 };
 InboxUserProfilesGroup.defaultProps = {
   users: [
