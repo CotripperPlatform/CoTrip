@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import HomePage from "../src/pages/HomePage/HomePage";
@@ -54,6 +54,9 @@ class App extends Component {
       image: ""
     };
   }
+
+
+
   componentDidMount() {
     if (this.state.logged_in) {
       fetch("http://localhost:8000/auth/user", {
@@ -134,18 +137,24 @@ class App extends Component {
           <Route
             path="/hawaii-2020"
             exact
-            render={routerProps => <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />}
+            render={routerProps => (
+              <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />
+            )}
           ></Route>
           <Route
             path="/book-a-trip"
             exact
-            render={routerProps => <BookATripPage handle_logout={this.handle_logout} {...routerProps} />}
+            render={routerProps => (
+              <BookATripPage handle_logout={this.handle_logout} {...routerProps} />
+            )}
           ></Route>
-         
+
           <Route
             path="/member-page"
             exact
-            render={routerProps => <MemberPage  handle_logout={this.handle_logout} {...routerProps} />}
+            render={routerProps => (
+              <MemberPage handle_logout={this.handle_logout} {...routerProps} />
+            )}
           ></Route>
           <Route
             path="/coming_soon"

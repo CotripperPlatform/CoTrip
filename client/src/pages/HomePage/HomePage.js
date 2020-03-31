@@ -79,6 +79,8 @@ const handleClick = e => {
 };
 
 const HomePage = props => {
+      console.log(localStorage.token);
+
   return (
     <body className="HomePage__wrapper">
       <nav>

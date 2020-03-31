@@ -46,7 +46,8 @@ class MemberProfilePage extends Component {
   render() {
     let people = [
       {
-        name: "Suzie",
+        userFirstName: "Suzie",
+        userSurname:"Carmicheal",
         bio:
           "My daughter Brittany and I have been a CoTripper member for a while now and love everything about it. I work as an HR director and Brittany will be entering 8th grade this fall. We really enjoy hiking and jamming out to Lizzo. We love sharing our travel experiences and connecting with like-minded people. Hope to hear from you.",
         hashtags: ["#parenting", "#teenages", "#health&wellness", "#Hawaii2020"],
@@ -125,7 +126,7 @@ class MemberProfilePage extends Component {
                   facebook={people[0].facebook}
                   pinterest={people[0].pinterest}
                   type="default"
-                  name={people[0].name}
+                  name={(people[0].userFirstName + " " + people[0].userSurname[0]+".")}
                   bio={people[0].bio}
                   hashtags={people[0].hashtags}
                   isCurrentUser={people[0].isCurrentUser}

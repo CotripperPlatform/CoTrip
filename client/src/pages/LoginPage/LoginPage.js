@@ -18,6 +18,7 @@ export default class LoginPage extends Component {
   };
 
   render() {
+    console.log(localStorage.getItem('token'))
     return (
       <div className="LoginPage">
         <Logo large />
@@ -36,7 +37,6 @@ export default class LoginPage extends Component {
               onChange={this.handleChange}
               value={this.state.password}
             />
-
             <input className="LoginPage__submit" text="Login" type="submit" />
           </form>
         </div>
