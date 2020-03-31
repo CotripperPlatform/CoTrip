@@ -8,10 +8,10 @@ import pic4 from "../../assets/images/profile-picture-4.png";
 import pic5 from "../../assets/images/profile-picture-5.png";
 
 export default {
-  title: "Layout/Profile Picture"
+  title: "Atoms/Profile Picture"
 };
 
-storiesOf("Layout/Profile Picture", module)
+storiesOf("Atoms/Profile Picture", module)
   .add("Extra Small with Link", () => <ProfilePicture type="extra-small" to="#" image={pic1} />)
   .add("Small with Link", () => <ProfilePicture type="small" to="#" image={pic2} />)
   .add("Medium with Link", () => <ProfilePicture to="#" image={pic3} />)
