@@ -15,10 +15,6 @@ const placeholderDropdownProp = [
   }
 ];
 
-export default {
-  title: "Atoms/Nav/NavLink"
-};
-
 storiesOf("Atoms//Nav/NavLink", module)
   .add("NavLink", () => (
     <NavLink text={placeholderTextProp} to={placeholderUrl} menuList={placeholderDropdownProp} />

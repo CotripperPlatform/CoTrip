@@ -2,10 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import InputTextField from "./InputTextField";
 
-export default {
-  title: "Atoms/InputTextField"
-};
-
 storiesOf("Atoms/InputTextField", module)
   .add("Email", () => <InputTextField type="text" name="email" placeholder="Email" />)
   .add("Name", () => <InputTextField type="text" name="name" placeholder="Name" />)

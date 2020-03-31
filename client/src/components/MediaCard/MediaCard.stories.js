@@ -8,10 +8,6 @@ import nightSky from "../../assets/images/media-card-4.png";
 import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
 
-export default {
-  title: "Layout/Cards/Media Card"
-};
-
 storiesOf("Layout/Cards/Media Card", module)
   .add("Default", () => <MediaCard />)
   .add("Small Books", () => (

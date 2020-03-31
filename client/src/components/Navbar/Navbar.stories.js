@@ -3,10 +3,6 @@ import { storiesOf } from "@storybook/react";
 import Navbar from "./Navbar";
 import ProfileImage from "../../assets/images/profile-picture-1.png";
 
-export default {
-  title: "Layout/Navbar"
-};
-
 storiesOf("Layout/Navbar", module).add("Default", () => (
   <Navbar to={"/"} profileImage={ProfileImage} page={0} />
 ));
