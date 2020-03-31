@@ -8,10 +8,10 @@ import example2 from "../../assets/images/card_small3.png";
 import { tsPropertySignature } from "@babel/types";
 
 export default {
-  title: "Cards/BookTripCard"
+  title: "Layout/Cards/BookTripCard"
 };
 
-storiesOf("Cards/BookTripCard", module).add("Default", () => (
+storiesOf("Layout/Cards/BookTripCard", module).add("Default", () => (
   <BookTripCard>
     <h1>Book a Trip</h1>
     <TripCard src={example1} location="Hawaii" date="May 2020" />
