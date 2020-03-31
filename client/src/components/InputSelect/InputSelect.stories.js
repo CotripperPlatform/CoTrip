@@ -5,7 +5,7 @@ import InputSelect from "./InputSelect";
 const handleSelect = props => {
   console.log(props);
 };
-storiesOf("InputSelect", module)
+storiesOf("Atoms/InputSelect", module)
   .add("Default", () => <InputSelect onSelect={handleSelect} />)
   .add("Options", () => (
     <InputSelect

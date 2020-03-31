@@ -7,7 +7,7 @@ import people from "../../assets/images/add-friend.png";
 import trends from "../../assets/images/trending-hashtags.png";
 import groups from "../../assets/images/protest.png";
 
-storiesOf("Card", module)
+storiesOf("Layout/Cards/Indiviual Cards", module)
   .add("Card, Purple", () => (
     <Card color="purple" size="large">
       <span>Welcome</span>
