@@ -3,7 +3,7 @@ import React from 'react';
 import "./PersonCardOnlineGreenDot.css";
 
 // Function based React Component
-const PersonCardOnlineGreenDot = (props) => {
+const PersonCardOnlineGreenDot = props => {
 
   // Default Class to apply to Component
   let classList = `PersonCardOnlineGreenDot`;
