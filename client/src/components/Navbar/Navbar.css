@@ -51,7 +51,7 @@
   border-left: 31px solid transparent;
   border-right: 31px solid transparent;
   border-bottom: 21px solid var(--purple);
-  margin: -5 px auto;
+  margin: -5px auto;
 }
 
 .Navbar__link-item {
