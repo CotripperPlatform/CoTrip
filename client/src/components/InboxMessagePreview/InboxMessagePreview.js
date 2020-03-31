@@ -22,9 +22,9 @@ const InboxMessagePreview = props => {
   return (
     <div className={classList}>
       <InboxUserProfilesGroup users={props.conversation.users} />
-      <div className="Message__conversation">
-        <div className="Message__name">{names}</div>
-        <div className="Message__message">{props.conversation.thread[0].message}</div>
+      <div className={classList + "__conversation"}>
+        <div className={classList + "__name"}>{names}</div>
+        <div className={classList + "__message"}>{props.conversation.thread[0].message}</div>
       </div>
     </div>
   );
