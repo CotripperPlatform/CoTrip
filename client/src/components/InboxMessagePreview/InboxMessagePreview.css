@@ -1,4 +1,4 @@
-.InboxMessage__message-container {
+.InboxMessagePreview {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,25 +9,7 @@
   font-family: var(--paragraph-font);
 }
 
-.InboxMessage__profilePics {
-  display: flex;
-  position: relative;
-}
-.InboxMessage__child:nth-child(1) {
-  z-index: 0;
-}
-.InboxMessage__child:nth-child(2) {
-  position: absolute;
-  left: 2.5rem;
-  z-index: -1;
-}
-.InboxMessage__child:nth-child(3) {
-  position: absolute;
-  left: 5rem;
-  z-index: -2;
-}
-
-.InboxMessage__conversation {
+.InboxMessagePreview__conversation {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,11 +18,14 @@
   align-items: stretch;
 }
 
-.InboxMessage__name {
+.InboxMessagePreview__name {
   font-weight: var(--banner-weight);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.InboxMessage__message {
+.InboxMessagePreview__message {
   height: 46px;
   white-space: nowrap;
   overflow: hidden;
