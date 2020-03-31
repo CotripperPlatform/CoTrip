@@ -1,0 +1,11 @@
+.PostContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    overflow: auto;
+    /* position: fixed; */
+    /* top: 0px; */
+    /* left: 0px; */
+    /* bottom: 0px; */
+    /* right: 0px; */
+}

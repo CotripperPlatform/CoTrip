@@ -8,7 +8,7 @@ import ForumComment from "../ForumComment/ForumComment";
 export default function ForumPostContainer(props) {
   return (
     <div className="PostContainer">
-      <div className="ForumPost">
+      <div>
         {props.forumPost ? (
           <ForumPost
             pillClick={props.forumPost.pillClick}
@@ -26,7 +26,7 @@ export default function ForumPostContainer(props) {
           <ForumPost />
         )}
       </div>
-      <div className="ForumComment">
+      <div>
         {props.forumComment ? (
           <ForumComment
             name={props.forumComment.name}
