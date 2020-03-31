@@ -1,22 +1,26 @@
-
-import React from 'react';
+import React from "react";
 import "./Footer.css";
 
 // Function based React Component
-const Footer = (props) => {
-
+const Footer = props => {
   // Default Class to apply to Component
   let classList = `Footer`;
-
+  const handleClick = () => {
+    props.handle_logout();
+    props.history.push("/");
+  };
 
   return (
     // These are hard links in the HTLM files and will need to be udpated once we have the info
     <div className={classList}>
       <div className="Footer--left">
         <a href="">Sitemap</a>
+        <a onClick={handleClick}>Logout</a>
       </div>
       <div className="Footer--center">
-        <a href="mailto:info@cotripper.co?" target="_blank">info@cotripper.co</a>
+        <a href="mailto:info@cotripper.co?" target="_blank">
+          info@cotripper.co
+        </a>
       </div>
       <div className="Footer--right">
         <a href="">Instagram</a>
@@ -25,6 +29,6 @@ const Footer = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

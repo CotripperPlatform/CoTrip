@@ -45,6 +45,7 @@ class NavLink extends React.Component {
 }
 NavLink.defaultProps = {
   text: "community",
+  to:'',
   menuList: [
     {
       text: "Explore People",
