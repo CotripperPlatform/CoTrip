@@ -11,19 +11,16 @@ const InboxMessagePreview = props => {
   let classList = `InboxMessagePreview`;
 
   // create list of names above message
-  let names = props.conversation.users[0].name;
-  if (props.conversation.users.length > 1) {
-    names = `${names}, ${props.conversation.users[1].name}`;
-  }
-  if (props.conversation.users.length > 2) {
-    names = `${names}, ...`;
-  }
+  let names = props.conversation.users.map(user => {
+    return user.name;
+  });
+  let nameString = names.join(", ");
 
   return (
     <div className={classList}>
       <InboxUserProfilesGroup users={props.conversation.users} />
       <div className={classList + "__conversation"}>
-        <div className={classList + "__name"}>{names}</div>
+        <div className={classList + "__name"}>{nameString}</div>
         <div className={classList + "__message"}>{props.conversation.thread[0].message}</div>
       </div>
     </div>

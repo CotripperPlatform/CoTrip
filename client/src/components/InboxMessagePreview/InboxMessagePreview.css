@@ -20,6 +20,9 @@
 
 .InboxMessagePreview__name {
   font-weight: var(--banner-weight);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .InboxMessagePreview__message {
