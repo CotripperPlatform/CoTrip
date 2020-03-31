@@ -4,10 +4,10 @@ import UpcomingTripsCard from "./UpcomingTripsCard";
 import background from "../../assets/images/card_small2.png";
 
 export default {
-  title: "Cards/UpcomingTripsCard"
+  title: "Layout/Cards/UpcomingTripsCard"
 };
 
-storiesOf("Cards/UpcomingTripsCard", module)
+storiesOf("Layout/Cards/UpcomingTripsCard", module)
   .add("Default", () => (
     <UpcomingTripsCard
       details={["Detail 1", "Detail 2", "Detail 3", "Detail 4"]}
