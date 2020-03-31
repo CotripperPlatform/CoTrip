@@ -4,7 +4,6 @@
   /* need to work on width and height... */
   width: 400px;
   height: fit-content;
-  /* need to work on position, but quick fix for now to get all the profile pictures to display above the background (they are at z-index -1 and -2) */
 }
 .Inbox__header {
   border-bottom: 1px solid rgba(37, 37, 37, 0.25);
@@ -24,6 +23,9 @@
   font-family: var(--default-font);
 }
 .Inbox__message-previews {
-  height: 500px;
+  height: 450px;
   overflow-y: scroll;
+}
+.Inbox__message-previews::-webkit-scrollbar {
+  width: 0;
 }
