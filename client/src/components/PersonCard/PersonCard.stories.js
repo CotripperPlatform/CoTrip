@@ -12,5 +12,5 @@ storiesOf('PersonCard', module)
   { url: "#", interests: "veganism" },
   { url: "#", interests: "budgeting" },
   { url: "#", interests: "travel" },
-  { url: "#", interests: "outdoors"}
+  { url: "#", interests: "outdoors" }
 ]}/>)
