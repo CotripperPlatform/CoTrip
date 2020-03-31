@@ -1,11 +1,15 @@
-.PostContainer{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    overflow: auto;
-    /* position: fixed; */
-    /* top: 0px; */
-    /* left: 0px; */
-    /* bottom: 0px; */
-    /* right: 0px; */
+.PostContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.ForumComment {
+  margin-top: 7px;
+  background: #c4c4c4;
+  border: 1px solid rgba(37, 37, 37, 0.5);
+  box-sizing: border-box;
+  border-radius: 3px;
 }
