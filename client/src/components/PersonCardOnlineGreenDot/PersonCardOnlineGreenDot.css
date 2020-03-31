@@ -1,18 +1,18 @@
 
 .PersonCardOnlineGreenDot__dot {
-    /* display: flex; */
+    display: flex;
     /* justify-content: right; */
     background: rgb(101, 214, 64);
     border-radius: 50%;
     border: solid 5px rgb(196, 196, 196);
-    z-index: 1;
+    z-index: 10;
     position: absolute;
     top: 49%;
-    /* bottom: 0%; */
-    left: 58%;
-    right: 0%;
-    width: 1.50rem;
-    height: 1.50rem;
+    /* bottom: 47%; */
+    left: 52%;
+    /* right: 40%; */
+    width: 25px;
+    height: 25px;
 }
 
 .PersonCardOnlineGreenDot {
