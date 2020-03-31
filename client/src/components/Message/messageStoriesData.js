@@ -110,11 +110,4 @@ const conversation6 = {
   ]
 };
 
-export default {
-  conversation1,
-  conversation2,
-  conversation3,
-  conversation4,
-  conversation5,
-  conversation6
-};
+export { conversation1, conversation2, conversation3, conversation4, conversation5, conversation6 };
