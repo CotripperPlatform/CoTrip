@@ -4,10 +4,10 @@ import TripCard from "./TripCard";
 import example1 from "../../assets/images/card_small2.png";
 
 export default {
-  title: "Cards/TripCard"
+  title: "Layout/Cards/TripCard"
 };
 
-storiesOf("Cards/TripCard", module)
+storiesOf("Layout/Cards/TripCard", module)
   .add("Default", () => (
     <TripCard src="https://wallpaperaccess.com/full/144067.jpg" location="Hawaii" date="May 2020" />
   ))
