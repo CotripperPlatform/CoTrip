@@ -35,7 +35,45 @@ You can then use the following command to start the server on your machine:
 npm start
 ```
 
-### Usage
+### StoryBook Organization
+
+- Layout
+
+Anything pertaining to components that might be set on a page. Example: Icons, Logos, Profile picture's or Footers.
+
+- Banners
+
+Speak for themselves. Used on the Home page for "Welcome back" or Community Banner with an Input on it
+
+- Cards
+
+Anything with the name "Card" in it will be stored here. Pertains to things such as Media Cards, Upcoming event cards, ETC.
+
+- Atoms/Atomic Components
+
+An atomic component would be a button or a text input
+
+- (Not Implemented Yet) Molecule Components
+
+A molecule would be a SearchInput component that uses both the button and text input Atoms. If you create a Molecule please list it as such.
+
+- Pages
+
+These are the physical full pages that have been put together.
+
+## PROPER SYNTAX FOR STORYBOOK
+
+- When creating a new component and wanting to safely store it, please do so with this Hierarchy in mind.
+
+- For a component to be in the atoms page it would look something like so
+
+IN STORIES.js
+storiesOf("Atoms/<component_name>", module)
+
+- For a component to be in the Layout page and also in the nav folder within Layout it woud be as such
+
+IN STORIES.js
+storiesOf("Layout/Nav/<component_name>", module)
 
 #### Prototype
 
@@ -94,10 +132,11 @@ function HelloIcon = props => {
 ```
 
 This is a list of sizes that you can use:
-* xs 
-* sm 
-* lg 
-* 2x - 10x
+
+- xs
+- sm
+- lg
+- 2x - 10x
 
 You can find the list of icons on the [Font Awesome
 website](https://fontawesome.com/). Note that you only need to pass in the
