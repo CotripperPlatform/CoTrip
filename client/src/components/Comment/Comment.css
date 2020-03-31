@@ -1,4 +1,4 @@
-.Comment_body {
+.Comment {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,43 +11,43 @@
   padding: 1.2rem;
 }
 
-.Comment_h4 {
+.Comment__name {
   margin: 0;
 }
 
-.Comment_section {
+.Comment__column {
   margin: 0.7rem;
   height: 90%;
   margin-bottom: 0;
 }
 
-.Comment_section_1 {
+.Comment__profile {
   text-align: center;
 }
 
-.Comment_section_2 {
+.Comment__content {
   display: flex;
   flex-direction: column;
 }
 
-.Comment_section_2_p {
+.Comment__body {
   margin: 0;
 }
 
-.Comment_section_3 {
+.Comment__timing--container {
   white-space: nowrap;
   text-align: right;
 }
 
-.Comment_section_3_p {
+.Comment__timing {
   margin: 0;
 }
 
-.Comment_div {
+.Comment__activities {
   display: flex;
 }
 
-.Comment_article {
+.Comment__activity {
   text-align: left;
   margin-right: 0.8rem;
   margin-top: 0.5rem;
@@ -55,12 +55,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .CommentBody {
+  .Comment {
     width: 30rem;
   }
 }
 @media only screen and (max-width: 320px) {
-  .CommentBody {
+  .Comment {
     width: 10rem;
     flex-direction: column;
   }
