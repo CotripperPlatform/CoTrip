@@ -10,6 +10,6 @@ export default {
   title: "Atoms/Burger"
 };
 
-storiesOf("Atoms/Burger", module)
-  .add("Default - inactive", () => <Burger onClick={handleClick} active={false} />)
-  .add("Default - active", () => <Burger onClick={handleClick} active={true} />);
+storiesOf("Atoms/Burger", module).add("Burger Style 1", () => (
+  <Burger onClick={handleClick} active={false} />
+));
