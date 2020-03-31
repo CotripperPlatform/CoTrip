@@ -7,6 +7,12 @@
   flex-direction: column;
   align-items: center;
   border: black 1px solid;
+  cursor: pointer;
+}
+
+.burger-container:hover {
+  background-color: white;
+  border: 2px solid 2px pink;
 }
 
 .div-line {
