@@ -10,12 +10,12 @@ import groups from "../../assets/images/protest.png";
 storiesOf("Card", module)
   .add("Card, Purple", () => (
     <Card color="purple" size="large">
-      <span>hello</span>
+      <span>Welcome</span>
     </Card>
   ))
   .add("Card, Purple, Small", () => (
     <Card color="purple" size="small">
-      <span>hello</span>
+      <span>Welcome </span>
     </Card>
   ))
   .add("Card, Pink", () => <Card color="pink" size="large" />)
