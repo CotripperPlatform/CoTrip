@@ -12,7 +12,7 @@ import {
 } from "./messageStoriesData";
 
 storiesOf("Message", module)
-  // .add("No Props", () => <Message />)
+  .add("No Props", () => <Message />)
   .add("1 Person", () => <Message conversation={conversation1} />)
   .add("2 People", () => <Message conversation={conversation2} />)
   .add("3 People", () => <Message conversation={conversation3} />)

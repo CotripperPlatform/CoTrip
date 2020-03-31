@@ -27,7 +27,7 @@ const InboxUserProfilesGroup = props => {
     }
   });
 
-  return <div className={classList}>InboxUserProfilesGroup</div>;
+  return <div className={classList}>{profilePics}</div>;
 };
 InboxUserProfilesGroup.defaultProps = {
   users: [
