@@ -5,10 +5,6 @@ import picture1 from "../../assets/images/card_small1.png";
 import picture2 from "../../assets/images/card_small2.png";
 import picture3 from "../../assets/images/card_small3.png";
 
-export default {
-  title: "Layout/Cards/GroupCard"
-};
-
 storiesOf("Layout/Cards/GroupCard", module)
   .add("Default", () => (
     <GroupCard name="Group Name" members="# of " location="Location, State" picture={picture3} />

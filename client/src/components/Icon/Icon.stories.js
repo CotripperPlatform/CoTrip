@@ -36,10 +36,6 @@ library.add(
   faEdit
 );
 
-export default {
-  title: "Atoms/Icon"
-};
-
 storiesOf("Atoms/Icon", module)
   .add("Coffee", () => <Icon icon={"coffee"} />)
   .add("Comment", () => <Icon icon={"comment"} />)

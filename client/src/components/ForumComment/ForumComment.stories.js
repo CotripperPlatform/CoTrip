@@ -3,10 +3,6 @@ import { storiesOf } from "@storybook/react";
 import ForumComment from "./ForumComment";
 import Profile from "../../assets/images/card_profile3.png";
 
-export default {
-  title: "Layout/ForumComment"
-};
-
 storiesOf("Layout/ForumComment", module).add("ForumComment", () => (
   <ForumComment
     name="Lexi R."

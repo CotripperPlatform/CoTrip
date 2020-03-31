@@ -3,10 +3,6 @@ import { storiesOf } from "@storybook/react";
 import ForumPost from "./ForumPost";
 import Profile from "../../assets/images/profile-picture-2.png";
 
-export default {
-  title: "Layout/ForumPost"
-};
-
 const onClick = () => {
   console.log("clicked");
   return;

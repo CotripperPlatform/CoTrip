@@ -2,10 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import FileUpload from "./FileUpload";
 
-export default {
-  title: "Atoms/Layout/Profile Picture"
-};
-
 const handleFile = file =>
   console.log(
     file,
