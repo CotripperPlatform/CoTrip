@@ -8,10 +8,6 @@ const handleClick = e => {
   console.log("clicked");
 };
 
-export default {
-  title: "Layout/SignUpAd"
-};
-
 storiesOf("Layout/SignUpAd", module).add("Default", () => (
   <SignUpAd onClick={handleClick}>
     <h2>Never Miss a Trip</h2>

@@ -6,10 +6,6 @@ function pillClick(val) {
   console.log(val);
 }
 
-export default {
-  title: "Atoms/Pill"
-};
-
 storiesOf("Atoms/Pill", module)
   .add("Onboarding Pill", () => (
     <Pill

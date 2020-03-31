@@ -2,10 +2,6 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import TripDetails from "./TripDetails.js";
 
-export default {
-  title: "Layout/TripDetails"
-};
-
 storiesOf("Layout/TripDetails", module)
   .add("Default", () => <TripDetails />)
   .add("Custom props slider container", () => (
