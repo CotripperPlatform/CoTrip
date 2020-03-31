@@ -9,24 +9,6 @@
   font-family: var(--paragraph-font);
 }
 
-.Message__profilePics {
-  display: flex;
-  position: relative;
-}
-.Message__child:nth-child(1) {
-  z-index: 0;
-}
-.Message__child:nth-child(2) {
-  position: absolute;
-  left: 2.5rem;
-  z-index: -1;
-}
-.Message__child:nth-child(3) {
-  position: absolute;
-  left: 5rem;
-  z-index: -2;
-}
-
 .Message__conversation {
   display: flex;
   flex-direction: column;

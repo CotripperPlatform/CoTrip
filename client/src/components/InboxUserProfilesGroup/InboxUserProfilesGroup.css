@@ -1,4 +1,17 @@
-
 .InboxUserProfilesGroup {
-
+  display: flex;
+  position: relative;
+}
+.InboxUserProfilesGroup__ProfilePicture:first-child {
+  z-index: 0;
+}
+.InboxUserProfilesGroup__ProfilePicture:nth-child(2) {
+  position: absolute;
+  left: 2.5rem;
+  z-index: -1;
+}
+.InboxUserProfilesGroup__ExtraUsers {
+  position: absolute;
+  left: 5rem;
+  z-index: -2;
 }
