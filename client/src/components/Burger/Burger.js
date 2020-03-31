@@ -12,3 +12,9 @@ function Burger(props) {
 }
 
 export default Burger;
+
+// burger made
+// when someone clickes on burger container, it brings up a dropdwon of li
+// What other functionality is needed?
+// what styling is needed
+// fade away? Drop down from left? right? UP down?
