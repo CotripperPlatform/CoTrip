@@ -10,7 +10,8 @@
   left: 2.5rem;
   z-index: -1;
 }
-.InboxUserProfilesGroup__ExtraUsers {
+.InboxUserProfilesGroup__ExtraUsers,
+.InboxUserProfilesGroup__ProfilePicture:nth-child(3) {
   position: absolute;
   left: 5rem;
   z-index: -2;
