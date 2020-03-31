@@ -9,7 +9,7 @@ import image4 from "../../assets/images/easternCaribbean.png";
 storiesOf('BookATripImage', module)
   .add("Default", () => <BookATripImage
     cards={[
-      {"image": image1, "url": "#", "description": "Hawaii May 2020"},
+      {image: image1, "url": "#", "description": "Hawaii May 2020"},
       {"image": image2, "url": "#", "description": "Greece & Croatia Cruise June 2020"},
       {"image": image3, "url": "#", "description": "Southern Caribbean Cruise July 2020"},
       {"image": image1, "url": "#", "description": "Hawaii August 2020"},
