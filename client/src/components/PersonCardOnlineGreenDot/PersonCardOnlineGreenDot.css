@@ -5,7 +5,7 @@
     background: rgb(101, 214, 64);
     border-radius: 50%;
     border: solid 5px rgb(196, 196, 196);
-    z-index: 10;
+    z-index: 1;
     position: absolute;
     top: 49%;
     /* bottom: 47%; */
