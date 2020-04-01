@@ -13,6 +13,6 @@ const placeholderDropdownProp = [
   }
 ];
 
-storiesOf("NavLinkDropdownMenu", module).add("NavLinkDropdownMenu", () => (
+storiesOf("Atoms/Nav/NavLinkDropdownMenu", module).add("NavLinkDropdownMenu", () => (
   <NavLinkDropdownMenu menuList={placeholderDropdownProp} />
 ));
