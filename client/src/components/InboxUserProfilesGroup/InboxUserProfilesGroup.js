@@ -12,36 +12,21 @@ const InboxUserProfilesGroup = props => {
 
   return (
     <div className={classList}>
-      <div className="InboxUserProfilesGroup__profile-picture" key={0}>
-        <ProfilePicture
-          type="extra-small"
-          to={props.users[0].to}
-          image={props.users[0].profilePic}
-        />
-      </div>
-      {props.users.length > 1 && (
-        <div className="InboxUserProfilesGroup__profile-picture" key={1}>
-          <ProfilePicture
-            type="extra-small"
-            to={props.users[1].to}
-            image={props.users[1].profilePic}
-          />
-        </div>
-      )}
-      {props.users.length === 3 && (
-        <div className="InboxUserProfilesGroup__profile-picture" key={2}>
-          <ProfilePicture
-            type="extra-small"
-            to={props.users[2].to}
-            image={props.users[2].profilePic}
-          />
-        </div>
-      )}
-      {props.users.length > 3 && (
-        <div className="InboxUserProfilesGroup__extra-users" key={3}>
-          <ExtraUsers to="/" users={props.users} />
-        </div>
-      )}
+      {props.users.slice(0, 3).map((user, i) => {
+        if (props.users.length < 4 || i < 2) {
+          return (
+            <div className="InboxUserProfilesGroup__profile-picture" key={i}>
+              <ProfilePicture type="extra-small" to={user.to} image={user.profilePic} />
+            </div>
+          );
+        } else {
+          return (
+            <div className="InboxUserProfilesGroup__extra-users" key={3}>
+              <ExtraUsers to="/" users={props.users} />
+            </div>
+          );
+        }
+      })}
     </div>
   );
 };
