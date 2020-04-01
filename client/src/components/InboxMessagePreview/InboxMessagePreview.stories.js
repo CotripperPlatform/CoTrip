@@ -11,7 +11,7 @@ import {
   conversation6
 } from "./inboxMessagePreviewStoriesData";
 
-storiesOf("InboxMessagePreview", module)
+storiesOf("Layout/Inbox/InboxMessagePreview", module)
   .add("No Props", () => <InboxMessagePreview />)
   .add("1 Person", () => <InboxMessagePreview conversation={conversation1} />)
   .add("2 People", () => <InboxMessagePreview conversation={conversation2} />)
