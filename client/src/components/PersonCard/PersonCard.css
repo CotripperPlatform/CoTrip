@@ -41,3 +41,16 @@
   text-decoration: none;
   color: var(--black);
 }
+
+.PersonCard__dot {
+  display: flex;
+  background: rgb(101, 214, 64);
+  border-radius: 50%;
+  border: solid 5px rgb(196, 196, 196);
+  z-index: 1;
+  position: absolute;
+  top: 49%;
+  left: 53%;
+  width: 25px;
+  height: 25px;
+}
