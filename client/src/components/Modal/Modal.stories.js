@@ -7,7 +7,7 @@ function handleEvent(evt) {
   alert("something happens");
 }
 
-storiesOf("Atoms/Modal", module)
+storiesOf("Layout/Modal", module)
   .add("Follow Modal", () => (
     <ModalContainer
       buttonText="Follow"
@@ -20,7 +20,7 @@ storiesOf("Atoms/Modal", module)
       onConfirm={handleEvent}
     />
   ))
-  .add("Atoms/Join Modal", () => (
+  .add("Layout/Join Modal", () => (
     <ModalContainer
       buttonText="Join"
       buttonTextColor="white"
