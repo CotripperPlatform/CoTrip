@@ -1,0 +1,33 @@
+.InboxMessagePreview {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 26.19rem;
+  height: calc(71px+2rem);
+  font-family: var(--paragraph-font);
+}
+
+.InboxMessagePreview__conversation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
+  padding: 1 0;
+  align-items: stretch;
+}
+
+.InboxMessagePreview__name {
+  font-weight: var(--banner-weight);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.InboxMessagePreview__message {
+  height: 46px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
