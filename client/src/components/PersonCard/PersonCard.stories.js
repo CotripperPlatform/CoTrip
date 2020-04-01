@@ -3,7 +3,7 @@ import PersonCard from './PersonCard';
 import image from "../../assets/images/profile-picture-1.png";
 import { storiesOf } from '@storybook/react';
 
-storiesOf('PersonCard', module)
+storiesOf('Layout/Cards/PersonCard', module)
 .add("Default", () => <PersonCard
   image={image}
   name="Lindsay L." 
