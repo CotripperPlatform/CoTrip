@@ -3,14 +3,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: auto;
+  width: 100%;
   background-color: var(--gray-dark);
   font-size: 14px;
   font-family: var(--paragraph-font);
-  padding: 1.2rem;
+  padding: 1rem;
   border: 1px solid rgba(37, 37, 37, 0.5);
   border-radius: 3px;
-  margin-left: 0.5rem;
+  /* margin-left: 0.5rem; */
   padding-top: 0.1rem;
   padding-bottom: 0.5rem;
 }
