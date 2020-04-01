@@ -48,11 +48,11 @@ PersonCard.defaultProps = {
     { url: "#", interests: "travel" },
     { url: "#", interests: "outdoors" }
   ],
-  dot: <div className="PersonCard__online"></div>
+  dot: <div className="PersonCard__online"></div>,
 };
 
 // Once user logs in online should be set to true and display green dot.
-const online = false;
+const online = true;
 // ReactDOM.render(<PersonCard online={false} />,
 //   document.getElementById('root'))
 export default PersonCard;
