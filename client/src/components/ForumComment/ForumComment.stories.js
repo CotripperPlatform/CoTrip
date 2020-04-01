@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 import ForumComment from "./ForumComment";
 import Profile from "../../assets/images/card_profile3.png";
 
-storiesOf("ForumComment", module).add("ForumComment", () => (
+storiesOf("Layout/ForumComment", module).add("ForumComment", () => (
   <ForumComment
     name="Lexi R."
     likes={2}
