@@ -11,23 +11,23 @@ const Modal = props => {
       }}
     >
       <div className="Modal__close">
-        <a href="#" className="Modal__closeButton" onClick={props.onClose}>
+        <a href="#" className="Modal__close-button" onClick={props.onClose}>
           ×
         </a>
       </div>
       <div className="Modal__body">
-        <div className="Modal__messageBox">
-          <h3 className="Modal__messageText">{props.message}</h3>
+        <div className="Modal__message-box">
+          <h3 className="Modal__message-text">{props.message}</h3>
         </div>
       </div>
       <div className="Modal__footer">
-        <div className="Modal__footerButtons">
-          <button className="Modal__footerButtonCancel" onClick={props.onClose}>
+        <div className="Modal__footer-buttons">
+          <button className="Modal__footer-button-cancel" onClick={props.onClose}>
             {props.cancelText}
           </button>
         </div>
-        <div className="Modal__footerButtons">
-          <button className="Modal__footerButtonConfirm" onClick={props.onConfirm}>
+        <div className="Modal__footer-buttons">
+          <button className="Modal__footer-button-confirm" onClick={props.onConfirm}>
             {props.confirmText}
           </button>
         </div>
