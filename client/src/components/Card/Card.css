@@ -96,25 +96,22 @@
   width: 100%;
 }
 .Card__outline {
-  padding: 3vh 0 5vh 0;
-  width: 14.2vw;
-  max-width: 225px;
   background: none;
-  border: 3px dashed var(--purple);
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
+  border: 2px dashed var(--purple);
   box-shadow: none;
+  text-align: center;
+  transition: transform 0.3s;
+  font-size: 28px;
 }
 .Card__discover-link {
-  color: black;
   text-align: center;
+  margin: auto;
+  line-height: 1.8;
   transition: transform 0.3s;
 }
 .Card__discover-link a {
-  font-size: 24px;
-  width: 10rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  font-size: 28px;
+  /* line-height: 1.7; */
   text-decoration: none;
 }
 .Card__discover-link:hover {
