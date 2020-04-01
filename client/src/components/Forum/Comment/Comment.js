@@ -1,6 +1,6 @@
 import React from "react";
 import "./Comment.css";
-import ProfilePicture from "../ProfilePicture/ProfilePicture";
+import ProfilePicture from "../../ProfilePicture/ProfilePicture";
 
 // Function based React Component
 const Comment = props => {

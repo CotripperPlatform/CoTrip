@@ -9,7 +9,7 @@ const onClick = () => {
   console.log("clicked");
   return;
 };
-storiesOf("Atoms/ForumPostContainer", module).add("ForumPostContainer", () => (
+storiesOf("Layout/Forum/ForumPostContainer", module).add("ForumPostContainer", () => (
   <ForumPostContainer
     forumPost={{
       pillClick: { onClick },
