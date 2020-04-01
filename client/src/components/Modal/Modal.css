@@ -1,81 +1,125 @@
 .Modal {
-    width: 582px;
-    height: 309px;
-    margin: 0 auto;
-    padding: 1rem 2rem 0.5rem 2rem;
-    background: var(--yellow);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--default-font);
-    font-weight: var(--title-weight);
-    color: black;
-    transition: all .8s;
+  width: 100%;
+  height: 309px;
+  margin: 0 auto;
+  padding: 1rem 2rem 0.5rem 2rem;
+  background: var(--yellow);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--default-font);
+  font-weight: var(--title-weight);
+  color: black;
+  transition: all 0.8s;
 }
 
-.Modal__close{
-    text-align: right;
+.Modal__close {
+  text-align: right;
 }
 
-.Modal__closeButton{
-    font-size: 5rem;
-    line-height: 56px;
-    text-decoration: none;
-    color: black;
+.Modal__close-button {
+  font-size: 5rem;
+  line-height: 56px;
+  text-decoration: none;
+  color: black;
 }
 
 .Modal__body {
-    width: 100%;
-    height: 60%;
+  width: 100%;
+  height: 60%;
 }
 
-.Modal__messageBox{
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
+.Modal__message-box {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
 }
 
-.Modal__messageText{
-    text-align: center;
-    font-size: 38px;
-    line-height: 57px;
+.Modal__message-text {
+  text-align: center;
+  font-size: 38px;
+  line-height: 57px;
 }
 
-.Modal__footer{
-    width: 100%;
-    height: 23%;
-    display: flex;
-    flex-direction: row;
+.Modal__footer {
+  width: 100%;
+  height: 23%;
+  display: flex;
+  flex-direction: row;
 }
 
-.Modal__footerButtons{
-    width: 100%;
-    
+.Modal__footer-buttons {
+  width: 100%;
 }
 
-.Modal__footerButtonConfirm{
-    font-family: var(--default-font);
-    border: 1px solid rgba(250, 250, 250, 0.25);
-    width: 100%;
-    height: 100%;
-    background: rgba(250, 250, 250, 0.25);
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: #000000;
-    text-transform: uppercase;
+.Modal__footer-button-cancel {
+  font-family: var(--default-font);
+  border: 1px solid rgba(250, 250, 250, 0.25);
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 250, 250, 0.25);
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
 }
 
-.Modal__footerButtonCancel{
-    font-family: var(--default-font);
-    border: 1px solid rgba(37, 37, 37, 0.25);
-    width: 100%;
-    height: 100%;
-    font-size: 24px;
-    line-height: 36px;
-    text-align: center;
-    color: #000000;
-    text-transform: uppercase;
-    background: rgba(37, 37, 37, 0.25);
+.Modal__footer-button-confirm {
+  font-family: var(--default-font);
+  border: 1px solid rgba(37, 37, 37, 0.25);
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+  text-transform: uppercase;
+  background: rgba(37, 37, 37, 0.25);
+}
+
+.Modal__container {
+  width: 100%;
+  height: 100%;
+}
+
+.Modal__overlay {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0.234);
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  transition: all 1.3s;
+  width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  .Modal {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Modal {
+    width: 60%;
+    padding: 1rem 2rem 4rem 2rem;
+  }
+  .Modal__messageText {
+    font-size: 30px;
+  }
+
+  .Modal__footer {
+    padding-top: 4rem;
+  }
+  .Modal__footerButtonCancel {
+    font-size: 18px;
+  }
+  .Modal__footerButtonConfirm {
+    font-size: 18px;
+  }
 }
