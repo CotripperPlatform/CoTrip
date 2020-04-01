@@ -198,3 +198,4 @@ storiesOf("Banners/Banner", module)
       />
     </Banner>
   ));
+// THIS IS THE SEARCH BANNER ON BOOK_A_TRIP
