@@ -2,9 +2,13 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import ModalContainer from "./ModalContainer";
 
-function handleEvent(evt) {
+function handleConfirm(evt) {
   evt.preventDefault();
-  alert("Something Happens");
+  alert("Confirmed!");
+}
+function handleJoin(evt) {
+  evt.preventDefault();
+  alert("Joined!");
 }
 
 storiesOf("Modal", module)
