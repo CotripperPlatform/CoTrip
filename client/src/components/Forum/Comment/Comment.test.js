@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import CommentBody from "./CommentBody.js";
+import CommentBody from "./CommentBody.js.js";
 
 const setUp = (props = {}) => {
   const component = shallow(<CommentBody {...props} />);

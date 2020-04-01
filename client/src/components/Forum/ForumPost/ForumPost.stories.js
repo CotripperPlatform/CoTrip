@@ -1,13 +1,13 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ForumPost from "./ForumPost";
-import Profile from "../../assets/images/profile-picture-2.png";
+import Profile from "../../../assets/images/profile-picture-2.png";
 
 const onClick = () => {
   console.log("clicked");
   return;
 };
-storiesOf("Layout/ForumPost", module)
+storiesOf("Layout/Forum/ForumPost", module)
   .add("Default", () => (
     <ForumPost pillClick={onClick} commentClick={onClick} likeClick={onClick} to="/" />
   ))
