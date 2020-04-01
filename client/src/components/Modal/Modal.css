@@ -1,5 +1,5 @@
 .Modal {
-    width: 100%;
+    width: 582px;
     height: 309px;
     margin: 0 auto;
     padding: 1rem 2rem 0.5rem 2rem;
@@ -78,30 +78,4 @@
     color: #000000;
     text-transform: uppercase;
     background: rgba(37, 37, 37, 0.25);
-}
-
-@media only screen and (max-width: 576px){
-    .Modal{
-        width: 80%;
-    }
-}
-
-@media only screen and (max-width: 320px){
-    .Modal{
-        width: 60%;
-        padding: 1rem 2rem 4rem 2rem;
-    }
-    .Modal__messageText{
-        font-size: 30px;
-    }
-
-    .Modal__footer{
-        padding-top: 4rem;
-    }
-    .Modal__footerButtonCancel{
-        font-size: 18px;
-    }
-    .Modal__footerButtonConfirm{
-        font-size: 18px;
-    }
 }
