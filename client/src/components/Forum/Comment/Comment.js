@@ -12,7 +12,7 @@ const Comment = props => {
   return (
     <body className="Comment">
       <section className="Comment__column Comment__profile">
-        <ProfilePicture type={type} to={to} image={image} type="small"/>
+        <ProfilePicture type="small" to={to} image={image} />
         <h4 className="Comment__name">{name}</h4>
       </section>
       <section className="Comment__column Comment__content">

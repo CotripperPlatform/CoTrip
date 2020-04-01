@@ -10,13 +10,11 @@ const link = "#";
 const name = "Colleen";
 const likes = 2;
 const replies = 0;
-const type = "small";
 storiesOf("Layout/Forum/Comment", module).add("Default", () => (
   <Comment
     body={body}
     date={date}
     time={time}
-    type={type}
     to={link}
     image={Image}
     name={name}
