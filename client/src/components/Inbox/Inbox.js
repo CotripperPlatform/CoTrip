@@ -11,6 +11,7 @@ import {
 } from "../InboxMessagePreview/inboxMessagePreviewStoriesData";
 
 import InboxMessagePreview from "../InboxMessagePreview/InboxMessagePreview";
+import Icon from "../Icon/Icon";
 
 // Function based React Component
 const Inbox = props => {
@@ -25,7 +26,9 @@ const Inbox = props => {
     <div className={classList}>
       <div className={classList + "__header"}>
         <div className={classList + "__header-text"}>Inbox</div>
-        <div className={classList + "__header-icon"}>(icon)</div>
+        <div className={classList + "__header-icon"}>
+          <Icon icon={"edit"} />
+        </div>
       </div>
       <div className={classList + "__message-previews"}>{messagePreviews}</div>
     </div>
