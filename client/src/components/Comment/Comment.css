@@ -3,12 +3,17 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 50rem;
-  height: auto;
+  width: 56rem;
+  height: 7rem;
   background-color: var(--gray-dark);
   font-size: 14px;
   font-family: var(--paragraph-font);
   padding: 1.2rem;
+}
+
+img{
+  height: 1.5rem;
+  padding: 0;
 }
 
 .Comment__name {
