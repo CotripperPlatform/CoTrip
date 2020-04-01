@@ -24,6 +24,7 @@ class ModalContainer extends Component {
   };
 
   render() {
+    console.log(this.state.modalOpen);
     return (
       <div className="Modal__container">
         {this.state.modalOpen ? (

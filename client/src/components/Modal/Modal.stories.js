@@ -1,6 +1,6 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import ModalContainer from "./_ModalContainer";
+import ModalContainer from "./ModalContainer";
 
 function handleEvent(evt) {
   evt.preventDefault();
