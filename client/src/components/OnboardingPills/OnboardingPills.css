@@ -4,3 +4,15 @@
   justify-content: center;
   width: 34.6rem;
 }
+
+@media only screen and (max-width: 800px) {
+  .OnboardingPills {
+    width: 25rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .OnboardingPills {
+    width: 20rem;
+  }
+}
