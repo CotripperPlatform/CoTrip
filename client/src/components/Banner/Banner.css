@@ -14,6 +14,6 @@
   text-align: center;
   font-family: var(--default-font);
   font-size: 48px;
-  color: #fafafa;
+  color: var(--white);
   line-height: 72px;
 }
