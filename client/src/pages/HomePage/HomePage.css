@@ -234,11 +234,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: 500px;
+    min-height: 500px;
     padding: 0 0.5rem 0 0.5rem;
   }
   .HomePage__mobile-wrapper a {
     text-decoration: none;
+    margin-bottom: 10px;
   }
 }
 

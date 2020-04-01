@@ -58,9 +58,9 @@
     height: 150px;
   }
 
-  .Footer--left,
-  .footer--center {
-    display: block;
+  .Footer--left {
+    display: flex;
+    flex-direction: column;
   }
 
   .Footer--center {
