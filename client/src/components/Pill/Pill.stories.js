@@ -77,4 +77,68 @@ storiesOf("Atoms/Pill", module)
       onClick={pillClick}
       selectId={0}
     />
+  ))
+
+/////
+  .add("SubNav Pill Pink", () => (
+    <Pill
+      text={"My Favorite Topics"}
+      active={false}
+      size={"subnav"}
+      color={"pink"}
+      inactiveColor={"pink"}
+      border
+      onClick={pillClick}
+      selectId={0}
+    />
+  ))
+  .add("SubNav Pill Purple", () => (
+    <Pill
+      text={"My Friends"}
+      active={false}
+      size={"subnav"}
+      color={"purple"}
+      inactiveColor={"purple"}
+      border
+      onClick={pillClick}
+      selectId={0}
+    />
   ));
+  // .add("SubNav Border Pill Pink", () => (
+  //   <Pill
+  //     text={"Discover Topics"}
+  //     size={"large"}
+  //     color={"purple"}
+  //     icon={"white"}
+  //     iconOffset
+  //     shadow
+  //     border
+  //     onClick={pillClick}
+  //     selectId={0}
+  //   />
+  // ))
+  // .add("SubNav Border Pill Purple", () => (
+  //   <Pill
+  //     text={"#hashtags"}
+  //     size={"large"}
+  //     color={"purple"}
+  //     icon={"white"}
+  //     iconOffset
+  //     shadow
+  //     border
+  //     onClick={pillClick}
+  //     selectId={0}
+  //   />
+  // ));
+  // .add("Hashtag Border Pill Pink with Heart", () => (
+  //   <Pill
+  //     text={"#hashtags"}
+  //     size={"large"}
+  //     color={"pink"}
+  //     icon={"pink"}
+  //     shadow
+  //     border
+  //     onClick={pillClick}
+  //     selectId={0}
+  //   />
+  // ));
