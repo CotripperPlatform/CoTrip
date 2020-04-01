@@ -40,7 +40,7 @@
 
 @media only screen and (max-width: 1000px) {
   .Footer {
-    height: 75px;
+    min-height: 75px;
   }
 
   .Footer--right,
@@ -55,7 +55,7 @@
   .Footer {
     flex-direction: column;
     justify-content: center;
-    height: 150px;
+    min-height: 150px;
   }
 
   .Footer--left {
