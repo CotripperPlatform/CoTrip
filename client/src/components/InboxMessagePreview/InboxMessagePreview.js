@@ -3,7 +3,7 @@ import "./InboxMessagePreview.css";
 import defaultPic from "assets/images/profile-picture-1.png";
 import defaultPic2 from "assets/images/profile-picture-2.png";
 
-import InboxUserProfilesGroup from "../InboxUserProfilesGroup/InboxUserProfilesGroup";
+import ProfilePictureGroup from "../ProfilePictureGroup/ProfilePictureGroup";
 
 // Function based React Component
 const InboxMessagePreview = props => {
@@ -18,7 +18,7 @@ const InboxMessagePreview = props => {
 
   return (
     <div className={classList}>
-      <InboxUserProfilesGroup users={props.conversation.users} />
+      <ProfilePictureGroup users={props.conversation.users} />
       <div className={classList + "__conversation"}>
         <div className={classList + "__name"}>{nameString}</div>
         <div className={classList + "__message"}>{props.conversation.thread[0].message}</div>
