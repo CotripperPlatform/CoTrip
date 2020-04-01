@@ -3,12 +3,16 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 56rem;
-  height: 7rem;
+  width: auto;
   background-color: var(--gray-dark);
   font-size: 14px;
   font-family: var(--paragraph-font);
   padding: 1.2rem;
+  border: 1px solid rgba(37, 37, 37, 0.5);
+  border-radius: 3px;
+  margin-left: 0.5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.5rem;
 }
 
 .Comment__name {
@@ -53,6 +57,7 @@
   margin-top: 0.5rem;
   display: flex;
 }
+
 
 @media only screen and (max-width: 768px) {
   .Comment {

@@ -6,10 +6,4 @@
   overflow: auto;
 }
 
-.Comment {
-  margin-top: 7px;
-  background: #c4c4c4;
-  border: 1px solid rgba(37, 37, 37, 0.5);
-  /* box-sizing: border-box; */
-  border-radius: 3px;
-}
+
