@@ -34,7 +34,7 @@ psql -U postgres -f settings.sql
 
 ### ERD
 
-![ERD](.erd.pdf)
+![ERD](.erd.png)
 
 ### Serializers
 
