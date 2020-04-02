@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import ForumPostContainer from "./ForumPostContainer";
-import Profile from "../../../assets/images/profile-picture-2.png";
-import Profile2 from "../../../assets/images/card_profile3.png";
+import Profile from "../../assets/images/profile-picture-2.png";
+import Profile2 from "../../assets/images/card_profile3.png";
 
 
 const onClick = () => {
