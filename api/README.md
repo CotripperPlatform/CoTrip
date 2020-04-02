@@ -32,10 +32,6 @@ psql -U postgres -f settings.sql
 
 ## API Description
 
-### ERD
-
-![ERD](.erd.png)
-
 ### Serializers
 
 - Purpose: Define the API representation
