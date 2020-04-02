@@ -6,7 +6,7 @@ import image from "../../assets/images/profile-picture-1.png";
 
 // Function based React Component
 const PersonCard = props => {
-  if (online) {
+  if (online) { 
     return (
       <div className="PersonCard">
         <ProfilePicture type="medium" image={props.image} />
