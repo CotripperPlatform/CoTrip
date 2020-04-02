@@ -25,9 +25,6 @@
   font-size: 1.25rem;
   margin: 0;
 }
-.Pill {
-  margin-left: 0.5em;
-}
 .ForumPost__middle {
   display: flex;
   justify-content: space-between;

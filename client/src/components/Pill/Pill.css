@@ -117,6 +117,7 @@
 .Pill--small {
   padding: 0.125em 3.35em;
   font-size: 18px;
+  margin-left: 0.5em;
 }
 
 .Pill--medium {
