@@ -125,9 +125,8 @@
 }
 
 .Pill--subnav {
-  /* padding: 0.42em 3.35em; */
   font-size: 36px;
-  width: 50vw;
+  width: 50%;
   border-radius: 0px;
 }
 

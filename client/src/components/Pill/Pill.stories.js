@@ -78,8 +78,6 @@ storiesOf("Atoms/Pill", module)
       selectId={0}
     />
   ))
-
-/////
   .add("SubNav Pill Pink", () => (
     <Pill
       text={"My Favorite Topics"}
