@@ -35,8 +35,8 @@
 }
 .ForumPost .Pill {
   margin-left: 0.5em;
-  padding-top: 0.125em;
-  padding-bottom: 0.125em;
+  /* padding-top: 0.125em;
+  padding-bottom: 0.125em; */
 }
 .ForumPost__middle {
   display: flex;
