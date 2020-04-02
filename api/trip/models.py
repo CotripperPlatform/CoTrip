@@ -20,6 +20,9 @@ class Trip(models.Model):
 
     locations = models.ManyToManyField('trip.Location')
     activities = models.ManyToManyField('trip.Activity')
+    date_start = models.DateField()
+    date_end = models.DateField()
+    attendees = models.ManyToManyField('accounts.CustomUser')
 
 
     def __str__(self):
@@ -32,26 +35,14 @@ class Activity(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='activities', null=True)
 
     def __str__(self):
-        return self.title
+        return self.title + ", " + self.location.city
 
 
-# Trip
-# Location: Many to one relationship with Location model
-# Date start:
-# Date end:
-# Attendees: Many to many relationship with profile model
-# Activities: One to many relationship with Activities model
-
+#still missing/ not sure
 # Location
-# City
-# State
-# Country
 # Groups: One to many rel. with groups model
 # Members there: One to many rel. with profile model
-# Trips: One to many relationship with trip model
+# Trips: One to many relationship with trip model (I think this is covered in the Trip model...)
 
 # Activity
-# For kids: boolean
-# For moms: boolean
-# Location: Many to one rel. with location model
-# Trip: Many to one rel. with trip model
+# Trip: Many to one rel. with trip model (I think this is covered in the Trip model...)
