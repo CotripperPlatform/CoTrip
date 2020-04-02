@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import TrendingHashtagCard from "./TrendingHashtagCard";
 
-storiesOf("TrendingHashtagCard", module)
+storiesOf("Layout/Cards/TrendingHashtagCard", module)
   .add("Default", () => (
     <TrendingHashtagCard
       data={[

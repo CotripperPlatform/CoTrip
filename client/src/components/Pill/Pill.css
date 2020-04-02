@@ -124,6 +124,12 @@
   font-size: 24px;
 }
 
+.Pill--subnav {
+  font-size: 36px;
+  width: 50%;
+  border-radius: 0px;
+}
+
 .Pill__pink {
   color: var(--white);
   background-color: var(--pink);
