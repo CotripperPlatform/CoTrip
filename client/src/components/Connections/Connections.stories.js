@@ -52,7 +52,7 @@ let testUsers = [
   }
 ];
 
-storiesOf("Connections", module)
+storiesOf("Layout/Connections", module)
   .add("User Connections", () => (
     <Connections
       to="User/userid/connections"

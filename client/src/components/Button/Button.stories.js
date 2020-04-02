@@ -6,7 +6,10 @@ import comment from "../../assets/images/comment_black.png";
 const handleClick = e => {
   console.log("Clicked");
 };
-storiesOf("Button", module)
+
+export const smallDefaultButton = <Button text="Submit" size="small" handleClick={handleClick} />;
+
+storiesOf("Atoms/Button", module)
   .add("Small Default Button", () => (
     <Button text="Submit" size="small" handleClick={handleClick} />
   ))
@@ -20,9 +23,7 @@ storiesOf("Button", module)
   .add("Small Pink Button", () => (
     <Button text="Submit" color="pink" size="small" handleClick={handleClick} />
   ))
-  .add("Normal Pink Button", () => (
-    <Button text="Submit" color="pink" handleClick={handleClick} />
-  ))
+  .add("Normal Pink Button", () => <Button text="Submit" color="pink" handleClick={handleClick} />)
   .add("Large Pink Button", () => (
     <Button text="Submit" color="pink" size="large" handleClick={handleClick} />
   ))

@@ -6,7 +6,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-storiesOf("Pill", module)
+storiesOf("Atoms/Pill", module)
   .add("Onboarding Pill", () => (
     <Pill
       text={"Traveling"}
@@ -28,11 +28,7 @@ storiesOf("Pill", module)
       selectId={0}
     />
   ))
-  .add("Default Props", () => (
-    <Pill
-      onClick={pillClick}
-    />
-  ))
+  .add("Default Props", () => <Pill onClick={pillClick} />)
   .add("Pill with Pink Heart Offset", () => (
     <Pill
       text={"Traveling"}
@@ -77,6 +73,30 @@ storiesOf("Pill", module)
       color={"pink"}
       icon={"pink"}
       shadow
+      border
+      onClick={pillClick}
+      selectId={0}
+    />
+  ))
+  .add("SubNav Pill Pink", () => (
+    <Pill
+      text={"My Favorite Topics"}
+      active={false}
+      size={"subnav"}
+      color={"pink"}
+      inactiveColor={"pink"}
+      border
+      onClick={pillClick}
+      selectId={0}
+    />
+  ))
+  .add("SubNav Pill Purple", () => (
+    <Pill
+      text={"My Friends"}
+      active={false}
+      size={"subnav"}
+      color={"purple"}
+      inactiveColor={"purple"}
       border
       onClick={pillClick}
       selectId={0}
