@@ -98,10 +98,8 @@
 .Card__outline {
   background: none;
   border: 2px dashed var(--purple);
-  box-shadow: none;
   text-align: center;
   transition: transform 0.3s;
-  font-size: 28px;
 }
 .Card__discover-link {
   text-align: center;
