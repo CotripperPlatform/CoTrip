@@ -1,54 +1,53 @@
 .ForumPost {
   display: flex;
   flex-direction: column;
-  border: 1px solid red;
 }
 .ForumPost__top {
   display: flex;
-  padding: 16px;
+  padding: 0.75em;
   background-color: var(--white);
 }
 .ForumPost__top-middle,
 .ForumPost .Button {
-  border: 1px solid rgba(37, 37, 37, 0.5);
+  border: 1px solid var(--black-lite);
   border-radius: 3px;
 }
 .ForumPost__top-middle {
-  padding-bottom: 8px;
+  padding-bottom: 0.5em;
 }
 .ForumPost .Button {
-  font-size: 16px;
+  font-size: 1em;
 }
 .ForumPost .Button img {
-  height: 15px;
+  height: 1em;
   padding: 0;
 }
 .ForumPost__face-card {
   display: flex;
   flex-direction: column;
-  margin-right: 8px;
+  margin-right: 0.5em;
   align-items: center;
 }
 .ForumPost__name {
   font-family: var(--default-font);
-  font-size: 20px;
+  font-size: 1.25rem;
   margin: 0;
 }
 .ForumPost .Pill {
-  margin-left: 8px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  margin-left: 0.5em;
+  padding-top: 0.125em;
+  padding-bottom: 0.125em;
 }
 .ForumPost__middle {
   display: flex;
   justify-content: space-between;
-  height: 32px;
+  height: 2em;
   font-family: var(--paragraph-font);
   font-weight: bold;
   background-color: var(--white);
 }
 .ForumPost__bottom {
-  height: 32px;
+  height: 2em;
   background-color: var(--gray-lite);
 }
 .ForumPost__topic-pills,
@@ -58,13 +57,10 @@
 }
 
 .ForumPost__likes-comments p {
-  margin-right: 8px;
+  margin-right: 0.5em;
 }
 
-/* @media only screen and (max-width: 768px) {
-  .ForumPost {
-    width: 320px;
-  }
+@media only screen and (max-width: 768px) {
   .ForumPost__top,
   .ForumPost__middle,
   .ForumPost__bottom {
@@ -74,4 +70,7 @@
   .ForumPost__topic-pills {
     display: none;
   }
-} */
+  .Button{
+    width: 25em;
+  }
+}
