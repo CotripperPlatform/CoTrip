@@ -2,16 +2,13 @@
 import React from 'react';
 import "./PersonCardDiscover.css";
 
-// Function based React Component
 const PersonCardDiscover = (props) => {
-
-  // Default Class to apply to Component
   let classList = `PersonCardDiscover`;
 
 
   return(
     <div className={classList}>
-      PersonCardDiscover
+      <a href='/'>Discover New Connections</a>
     </div>
   );
 }
