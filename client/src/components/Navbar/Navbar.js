@@ -15,13 +15,13 @@ class Navbar extends Component {
     this.state = {
       condensedMenuActive: false,
       // menuItems are careated in order of the following array.
-      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
+      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"]
     };
   }
 
   clickHandler = () => {
-    console.log("Clicked!")
-  }
+    console.log("Clicked!");
+  };
 
   render() {
     return (
@@ -43,9 +43,7 @@ class Navbar extends Component {
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
                 <NavLink text={item} to={"/book-a-trip"} menuList={[]} />
-                {this.props.page === key && (
-                  <div className={`Navbar__triangle`}></div>
-                )}
+                {this.props.page === key && <div className={`Navbar__triangle`}></div>}
               </div>
             ))}
           </div>
