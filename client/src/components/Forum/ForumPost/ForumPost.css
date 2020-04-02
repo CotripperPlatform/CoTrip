@@ -1,10 +1,11 @@
 .ForumPost {
   display: flex;
   flex-direction: column;
+  border: 1px solid red;
 }
 .ForumPost__top {
   display: flex;
-  padding: 1rem;
+  padding: 16px;
   background-color: var(--white);
 }
 .ForumPost__top-middle,
@@ -13,41 +14,41 @@
   border-radius: 3px;
 }
 .ForumPost__top-middle {
-  padding-bottom: 0.5rem;
+  padding-bottom: 8px;
 }
 .ForumPost .Button {
-  font-size: 1rem;
+  font-size: 16px;
 }
 .ForumPost .Button img {
-  height: 1.5rem;
+  height: 15px;
   padding: 0;
 }
 .ForumPost__face-card {
   display: flex;
   flex-direction: column;
-  margin-right: 0.5rem;
+  margin-right: 8px;
   align-items: center;
 }
 .ForumPost__name {
   font-family: var(--default-font);
-  font-size: 1.2rem;
+  font-size: 20px;
   margin: 0;
 }
 .ForumPost .Pill {
-  margin-left: 0.5rem;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
+  margin-left: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 .ForumPost__middle {
   display: flex;
   justify-content: space-between;
-  height: 2rem;
+  height: 32px;
   font-family: var(--paragraph-font);
   font-weight: bold;
   background-color: var(--white);
 }
 .ForumPost__bottom {
-  height: 2rem;
+  height: 32px;
   background-color: var(--gray-lite);
 }
 .ForumPost__topic-pills,
@@ -57,12 +58,12 @@
 }
 
 .ForumPost__likes-comments p {
-  margin-right: 0.5rem;
+  margin-right: 8px;
 }
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 768px) {
   .ForumPost {
-    width: 20rem;
+    width: 320px;
   }
   .ForumPost__top,
   .ForumPost__middle,
@@ -73,4 +74,4 @@
   .ForumPost__topic-pills {
     display: none;
   }
-}
+} */
