@@ -105,7 +105,6 @@
 
 .Card__outline {
   background: none;
-
   border: 2px dashed var(--purple);
   text-align: center;
   transition: transform 0.3s;
@@ -115,17 +114,17 @@
   margin: auto;
   line-height: 1.8;
   transition: transform 0.3s;
-
+}
 .Card__discover-link a {
   font-size: 28px;
   text-decoration: none;
 }
-
-.Card__discover:hover {
+.Card__discover-link:hover {
   transform: scale(1.1);
+}
+.Card__discover-link a:hover {
   color: var(--yellow);
 }
-
 
 @media only screen and (min-width: 321px) and (max-width: 575px) {
   .Card--extra-small {
