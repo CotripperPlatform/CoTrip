@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "accounts",
     "knox",
     'corsheaders',
+    'community',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)
