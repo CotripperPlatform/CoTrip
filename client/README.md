@@ -37,51 +37,53 @@ npm start
 
 ### StoryBook Organization
 
-Branch: UpdateStorybookReadme
+With as many components as we may have for our application, it is important that we stay as organized as possible and do not loose track of where everything is. This part of the README is a short explanation of the organization of our Storybook. The following **bold lines** will be the folders that are listed in the Storybook (as seen below) so that you have a grasp of how it should look and **where to store new components**. There is also going to be a description of **why a component would fall under a certain folder**. Together, if we follow these guidelines, we can keep the Storybook DRY.
 
-- Layout
+---
 
-Anything pertaining to components that might be set on a page. Example: Icons, Logos, Profile picture's or Footers.
+![StorybookLayout](/assets/images/StorybookLayout.png)
 
-- Banners
+---
 
-Speak for themselves. Used on the Home page for "Welcome back" or Community Banner with an Input on it
+**Layout**
 
-- Cards
+- These components are going to be used interchangebly to produce the layout for a full page. Component examples would include but are not limited to...Icons, Logos, Banners, Bio, SignUpAd, Cards, Profile picture's or Footers.
 
-Anything with the name "Card" in it will be stored here. Pertains to things such as Media Cards, Upcoming event cards, ETC.
+**Atoms/Atomic Components**
 
-- Atoms/Atomic Components
+- An atomic component would be a button or a text input. This is going to be the smallest piece of a UI.
 
-An atomic component would be a button or a text input
+**Molecule Components** (Not Implemented Yet)
 
-- (Not Implemented Yet) Molecule Components
+- A molecule would be a SearchInput component that uses both the button and text input Atoms. A molecule is made up of atoms. If you create a Molecule please list it as such.
 
-A molecule would be a SearchInput component that uses both the button and text input Atoms. If you create a Molecule please list it as such.
+**Pages**
 
-- Pages
+- These are the physical full pages that have been put together using layout components. These pages might be used interchangebly but are complete pages.
 
-These are the physical full pages that have been put together.
+### Proper Syntax for Storybook
 
-## PROPER SYNTAX FOR STORYBOOK
+When creating a new component and wanting to safely store it, please do so with this Hierarchy in mind.
 
-- When creating a new component and wanting to safely store it, please do so with this Hierarchy in mind.
+---
 
-- For a component to be in the atoms Folder it would look something like so
+Lets throw a new component into the Atoms folder, here is what it would look like **in stories.js**.
 
-IN STORIES.js
-storiesOf("Atoms/<component_name>", module)
+`storiesOf("Atoms/<component_name>", module)`
 
-- For a component to be in the Atoms Folder and also in the Nav folder within Atoms it woud be as such
+Or maybe for a component that you want to throw into the Layout folder. **In stories.js**, it would look like such
 
-IN STORIES.js
-storiesOf("Atoms/Nav/<component_name>", module)
+`storiesOf("Layout/Logo", module) .add("Default", () => <Logo />) .add("Small", () => <Logo small />) .add("Large", () => <Logo large />) .add("Clickable Default Route Small", () => <Logo small clickable />) .add("Clickable Route as Prop", () => <Logo clickable to="/route" />);`
 
-#### Prototype
+One thing to look out for are **NESTED FOLDERS**. As a team we need to make sure we do this correctly. Watch for spelling and make sure there are no duplicates of the same folder outside of where you would want a folder nested. To create a proper nested folder of **Nav** inside of **Atoms**, it would look like so...
+
+`storiesOf("Atoms/Nav/<component_name>", module)`
+
+### Prototype
 
 You can find the [mock and clickable prototype here](https://www.figma.com/file/ggst6OoJWkwaV2DGq4nBzA/CoTripper?node-id=0%3A1)
 
-#### Creating New Components
+### Creating New Components
 
 We use [Hygen]() to generate consistent components. We have a generator for class components as well as function components.
 
@@ -103,7 +105,7 @@ To generate a **class** component, run the following
 hygen component-class new --name NameOfComponent
 ```
 
-#### Using the `Icon` Component
+### Using the `Icon` Component
 
 To use the `Icon` component, first import it, then render it inside your
 component, passing in a string representing the icon you'd like to render for
@@ -144,7 +146,7 @@ You can find the list of icons on the [Font Awesome
 website](https://fontawesome.com/). Note that you only need to pass in the
 icon's name for the `icon` prop.
 
-#### CSS Class Names
+### CSS Class Names
 
 - To avoid style conflicts we want to make sure all our CSS selectors are unique.
 - This will be the naming convention, based on [BEM](https://css-tricks.com/bem-101/).
