@@ -20,6 +20,8 @@
 .Comment__column {
   margin: 0;
   height: 90%;
+  display: flex;
+  flex-direction: row;
 }
 
 .Comment__profile {
@@ -29,7 +31,7 @@
   align-items: center;
 }
 
-.Comment__content {
+.Comment__content--left {
   display: flex;
   flex-direction: column;
 }
@@ -43,7 +45,7 @@
   text-align: right;
   display: flex;
   flex-direction: column;
-  margin: 0.313em 0.313em 0 0;
+  margin: 1em 0.313em 0 0;
 }
 
 .ProfilePicture--small img{
@@ -57,6 +59,7 @@
 .Comment__activities {
   display: flex;
   margin-left: 2em;
+  margin-bottom: 0.25em;
 }
 
 .Comment__likes{

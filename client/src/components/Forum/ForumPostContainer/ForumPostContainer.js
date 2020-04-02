@@ -25,17 +25,17 @@ export default function ForumPostContainer(props) {
         )}
       </div>
       <div>
-        {props.comment ? (
+        {props.comments ? ([
           <Comment
-            name={props.comment.name}
-            likes={props.comment.likes}
-            replies={props.comment.replies}
-            image={props.comment.image}
-            date={props.comment.date}
-            time={props.comment.time}
-            body={props.comment.body}
+            name={props.comments.name}
+            likes={props.comments.likes}
+            replies={props.comments.replies}
+            image={props.comments.image}
+            date={props.comments.date}
+            time={props.comments.time}
+            body={props.comments.body}
           />
-        ) : (
+        ]) : (
           <Comment />
         )}
       </div>

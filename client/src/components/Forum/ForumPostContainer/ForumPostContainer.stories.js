@@ -33,7 +33,7 @@ storiesOf("Layout/Forum/ForumPostContainer", module).add("ForumPostContainer", (
           "My son and I went on this trip and had the greatest time! If you can go, I would highly recommend it!"
       }
     }}
-    comment={{
+    comments={{
       name: "Lexi R.",
       likes: 2,
       replies: 0,
