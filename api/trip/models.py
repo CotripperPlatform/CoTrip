@@ -14,4 +14,4 @@ class Trip(models.Model):
     location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='trips', null=True)
 
     def __str__(self):
-        return self.city
+        return self.name
