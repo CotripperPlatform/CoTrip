@@ -7,8 +7,8 @@ const PersonCardDiscover = (props) => {
 
 
   return(
-    <div className={classList}>
-      <a href='/'>Discover New Connections</a>
+    <div className='PersonCardDiscover'>
+      <a className='PersonCardDiscover__link' href='/'>Discover New Connections</a>
     </div>
   );
 }
