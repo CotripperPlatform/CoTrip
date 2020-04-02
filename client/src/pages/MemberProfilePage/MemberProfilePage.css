@@ -22,7 +22,7 @@
   text-align: left;
 }
 
-.MemberProfilePage .Groups__list {
+.MemberProfilePage .Groups {
   width: 100%;
   padding-bottom: 5%;
   /* border: 2px solid red; */
@@ -104,9 +104,41 @@
   width: 100vw;
 }
 
-@media only screen and (max-width: 720px) {
-  .page {
-    flex-wrap: wrap;
-    margin: 0 auto;
+@media only screen and (max-width: 768px) {
+  .MemberProfilePage__page-contents {
+    display: block;
+    margin: 1vw;
+    padding-bottom: 0vh;
+  }
+  .MemberProfilePage__left-contents {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 1vw;
+  }
+  .MemberProfilePage .interaction-div {
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .MemberProfilePage .InteractionCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .MemberProfilePage .Connections {
+    margin: 1vw;
+  }
+  .MemberProfilePage__right-contents {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+  }
+  .MemberProfilePage .Groups {
+    margin-left: 2vw;
+    height: auto;
+  }
+  .MemberProfilePage__group-list {
+    height: auto;
   }
 }
