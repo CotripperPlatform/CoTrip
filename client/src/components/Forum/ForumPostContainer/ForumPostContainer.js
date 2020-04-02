@@ -25,17 +25,23 @@ export default function ForumPostContainer(props) {
         )}
       </div>
       <div>
-        {props.comments ? ([
-          <Comment
-            name={props.comments.name}
-            likes={props.comments.likes}
-            replies={props.comments.replies}
-            image={props.comments.image}
-            date={props.comments.date}
-            time={props.comments.time}
-            body={props.comments.body}
-          />
-        ]) : (
+        {props.comments ? (
+          props.comments.map((comment, i) => {
+            return (
+              <Comment
+                name={comment.name}
+                likes={comment.likes}
+                replies={comment.replies}
+                image={comment.image}
+                date={comment.date}
+                time={comment.time}
+                body={comment.body}
+                key={i}
+              />
+            );
+          })
+          
+        ) : (
           <Comment />
         )}
       </div>

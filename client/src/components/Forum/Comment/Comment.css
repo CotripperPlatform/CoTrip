@@ -27,7 +27,7 @@
 .Comment__profile {
   display: flex;
   flex-direction: column;
-  margin: 1em 0.5em 0.5em 1em;
+  margin: 1em 0.25em 0.25em 1em;
   align-items: center;
 }
 
@@ -45,11 +45,11 @@
   text-align: right;
   display: flex;
   flex-direction: column;
-  margin: 1em 0.313em 0 0;
+  margin: 1em 0.5em 0 0;
 }
 
 .ProfilePicture--small img{
-  margin: 0.313em;
+  margin: 0.13em;
 }
 
 .Comment__timing {

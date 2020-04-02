@@ -33,8 +33,8 @@ storiesOf("Layout/Forum/ForumPostContainer", module).add("ForumPostContainer", (
           "My son and I went on this trip and had the greatest time! If you can go, I would highly recommend it!"
       }
     }}
-    comments={{
-      name: "Lexi R.",
+    comments={[
+      {name: "Lexi R.",
       likes: 2,
       replies: 0,
       image: Profile2,
@@ -42,6 +42,6 @@ storiesOf("Layout/Forum/ForumPostContainer", module).add("ForumPostContainer", (
       time: " 4:45pm",
       body:
         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-    }}
+      }]}
   />
 ));
