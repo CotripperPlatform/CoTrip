@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
   background-color: var(--gray-dark);
-  font-size: 0.875em;
+  font-size: 0.875rem;
   font-family: var(--paragraph-font);
   padding: 0;
   border: 1px solid var(--black-lite);
@@ -14,6 +14,7 @@
 
 .Comment__name {
   margin: 0;
+  font-family: var(--default-font);
 }
 
 .Comment__column {
@@ -35,11 +36,13 @@
 
 .Comment__body {
   margin: 1em 2em;
+  font-family: var(--paragraph-font);
 }
 
 .Comment__timing--container {
   text-align: right;
-  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
   margin: 0.313em 0.313em 0 0;
 }
 
@@ -62,7 +65,7 @@
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .Comment {
     margin-top: 2.3em;
     flex-direction: column;
@@ -70,17 +73,21 @@
     align-items: center;
   }
   .Comment__timing--container{
+    flex-direction: row;  
+  }
+  .Comment__timing{
     margin-bottom: 0;
-    flex-direction: row;
-    
+    margin-right: 0.3rem;
   }
   .Comment__body{
-    margin: 0em 0em 0.25em 0.25em;
+    margin: 0;
+    width: 20em;
   }
-}
-@media only screen and (max-width: 320px) {
-  .Comment {
-    width: 10em;
-    flex-direction: column;
+  .Comment__body, .Comment__timing--container{
+    font-size: 0.8rem;
+  }
+  .Comment__activities{
+    justify-content: center;
+    margin: 0;
   }
 }

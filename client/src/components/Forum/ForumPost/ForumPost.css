@@ -60,7 +60,7 @@
   margin-right: 0.5em;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .ForumPost__top,
   .ForumPost__middle,
   .ForumPost__bottom {
