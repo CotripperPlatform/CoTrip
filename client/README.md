@@ -25,13 +25,13 @@ to. Here's an example:
 
 Then you will need to run the following to install dependencies:
 
-```sh
+```js
 npm install
 ```
 
 You can then use the following command to start the server on your machine:
 
-```sh
+```js
 npm start
 ```
 
@@ -69,25 +69,25 @@ When creating a new component and wanting to safely store it, please do so with 
 
 Lets throw a new component into the Atoms folder, here is what it would look like **in stories.js**.
 
-```sh
-storiesOf("Atoms/<component name>", module)
+```js
+storiesOf("Atoms/<component name>", module);
 ```
 
 Or maybe for a component that you want to throw into the Layout folder. **In stories.js**, it would look like such
 
-```sh
+```js
 storiesOf("Layout/Logo", module)
-.add("Default", () => <Logo />)
-.add("Small", () => <Logo small />)
-.add("Large", () => <Logo large />)
-.add("Clickable Default Route Small", () => <Logo small clickable />)
-.add("Clickable Route as Prop", () => <Logo clickable to="/route" />);
+  .add("Default", () => <Logo />)
+  .add("Small", () => <Logo small />)
+  .add("Large", () => <Logo large />)
+  .add("Clickable Default Route Small", () => <Logo small clickable />)
+  .add("Clickable Route as Prop", () => <Logo clickable to="/route" />);
 ```
 
 One thing to look out for are **NESTED FOLDERS**. As a team we need to make sure we do this correctly. Watch for spelling and make sure there are no duplicates of the same folder outside of where you would want a folder nested. To create a proper nested folder of **Nav** inside of **Atoms**, it would look like so...
 
-```sh
-storiesOf("Atoms/Nav/<component_name>", module)
+```js
+storiesOf("Atoms/Nav/<component_name>", module);
 ```
 
 ### Prototype
@@ -100,19 +100,19 @@ We use [Hygen]() to generate consistent components. We have a generator for clas
 
 Ensure that Hygen is installed globally:
 
-```sh
+```js
 npm install hygen -g
 ```
 
 To generate a **function** component, run the following
 
-```sh
+```js
 hygen component-const new --name NameOfComponent
 ```
 
 To generate a **class** component, run the following
 
-```sh
+```js
 hygen component-class new --name NameOfComponent
 ```
 
