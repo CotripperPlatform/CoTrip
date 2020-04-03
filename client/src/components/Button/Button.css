@@ -1,4 +1,5 @@
 .Button {
+  cursor: pointer;
   padding: 0.25em 2.7em;
   background: var(--white);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -22,7 +23,7 @@
   font-size: 36px;
 }
 .Button--extra-small {
-  padding: 0.30em 2.35em;
+  padding: 0.3em 2.35em;
   font-size: 15px;
 }
 .Button--small {
@@ -84,7 +85,7 @@
   margin-right: 0.5rem;
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) {
   .Button--large {
     padding: 0.13em 0.15em;
   }
