@@ -65,7 +65,7 @@
 .Button--black-text {
   color: var(--black);
 }
-.Button--like {
+.Button--like-comment {
   width: 50%;
   font-family: var(--paragraph-font);
   font-weight: bold;
@@ -75,18 +75,7 @@
   border: 1px solid var(--black-lite);
   border-radius: 3px;
 }
-.Button--comment {
-  width: 50%;
-  font-family: var(--paragraph-font);
-  font-weight: bold;
-  font-size: 1em;
-  min-width: 20rem;
-  background-color: var(--gray-lite);
-  border: 1px solid var(--black-lite);
-  border-radius: 3px;
-}
-.Button--comment img,
-.Button--like img {
+.Button--like-comment img {
   margin-right: 0.5rem;
   height: 1em;
   padding: 0;
@@ -96,7 +85,8 @@
   .Button--large {
     padding: 0.13em 0.15em;
   }
-  .Button--comment, .Button--like{
+  /* .Button--comment,  */
+  .Button--like-comment{
     width: 25em;
   }
 }
