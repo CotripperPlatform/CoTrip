@@ -1,8 +1,8 @@
 # Setting Up the App
 
 ## First Steps
-1. Clone repository to your local
-2. Open the Terminal and navigate into the project folder
+1. Clone the repository from develop branch
+2. Navigate into the CoTrip directory
 3. Run command `git checkout develop` to ensure you are on the develop branch while installing dependencies
 
 ## Setting up Frontend
