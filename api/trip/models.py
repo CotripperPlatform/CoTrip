@@ -13,10 +13,10 @@ class Trip(models.Model):
     name = models.CharField(max_length=200)
 
     # Do we want to delete locations when a trip is deleted? I think we shouldn't include the on_delete, but maybe I'm getting that functionality wrong.
-
     # location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='trips', null=True)
 
     # Also, we might want to have a many to many relationship so multiple trips can have the same location and one trip and have multiple locations
+    # Tyler advised that we give each trip just one location to make things simpler
 
     locations = models.ManyToManyField('trip.Location')
     activities = models.ManyToManyField('trip.Activity')
@@ -46,3 +46,8 @@ class Activity(models.Model):
 
 # Activity
 # Trip: Many to one rel. with trip model (I think this is covered in the Trip model...)
+
+
+# We need to decide on which model we want to define relationships...
+# For example, would it be better to define 'attendees' in a field on the Trip model?
+    # Or would it be better to have 'trips' as a field on the user model?
