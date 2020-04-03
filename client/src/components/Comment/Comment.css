@@ -3,40 +3,49 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  width: 50rem;
-  height: auto;
   background-color: var(--gray-dark);
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: var(--paragraph-font);
-  padding: 1.2rem;
+  padding: 0;
+  border: 1px solid var(--black-lite);
+  border-radius: 3px;
+  margin: 0 auto;
 }
 
 .Comment__name {
   margin: 0;
+  font-family: var(--default-font);
 }
 
 .Comment__column {
-  margin: 0.7rem;
+  margin: 0;
   height: 90%;
-  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 .Comment__profile {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0.25em 0.25em 1em;
+  align-items: center;
 }
 
-.Comment__content {
+.Comment__content--left {
   display: flex;
   flex-direction: column;
 }
 
 .Comment__body {
-  margin: 0;
+  margin: 1em 2em;
+  font-family: var(--paragraph-font);
 }
 
 .Comment__timing--container {
-  white-space: nowrap;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  margin: 1em 0.5em 0 0;
 }
 
 .Comment__timing {
@@ -45,23 +54,39 @@
 
 .Comment__activities {
   display: flex;
+  margin-left: 2em;
+  margin-bottom: 0.25em;
 }
 
-.Comment__activity {
+.Comment__likes{
   text-align: left;
-  margin-right: 0.8rem;
-  margin-top: 0.5rem;
-  display: flex;
+  margin-right: 0.313em;
 }
 
-@media only screen and (max-width: 768px) {
+
+@media only screen and (max-width: 800px) {
   .Comment {
-    width: 30rem;
-  }
-}
-@media only screen and (max-width: 320px) {
-  .Comment {
-    width: 10rem;
+    margin-top: 2.3em;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Comment__timing--container{
+    flex-direction: row;  
+  }
+  .Comment__timing{
+    margin-bottom: 0;
+    margin-right: 0.3rem;
+  }
+  .Comment__body{
+    margin: 0;
+    width: 20em;
+  }
+  .Comment__body, .Comment__timing--container{
+    font-size: 0.8rem;
+  }
+  .Comment__activities{
+    justify-content: center;
+    margin: 0;
   }
 }
