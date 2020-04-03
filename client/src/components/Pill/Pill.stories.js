@@ -77,4 +77,28 @@ storiesOf("Atoms/Pill", module)
       onClick={pillClick}
       selectId={0}
     />
+  ))
+  .add("SubNav Pill Pink", () => (
+    <Pill
+      text={"My Favorite Topics"}
+      active={false}
+      size={"subnav"}
+      color={"pink"}
+      inactiveColor={"pink"}
+      border
+      onClick={pillClick}
+      selectId={0}
+    />
+  ))
+  .add("SubNav Pill Purple", () => (
+    <Pill
+      text={"My Friends"}
+      active={false}
+      size={"subnav"}
+      color={"purple"}
+      inactiveColor={"purple"}
+      border
+      onClick={pillClick}
+      selectId={0}
+    />
   ));

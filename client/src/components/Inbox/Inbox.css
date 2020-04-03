@@ -1,0 +1,26 @@
+.Inbox {
+  background-color: var(--white);
+  box-shadow: -5px 5px 7px rgba(37, 37, 37, 0.4);
+  /* need to work on width and height between here and Inbox__message-previews... */
+  width: 400px;
+  height: fit-content;
+}
+.Inbox__header {
+  border-bottom: 1px solid rgba(37, 37, 37, 0.25);
+  display: flex;
+  justify-content: space-between;
+}
+.Inbox__header-text,
+.Inbox__header-icon {
+  font-size: 36px;
+  padding: 15px 24px;
+  color: var(--black);
+  font-family: var(--default-font);
+}
+.Inbox__message-previews {
+  height: 450px;
+  overflow-y: scroll;
+}
+.Inbox__message-previews::-webkit-scrollbar {
+  width: 0;
+}
