@@ -2,32 +2,28 @@ from django.db import models
 
 # Create your models here.
 
-class Group(models.model):
-    location = models.ForeignKey('trip.Location', on_delete=models.CASCADE, related_name='groups', null=True)
+class Group(models.Model):
+    # can't add Location in until model exists in trip app
+    # location = models.ForeignKey('trip.Location', on_delete=models.CASCADE, related_name='groups', null=True)
     title = models.CharField(max_length=200)
     members = models.ManyToManyField('accounts.CustomUser')
-# Events: one to many with events model 
-#         taken care of in Event model
 # Posts: one to many with post model
 #         (should be) taken care of in the Post model
-# Media: One to many with media model 
-#         not clear on media model yet
 
-    __str__(self):
-    return self.title
+    def __str__(self):
+        return self.title
 
-class Event(models.model):
-    #Do I need all events, past and future, when I query a group? No. therefore, add group in here and filter events by group.
+class Event(models.Model):
     title = models.CharField(max_length=200)
     members = models.ManyToManyField('accounts.CustomUser')
     group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='events', null=True)
-    location = models.ForeignKey('trip.Location', on_delete=models.CASCADE, related_name='events', null=True)
+    # location = models.ForeignKey('trip.Location', on_delete=models.CASCADE, related_name='events', null=True)
     
     def __str__(self):
         return self.title
 
-class Topic(models.model):
-    # there is a Topic model already in cotrip_app, but I've added it here too because of issue request. Should be updated in accounts.Profile when location of Topic model is finalized 
+class Topic(models.Model):
+    # there is a Topic model already in cotrip_app, but I've added it here too because it's included in this issue request. Should be updated in accounts.Profile when location of Topic model is decided upon
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
 
@@ -38,22 +34,26 @@ class Topic(models.model):
 #       taken care of in accounts.Profile
 # Post: one to many with post
 #       (should be) taken care of in the Post model
-# Media: one to many with media 
-#       not clear on media model yet
 
-class Hashtag(models.model):
+class Hashtag(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
 
     def __str__(self):
         return self.title
 
-# Posts: one to many with post
-# Media: many to many with media
-# Followers: many to many with user
+# Followers: Many to many with user
+#       (should be) taken care of in accounts.Profile
+# Post: one to many with post
+#       (should be) taken care of in the Post model
 
 
-# Media
-# Image url
-# Hashtags
-# Topic
+class Media(models.Model):
+    title = models.CharField(max_length=200)
+    image = models.ImageField(upload_to='media')
+    hashtags = models.ManyToManyField(Hashtag)
+    topics = models.ManyToManyField(Topic)
+    group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='media', null=True)
+
+    def __str__(self):
+        return self.title
