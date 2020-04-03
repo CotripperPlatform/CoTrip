@@ -23,7 +23,6 @@ class Event(models.Model):
         return self.title
 
 class Topic(models.Model):
-    # there is a Topic model already in cotrip_app, but I've added it here too because it's included in this issue request. Should be updated in accounts.Profile when location of Topic model is decided upon
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
 
@@ -34,19 +33,6 @@ class Topic(models.Model):
 #       taken care of in accounts.Profile
 # Post: one to many with post
 #       (should be) taken care of in the Post model
-
-class Hashtag(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.CharField(max_length=500)
-
-    def __str__(self):
-        return self.title
-
-# Followers: Many to many with user
-#       (should be) taken care of in accounts.Profile
-# Post: one to many with post
-#       (should be) taken care of in the Post model
-
 
 class Media(models.Model):
     # title and file are required. hashtags, topics, and groups are optional
