@@ -18,3 +18,5 @@
 ```
 psql -U postgres -f settings.sql
 ```
+5. Run command `python manage.py makemigrations` followed by `python manage.py migrate`.
+6. Run command `python manage.py runserver` to start the server and view the backend on your machine.
