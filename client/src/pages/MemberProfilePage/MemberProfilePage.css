@@ -25,7 +25,6 @@
 .MemberProfilePage .Groups {
   width: 100%;
   padding-bottom: 5%;
-  /* border: 2px solid red; */
   margin-left: 1vw;
 }
 
@@ -122,11 +121,17 @@
   .MemberProfilePage__left-contents {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 90%;
     margin: 5%;
     border: 1px solid blue;
   }
+  .MemberProfilePage .Connections {
+    display: flex;
+    align-items: center;
+  }
+
   .MemberProfilePage .Connections {
     border: 1px solid green;
     display: flex;
@@ -135,14 +140,22 @@
     width: 90%;
     margin: 5%;
   }
-  .MemberProfilePage__right-contents {
-    display: flex;
-    flex-direction: column;
+
+  .MemberProfilePage__right-top {
     margin: 0vw;
     padding-bottom: 0vh;
-    justify-content: center;
     border: 2px solid red;
   }
+  .MemberProfilePage__right-contents {
+    border: 1px solid purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 5%;
+  }
+
   .MemberProfilePage__group-div {
     display: flex;
     flex-direction: row;

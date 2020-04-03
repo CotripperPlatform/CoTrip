@@ -141,23 +141,24 @@ class MemberProfilePage extends Component {
               extraUsers="View All"
             />
           </div>
+          <div className="MemberProfilePage__right-top">
+            <div className="MemberProfilePage__right-contents">
+              <UpcomingTrip>
+                <h1>Book a Trip</h1>
+                <TripCard src={example2} location="Hawaii" date="May 2020" />
+                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+              </UpcomingTrip>
 
-          <div className="MemberProfilePage__right-contents">
-            <UpcomingTrip>
-              <h1>Book a Trip</h1>
-              <TripCard src={example2} location="Hawaii" date="May 2020" />
-              <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-            </UpcomingTrip>
-
-            <PreviousTripsCard trips={true} link="/">
-              <h1>Previous Trips</h1>
-              <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-              <TripCard
-                src="https://wallpaperaccess.com/full/144067.jpg"
-                location="Hawaii"
-                date="May 2020"
-              />
-            </PreviousTripsCard>
+              <PreviousTripsCard trips={true} link="/">
+                <h1>Previous Trips</h1>
+                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+                <TripCard
+                  src="https://wallpaperaccess.com/full/144067.jpg"
+                  location="Hawaii"
+                  date="May 2020"
+                />
+              </PreviousTripsCard>
+            </div>
           </div>
         </div>
 
