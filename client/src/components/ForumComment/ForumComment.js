@@ -5,7 +5,7 @@ const ForumComment = props => {
   return (
     <div className="ForumComment">
       <div className="ForumComment__profile">
-        <img className="ForumComment__image" src={props.image} />
+        <img className="ForumComment__image" src={props.image} alt=""/>
         <div className="ForumComment__name">{props.name}</div>
       </div>
       <div className="ForumComment__body">
