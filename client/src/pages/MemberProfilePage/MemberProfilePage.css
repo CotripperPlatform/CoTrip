@@ -106,39 +106,49 @@
 
 @media only screen and (max-width: 768px) {
   .MemberProfilePage__page-contents {
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: 1vw;
     padding-bottom: 0vh;
+    justify-content: center;
+  }
+  .MemberProfilePage__left-top {
+    margin-left: 0vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
   }
   .MemberProfilePage__left-contents {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 90%;
-    margin: 1vw;
+    margin: 5%;
+    border: 1px solid blue;
   }
-  .MemberProfilePage .interaction-div {
-    min-width: 100%;
-    max-width: 100%;
-  }
-  .MemberProfilePage .InteractionCard {
+  .MemberProfilePage .Connections {
+    border: 1px solid green;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-
-  .MemberProfilePage .Connections {
-    margin: 1vw;
+    width: 90%;
+    margin: 5%;
   }
   .MemberProfilePage__right-contents {
     display: flex;
     flex-direction: column;
-    margin: 3rem;
+    margin: 0vw;
+    padding-bottom: 0vh;
+    justify-content: center;
+    border: 2px solid red;
   }
-  .MemberProfilePage .Groups {
-    margin-left: 2vw;
-    height: auto;
-  }
-  .MemberProfilePage__group-list {
-    height: auto;
+  .MemberProfilePage__group-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 98%;
+    margin: 1vw;
+    border: 2px solid pink;
   }
 }

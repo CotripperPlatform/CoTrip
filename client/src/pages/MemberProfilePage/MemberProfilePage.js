@@ -30,7 +30,7 @@ class MemberProfilePage extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "MemberProfilePage"
+      classList: "MemberProfilePage",
     };
   }
 
@@ -53,53 +53,53 @@ class MemberProfilePage extends Component {
         facebook: "www.facebook.com",
         instagram: "www.instagram.com",
         pinterest: "www.pinterest.com",
-        isCurrentUser: false
+        isCurrentUser: false,
       },
-      { name: "Martha", bio: "sup yall" }
+      { name: "Martha", bio: "sup yall" },
     ];
     let testUsers = [
       {
         userId: 1,
         userFirstName: "Paula",
         userSurname: "Bannerman",
-        userPic: pic1
+        userPic: pic1,
       },
       {
         userId: 2,
         userFirstName: "Jack",
         userSurname: "Johnson",
-        userPic: pic2
+        userPic: pic2,
       },
       {
         userId: 3,
         userFirstName: "Jenny",
         userSurname: "Jones",
-        userPic: pic3
+        userPic: pic3,
       },
       {
         userId: 4,
         userFirstName: "Joan",
         userSurname: "Rivers",
-        userPic: pic4
+        userPic: pic4,
       },
       {
         userId: 5,
         userFirstName: "Freddy",
         userSurname: "Mercury",
-        userPic: pic2
+        userPic: pic2,
       },
       {
         userId: 5,
         userFirstName: "Leslie",
         userSurname: "Knope",
-        userPic: pic3
+        userPic: pic3,
       },
       {
         userId: 7,
         userFirstName: "Frank",
         userSurname: "Ocean",
-        userPic: pic1
-      }
+        userPic: pic1,
+      },
     ];
     return (
       <div className={this.state.classList}>
@@ -161,8 +161,13 @@ class MemberProfilePage extends Component {
           </div>
         </div>
 
-        <div ClassName="MemberProfilePage__group-div">
-          <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
+        <div className="MemberProfilePage__group-div">
+          <GroupsList
+            className="MemberProfilePage__group-list"
+            heading="Her Groups"
+            moreGroups="View All"
+            to="/"
+          />
         </div>
 
         <Footer />
