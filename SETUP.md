@@ -1,3 +1,5 @@
+# Setting Up the App
+
 ## First Steps
 1. Clone repository to your local
 2. Open the Terminal and navigate into the project folder
