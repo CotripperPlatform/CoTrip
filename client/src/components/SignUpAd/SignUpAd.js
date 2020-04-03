@@ -11,8 +11,8 @@ const SignUpAd = props => {
   };
   return (
     <div className="SignUpAd">
-      <h3>{heading}</h3>
-      <h5>{subheading}</h5>
+      {heading}
+      {subheading}
       <div className="inputs">
         <InputTextField type="text" variation="small" name="first name" placeholder="First Name" />
         <InputTextField type="text" variation="small" name="last name" placeholder="Last Name" />
