@@ -6,12 +6,12 @@
 3. Run command `git checkout develop` to ensure you are on the develop branch while installing dependencies
 
 ## Setting up Frontend
-1. Navigate into `client` directory
+1. Navigate into client directory
 2. Run command `npm install` to install the dependencies found in the package.json file, when you start working on an existing branch, ensure that additional dependencies are not listed in the package.json file found on that branch.
 3. Run command `npm start` to start the server and view the frontend on your machine.
 
 ## Setting up Backend
-1. Navigate into `api` directory
+1. Navigate into api directory
 2. Run command `pipenv install` this will set up the virtual environment and install dependencies listed in the pipfile, when you start working on an existing branch, ensure that additional dependencies are not listed in the pipfile file found on that branch.
 3. Run the virtual shell by running the command `pipenv shell`.
 4. Load the sql file into postgres by running the following command:
