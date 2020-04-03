@@ -39,7 +39,6 @@ class Media(models.Model):
     # title and file are required. hashtags, topics, and groups are optional
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='media')
-    hashtags = models.ManyToManyField(Hashtag, blank=True)
     topics = models.ManyToManyField(Topic, blank=True)
     group = models.ForeignKey(Group, on_delete=models.CASCADE, related_name='media', null=True, blank=True)
 
