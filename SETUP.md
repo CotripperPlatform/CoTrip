@@ -1,5 +1,14 @@
 # Setting Up the App
 
+## System-Level Dependencies
+* npm
+* Python3
+* Django
+* PostgreSQL
+* pipenv
+* pyenv
+* node (>11.0.0)
+
 ## First Steps
 1. Clone the repository from develop branch
 2. Navigate into the CoTrip directory
