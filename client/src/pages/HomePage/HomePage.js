@@ -204,10 +204,10 @@ const HomePage = props => {
       </div>
 
       <footer className="HomePage__footer-wrapper">
-        <SignUp>
-          <h2>Never Miss a Trip</h2>
-          <h3>Sign up with your email address to recieve news and updates</h3>
-        </SignUp>
+        <SignUp
+          heading="Never Miss a Trip"
+          subheading="Sign up with your email address to recieve news and updates"
+        ></SignUp>
         <Footer history={props.history} handle_logout={props.handle_logout} />
       </footer>
     </body>
