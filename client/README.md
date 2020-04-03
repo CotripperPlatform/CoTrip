@@ -69,15 +69,26 @@ When creating a new component and wanting to safely store it, please do so with 
 
 Lets throw a new component into the Atoms folder, here is what it would look like **in stories.js**.
 
-`storiesOf("Atoms/<component_name>", module)`
+```sh
+storiesOf("Atoms/<component name>", module)
+```
 
 Or maybe for a component that you want to throw into the Layout folder. **In stories.js**, it would look like such
 
-`storiesOf("Layout/Logo", module) .add("Default", () => <Logo />) .add("Small", () => <Logo small />) .add("Large", () => <Logo large />) .add("Clickable Default Route Small", () => <Logo small clickable />) .add("Clickable Route as Prop", () => <Logo clickable to="/route" />);`
+```sh
+storiesOf("Layout/Logo", module)
+.add("Default", () => <Logo />)
+.add("Small", () => <Logo small />)
+.add("Large", () => <Logo large />)
+.add("Clickable Default Route Small", () => <Logo small clickable />)
+.add("Clickable Route as Prop", () => <Logo clickable to="/route" />);
+```
 
 One thing to look out for are **NESTED FOLDERS**. As a team we need to make sure we do this correctly. Watch for spelling and make sure there are no duplicates of the same folder outside of where you would want a folder nested. To create a proper nested folder of **Nav** inside of **Atoms**, it would look like so...
 
-`storiesOf("Atoms/Nav/<component_name>", module)`
+```sh
+storiesOf("Atoms/Nav/<component_name>", module)
+```
 
 ### Prototype
 
