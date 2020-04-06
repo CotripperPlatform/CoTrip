@@ -5,15 +5,15 @@ import Button from "../Button/Button";
 // Function based React Component
 const SignUpAd = props => {
   // Default Class to apply to Component
-  let [heading, subheading] = [props.children[0], props.children[1]];
+  let { heading, subheading } = props;
   const handleClick = e => {
     console.log("Clicked!");
   };
   return (
     <div className="SignUpAd">
-      <h3>{heading}</h3>
-      <h5>{subheading}</h5>
-      <div className="inputs">
+      <h2 className="SignUpAd__heading">{heading}</h2>
+      <h3 className="SignUpAd__subheading">{subheading}</h3>
+      <div className="SignUpAd__inputs">
         <InputTextField type="text" variation="small" name="first name" placeholder="First Name" />
         <InputTextField type="text" variation="small" name="last name" placeholder="Last Name" />
         <InputTextField type="text" variation="small" name="email" placeholder="Email" />

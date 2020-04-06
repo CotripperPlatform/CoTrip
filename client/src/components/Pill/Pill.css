@@ -115,13 +115,20 @@
 }
 
 .Pill--small {
-  padding: 0.42em 3.35em;
+  padding: 0.125em 3.35em;
   font-size: 18px;
+  margin-left: 0.5em;
 }
 
 .Pill--medium {
   padding: 0.42em 3.35em;
   font-size: 24px;
+}
+
+.Pill--subnav {
+  font-size: 36px;
+  width: 50%;
+  border-radius: 0px;
 }
 
 .Pill__pink {
