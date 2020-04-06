@@ -44,12 +44,9 @@ INSTALLED_APPS = [
     "accounts",
     "knox",
     'corsheaders',
-<<<<<<< HEAD
     'community',
-=======
     'trip',
     'django_extensions'
->>>>>>> develop
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)
