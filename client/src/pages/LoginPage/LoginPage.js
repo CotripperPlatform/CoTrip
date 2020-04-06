@@ -18,7 +18,6 @@ export default class LoginPage extends Component {
   };
 
   render() {
-    console.log(localStorage.getItem('token'))
     return (
       <div className="LoginPage">
         <Logo large />
