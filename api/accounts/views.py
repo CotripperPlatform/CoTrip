@@ -10,8 +10,13 @@ class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
     def post(self, request, *args, **kwargs):
-        profile_data = request.data.pop('profile')
-        serializer = self.get_serializer(data=request.data)
+        # create a mutable copy of the request data in order to perform .pop('profile')
+        mutable_request_data = request.data.copy()
+        profile_data = {}
+        if 'profile' in mutable_request_data:
+            profile_data = mutable_request_data.pop('profile')
+            
+        serializer = self.get_serializer(data=mutable_request_data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         profile = Profile.objects.create(user=user, **profile_data)

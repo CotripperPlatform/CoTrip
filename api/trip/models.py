@@ -5,12 +5,14 @@ class Location(models.Model):
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
     country = models.CharField(max_length=200)
+    people = models.ManyToManyField('accounts.Profile')
+    groups = models.ManyToManyField('community.Group')
 
     def __str__(self):
         return self.city
 
 class Trip(models.Model):
-    name = models.CharField(max_length=200)
+    title = models.CharField(max_length=200)
 
     # Do we want to delete locations when a trip is deleted? I think we shouldn't include the on_delete, but maybe I'm getting that functionality wrong.
     # location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='trips', null=True)
@@ -20,8 +22,8 @@ class Trip(models.Model):
 
     locations = models.ManyToManyField('trip.Location')
     activities = models.ManyToManyField('trip.Activity')
-    date_start = models.DateField()
-    date_end = models.DateField()
+    start_date = models.DateField()
+    end_date = models.DateField()
     attendees = models.ManyToManyField('accounts.CustomUser')
 
 
@@ -33,7 +35,9 @@ class Activity(models.Model):
     for_moms = models.BooleanField()
     title = models.CharField(max_length = 200)
     location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='activities', null=True)
-
+    description = models.TextField()
+    date = models.DateField()
+    time = models.TimeField()   
     def __str__(self):
         return self.title + ", " + self.location.city
 
