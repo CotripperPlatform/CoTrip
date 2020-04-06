@@ -16,16 +16,51 @@ class PersonalSettingsForm extends Component {
         dream_destination: "",
         first_name: this.props.setup.first_name,
         last_name: this.props.setup.last_name,
-        city_of_residence: this.props.filter.city
-      }
+        city_of_residence: this.props.filter.city,
+      },
     };
   }
+  getSignedRequest = () => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "/sign_s3?file_name=" + file.name + "&file_type=" + file.type);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var response = JSON.parse(xhr.responseText);
+          this.uploadFile(file, response.data, response.url);
+        } else {
+          alert("Could not get signed URL.");
+        }
+      }
+    };
+    xhr.send();
+  };
+  uploadFile = (file, s3Data, url) => {
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST", s3Data.url);
 
-  updateValue = e => {
+    let postData = new FormData();
+    for (let key in s3Data.fields) {
+      postData.append(key, s3Data.fields[key]);
+    }
+    postData.append("file", file);
+
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200 || xhr.status === 204) {
+          this.setState({ profile: { ...this.state.profile, image: url } });
+        } else {
+          alert("Could not upload file.");
+        }
+      }
+    };
+    xhr.send(postData);
+  };
+  updateValue = (e) => {
     let name = e.target.name;
     let value = e.target.value;
     this.setState({
-      profile: { ...this.state.profile, [name]: value }
+      profile: { ...this.state.profile, [name]: value },
     });
   };
   next = () => {
@@ -43,13 +78,18 @@ class PersonalSettingsForm extends Component {
             <FileUpload
               header="Upload a profile photo"
               buttonLabel="Browse Files"
-              handleFile={evt => {
+              handleFile={(evt) => {
                 evt.preventDefault();
                 evt.persist();
                 console.log(evt);
-                let imageUrl = URL.createObjectURL(evt.target.files[0]);
-                this.setState({ profile: { ...this.state.profile, image: imageUrl } });
-                return imageUrl;
+
+                let file = evt.target.files[0];
+                if (!file) {
+                  return alert("No file selected.");
+                }
+                this.getSignedRequest(file);
+
+                return this.state.image;
               }}
             ></FileUpload>
           ) : (
