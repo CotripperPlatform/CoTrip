@@ -1,49 +1,50 @@
 .TrendingHashtagCard__container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  font-family: var(--default-font);
-  margin-bottom: 7vh;
-  /* border: 2px solid black; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: var(--default-font);
+    /* margin-bottom: 7vh; */
 }
+
 .TrendingHashtagCard__container h1 {
-  color: var(--white);
-  padding-left: 1.2rem;
-  font-size: 1.7vw;
-  /* border: 2px solid black; */
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 1.5vh;
+    color: var(--white);
+    padding-left: 1.2rem;
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1.5vh;
 }
+
 .TrendingHashtagCard__container h2 {
-  padding-left: 35%;
-  color: var(--white);
+    padding-left: 35%;
+    color: var(--white);
 }
 
 .TrendingHashtagCard__columns-wrapper {
-  display: flex;
-  justify-content: space-around;
-  /* border: 2px solid black; */
-  width: 60%;
-  margin: 0 5vw 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .TrendingHashtagCard__hashtags-container {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .TrendingHashtagCard__hashtag {
-  color: var(--white);
-  font-size: 1.4rem;
-  padding: 2px 0 2px 0;
+    color: var(--white);
+    font-size: 1rem;
+    padding: 2px 0 2px 0;
 }
+
 .TrendingHashtagCard__hashtag a {
-  color: var(--white);
+    color: var(--white);
 }
+
 .TrendingHashtagCard__hashtag a:hover {
-  color: var(--yellow);
+    color: var(--yellow);
 }

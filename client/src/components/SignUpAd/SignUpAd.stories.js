@@ -9,8 +9,9 @@ const handleClick = e => {
 };
 
 storiesOf("Layout/SignUpAd", module).add("Default", () => (
-  <SignUpAd onClick={handleClick}>
-    <h2>Never Miss a Trip</h2>
-    <h3>Sign up with your email address to recieve news and updates</h3>
-  </SignUpAd>
+  <SignUpAd
+    onClick={handleClick}
+    heading="Never Miss a Trip"
+    subheading="Sign up with your email address to recieve news and updates"
+  ></SignUpAd>
 ));

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 from datetime import timedelta
-PROJECT_DIR=os.path.dirname(__file__)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +26,7 @@ SECRET_KEY = '@t6y0=8^w0dnv%spqk1(j#r*kmb!pe!7zh_ouz%rei=!0c+kxd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['backend-testing-cotrip.herokuapp.com', 'cotripper-api.herokuapp.com']
 
 
 # Application definition
@@ -44,8 +43,10 @@ INSTALLED_APPS = [
     "accounts",
     "knox",
     'corsheaders',
+    'community',
     'trip',
-    'django_extensions'
+    'django_extensions',
+    'forum'
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)
@@ -144,7 +145,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT= os.path.join(PROJECT_DIR,'static_media/')
+STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
