@@ -28,7 +28,7 @@ class HashtagList(generics.ListCreateAPIView):
     serializer_class = HashtagSerializer
     permissions_classes = (permissions.IsAuthenticated)
     
-class TopicDetail(generics.RetrieveUpdateDestroyAPIView):
+class HashtagDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Hashtag.objects.all()
     serializer_class = HashtagSerializer
     permissions_classes = (permissions.IsAuthenticated)

@@ -5,6 +5,7 @@ from django.db import models
 class Group(models.Model):
     # Location defined in trip.models
     title = models.CharField(max_length=200)
+    description = models.CharField(max_length=500, blank=True, null=True)
 # Members defined in account.models in Profile model 
 # Posts: one to many with post model
 #         (should be) taken care of in the Post model
