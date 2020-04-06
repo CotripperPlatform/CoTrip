@@ -18,3 +18,21 @@
   line-height: 72px;
   margin-bottom: 5vh;
 }
+.Banner-booktrip{
+  height: 488px;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  color: #fafafa;
+  font-size: 100px;
+  font-family: var(--default-font);
+  position: relative;
+ 
+}
+.Banner-booktrip h3 {
+  position: absolute;
+  vertical-align: text-bottom;
+  margin: 0;
+  bottom: 0;
+  right: 20px;
+}

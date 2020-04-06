@@ -5,6 +5,7 @@ import InputTextField from "../InputTextField/InputTextField";
 import Button from "../Button/Button";
 import Banner__pink from "assets/images/Banner__pink.png";
 import Banner__purpleBig from "assets/images/Banner__purple--big.png";
+import Banner__booktrip from "assets/images/Banner__BookTrip.png";
 
 const handleClick = e => {
   alert("Clicked");
@@ -193,4 +194,14 @@ storiesOf("Layout/Banner", module)
         placeholder="Search Trip"
       />
     </Banner>
+  ))
+  .add("Book Trip Banner with Text", () => (
+    <Banner 
+    bannerType= "booktrip"
+    background={Banner__booktrip}>
+      <h3>Hawaii 2020</h3>
+    </Banner>
   ));
+
+
+  // style={{ textAlign: "right" }}
