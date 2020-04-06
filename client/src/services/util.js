@@ -5,8 +5,8 @@ export default function getAPI() {
   else return API_HOST;
 }
 
-// example usage:
-//   import getAPI from "../../services/util";  //make sure path to this file is correct!
+// import getAPI from "./services/util";
 
-//   let urlCats = `${getAPI()}cats/`;
-//   axios.get(urlCats).then() //etc...
+//   let url = `${getAPI()}auth/user`;
+
+//   fetch(url, {
