@@ -16,6 +16,7 @@ django-rest-knox = "*"
 django-cors-headers = "*"
 django-extensions = "*"
 ipython = "*"
+boto3 = "*"
 
 [requires]
 python_version = "*"
