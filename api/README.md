@@ -32,6 +32,12 @@ psql -U postgres -f settings.sql
 
 ## API Description
 
+### ERD
+
+Suggested models, fields, and relationships. Remember, relationships are only defined on one end but can still be selected for from the other. Also, final field decisions in some cases will depend on how and where we want users to generate data, which is unclear from the Figma at this time. For example, we need to decide where a user will be posting the 'media' displayed in the Topic and Hashtag pages, and how Topics and Hashtags and the user's 'scrapbook' will all relate.
+
+![ERD](./erd2.png)
+
 ### Serializers
 
 - Purpose: Define the API representation
