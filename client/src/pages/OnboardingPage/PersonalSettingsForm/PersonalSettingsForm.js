@@ -22,7 +22,11 @@ class PersonalSettingsForm extends Component {
   }
   getSignedRequest = () => {
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "/sign_s3?file_name=" + file.name + "&file_type=" + file.type);
+    // in production, call heroku here instead of localhost
+    xhr.open(
+      "GET",
+      "http://localhost:8000/sign_s3?file_name=" + file.name + "&file_type=" + file.type
+    );
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
@@ -83,13 +87,17 @@ class PersonalSettingsForm extends Component {
                 evt.persist();
                 console.log(evt);
 
-                let file = evt.target.files[0];
-                if (!file) {
-                  return alert("No file selected.");
+                if (process.env.NODE_ENV === "development") {
+                  let imageUrl = URL.createObjectURL(evt.target.files[0]);
+                  this.setState({
+                    profile: { ...this.state.profile, image: imageUrl },
+                  });
+                  return imageUrl;
+                } else {
+                  // in production. Use S3
+                  let file = evt.target.files[0];
+                  this.getSignedRequest(file);
                 }
-                this.getSignedRequest(file);
-
-                return this.state.image;
               }}
             ></FileUpload>
           ) : (
