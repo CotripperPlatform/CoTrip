@@ -129,7 +129,6 @@ class MemberProfilePage extends Component {
                   bio={people[0].bio}
                   hashtags={people[0].hashtags}
                   isCurrentUser={people[0].isCurrentUser}
-                  onClick={console.log("Hello")}
                 />
               </div>
               <div></div>
