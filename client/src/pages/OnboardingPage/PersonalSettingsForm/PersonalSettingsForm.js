@@ -20,14 +20,18 @@ class PersonalSettingsForm extends Component {
       },
     };
   }
-  getSignedRequest = () => {
+  getSignedRequest = (file) => {
+    // copied and modified from https://devcenter.heroku.com/articles/s3-upload-python
     let xhr = new XMLHttpRequest();
-    // in production, call heroku here instead of localhost
+    // this function/method should only be called in prod, so heroku URL is used directly
     xhr.open(
       "GET",
-      "http://localhost:8000/sign_s3?file_name=" + file.name + "&file_type=" + file.type
+      "https://cotripper-api.herokuapp.com/sign_s3?file_name=" +
+        file.name +
+        "&file_type=" +
+        file.type
     );
-    xhr.onreadystatechange = function () {
+    xhr.onreadystatechange = () => {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           var response = JSON.parse(xhr.responseText);
