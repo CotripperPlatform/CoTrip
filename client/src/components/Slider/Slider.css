@@ -1,0 +1,38 @@
+.slider__cards {
+        display: flex;
+}
+
+.PersonCard{
+        width: 100%;
+        margin: 0 2%;
+}
+/* SETS THE SIZE OF THE CARDS */
+
+.slider {
+        display: flex;
+}
+
+/* FOCUS AREA OF CARDS BEING DISPLAYED */
+
+.arrow__prev {
+        background-color: var(--yellow-dark);
+        padding-left: 1vw;
+        width: 30px;
+        height: 50px;
+        clip-path: polygon(30% 50%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%);
+        cursor: pointer;
+        margin-top: 13%;
+        margin-right: 1%;
+}
+
+.arrow__next {
+        background-color: var(--yellow-dark);
+        padding-left: 1vw;
+        width: 30px;
+        height: 50px;
+        clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 70% 50%);
+        transition: all 0.1s ease-in-out;
+        cursor: pointer;
+        margin-top: 13%;
+        margin-left: 1%;
+}

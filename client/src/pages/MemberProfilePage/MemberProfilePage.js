@@ -35,7 +35,11 @@ class MemberProfilePage extends Component {
   }
 
   // Runs after Component is loaded in the broswer
-  componentDidMount() {}
+  componentDidMount() {
+
+
+
+  }
 
   // Runs after a component has been updated
   componentDidUpdate() {}
@@ -53,7 +57,7 @@ class MemberProfilePage extends Component {
         facebook: "www.facebook.com",
         instagram: "www.instagram.com",
         pinterest: "www.pinterest.com",
-        isCurrentUser: false
+        isCurrentUser: true
       },
       { name: "Martha", bio: "sup yall" }
     ];
