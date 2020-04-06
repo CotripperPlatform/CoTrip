@@ -15,19 +15,19 @@ class Navbar extends Component {
     this.state = {
       condensedMenuActive: false,
       // menuItems are careated in order of the following array.
-      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
+      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"]
     };
   }
 
   clickHandler = () => {
-    console.log("Clicked!")
-  }
+    console.log("Clicked!");
+  };
 
   render() {
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
-          <Logo clickable to="/" />
+          <Logo clickable to="/home" />
         </div>
         <div className="Navbar__burger">
           {/* Handles activating the hamburger animation and displays the menu. */}
@@ -42,10 +42,8 @@ class Navbar extends Component {
           <div className="Navbar__menu">
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
-                <NavLink text={item} to={"/"} menuList={[]} />
-                {this.props.page === key && (
-                  <div className={`Navbar__triangle`}></div>
-                )}
+                <NavLink text={item} to={"/book-a-trip"} menuList={[]} />
+                {this.props.page === key && <div className={`Navbar__triangle`}></div>}
               </div>
             ))}
           </div>

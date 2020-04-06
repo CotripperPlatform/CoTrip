@@ -1,0 +1,13 @@
+.PostContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px){
+  .PostContainer{
+    width: 25em;
+  }
+}

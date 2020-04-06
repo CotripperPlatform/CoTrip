@@ -22,7 +22,7 @@ class Profile(models.Model):
         CustomUser,
         on_delete=models.CASCADE, primary_key=True
     )
-    topics = models.ManyToManyField('cotrip_app.Topic')
+    topics = models.ManyToManyField('community.Topic')
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
     first_name = models.CharField(max_length=200, blank=True)
     last_name = models.CharField(max_length=200, blank=True)
@@ -30,6 +30,7 @@ class Profile(models.Model):
     age = models.IntegerField(blank=True, null=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
+    activities = models.ManyToManyField('trip.Activity')
     instagram_url = models.URLField(blank=True)
     pinterest_url = models.URLField(blank=True)
     facebook_url = models.URLField(blank=True)

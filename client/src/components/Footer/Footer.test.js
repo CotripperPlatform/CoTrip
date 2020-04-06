@@ -11,6 +11,6 @@ describe("Footer component", () => {
   it("Should render all links", () => {
     const wrapper = shallow(<Footer />);
     const component = wrapper.find("a");
-    expect(component.length).toBe(5);
+    expect(component.length).toBe(6);
   });
 });

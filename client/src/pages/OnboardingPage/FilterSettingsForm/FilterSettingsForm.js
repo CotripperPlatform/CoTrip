@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
-import Logo from "components/Logo/Logo.js";
-import CarouselDots from "components/CarouselDots/CarouselDots";
 import OnboardingPills from "components/OnboardingPills/OnboardingPills";
 class FilterSettingsForm extends Component {
   constructor(props) {
@@ -14,7 +12,7 @@ class FilterSettingsForm extends Component {
   }
   next = () => {
     // this.props.save(this.state);
-    this.props.functionProp();
+    this.props.handleClick();
     this.props.save("filter", this.state);
   };
   updateValue = e => {

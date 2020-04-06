@@ -7,7 +7,7 @@ const onClick = () => {
   console.log("clicked");
   return;
 };
-storiesOf("ForumPost", module)
+storiesOf("Layout/Forum/ForumPost", module)
   .add("Default", () => (
     <ForumPost pillClick={onClick} commentClick={onClick} likeClick={onClick} to="/" />
   ))

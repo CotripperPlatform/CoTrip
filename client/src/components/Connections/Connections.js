@@ -47,6 +47,7 @@ function Connections(props) {
 }
 
 Connections.defaultProps = {
+  users: [],
   extraUsers: "View All",
   to: "PATH"
 };

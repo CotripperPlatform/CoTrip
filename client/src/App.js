@@ -5,6 +5,7 @@ import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
+import Hawaii2020 from "./pages/Hawaii2020/Hawaii2020";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import "./App.css";
@@ -93,6 +94,7 @@ class App extends Component {
       })
       .catch(err => {
         console.log(err);
+        alert("Please enter valid email and password");
       });
   };
   handle_signup = (data, history) => {
@@ -128,13 +130,23 @@ class App extends Component {
       <div className="App">
         <main>
           <Route path="/" exact component={SplashPage}></Route>
+          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+          <Route
+            path="/hawaii-2020"
+            exact
+            render={routerProps => <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />}
+          ></Route>
           <Route
             path="/book-a-trip"
             exact
-            render={routerProps => <BookATripPage {...routerProps} />}
+            render={routerProps => <BookATripPage handle_logout={this.handle_logout} {...routerProps} />}
           ></Route>
-          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
-          <Route path="/member-page" exact component={MemberPage}></Route>
+         
+          <Route
+            path="/member-page"
+            exact
+            render={routerProps => <MemberPage  handle_logout={this.handle_logout} {...routerProps} />}
+          ></Route>
           <Route
             path="/coming_soon"
             exact

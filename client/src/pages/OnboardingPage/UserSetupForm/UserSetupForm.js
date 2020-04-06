@@ -11,7 +11,7 @@ class UserSetupForm extends Component {
       name: "",
       email: "",
       password: "",
-      confirmPassword: false
+      confirmPassword: ""
     };
   }
 
@@ -24,22 +24,24 @@ class UserSetupForm extends Component {
   };
   confirmPassword = e => {
     e.preventDefault();
-    if (this.state.password === e.target.value) {
-      this.setState({
-        confirmPassword: true
-      });
-    } else {
-      this.setState({
-        confirmPassword: false
-      });
-    }
+    this.setState({
+      confirmPassword: e.target.value
+    });
   };
   next = () => {
-    if (this.state.confirmPassword) {
+    let regexEmail = /.+@.+\..+/;
+    let regexPassword = /(^(?=.*[a-z])(?=.*[A-Z])(\S{6,}))/;
+
+    if (
+      this.state.confirmPassword == this.state.password &&
+      this.state.email.match(regexEmail) &&
+      this.state.password.match(regexPassword)    ) {
       this.props.save("setup", this.state);
-      this.props.functionProp();
+      this.props.handleClick();
     } else {
-      alert("PASSWORDS DONT MATCH");
+      alert(
+        "Error: Registration failed. Please make sure: \n you have entered a valid email address \n your password information matches \n your password length is greater than 6 characters"
+      );
     }
   };
   render() {

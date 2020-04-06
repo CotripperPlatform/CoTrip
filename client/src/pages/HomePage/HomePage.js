@@ -12,12 +12,13 @@ import van from "assets/images/media-card-3.png";
 import nightSky from "assets/images/media-card-4.png";
 import waterfall from "assets/images/media-card-5.png";
 import flight from "assets/images/media-card-6.png";
-import Banner__purpleBig from "components/Banner/Banner__purple--big.png";
+import Banner__purpleBig from "assets/images/Banner__purple--big.png";
 import image1 from "../../assets/images/profile-picture-1.png";
 import image2 from "../../assets/images/profile-picture-5.png";
 import image3 from "../../assets/images/profile-picture-4.png";
 
-import people from "assets/images/add-friend.png";
+import people from "assets/images/profile_default.svg";
+import suggestedPeople from "assets/images/add-friend.png";
 import airplane from "assets/images/airplane-shape.png";
 import groups from "assets/images/protest.png";
 import hashtags from "assets/images/trending-hashtags.png";
@@ -67,7 +68,7 @@ const personCard3 = (
     interests={[
       { url: "#", interests: "education" },
       { url: "#", interests: "outdoors" },
-      { url: "#", interests: "software development" },
+      { url: "#", interests: "software development" }
     ]}
   />
 );
@@ -81,7 +82,7 @@ const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
       <nav>
-        <NavBar profileImage={people}></NavBar>
+        <NavBar to={"/member-page"} profileImage={people}></NavBar>
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
@@ -98,20 +99,10 @@ const HomePage = props => {
                 picture={card1}
               />
               <span className="HomePage__groupcard-2">
-                <GroupCard
-                  name="Mystery Stories!"
-                  members="213"
-                  location="NYC"
-                  picture={card2}
-                />
+                <GroupCard name="Mystery Stories!" members="213" location="NYC" picture={card2} />
               </span>
               <span className="HomePage__groupcard-3">
-                <GroupCard
-                  name="Bay Cruise"
-                  members="98"
-                  location="Lisbon"
-                  picture={card3}
-                />
+                <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
               </span>
               <a href="/home" className="HomePage__arrow" />
             </div>
@@ -142,7 +133,7 @@ const HomePage = props => {
                   "#parks",
                   "#dogs",
                   "#italy",
-                  "#yoga",
+                  "#yoga"
                 ]}
               >
                 <h1>Trending Hashtags</h1>
@@ -166,7 +157,7 @@ const HomePage = props => {
           </Link>
           <Link to="/">
             <Card color="red" size="mobile">
-              <img src={people} />
+              <img src={suggestedPeople} />
               <h2>Suggested People</h2>
             </Card>
           </Link>
@@ -206,19 +197,14 @@ const HomePage = props => {
               />
             </span>
             <span className="HomePage__mediacard-hide">
-              <MediaCard
-                imageSrc={flight}
-                size="medium"
-                to="/home"
-                footerText="Posted By: Fiona"
-              />
+              <MediaCard imageSrc={flight} size="medium" to="/home" footerText="Posted By: Fiona" />
             </span>
           </div>
         </span>
       </div>
 
       <footer className="HomePage__footer-wrapper">
-        <SignUp onClick={handleClick}>
+        <SignUp>
           <h2>Never Miss a Trip</h2>
           <h3>Sign up with your email address to recieve news and updates</h3>
         </SignUp>

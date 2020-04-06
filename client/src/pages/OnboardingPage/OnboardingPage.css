@@ -2,7 +2,7 @@
   font-family: var(--default-font);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 72.4%, rgba(255, 255, 255, 0.75) 100%),
     #ffcb08;
-  height: 110vh;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
 }
@@ -55,6 +55,7 @@
 }
 .OnboardingPage__text {
   text-align: center;
+  padding: 0 10px;
 }
 .OnboardingPage__spacer {
   height: 1rem;
