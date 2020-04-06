@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "accounts",
     "knox",
     'corsheaders',
+    'community',
     'trip',
     'django_extensions'
 ]
