@@ -162,6 +162,7 @@
     justify-content: center;
     width: 98%;
     margin: 1vw;
+    padding: 5%;
     border: 2px solid pink;
   }
 }
