@@ -16,9 +16,6 @@ export default class Slider extends Component {
     this.firstItem = this.cards[0];
   }
 
-  componentDidMount() {
-    console.log(this.props);
-  }
   nextCard = () => {
     if (this.lastCard === this.lastItem) {
       console.log("stop");
@@ -40,6 +37,7 @@ export default class Slider extends Component {
       });
     }
   };
+
   render() {
     return (
       <>

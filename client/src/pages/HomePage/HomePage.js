@@ -75,7 +75,6 @@ const personCard3 = (
 
 const handleClick = e => {
   e.preventDefault();
-  console.log("clicked");
 };
 
 const HomePage = props => {
