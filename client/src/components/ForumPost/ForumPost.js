@@ -60,8 +60,8 @@ export default function ForumPost(props) {
         </div>
       </div>
       <div className="ForumPost__bottom">
-        <Button icon={heart} text="Like" type="like" handleClick={props.likeClick} />
-        <Button icon={comment} text="Comment" type="comment" handleClick={props.commentClick} />
+        <Button icon={heart} text="Like" type="like-comment" handleClick={props.likeClick} />
+        <Button icon={comment} text="Comment" type="like-comment" handleClick={props.commentClick} />
       </div>
     </div>
   );

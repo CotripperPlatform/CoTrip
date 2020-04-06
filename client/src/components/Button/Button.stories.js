@@ -82,11 +82,11 @@ storiesOf("Atoms/Button", module)
       handleClick={handleClick}
     />
   ))
-  .add("Like Button", () => <Button icon={heart} text="Like" type="like" />)
-  .add("Comment Button", () => <Button icon={comment} text="Comment" type="comment" />)
+  .add("Like Button", () => <Button icon={heart} text="Like" type="like-comment" />)
+  .add("Comment Button", () => <Button icon={comment} text="Comment" type="like-comment" />)
   .add("Like and Comment Buttons in Container", () => (
     <div>
-      <Button icon={heart} text="Like" type="like" />
-      <Button icon={comment} text="Comment" type="comment" />
+      <Button icon={heart} text="Like" type="like-comment" />
+      <Button icon={comment} text="Comment" type="like-comment" />
     </div>
   ));
