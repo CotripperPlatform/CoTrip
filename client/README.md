@@ -41,25 +41,25 @@ With as many components as we may have for our application, it is important that
 
 ---
 
-![StorybookLayout](/assets/images/StorybookLayout.png)
+![StorybookLayout](./src/assets/images/StorybookLayout.png)
 
 ---
 
 **Layout**
 
-- These components are going to be used interchangebly to produce the layout for a full page. Component examples would include but are not limited to...Icons, Logos, Banners, Bio, SignUpAd, Cards, Profile picture's or Footers.
+These components are going to be used interchangebly to produce the layout for a full page. Component examples would include but are not limited to...Icons, Logos, Banners, Bio, SignUpAd, Cards, Profile picture's or Footers.
 
 **Atoms/Atomic Components**
 
-- An atomic component would be a button or a text input. This is going to be the smallest piece of a UI.
+An atomic component would be a button or a text input. This is going to be the smallest piece of a UI.
 
 **Molecule Components** (Not Implemented Yet)
 
-- A molecule would be a SearchInput component that uses both the button and text input Atoms. A molecule is made up of atoms. If you create a Molecule please list it as such.
+A molecule would be a SearchInput component that uses both the button and text input Atoms. A molecule is made up of atoms. If you create a Molecule please list it as such.
 
 **Pages**
 
-- These are the physical full pages that have been put together using layout components. These pages might be used interchangebly but are complete pages.
+These are the physical full pages that have been put together using layout components. These pages might be used interchangebly but are complete pages.
 
 ### Proper Syntax for Storybook
 
