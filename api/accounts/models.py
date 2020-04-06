@@ -30,7 +30,7 @@ class Profile(models.Model):
     age = models.IntegerField(blank=True, null=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
-    activities = models.ManyToManyField('trip.Activities')
+    activities = models.ManyToManyField('trip.Activity')
     instagram_url = models.URLField(blank=True)
     pinterest_url = models.URLField(blank=True)
     facebook_url = models.URLField(blank=True)

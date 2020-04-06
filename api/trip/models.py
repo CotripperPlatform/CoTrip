@@ -6,7 +6,7 @@ class Location(models.Model):
     state = models.CharField(max_length=200)
     country = models.CharField(max_length=200)
     people = models.ManyToManyField('accounts.Profile')
-    groups = models.ManyToManyField('accounts.Group')
+    groups = models.ManyToManyField('community.Group')
 
     def __str__(self):
         return self.city

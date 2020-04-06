@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Location, Trip, Activities
+from .models import Location, Trip, Activity
 
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,7 +11,7 @@ class TripSerializer(serializers.ModelSerializer):
         model = Trip
         fields = '__all__'
 
- class ActivitySerializer(serializers.ModelSerializer):
+class ActivitySerializer(serializers.ModelSerializer):
     class Meta:
         model = Activity
         fields = '__all__'

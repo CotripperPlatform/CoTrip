@@ -7,11 +7,11 @@ from .models import Location, Trip, Activity
 
 class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
-    serializer_class = ProfileSerializer
+    serializer_class = LocationSerializer
 
 class TripList(generics.ListAPIView):
     queryset = Trip.objects.all()
-    serializer_class = ProfileSerializer
+    serializer_class = TripSerializer
     
 class ActivityList(generics.ListAPIView):
     queryset = Activity.objects.all()
