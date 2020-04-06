@@ -42,7 +42,7 @@ class Hashtag(models.Model):
 class Media(models.Model):
     # author defined in account.models in Profile model
     # title and file are required. hashtags, topics, and groups are optional
-    time = models.DateField(auto_now_add=True)
+    time = models.DateField(auto_now_add=True, blank=True)
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='media')
     topics = models.ManyToManyField(Topic, blank=True)
