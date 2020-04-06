@@ -2,8 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 100vw;
-
+  padding: 2rem 0.5rem 1rem 0.5rem;
   background-color: var(--yellow);
   font-family: var(--default-font);
 }
@@ -20,7 +19,6 @@
 .Footer--center {
   display: flex;
   text-align: center;
-  margin: 3vw;
 }
 
 .Footer--left {
@@ -40,7 +38,7 @@
 
 @media only screen and (max-width: 1000px) {
   .Footer {
-    height: 75px;
+    min-height: 75px;
   }
 
   .Footer--right,
@@ -55,15 +53,11 @@
   .Footer {
     flex-direction: column;
     justify-content: center;
-    height: 150px;
-  }
-
-  .Footer--left,
-  .footer--center {
-    display: block;
+    align-items: space-between;
+    min-height: 150px;
   }
 
   .Footer--center {
-    margin: 0;
+    margin: 1rem 0;
   }
 }

@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('cotrip_app.urls')),
-    path('', include('accounts.urls'))
+    path('', include('accounts.urls')),
+    path('', include('trip.urls'))
 ]
 
 if settings.DEBUG:
