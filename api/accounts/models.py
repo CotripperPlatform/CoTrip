@@ -31,9 +31,22 @@ class Profile(models.Model):
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
     activities = models.ManyToManyField('trip.Activity')
-    instagram_url = models.URLField(blank=True)
-    pinterest_url = models.URLField(blank=True)
-    facebook_url = models.URLField(blank=True)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} Profile'
+
+
+class Profile_Social_Media(models.Model):
+    type = models.ForeignKey(Profile, on_delete=models.CASCADE,
+                             related_name='type', null=True, blank=True)
+    url = models.URLField(blank=True)
+
+    def __str__(self):
+        return self.type
+
+
+class Social_Media_Type(models.Model):
+    name = models.CharField(max_length=200, blank=True)
+
+    def __str__(self):
+        return self.name
