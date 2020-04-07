@@ -3,6 +3,10 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import FileUpload from "components/FileUploadComponent/FileUpload";
+
+// In order to gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with require() use the following approach:
+const axios = require("axios").default;
+
 // import handleFile from ""
 class PersonalSettingsForm extends Component {
   constructor(props) {
@@ -16,11 +20,11 @@ class PersonalSettingsForm extends Component {
         dream_destination: "",
         first_name: this.props.setup.first_name,
         last_name: this.props.setup.last_name,
-        city_of_residence: this.props.filter.city,
-      },
+        city_of_residence: this.props.filter.city
+      }
     };
   }
-  getSignedRequest = (file) => {
+  getSignedRequest = file => {
     // copied and modified from https://devcenter.heroku.com/articles/s3-upload-python
     let xhr = new XMLHttpRequest();
     // this function/method should only be called in prod, so heroku URL is used directly
@@ -64,11 +68,11 @@ class PersonalSettingsForm extends Component {
     };
     xhr.send(postData);
   };
-  updateValue = (e) => {
+  updateValue = e => {
     let name = e.target.name;
     let value = e.target.value;
     this.setState({
-      profile: { ...this.state.profile, [name]: value },
+      profile: { ...this.state.profile, [name]: value }
     });
   };
   next = () => {
@@ -86,7 +90,7 @@ class PersonalSettingsForm extends Component {
             <FileUpload
               header="Upload a profile photo"
               buttonLabel="Browse Files"
-              handleFile={(evt) => {
+              handleFile={evt => {
                 evt.preventDefault();
                 evt.persist();
                 console.log(evt);
@@ -94,7 +98,7 @@ class PersonalSettingsForm extends Component {
                 if (process.env.NODE_ENV === "development") {
                   let imageUrl = URL.createObjectURL(evt.target.files[0]);
                   this.setState({
-                    profile: { ...this.state.profile, image: imageUrl },
+                    profile: { ...this.state.profile, image: imageUrl }
                   });
                   return imageUrl;
                 } else {
