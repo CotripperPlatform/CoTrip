@@ -40,8 +40,8 @@ class Hashtag(models.Model):
     
 
 class Media(models.Model):
-    # author defined in account.models in Profile model
     # title and file are required. hashtags, topics, and groups are optional
+    author = models.ForeignKey('account.Profile', on_delete=models.CASCADE, related_name='cotripper media')
     time = models.DateField(auto_now_add=True, blank=True)
     title = models.CharField(max_length=200)
     image = models.ImageField(upload_to='media')

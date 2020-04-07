@@ -1,25 +1,26 @@
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from .models import Profile, CustomUser
+from .models import Profile, CustomUser, ProfileSocialMedia, SocialMediaType
 from django.dispatch import receiver
 from django.db.models.signals import post_save
+
 
 class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = '__all__'
-        
+
 
 class UserSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer()
-    
+
     class Meta:
         model = CustomUser
         fields = ('id', 'email', 'profile')
         extra_kwargs = {
             'profile': {'validators': []},
         }
-            
+
 
 class RegisterSerializer(serializers.ModelSerializer):
     class Meta:
@@ -42,3 +43,14 @@ class LoginSerializer(serializers.Serializer):
         if user and user.is_active:
             return user
 
+
+class ProfileSocialMediaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ProfileSocialMedia
+        fields = '__all__'
+
+
+class SocialMediaTypeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SocialMediaType
+        fields = '__all__'
