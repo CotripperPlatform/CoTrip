@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('cotrip_app.urls')),
     path('', include('accounts.urls')),
-    path('', include('trip.urls'))
+    path('', include('trip.urls')),
+    path('', include('community.urls'))
 ]
 
 if settings.DEBUG:
