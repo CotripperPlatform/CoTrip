@@ -84,7 +84,7 @@ class ProfileSocialMediaList(generics.ListCreateAPIView):
     permissions_classes = (permissions.IsAuthenticated)
 
 
-class ProfileSocialMedaiDetail(generics.RetrieveUpdateDestroyAPIView):
+class ProfileSocialMediaDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = ProfileSocialMedia.objects.all()
     serializer_class = ProfileSocialMediaSerializer
     permissions_classes = (permissions.IsAuthenticated)
