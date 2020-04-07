@@ -32,9 +32,9 @@ class PersonalSettingsForm extends Component {
     axios
       .get(`${API_HOST}sign_s3?file_name=` + file.name + "&file_type=" + file.type)
       .then(response => {
-        this.uploadFile(file, response.data, response.url);
+        this.uploadFile(file, response.data.data, response.data.url);
       })
-      .catch(error => alert("Could not get signed URL. Error: " + error));
+      .catch(error => alert("Could not get signed URL. " + error));
   };
   uploadFile = (file, s3Data, url) => {
     let postData = new FormData();
@@ -79,17 +79,8 @@ class PersonalSettingsForm extends Component {
                 evt.persist();
                 console.log(evt);
 
-                if (process.env.NODE_ENV === "development") {
-                  let imageUrl = URL.createObjectURL(evt.target.files[0]);
-                  this.setState({
-                    profile: { ...this.state.profile, image: imageUrl }
-                  });
-                  return imageUrl;
-                } else {
-                  // in production. Use S3
-                  let file = evt.target.files[0];
-                  this.getSignedRequest(file);
-                }
+                let file = evt.target.files[0];
+                this.getSignedRequest(file);
               }}
             ></FileUpload>
           ) : (
