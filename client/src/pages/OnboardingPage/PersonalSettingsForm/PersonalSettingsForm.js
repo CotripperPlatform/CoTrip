@@ -25,48 +25,32 @@ class PersonalSettingsForm extends Component {
     };
   }
   getSignedRequest = file => {
-    // copied and modified from https://devcenter.heroku.com/articles/s3-upload-python
-    let xhr = new XMLHttpRequest();
-    // this function/method should only be called in prod, so heroku URL is used directly
-    xhr.open(
-      "GET",
-      "https://cotripper-api.herokuapp.com/sign_s3?file_name=" +
-        file.name +
-        "&file_type=" +
-        file.type
-    );
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          var response = JSON.parse(xhr.responseText);
-          this.uploadFile(file, response.data, response.url);
-        } else {
-          alert("Could not get signed URL.");
-        }
-      }
-    };
-    xhr.send();
+    const API_HOST =
+      process.env.NODE_ENV === "production"
+        ? "https://cotripper.herokuapp.com/"
+        : "http://localhost:8000/";
+    axios
+      .get(`${API_HOST}sign_s3?file_name=` + file.name + "&file_type=" + file.type)
+      .then(response => {
+        this.uploadFile(file, response.data, response.url);
+      })
+      .catch(error => alert("Could not get signed URL. Error: " + error));
   };
   uploadFile = (file, s3Data, url) => {
-    let xhr = new XMLHttpRequest();
-    xhr.open("POST", s3Data.url);
-
     let postData = new FormData();
     for (let key in s3Data.fields) {
       postData.append(key, s3Data.fields[key]);
     }
     postData.append("file", file);
 
-    xhr.onreadystatechange = () => {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200 || xhr.status === 204) {
-          this.setState({ profile: { ...this.state.profile, image: url } });
-        } else {
-          alert("Could not upload file.");
-        }
-      }
-    };
-    xhr.send(postData);
+    axios
+      .post(s3Data.url, postData)
+      .then(res => {
+        this.setState({ profile: { ...this.state.profile, image: url } });
+      })
+      .catch(err => {
+        alert("Could not upload file.");
+      });
   };
   updateValue = e => {
     let name = e.target.name;
