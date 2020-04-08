@@ -77,12 +77,11 @@ class OnboardingPage extends Component {
             <div className="OnboardingPage__logo">
               <Logo large />
             </div>
-            {/* {this.state.counter === 1
+            {this.state.counter === 1
               ? pageSetup
               : this.state.counter === 2
               ? pageFilter
-              : pagePersonal} */}
-            {pagePersonal}
+              : pagePersonal}
             <div className="OnboardingPage__carousel-dots-container">
               <CarouselDots numberOfDots={3} activeLocation={this.state.counter} />
             </div>
