@@ -1,0 +1,74 @@
+[
+  {
+    "model": "community.group",
+    "pk": 1,
+    "fields": {
+      "title": "Moms in DC",
+      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private."
+    }
+  },
+  {
+    "model": "community.group",
+    "pk": 2,
+    "fields": {
+      "title": "Moms in NYC",
+      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private."
+    }
+  },
+  {
+    "model": "community.group",
+    "pk": 3,
+    "fields": {
+      "title": "Moms in Philadelphia",
+      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private."
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 1,
+    "fields": {
+      "title": "Budgeting",
+      "description": "How to budget accordingly for your dream destination"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 2,
+    "fields": {
+      "title": "Parenting",
+      "description": "Tips and Tricks for dealing with your kids"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 3,
+    "fields": {
+      "title": "Infants",
+      "description": "Raising babies: How to"
+    }
+  },
+  {
+    "model": "community.hashtag",
+    "pk": 1,
+    "fields": {
+      "title": "#mommywins",
+      "description": "Lorem Ipsum"
+    }
+  },
+  {
+    "model": "community.hashtag",
+    "pk": 2,
+    "fields": {
+      "title": "#beyourbestself",
+      "description": "Lorem Ipsum"
+    }
+  },
+  {
+    "model": "community.hashtag",
+    "pk": 3,
+    "fields": {
+      "title": "#eurotrip",
+      "description": "Lorem Ipsum"
+    }
+  }
+]

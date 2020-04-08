@@ -1,0 +1,29 @@
+[
+  {
+    "model": "community.event",
+    "pk": 1,
+    "fields": {
+      "title": "Paris Happy Hour",
+      "group": 1,
+      "location": null
+    }
+  },
+  {
+    "model": "community.event",
+    "pk": 2,
+    "fields": {
+      "title": "Paris Happy Hour",
+      "group": 1,
+      "location": null
+    }
+  },
+  {
+    "model": "community.event",
+    "pk": 3,
+    "fields": {
+      "title": "Paris Happy Hour",
+      "group": 1,
+      "location": null
+    }
+  }
+]
