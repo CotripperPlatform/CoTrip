@@ -7,8 +7,7 @@ class Post(models.Model):
     body = models.CharField(max_length=1000)
     likes = models.IntegerField(default=0)
     author = models.ForeignKey(Profile,
-        on_delete=models.CASCADE, primary_key=True
-    )
+        on_delete=models.CASCADE)
     
 
     def __str__(self):
@@ -20,8 +19,7 @@ class Comment(models.Model):
     body = models.CharField(max_length=500)
     likes = models.IntegerField(default=0)
     author = models.ForeignKey(Profile,
-        on_delete=models.CASCADE, primary_key=True
-    )
+        on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='post', null=True, blank=True)
 
     def __str__(self):
@@ -33,7 +31,7 @@ class Reply(models.Model):
     body = models.CharField(max_length=500)
     likes = models.IntegerField(default=0)
     author = models.ForeignKey(Profile,
-        on_delete=models.CASCADE, primary_key=True)
+        on_delete=models.CASCADE)
     comments = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name='comments', null=True, blank=True)
 
     def __str__(self):
