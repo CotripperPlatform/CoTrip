@@ -56,8 +56,8 @@ class SocialMediaType(models.Model):
 
 
 class ProfileSocialMedia(models.Model):
-    type = models.ForeignKey(SocialMediaType, on_delete=models.CASCADE,
-                             related_name='profile_social_media', null=True, blank=True)
+    social_media_type = models.ForeignKey(SocialMediaType, on_delete=models.CASCADE,
+                                          related_name='profile_social_media', null=True, blank=True)
     url = models.URLField(blank=True)
     profile = models.ForeignKey(Profile, on_delete=models.CASCADE,
                                 related_name='social_media', null=True, blank=True)
