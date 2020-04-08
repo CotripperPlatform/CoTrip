@@ -16,7 +16,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(
-        Post, on_delete=models.CASCADE, related_name='comments', null=True, blank=True)
+        Post, on_delete=models.CASCADE, related_name='comments', blank=True)
     time = models.DateTimeField(auto_now=True)
     body = models.CharField(max_length=500)
     likes = models.IntegerField(default=0)
@@ -25,7 +25,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.body
-s
+
 
 class Reply(models.Model):
     time = models.DateTimeField(auto_now=True)
@@ -34,7 +34,7 @@ class Reply(models.Model):
     author = models.ForeignKey(Profile,
                                on_delete=models.CASCADE, related_name='replies', null=True, blank=True)
     comment = models.ForeignKey(
-        Comment, on_delete=models.CASCADE, related_name='replies', null=True, blank=True)
+        Comment, on_delete=models.CASCADE, related_name='replies', blank=True)
 
     def __str__(self):
         return self.body
