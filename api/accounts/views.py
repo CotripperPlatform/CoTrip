@@ -7,6 +7,7 @@ from .models import Profile, CustomUser
 import boto3
 from django.http import JsonResponse
 from django.conf import settings
+import uuid
 
 class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
@@ -79,7 +80,7 @@ class UserList(generics.ListAPIView):
 
 def sign_s3(request):
 
-  file_name = request.GET['file_name']
+  file_name = request.GET['folder'] + "/" + uuid.uuid1().hex
   file_type = request.GET['file_type']
 
   s3 = boto3.client('s3')
