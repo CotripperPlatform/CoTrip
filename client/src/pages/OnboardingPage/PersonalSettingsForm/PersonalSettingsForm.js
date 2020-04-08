@@ -3,6 +3,10 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import FileUpload from "components/FileUploadComponent/FileUpload";
+
+// In order to gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with require() use the following approach:
+const axios = require("axios").default;
+
 // import handleFile from ""
 class PersonalSettingsForm extends Component {
   constructor(props) {
@@ -20,7 +24,34 @@ class PersonalSettingsForm extends Component {
       }
     };
   }
+  getSignedRequest = file => {
+    const API_HOST =
+      process.env.NODE_ENV === "production"
+        ? "https://cotripper.herokuapp.com/"
+        : "http://localhost:8000/";
+    axios
+      .get(`${API_HOST}sign_s3?file_name=` + file.name + "&file_type=" + file.type)
+      .then(response => {
+        this.uploadFile(file, response.data.data, response.data.url);
+      })
+      .catch(error => alert("Could not get signed URL. " + error));
+  };
+  uploadFile = (file, s3Data, url) => {
+    let postData = new FormData();
+    for (let key in s3Data.fields) {
+      postData.append(key, s3Data.fields[key]);
+    }
+    postData.append("file", file);
 
+    axios
+      .post(s3Data.url, postData)
+      .then(res => {
+        this.setState({ profile: { ...this.state.profile, image: url } });
+      })
+      .catch(err => {
+        alert("Could not upload file.");
+      });
+  };
   updateValue = e => {
     let name = e.target.name;
     let value = e.target.value;
@@ -47,9 +78,9 @@ class PersonalSettingsForm extends Component {
                 evt.preventDefault();
                 evt.persist();
                 console.log(evt);
-                let imageUrl = URL.createObjectURL(evt.target.files[0]);
-                this.setState({ profile: { ...this.state.profile, image: imageUrl } });
-                return imageUrl;
+
+                let file = evt.target.files[0];
+                this.getSignedRequest(file);
               }}
             ></FileUpload>
           ) : (
