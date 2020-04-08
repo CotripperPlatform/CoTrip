@@ -7,12 +7,15 @@ class GroupSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class EventSerializer(serializers.ModelSerializer):
+    group = serializers.CharField()
+    location = serializers.CharField()
+
     class Meta:
         model = Event
         fields = '__all__'
 
 class TopicSerializer(serializers.ModelSerializer):
-    class Meta:
+    class Mœeta:
         model = Topic
         fields = '__all__'
 
@@ -22,6 +25,9 @@ class HashtagSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class MediaSerializer(serializers.ModelSerializer):
+    hashtag = serializers.CharField()
+    group = serializers.CharField()
+    topics = serializers.HyperlinkRelatedField(many=True, )
     class Meta:
         model = Media
         fields = '__all__'
