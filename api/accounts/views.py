@@ -80,7 +80,7 @@ class UserList(generics.ListAPIView):
 
 def sign_s3(request):
 
-  file_name = "profile/" + uuid.uuid1().hex
+  file_name = request.GET['folder'] + "/" + uuid.uuid1().hex
   file_type = request.GET['file_type']
 
   s3 = boto3.client('s3')
