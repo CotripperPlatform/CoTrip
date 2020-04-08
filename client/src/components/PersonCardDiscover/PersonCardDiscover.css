@@ -1,0 +1,21 @@
+.PersonCardDiscover {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  border: 2px dashed var(--purple);
+  text-align: center;
+  width: 13.5rem;
+  height: 17.5rem;
+  font-family: var(--default-font); 
+  line-height: 1.5;
+}
+.PersonCardDiscover a {
+  font-size: 34px;
+  text-decoration: none;
+  margin: auto;
+}
+.PersonCardDiscover__link:hover {
+  transition: transform 0.3s;
+  transform: scale(1.1);
+  color: var(--yellow);
+}
