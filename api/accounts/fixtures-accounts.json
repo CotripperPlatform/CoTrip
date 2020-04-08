@@ -1,0 +1,140 @@
+[
+  {
+    "model": "accounts.CustomUser",
+    "pk": 1,
+    "fields": {
+      "email": "admin@ad.min"
+    }
+  },
+  {
+    "model": "accounts.CustomUser",
+    "pk": 2,
+    "fields": {
+      "email": "abc@ab.cd"
+    }
+  },
+  {
+    "model": "accounts.CustomUser",
+    "pk": 3,
+    "fields": {
+      "email": "abc@ab.cde"
+    }
+  },
+  {
+    "model": "accounts.CustomUser",
+    "pk": 4,
+    "fields": {
+      "email": "abc@ab.cdef"
+    }
+  },
+  {
+    "model": "accounts.CustomUser",
+    "pk": 5,
+    "fields": {
+      "email": "abc@ab.cdefg"
+    }
+  },
+  {
+    "model": "accounts.Profile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "topics": [1, 2],
+      "image": "https://cotripperdev.s3.amazonaws.com/profile/b151b86a79b011eabef33ca9f4927614",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "city_of_residence": "Washington, DC",
+      "age": "30",
+      "dream_destination": "Arizona",
+      "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
+      "instagram_url": "https://www.instagram.com/",
+      "pinterest_url": "https://www.pinterest.com/",
+      "facebook_url": "https://www.facebook.com/"
+    }
+  },
+  {
+    "model": "accounts.Profile",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "topics": [1, 2],
+      "image": "https://cotripperdev.s3.amazonaws.com/profile/2de9153a79b111eabef33ca9f4927614",
+      "first_name": "Janette",
+      "last_name": "Doe",
+      "city_of_residence": "Kensington, MD",
+      "age": "30",
+      "dream_destination": "New Mexico",
+      "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
+      "instagram_url": "https://www.instagram.com/",
+      "pinterest_url": "https://www.pinterest.com/",
+      "facebook_url": "https://www.facebook.com/"
+    }
+  },
+  {
+    "model": "accounts.Profile",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "topics": [1, 2],
+      "image": "https://cotripperdev.s3.amazonaws.com/profile/50a5ffc079b111eabef33ca9f4927614",
+      "first_name": "Joni",
+      "last_name": "Doe",
+      "city_of_residence": "Denver, CO",
+      "age": "30",
+      "dream_destination": "California",
+      "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
+      "instagram_url": "https://www.instagram.com/",
+      "pinterest_url": "https://www.pinterest.com/",
+      "facebook_url": "https://www.facebook.com/"
+    }
+  },
+  {
+    "model": "accounts.Profile",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "topics": [1, 2],
+      "image": "https://cotripperdev.s3.amazonaws.com/profile/6f16322c79b111eabef33ca9f4927614",
+      "first_name": "Wendy",
+      "last_name": "Doe",
+      "city_of_residence": "Houston, TX",
+      "age": "30",
+      "dream_destination": "Canada",
+      "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
+      "instagram_url": "https://www.instagram.com/",
+      "pinterest_url": "https://www.pinterest.com/",
+      "facebook_url": "https://www.facebook.com/"
+    }
+  },
+  {
+    "model": "accounts.Profile",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "topics": [1, 2],
+      "image": "https://cotripperdev.s3.amazonaws.com/profile/8b8b31f079b111eabef33ca9f4927614",
+      "first_name": "Wendy",
+      "last_name": "Bite",
+      "city_of_residence": "Miami, FL",
+      "age": "30",
+      "dream_destination": "Cuba",
+      "bio": "Looking for fun trips with older single moms",
+      "activities": [1, 2],
+      "instagram_url": "https://www.instagram.com/",
+      "pinterest_url": "https://www.pinterest.com/",
+      "facebook_url": "https://www.facebook.com/"
+    }
+  },
+  {
+    "model": "myapp.person",
+    "pk": 2,
+    "fields": {
+      "first_name": "Paul",
+      "last_name": "McCartney"
+    }
+  }
+]
