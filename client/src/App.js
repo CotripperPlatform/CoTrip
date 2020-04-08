@@ -43,7 +43,10 @@ library.add(
   faEdit
 );
 
+import { BASE_URL } from "./services/constants";
 import { handleSignup } from "./services/User";
+import { handle_login } from "./services/User";
+import { handle_logout } from "./services/User";
 
 class App extends Component {
   constructor(props) {
@@ -56,11 +59,13 @@ class App extends Component {
       image: ""
     };
 
-    this.handleSignup = this.handleSignup.bind(this);
+    this.handleSignup = handleSignup.bind(this);
+    this.handle_login = handle_login.bind(this);
+    this.handle_logout = handle_logout.bind(this);
   }
   componentDidMount() {
     if (this.state.logged_in) {
-      fetch("http://localhost:8000/auth/user", {
+      fetch(`${BASE_URL}/auth/user`, {
         headers: {
           Authorization: `Token ${localStorage.getItem("token")}`
         }
@@ -80,36 +85,7 @@ class App extends Component {
         });
     }
   }
-  handle_login = (data, history) => {
-    fetch("http://localhost:8000/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json.token);
-        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
-        this.setState({
-          logged_in: json.token != undefined ? true : false,
-          email: json.user.email,
-          first_name: json.user.profile.first_name,
-          image: json.user.profile.image
-        });
-        history.push("/home");
-      })
-      .catch(err => {
-        console.log(err);
-        alert("Please enter valid email and password");
-      });
-  };
 
-  handle_logout = () => {
-    localStorage.removeItem("token");
-    this.setState({ logged_in: false, email: "", first_name: "", image: "" });
-  };
   render() {
     return (
       <div className="App">
