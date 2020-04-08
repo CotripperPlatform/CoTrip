@@ -70,5 +70,68 @@
       "title": "#eurotrip",
       "description": "Lorem Ipsum"
     }
+  },
+  {
+    "model": "community.event",
+    "pk": 1,
+    "fields": {
+      "title": "EuroTrip Happy Hour",
+      "group": 1,
+      "location": null
+    }
+  },
+  {
+    "model": "community.event",
+    "pk": 2,
+    "fields": {
+      "title": "EuroTrip Happy Hour",
+      "group": 2,
+      "location": null
+    }
+  },
+  {
+    "model": "community.event",
+    "pk": 3,
+    "fields": {
+      "title": "EuroTrip Happy Hour",
+      "group": 3,
+      "location": null
+    }
+  },
+  {
+    "model": "community.media",
+    "pk": 1,
+    "fields": {
+      "time": "2020-04-07",
+      "title": "En Route",
+      "image": "https://www.azom.com/images/Article_Images/ImageForArticle_12117(1).jpg",
+      "hashtag": 1,
+      "group": 3,
+      "topics": [1, 2]
+    }
+  },
+  {
+    "model": "community.media",
+    "pk": 1,
+    "fields": {
+      "time": "2020-04-07",
+      "title": "En Route",
+      "image": "https://www.azom.com/images/Article_Images/ImageForArticle_12117(1).jpg",
+      "hashtag": 1,
+      "group": 3,
+      "topics": [1, 2]
+    }
+  },
+  {
+    "model": "community.media",
+    "pk": 1,
+    "fields": {
+      "time": "2020-04-07",
+      "title": "En Route",
+      "image": "https://www.azom.com/images/Article_Images/ImageForArticle_12117(1).jpg",
+      "hashtag": 1,
+      "group": 3,
+      "topics": [1, 2]
+    }
   }
 ]
