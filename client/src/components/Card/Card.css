@@ -109,19 +109,23 @@
   text-align: center;
   transition: transform 0.3s;
 }
+
 .Card__discover-link {
   text-align: center;
   margin: auto;
   line-height: 1.8;
   transition: transform 0.3s;
 }
+
 .Card__discover-link a {
-  font-size: 28px;
+  font-size: 26px;
   text-decoration: none;
 }
+
 .Card__discover-link:hover {
   transform: scale(1.1);
 }
+
 .Card__discover-link a:hover {
   color: var(--yellow);
 }
