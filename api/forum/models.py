@@ -35,7 +35,7 @@ class Reply(models.Model):
     author = models.OneToOneField(Profile,
         on_delete=models.CASCADE, primary_key=True
     )
-    comments = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name='post', null=True, blank=True)
+    comments = models.ForeignKey(Comment, on_delete=models.CASCADE, related_name='comments', null=True, blank=True)
 
     def __str__(self):
         return self.body
