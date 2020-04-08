@@ -23,8 +23,10 @@ urlpatterns = [
     # path('', include('cotrip_app.urls')),
     path('', include('accounts.urls')),
     path('', include('trip.urls')),
-    path('', include('community.urls'))
+    path('', include('community.urls')),
+    path('', include('forum.urls'))
 ]
 
 if settings.DEBUG:
-     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)

@@ -26,7 +26,8 @@ SECRET_KEY = '@t6y0=8^w0dnv%spqk1(j#r*kmb!pe!7zh_ouz%rei=!0c+kxd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['backend-testing-cotrip.herokuapp.com', 'cotripper-api.herokuapp.com']
+ALLOWED_HOSTS = ['backend-testing-cotrip.herokuapp.com',
+                 'cotripper-api.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -145,7 +146,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT= os.path.join(BASE_DIR,'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
