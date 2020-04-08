@@ -232,8 +232,6 @@ typings/
 # dotenv environment variables file
 .env
 .env.test
-env
-# and env incase .env file transfer gets rid of the .
 
 # parcel-bundler cache (https://parceljs.org/)
 
