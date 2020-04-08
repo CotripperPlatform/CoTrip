@@ -4,7 +4,10 @@ from rest_framework.response import Response
 from knox.models import AuthToken
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer,ProfileSerializer
 from .models import Profile, CustomUser
-
+import boto3
+from django.http import JsonResponse
+from django.conf import settings
+import uuid
 
 class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
@@ -75,3 +78,25 @@ class UserList(generics.ListAPIView):
     
 # add view to update a profile, it should only allow a profile to be updated when they have a token saying theyre logged in
 
+def sign_s3(request):
+
+  file_name = request.GET['folder'] + "/" + uuid.uuid1().hex
+  file_type = request.GET['file_type']
+
+  s3 = boto3.client('s3')
+
+  presigned_post = s3.generate_presigned_post(
+    Bucket = settings.S3_BUCKET,
+    Key = file_name,
+    Fields = {"acl": "public-read", "Content-Type": file_type},
+    Conditions = [
+      {"acl": "public-read"},
+      {"Content-Type": file_type}
+    ],
+    ExpiresIn = 3600
+  )
+
+  return JsonResponse({
+    'data': presigned_post,
+    'url': 'https://%s.s3.amazonaws.com/%s' % (settings.S3_BUCKET, file_name)
+  })
