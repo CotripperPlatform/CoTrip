@@ -27,7 +27,7 @@ class PersonalSettingsForm extends Component {
   getSignedRequest = file => {
     const API_HOST =
       process.env.NODE_ENV === "production"
-        ? "https://cotripper.herokuapp.com/"
+        ? "https://cotripper-api.herokuapp.com/"
         : "http://localhost:8000/";
     axios
       .get(`${API_HOST}sign_s3?folder=profile&file_type=` + file.type)
