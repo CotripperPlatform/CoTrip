@@ -30,7 +30,7 @@ export function handleSignup(data, history) {
     });
 }
 
-export function handle_login(data, history) {
+export function handleLogin(data, history) {
   fetch(`${BASE_URL}/auth/login`, {
     method: "POST",
     headers: {
@@ -56,7 +56,7 @@ export function handle_login(data, history) {
     });
 }
 
-export function handle_logout() {
+export function handleLogout() {
   localStorage.removeItem("token");
   this.setState({ logged_in: false, email: "", first_name: "", image: "" });
 }

@@ -28,8 +28,8 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup } from "./services/User";
-import { handle_login } from "./services/User";
-import { handle_logout } from "./services/User";
+import { handleLogin } from "./services/User";
+import { handleLogout } from "./services/User";
 
 library.add(
   fab,
@@ -60,8 +60,8 @@ class App extends Component {
     };
 
     this.handleSignup = handleSignup.bind(this);
-    this.handle_login = handle_login.bind(this);
-    this.handle_logout = handle_logout.bind(this);
+    this.handleLogin = handleLogin.bind(this);
+    this.handleLogout = handleLogout.bind(this);
   }
   componentDidMount() {
     if (this.state.logged_in) {
@@ -74,7 +74,7 @@ class App extends Component {
         .then(json => {
           console.log(json);
           if (json.detail == "Invalid token.") {
-            this.handle_logout();
+            this.handleLogout();
           } else {
             this.setState({
               email: json.email,
@@ -96,14 +96,14 @@ class App extends Component {
             path="/hawaii-2020"
             exact
             render={routerProps => (
-              <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />
+              <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
           <Route
             path="/book-a-trip"
             exact
             render={routerProps => (
-              <BookATripPage handle_logout={this.handle_logout} {...routerProps} />
+              <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
 
@@ -111,21 +111,21 @@ class App extends Component {
             path="/member-page"
             exact
             render={routerProps => (
-              <MemberPage handle_logout={this.handle_logout} {...routerProps} />
+              <MemberPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
           <Route
             path="/coming_soon"
             exact
             render={routerProps => (
-              <ComingSoonPage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+              <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
             path="/login"
             exact
             render={routerProps => (
-              <LoginPage handleLogin={this.handle_login} {...routerProps} {...this.state} />
+              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
@@ -143,7 +143,7 @@ class App extends Component {
             path="/home"
             exact
             render={routerProps => (
-              <HomePage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+              <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>
