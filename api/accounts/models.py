@@ -22,6 +22,7 @@ class Profile(models.Model):
         CustomUser,
         on_delete=models.CASCADE, primary_key=True
     )
+<<<<<<< HEAD
     topics = models.ManyToManyField(
         'community.Topic', related_name='followers', null=True, blank=True)
     hashtags = models.ManyToManyField(
@@ -33,6 +34,14 @@ class Profile(models.Model):
     # city_of_residence = models.ForeignKey(
     #     'trip.Location', on_delete=models.CASCADE, related_name='people', null=True, blank=True)
     age = models.IntegerField(null=True)
+=======
+    topics = models.ManyToManyField('community.Topic')
+    image = models.CharField(max_length=150, blank=True)
+    first_name = models.CharField(max_length=200, blank=True)
+    last_name = models.CharField(max_length=200, blank=True)
+    city_of_residence = models.CharField(max_length=200, blank=True)
+    age = models.IntegerField(blank=True, null=True)
+>>>>>>> develop
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
     activities = models.ManyToManyField(

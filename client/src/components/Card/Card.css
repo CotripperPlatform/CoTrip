@@ -104,30 +104,31 @@
 }
 
 .Card__outline {
-  padding: 3vh 0 5vh 0;
-  width: 14.2vw;
-  max-width: 225px;
   background: none;
-  border: 3px dashed var(--purple);
-  box-shadow: none;
-}
-
-.Card__discover {
-  color: var(--black);
+  border: 2px dashed var(--purple);
   text-align: center;
   transition: transform 0.3s;
-  font-size: 24px;
-  width: 10rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
+}
+
+.Card__discover-link {
+  text-align: center;
+  margin: auto;
+  line-height: 1.8;
+  transition: transform 0.3s;
+}
+
+.Card__discover-link a {
+  font-size: 26px;
   text-decoration: none;
 }
 
-.Card__discover:hover {
+.Card__discover-link:hover {
   transform: scale(1.1);
-  color: var(--yellow);
 }
 
+.Card__discover-link a:hover {
+  color: var(--yellow);
+}
 
 @media only screen and (min-width: 321px) and (max-width: 575px) {
   .Card--extra-small {
