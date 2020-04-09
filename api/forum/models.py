@@ -1,5 +1,5 @@
 from django.db import models
-from accounts.models import CustomUser
+from accounts.models import Profile
 
 
 class Post(models.Model):
@@ -9,7 +9,7 @@ class Post(models.Model):
     time = models.DateTimeField(auto_now=True)
     body = models.CharField(max_length=1000)
     likes = models.IntegerField(default=0)
-    author = models.ForeignKey(CustomUser,
+    author = models.ForeignKey(Profile,
                                on_delete=models.CASCADE, related_name='posts', null=True)
 
     def __str__(self):
