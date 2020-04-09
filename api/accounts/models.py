@@ -27,12 +27,12 @@ class Profile(models.Model):
     hashtags = models.ManyToManyField(
         'community.Hashtag', related_name='followers', null=True, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-    first_name = models.CharField(max_length=200, blank=True)
-    last_name = models.CharField(max_length=200, blank=True)
+    first_name = models.CharField(max_length=200, null=True)
+    last_name = models.CharField(max_length=200, null=True)
     city_of_residence = models.CharField(max_length=200, null=True, blank=True)
     # city_of_residence = models.ForeignKey(
     #     'trip.Location', on_delete=models.CASCADE, related_name='people', null=True, blank=True)
-    age = models.IntegerField(blank=True, null=True)
+    age = models.IntegerField(null=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
     activities = models.ManyToManyField(
