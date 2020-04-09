@@ -1,7 +1,7 @@
 from django.shortcuts import render
-from .models import Post, Comment, Reply
+from .models import Post
 from rest_framework import generics, permissions
-from .serializers import PostSerializer, CommentSerializer, ReplySerializer
+from .serializers import PostSerializer
 
 
 class PostList(generics.ListCreateAPIView):
@@ -15,26 +15,3 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = PostSerializer
     permissions_classes = (permissions.IsAuthenticated)
 
-
-class CommentList(generics.ListCreateAPIView):
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
-    permissions_classes = (permissions.IsAuthenticated)
-
-
-class CommentDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Comment.objects.all()
-    serializer_class = CommentSerializer
-    permissions_classes = (permissions.IsAuthenticated)
-
-
-class ReplyList(generics.ListCreateAPIView):
-    queryset = Reply.objects.all()
-    serializer_class = ReplySerializer
-    permissions_classes = (permissions.IsAuthenticated)
-
-
-class ReplyDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Reply.objects.all()
-    serializer_class = ReplySerializer
-    permissions_classes = (permissions.IsAuthenticated)
