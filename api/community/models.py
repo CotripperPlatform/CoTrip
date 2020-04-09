@@ -44,6 +44,9 @@ class Hashtag(models.Model):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=500)
 
+    def __str__(self):
+        return self.title
+    
 
 class Media(models.Model):
     # title and file are required. hashtags, topics, and groups are optional
