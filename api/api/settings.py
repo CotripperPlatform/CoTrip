@@ -26,8 +26,12 @@ SECRET_KEY = '@t6y0=8^w0dnv%spqk1(j#r*kmb!pe!7zh_ouz%rei=!0c+kxd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['backend-testing-cotrip.herokuapp.com',
                  'cotripper-api.herokuapp.com', 'localhost']
+=======
+ALLOWED_HOSTS = ['cotripper-api.herokuapp.com', 'localhost']
+>>>>>>> develop
 
 
 # Application definition
