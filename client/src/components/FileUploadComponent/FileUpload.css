@@ -9,7 +9,7 @@
 }
 
 .FileUpload h1 {
-  margin: 2rem auto .6rem auto;
+  margin: 2rem auto 0.6rem auto;
   width: 75%;
   font-family: var(--default-font);
   font-size: 1.5rem;
@@ -18,16 +18,17 @@
 }
 
 .FileUpload__input {
-  height: .01rem;
-  width: .01rem;
+  height: 0.01rem;
+  width: 0.01rem;
 }
 
 .FileUpload__label {
+  cursor: pointer;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border: solid rgba(0, 0, 0, 0);
   border-radius: 5px;
   font-family: var(--default-font);
-  padding: 0.20em 1.35em;
+  padding: 0.2em 1.35em;
   font-size: 15px;
   color: var(--white);
   background-color: var(--pink);
