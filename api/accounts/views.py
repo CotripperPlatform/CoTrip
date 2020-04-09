@@ -82,6 +82,28 @@ class UserList(generics.ListAPIView):
 # add view to update a profile, it should only allow a profile to be updated when they have a token saying theyre logged in
 
 
+class ProfileSocialMediaList(generics.ListCreateAPIView):
+    queryset = ProfileSocialMedia.objects.all()
+    serializer_class = ProfileSocialMediaSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
+
+class ProfileSocialMediaDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ProfileSocialMedia.objects.all()
+    serializer_class = ProfileSocialMediaSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
+
+class SocialMediaTypeList(generics.ListCreateAPIView):
+    queryset = SocialMediaType.objects.all()
+    serializer_class = SocialMediaTypeSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
+
+class SocialMediaTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = SocialMediaType.objects.all()
+    serializer_class = SocialMediaTypeSerializer
+    permissions_classes = (permissions.IsAuthenticated)
 
 
 def sign_s3(request):
