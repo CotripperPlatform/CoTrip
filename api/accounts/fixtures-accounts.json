@@ -47,6 +47,7 @@
       "age": "30",
       "dream_destination": "Arizona",
       "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
       "instagram_url": "https://www.instagram.com/",
       "pinterest_url": "https://www.pinterest.com/",
       "facebook_url": "https://www.facebook.com/"
@@ -65,6 +66,7 @@
       "age": "30",
       "dream_destination": "New Mexico",
       "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
       "instagram_url": "https://www.instagram.com/",
       "pinterest_url": "https://www.pinterest.com/",
       "facebook_url": "https://www.facebook.com/"
@@ -83,6 +85,7 @@
       "age": "30",
       "dream_destination": "California",
       "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
       "instagram_url": "https://www.instagram.com/",
       "pinterest_url": "https://www.pinterest.com/",
       "facebook_url": "https://www.facebook.com/"
@@ -101,6 +104,7 @@
       "age": "30",
       "dream_destination": "Canada",
       "bio": "Looking for fun trips with other single moms and their kids :)",
+      "activities": [1, 2],
       "instagram_url": "https://www.instagram.com/",
       "pinterest_url": "https://www.pinterest.com/",
       "facebook_url": "https://www.facebook.com/"
@@ -119,6 +123,7 @@
       "age": "30",
       "dream_destination": "Cuba",
       "bio": "Looking for fun trips with older single moms",
+      "activities": [1, 2],
       "instagram_url": "https://www.instagram.com/",
       "pinterest_url": "https://www.pinterest.com/",
       "facebook_url": "https://www.facebook.com/"
