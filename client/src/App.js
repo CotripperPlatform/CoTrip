@@ -27,9 +27,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
-import { handleSignup } from "./services/User";
-import { handleLogin } from "./services/User";
-import { handleLogout } from "./services/User";
+import { handleSignup, handleLogin, handleLogout } from "./services/User";
 
 library.add(
   fab,
