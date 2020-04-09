@@ -11,6 +11,7 @@ CoTripper is a Django-based project aimed at providing an experience-based trave
 - PostgreSQL
 - Psql
 - Django Rest Framework
+- AWS S3
 
 ## Database Setup
 
@@ -29,6 +30,8 @@ git clone git@github.com:CotripperPlatform/CoTrip.git
 ```
 psql -U postgres -f settings.sql
 ```
+
+1. To access our file uploading system on your local project, you'll need access to our local environment variables. This will need to be set up as a `.env` file, saved in the same location as this README. If you're a student at GA working on this project, ask your instructor for it! For other contributors, please reach out to our admins.
 
 ## API Description
 
