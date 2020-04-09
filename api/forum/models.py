@@ -3,7 +3,7 @@ from accounts.models import Profile
 
 
 class Post(models.Model):
-    parent = models.ForeignKey('self', related_name='comments', on_delete=models.CASCADE, null=True, blank=True, default=1)
+    parent = models.ManyToManyField('self', related_name='comments', null=True, blank=True)
     post_type = models.CharField(max_length=200, null=True, blank=True)
     title = models.CharField(max_length=200)
     time = models.DateTimeField(auto_now=True)
