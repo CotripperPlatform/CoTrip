@@ -23,7 +23,7 @@ class Profile(models.Model):
         on_delete=models.CASCADE, primary_key=True
     )
     topics = models.ManyToManyField('community.Topic')
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.CharField(max_length=150, blank=True)
     first_name = models.CharField(max_length=200, blank=True)
     last_name = models.CharField(max_length=200, blank=True)
     city_of_residence = models.CharField(max_length=200, blank=True)
