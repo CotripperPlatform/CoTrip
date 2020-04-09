@@ -40,7 +40,7 @@
       "time": "2020-04-09T02:01:52.211606Z",
       "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
       "likes": 0,
-      "author": 3
+      "author": 5
     }
   },
   {
@@ -72,7 +72,7 @@
       "time": "2020-04-09T02:02:18.967102Z",
       "body": "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
       "likes": 0,
-      "post": 2,
+      "post": 1,
       "author": 2
     }
   },
@@ -83,7 +83,7 @@
       "time": "2020-04-09T02:02:18.967102Z",
       "body": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
       "likes": 0,
-      "post": 2,
+      "post": 3,
       "author": 3
     }
   },
@@ -94,7 +94,7 @@
       "time": "2020-04-09T02:02:18.967102Z",
       "body": "Deleniti atque corrupti quos dolores et quas molestias excepturi sint.",
       "likes": 0,
-      "post": 2,
+      "post": 4,
       "author": 4
     }
   },
@@ -105,7 +105,7 @@
       "time": "2020-04-09T02:02:18.967102Z",
       "body": "Occaecati cupiditate non provident, similique sunt in culpa qui officia.",
       "likes": 0,
-      "post": 2,
+      "post": 5,
       "author": 1
     }
   },
@@ -127,7 +127,7 @@
       "time": "2020-04-09T02:11:25.052359Z",
       "body": "Et harum quidem rerum facilis est et expedita distinctio.",
       "likes": 0,
-      "author": 1,
+      "author": 2,
       "comment": 2
     }
   },
@@ -138,8 +138,8 @@
       "time": "2020-04-09T02:11:25.052359Z",
       "body": "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
       "likes": 0,
-      "author": 1,
-      "comment": 2
+      "author": 3,
+      "comment": 3
     }
   },
   {
@@ -149,8 +149,8 @@
       "time": "2020-04-09T02:11:25.052359Z",
       "body": "Omnis voluptas assumenda est, omnis dolor repellendus.",
       "likes": 0,
-      "author": 1,
-      "comment": 3
+      "author": 4,
+      "comment": 4
     }
   },
   {
@@ -160,8 +160,8 @@
       "time": "2020-04-09T02:11:25.052359Z",
       "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
       "likes": 0,
-      "author": 1,
-      "comment": 4
+      "author": 5,
+      "comment": 5
     }
   }
 ]
