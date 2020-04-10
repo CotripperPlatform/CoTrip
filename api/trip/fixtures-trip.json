@@ -1,82 +1,82 @@
 [
-{
+  {
     "model": "trip.Location",
     "pk": 1,
     "fields": {
-        "city": "Tokyo",
-        "state": null,
-        "country": "Japan",
-        "people": null,
-        "groups": null
+      "city": "Tokyo",
+      "state": null,
+      "country": "Japan",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Location",
     "pk": 2,
     "fields": {
-        "city": "San Francisco",
-        "state": "California",
-        "country": "USA",
-        "people": null,
-        "groups": null
+      "city": "San Francisco",
+      "state": "California",
+      "country": "USA",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Location",
     "pk": 3,
     "fields": {
-        "city": "Santa Fe",
-        "state": "New Mexico",
-        "country": "USA",
-        "people": null,
-        "groups": null
+      "city": "Santa Fe",
+      "state": "New Mexico",
+      "country": "USA",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Location",
     "pk": 4,
     "fields": {
-        "city": "Palm Springs",
-        "state": "California",
-        "country": "USA",
-        "people": null,
-        "groups": null
+      "city": "Palm Springs",
+      "state": "California",
+      "country": "USA",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Location",
     "pk": 5,
     "fields": {
-        "city": "Taos",
-        "state": "New Mexico",
-        "country": "USA",
-        "people": null,
-        "groups": null
+      "city": "Taos",
+      "state": "New Mexico",
+      "country": "USA",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Location",
     "pk": 6,
     "fields": {
-        "city": "Napa",
-        "state": "California",
-        "country": "USA",
-        "people": null,
-        "groups": null
+      "city": "Napa",
+      "state": "California",
+      "country": "USA",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Location",
     "pk": 7,
     "fields": {
-        "city": "Sonoma",
-        "state": "California",
-        "country": "USA",
-        "people": null,
-        "groups": null
+      "city": "Sonoma",
+      "state": "California",
+      "country": "USA",
+      "people": null,
+      "groups": null
     }
-},
-{
+  },
+  {
     "model": "trip.Activity",
     "pk": 1,
     "for_kids": false,
@@ -85,9 +85,9 @@
     "location": "Napa",
     "description": "An expert sommelier will teach the group about the wines offered at each vineyard visited.",
     "date": "2022-04-20",
-    "time": "12:00" 
-},
-{
+    "time": "12:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 2,
     "for_kids": false,
@@ -96,9 +96,9 @@
     "location": "Napa",
     "description": "A staff member will show the group a tour of the vineyard from vine to cask at each vineyard visited.",
     "date": "2022-04-20",
-    "time": "12:00" 
-},
-{
+    "time": "12:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 3,
     "for_kids": true,
@@ -107,9 +107,9 @@
     "location": "Sonoma",
     "description": "A ride around the hills of Sonoma.",
     "date": "2022-04-23",
-    "time": "16:00" 
-},
-{
+    "time": "16:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 4,
     "for_kids": true,
@@ -118,9 +118,9 @@
     "location": "San Francisco",
     "description": "Hike the Glen Canyon Park Trail as a group!",
     "date": "2022-04-26",
-    "time": "15:00" 
-},
-{
+    "time": "15:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 5,
     "for_kids": true,
@@ -129,9 +129,9 @@
     "location": "Tokyo",
     "description": "Visit the market that replaced the Tsukiji Market to learn about different fish and produce available in Japan!",
     "date": "2021-06-16",
-    "time": "12:00" 
-},
-{
+    "time": "12:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 6,
     "for_kids": true,
@@ -140,9 +140,9 @@
     "location": "Tokyo",
     "description": "Explore the wonders of Tokyo's National Museum of Nature and Science with your little one(s).",
     "date": "2021-06-18",
-    "time": "10:00" 
-},
-{
+    "time": "10:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 7,
     "for_kids": true,
@@ -151,9 +151,9 @@
     "location": "Tokyo",
     "description": "Japan is famous for its intricate and perfectly-crafted gardens. On this trip, we will explore the Shinjuku Gyoen National Garden, arguably the most beautiful garden in the world!",
     "date": "2021-06-19",
-    "time": "11:00" 
-},
-{
+    "time": "11:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 8,
     "for_kids": true,
@@ -162,9 +162,9 @@
     "location": "Santa Fe",
     "description": "A tour of the famous art galleries and murals around Santa Fe",
     "date": "2022-11-13",
-    "time": "14:00" 
-},
-{
+    "time": "14:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 9,
     "for_kids": true,
@@ -173,9 +173,9 @@
     "location": "Santa Fe",
     "description": "Come explore one of the wildest and most interactive art exhibits in the world, filled with incredible color and creativity.",
     "date": "2022-11-14",
-    "time": "11:00" 
-},
-{
+    "time": "11:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 10,
     "for_kids": true,
@@ -184,9 +184,9 @@
     "location": "Taos",
     "description": "Enjoy a three-hour jewelry making class with one of Taos' most renowned artists.",
     "date": "2022-11-1",
-    "time": "14:00" 
-},
-{
+    "time": "14:00"
+  },
+  {
     "model": "trip.Activity",
     "pk": 11,
     "for_kids": false,
@@ -195,42 +195,46 @@
     "location": "Santa Fe",
     "description": "Enjoy a tasting of an array of tequilas made in New Mexico and the surraounding areas.",
     "date": "2022-11-15",
-    "time": "17:30" 
-},
-{
+    "time": "17:30"
+  },
+  {
     "model": "trip.Trip",
     "pk": 1,
     "fields": {
-        "title": "California Wine Country 2022",
-        "locations": ["Napa", "Sonoma", "San Francisco"],
-        "activities": ["Wine Tasting", "Vineyard Tour", "Hay Ride", "Trail Hike"],
-        "start_date": "2022-04-20",
-        "end_date": "2022-04-26",
-        "attendees": null
+      "title": "California Wine Country 2022",
+      "locations": ["Napa", "Sonoma", "San Francisco"],
+      "activities": ["Wine Tasting", "Vineyard Tour", "Hay Ride", "Trail Hike"],
+      "start_date": "2022-04-20",
+      "end_date": "2022-04-26",
+      "attendees": null
     }
-} 
-{
+  },
+  {
     "model": "trip.Trip",
     "pk": 2,
     "fields": {
-        "title": "Tokyo 2021",
-        "locations": "Tokyo",
-        "activities": ["Toyosu Market", "National Museum of Nature and Science", "Shinjuku Gyoen National Garden"],
-        "start_date": "2021-06-15",
-        "end_date": "2021-06-26",
-        "attendees": null
+      "title": "Tokyo 2021",
+      "locations": "Tokyo",
+      "activities": [
+        "Toyosu Market",
+        "National Museum of Nature and Science",
+        "Shinjuku Gyoen National Garden"
+      ],
+      "start_date": "2021-06-15",
+      "end_date": "2021-06-26",
+      "attendees": null
     }
-},
-{
+  },
+  {
     "model": "trip.Trip",
     "pk": 3,
     "fields": {
-        "title": "Explore New Mexico 2020",
-        "locations": ["Santa Fe", "Taos"],
-        "activities": ["Art Walk", "Meow Wolf", "Jewelry-Making Class", "Tequila Tasting"],
-        "start_date": "2020-11-12",
-        "end_date": "2022-11-17",
-        "attendees": null
+      "title": "Explore New Mexico 2020",
+      "locations": ["Santa Fe", "Taos"],
+      "activities": ["Art Walk", "Meow Wolf", "Jewelry-Making Class", "Tequila Tasting"],
+      "start_date": "2020-11-12",
+      "end_date": "2022-11-17",
+      "attendees": null
     }
-}
+  }
 ]

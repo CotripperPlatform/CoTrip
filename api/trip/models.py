@@ -5,11 +5,11 @@ class Location(models.Model):
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
     country = models.CharField(max_length=200)
-    people = models.ManyToManyField('accounts.Profile')
     groups = models.ManyToManyField('community.Group')
 
     def __str__(self):
         return self.city
+
 
 class Trip(models.Model):
     title = models.CharField(max_length=200)
@@ -26,23 +26,25 @@ class Trip(models.Model):
     end_date = models.DateField()
     attendees = models.ManyToManyField('accounts.CustomUser')
 
-
     def __str__(self):
         return self.name
+
 
 class Activity(models.Model):
     for_kids = models.BooleanField()
     for_moms = models.BooleanField()
-    title = models.CharField(max_length = 200)
-    location = models.ForeignKey(Location, on_delete=models.CASCADE, related_name='activities', null=True)
+    title = models.CharField(max_length=200)
+    location = models.ForeignKey(
+        Location, on_delete=models.CASCADE, related_name='activities', null=True)
     description = models.TextField()
     date = models.DateField()
-    time = models.TimeField()   
+    time = models.TimeField()
+
     def __str__(self):
         return self.title + ", " + self.location.city
 
 
-#still missing/ not sure
+# still missing/ not sure
 # Location
 # Groups: One to many rel. with groups model
 # Members there: One to many rel. with profile model

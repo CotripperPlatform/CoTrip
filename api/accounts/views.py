@@ -2,12 +2,13 @@ from rest_framework import generics, permissions
 from rest_framework.mixins import UpdateModelMixin
 from rest_framework.response import Response
 from knox.models import AuthToken
-from .serializers import UserSerializer, RegisterSerializer, LoginSerializer,ProfileSerializer
-from .models import Profile, CustomUser
+from .serializers import UserSerializer, RegisterSerializer, LoginSerializer, ProfileSerializer, ProfileSocialMediaSerializer, SocialMediaTypeSerializer
+from .models import Profile, CustomUser, ProfileSocialMedia, SocialMediaType
 import boto3
 from django.http import JsonResponse
 from django.conf import settings
 import uuid
+
 
 class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
@@ -18,16 +19,17 @@ class RegisterAPI(generics.GenericAPIView):
         profile_data = {}
         if 'profile' in mutable_request_data:
             profile_data = mutable_request_data.pop('profile')
-            
+
         serializer = self.get_serializer(data=mutable_request_data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
         profile = Profile.objects.create(user=user, **profile_data)
-        
+
         return Response({
             "user": UserSerializer(user, context=self.get_serializer_context()).data,
             "token": AuthToken.objects.create(user)[1]
         })
+
 
 class LoginAPI(generics.GenericAPIView):
     serializer_class = LoginSerializer
@@ -48,9 +50,9 @@ class UserAPI(generics.RetrieveAPIView):
     ]
     serializer_class = UserSerializer
 
-
     def get_object(self):
         return self.request.user
+
 
 class ProfileList(generics.ListAPIView):
     queryset = Profile.objects.all()
@@ -60,23 +62,49 @@ class ProfileList(generics.ListAPIView):
 class ProfileDetail(generics.RetrieveAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
-    
+
+
 class ProfileUpdate(generics.RetrieveUpdateAPIView, UpdateModelMixin):
     permission_classes = [
         permissions.IsAuthenticated,
     ]
     serializer_class = ProfileSerializer
-    
+
     def get_object(self):
         return self.partial_update(self, self.request)
-    
-    
+
+
 # not added to urls VVV
 class UserList(generics.ListAPIView):
     serializer_class = UserSerializer
     queryset = CustomUser.objects.all()
-    
+
 # add view to update a profile, it should only allow a profile to be updated when they have a token saying theyre logged in
+
+
+class ProfileSocialMediaList(generics.ListCreateAPIView):
+    queryset = ProfileSocialMedia.objects.all()
+    serializer_class = ProfileSocialMediaSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
+
+class ProfileSocialMediaDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = ProfileSocialMedia.objects.all()
+    serializer_class = ProfileSocialMediaSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
+
+class SocialMediaTypeList(generics.ListCreateAPIView):
+    queryset = SocialMediaType.objects.all()
+    serializer_class = SocialMediaTypeSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
+
+class SocialMediaTypeDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = SocialMediaType.objects.all()
+    serializer_class = SocialMediaTypeSerializer
+    permissions_classes = (permissions.IsAuthenticated)
+
 
 def sign_s3(request):
 
