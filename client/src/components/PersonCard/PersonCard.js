@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./PersonCard.css";
+import PersonCardOnlineGreenDot from "../PersonCardOnlineGreenDot/PersonCardOnlineGreenDot";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import image from "../../assets/images/profile-picture-1.png";
-import { render } from "enzyme";
+// import { render } from "enzyme";
 
 // Function based React Component
 const PersonCard = (props) => {
-  if (status) {
-    return props.online && (
+  
+  // (online) ?  props.status && <PersonCard/> : <PersonCard/>
+  //   if (online) {
+  //   return props.status;
+  // }
+  return (
     <div className="PersonCard">
       <ProfilePicture type="medium" image={props.image} />
       <div className="PersonCard__name">{props.name}</div>
@@ -19,13 +24,12 @@ const PersonCard = (props) => {
             #{interests.interests}
           </Link>
         ))}
-        {/* { props.online || null} */}
       </div>
     </div>
   );
 };
 PersonCard.defaultProps = {
-  online: <div className="PersonCard__dot"></div>,
+  status: <div className="PersonCard__dot"></div>,
   image: { image },
   name: "Lindsay L.",
   location: "Washington D.C.",
@@ -36,8 +40,8 @@ PersonCard.defaultProps = {
     { url: "#", interests: "outdoors" },
   ],
 };
-
-const status = false;
+console.log(<PersonCard/>);
+const online = true;
 // ReactDOM.render(<PersonCard loggedIn />,
 //   document.getElementById('root'))
 export default PersonCard;
