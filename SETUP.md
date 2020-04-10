@@ -1,5 +1,5 @@
 # Setting Up the App
-Below are the steps to setup the frontend and backend of CoTrip when you begin working on it for the first time, or on a new machine for the first time. It is recommended that you setup from the develop branch, but some steps will need to be repeated when you begin work on a different branch, particularly if that branch has unique dependencies not included on the develop branch. 
+Below are a list of dependencies that are required to be installed on the system level as well as the steps to setup the frontend and backend of CoTrip when you begin working on it for the first time. It is recommended that you setup from the develop branch, but some steps will need to be repeated when you begin work on a different branch, particularly if that branch has unique dependencies not included on the develop branch. 
 
 ## System-Level Dependencies
 * npm
