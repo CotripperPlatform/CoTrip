@@ -3,11 +3,7 @@ import "./Banner.css";
 
 const Banner = props => {
   const {type, background, children} = props;
-  // let classList = 'Banner';
-  // if (props.type === 'BannerLarge' ) {
-  //   classList += ` Banner--large`
-  // } 
-  return <div className={`Banner ${type === 'BannerLarge' ? 'Banner--Large' : ''}`} style={{
+  return <div className={`Banner ${type === 'BannerLarge' ? 'Banner--large' : ''}`} style={{
     backgroundImage: `url(${background})`
   }}>
     {children}
