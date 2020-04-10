@@ -40,6 +40,7 @@
     "fields": {
       "user": 1,
       "topics": [1, 2],
+      "hashtags": [1],
       "image": "https://cotripperdev.s3.amazonaws.com/profile/b151b86a79b011eabef33ca9f4927614",
       "first_name": "Jane",
       "last_name": "Doe",
@@ -47,9 +48,9 @@
       "age": "30",
       "dream_destination": "Arizona",
       "bio": "Looking for fun trips with other single moms and their kids :)",
-      "instagram_url": "https://www.instagram.com/",
-      "pinterest_url": "https://www.pinterest.com/",
-      "facebook_url": "https://www.facebook.com/"
+      "activities": [1, 2, 3, 4, 9],
+      "events": [1],
+      "connections": [2, 3]
     }
   },
   {
@@ -58,6 +59,7 @@
     "fields": {
       "user": 2,
       "topics": [1, 2, 3],
+      "hashtags": [1, 2, 3],
       "image": "https://cotripperdev.s3.amazonaws.com/profile/2de9153a79b111eabef33ca9f4927614",
       "first_name": "Janette",
       "last_name": "Doe",
@@ -65,9 +67,8 @@
       "age": "30",
       "dream_destination": "New Mexico",
       "bio": "Looking for fun trips with other single moms and their kids :)",
-      "instagram_url": "https://www.instagram.com/",
-      "pinterest_url": "https://www.pinterest.com/",
-      "facebook_url": "https://www.facebook.com/"
+      "activities": [2, 3, 7, 9],
+      "events": [2]
     }
   },
   {
@@ -75,7 +76,7 @@
     "pk": 3,
     "fields": {
       "user": 3,
-      "topics": [2, 3],
+      "topics": [3],
       "image": "https://cotripperdev.s3.amazonaws.com/profile/50a5ffc079b111eabef33ca9f4927614",
       "first_name": "Joni",
       "last_name": "Doe",
@@ -83,9 +84,9 @@
       "age": "30",
       "dream_destination": "California",
       "bio": "Looking for fun trips with other single moms and their kids :)",
-      "instagram_url": "https://www.instagram.com/",
-      "pinterest_url": "https://www.pinterest.com/",
-      "facebook_url": "https://www.facebook.com/"
+      "activities": [1, 3, 5, 9],
+      "events": [3],
+      "connections": [2]
     }
   },
   {
@@ -94,6 +95,7 @@
     "fields": {
       "user": 4,
       "topics": [1, 3],
+      "hashtags": [2, 3],
       "image": "https://cotripperdev.s3.amazonaws.com/profile/6f16322c79b111eabef33ca9f4927614",
       "first_name": "Wendy",
       "last_name": "Doe",
@@ -101,9 +103,8 @@
       "age": "30",
       "dream_destination": "Canada",
       "bio": "Looking for fun trips with other single moms and their kids :)",
-      "instagram_url": "https://www.instagram.com/",
-      "pinterest_url": "https://www.pinterest.com/",
-      "facebook_url": "https://www.facebook.com/"
+      "activities": [2, 4, 5, 6, 7, 9],
+      "events": [1, 2]
     }
   },
   {
@@ -112,6 +113,7 @@
     "fields": {
       "user": 5,
       "topics": [3],
+      "hashtags": [1, 2],
       "image": "https://cotripperdev.s3.amazonaws.com/profile/8b8b31f079b111eabef33ca9f4927614",
       "first_name": "Wendy",
       "last_name": "Bite",
@@ -119,9 +121,84 @@
       "age": "30",
       "dream_destination": "Cuba",
       "bio": "Looking for fun trips with older single moms",
-      "instagram_url": "https://www.instagram.com/",
-      "pinterest_url": "https://www.pinterest.com/",
-      "facebook_url": "https://www.facebook.com/"
+      "activities": [5, 6, 7, 8, 9, 10, 11],
+      "events": [2, 3],
+      "connections": [4]
+    }
+  },
+  {
+    "model": "accounts.SocialMediaType",
+    "pk": 1,
+    "fields": {
+      "name": "Facebook"
+    }
+  },
+  {
+    "model": "accounts.SocialMediaType",
+    "pk": 2,
+    "fields": {
+      "name": "Instagram"
+    }
+  },
+  {
+    "model": "accounts.SocialMediaType",
+    "pk": 3,
+    "fields": {
+      "name": "Pinterest"
+    }
+  },
+  {
+    "model": "accounts.ProfileSocialMedia",
+    "pk": 1,
+    "fields": {
+      "social_media_type": 1,
+      "url": "https://www.facebook.com/",
+      "profile": 1
+    }
+  },
+  {
+    "model": "accounts.ProfileSocialMedia",
+    "pk": 2,
+    "fields": {
+      "social_media_type": 2,
+      "url": "https://www.instagram.com/",
+      "profile": 1
+    }
+  },
+  {
+    "model": "accounts.ProfileSocialMedia",
+    "pk": 3,
+    "fields": {
+      "social_media_type": 3,
+      "url": "https://www.pinterest.com/",
+      "profile": 1
+    }
+  },
+  {
+    "model": "accounts.ProfileSocialMedia",
+    "pk": 4,
+    "fields": {
+      "social_media_type": 1,
+      "url": "https://www.facebook.com/",
+      "profile": 2
+    }
+  },
+  {
+    "model": "accounts.ProfileSocialMedia",
+    "pk": 5,
+    "fields": {
+      "social_media_type": 1,
+      "url": "https://www.facebook.com/",
+      "profile": 3
+    }
+  },
+  {
+    "model": "accounts.ProfileSocialMedia",
+    "pk": 6,
+    "fields": {
+      "social_media_type": 1,
+      "url": "https://www.facebook.com/",
+      "profile": 4
     }
   }
 ]
