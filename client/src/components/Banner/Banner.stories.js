@@ -197,13 +197,13 @@ storiesOf("Layout/Banner", module)
   ))
   .add("Book Trip Banner without Text", () => (
     <Banner 
-    bannerType= "BannerLarge"
+    type= "BannerLarge"
     background={Banner__booktrip}>
     </Banner>
   ))
   .add("Book Trip Banner with Text", () => (
     <Banner 
-    bannerType= "BannerLarge"
+    type= "BannerLarge"
     background={Banner__booktrip}>
       <h3>Hawaii 2020</h3>
     </Banner>

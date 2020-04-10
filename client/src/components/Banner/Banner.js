@@ -2,16 +2,15 @@ import React from "react";
 import "./Banner.css";
 
 const Banner = props => {
-  let classList = '';
-  if (props.bannerType === 'BannerLarge' ) {
-    classList += ` Banner--large`
-  } else {
-    classList += ` Banner`
-  }
-  return <div className={classList} style={{
-    backgroundImage: `url(${props.background})`
+  const {type, background, children} = props;
+  // let classList = 'Banner';
+  // if (props.type === 'BannerLarge' ) {
+  //   classList += ` Banner--large`
+  // } 
+  return <div className={`Banner ${type === 'BannerLarge' ? 'Banner--Large' : ''}`} style={{
+    backgroundImage: `url(${background})`
   }}>
-    {props.children}
+    {children}
   </div>;
 };
 

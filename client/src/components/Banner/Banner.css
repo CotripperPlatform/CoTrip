@@ -20,21 +20,20 @@
 }
 .Banner--large{
   height: 488px;
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-  color: #fafafa;
+  /* background-position: center;
+  background-size: cover; */
+  /* width: 100vw; */
+  /* color: #fafafa; */
   font-size: 100px;
-  font-family: var(--default-font);
   position: relative;
  
 }
 .Banner--large > * {
   position: absolute;
   vertical-align: text-bottom;
-  margin: 0;
+  margin-bottom: 40px;
   bottom: 0;
-  right: 20px;
+  right: 40px;
 }
 
 
