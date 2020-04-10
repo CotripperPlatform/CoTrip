@@ -82,7 +82,7 @@ const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
       <nav>
-        <NavBar to={"/member-page"} profileImage={people}></NavBar>
+        <NavBar to={"/member-page"} profileImage={props.image}></NavBar>
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
@@ -145,25 +145,25 @@ const HomePage = props => {
         <div className="HomePage__mobile-wrapper">
           <Link to="/">
             <Card color="yellow" size="mobile">
-              <img src={groups} />
+              <img src={groups} className="HomePage__mobile-card-icon" />
               <h2>Suggested Groups</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="pink" size="mobile">
-              <img src={airplane} />
+              <img src={airplane} className="HomePage__mobile-card-icon" />
               <h2>Book a Trip</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="red" size="mobile">
-              <img src={suggestedPeople} />
+              <img src={suggestedPeople} className="HomePage__mobile-card-icon" />
               <h2>Suggested People</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="purple" size="mobile">
-              <img src={hashtags} />
+              <img src={hashtags} className="HomePage__mobile-card-icon" />
               <h2>Trending Hashtags</h2>
             </Card>
           </Link>
@@ -204,10 +204,10 @@ const HomePage = props => {
       </div>
 
       <footer className="HomePage__footer-wrapper">
-        <SignUp>
-          <h2>Never Miss a Trip</h2>
-          <h3>Sign up with your email address to recieve news and updates</h3>
-        </SignUp>
+        <SignUp
+          heading="Never Miss a Trip"
+          subheading="Sign up with your email address to recieve news and updates"
+        ></SignUp>
         <Footer history={props.history} handle_logout={props.handle_logout} />
       </footer>
     </body>

@@ -26,6 +26,9 @@ import {
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
+import { BASE_URL } from "./services/constants";
+import { handleSignup, handleLogin, handleLogout } from "./services/User";
+
 library.add(
   fab,
   far,
@@ -53,10 +56,14 @@ class App extends Component {
       first_name: "",
       image: ""
     };
+
+    this.handleSignup = handleSignup.bind(this);
+    this.handleLogin = handleLogin.bind(this);
+    this.handleLogout = handleLogout.bind(this);
   }
   componentDidMount() {
     if (this.state.logged_in) {
-      fetch("http://localhost:8000/auth/user", {
+      fetch(`${BASE_URL}/auth/user`, {
         headers: {
           Authorization: `Token ${localStorage.getItem("token")}`
         }
@@ -64,67 +71,19 @@ class App extends Component {
         .then(res => res.json())
         .then(json => {
           console.log(json);
-          this.setState({
-            email: json.email,
-            first_name: json.profile.first_name,
-            image: json.profile.image
-          });
+          if (json.detail == "Invalid token.") {
+            this.handleLogout();
+          } else {
+            this.setState({
+              email: json.email,
+              first_name: json.profile.first_name,
+              image: json.profile.image
+            });
+          }
         });
     }
   }
-  handle_login = (data, history) => {
-    fetch("http://localhost:8000/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json.token);
-        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
-        this.setState({
-          logged_in: json.token != undefined ? true : false,
-          email: json.user.email,
-          first_name: json.user.profile.first_name,
-          image: json.user.profile.image
-        });
-        history.push("/home");
-      })
-      .catch(err => {
-        console.log(err);
-        alert("Please enter valid email and password");
-      });
-  };
-  handle_signup = (data, history) => {
-    fetch("http://localhost:8000/auth/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json);
-        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
-        this.setState({
-          logged_in: json.token != undefined ? true : false,
-          email: json.user.email,
-          first_name: json.user.profile.first_name,
-          image: json.user.profile.image
-        });
-        history.push("/home");
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
-  handle_logout = () => {
-    localStorage.removeItem("token");
-    this.setState({ logged_in: false, email: "", first_name: "", image: "" });
-  };
+
   render() {
     return (
       <div className="App">
@@ -134,31 +93,37 @@ class App extends Component {
           <Route
             path="/hawaii-2020"
             exact
-            render={routerProps => <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />}
+            render={routerProps => (
+              <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
+            )}
           ></Route>
           <Route
             path="/book-a-trip"
             exact
-            render={routerProps => <BookATripPage handle_logout={this.handle_logout} {...routerProps} />}
+            render={routerProps => (
+              <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
+            )}
           ></Route>
-         
+
           <Route
             path="/member-page"
             exact
-            render={routerProps => <MemberPage  handle_logout={this.handle_logout} {...routerProps} />}
+            render={routerProps => (
+              <MemberPage handle_logout={this.handleLogout} {...routerProps} />
+            )}
           ></Route>
           <Route
             path="/coming_soon"
             exact
             render={routerProps => (
-              <ComingSoonPage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+              <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
             path="/login"
             exact
             render={routerProps => (
-              <LoginPage handleLogin={this.handle_login} {...routerProps} {...this.state} />
+              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
@@ -166,7 +131,7 @@ class App extends Component {
             exact
             render={routerProps => (
               <OnboardingPage
-                handleSignup={this.handle_signup}
+                handleSignup={this.handleSignup}
                 {...routerProps}
                 logged_in={this.state.logged_in}
               />
@@ -176,7 +141,7 @@ class App extends Component {
             path="/home"
             exact
             render={routerProps => (
-              <HomePage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+              <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>

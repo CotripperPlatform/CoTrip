@@ -3,6 +3,8 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import FileUpload from "components/FileUploadComponent/FileUpload";
+import { getSignedRequest, uploadFile } from "../../../services/Accounts";
+
 // import handleFile from ""
 class PersonalSettingsForm extends Component {
   constructor(props) {
@@ -19,6 +21,9 @@ class PersonalSettingsForm extends Component {
         city_of_residence: this.props.filter.city
       }
     };
+
+    this.getSignedRequest = getSignedRequest.bind(this);
+    this.uploadFile = uploadFile.bind(this);
   }
 
   updateValue = e => {
@@ -47,9 +52,9 @@ class PersonalSettingsForm extends Component {
                 evt.preventDefault();
                 evt.persist();
                 console.log(evt);
-                let imageUrl = URL.createObjectURL(evt.target.files[0]);
-                this.setState({ profile: { ...this.state.profile, image: imageUrl } });
-                return imageUrl;
+
+                let file = evt.target.files[0];
+                this.getSignedRequest(file, "profile");
               }}
             ></FileUpload>
           ) : (

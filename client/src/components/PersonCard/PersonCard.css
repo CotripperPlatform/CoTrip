@@ -13,6 +13,7 @@
   padding: .5rem 0 0 0;
 }
 
+
 .PersonCard__name {
   font-family: var(--default-font);
   font-weight: var(--banner-weight);
