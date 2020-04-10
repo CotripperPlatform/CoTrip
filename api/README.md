@@ -33,6 +33,12 @@ psql -U postgres -f settings.sql
 
 1. To access our file uploading system on your local project, you'll need access to our local environment variables. This will need to be set up as a `.env` file, saved in the same location as this README. If you're a student at GA working on this project, ask your instructor for it! For other contributors, please reach out to our admins.
 
+1. By default the CoTripper project is configured to run the production database; NOT the database that is setup on your local machine. When you want to run your local server during development use this command in the pipenv shell:
+
+```
+python manage.py runserver --settings api.settings.local
+```
+
 ## API Description
 
 ### ERD
@@ -55,4 +61,4 @@ Suggested models, fields, and relationships. Remember, relationships are only de
 
 ## API Deployment
 
-- Deployed on Heroku
+- Deployed on Heroku: https://cotripper-api.herokuapp.com/

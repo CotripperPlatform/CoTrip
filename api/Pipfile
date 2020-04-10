@@ -18,6 +18,8 @@ gunicorn = "*"
 django-extensions = "*"
 ipython = "*"
 boto3 = "*"
+django-heroku = "*"
+dj-database-url = "*"
 
 [requires]
 python_version = "*"
