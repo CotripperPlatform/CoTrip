@@ -1,4 +1,5 @@
 # Setting Up the App
+Below are the steps to setup the frontend and backend of CoTrip when you begin working on it for the first time, or on a new machine for the first time. It is recommended that you setup from the develop branch, but some steps will need to be repeated when you begin work on a different branch, particularly if that branch has unique dependencies not included on the develop branch. 
 
 ## System-Level Dependencies
 * npm
@@ -18,6 +19,7 @@
 1. Navigate into client directory
 2. Run command `npm install` to install the dependencies found in the package.json file, when you start working on an existing branch, ensure that additional dependencies are not listed in the package.json file found on that branch.
 3. Run command `npm start` to start the server and view the frontend on your machine.
+4. Run command `npm run storybook` to run the component library locally and view the components. 
 
 ## Setting up Backend
 1. Navigate into api directory
