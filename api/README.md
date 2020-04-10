@@ -61,4 +61,4 @@ Suggested models, fields, and relationships. Remember, relationships are only de
 
 ## API Deployment
 
-- Deployed on Heroku
+- Deployed on Heroku: https://cotripper-api.herokuapp.com/

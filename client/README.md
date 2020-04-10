@@ -188,3 +188,7 @@ For example:
   font-size: 1rem;
 }
 ```
+
+## Deployment
+
+- Deployed on Netlify: https://cotripper.netlify.com/
