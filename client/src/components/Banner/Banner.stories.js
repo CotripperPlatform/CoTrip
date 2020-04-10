@@ -195,13 +195,17 @@ storiesOf("Layout/Banner", module)
       />
     </Banner>
   ))
+  .add("Book Trip Banner without Text", () => (
+    <Banner 
+    bannerType= "BannerLarge"
+    background={Banner__booktrip}>
+    </Banner>
+  ))
   .add("Book Trip Banner with Text", () => (
     <Banner 
-    bannerType= "booktrip"
+    bannerType= "BannerLarge"
     background={Banner__booktrip}>
       <h3>Hawaii 2020</h3>
     </Banner>
   ));
 
-
-  // style={{ textAlign: "right" }}

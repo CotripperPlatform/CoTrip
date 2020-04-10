@@ -3,8 +3,8 @@ import "./Banner.css";
 
 const Banner = props => {
   let classList = '';
-  if (props.bannerType === 'booktrip' ) {
-    classList += ` Banner-booktrip`
+  if (props.bannerType === 'BannerLarge' ) {
+    classList += ` Banner--large`
   } else {
     classList += ` Banner`
   }
