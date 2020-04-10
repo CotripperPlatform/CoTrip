@@ -3,35 +3,35 @@
     "model": "accounts.CustomUser",
     "pk": 1,
     "fields": {
-      "email": "admin@ad.min"
+      "email": "a@example.com"
     }
   },
   {
     "model": "accounts.CustomUser",
     "pk": 2,
     "fields": {
-      "email": "abc@ab.cd"
+      "email": "ab@example.com"
     }
   },
   {
     "model": "accounts.CustomUser",
     "pk": 3,
     "fields": {
-      "email": "abc@ab.cde"
+      "email": "abc@example.com"
     }
   },
   {
     "model": "accounts.CustomUser",
     "pk": 4,
     "fields": {
-      "email": "abc@ab.cdef"
+      "email": "abcd@example.com"
     }
   },
   {
     "model": "accounts.CustomUser",
     "pk": 5,
     "fields": {
-      "email": "abc@ab.cdefg"
+      "email": "abcde@example.com"
     }
   },
   {
