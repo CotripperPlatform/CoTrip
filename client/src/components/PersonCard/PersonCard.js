@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./PersonCard.css";
-import PersonCardOnlineGreenDot from "../PersonCardOnlineGreenDot/PersonCardOnlineGreenDot";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
 import image from "../../assets/images/profile-picture-1.png";
 // import { render } from "enzyme";
@@ -40,7 +39,6 @@ PersonCard.defaultProps = {
     { url: "#", interests: "outdoors" },
   ],
 };
-console.log(<PersonCard/>);
 const online = true;
 // ReactDOM.render(<PersonCard loggedIn />,
 //   document.getElementById('root'))
