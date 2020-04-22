@@ -27,9 +27,21 @@ git clone git@github.com:CotripperPlatform/CoTrip.git
 
 1. Run the following command in the shell to load the sql file into postgres
 
-```
-psql -U postgres -f settings.sql
-```
+   ```
+   psql -U postgres -f settings.sql
+   ```
+
+1. To migrate the existing models into the database, run the following command in the pipenv shell:
+
+   ```
+   python manage.py migrate --settings api.settings.local
+   ```
+
+1. To load seed data into the database created in the above steps, run the following command in the pipenv shell:
+
+   ```
+   python manage.py loaddata community accounts trip forum --settings api.settings.local
+   ```
 
 1. To access our file uploading system on your local project, you'll need access to our local environment variables. This will need to be set up as a `.env` file, saved in the same location as this README. If you're a student at GA working on this project, ask your instructor for it! For other contributors, please reach out to our admins.
 
