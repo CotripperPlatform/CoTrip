@@ -17,7 +17,7 @@ CoTripper is a Django-based project aimed at providing an experience-based trave
 
 1. Clone the Repository
 
-```
+```sh
 git clone git@github.com:CotripperPlatform/CoTrip.git
 ```
 
@@ -27,7 +27,7 @@ git clone git@github.com:CotripperPlatform/CoTrip.git
 
 4. Run the following command in the shell to load the sql file into postgres
 
-```
+```sh
 psql -U postgres -f settings.sql
 ```
 
@@ -35,7 +35,7 @@ psql -U postgres -f settings.sql
 
 6. By default the CoTripper project is configured to run the production database; NOT the database that is setup on your local machine. Whenever you run a command for your local server, you'll need to use the `--settings` flag with the path to the local settings. For example:
 
-```
+```sh
 # Migrate the database:
 python manage.py migrate --settings api.settings.local
 
