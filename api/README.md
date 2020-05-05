@@ -36,7 +36,10 @@ psql -U postgres -f settings.sql
 6. By default the CoTripper project is configured to run the production database; NOT the database that is setup on your local machine. Whenever you run a command for your local server, you'll need to use the `--settings` flag with the path to the local settings. For example:
 
 ```
+# Migrate the database:
 python manage.py migrate --settings api.settings.local
+
+# Run the backend development server:
 python manage.py runserver --settings api.settings.local
 ```
 
