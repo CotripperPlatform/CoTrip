@@ -20,6 +20,7 @@ CoTripper is a Django-based project aimed at providing an experience-based trave
 ```sh
 git clone git@github.com:CotripperPlatform/CoTrip.git
 ```
+2. `cd` into `CoTrip/api`
 
 2. Run command `pipenv install` this will set up the virtual environment and install dependencies listed in the pipfile.
 
