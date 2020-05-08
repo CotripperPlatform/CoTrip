@@ -71,6 +71,10 @@ CORS_ORIGIN_REGEX_WHITELIST = [
     'http://localhost:3000',
 ]
 
+FIXTURES_DIRS=[
+    'accounts/fixtures/'
+]
+
 ROOT_URLCONF = 'api.urls'
 
 TEMPLATES = [
