@@ -14,6 +14,9 @@ For setup and installation instructions, see the readmes for the API and Client:
 - [API Readme](./api/README.md)
 - [Client Readme](./client/README.md)
 
+### CORS 
+In order to ensure that CORS works properly, install [CORS](https://mybrowseraddon.com/access-control-allow-origin.html) into your browser
+
 ### Dependencies
 
 You will need the following installed locally on your machine:
