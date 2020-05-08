@@ -40,10 +40,23 @@ psql -U postgres -f settings.sql
 # Migrate the database:
 python manage.py migrate --settings api.settings.local
 
+# Seed Database with fixtures data
+python manage.py loaddata community accounts trip forum --settings api.settings.local
+
 # Run the backend development server:
 python manage.py runserver --settings api.settings.local
 ```
+1. To migrate the existing models into the database, run the following command in the pipenv shell:
 
+   ```
+   python manage.py migrate --settings api.settings.local
+   ```
+
+1. To load seed data into the database created in the above steps, run the following command in the pipenv shell:
+
+```
+python manage.py loaddata community accounts trip forum --settings api.settings.local
+```
 ## API Description
 
 ### ERD
