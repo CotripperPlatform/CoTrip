@@ -1,4 +1,4 @@
-# CoTripper API
+# CoTripper API; Hey, how is this for documentation, buddy!
 
 ## Description
 
