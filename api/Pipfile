@@ -20,6 +20,7 @@ ipython = "*"
 boto3 = "*"
 django-heroku = "*"
 dj-database-url = "*"
+django-filter = "*"
 
 [requires]
 python_version = "*"
