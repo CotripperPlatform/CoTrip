@@ -2,6 +2,7 @@ import React from "react";
 import "./ComingSoonPage.css";
 import Button from "components/Button/Button";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
+import Navbar from "components/Navbar/Navbar.js";
 
 // Function based React Component
 const ComingSoonPage = props => {
@@ -13,6 +14,7 @@ const ComingSoonPage = props => {
   return (
     <div className="ComingSoonPage__wrapper">
       <span></span>
+      <Navbar />
       <h1>Coming Soon!</h1>
       <h2>Welcome to this page, {props.first_name}</h2>
       <Button text="Logout" handleClick={handleClick} />
