@@ -15,5 +15,5 @@ class TripFilter(FilterSet):
     title = django_filters.CharFilter(field_name="title",lookup_expr="icontains") 
 
     class Meta:
-        model = Trip 
+        model = Trip
         fields = ('title','start_date', 'end_date')
