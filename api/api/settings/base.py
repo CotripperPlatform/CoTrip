@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'trip',
     'django_extensions',
     'forum',
-    'django_filters'
+    'django_filters',
 ]
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('knox.auth.TokenAuthentication',)
