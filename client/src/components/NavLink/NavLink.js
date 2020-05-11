@@ -8,7 +8,6 @@ class NavLink extends React.Component {
     super(props);
     this.state = {
       dropdownVisible: false,
-      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"]
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
   }
@@ -27,8 +26,7 @@ class NavLink extends React.Component {
         onMouseLeave={this.toggleDropdown}
       >
         <Link to={this.props.to}>
-    <h1>{this.props.text}</h1>
-          
+          <h1>{this.props.text}</h1>
         </Link>
 
         <div
@@ -45,8 +43,8 @@ class NavLink extends React.Component {
   }
 }
 NavLink.defaultProps = {
-  text: "community",
-  to: "",
+  text: "Community",
+  to: "/",
   menuList: [
     {
       text: "Explore People",
@@ -56,7 +54,7 @@ NavLink.defaultProps = {
       text: "Join Groups",
       to: "/join-groups"
     }
-  ],
+  ]
 };
 
 export default NavLink;
