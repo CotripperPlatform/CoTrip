@@ -30,7 +30,6 @@ const Hawaii2020 = props => {
         <h3>Trip: {tripName} 2020</h3>
       </Banner>
       <div className="Hawaii2020__BannerImageCard-container">
-        {/* <BannerImageCard background={Banner__Image} message="Hawaii 2020" /> */}
         <Banner type="BannerLarge" background={Banner__Image}>
           <h3>Hawaii 2020</h3>
         </Banner>
