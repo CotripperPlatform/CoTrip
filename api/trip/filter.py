@@ -6,7 +6,7 @@ from .models import Trip
 filter class for trip by title, start_date, end_date
     title: filter by title with fuzzy query, return the list which each trip.title contains the filter's title (ignore case)
     start_date: return the list which each trip.start_date >= the filter's start_date
-    end_date: return the list which each trip.end_date >= the filter's end_date
+    end_date: return the list which each trip.end_date <= the filter's end_date
 '''
 class TripFilter(FilterSet):
     start_date = django_filters.DateFilter(field_name="start_date",
