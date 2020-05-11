@@ -1,0 +1,34 @@
+.ForumPage {
+  overflow: hidden;
+}
+
+.ForumPage__banner {
+  width: 100vw;
+  height: 231px;
+  background-color: var(--pink);
+}
+
+.ForumPage__header {
+  font-family: var(--default-font);
+  font-size: 36px;
+  color: var(--purple);
+  padding: 20px 50px 0px 50px;
+  margin: 0 auto;
+}
+
+.ForumPage__button-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+@media only screen and (max-width: 320px) {
+  .ForumPage__header {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .ForumPage {
+    width: 100vw;
+  }
+}
