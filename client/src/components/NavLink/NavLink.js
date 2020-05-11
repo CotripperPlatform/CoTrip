@@ -7,7 +7,8 @@ class NavLink extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropdownVisible: false
+      dropdownVisible: false,
+      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"]
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
   }
@@ -25,19 +26,19 @@ class NavLink extends React.Component {
         onMouseEnter={this.toggleDropdown}
         onMouseLeave={this.toggleDropdown}
       >
-        <div>
-          <Link to={this.props.to} >
-            <h1>{this.props.text}</h1>
-          </Link>
-          <div
-            className={
-              this.state.dropdownVisible
-                ? "NavLink__dropdown NavLink__dropdown-show"
-                : "NavLink__dropdown"
-            }
-          >
-            <NavLinkDropdownMenu menuList={this.props.menuList.length ? this.props.menuList : []} />
-          </div>
+        <Link to={this.props.to}>
+    <h1>{this.props.text}</h1>
+          
+        </Link>
+
+        <div
+          className={
+            this.state.dropdownVisible
+              ? "NavLink__dropdown NavLink__dropdown-show"
+              : "NavLink__dropdown"
+          }
+        >
+          <NavLinkDropdownMenu menuList={this.props.menuList.length ? this.props.menuList : []} />
         </div>
       </div>
     );
@@ -45,17 +46,17 @@ class NavLink extends React.Component {
 }
 NavLink.defaultProps = {
   text: "community",
-  to:'',
+  to: "",
   menuList: [
     {
       text: "Explore People",
-      to: "/"
+      to: "/explore-people"
     },
     {
       text: "Join Groups",
-      to: "/"
+      to: "/join-groups"
     }
-  ]
+  ],
 };
 
 export default NavLink;

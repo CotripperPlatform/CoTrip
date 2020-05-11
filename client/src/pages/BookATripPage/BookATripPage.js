@@ -16,7 +16,6 @@ import Footer from "../../components/Footer/Footer";
 const BookATripPage = props => {
   return (
     <div className="BookATripPage">
-      <NavBar page={3} profileImage={people} />
       <Banner background={Banner__pink}>
         <h3 style={{ margin: 0 }}>Book a Trip</h3>
         <InputTextField

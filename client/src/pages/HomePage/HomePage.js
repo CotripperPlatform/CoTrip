@@ -81,9 +81,9 @@ const handleClick = e => {
 const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
-      <nav>
+      {/* <nav>
         <NavBar to={"/member-page"} profileImage={props.image}></NavBar>
-      </nav>
+      </nav> */}
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
           {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}

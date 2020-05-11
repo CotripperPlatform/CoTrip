@@ -28,6 +28,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import Navbar from "components/Navbar/Navbar.js";
 
 library.add(
   fab,
@@ -54,7 +55,8 @@ class App extends Component {
         localStorage.getItem("token") && localStorage.getItem("token") != undefined ? true : false,
       email: "",
       first_name: "",
-      image: ""
+      image: "",
+      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
     };
 
     this.handleSignup = handleSignup.bind(this);
@@ -87,6 +89,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar/>
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
