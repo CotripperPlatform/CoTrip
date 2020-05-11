@@ -26,7 +26,7 @@ class Profile(models.Model):
         'community.Topic', related_name='followers', null=True, blank=True)
     hashtags = models.ManyToManyField(
         'community.Hashtag', related_name='followers', null=True, blank=True)
-    image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    image = models.CharField(max_length=150)
     first_name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200, null=True)
     city_of_residence = models.CharField(max_length=200, null=True, blank=True)

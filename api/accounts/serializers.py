@@ -12,7 +12,7 @@ class SocialMediaTypeSerializer(serializers.ModelSerializer):
 
 
 class ProfileSocialMediaSerializer(serializers.ModelSerializer):
-    social_media_type = SocialMediaTypeSerializer(many=True, read_only=True)
+    social_media_type = SocialMediaTypeSerializer(read_only=True)
 
     class Meta:
         model = ProfileSocialMedia
