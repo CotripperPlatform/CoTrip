@@ -1,15 +1,21 @@
 from django.db import models
 
-
-class Location(models.Model):
-    city = models.CharField(max_length=200)
-    state = models.CharField(max_length=200)
-    country = models.CharField(max_length=200)
-    groups = models.ManyToManyField('community.Group')
-
+class Place(models.Model):
+    name = models.CharField(max_length = 200)
+    code = models.CharField(max_length = 2)
+class Country(Place):
     def __str__(self):
-        return self.city
-
+        return self.name + "(" + self.code +")"
+class State(Place):
+    country = models.ForeignKey(Country, on_delete=models.CASCADE) 
+    def __str__(self):
+        return self.state_code +", " + self.country.code
+    #country = models.CharField(max_length=200)
+class City(Place):
+    def __str__(self):
+        return self.name + ", " + self.state.code
+class Location(Place):
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
 
 class Trip(models.Model):
     title = models.CharField(max_length=200)
@@ -20,22 +26,20 @@ class Trip(models.Model):
     # Also, we might want to have a many to many relationship so multiple trips can have the same location and one trip and have multiple locations
     # Tyler advised that we give each trip just one location to make things simpler
 
-    locations = models.ManyToManyField('trip.Location')
-    activities = models.ManyToManyField('trip.Activity')
+    locations = models.ManyToManyField('trip.Location', related_name='trips')
+    activities = models.ManyToManyField('trip.Activity', related_name='trips')
     start_date = models.DateField()
     end_date = models.DateField()
-    attendees = models.ManyToManyField('accounts.CustomUser')
 
     def __str__(self):
-        return self.name
+        return self.title
 
 
 class Activity(models.Model):
     for_kids = models.BooleanField()
     for_moms = models.BooleanField()
     title = models.CharField(max_length=200)
-    location = models.ForeignKey(
-        Location, on_delete=models.CASCADE, related_name='activities', null=True)
+    location = models.ManyToManyField('trip.Location', related_name='activities',)
     description = models.TextField()
     date = models.DateField()
     time = models.TimeField()

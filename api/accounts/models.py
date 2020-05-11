@@ -34,6 +34,7 @@ class Profile(models.Model):
     # city_of_residence = models.ForeignKey(
     #     'trip.Location', on_delete=models.CASCADE, related_name='people', null=True, blank=True)
     age = models.IntegerField(null=True)
+    trips = models.ManyToManyField('trip.Trip', related_name='attendees', null=True, blank=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
     activities = models.ManyToManyField(
