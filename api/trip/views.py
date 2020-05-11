@@ -7,6 +7,7 @@ from .models import Location, Trip, Activity
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .filter import TripFilter
+from datetime import date
 
 class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
@@ -35,6 +36,14 @@ class TripSearch(generics.ListAPIView):
     ordering_fields = ("start_date","end_date",)
     ordering = ('start_date',"end_date",)
     
+class TripUpcomingList(generics.ListAPIView):
+    queryset = Trip.objects.filter(start_date__gt=date.today())
+    serializer_class = TripSerializer
+
+    filter_backends = ( DjangoFilterBackend, OrderingFilter)
+    filterset_class = TripFilter
+    ordering_fields = ("start_date","end_date",)
+    ordering = ('start_date',"end_date",)
     
 class ActivityList(generics.ListAPIView):
     queryset = Activity.objects.all()
