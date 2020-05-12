@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
-import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -95,7 +94,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar/>
         <main>
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
@@ -106,13 +104,9 @@ class App extends Component {
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>{" "}
-          <Route
-            path="/community"
-            exact
-            render={routerProps => (
-              <CommunityPage handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
+          
+        
+         
           <Route
             path="/book-a-trip"
             exact

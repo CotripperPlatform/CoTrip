@@ -7,7 +7,7 @@ class NavLink extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      dropdownVisible: false,
+      dropdownVisible: false
     };
     this.toggleDropdown = this.toggleDropdown.bind(this);
   }
@@ -19,27 +19,51 @@ class NavLink extends React.Component {
     }
   }
   render() {
-    return (
-      <div
-        className="NavLink"
-        onMouseEnter={this.toggleDropdown}
-        onMouseLeave={this.toggleDropdown}
-      >
-        <Link to={this.props.to}>
-          <h1>{this.props.text}</h1>
-        </Link>
+    console.log(this.props);
+    if (this.props.text === "Community") {
 
+      return (
         <div
-          className={
-            this.state.dropdownVisible
-              ? "NavLink__dropdown NavLink__dropdown-show"
-              : "NavLink__dropdown"
-          }
+          className="NavLink"
+          onMouseEnter={this.toggleDropdown}
+          onMouseLeave={this.toggleDropdown}
         >
-          <NavLinkDropdownMenu menuList={this.props.menuList.length ? this.props.menuList : []} />
+          <Link to={this.props.to}>
+            <h1>{this.props.text}</h1>
+          </Link>
+
+          <div
+            className={
+              this.state.dropdownVisible
+                ? "NavLink__dropdown NavLink__dropdown-show"
+                : "NavLink__dropdown"
+            }
+          >
+            <NavLinkDropdownMenu menuList={this.props.menuList.length ? this.props.menuList : []} />
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <div
+            className="NavLink"
+          >
+            <Link to={this.props.to}>
+              <h1>{this.props.text}</h1>
+            </Link>
+
+            <div
+              className={
+                this.state.dropdownVisible
+                  ? "NavLink__dropdown NavLink__dropdown-show"
+                  : "NavLink__dropdown"
+              }
+            ></div>
+          </div>
+        </div>
+      );
+    }
   }
 }
 NavLink.defaultProps = {
