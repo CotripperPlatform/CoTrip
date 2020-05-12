@@ -47,8 +47,10 @@ class Navbar extends Component {
           <div className="Navbar__menu">
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
+                
                 <NavLink text={item.menuItem} to={item.link} />
                 {this.props.page === key}
+                {this.props.page === key && <div className={`Navbar__triangle`}></div>}
               </div>
             ))}
           </div>
