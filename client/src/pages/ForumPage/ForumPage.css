@@ -22,6 +22,10 @@
   padding: 50px;
 }
 
+.ForumPost{
+  margin: 50px;
+}
+
 @media only screen and (max-width: 320px) {
   .ForumPage__header {
     text-align: center;

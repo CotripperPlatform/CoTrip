@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
-import ForumPage from "./pages/ForumPage/ForumPage";
+import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -121,10 +121,10 @@ class App extends Component {
             )}
           ></Route>
           <Route
-            path="/forum-page"
+            path="/forum-page-hashtag"
             exact
             render={routerProps => (
-              <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              <ForumPageHashtag handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
