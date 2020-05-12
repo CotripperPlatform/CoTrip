@@ -38,17 +38,12 @@ const CommunityPage = props => {
       </Banner>
       <div className="secondNav">
         <Button
-          className="secondNav-Button"
-          text="Connect with Other Moms"
+          text="Connect With Other Moms"
           color="outline"
+          size="long"
           handleClick={handleClick}
         />
-        <Button
-          className="secondNav-Button"
-          text="Discover Groups"
-          color="pink"
-          handleClick={handleClick}
-        />
+        <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
       </div>{" "}
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
@@ -61,7 +56,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"purple"}
             icon={"white"}
             onClick={pillClick}
@@ -70,7 +65,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -79,7 +74,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -88,7 +83,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -97,7 +92,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -106,7 +101,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -115,7 +110,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -124,7 +119,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -133,7 +128,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -142,7 +137,7 @@ const CommunityPage = props => {
           <Pill
             className="Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -173,6 +168,7 @@ const CommunityPage = props => {
           <div className="CommunityPage__groupCard-single">
             <GroupCard
               name="DIY with your kids"
+              size="wide"
               members="98 Members"
               location="Mixed Locations"
               picture={picture1}
@@ -228,7 +224,7 @@ const CommunityPage = props => {
           </div>{" "}
           <div className="CommunityPage__groupCard-single">
             {" "}
-            <Card outline size="medium">
+            <Card outline size="medium-wide">
               <a href="/">Discover New Groups</a>
             </Card>{" "}
           </div>

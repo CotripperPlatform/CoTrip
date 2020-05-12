@@ -9,7 +9,7 @@
 }
 
 .CommunityPage_container {
-  width: 95vw;
+  width: 100vw;
   display: flex;
 }
 
@@ -56,7 +56,7 @@
 .CommunityPage__group-location-container {
   display: flex;
   flex-direction: row;
-  width: 95vw;
+  width: 101.5vw;
   flex-wrap: wrap;
   margin-left: 50px;
 }
@@ -114,7 +114,7 @@
 .CommunityPage__groups-in-city-container {
   display: flex;
   flex-direction: row;
-  width: 95vw;
+  width: 100vw;
   flex-wrap: wrap;
   margin-left: 50px;
 }
