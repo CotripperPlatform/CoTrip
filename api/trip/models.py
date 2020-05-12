@@ -1,11 +1,10 @@
 from django.db import models
-
 class Place(models.Model):
     name = models.CharField(max_length = 200)
     code = models.CharField(max_length = 2)
 class Country(Place):
     def __str__(self):
-        return self.name + "(" + self.code +")"
+        return self.name + "(" + self.code + ")"
 class State(Place):
     country = models.ForeignKey(Country, on_delete=models.CASCADE) 
     def __str__(self):
@@ -16,7 +15,6 @@ class City(Place):
         return self.name + ", " + self.state.code
 class Location(Place):
     city = models.ForeignKey(City, on_delete=models.CASCADE)
-
 class Trip(models.Model):
     title = models.CharField(max_length=200)
 
