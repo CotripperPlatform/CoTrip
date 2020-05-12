@@ -4,7 +4,6 @@ import NavBar from "components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
 import Banner from "components/Banner/Banner";
 import Banner__pink from "assets/images/Banner__pink.png";
-import BannerImageCard from "components/BannerImageCard/BannerImageCard";
 import Banner__Image from "assets/images/TripBanner.png";
 import TripDetails from "components/TripDetails/TripDetails";
 import ActivityList from "components/ActivityList/ActivityList";
@@ -31,7 +30,9 @@ const Hawaii2020 = props => {
         <h3>Trip: {tripName} 2020</h3>
       </Banner>
       <div className="Hawaii2020__BannerImageCard-container">
-        <BannerImageCard background={Banner__Image} message="Hawaii 2020" />
+        <Banner type="BannerLarge" background={Banner__Image}>
+          <h3>Hawaii 2020</h3>
+        </Banner>
       </div>
       <div className="Hawaii2020__body-container">
         <TripDetails />
@@ -44,7 +45,7 @@ const Hawaii2020 = props => {
       <div className="Hawaii2020__button-container">
         <Button text="Book Now" color="pink" size="large" />
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout}/>
+      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };
