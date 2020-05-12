@@ -56,7 +56,12 @@ class App extends Component {
       email: "",
       first_name: "",
       image: "",
-      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"],
+      menuItems: [
+        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "Community", link: "/community" },
+        { menuItem: "Forum", link: "/forum-page" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" },
+      ],
     };
 
     this.handleSignup = handleSignup.bind(this);
