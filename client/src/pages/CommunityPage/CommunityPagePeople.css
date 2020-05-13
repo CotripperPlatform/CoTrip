@@ -111,7 +111,7 @@
     margin-bottom: 50px;
   }
   
-  .CommunityPage__groups-in-city-container {
+  .CommunityPage__moms-in-city-container {
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -119,7 +119,7 @@
     margin-left: 50px;
   }
   
-  .CommunityPage__groupCard-single {
+  .CommunityPage__momCard-single {
     margin-right: 50px;
     margin-bottom: 50px;
   }

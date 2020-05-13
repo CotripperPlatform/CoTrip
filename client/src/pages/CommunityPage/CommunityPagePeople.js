@@ -8,10 +8,12 @@ import Banner__Community from "assets/images/community_banner.png";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
-import GroupCard from "../../components/GroupCard/GroupCard";
-import picture1 from "../../assets/images/card_small1.png";
-import picture2 from "../../assets/images/card_small2.png";
-import picture3 from "../../assets/images/card_small3.png";
+import PersonCard from "../../components/PersonCard/PersonCard";
+import image1 from "../../assets/images/profile-picture-1.png";
+import image2 from "../../assets/images/profile-picture-2.png";
+import image3 from "../../assets/images/profile-picture-3.png";
+import image4 from "../../assets/images/profile-picture-4.png"
+import image5 from "../../assets/images/profile-picture-5.png"
 import Card from "../../components/Card/Card";
 
 function pillClick(val) {
@@ -146,87 +148,82 @@ const CommunityPage = props => {
         </div>{" "}
         <a className="seeMore-Button">See More</a>
         <div>
-          <header className="CommunityPage__header">Groups in WASHINGTON, DC:</header>
+          <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
-        <div className="CommunityPage__groups-in-city-container">
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
+        <div className="CommunityPage__moms-in-city-container">
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image1 }
+              name="Lindsay L."
+              location="Washington D.C."
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
-          </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              size="wide"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image2 }
+              name="Chandy S."
+              location="Washington D.C."
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
-          </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image3 }
+              name="Caroline N."
+              location="Washington D.C."
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
-          </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image4 }
+              name="Rachel G."
+              location="Washington D.C."
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image5 }
+              name="Julia C."
+              location="Washington D.C."
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Group Name"
-              members="# of "
-              location="Location, State"
-              picture={picture3}
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image1 }
+              name="Lindsay L."
+              location="Washington D.C."
             />
-          </div>{" "}
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image2 }
+              name="Chandy S."
+              location="Washington D.C."
+            />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image3 }
+              name="Caroline N."
+              location="Washington D.C."
+            />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image4 }
+              name="Rachel G."
+              location="Washington D.C."
+            />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image= { image5 }
+              name="Julia C."
+              location="Washington D.C."
+            />
+          </div>
+          {" "}
           <div className="CommunityPage__groupCard-single">
             {" "}
-            <Card outline size="medium-wide">
-              <a href="/">Discover New Groups</a>
-            </Card>{" "}
           </div>
         </div>
         <a className="seeAll-Button">See All</a>
