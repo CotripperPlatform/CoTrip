@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
+import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -105,6 +106,12 @@ class App extends Component {
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>{" "}
+           <Route
+            path="/community/explore-people"
+            exact
+            render={routerProps => (
+              <CommunityPagePeople handle_logout={this.handleLogout} {...routerProps} />
+            )}></Route>
            <Route
             path="/community/join-groups"
             exact
