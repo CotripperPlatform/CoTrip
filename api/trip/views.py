@@ -39,6 +39,10 @@ class TripUpcomingList(generics.ListAPIView):
     ordering_fields = ("start_date","end_date",)
     ordering = ('start_date',"end_date",)
     
+class TripDetail(generics.RetrieveAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+
 class ActivityList(generics.ListAPIView):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
