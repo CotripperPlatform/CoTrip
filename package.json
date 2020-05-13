@@ -1,0 +1,19 @@
+{
+  "name": "cotrip",
+  "version": "1.0.0",
+  "description": "CoTripper: an app to facilitate organized group travel experiences for single-mothers. This repository is dedicated to the backend functionality that covers user authentication, connecting to frontend for functionality, and keep a database for topics, trip information, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CotripperPlatform/CoTrip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CotripperPlatform/CoTrip/issues"
+  },
+  "homepage": "https://github.com/CotripperPlatform/CoTrip#readme"
+}

@@ -25,7 +25,6 @@ const Hawaii2020 = props => {
 
   return (
     <div className="Hawaii2020">
-      <NavBar page={3} profileImage={people} />
       <Banner background={Banner__pink}>
         <h3>Trip: {tripName} 2020</h3>
       </Banner>

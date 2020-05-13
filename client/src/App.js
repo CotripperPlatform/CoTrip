@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
-import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -29,6 +28,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import Navbar from "components/Navbar/Navbar.js";
 
 library.add(
   fab,
@@ -55,7 +55,13 @@ class App extends Component {
         localStorage.getItem("token") && localStorage.getItem("token") != undefined ? true : false,
       email: "",
       first_name: "",
-      image: ""
+      image: "",
+      menuItems: [
+        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "Community", link: "/community" },
+        { menuItem: "Forum", link: "/forum-page" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" },
+      ],
     };
 
     this.handleSignup = handleSignup.bind(this);
@@ -98,13 +104,9 @@ class App extends Component {
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>{" "}
-          <Route
-            path="/community"
-            exact
-            render={routerProps => (
-              <CommunityPage handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
+          
+        
+         
           <Route
             path="/book-a-trip"
             exact
