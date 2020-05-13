@@ -72,11 +72,11 @@ NavLink.defaultProps = {
   menuList: [
     {
       text: "Explore People",
-      to: "/explore-people"
+      to: "/community/explore-people"
     },
     {
       text: "Join Groups",
-      to: "/join-groups"
+      to: "/community/join-groups"
     }
   ]
 };
