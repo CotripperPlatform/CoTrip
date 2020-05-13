@@ -50,3 +50,7 @@ class TripDetail(generics.RetrieveAPIView):
 class ActivityList(generics.ListAPIView):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
+
+class ActivityDetail(generics.RetrieveAPIView):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
