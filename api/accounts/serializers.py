@@ -16,7 +16,7 @@ class ProfileSocialMediaSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ProfileSocialMedia
-        fields = ['social_media_type', 'url', 'profile',]
+        fields = ['social_media_type', 'url', 'profile']
 
 
 class ProfileSerializer(serializers.ModelSerializer):
@@ -24,7 +24,7 @@ class ProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Profile
-        fields = ['user', 'topics', 'hashtags', 'image', 'first_name', 'last_name', 'cities_of_residence',
+        fields = ['user', 'topics', 'hashtags', 'image', 'first_name', 'last_name', 'city_of_residence',
                   'age', 'dream_destination', 'bio', 'activities', 'events', 'connections', 'social_media']
 
 
@@ -33,7 +33,7 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = ('id', 'email', 'profile','is_subscriber')
+        fields = ('id', 'email', 'profile')
         extra_kwargs = {
             'profile': {'validators': []},
         }
