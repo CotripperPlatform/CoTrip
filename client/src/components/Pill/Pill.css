@@ -114,6 +114,11 @@
   font-size: 36px;
 }
 
+.Pill--short {
+  width: 200px;
+  padding-left: 20px;
+}
+
 .Pill--small {
   padding: 0.125em 3.35em;
   font-size: 18px;

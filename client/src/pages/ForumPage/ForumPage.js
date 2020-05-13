@@ -2,43 +2,221 @@ import React from "react";
 import "./ForumPage.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
-import BookATripImage from "../../components/BookATripImage/BookATripImage";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
-import Banner__pink from "assets/images/Banner__pink.png";
-import image1 from "assets/images/hawaii.png";
-import image2 from "assets/images/greece.png";
-import image3 from "assets/images/southernCaribbean.png";
-import image4 from "assets/images/easternCaribbean.png";
+import Banner__Community from "assets/images/community_banner.png";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
+import Pill from "../../components/Pill/Pill";
+import InputSelect from "../../components/InputSelect/InputSelect";
+
+const handleSelect = props => {
+  console.log(props);
+};
+function pillClick(val) {
+  console.log(val);
+}
+const handleClick = e => {
+  console.log("Clicked");
+};
 
 const ForumPage = props => {
   return (
     <div className="ForumPage">
-      <NavBar page={3} profileImage={people} />
-      <Banner background={Banner__pink}>
-        <h3 style={{ margin: 0 }}>Forum</h3>
+      <NavBar page={2} profileImage={people} />
+      <Banner background={Banner__Community}>
+        <h3 style={{ margin: 0 }}>Forum: Discover Topics</h3>
         <InputTextField
           type="text"
           variation="search"
           name="search directory"
-          placeholder="Search Trip"
+          placeholder="Search Topics and #hashtags"
         />
       </Banner>
-      <header className="ForumPage__header">Upcoming Trips</header>
-      <BookATripImage
-        className="ForumPage__images"
-        cards={[
-          { image: image1, url: "/hawaii-2020", description: "Hawaii May 2020" },
-          { image: image2, url: "#", description: "Greece & Croatia Cruise June 2020" },
-          { image: image3, url: "#", description: "Southern Caribbean Cruise July 2020" },
-          { image: image1, url: "#", description: "Hawaii May 2020" },
-          { image: image4, url: "#", description: "Eastern Caribbean Cruise New Year's 2021" }
-        ]}
-      />
-      <div className="ForumPage__button-container">
-        <Button text="View Previous Trips" color="pink" size="large" />
+      <div className="secondNav">
+        <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
+        <Button text="Discover Topics" color="outline" size="long" handleClick={handleClick} />
+      </div>
+
+      <div className="forum-page-body">
+        <InputSelect
+          onSelect={handleSelect}
+          optionPrefix={"Sort By:  "}
+          options={[
+            { value: "location", title: "Location" },
+            { value: "date", title: "Date" },
+            { value: "type", title: "Type" },
+            { value: "Popularity", title: "Popularity" }
+          ]}
+        />
+        <div>
+          <header className="ForumPage__header">My Favorite Topics</header>
+        </div>
+        <div className="forum-page-pill-container">
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"red"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"red"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />{" "}
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />{" "}
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            className="Forum-Pill"
+            text={"Traveling"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"white"}
+            onClick={pillClick}
+            selectId={0}
+          />
+        </div>
+        <div>
+          <header className="ForumPage__header">#hashtags I'm Following</header>
+        </div>
+        <div className="forum-page-hollow-pill-container">
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+        </div>
+        <div className="ForumPage__button-container">
+          <Button text="View Previous Trips" color="pink" size="large" />
+        </div>
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
