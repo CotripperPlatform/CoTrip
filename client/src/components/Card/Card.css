@@ -39,9 +39,12 @@
 }
 
 .Card--medium {
-  width: 14.2vw;
+  width: 14.75vw;
   min-width: 180px;
   margin: 0 0.2rem 0 0.2rem;
+}
+.Card--medium-wide {
+  width: 260px;
 }
 
 .Card--small {
@@ -112,13 +115,13 @@
 
 .Card__discover-link {
   text-align: center;
-  margin: auto;
+  margin: auto 20px auto 20px;
   line-height: 1.8;
   transition: transform 0.3s;
 }
 
 .Card__discover-link a {
-  font-size: 26px;
+  font-size: 30px;
   text-decoration: none;
 }
 

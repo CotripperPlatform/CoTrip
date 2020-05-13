@@ -28,6 +28,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import Navbar from "components/Navbar/Navbar.js";
 
 library.add(
   fab,
@@ -54,7 +55,13 @@ class App extends Component {
         localStorage.getItem("token") && localStorage.getItem("token") != undefined ? true : false,
       email: "",
       first_name: "",
-      image: ""
+      image: "",
+      menuItems: [
+        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "Community", link: "/community" },
+        { menuItem: "Forum", link: "/forum-page" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" },
+      ],
     };
 
     this.handleSignup = handleSignup.bind(this);
@@ -96,7 +103,10 @@ class App extends Component {
             render={routerProps => (
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
-          ></Route>
+          ></Route>{" "}
+          
+        
+         
           <Route
             path="/book-a-trip"
             exact
@@ -104,7 +114,6 @@ class App extends Component {
               <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
-
           <Route
             path="/member-page"
             exact
