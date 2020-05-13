@@ -53,12 +53,12 @@ class UserAPI(generics.RetrieveAPIView):
     def get_object(self):
         return self.request.user
 
-class SubscriberList(generics.ListAPIView):
+#class SubscriberList(generics.ListAPIView):
     #permission_classes = [
     #    permissions.IsAuthenticated,permissions.IsAdminUser
     #]
-    queryset = CustomUser.objects.filter(is_subscriber=True)
-    serializer_class = UserSerializer
+    #queryset = CustomUser.objects.filter(is_subscriber=True)
+    #serializer_class = UserSerializer
 
 
 class ProfileList(generics.ListAPIView):

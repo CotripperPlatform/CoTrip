@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import generics
-from .serializers import LocationSerializer, TripSerializer, ActivitySerializer
-from .models import Location, Trip, Activity
+from .serializers import LocationSerializer, TripSerializer, ActivitySerializer, StateSerializer
+from .models import Location, Trip, Activity, State
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .filter import TripFilter
@@ -14,12 +14,14 @@ class LocationList(generics.ListAPIView):
     serializer_class = LocationSerializer
 
 class StateList(generics.ListAPIView):
-    queryset = States.objects.all()
+    queryset = State.objects.all()
     serializer_class = StateSerializer
 
-class LocationListByState(generics.ListAPIView):
-    queryset = Location.objects.filter(state_code = state_code)
+class CitiesListByState(generics.ListAPIView):
+    queryset = Location.objects.all()
     serializer_class = LocationSerializer
+    filter_backends = (DjangoFilterBackend)
+    filterset_fields = ('state__code')
 
 class TripList(generics.ListAPIView):
     queryset = Trip.objects.all()

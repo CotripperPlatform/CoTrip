@@ -1,20 +1,24 @@
 from django.db import models
-class Place(models.Model):
-    name = models.CharField(max_length = 200)
-    code = models.CharField(max_length = 2)
-class Country(Place):
+
+class Country(models.Model):
+    country = models.CharField(max_length = 200,null=True,blank=True)
+    code = models.CharField(max_length = 2, default='NA')
     def __str__(self):
-        return self.name + "(" + self.code + ")"
-class State(Place):
-    country = models.ForeignKey(Country, on_delete=models.CASCADE) 
+        return self.country + "(" + self.code + ")"
+class State(models.Model):
+    state = models.CharField(max_length = 200,null=True,blank=True)
+    code = models.CharField(max_length = 2, default='NA')
+    country = models.ForeignKey(Country, on_delete=models.CASCADE,null=True,blank=True) 
     def __str__(self):
-        return self.state_code +", " + self.country.code
+        return self.state +", " + self.country.code
     #country = models.CharField(max_length=200)
-class City(Place):
+class Location(models.Model):
+    city = models.CharField(max_length = 200,null=True,blank=True)
+    code = models.CharField(max_length = 2, default='NA')
+    state = models.ForeignKey(State, on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
-        return self.name + ", " + self.state.code
-class Location(Place):
-    city = models.ForeignKey(City, on_delete=models.CASCADE)
+        return self.city + ", " + self.state.code
+
 class Trip(models.Model):
     title = models.CharField(max_length=200)
 
@@ -31,7 +35,6 @@ class Trip(models.Model):
 
     def __str__(self):
         return self.title
-
 
 class Activity(models.Model):
     for_kids = models.BooleanField()
