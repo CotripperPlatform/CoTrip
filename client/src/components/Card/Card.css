@@ -43,6 +43,9 @@
   min-width: 180px;
   margin: 0 0.2rem 0 0.2rem;
 }
+.Card--medium-wide {
+  width: 260px;
+}
 
 .Card--small {
   width: 150%;
