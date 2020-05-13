@@ -7,7 +7,7 @@ from .managers import CustomUserManager
 class CustomUser(AbstractUser):
     username = None
     email = models.EmailField(('email address'), unique=True)
-
+    is_subscriber = False
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
@@ -29,10 +29,12 @@ class Profile(models.Model):
     image = models.CharField(max_length=150)
     first_name = models.CharField(max_length=200, null=True)
     last_name = models.CharField(max_length=200, null=True)
-    city_of_residence = models.CharField(max_length=200, null=True, blank=True)
+    cities_of_residence = models.ManyToManyField('trip.Location', related_name='people',null=True, blank=True)
+    # city_of_residence = models.CharField(max_length=200)
     # city_of_residence = models.ForeignKey(
     #     'trip.Location', on_delete=models.CASCADE, related_name='people', null=True, blank=True)
     age = models.IntegerField(null=True)
+    trips = models.ManyToManyField('trip.Trip', related_name='attendees', null=True, blank=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
     activities = models.ManyToManyField(

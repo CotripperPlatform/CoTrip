@@ -53,16 +53,22 @@ class UserAPI(generics.RetrieveAPIView):
     def get_object(self):
         return self.request.user
 
+class SubscriberList(generics.ListAPIView):
+    #permission_classes = [
+    #    permissions.IsAuthenticated,permissions.IsAdminUser
+    #]
+    queryset = CustomUser.objects.filter(is_subscriber=True)
+    serializer_class = UserSerializer
+
 
 class ProfileList(generics.ListAPIView):
-    queryset = Profile.objects.all()
+    queryset = Profile.objects.filter()
     serializer_class = ProfileSerializer
 
 
 class ProfileDetail(generics.RetrieveAPIView):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
-
 
 class ProfileUpdate(generics.RetrieveUpdateAPIView, UpdateModelMixin):
     permission_classes = [
