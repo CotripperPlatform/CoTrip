@@ -13,6 +13,10 @@ class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
+class LocationDetail(generics.RetrieveAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+
 class TripList(generics.ListAPIView):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer

@@ -3,6 +3,7 @@ from .views import *
 
 urlpatterns = [
     path('location', LocationList.as_view(), name='location_list'),
+    path('location/<int:pk>', LocationDetail.as_view(), name='location_detail'),
     # path('trip', TripList.as_view(), name='trip_list'),
     
     # 1. Change the trip list route name from 'trip' to 'trips'
