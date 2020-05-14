@@ -17,11 +17,11 @@ class StateList(generics.ListAPIView):
     queryset = State.objects.all()
     serializer_class = StateSerializer
 
-class CitiesListByState(generics.ListAPIView):
+class LocationListByState(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
-    filter_backends = (DjangoFilterBackend)
-    filterset_fields = ('state__code')
+    filter_backends = ( DjangoFilterBackend, )
+    filterset_fields = ("state__code",)
 
 class TripList(generics.ListAPIView):
     queryset = Trip.objects.all()

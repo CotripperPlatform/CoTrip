@@ -16,14 +16,11 @@ class CountrySerializer(serializers.ModelSerializer):
         model = Country
         fields = '__all__'
 class StateSerializer(serializers.ModelSerializer):
-    country = CountrySerializer()
     class Meta:
         model = State
         fields = '__all__'
 
 class LocationSerializer(serializers.ModelSerializer):
-    state = StateSerializer()
-    country = CountrySerializer()
     class Meta:
         model = Location
         fields = '__all__'

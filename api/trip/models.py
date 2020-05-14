@@ -40,7 +40,7 @@ class Activity(models.Model):
     for_kids = models.BooleanField()
     for_moms = models.BooleanField()
     title = models.CharField(max_length=200)
-    location = models.ManyToManyField('trip.Location', related_name='activities',)
+    location = models.ForeignKey('trip.Location', on_delete=models.CASCADE,related_name='activities',null=True,blank=True)
     description = models.TextField()
     date = models.DateField()
     time = models.TimeField()
