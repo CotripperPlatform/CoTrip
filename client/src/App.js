@@ -9,6 +9,7 @@ import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
 import Hawaii2020 from "./pages/Hawaii2020/Hawaii2020";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import HomePageOldUser from "../src/pages/HomePageOldUser/HomePageOldUser";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -29,6 +30,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import Navbar from "components/Navbar/Navbar.js";
 
 library.add(
   fab,
@@ -55,7 +57,13 @@ class App extends Component {
         localStorage.getItem("token") && localStorage.getItem("token") != undefined ? true : false,
       email: "",
       first_name: "",
-      image: ""
+      image: "",
+      menuItems: [
+        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "Community", link: "/community" },
+        { menuItem: "Forum", link: "/forum-page" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" }
+      ]
     };
 
     this.handleSignup = handleSignup.bind(this);
@@ -97,7 +105,7 @@ class App extends Component {
             render={routerProps => (
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
-          ></Route>
+          ></Route>{" "}
           <Route
             path="/book-a-trip"
             exact
@@ -105,7 +113,6 @@ class App extends Component {
               <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
-
           <Route
             path="/member-page"
             exact
@@ -150,6 +157,13 @@ class App extends Component {
             exact
             render={routerProps => (
               <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/home-old-user"
+            exact
+            render={routerProps => (
+              <HomePageOldUser handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>

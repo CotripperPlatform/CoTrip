@@ -2,10 +2,11 @@ import React from "react";
 import "./Banner.css";
 
 const Banner = props => {
-  return <div className="Banner" style={{
-    backgroundImage: `url(${props.background})`
+  const {type, background, children} = props;
+  return <div className={`Banner ${type === 'BannerLarge' ? 'Banner--large' : ''}`} style={{
+    backgroundImage: `url(${background})`
   }}>
-    {props.children}
+    {children}
   </div>;
 };
 

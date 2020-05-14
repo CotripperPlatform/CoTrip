@@ -1,5 +1,5 @@
 import React from "react";
-import "./HomePage.css";
+import "./HomePageOldUser.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import example1 from "assets/images/card_small2.png";
@@ -78,7 +78,7 @@ const handleClick = e => {
   console.log("clicked");
 };
 
-const HomePage = props => {
+const HomePageOldUser = props => {
   return (
     <body className="HomePage__wrapper">
       <nav>
@@ -86,7 +86,7 @@ const HomePage = props => {
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
-          {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
+          {props.first_name ? <h1>Welcome Back, {props.first_name}!</h1> : <h1>Welcome Back!</h1>}
         </Banner>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
@@ -214,4 +214,4 @@ const HomePage = props => {
   );
 };
 
-export default HomePage;
+export default HomePageOldUser;
