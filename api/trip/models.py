@@ -28,19 +28,21 @@ class Trip(models.Model):
     # Also, we might want to have a many to many relationship so multiple trips can have the same location and one trip and have multiple locations
     # Tyler advised that we give each trip just one location to make things simpler
 
-    locations = models.ManyToManyField('trip.Location', related_name='trips')
-    activities = models.ManyToManyField('trip.Activity', related_name='trips')
+    locations = models.ManyToManyField('trip.Location')
+    activities = models.ManyToManyField('trip.Activity')
     start_date = models.DateField()
     end_date = models.DateField()
+    attendees = models.ManyToManyField('accounts.CustomUser')
 
     def __str__(self):
-        return self.title
+        return self.name
 
 class Activity(models.Model):
     for_kids = models.BooleanField()
     for_moms = models.BooleanField()
     title = models.CharField(max_length=200)
-    location = models.ForeignKey('trip.Location', on_delete=models.CASCADE,related_name='activities',null=True,blank=True)
+    location = models.ForeignKey(
+        Location, on_delete=models.CASCADE, related_name='activities', null=True)
     description = models.TextField()
     date = models.DateField()
     time = models.TimeField()

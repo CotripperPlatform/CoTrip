@@ -21,5 +21,4 @@ urlpatterns = [
     path('social_media_type/<int:pk>', SocialMediaTypeDetail().as_view(),
          name='social_media_type_detail'),
     path('sign_s3', sign_s3)
-    #path('subscribers', SubscriberList.as_view(), name='subscibers_list')
 ]
