@@ -8,7 +8,7 @@ import boto3
 from django.http import JsonResponse
 from django.conf import settings
 import uuid
-from .permissions import IsOwnerOrReadOnly 
+
 
 
 class RegisterAPI(generics.GenericAPIView):
@@ -60,19 +60,11 @@ class ProfileList(generics.ListAPIView):
     serializer_class = ProfileSerializer
 
 
-class ProfileDetail(generics.RetrieveAPIView):
-    queryset = Profile.objects.all()
+class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProfileSerializer
-
-
-class ProfileUpdate(generics.RetrieveUpdateAPIView):
-    queryset = Profile.objects.all()
-    serializer_class = ProfileSerializer
-    permission_classes = (IsOwnerOrReadOnly,
-    )
-
-    # def get_object(self):
-    #     return self.partial_update(self, self.request)
+    def get_queryset(self):
+        user = self.request.user
+        return Profile.objects.filter(user=user.id)
 
 
 # not added to urls VVV
