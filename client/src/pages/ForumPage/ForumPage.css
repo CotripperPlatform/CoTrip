@@ -22,8 +22,38 @@
   padding: 50px;
 }
 
-.ForumPost{
-  margin: 50px;
+.hashtag__body{
+  display: flex;
+  flex-flow: row;
+}
+
+.hashtag__bodyRight{
+  display: flex;
+  flex-direction: column;
+  height: 750px;
+  flex-wrap: wrap;
+  width: 20vw;
+}
+
+.hashtag__bodyLeft{
+  margin: 0px;
+  width: 78vw;
+  margin: -50px -100px;
+
+}
+
+.hashtag_medieContainer{
+  margin-top: 70px;
+  margin-left: -80px;
+  margin-right: 100px;
+}
+
+.hashtag_mediaCard{
+ margin-bottom: 15px;
+}
+
+.hashtag_media{
+margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 320px) {
