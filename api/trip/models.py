@@ -1,23 +1,23 @@
 from django.db import models
 
 class Country(models.Model):
-    country = models.CharField(max_length = 200,null=True,blank=True)
+    name = models.CharField(max_length = 200,null=True,blank=True)
     code = models.CharField(max_length = 2, default='NA')
     def __str__(self):
-        return self.country + "(" + self.code + ")"
+        return self.name + "(" + self.code + ")"
 class State(models.Model):
-    state = models.CharField(max_length = 200,null=True,blank=True)
+    name = models.CharField(max_length = 200,null=True,blank=True)
     code = models.CharField(max_length = 2, default='NA')
     country = models.ForeignKey(Country, on_delete=models.CASCADE,null=True,blank=True) 
     def __str__(self):
-        return self.state +", " + self.country.code
+        return self.name +", " + self.country.code
     #country = models.CharField(max_length=200)
 class Location(models.Model):
-    city = models.CharField(max_length = 200,null=True,blank=True)
-    code = models.CharField(max_length = 2, default='NA')
+    name = models.CharField(max_length = 200,null=True,blank=True)
     state = models.ForeignKey(State, on_delete=models.CASCADE,null=True,blank=True)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE,null=True,blank=True)
     def __str__(self):
-        return self.city + ", " + self.state.code
+        return self.name + ", " + self.state.code
 
 class Trip(models.Model):
     title = models.CharField(max_length=200)
@@ -46,7 +46,7 @@ class Activity(models.Model):
     time = models.TimeField()
 
     def __str__(self):
-        return self.title + ", " + self.location.city
+        return self.title + ", " + self.location.name
 
 
 # still missing/ not sure

@@ -16,7 +16,7 @@ class CountrySerializer(serializers.ModelSerializer):
         model = Country
         fields = '__all__'
 class StateSerializer(serializers.ModelSerializer):
-    country =CountrySerializer()
+    country = CountrySerializer()
     class Meta:
         model = State
         fields = '__all__'
