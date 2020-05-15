@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
+import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -136,6 +137,14 @@ class App extends Component {
               <ForumPageHashtag handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
+            <Route
+            path="/forum-page-topic"
+            exact
+            render={routerProps => (
+              <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          >
+          </Route>
           <Route
             path="/login"
             exact
