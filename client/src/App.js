@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
+import CommunityPage from "./pages/CommunityPage/CommunityPage";
+import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
@@ -61,8 +63,8 @@ class App extends Component {
         { menuItem: "My Directory", link: "/home" },
         { menuItem: "Community", link: "/community" },
         { menuItem: "Forum", link: "/forum-page" },
-        { menuItem: "Book A Trip", link: "/book-a-trip" },
-      ],
+        { menuItem: "Book A Trip", link: "/book-a-trip" }
+      ]
     };
 
     this.handleSignup = handleSignup.bind(this);
@@ -105,9 +107,27 @@ class App extends Component {
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>{" "}
-          
-        
-         
+          <Route
+            path="/community/explore-people"
+            exact
+            render={routerProps => (
+              <CommunityPagePeople handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
+            path="/community/join-groups"
+            exact
+            render={routerProps => (
+              <CommunityPage handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
+            path="/community/view-group"
+            exact
+            render={routerProps => (
+              <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
           <Route
             path="/book-a-trip"
             exact
