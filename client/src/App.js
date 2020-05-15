@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
+import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
+import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
@@ -146,6 +148,21 @@ class App extends Component {
               <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
+          <Route
+            path="/forum-page-hashtag"
+            exact
+            render={routerProps => (
+              <ForumPageHashtag handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+            <Route
+            path="/forum-page-topic"
+            exact
+            render={routerProps => (
+              <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          >
+          </Route>
           <Route
             path="/login"
             exact

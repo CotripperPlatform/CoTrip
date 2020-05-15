@@ -5,13 +5,11 @@
 }
 
 .Connections__list {
-  flex-wrap: wrap;
   display: flex;
   width: 100%;
 }
 
 .Connections__link {
-  color: var(--blue-lite);
   font-size: 1rem;
   font-family: var(--default-font);
   font-weight: normal;
@@ -19,6 +17,10 @@
 
 .Connections__person {
   margin: 0 1rem 0 0;
+}
+
+.Connections__horizontal {
+  flex-wrap: nowrap;
 }
 
 .Connections__person__div {
