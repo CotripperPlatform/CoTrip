@@ -14,7 +14,8 @@ storiesOf("Atoms/InputSelect", module)
       options={[
         { value: "location", title: "Location" },
         { value: "date", title: "Date" },
-        { value: "type", title: "Type" }
+        { value: "type", title: "Type" },
+        { value: "Popularity", title: "Popularity" }
       ]}
     />
   ));

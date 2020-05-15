@@ -4,6 +4,9 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
 import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import CommunityPage from "./pages/CommunityPage/CommunityPage";
+import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
+import ForumPage from "./pages/ForumPage/ForumPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -106,11 +109,19 @@ class App extends Component {
               <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>{" "}
-          
-        
-         
-          <Route
-            path="/book-a-trip"
+           <Route
+            path="/community/explore-people"
+            exact
+            render={routerProps => (
+              <CommunityPagePeople handle_logout={this.handleLogout} {...routerProps} />
+            )}></Route>
+           <Route
+            path="/community/join-groups"
+            exact
+            render={routerProps => (
+              <CommunityPage handle_logout={this.handleLogout} {...routerProps} />
+            )}></Route>
+          <Route path="/book-a-trip"
             exact
             render={routerProps => (
               <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
@@ -128,6 +139,13 @@ class App extends Component {
             exact
             render={routerProps => (
               <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page"
+            exact
+            render={routerProps => (
+              <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route

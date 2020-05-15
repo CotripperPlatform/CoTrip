@@ -13,6 +13,10 @@ class LocationList(generics.ListAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
+class LocationDetail(generics.RetrieveAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+
 class TripList(generics.ListAPIView):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
@@ -39,6 +43,14 @@ class TripUpcomingList(generics.ListAPIView):
     ordering_fields = ("start_date","end_date",)
     ordering = ('start_date',"end_date",)
     
+class TripDetail(generics.RetrieveAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+
 class ActivityList(generics.ListAPIView):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
+
+class ActivityDetail(generics.RetrieveAPIView):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
