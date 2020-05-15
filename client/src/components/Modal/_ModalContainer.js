@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import Button from "../Button/Button";
 import "./Modal.css";
 
-class ModalContainer extends Component {
+class ModalContainerJoin extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,13 +16,11 @@ class ModalContainer extends Component {
       modalOpen: false
     });
   };
-
   handleOpenModal = () => {
     this.setState({
       modalOpen: true
     });
   };
-
   render() {
     return (
       <div className="Modal__container">
@@ -37,7 +35,6 @@ class ModalContainer extends Component {
             handleClick={this.handleOpenModal}
           />
         )}
-        <div className="Modal_containerDiv">
         <Modal
           message={this.props.message}
           showModal={this.state.modalOpen}
@@ -46,10 +43,8 @@ class ModalContainer extends Component {
           onConfirm={this.props.onConfirm}
           onClose={this.handleCloseModal}
         />
-        </div>
       </div>
     );
   }
 }
-
-export default ModalContainer;
+export default ModalContainerJoin;
