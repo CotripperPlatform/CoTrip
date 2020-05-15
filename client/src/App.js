@@ -4,6 +4,7 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
+import ForumPage from "./pages/ForumPage/ForumPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -136,6 +137,13 @@ class App extends Component {
             exact
             render={routerProps => (
               <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page"
+            exact
+            render={routerProps => (
+              <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
