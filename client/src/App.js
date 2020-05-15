@@ -4,6 +4,9 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
+import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
+import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
@@ -122,6 +125,13 @@ class App extends Component {
             )}
           ></Route>
           <Route
+            path="/community/explore-people"
+            exact
+            render={routerProps => (
+              <CommunityPagePeople handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
             path="/book-a-trip"
             exact
             render={routerProps => (
@@ -147,6 +157,24 @@ class App extends Component {
             exact
             render={routerProps => (
               <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page-hashtag"
+            exact
+            render={routerProps => (
+              <ForumPageHashtag
+                handle_logout={this.handleLogout}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page-topic"
+            exact
+            render={routerProps => (
+              <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route

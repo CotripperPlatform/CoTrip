@@ -37,6 +37,7 @@ class ModalContainer extends Component {
             handleClick={this.handleOpenModal}
           />
         )}
+        <div className="Modal_containerDiv">
         <Modal
           message={this.props.message}
           showModal={this.state.modalOpen}
@@ -45,6 +46,7 @@ class ModalContainer extends Component {
           onConfirm={this.props.onConfirm}
           onClose={this.handleCloseModal}
         />
+        </div>
       </div>
     );
   }

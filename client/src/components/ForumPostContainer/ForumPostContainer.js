@@ -3,6 +3,7 @@ import "./ForumPostContainer.css";
 import ForumPost from "../ForumPost/ForumPost";
 import Comment from '../Comment/Comment'
 
+
 export default function ForumPostContainer(props) {
   return (
     <div className="PostContainer">
@@ -32,7 +33,7 @@ export default function ForumPostContainer(props) {
                 name={comment.name}
                 likes={comment.likes}
                 replies={comment.replies}
-                image={comment.image}
+                image= {comment.image}
                 date={comment.date}
                 time={comment.time}
                 body={comment.body}

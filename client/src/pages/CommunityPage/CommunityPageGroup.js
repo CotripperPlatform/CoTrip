@@ -16,7 +16,7 @@ class CommunityPageGroup extends Component {
     super(props);
     this.state = {
       joinGroup: false,
-      showModal: true
+      showModal: false
     };
   }
 
@@ -44,9 +44,9 @@ class CommunityPageGroup extends Component {
     });
   };
 
-  handleOpenModal = (evt) => {
+  handleOpenModal = evt => {
     // evt.preventDefault()
-    console.log("Ive been clicked!!!")
+    console.log("Ive been clicked!!!");
     this.setState({
       showModal: true
     });
@@ -97,26 +97,25 @@ class CommunityPageGroup extends Component {
                   onClose={this.handleCloseModal}
                   modalOpen={this.state.showModal}
                   handleOpenModal={this.handleOpenModal}
-
                 />
               </div>
             ) : (
-                <div className="Modal_align">
-                  <ModalContainerJoin
-                    buttonText="Join"
-                    buttonTextColor="black"
-                    buttonColor="yellow"
-                    buttonSize="small"
-                    message="Are you sure you want to join?"
-                    confirmText="Join"
-                    cancelText="Exit"
-                    onConfirm={this.handleConfirm}
-                    onClose={this.handleCloseModal}
-                    modalOpen={this.state.showModal}
-                    handleOpenModal={this.handleOpenModal}
-                  />
-                </div>
-              )}
+              <div className="Modal_align">
+                <ModalContainerJoin
+                  buttonText="Join"
+                  buttonTextColor="black"
+                  buttonColor="yellow"
+                  buttonSize="small"
+                  message="Are you sure you want to join?"
+                  confirmText="Join"
+                  cancelText="Exit"
+                  onConfirm={this.handleConfirm}
+                  onClose={this.handleCloseModal}
+                  modalOpen={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                />
+              </div>
+            )}
           </Banner>{" "}
         </div>
       </div>
