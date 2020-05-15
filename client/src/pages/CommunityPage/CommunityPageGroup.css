@@ -1,25 +1,29 @@
-.CommunityPage {
+.CommunityPage-Group- {
   overflow: hidden;
 }
 
-.CommunityPage__banner {
+.CommunityPage-Group-__banner {
   width: 100vw;
   height: 231px;
   background-color: var(--pink);
 }
 
-.CommunityPage_container {
+.CommunityPage-Group-_container {
   width: 100vw;
   display: flex;
 }
 
-.CommunityPage_body {
+.community-page-header {
+  margin-top: -40px;
+}
+
+.CommunityPage-Group-_body {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.CommunityPage__header {
+.CommunityPage-Group-__header {
   font-family: var(--default-font);
   font-size: 36px;
   color: var(--purple);
@@ -32,24 +36,20 @@
 }
 
 @media only screen and (max-width: 320px) {
-  .CommunityPage__header {
+  .CommunityPage-Group-__header {
     text-align: center;
     font-size: 36px;
   }
 
-  .CommunityPage {
+  .CommunityPage-Group- {
     width: 100vw;
   }
 }
 
-.community-page-header {
-  margin-top: -40px;
-}
 .secondNav {
   display: flex;
   width: 100vw;
   justify-content: center;
-  margin-top: -5px;
 }
 
 .secondNav-Button {
@@ -57,7 +57,7 @@
   width: 100vw;
 }
 
-.CommunityPage__group-location-container {
+.CommunityPage-Group-__group-location-container {
   display: flex;
   flex-direction: row;
   width: 101.5vw;
@@ -65,7 +65,7 @@
   margin-left: 50px;
 }
 
-.CommunityPage_SortByText {
+.CommunityPage-Group-_SortByText {
   font-family: Reem Kufi;
   font-style: normal;
   font-weight: normal;
@@ -79,7 +79,7 @@
   border-radius: 3px;
 }
 
-.CommunityPage_SortByButton {
+.CommunityPage-Group-_SortByButton {
   background: #fafafa;
   border: 2px solid #e5e5e5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -115,7 +115,7 @@
   margin-bottom: 50px;
 }
 
-.CommunityPage__groups-in-city-container {
+.CommunityPage-Group-__groups-in-city-container {
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -123,7 +123,7 @@
   margin-left: 50px;
 }
 
-.CommunityPage__groupCard-single {
+.CommunityPage-Group-__groupCard-single {
   margin-right: 50px;
   margin-bottom: 50px;
 }

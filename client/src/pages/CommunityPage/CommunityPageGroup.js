@@ -1,5 +1,5 @@
 import React from "react";
-import "./CommunityPage.css";
+import "./CommunityPageGroup.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
@@ -23,14 +23,14 @@ const handleClick = e => {
 };
 
 // Page or
-const CommunityPage = props => {
+const CommunityPageGroup = props => {
   return (
-    <div className="CommunityPage">
+    <div className="CommunityPage-Group-">
       <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
         <div className="community-page-header">
           {" "}
-          <h3 style={{ margin: -5 }}>Community: Groups</h3>
+          <h3 style={{ margin: -5 }}>Group: Moms in DC</h3>
         </div>
         <InputTextField
           type="text"
@@ -49,14 +49,14 @@ const CommunityPage = props => {
         />
         <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
       </div>{" "}
-      <div className="CommunityPage_SortByButton">
-        <div className="CommunityPage_SortByText">Sort By: Location </div>
+      <div className="CommunityPage-Group-_SortByButton">
+        <div className="CommunityPage-Group-_SortByText">Sort By: Location </div>
       </div>
-      <div className="CommunityPage_body">
+      <div className="CommunityPage-Group-_body">
         <div>
-          <header className="CommunityPage__header">Group Location:</header>
+          <header className="CommunityPage-Group-__header">Group Location:</header>
         </div>
-        <div className="CommunityPage__group-location-container">
+        <div className="CommunityPage-Group-__group-location-container">
           <Pill
             className="Pill"
             text={"Traveling"}
@@ -150,10 +150,10 @@ const CommunityPage = props => {
         </div>{" "}
         <a className="seeMore-Button">See More</a>
         <div>
-          <header className="CommunityPage__header">Groups in WASHINGTON, DC:</header>
+          <header className="CommunityPage-Group-__header">Groups in WASHINGTON, DC:</header>
         </div>
-        <div className="CommunityPage__groups-in-city-container">
-          <div className="CommunityPage__groupCard-single">
+        <div className="CommunityPage-Group-__groups-in-city-container">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="DIY with your kids"
               members="98 Members"
@@ -161,7 +161,7 @@ const CommunityPage = props => {
               picture={picture1}
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="Moms traveling to Hawaii"
               members="5"
@@ -169,7 +169,7 @@ const CommunityPage = props => {
               picture={picture2}
             />
           </div>{" "}
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="DIY with your kids"
               size="wide"
@@ -178,7 +178,7 @@ const CommunityPage = props => {
               picture={picture1}
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="Moms traveling to Hawaii"
               members="5"
@@ -186,7 +186,7 @@ const CommunityPage = props => {
               picture={picture2}
             />
           </div>{" "}
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="DIY with your kids"
               members="98 Members"
@@ -194,7 +194,7 @@ const CommunityPage = props => {
               picture={picture1}
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="Moms traveling to Hawaii"
               members="5"
@@ -202,7 +202,7 @@ const CommunityPage = props => {
               picture={picture2}
             />
           </div>{" "}
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="DIY with your kids"
               members="98 Members"
@@ -210,7 +210,7 @@ const CommunityPage = props => {
               picture={picture1}
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="Moms traveling to Hawaii"
               members="5"
@@ -218,7 +218,7 @@ const CommunityPage = props => {
               picture={picture2}
             />
           </div>
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             <GroupCard
               name="Group Name"
               members="# of "
@@ -226,7 +226,7 @@ const CommunityPage = props => {
               picture={picture3}
             />
           </div>{" "}
-          <div className="CommunityPage__groupCard-single">
+          <div className="CommunityPage-Group-__groupCard-single">
             {" "}
             <Card outline size="medium-wide">
               <a href="/">Discover New Groups</a>
@@ -240,4 +240,4 @@ const CommunityPage = props => {
   );
 };
 
-export default CommunityPage;
+export default CommunityPageGroup;
