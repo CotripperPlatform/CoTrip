@@ -10,34 +10,35 @@ class ModalContainerJoin extends Component {
       modalOpen: false
     };
   }
-  handleCloseModal = evt => {
-    evt.preventDefault();
-    this.setState({
-      modalOpen: false
-    });
-  };
+  // handleCloseModal = evt => {
+  //   evt.preventDefault();
+  //   this.setState({
+  //     modalOpen: false
+  //   });
+  // };
 
-  handleOpenModal = () => {
-    this.setState({
-      modalOpen: true
-    });
-  };
+  // handleOpenModal = () => {
+  //   this.setState({
+  //     modalOpen: true
+  //   });
+  // };
 
-  handleConfirm = evt => {
-    evt.preventDefault();
-    this.setState({
-      modalOpen: false // <--- NEED TO PASS THIS DOWN!
-    });
-  };
+  // handleConfirm = evt => {
+  //   evt.preventDefault();
+  //   this.setState({
+  //     modalOpen: false // <--- NEED TO PASS THIS DOWN!
+  //   });
+  // };
 
-  handleLeave = evt => {
-    evt.preventDefault();
-    this.setState({
-      modalOpen: true
-    });
-  };
+  // handleLeave = evt => {
+  //   evt.preventDefault();
+  //   this.setState({
+  //     modalOpen: true
+  //   });
+  // };
 
   render() {
+    console.log(this.props)
     return (
       <div className="Modal__container">
         <Button
@@ -45,15 +46,15 @@ class ModalContainerJoin extends Component {
           textColor={this.props.buttonTextColor}
           color={this.props.buttonColor}
           size={this.props.buttonSize}
-          handleClick={this.handleOpenModal}
+          handleClick={this.props.handleOpenModal}
         />
 
         <Modal
           message={this.props.message}
-          showModal={this.state.modalOpen}
+          showModal={this.props.modalOpen}
           confirmText={this.props.confirmText}
           cancelText={this.props.cancelText}
-          onConfirm={this.handleConfirm}
+          onConfirm={this.props.onConfirm}
           onClose={this.handleCloseModal}
           modalOpen={this.state.modalOpen}
         />

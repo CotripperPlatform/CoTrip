@@ -20,20 +20,37 @@ class CommunityPageGroup extends Component {
     };
   }
 
-  // handleConfirm = evt => {
-  //   evt.preventDefault();
-  //   this.setState({
-  //     joinGroup: true
-  //   });
-  // };
+  handleConfirm = evt => {
+    evt.preventDefault();
+    this.setState({
+      joinGroup: true,
+      showModal: false
+    });
+  };
 
-  // handleLeave = evt => {
-  //   evt.preventDefault();
-  //   this.setState({
-  //     joinGroup: false
-  //   });
-  //   alert("GROUP LEFT!");
-  // };
+  handleLeave = evt => {
+    evt.preventDefault();
+    this.setState({
+      joinGroup: false,
+      showModal: false
+    });
+    alert("GROUP LEFT!");
+  };
+
+  handleCloseModal = evt => {
+    evt.preventDefault();
+    this.setState({
+      showModal: false
+    });
+  };
+
+  handleOpenModal = (evt) => {
+    // evt.preventDefault()
+    console.log("Ive been clicked!!!")
+    this.setState({
+      showModal: true
+    });
+  };
 
   pillClick = val => {
     console.log(val);
@@ -78,25 +95,28 @@ class CommunityPageGroup extends Component {
                   cancelText="Exit"
                   onConfirm={this.handleLeave}
                   onClose={this.handleCloseModal}
-                  modalOpen={this.state.modalOpen}
+                  modalOpen={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+
                 />
               </div>
             ) : (
-              <div className="Modal_align">
-                <ModalContainerJoin
-                  buttonText="Join"
-                  buttonTextColor="black"
-                  buttonColor="yellow"
-                  buttonSize="small"
-                  message="Are you sure you want to join?"
-                  confirmText="Join"
-                  cancelText="Exit"
-                  onConfirm={this.handleConfirm}
-                  onClose={this.handleCloseModal}
-                  modalOpen={this.state.modalOpen}
-                />
-              </div>
-            )}
+                <div className="Modal_align">
+                  <ModalContainerJoin
+                    buttonText="Join"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
+                    buttonSize="small"
+                    message="Are you sure you want to join?"
+                    confirmText="Join"
+                    cancelText="Exit"
+                    onConfirm={this.handleConfirm}
+                    onClose={this.handleCloseModal}
+                    modalOpen={this.state.showModal}
+                    handleOpenModal={this.handleOpenModal}
+                  />
+                </div>
+              )}
           </Banner>{" "}
         </div>
       </div>
