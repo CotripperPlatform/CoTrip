@@ -13,6 +13,10 @@
   display: flex;
 }
 
+.Modal_align {
+  margin-top: -20px;
+}
+
 .community-page-header {
   margin-top: 0px;
 }

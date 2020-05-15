@@ -17,6 +17,10 @@
   top: 20%;
 }
 
+.Modal-hidden {
+  display: none;
+}
+
 .Modal_containerDiv {
   display: flex;
   justify-content: center;

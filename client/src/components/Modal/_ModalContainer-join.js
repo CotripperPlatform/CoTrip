@@ -23,27 +23,39 @@ class ModalContainerJoin extends Component {
     });
   };
 
+  handleConfirm = evt => {
+    evt.preventDefault();
+    this.setState({
+      modalOpen: false // <--- NEED TO PASS THIS DOWN!
+    });
+  };
+
+  handleLeave = evt => {
+    evt.preventDefault();
+    this.setState({
+      modalOpen: true
+    });
+  };
+
   render() {
     return (
       <div className="Modal__container">
-        {this.state.modalClose ? (
-          <div onClick={this.handleCloseModal} className="Modal__overlay"></div>
-        ) : (
-          <Button
-            text={this.props.buttonText}
-            textColor={this.props.buttonTextColor}
-            color={this.props.buttonColor}
-            size={this.props.buttonSize}
-            handleClick={this.handleOpenModal}
-          />
-        )}
+        <Button
+          text={this.props.buttonText}
+          textColor={this.props.buttonTextColor}
+          color={this.props.buttonColor}
+          size={this.props.buttonSize}
+          handleClick={this.handleOpenModal}
+        />
+
         <Modal
           message={this.props.message}
           showModal={this.state.modalOpen}
           confirmText={this.props.confirmText}
           cancelText={this.props.cancelText}
-          onConfirm={this.props.onConfirm}
+          onConfirm={this.handleConfirm}
           onClose={this.handleCloseModal}
+          modalOpen={this.state.modalOpen}
         />
       </div>
     );
