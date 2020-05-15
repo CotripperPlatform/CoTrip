@@ -5,8 +5,7 @@ import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
-
-import ModalContainer from "../../components/Modal/_ModalContainer";
+import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 
 function pillClick(val) {
   console.log(val);
@@ -40,16 +39,30 @@ const CommunityPageGroup = props => {
             placeholder="Search My Directory"
             variation="wide"
           />
-          <ModalContainer
-            buttonText="Join"
-            buttonTextColor="white"
-            buttonColor="pink"
-            buttonSize="small"
-            message="Are you sure you want to join?"
-            confirmText="Join"
-            cancelText="Exit"
-            onConfirm={handleEvent}
-          />
+          <div className="Modal_align">
+            <ModalContainerJoin
+              buttonText="Join"
+              buttonTextColor="black"
+              buttonColor="yellow"
+              buttonSize="small"
+              message="Are you sure you want to join?"
+              confirmText="Join"
+              cancelText="Exit"
+              onConfirm={handleEvent}
+            />
+          </div>
+          <div className="Modal_align">
+            <ModalContainerJoin
+              buttonText="Leave Group"
+              buttonTextColor="white"
+              buttonColor="pink"
+              buttonSize="small"
+              message="Are you sure you want to leave the group?"
+              confirmText="Leave Group"
+              cancelText="Exit"
+              onConfirm={handleEvent}
+            />
+          </div>
         </Banner>{" "}
       </div>
     </div>
