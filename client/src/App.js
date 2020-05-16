@@ -34,7 +34,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout } from "./services/User";
-import Navbar from "components/Navbar/Navbar.js";
 
 library.add(
   fab,
