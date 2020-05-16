@@ -26,7 +26,6 @@ class CommunityPageGroup extends Component {
       joinGroup: true,
       showModal: false
     });
-    alert("GROUP JOINED!");
   };
 
   handleLeave = evt => {
