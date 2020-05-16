@@ -34,7 +34,6 @@ class CommunityPageGroup extends Component {
       joinGroup: false,
       showModal: false
     });
-    alert("GROUP LEFT!");
   };
 
   handleCloseModal = evt => {
@@ -55,16 +54,6 @@ class CommunityPageGroup extends Component {
   pillClick = val => {
     console.log(val);
   };
-
-  // handleConfirm = evt => {
-  //   evt.preventDefault();
-  //   alert("GROUP HAS BEEN JOINED!");
-  //   this.setState({
-  //     joinGroup: true,
-  //     modalOpen: false, // <--- NEED TO PASS THIS DOWN!
-  //     showModal: false // or this needs to render deeper then community page
-  //   });
-  // };
 
   render() {
     return (

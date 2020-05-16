@@ -10,32 +10,12 @@ class ModalContainerJoin extends Component {
       modalOpen: false
     };
   }
-  // handleCloseModal = evt => {
-  //   evt.preventDefault();
-  //   this.setState({
-  //     modalOpen: false
-  //   });
-  // };
 
-  // handleOpenModal = () => {
-  //   this.setState({
-  //     modalOpen: true
-  //   });
-  // };
-
-  // handleConfirm = evt => {
-  //   evt.preventDefault();
-  //   this.setState({
-  //     modalOpen: false // <--- NEED TO PASS THIS DOWN!
-  //   });
-  // };
-
-  // handleLeave = evt => {
-  //   evt.preventDefault();
-  //   this.setState({
-  //     modalOpen: true
-  //   });
-  // };
+  handleCloseModal = evt => {
+    this.setState({
+      modalOpen: false
+    });
+  };
 
   render() {
     console.log(this.props);
@@ -55,7 +35,7 @@ class ModalContainerJoin extends Component {
           confirmText={this.props.confirmText}
           cancelText={this.props.cancelText}
           onConfirm={this.props.onConfirm}
-          onClose={this.handleCloseModal}
+          onClose={this.props.onClose}
           modalOpen={this.state.modalOpen}
         />
       </div>
