@@ -168,7 +168,6 @@ class CommunityPageGroup extends Component {
         </div>{" "}
         <div className="community-group-body">
           <div className="community-group-bodyLeft">
-            <header className="ForumPage__header"></header>
             <div>
               <ForumContainer
                 className="ForumPost"
