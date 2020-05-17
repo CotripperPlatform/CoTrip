@@ -7,6 +7,8 @@ import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
 import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
+import UpcomingEventsCard from "../../components/UpcomingEventsCard/UpcomingEventsCard";
+
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
 import van from "../../assets/images/media-card-3.png";
@@ -171,7 +173,7 @@ class CommunityPageGroup extends Component {
             <div>
               <ForumContainer
                 className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
+                forumPost={{ likes: 8, comments: 5 }}
                 comments={[
                   {
                     name: "Lexi R.",
@@ -186,7 +188,7 @@ class CommunityPageGroup extends Component {
               />
               <ForumContainer
                 className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
+                forumPost={{ likes: 8, comments: 5 }}
                 comments={[
                   {
                     name: "Lexi R.",
@@ -201,7 +203,7 @@ class CommunityPageGroup extends Component {
               />
               <ForumContainer
                 className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
+                forumPost={{ likes: 8, comments: 5 }}
                 comments={[
                   {
                     name: "Lexi R.",
@@ -231,6 +233,23 @@ class CommunityPageGroup extends Component {
               <div className="community-group-members_topic">
                 <Connections userViewing={true} users={testUsers} extraUsers="See More" />
               </div>
+            </div>
+            <h2>Upcoming Events</h2>
+            <div className="upcoming-events">
+              <div className="SingleEvent">
+                <UpcomingEventsCard
+                  name="Upcoming Event"
+                  date="Month Day"
+                  time="Time"
+                  location="City, State"
+                />
+              </div>
+              <UpcomingEventsCard
+                name="Upcoming Event"
+                date="Month Day"
+                time="Time"
+                location="City, State"
+              />
             </div>
             <div className="community-group-title_topic">
               <h2>Media</h2>

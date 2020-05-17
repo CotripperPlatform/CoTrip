@@ -7,7 +7,8 @@
   padding: 0.75em;
   background-color: var(--white);
 }
-.ForumPost__top-middle{
+
+.ForumPost__top-middle {
   border: 1px solid var(--black-lite);
   border-radius: 3px;
 }

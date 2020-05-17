@@ -18,7 +18,8 @@
 }
 
 .community-page-header {
-  margin-top: 0px;
+  margin-top: 25px;
+  margin-bottom: -10px;
 }
 
 .CommunityPage-Group-_body {
@@ -142,12 +143,6 @@
   overflow: hidden;
 }
 
-.CommunityPage__banner {
-  width: 100vw;
-  height: 231px;
-  background-color: var(--pink);
-}
-
 .CommunityPage__header {
   font-family: var(--default-font);
   font-size: 36px;
@@ -167,6 +162,16 @@
 
 .Pill {
   margin: 10px 50px 30px 0px;
+}
+
+.UpcomingEventsCard__name {
+  font-size: 10px;
+}
+
+.upcoming-events {
+  display: flex;
+  flex-direction: row;
+  /* width: 1000px; */
 }
 
 .community-page-body {
@@ -208,6 +213,9 @@
   margin-right: 120px;
 }
 
+.community-group-members_description_p {
+  width: 450px;
+}
 .community_mediaCard {
   margin-bottom: 15px;
 }
@@ -234,7 +242,8 @@
   margin: -50px -100px;
 }
 
-.ForumPage__header {
+.PostContainer {
+  border: 1px solid black;
 }
 
 .community_medieContainer {
@@ -327,7 +336,6 @@
 }
 
 .Connections__link {
-  color: rgba(37, 37, 37, 0.5);
   font-size: 1rem;
   font-family: var(--default-font);
   font-weight: normal;
