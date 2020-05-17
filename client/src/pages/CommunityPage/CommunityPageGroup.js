@@ -242,15 +242,16 @@ class CommunityPageGroup extends Component {
                   date="Month Day"
                   time="Time"
                   location="City, State"
-                />
-              </div>
+                />{" "}
+              </div>{" "}
               <UpcomingEventsCard
                 name="Upcoming Event"
                 date="Month Day"
                 time="Time"
                 location="City, State"
               />
-            </div>
+            </div>{" "}
+            <div className="seemore-events">See More</div>
             <div className="community-group-title_topic">
               <h2>Media</h2>
             </div>

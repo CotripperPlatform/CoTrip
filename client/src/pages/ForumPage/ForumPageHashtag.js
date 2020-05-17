@@ -7,7 +7,6 @@ import ForumContainer from "../../components/ForumPostContainer/ForumPostContain
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
-import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import books from "../../assets/images/media-card-1.png";
