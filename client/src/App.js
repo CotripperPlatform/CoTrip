@@ -7,6 +7,8 @@ import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
+import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople"
+import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups"
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -163,6 +165,19 @@ class App extends Component {
             )}
           >
           </Route>
+          <Route
+            path="/directory/people"
+            exact
+            render={routerProps => (
+              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
+            )}></Route>
+            <Route
+            path="/directory/groups"
+            exact
+            render={routerProps => (
+              <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
+            )}>
+            </Route>
           <Route
             path="/login"
             exact

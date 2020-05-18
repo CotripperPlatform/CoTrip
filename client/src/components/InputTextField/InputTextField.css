@@ -57,7 +57,7 @@
   -webkit-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 1em 0;
 }
 
 .InputTextField__container--post {
