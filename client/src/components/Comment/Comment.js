@@ -1,6 +1,8 @@
 import React from "react";
 import "./Comment.css";
 import ProfilePicture from "../ProfilePicture/ProfilePicture";
+import Profile2 from "../../assets/images/card_profile3.png";
+
 
 // Function based React Component
 const Comment = props => {
@@ -12,7 +14,7 @@ const Comment = props => {
   return (
     <div className="Comment">
       <div className="Comment__column Comment__profile">
-        <ProfilePicture type="small" to={to} image={image} />
+        <ProfilePicture type="small" to={to} image={Profile2} />
         <h4 className="Comment__name">{name}</h4>
       </div>
       <div className="Comment__column Comment__content">
