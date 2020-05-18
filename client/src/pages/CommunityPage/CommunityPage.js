@@ -28,12 +28,16 @@ const CommunityPage = props => {
     <div className="CommunityPage">
       <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
-        <h3 style={{ margin: 0 }}>Community: Groups</h3>
+        <div className="community-page-header">
+          {" "}
+          <h3 style={{ margin: -5 }}>Community: Groups</h3>
+        </div>
         <InputTextField
           type="text"
           variation="search"
           name="search directory"
           placeholder="Search My Directory"
+          variation="wide"
         />
       </Banner>
       <div className="secondNav">
