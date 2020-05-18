@@ -17,6 +17,6 @@ urlpatterns = [
     path('trips/<int:pk>', TripDetail.as_view(), name='trip_detail'),
     path('activity', ActivityList.as_view(), name='activity_list'),
     path('location/bystate', LocationListByState.as_view(), name='location_list_by_state'),
-    path('location/states', StateList.as_view(), name='state_list')
+    path('location/states', StateList.as_view(), name='state_list'),
     path('activity/<int:pk>', ActivityDetail.as_view(), name='activity_detail')
 ]
