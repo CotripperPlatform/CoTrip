@@ -22,6 +22,7 @@ class LocationListByState(generics.ListAPIView):
     serializer_class = LocationSerializer
     filter_backends = ( DjangoFilterBackend, )
     filterset_fields = ("state__code",) 
+    
 class LocationDetail(generics.RetrieveAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
