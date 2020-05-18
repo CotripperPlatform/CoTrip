@@ -10,6 +10,7 @@ from django.conf import settings
 import uuid
 
 
+
 class RegisterAPI(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
@@ -59,19 +60,11 @@ class ProfileList(generics.ListAPIView):
     serializer_class = ProfileSerializer
 
 
-class ProfileDetail(generics.RetrieveAPIView):
-    queryset = Profile.objects.all()
+class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProfileSerializer
-
-
-class ProfileUpdate(generics.RetrieveUpdateAPIView, UpdateModelMixin):
-    permission_classes = [
-        permissions.IsAuthenticated,
-    ]
-    serializer_class = ProfileSerializer
-
-    def get_object(self):
-        return self.partial_update(self, self.request)
+    def get_queryset(self):
+        user = self.request.user
+        return Profile.objects.filter(user=user.id)
 
 
 # not added to urls VVV

@@ -489,7 +489,7 @@
     "fields": {
       "name": "Santa Fe",
       "state": 31,
-      "country": 1    
+      "country": 1
     }
   },
   {
@@ -498,7 +498,7 @@
     "fields": {
       "name": "Palm Springs",
       "state": 5,
-      "country": 1 
+      "country": 1
     }
   },
   {
@@ -685,19 +685,15 @@
     "pk": 1,
     "fields": {
       "title": "California Wine Country 2022",
-      "locations": [
-        6,
-        7,
-        2
-      ],
-      "activities": [
-        1,
-        2,
-        3,
-        4
-      ],
+      "overview": "Enjoy a rejuvenating few days in the hills of California, drinking some of the best wines in the world.",
+      "locations": [6, 7, 2],
+      "activities": [1, 2, 3, 4],
       "start_date": "2022-04-20",
-      "end_date": "2022-04-26"
+      "end_date": "2022-04-26",
+      "imageURLs": [
+        "https://newsdeeply.imgix.net/20180628105312/grose368791.jpg?w=640&fit=max&q=60",
+        "https://www.sonomacounty.com/sites/default/files/inline-images/tasting_rooms_wineries_Jordan_Vineyards_Estate_Tour_and_Tasting_by_George_Rose_Sonoma_County_012_900x675.jpg"
+      ]
     }
   },
   {
@@ -705,16 +701,15 @@
     "pk": 2,
     "fields": {
       "title": "Tokyo 2021",
-      "locations": [
-        1
-      ],
-      "activities": [
-        5,
-        6,
-        7
-      ],
+      "overview": "Experience the vibrant life of Tokyo, taste the city's delicious food, and learn about Tokyo's rich culture and history.",
+      "locations": [1],
+      "activities": [5, 6, 7],
       "start_date": "2021-06-15",
-      "end_date": "2021-06-26"
+      "end_date": "2021-06-26",
+      "imageURLs": [
+        "https://stillmed.olympic.org/media/Images/OlympicOrg/News/2020/03/24/2020-03-24-tokyo-thumbnail-01.jpg",
+        "https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/02/a0002533/img/basic/a0002533_main.jpg?20200326125156&q=80&rw=750&rh=536"
+      ]
     }
   },
   {
@@ -722,18 +717,14 @@
     "pk": 3,
     "fields": {
       "title": "Explore New Mexico 2020",
-      "locations": [
-        3,
-        5
-      ],
-      "activities": [
-        8,
-        9,
-        10,
-        11
-      ],
+      "overview": "Welcome to the Land of Enchanment. Experience majestic views while hiking, eat the infamous New Mexican green chili, and watch beautiful sunsets each day.",
+      "locations": [3, 5],
+      "activities": [8, 9, 10, 11],
       "start_date": "2020-11-12",
-      "end_date": "2022-11-17"
+      "end_date": "2022-11-17",
+      "imageURLs": [
+        "https://www.lls.org/sites/default/files/chapters/nm/Image/banner/banner_chapter_new_mexico.jpg"
+      ]
     }
   }
 ]

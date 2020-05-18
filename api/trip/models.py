@@ -27,11 +27,12 @@ class Trip(models.Model):
 
     # Also, we might want to have a many to many relationship so multiple trips can have the same location and one trip and have multiple locations
     # Tyler advised that we give each trip just one location to make things simpler
-
+    overview = models.TextField(max_length=500, null=True,blank=True)
     locations = models.ManyToManyField('trip.Location')
     activities = models.ManyToManyField('trip.Activity')
     start_date = models.DateField()
     end_date = models.DateField()
+    imageURLs = models.CharField(max_length=500, null=True,blank=True)
 
     def __str__(self):
         return self.name
