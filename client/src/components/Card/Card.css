@@ -39,10 +39,11 @@
 }
 
 .Card--medium {
-  width: 14.75vw;
-  min-width: 180px;
-  margin: 0 0.2rem 0 0.2rem;
+  width: 10vw;
+  min-width: 200px;
+  margin-right: 25px;
 }
+
 .Card--medium-wide {
   width: 260px;
 }

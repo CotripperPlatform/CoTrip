@@ -41,6 +41,23 @@
   margin: 1rem 0 1rem 0;
 }
 
+.InputTextField__container--wide {
+  color: black;
+  background-color: var(--white);
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 0.5rem 0 0.5rem 3rem;
+  width: 100%;
+  max-width: 320px;
+  font-size: 18px;
+  font-family: var(--default-font);
+  margin: 1rem 0 1rem 0;
+  background-image: url("../../assets/images/global-nav_search_icon.png");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  background-size: 20px;
+}
+
 .InputTextField__container--search {
   display: flex;
   color: var(--black);

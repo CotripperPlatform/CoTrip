@@ -35,7 +35,8 @@ class UserSetupForm extends Component {
     if (
       this.state.confirmPassword == this.state.password &&
       this.state.email.match(regexEmail) &&
-      this.state.password.match(regexPassword)    ) {
+      this.state.password.match(regexPassword)
+    ) {
       this.props.save("setup", this.state);
       this.props.handleClick();
     } else {
