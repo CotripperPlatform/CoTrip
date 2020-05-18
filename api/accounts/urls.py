@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf.urls import include
-from .views import RegisterAPI, LoginAPI, UserAPI, ProfileList, ProfileDetail, ProfileUpdate, ProfileSocialMediaList, ProfileSocialMediaDetail, SocialMediaTypeList, SocialMediaTypeDetail, sign_s3
+from .views import RegisterAPI, LoginAPI, UserAPI, ProfileList, ProfileDetail, ProfileSocialMediaList, ProfileSocialMediaDetail, SocialMediaTypeList, SocialMediaTypeDetail, sign_s3
 from knox import views as knox_views
 
 urlpatterns = [
@@ -11,7 +11,6 @@ urlpatterns = [
     path('auth/logout', knox_views.LogoutView.as_view(), name='knox_logout'),
     path('profile', ProfileList.as_view(), name='profile_list'),
     path('profile/<int:pk>', ProfileDetail.as_view(), name='profile_detail'),
-    path('profile/update', ProfileUpdate.as_view(), name='profile_update'),
     path('profile_social_media', ProfileSocialMediaList.as_view(),
          name='profile_social_media_list'),
     path('profile_social_media/<int:pk>', ProfileSocialMediaDetail().as_view(),
