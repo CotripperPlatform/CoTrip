@@ -42,10 +42,14 @@
   }
 }
 
+.community-page-header {
+  margin-top: -40px;
+}
 .secondNav {
   display: flex;
   width: 100vw;
   justify-content: center;
+  margin-top: -5px;
 }
 
 .secondNav-Button {
