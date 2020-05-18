@@ -1,15 +1,23 @@
 from django.db import models
 
-
-class Location(models.Model):
-    city = models.CharField(max_length=200)
-    state = models.CharField(max_length=200)
-    country = models.CharField(max_length=200)
-    groups = models.ManyToManyField('community.Group')
-
+class Country(models.Model):
+    name = models.CharField(max_length = 200,null=True,blank=True)
+    code = models.CharField(max_length = 2, default='NA')
     def __str__(self):
-        return self.city
-
+        return self.name + "(" + self.code + ")"
+class State(models.Model):
+    name = models.CharField(max_length = 200,null=True,blank=True)
+    code = models.CharField(max_length = 2, default='NA')
+    country = models.ForeignKey(Country, on_delete=models.CASCADE,null=True,blank=True) 
+    def __str__(self):
+        return self.name +", " + self.country.code
+    #country = models.CharField(max_length=200)
+class Location(models.Model):
+    name = models.CharField(max_length = 200,null=True,blank=True)
+    state = models.ForeignKey(State, on_delete=models.CASCADE,null=True,blank=True)
+    country = models.ForeignKey(Country, on_delete=models.CASCADE,null=True,blank=True)
+    def __str__(self):
+        return self.name + ", " + self.state.code
 
 class Trip(models.Model):
     title = models.CharField(max_length=200)
@@ -29,7 +37,6 @@ class Trip(models.Model):
     def __str__(self):
         return self.name
 
-
 class Activity(models.Model):
     for_kids = models.BooleanField()
     for_moms = models.BooleanField()
@@ -41,7 +48,7 @@ class Activity(models.Model):
     time = models.TimeField()
 
     def __str__(self):
-        return self.title + ", " + self.location.city
+        return self.title + ", " + self.location.name
 
 
 # still missing/ not sure

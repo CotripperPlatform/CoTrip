@@ -1,71 +1,540 @@
 [
   {
+    "model": "trip.Country",
+    "pk": 1,
+    "fields": {
+      "name": "United States of America",
+      "code": "US"
+    }
+  },
+  {
+    "model": "trip.Country",
+    "pk": 2,
+    "fields": {
+      "name": "Japan",
+      "code": "JP"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 1,
+    "fields": {
+      "country": 1,
+      "name": "Alabama",
+      "code": "AL"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 2,
+    "fields": {
+      "country": 1,
+      "name": "Alaska",
+      "code": "AK"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 3,
+    "fields": {
+      "country": 1,
+      "name": "Arizona",
+      "code": "AZ"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 4,
+    "fields": {
+      "country": 1,
+      "name": "Arkansas",
+      "code": "AR"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 5,
+    "fields": {
+      "country": 1,
+      "name": "California",
+      "code": "CA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 6,
+    "fields": {
+      "country": 1,
+      "name": "Colorado",
+      "code": "CO"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 7,
+    "fields": {
+      "country": 1,
+      "name": "Connecticut",
+      "code": "CT"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 8,
+    "fields": {
+      "country": 1,
+      "name": "Delaware",
+      "code": "DE"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 9,
+    "fields": {
+      "country": 1,
+      "name": "Florida",
+      "code": "FL"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 10,
+    "fields": {
+      "country": 1,
+      "name": "Georgia",
+      "code": "GA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 11,
+    "fields": {
+      "country": 1,
+      "name": "Hawaii",
+      "code": "HI"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 12,
+    "fields": {
+      "country": 1,
+      "name": "Idaho",
+      "code": "ID"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 13,
+    "fields": {
+      "country": 1,
+      "name": "Illinois",
+      "code": "IL"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 14,
+    "fields": {
+      "country": 1,
+      "name": "Indiana",
+      "code": "IN"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 15,
+    "fields": {
+      "country": 1,
+      "name": "Iowa",
+      "code": "IA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 16,
+    "fields": {
+      "country": 1,
+      "name": "Kansas",
+      "code": "KS"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 17,
+    "fields": {
+      "country": 1,
+      "name": "Kentucky",
+      "code": "KY"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 18,
+    "fields": {
+      "country": 1,
+      "name": "Louisiana",
+      "code": "LA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 19,
+    "fields": {
+      "country": 1,
+      "name": "Maine",
+      "code": "ME"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 20,
+    "fields": {
+      "country": 1,
+      "name": "Maryland",
+      "code": "MD"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 21,
+    "fields": {
+      "country": 1,
+      "name": "Massachusetts",
+      "code": "MA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 22,
+    "fields": {
+      "country": 1,
+      "name": "Michigan",
+      "code": "MI"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 23,
+    "fields": {
+      "country": 1,
+      "name": "Minnesota",
+      "code": "MN"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 24,
+    "fields": {
+      "country": 1,
+      "name": "Mississippi",
+      "code": "MS"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 25,
+    "fields": {
+      "country": 1,
+      "name": "Missouri",
+      "code": "MO"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 26,
+    "fields": {
+      "country": 1,
+      "name": "Montana",
+      "code": "MT"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 27,
+    "fields": {
+      "country": 1,
+      "name": "Nebraska",
+      "code": "NE"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 28,
+    "fields": {
+      "country": 1,
+      "name": "Nevada",
+      "code": "NV"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 29,
+    "fields": {
+      "country": 1,
+      "name": "New Hampshire",
+      "code": "NH"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 30,
+    "fields": {
+      "country": 1,
+      "name": "New Jersey",
+      "code": "NJ"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 31,
+    "fields": {
+      "country": 1,
+      "name": "New Mexico",
+      "code": "NM"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 32,
+    "fields": {
+      "country": 1,
+      "name": "New York",
+      "code": "NY"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 33,
+    "fields": {
+      "country": 1,
+      "name": "North Carolina",
+      "code": "NC"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 34,
+    "fields": {
+      "country": 1,
+      "name": "North Dakota",
+      "code": "ND"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 35,
+    "fields": {
+      "country": 1,
+      "name": "Ohio",
+      "code": "OH"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 36,
+    "fields": {
+      "country": 1,
+      "name": "Oklahoma",
+      "code": "OK"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 37,
+    "fields": {
+      "country": 1,
+      "name": "Oregon",
+      "code": "OR"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 38,
+    "fields": {
+      "country": 1,
+      "name": "Pennsylvania",
+      "code": "PA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 39,
+    "fields": {
+      "country": 1,
+      "name": "Rhode Island",
+      "code": "RI"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 40,
+    "fields": {
+      "country": 1,
+      "name": "South Carolina",
+      "code": "SC"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 41,
+    "fields": {
+      "country": 1,
+      "name": "South Dakota",
+      "code": "SD"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 42,
+    "fields": {
+      "country": 1,
+      "name": "Tennessee",
+      "code": "TN"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 43,
+    "fields": {
+      "country": 1,
+      "name": "Texas",
+      "code": "TX"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 44,
+    "fields": {
+      "country": 1,
+      "name": "Utah",
+      "code": "UT"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 45,
+    "fields": {
+      "country": 1,
+      "name": "Vermont",
+      "code": "VT"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 46,
+    "fields": {
+      "country": 1,
+      "name": "Virginia",
+      "code": "VA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 47,
+    "fields": {
+      "country": 1,
+      "name": "Washington",
+      "code": "WA"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 48,
+    "fields": {
+      "country": 1,
+      "name": "West Virginia",
+      "code": "WV"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 49,
+    "fields": {
+      "country": 1,
+      "name": "Wisconsin",
+      "code": "WI"
+    }
+  },
+  {
+    "model": "trip.State",
+    "pk": 50,
+    "fields": {
+      "country": 1,
+      "name": "Wyoming",
+      "code": "WY"
+    }
+  },
+  {
     "model": "trip.Location",
     "pk": 1,
     "fields": {
-      "city": "Tokyo",
-      "country": "Japan",
-      "groups": [1]
+      "name": "Tokyo",
+      "state": null,
+      "country": 2
     }
   },
   {
     "model": "trip.Location",
     "pk": 2,
     "fields": {
-      "city": "San Francisco",
-      "state": "California",
-      "country": "USA",
-      "groups": [2]
+      "name": "San Francisco",
+      "state": 5,
+      "country": 1
     }
   },
   {
     "model": "trip.Location",
     "pk": 3,
     "fields": {
-      "city": "Santa Fe",
-      "state": "New Mexico",
-      "country": "USA",
-      "groups": [3]
+      "name": "Santa Fe",
+      "state": 31,
+      "country": 1    
     }
   },
   {
     "model": "trip.Location",
     "pk": 4,
     "fields": {
-      "city": "Palm Springs",
-      "state": "California",
-      "country": "USA",
-      "groups": [1]
+      "name": "Palm Springs",
+      "state": 5,
+      "country": 1 
     }
   },
   {
     "model": "trip.Location",
     "pk": 5,
     "fields": {
-      "city": "Taos",
-      "state": "New Mexico",
-      "country": "USA",
-      "groups": [2]
+      "name": "Taos",
+      "state": 31,
+      "country": 1
     }
   },
   {
     "model": "trip.Location",
     "pk": 6,
     "fields": {
-      "city": "Napa",
-      "state": "California",
-      "country": "USA",
-      "groups": [3]
+      "name": "Napa",
+      "state": 5,
+      "country": 1
     }
   },
   {
     "model": "trip.Location",
     "pk": 7,
     "fields": {
-      "city": "Sonoma",
-      "state": "California",
-      "country": "USA",
-      "groups": [1, 2, 3]
+      "name": "Sonoma",
+      "state": 5,
+      "country": 1
+    }
+  },
+  {
+    "model": "trip.Location",
+    "pk": 8,
+    "fields": {
+      "name": "Washington, D.C.",
+      "state": null,
+      "country": 1
     }
   },
   {
@@ -216,11 +685,19 @@
     "pk": 1,
     "fields": {
       "title": "California Wine Country 2022",
-      "locations": [6, 7, 2],
-      "activities": [1, 2, 3, 4],
+      "locations": [
+        6,
+        7,
+        2
+      ],
+      "activities": [
+        1,
+        2,
+        3,
+        4
+      ],
       "start_date": "2022-04-20",
-      "end_date": "2022-04-26",
-      "attendees": [1, 2, 3, 4]
+      "end_date": "2022-04-26"
     }
   },
   {
@@ -228,11 +705,16 @@
     "pk": 2,
     "fields": {
       "title": "Tokyo 2021",
-      "locations": [1],
-      "activities": [5, 6, 7],
+      "locations": [
+        1
+      ],
+      "activities": [
+        5,
+        6,
+        7
+      ],
       "start_date": "2021-06-15",
-      "end_date": "2021-06-26",
-      "attendees": [3, 4, 5]
+      "end_date": "2021-06-26"
     }
   },
   {
@@ -240,11 +722,18 @@
     "pk": 3,
     "fields": {
       "title": "Explore New Mexico 2020",
-      "locations": [3, 5],
-      "activities": [8, 9, 10, 11],
+      "locations": [
+        3,
+        5
+      ],
+      "activities": [
+        8,
+        9,
+        10,
+        11
+      ],
       "start_date": "2020-11-12",
-      "end_date": "2022-11-17",
-      "attendees": [1, 2, 3, 4, 5]
+      "end_date": "2022-11-17"
     }
   }
 ]
