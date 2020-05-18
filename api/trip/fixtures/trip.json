@@ -685,6 +685,7 @@
     "pk": 1,
     "fields": {
       "title": "California Wine Country 2022",
+      "overview": "Enjoy a rejuvenating few days in the hills of California, drinking some of the best wines in the world.",
       "locations": [
         6,
         7,
@@ -705,6 +706,7 @@
     "pk": 2,
     "fields": {
       "title": "Tokyo 2021",
+      "overview": "Experience the vibrant life of Tokyo, taste the city's delicious food, and learn about Tokyo's rich culture and history.",
       "locations": [
         1
       ],
@@ -722,6 +724,7 @@
     "pk": 3,
     "fields": {
       "title": "Explore New Mexico 2020",
+      "overview": "Welcome to the Land of Enchanment. Experience majestic views while hiking, eat the infamous New Mexican green chili, and watch beautiful sunsets each day.",
       "locations": [
         3,
         5
