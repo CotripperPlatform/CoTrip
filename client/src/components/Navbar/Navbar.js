@@ -17,7 +17,7 @@ class Navbar extends Component {
       // menuItems are created in order of the following array.
       menuItems: [
         { menuItem: "My Directory", link: "/directory" },
-        { menuItem: "Community", link: "/community" },
+        { menuItem: "Community", link: "/community/explore-people" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" },
       ]

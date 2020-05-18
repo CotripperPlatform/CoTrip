@@ -1,5 +1,5 @@
 import React from "react";
-import "./CommunityPage.css";
+import "./CommunityPagePeople.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
@@ -8,10 +8,12 @@ import Banner__Community from "assets/images/community_banner.png";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
-import GroupCard from "../../components/GroupCard/GroupCard";
-import picture1 from "../../assets/images/card_small1.png";
-import picture2 from "../../assets/images/card_small2.png";
-import picture3 from "../../assets/images/card_small3.png";
+import PersonCard from "../../components/PersonCard/PersonCard";
+import image1 from "../../assets/images/profile-picture-1.png";
+import image2 from "../../assets/images/profile-picture-2.png";
+import image3 from "../../assets/images/profile-picture-3.png";
+import image4 from "../../assets/images/profile-picture-4.png";
+import image5 from "../../assets/images/profile-picture-5.png";
 import Card from "../../components/Card/Card";
 
 function pillClick(val) {
@@ -28,26 +30,17 @@ const CommunityPage = props => {
     <div className="CommunityPage">
       <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
-        <div className="community-page-header">
-          {" "}
-          <h3 style={{ margin: -5 }}>Community: Groups</h3>
-        </div>
+        <h3 style={{ margin: 0 }}>Community: People</h3>
         <InputTextField
           type="text"
           variation="search"
           name="search directory"
           placeholder="Search My Directory"
-          variation="wide"
         />
       </Banner>
       <div className="secondNav">
-        <Button
-          text="Connect With Other Moms"
-          color="outline"
-          size="long"
-          handleClick={handleClick}
-        />
-        <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
+        <Button text="Connect With Other Moms" color="pink" size="long" handleClick={handleClick} />
+        <Button text="Discover Groups" color="outline" size="long" handleClick={handleClick} />
       </div>{" "}
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
@@ -56,7 +49,7 @@ const CommunityPage = props => {
         <div>
           <header className="CommunityPage__header">Group Location:</header>
         </div>
-        <div className="CommunityPage__group-location-container">
+        <div className="CommunityPage__mom-location-container">
           <Pill
             className="Pill"
             text={"Traveling"}
@@ -150,88 +143,40 @@ const CommunityPage = props => {
         </div>{" "}
         <a className="seeMore-Button">See More</a>
         <div>
-          <header className="CommunityPage__header">Groups in WASHINGTON, DC:</header>
+          <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
-        <div className="CommunityPage__groups-in-city-container">
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
-            />
+        <div className="CommunityPage__moms-in-city-container">
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image1} name="Lindsay L." location="Washington D.C." />
           </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image2} name="Chandy S." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image3} name="Caroline N." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image4} name="Rachel G." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image5} name="Julia C." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image1} name="Lindsay L." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image2} name="Chandy S." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image3} name="Caroline N." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image4} name="Rachel G." location="Washington D.C." />
+          </div>
+          <div className="CommunityPage__momCard-single">
+            <PersonCard image={image5} name="Julia C." location="Washington D.C." />
           </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              size="wide"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
-            />
-          </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
-          </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
-            />
-          </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
-          </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="DIY with your kids"
-              members="98 Members"
-              location="Mixed Locations"
-              picture={picture1}
-            />
-          </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Moms traveling to Hawaii"
-              members="5"
-              location="Chicago, IL"
-              picture={picture2}
-            />
-          </div>
-          <div className="CommunityPage__groupCard-single">
-            <GroupCard
-              name="Group Name"
-              members="# of "
-              location="Location, State"
-              picture={picture3}
-            />
-          </div>{" "}
-          <div className="CommunityPage__groupCard-single">
-            {" "}
-            <Card outline size="medium-wide">
-              <a href="/">Discover New Groups</a>
-            </Card>{" "}
-          </div>
+          <div className="CommunityPage__momCard-single"> </div>
         </div>
         <a className="seeAll-Button">See All</a>
       </div>

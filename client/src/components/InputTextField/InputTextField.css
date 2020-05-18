@@ -41,14 +41,32 @@
   margin: 1rem 0 1rem 0;
 }
 
+.InputTextField__container--wide {
+  color: black;
+  background-color: var(--white);
+  border: 2px solid white;
+  border-radius: 3px;
+  padding: 0.5rem 0 0.5rem 3rem;
+  width: 100%;
+  max-width: 320px;
+  font-size: 18px;
+  font-family: var(--default-font);
+  margin: 1rem 0 1rem 0;
+  background-image: url("../../assets/images/global-nav_search_icon.png");
+  background-repeat: no-repeat;
+  background-position: 15px 10px;
+  background-size: 20px;
+}
+
 .InputTextField__container--search {
   display: flex;
   color: var(--black);
   background-color: var(--white);
   border: 2px solid var(--white);
   border-radius: 3px;
-  padding: 1rem 6rem 1rem 6rem;
-  font-size: 20px;
+  padding: .5rem 4rem .5rem 4rem;
+  font-size: 30px;
+  width: 450px;
   font-family: var(--default-font);
   background-image: url("../../assets/images/global-nav_search_icon.png");
   background-repeat: no-repeat;
@@ -57,6 +75,25 @@
   -moz-box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   box-shadow: 0px 8px 5px -5px rgba(0, 0, 0, 0.53);
   margin: 1rem 0 1rem 0;
+}
+
+.InputTextField__container--post {
+  width: 100vw;
+  height: 103px;
+  left: 1px;
+  background: #FAFAFA;
+  border: 5px solid #C4C4C4;
+  /* box-sizing: border-box; */
+  font-family: Open Sans;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  color: rgba(0, 0, 0, 0.36);
+  margin-top: -40px;
+  margin-bottom: 50px;
+  padding-left: 10px;
 }
 
 .InputTextField__container--search::-webkit-input-placeholder {

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0em 0em .5em 0em;
   margin: 0 auto;
   width: 100%;
   width: 100vw;
@@ -15,7 +15,6 @@
   font-family: var(--default-font);
   font-size: 48px;
   color: #fafafa;
-  line-height: 72px;
   margin-bottom: 5vh;
 }
 .Banner--large {
