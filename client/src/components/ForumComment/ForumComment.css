@@ -4,6 +4,7 @@
   border: 1px solid var(--black);
   box-sizing: border-box;
   border-radius: 3px;
+  border-bottom: 20px;
 }
 
 .ForumComment__image {
