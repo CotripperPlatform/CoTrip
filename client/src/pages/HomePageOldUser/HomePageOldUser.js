@@ -18,7 +18,6 @@ import image2 from "../../assets/images/profile-picture-5.png";
 import image3 from "../../assets/images/profile-picture-4.png";
 
 import people from "assets/images/profile_default.svg";
-import suggestedPeople from "assets/images/add-friend.png";
 import airplane from "assets/images/airplane-shape.png";
 import groups from "assets/images/protest.png";
 import hashtags from "assets/images/trending-hashtags.png";
@@ -34,6 +33,7 @@ import MediaCard from "../../components/MediaCard/MediaCard";
 import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
+import Pill from "../../components/Pill/Pill";
 
 const personCard1 = (
   <PersonCard
@@ -77,6 +77,9 @@ const handleClick = e => {
   e.preventDefault();
   console.log("clicked");
 };
+function pillClick(val) {
+  console.log(val);
+}
 
 const HomePageOldUser = props => {
   return (
@@ -90,29 +93,104 @@ const HomePageOldUser = props => {
         </Banner>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
-            <h1 className="HomePage__suggested-header">Suggested Groups</h1>
+            <h1 className="HomePage__left-header">My Group</h1>
             <div className="HomePage__group-cards-container">
               <GroupCard
+                className="HomePage__groupcard-pic"
                 name="DIY with your kids"
                 members="98"
                 location="Boston, MA"
                 picture={card1}
               />
-              <span className="HomePage__groupcard-2">
-                <GroupCard name="Mystery Stories!" members="213" location="NYC" picture={card2} />
-              </span>
-              <span className="HomePage__groupcard-3">
-                <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
-              </span>
+              {/* <span className="HomePage__groupcard-pic"> */}
+              <GroupCard
+                className="HomePage__groupcard-pic"
+                name="Mystery Stories!"
+                members="213"
+                location="NYC"
+                picture={card2}
+              />
+              {/* </span> */}
+              {/* <span className="HomePage__groupcard-pic"> */}
+              <GroupCard
+                className="HomePage__groupcard-pic"
+                name="Bay Cruise"
+                members="98"
+                location="Lisbon"
+                picture={card3}
+              />
+              {/* </span> */}
               <a href="/home" className="HomePage__arrow" />
             </div>
-            <h1 className="HomePage__suggested-header">Suggested People</h1>
-            <div className="HomePage__people-container">
-              {personCard1}
-              {personCard2}
-              {personCard3}
-              <a href="/home" className="HomePage__arrow lower-people" />
+            <h1 className="HomePage__left-header">Topics and #hashtags I'm Following</h1>
+            <div className="home-old-user-page-pill-container">
+              <Pill
+                className="Forum-Pill"
+                text={"Traveling"}
+                size={"medium"}
+                size={"short"}
+                color={"red"}
+                icon={"white"}
+                onClick={pillClick}
+                selectId={0}
+              />
+              <Pill
+                className="Forum-Pill"
+                text={"Traveling"}
+                size={"medium"}
+                size={"short"}
+                color={"red"}
+                icon={"white"}
+                onClick={pillClick}
+                selectId={0}
+              />
+              <Pill
+                className="Forum-Pill"
+                text={"Traveling"}
+                size={"medium"}
+                size={"short"}
+                color={"pink"}
+                icon={"white"}
+                onClick={pillClick}
+                selectId={0}
+              />
+              <Pill
+                className="Forum-Pill"
+                text={"Traveling"}
+                size={"medium"}
+                size={"short"}
+                color={"pink"}
+                icon={"white"}
+                onClick={pillClick}
+                selectId={0}
+              />
+              <div className="forum-page-hollow-pill-container">
+                <Pill
+                  text={"#hashtags"}
+                  size={"medium"}
+                  size={"short"}
+                  color={"pink"}
+                  icon={"pink"}
+                  shadow
+                  border
+                  onClick={pillClick}
+                  selectId={0}
+                />
+                <Pill
+                  text={"#hashtags"}
+                  size={"medium"}
+                  size={"short"}
+                  color={"pink"}
+                  icon={"pink"}
+                  shadow
+                  border
+                  onClick={pillClick}
+                  selectId={0}
+                />
+              </div>
             </div>
+
+            <a href="/home" className="HomePage__arrow lower-people" />
           </span>
 
           <span className="HomePage__top-cards-wrapper">
@@ -124,16 +202,16 @@ const HomePageOldUser = props => {
               </BookTripCard>
               <TrendingHashtagCard
                 data={[
-                  "#art",
-                  "#hawaii",
-                  "#food",
-                  "#vacation",
-                  "#boats",
-                  "#crafts",
-                  "#parks",
-                  "#dogs",
-                  "#italy",
-                  "#yoga"
+                  "1 #art",
+                  "2 #hawaii",
+                  "3 #food",
+                  "4 #vacation",
+                  "5 #boats",
+                  "6 #crafts",
+                  "7 #parks",
+                  "8 #dogs",
+                  "9 #italy",
+                  "10 #yoga"
                 ]}
               >
                 <h1>Trending Hashtags</h1>
@@ -146,7 +224,7 @@ const HomePageOldUser = props => {
           <Link to="/">
             <Card color="yellow" size="mobile">
               <img src={groups} className="HomePage__mobile-card-icon" />
-              <h2>Suggested Groups</h2>
+              <h2>My Groups</h2>
             </Card>
           </Link>
           <Link to="/">
@@ -155,12 +233,7 @@ const HomePageOldUser = props => {
               <h2>Book a Trip</h2>
             </Card>
           </Link>
-          <Link to="/">
-            <Card color="red" size="mobile">
-              <img src={suggestedPeople} className="HomePage__mobile-card-icon" />
-              <h2>Suggested People</h2>
-            </Card>
-          </Link>
+
           <Link to="/">
             <Card color="purple" size="mobile">
               <img src={hashtags} className="HomePage__mobile-card-icon" />

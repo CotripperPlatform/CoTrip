@@ -24,8 +24,8 @@
 
 /**
 |--------------------------------------------------
-| Contents on left side top of page. Suggested groups
-| and suggested people
+| Contents on left side top of page. My groups
+| and topics
 |--------------------------------------------------
 */
 .HomePage_top-items-wrapper {
@@ -33,7 +33,15 @@
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 3vh;
+
   /* border: 3px solid black; */
+}
+
+.home-old-user-page-pill-container {
+  display: flex;
+  flex-direction: row;
+  width: 65vw;
+  flex-wrap: wrap;
 }
 
 .HomePage__suggestions-container {
@@ -44,10 +52,10 @@
   animation: slide-up 0.9s ease forwards;
 }
 
-.HomePage__suggested-header {
+.HomePage__left-header {
   font-family: var(--default-font);
   color: var(--purple);
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 .HomePage__group-cards-container {
   display: flex;
@@ -56,10 +64,16 @@
   width: 50vw;
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
-  /* border: 5px solid red; */
+  border: 5px solid red;
 }
 
-.HomePage__people-container {
+.HomePage__groupcard-pic {
+  /* width: 100px;
+  height: 100px; */
+  border: 5px solid red;
+}
+
+/* .HomePage__people-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -68,7 +82,6 @@
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
   /* border: 5px solid red; */
-}
 
 .HomePage__arrow {
   background-color: var(--yellow-dark);
@@ -82,24 +95,25 @@
   transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
-/* for suggested people */
-.lower-people {
+
+/* .lower-people {
   margin-top: 8rem;
-}
+} */
 .HomePage__arrow:hover {
   transform: scale(1.1);
   background-color: var(--yellow);
 }
 
 .HomePage__mobile-card-icon {
-  margin-top: 20px;
+  /* margin-top: 20px; */
   transform: scaleX(0.6);
+  border: 2px solid red;
 }
 
 /**
 |--------------------------------------------------
-| Contents on left side top of page. Suggested groups
-| and suggested people
+| Contents on left side top of page. My groups
+| and topics
 |--------------------------------------------------
 */
 
@@ -122,6 +136,7 @@
   width: 33vw;
   /* border: 3px solid goldenrod; */
   margin: 1rem;
+  border: 2px solid red;
 }
 
 @media only screen and (min-width: 993px) and (max-width: 1400px) {
