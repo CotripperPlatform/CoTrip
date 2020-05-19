@@ -16,7 +16,7 @@ class Navbar extends Component {
       condensedMenuActive: false,
       // menuItems are created in order of the following array.
       menuItems: [
-        { menuItem: "My Directory", link: "/directory" },
+        { menuItem: "My Directory", link: "/directory/people" },
         { menuItem: "Community", link: "/community/explore-people" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" },

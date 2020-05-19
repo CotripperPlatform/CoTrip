@@ -8,6 +8,8 @@ import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
 import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
+import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople"
+import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups"
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
@@ -176,6 +178,19 @@ class App extends Component {
               <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
+          <Route
+            path="/directory/people"
+            exact
+            render={routerProps => (
+              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
+            )}></Route>
+            <Route
+            path="/directory/groups"
+            exact
+            render={routerProps => (
+              <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
+            )}>
+            </Route>
           <Route
             path="/login"
             exact
