@@ -1,13 +1,3 @@
-.BookATripPage {
-  overflow: hidden;
-}
-
-.BookATripPage__banner {
-  width: 100vw;
-  height: 234px;
-  background-color: var(--pink);
-}
-
 .BookATripPage__header {
   font-family: var(--default-font);
   font-size: 36px;
