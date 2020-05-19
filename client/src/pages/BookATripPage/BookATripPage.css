@@ -1,35 +1,24 @@
-.BookATripPage {
-    overflow: hidden;
-}
-
-.BookATripPage__banner {
-    width: 100vw;
-    height: 231px;
-    background-color: var(--pink);
-}
-
-.BookATripPage__header{
-    font-family: var(--default-font);
-    font-size: 36px;
-    color: var(--purple);
-    padding: 20px 50px 0px 50px;
-    margin: 0 auto;
+.BookATripPage__header {
+  font-family: var(--default-font);
+  font-size: 36px;
+  color: var(--purple);
+  padding: 20px 50px 0px 50px;
+  margin: 0 auto;
 }
 
 .BookATripPage__button-container {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
+  display: flex;
+  justify-content: center;
+  padding: 50px;
 }
 
-@media only screen and (max-width: 320px){
-    .BookATripPage__header{
-        text-align: center;
-        font-size: 36px;
-    }
+@media only screen and (max-width: 320px) {
+  .BookATripPage__header {
+    text-align: center;
+    font-size: 36px;
+  }
 
-    .BookATripPage{
-       width: 100vw;
-    }
+  .BookATripPage {
+    width: 100vw;
+  }
 }
-

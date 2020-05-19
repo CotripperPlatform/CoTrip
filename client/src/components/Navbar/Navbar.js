@@ -16,10 +16,10 @@ class Navbar extends Component {
       condensedMenuActive: false,
       // menuItems are created in order of the following array.
       menuItems: [
-        { menuItem: "My Directory", link: "/directory" },
-        { menuItem: "Community", link: "/community" },
+        { menuItem: "My Directory", link: "/directory/people" },
+        { menuItem: "Community", link: "/community/explore-people" },
         { menuItem: "Forum", link: "/forum-page" },
-        { menuItem: "Book A Trip", link: "/book-a-trip" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" }
       ]
     };
   }
@@ -47,7 +47,6 @@ class Navbar extends Component {
           <div className="Navbar__menu">
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
-                
                 <NavLink text={item.menuItem} to={item.link} />
                 {this.props.page === key}
                 {this.props.page === key && <div className={`Navbar__triangle`}></div>}

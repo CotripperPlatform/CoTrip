@@ -4,6 +4,7 @@
   text-shadow: 2px 2px var(--purple);
   text-decoration: none;
   width: 100%;
+  margin: 0px 10px 0px 10px;
 }
 
 .GroupCard__text-container {

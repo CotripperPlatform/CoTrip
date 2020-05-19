@@ -2,14 +2,28 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import generics
-from .serializers import LocationSerializer, TripSerializer, ActivitySerializer
-from .models import Location, Trip, Activity
+from .serializers import LocationSerializer, TripSerializer, ActivitySerializer, StateSerializer
+from .models import Location, Trip, Activity, State
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .filter import TripFilter
 from datetime import date
 
 class LocationList(generics.ListAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+
+class StateList(generics.ListAPIView):
+    queryset = State.objects.all()
+    serializer_class = StateSerializer
+
+class LocationListByState(generics.ListAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+    filter_backends = ( DjangoFilterBackend, )
+    filterset_fields = ("state__code",) 
+    
+class LocationDetail(generics.RetrieveAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
@@ -39,6 +53,14 @@ class TripUpcomingList(generics.ListAPIView):
     ordering_fields = ("start_date","end_date",)
     ordering = ('start_date',"end_date",)
     
+class TripDetail(generics.RetrieveAPIView):
+    queryset = Trip.objects.all()
+    serializer_class = TripSerializer
+
 class ActivityList(generics.ListAPIView):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
+
+class ActivityDetail(generics.RetrieveAPIView):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer

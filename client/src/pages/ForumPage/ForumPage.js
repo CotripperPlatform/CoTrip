@@ -28,14 +28,23 @@ const ForumPage = props => {
         <h3 style={{ margin: 0 }}>Forum: Discover Topics</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
           placeholder="Search Topics and #hashtags"
         />
       </Banner>
       <div className="secondNav">
-        <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
-        <Button text="Discover Topics" color="outline" size="long" handleClick={handleClick} />
+        <a className="secondNav">
+          <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
+        </a>
+        <a className="secondNav" href="./forum-page-discover">
+          <Button
+            text="Discover Topics"
+            color="outlinepink"
+            size="long"
+            handleClick={handleClick}
+          />
+        </a>
       </div>
 
       <div className="forum-page-body">
@@ -155,7 +164,9 @@ const ForumPage = props => {
           />
         </div>
         <div>
-          <header className="ForumPage__header">#hashtags I'm Following</header>
+          <header className="ForumPage__header">
+            #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
+          </header>{" "}
         </div>
         <div className="forum-page-hollow-pill-container">
           <Pill
@@ -214,9 +225,7 @@ const ForumPage = props => {
             selectId={0}
           />
         </div>
-        <div className="ForumPage__button-container">
-          <Button text="View Previous Trips" color="pink" size="large" />
-        </div>
+        <div className="ForumPage__button-container"></div>
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>

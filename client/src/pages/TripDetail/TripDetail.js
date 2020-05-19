@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hawaii2020.css";
+import "./TripDetail.css";
 import NavBar from "components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
 import Banner from "components/Banner/Banner";
@@ -10,7 +10,7 @@ import ActivityList from "components/ActivityList/ActivityList";
 import Button from "components/Button/Button";
 import Footer from "components/Footer/Footer";
 
-const Hawaii2020 = props => {
+const TripDetail = props => {
   let momActivities = ["Spa", "Wine Nights", "Brunch with Other Moms"];
   let kidsActivities = [
     "Snorkeling",
@@ -24,24 +24,27 @@ const Hawaii2020 = props => {
   let { tripName } = props;
 
   return (
-    <div className="Hawaii2020">
-      <Banner background={Banner__pink}>
-        <h3>Trip: {tripName} 2020</h3>
-      </Banner>
-      <div className="Hawaii2020__BannerImageCard-container">
+    <div className="TripDetail">
+      <NavBar page={3} profileImage={people} />
+      <div className="TripDetail-Header">
+        <Banner background={Banner__pink}>
+          <h3>Trip: {tripName} 2020</h3>
+        </Banner>
+      </div>
+      <div className="TripDetail__BannerImageCard-container">
         <Banner type="BannerLarge" background={Banner__Image}>
           <h3>Hawaii 2020</h3>
         </Banner>
       </div>
-      <div className="Hawaii2020__body-container">
+      <div className="TripDetail__body-container">
         <TripDetails />
-        <div className="Hawaii2020__ActivityList-container">
+        <div className="TripDetail__ActivityList-container">
           <ActivityList title="Activities for Moms" activities={momActivities} color="purple" />
         </div>
-        <div className="Hawaii2020__ActivityList-container"></div>
+        <div className="TripDetail__ActivityList-container"></div>
         <ActivityList title="Activities for Moms & Kids" activities={kidsActivities} color="red" />
       </div>
-      <div className="Hawaii2020__button-container">
+      <div className="TripDetail__button-container">
         <Button text="Book Now" color="pink" size="large" />
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
@@ -49,4 +52,4 @@ const Hawaii2020 = props => {
   );
 };
 
-export default Hawaii2020;
+export default TripDetail;

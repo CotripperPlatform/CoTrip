@@ -21,7 +21,6 @@ class NavLink extends React.Component {
   render() {
     console.log(this.props);
     if (this.props.text === "Community") {
-
       return (
         <div
           className="NavLink"
@@ -46,9 +45,7 @@ class NavLink extends React.Component {
     } else {
       return (
         <div>
-          <div
-            className="NavLink"
-          >
+          <div className="NavLink">
             <Link to={this.props.to}>
               <h1>{this.props.text}</h1>
             </Link>
@@ -68,15 +65,15 @@ class NavLink extends React.Component {
 }
 NavLink.defaultProps = {
   text: "Community",
-  to: "/community",
+  to: "/community/",
   menuList: [
     {
       text: "Explore People",
-      to: "/explore-people"
+      to: "/community/explore-people"
     },
     {
       text: "Join Groups",
-      to: "/join-groups"
+      to: "/community/join-groups"
     }
   ]
 };

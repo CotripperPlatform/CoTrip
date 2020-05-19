@@ -1,0 +1,24 @@
+.TripDetail__body-container {
+  margin: 0 35px 0 35px;
+}
+
+.TripDetail__ActivityList-container {
+  margin-top: 50px;
+}
+
+.TripDetail__button-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+.TripDetail__BannerImageCard-container {
+  margin-top: -70px;
+  padding-bottom: 50px;
+}
+
+.TripDetail-Header {
+  display: flex;
+  height: 250px;
+  width: 100.1%;
+}

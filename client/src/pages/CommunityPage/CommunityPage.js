@@ -18,9 +18,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {
-  console.log("Clicked");
-};
+const handleClick = e => {};
 
 // Page or
 const CommunityPage = props => {
@@ -28,29 +26,38 @@ const CommunityPage = props => {
     <div className="CommunityPage">
       <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
-        <h3 style={{ margin: 0 }}>Community: Groups</h3>
+        <div className="community-page-header">
+          {" "}
+          <h3 style={{ margin: 0 }}>Community: Groups</h3>
+        </div>
         <InputTextField
           type="text"
-          variation="search"
           name="search directory"
-          placeholder="Search My Directory"
+          placeholder="Search Groups"
+          variation="wide"
         />
       </Banner>
       <div className="secondNav">
-        <Button
-          text="Connect With Other Moms"
-          color="outline"
-          size="long"
-          handleClick={handleClick}
-        />
-        <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
+        <a href="./explore-people" className="secondNav">
+          <Button
+            text="Connect With Other Moms"
+            color="outlinepink"
+            size="long"
+            handleClick={handleClick}
+          />
+        </a>{" "}
+        <a className="secondNav">
+          <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
+        </a>
       </div>{" "}
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
       </div>
       <div className="CommunityPage_body">
         <div>
-          <header className="CommunityPage__header">Group Location:</header>
+          <header className="CommunityPage__header">
+            Group Location: <a href="./view-group"> View Sample Page </a>
+          </header>
         </div>
         <div className="CommunityPage__group-location-container">
           <Pill
@@ -146,7 +153,9 @@ const CommunityPage = props => {
         </div>{" "}
         <a className="seeMore-Button">See More</a>
         <div>
-          <header className="CommunityPage__header">Groups in WASHINGTON, DC:</header>
+          <header className="CommunityPage__header">
+            Groups in WASHINGTON, DC: <a href="./view-group"> View Sample Page </a>
+          </header>{" "}
         </div>
         <div className="CommunityPage__groups-in-city-container">
           <div className="CommunityPage__groupCard-single">
@@ -225,7 +234,7 @@ const CommunityPage = props => {
           <div className="CommunityPage__groupCard-single">
             {" "}
             <Card outline size="medium-wide">
-              <a href="/">Discover New Groups</a>
+              <a href="./view-group">Discover New Groups</a>
             </Card>{" "}
           </div>
         </div>
