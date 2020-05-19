@@ -21,8 +21,7 @@ function pillClick(val) {
 }
 
 const handleClick = e => {
-  console.log("Clicked");
-
+  ("/home");
 };
 
 // Page or
@@ -34,14 +33,18 @@ const DirectoryPeople = props => {
         <h3 style={{ margin: 0 }}>Directory: My Friends</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
-          placeholder="Search My Directory"
+          placeholder="Search Groups"
         />
       </Banner>
       <div className="secondNav">
-        <Button text="My Friends" color="purple" size="long" handleClick={handleClick} />
-        <Button text="My Groups" color="outline" size="long" handleClick={handleClick} to="/forum-page"/>
+        <a className="secondNav">
+          <Button text="My Friends" color="purple" size="long" handleClick={handleClick} />
+        </a>
+        <a className="secondNav" href="./groups">
+          <Button text="My Groups" color="outline" size="long" />
+        </a>
       </div>{" "}
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
@@ -169,7 +172,7 @@ const DirectoryPeople = props => {
             <PersonCard image={image2} name="Chandy S." location="Washington D.C." />
           </div>
           <div className="CommunityPage__momCard-single">
-            <Card outline size="medium">
+            <Card outline size="medium-tall">
               <a href="/">Discover New Connections</a>
             </Card>
           </div>{" "}

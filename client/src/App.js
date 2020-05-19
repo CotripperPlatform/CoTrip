@@ -6,14 +6,16 @@ import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
 import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import ForumPageDiscover from "./pages/ForumPage/ForumPageDiscover";
+
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
-import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople"
-import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups"
+import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
+import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
-import Hawaii2020 from "./pages/Hawaii2020/Hawaii2020";
+import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import "./App.css";
@@ -105,10 +107,10 @@ class App extends Component {
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
-            path="/hawaii-2020"
+            path="/TripDetail"
             exact
             render={routerProps => (
-              <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
+              <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>{" "}
           <Route
@@ -172,6 +174,17 @@ class App extends Component {
             )}
           ></Route>
           <Route
+            path="/forum-page-discover"
+            exact
+            render={routerProps => (
+              <ForumPageDiscover
+                handle_logout={this.handleLogout}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
+          ></Route>
+          <Route
             path="/forum-page-topic"
             exact
             render={routerProps => (
@@ -183,14 +196,15 @@ class App extends Component {
             exact
             render={routerProps => (
               <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
-            )}></Route>
-            <Route
+            )}
+          ></Route>
+          <Route
             path="/directory/groups"
             exact
             render={routerProps => (
               <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
-            )}>
-            </Route>
+            )}
+          ></Route>
           <Route
             path="/login"
             exact

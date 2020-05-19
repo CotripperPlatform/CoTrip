@@ -15,6 +15,12 @@
   margin-top: auto;
 }
 
+.Footer {
+  margin-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 /**
 |--------------------------------------------------
 | These contents are the top items on the page:
@@ -48,6 +54,20 @@
   font-family: var(--default-font);
   color: var(--purple);
   margin-left: 2rem;
+}
+
+.HomePage__groupcard-1 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.HomePage__groupcard-2 {
+  margin-left: 10px;
+}
+
+.HomePage__groupcard-3 {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .HomePage__group-cards-container {
   display: flex;

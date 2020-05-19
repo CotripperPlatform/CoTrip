@@ -23,7 +23,7 @@ const BookTripCard = props => {
   );
 };
 BookTripCard.defaultProps = {
-  children: [<h1>Book a Trip</h1>, <Card size="medium" />, <Card size="medium" />],
+  children: [<h1>Book a Trip</h1>, <Card size="medium-small" />, <Card size="medium-small" />],
   link: "/"
 };
 export default BookTripCard;

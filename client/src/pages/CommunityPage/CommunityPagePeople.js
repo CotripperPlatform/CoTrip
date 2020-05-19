@@ -20,9 +20,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {
-  console.log("Clicked");
-};
+const handleClick = e => {};
 
 // Page or
 const CommunityPage = props => {
@@ -33,21 +31,38 @@ const CommunityPage = props => {
         <h3 style={{ margin: 0 }}>Community: People</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
-          placeholder="Search My Directory"
+          placeholder="Search Groups"
         />
       </Banner>
       <div className="secondNav">
-        <Button text="Connect With Other Moms" color="pink" size="long" handleClick={handleClick} />
-        <Button text="Discover Groups" color="outline" size="long" handleClick={handleClick} />
+        <a className="secondNav">
+          <Button
+            text="Connect With Other Moms"
+            color="pink"
+            size="long"
+            handleClick={handleClick}
+          />
+        </a>
+        <a href="./join-groups" className="secondNav">
+          {" "}
+          <Button
+            text="Discover Groups"
+            color="outlinepink"
+            size="long"
+            handleClick={handleClick}
+          />
+        </a>
       </div>{" "}
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
       </div>
       <div className="CommunityPage_body">
         <div>
-          <header className="CommunityPage__header">Group Location:</header>
+          <header className="CommunityPage__header">
+            Group Location: <a href="./view-group"> View Sample Page </a>
+          </header>
         </div>
         <div className="CommunityPage__mom-location-container">
           <Pill

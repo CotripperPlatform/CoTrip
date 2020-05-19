@@ -92,12 +92,14 @@ const HomePage = props => {
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
             <div className="HomePage__group-cards-container">
-              <GroupCard
-                name="DIY with your kids"
-                members="98"
-                location="Boston, MA"
-                picture={card1}
-              />
+              <span className="HomePage__groupcard-1">
+                <GroupCard
+                  name="DIY with your kids"
+                  members="98"
+                  location="Boston, MA"
+                  picture={card1}
+                />
+              </span>
               <span className="HomePage__groupcard-2">
                 <GroupCard name="Mystery Stories!" members="213" location="NYC" picture={card2} />
               </span>
@@ -207,9 +209,10 @@ const HomePage = props => {
         <SignUp
           heading="Never Miss a Trip"
           subheading="Sign up with your email address to recieve news and updates"
-        ></SignUp>
-        <Footer history={props.history} handle_logout={props.handle_logout} />
+        ></SignUp>{" "}
       </footer>
+
+      <Footer history={props.history} handle_logout={props.handle_logout} />
     </body>
   );
 };
