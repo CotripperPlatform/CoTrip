@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import Location, Trip, Activity, State, Country
 from accounts.serializers import UserSerializer
 
+
+
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
@@ -25,7 +27,7 @@ class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
         fields = '__all__'
-    
+
 class TripSerializer(serializers.ModelSerializer):
     locations = LocationSerializer(many=True, read_only=True)
     activities = ActivitySerializer(many=True, read_only=True)
@@ -35,4 +37,5 @@ class TripSerializer(serializers.ModelSerializer):
     attendees = UserSerializer(many=True, read_only=True)
     class Meta:
         model = Trip
-        fields = '__all__'            
+        fields = '__all__'
+           
