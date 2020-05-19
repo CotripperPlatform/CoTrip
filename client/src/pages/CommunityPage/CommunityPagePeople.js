@@ -20,9 +20,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {
-  console.log("Clicked");
-};
+const handleClick = e => {};
 
 // Page or
 const CommunityPage = props => {
@@ -39,8 +37,18 @@ const CommunityPage = props => {
         />
       </Banner>
       <div className="secondNav">
-        <Button text="Connect With Other Moms" color="pink" size="long" handleClick={handleClick} />
-        <Button text="Discover Groups" color="outline" size="long" handleClick={handleClick} />
+        <a className="secondNav">
+          <Button
+            text="Connect With Other Moms"
+            color="pink"
+            size="long"
+            handleClick={handleClick}
+          />
+        </a>
+        <a href="./join-groups" className="secondNav">
+          {" "}
+          <Button text="Discover Groups" color="outline" size="long" handleClick={handleClick} />
+        </a>
       </div>{" "}
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>

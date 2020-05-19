@@ -247,9 +247,9 @@
 }
 
 .community-group-bodyLeft {
-  margin: 0px;
   width: 78vw;
   margin: -50px -100px;
+  height: 100%;
 }
 
 .PostContainer {

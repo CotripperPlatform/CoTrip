@@ -19,10 +19,6 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {
-  console.log("Clicked");
-};
-
 // Page or
 const DirectoryGroups = props => {
   return (
@@ -38,14 +34,14 @@ const DirectoryGroups = props => {
         />
       </Banner>
       <div className="secondNav">
-        <Button
-          text="My Friends"
-          color="outline"
-          size="long"
-          handleClick={handleClick}
-        />
-        <Button text="My Groups" color="purple" size="long" handleClick={handleClick} />
-      </div>{" "}
+        <a className="secondNav" href="./people">
+          <Button text="My Friends" color="outline" size="long" />
+        </a>{" "}
+        <a className="secondNav" href="./groups">
+          <Button text="My Groups" color="purple" size="long" />
+        </a>
+      </div>
+
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
       </div>
@@ -225,7 +221,7 @@ const DirectoryGroups = props => {
           </div>{" "}
           <div className="CommunityPage__groupCard-single">
             {" "}
-            <Card outline size="medium-wide">
+            <Card outline size="medium-wide-directory">
               <a href="/">Discover New Groups</a>
             </Card>{" "}
           </div>

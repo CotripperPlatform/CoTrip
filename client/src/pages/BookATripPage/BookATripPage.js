@@ -30,17 +30,21 @@ const BookATripPage = props => {
       <BookATripImage
         className="BookATripPage__images"
         cards={[
-          { image: image1, url: "/hawaii-2020", description: "Hawaii May 2020" },
-          { image: image2, url: "#", description: "Greece & Croatia Cruise June 2020" },
-          { image: image3, url: "#", description: "Southern Caribbean Cruise July 2020" },
-          { image: image1, url: "#", description: "Hawaii May 2020" },
-          { image: image4, url: "#", description: "Eastern Caribbean Cruise New Year's 2021" }
+          { image: image1, url: "/TripDetail", description: "Hawaii May 2020" },
+          { image: image2, url: "/TripDetail", description: "Greece & Croatia Cruise June 2020" },
+          { image: image3, url: "/TripDetail", description: "Southern Caribbean Cruise July 2020" },
+          { image: image1, url: "/TripDetail", description: "Hawaii May 2020" },
+          {
+            image: image4,
+            url: "/TripDetail",
+            description: "Eastern Caribbean Cruise New Year's 2021"
+          }
         ]}
       />
       <div className="BookATripPage__button-container">
         <Button text="View Previous Trips" color="pink" size="large" />
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout}/>
+      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

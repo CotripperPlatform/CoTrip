@@ -165,6 +165,10 @@
   flex-wrap: nowrap;
 }
 
+.hashtag__bodyLeft {
+  margin-bottom: 50px;
+}
+
 .Connections__link {
   font-size: 1rem;
   font-family: var(--default-font);
