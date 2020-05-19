@@ -9,10 +9,13 @@ const BookATripImage = props => {
         {props.cards.map((card, i) => {
           return (
             <div className="BookATripImage__image-container" key={i}>
-              <div
-                className="BookATripImage__image"
-                style={{ backgroundImage: `url(${card.image})` }}
-              ></div>
+              <Link to={card.url} className="BookATripImage__link">
+                {" "}
+                <div
+                  className="BookATripImage__image"
+                  style={{ backgroundImage: `url(${card.image})` }}
+                ></div>{" "}
+              </Link>
               <div>
                 <Link to={card.url} className="BookATripImage__link">
                   {card.description}

@@ -16,8 +16,8 @@
   padding: 20px 50px 0px 0px;
   margin: 0 auto;
   text-align: left;
+  margin-top: 15px;
 }
-
 .ForumPost__likes-comments {
   margin-top: 20px;
   position: absolute;
@@ -163,6 +163,10 @@
   flex-direction: row;
   width: 600px;
   flex-wrap: nowrap;
+}
+
+.hashtag__bodyLeft {
+  margin-bottom: 50px;
 }
 
 .Connections__link {

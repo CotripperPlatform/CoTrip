@@ -8,7 +8,7 @@
 .PostBody__top {
   display: flex;
   justify-content: space-between;
-  width: 102%;
+  width: 100%;
 }
 
 .PostBody__top-left {
