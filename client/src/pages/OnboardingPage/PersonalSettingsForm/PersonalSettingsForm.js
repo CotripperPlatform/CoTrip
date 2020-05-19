@@ -3,7 +3,7 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import FileUpload from "components/FileUploadComponent/FileUpload";
-import { getSignedRequest, uploadFile } from "../../../services/Accounts";
+import { getSignedRequest, uploadFile,imgurUpload } from "../../../services/Accounts";
 
 // import handleFile from ""
 class PersonalSettingsForm extends Component {
@@ -24,6 +24,7 @@ class PersonalSettingsForm extends Component {
 
     this.getSignedRequest = getSignedRequest.bind(this);
     this.uploadFile = uploadFile.bind(this);
+    this.imgurUpload = imgurUpload.bind(this);
   }
 
   updateValue = e => {
@@ -54,7 +55,8 @@ class PersonalSettingsForm extends Component {
                 console.log(evt);
 
                 let file = evt.target.files[0];
-                this.getSignedRequest(file, "profile");
+                // this.getSignedRequest(file, "profile");
+                this.imgurUpload(file);
               }}
             ></FileUpload>
           ) : (

@@ -4,7 +4,7 @@
  * Service for interacting with the Django Accounts app.
  *
  */
-import { BASE_URL } from "./constants";
+import { BASE_URL, IMGUR_CLIENT_ID } from "./constants";
 const axios = require("axios").default;
 
 export function getSignedRequest(file, folder) {
@@ -30,4 +30,26 @@ export function uploadFile(file, s3Data, url) {
     .catch(err => {
       alert("Could not upload file.");
     });
+}
+
+export function imgurUpload(file) {
+  let imgurClientID = IMGUR_CLIENT_ID;
+  let imgurBaseURL = 'https://api.imgur.com/3/image';
+  console.log('imgur uploader: ', file, typeof file);
+  let postData = new FormData();
+  postData.append("image",file);
+  axios({
+    method: 'POST',
+    url: imgurBaseURL, 
+    headers: {
+      'Authorization': `Client-ID ${imgurClientID}`,
+    },
+    data: postData
+  })
+  .then(res => {
+    console.log(res)
+    this.setState({ profile: { ...this.state.profile, image: res.data.data.link } });
+  })
+  .catch(err => alert('Could not upload file'));
+
 }
