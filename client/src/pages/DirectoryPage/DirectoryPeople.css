@@ -1,0 +1,144 @@
+.CommunityPage {
+    overflow: hidden;
+  }
+  
+  .CommunityPage__banner {
+    width: 100vw;
+    height: 231px;
+    background-color: var(--pink);
+  }
+  
+  .CommunityPage_container {
+    width: 100vw;
+    display: flex;
+  }
+  
+  .CommunityPage_body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .CommunityPage__header {
+    font-family: var(--default-font);
+    font-size: 36px;
+    color: var(--purple);
+    padding: 20px 20px 0px 50px;
+    margin: 20px auto;
+  }
+  
+  .Pill {
+    margin: 10px 50px 30px 0px;
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .CommunityPage__header {
+      text-align: center;
+      font-size: 36px;
+    }
+  
+    .CommunityPage {
+      width: 100vw;
+    }
+  }
+  
+  .Button--outline {
+    color: var(--purple);
+    background-color: var(--white);
+    border: 1px solid var(--purple);
+}
+  .secondNav {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  
+  .secondNav-Button {
+    background-color: black;
+    width: 100vw;
+  }
+  
+  .CommunityPage__mom-location-container {
+    display: flex;
+    flex-direction: row;
+    width: 101.5vw;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+  
+  .CommunityPage_SortByText {
+    font-family: Reem Kufi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 36px;
+    display: flex;
+    margin-left: 15px;
+    margin-top: 3px;
+    align-items: center;
+    color: #252525;
+    border-radius: 3px;
+  }
+  
+  .CommunityPage_SortByButton {
+    background: #fafafa;
+    border: 2px solid #e5e5e5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    width: 356px;
+    height: 48px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  
+  .seeAll-Button {
+    font-family: Reem Kufi;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+    color: #3988ff;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-bottom: 50px;
+  }
+  
+  .seeMore-Button {
+    font-family: Reem Kufi;
+    font-style: normal;
+    font-weight: normal;
+    color: #3988ff;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    text-decoration-line: underline;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .CommunityPage__moms-in-city-container {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    flex-wrap: wrap;
+    margin-left: 50px;
+  }
+
+  .Card--medium {
+    width: 13.5rem;
+    min-width: 180px;
+    margin: 0 0.2rem 0 0.2rem;
+    height: 17.5rem;
+  }
+
+  .Card__discover-link {
+    text-align: center;
+    margin: 50px 20px 50px 20px;
+    line-height: 3;
+    transition: transform 0.3s;
+  }
+
+  .CommunityPage__momCard-single {
+    margin: 50px;
+  }
+  
