@@ -41,6 +41,7 @@
 .Button--pink {
   color: var(--white);
   background-color: var(--pink);
+  border: 1px solid darkred;
 }
 .Button--pink:hover {
   background-color: var(--pink-hover);

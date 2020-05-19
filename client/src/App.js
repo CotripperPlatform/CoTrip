@@ -6,6 +6,8 @@ import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
 import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import ForumPageDiscover from "./pages/ForumPage/ForumPageDiscover";
+
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
 import ForumPage from "./pages/ForumPage/ForumPage";
 import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
@@ -165,6 +167,17 @@ class App extends Component {
             exact
             render={routerProps => (
               <ForumPageHashtag
+                handle_logout={this.handleLogout}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page-discover"
+            exact
+            render={routerProps => (
+              <ForumPageDiscover
                 handle_logout={this.handleLogout}
                 {...routerProps}
                 {...this.state}
