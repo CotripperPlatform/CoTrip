@@ -52,7 +52,7 @@ class TripUpcomingList(generics.ListAPIView):
     ordering_fields = ("start_date","end_date",)
     ordering = ('start_date',"end_date",)
     
-class TripDetail(generics.RetrieveAPIView):
+class TripDetail(generics.RetrieveUpdateAPIView):
     queryset = Trip.objects.all()
     serializer_class = TripSerializer
 
