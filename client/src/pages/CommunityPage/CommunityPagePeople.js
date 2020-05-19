@@ -47,7 +47,12 @@ const CommunityPage = props => {
         </a>
         <a href="./join-groups" className="secondNav">
           {" "}
-          <Button text="Discover Groups" color="outline" size="long" handleClick={handleClick} />
+          <Button
+            text="Discover Groups"
+            color="outlinepink"
+            size="long"
+            handleClick={handleClick}
+          />
         </a>
       </div>{" "}
       <div className="CommunityPage_SortByButton">

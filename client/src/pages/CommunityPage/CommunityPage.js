@@ -41,7 +41,7 @@ const CommunityPage = props => {
         <a href="./explore-people" className="secondNav">
           <Button
             text="Connect With Other Moms"
-            color="outline"
+            color="outlinepink"
             size="long"
             handleClick={handleClick}
           />

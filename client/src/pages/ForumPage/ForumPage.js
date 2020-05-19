@@ -38,7 +38,12 @@ const ForumPage = props => {
           <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
         </a>
         <a className="secondNav" href="./forum-page-discover">
-          <Button text="Discover Topics" color="outline" size="long" handleClick={handleClick} />
+          <Button
+            text="Discover Topics"
+            color="outlinepink"
+            size="long"
+            handleClick={handleClick}
+          />
         </a>
       </div>
 

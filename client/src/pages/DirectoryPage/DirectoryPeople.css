@@ -45,7 +45,13 @@
 .Button--outline {
   color: var(--purple);
   background-color: var(--white);
-  border: 1px solid var(--purple);
+  border: 3px solid var(--purple);
+}
+
+.Button--outlinepink {
+  color: var(--pink);
+  background-color: var(--white);
+  border: 3px solid var(--pink);
 }
 .secondNav {
   display: flex;
