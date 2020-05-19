@@ -53,7 +53,7 @@
 .HomePage__suggested-header {
   font-family: var(--default-font);
   color: var(--purple);
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .HomePage__groupcard-1 {

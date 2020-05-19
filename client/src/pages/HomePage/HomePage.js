@@ -88,6 +88,8 @@ const HomePage = props => {
         <Banner background={Banner__purpleBig}>
           {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
         </Banner>
+        <a href="./home">New User Sample</a>
+        <a href="./home-old-user">Old User Sample</a>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
