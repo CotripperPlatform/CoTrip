@@ -13,6 +13,7 @@
   font-size: 1rem;
   font-family: var(--default-font);
   font-weight: normal;
+  color: blue;
 }
 
 .Connections__person {
@@ -37,6 +38,8 @@
   font-size: 1rem;
   font-family: var(--default-font);
   text-align: center;
+  margin-top: -2px;
+  margin-bottom: 6px;
 }
 
 @media only screen and (max-width: 576px) {

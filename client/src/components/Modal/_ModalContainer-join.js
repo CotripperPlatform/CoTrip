@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import Button from "../Button/Button";
-import "./Modal.css";
+import "./Modal-join.css";
 
 class ModalContainerJoin extends Component {
   constructor(props) {
@@ -10,41 +10,37 @@ class ModalContainerJoin extends Component {
       modalOpen: false
     };
   }
+
   handleCloseModal = evt => {
-    evt.preventDefault();
     this.setState({
       modalOpen: false
     });
   };
-  handleOpenModal = () => {
-    this.setState({
-      modalOpen: true
-    });
-  };
+
   render() {
+    console.log(this.props);
     return (
       <div className="Modal__container">
-        {this.state.modalOpen ? (
-          <div onClick={this.handleCloseModal} className="Modal__overlay"></div>
-        ) : (
-          <Button
-            text={this.props.buttonText}
-            textColor={this.props.buttonTextColor}
-            color={this.props.buttonColor}
-            size={this.props.buttonSize}
-            handleClick={this.handleOpenModal}
-          />
-        )}
+        <Button
+          text={this.props.buttonText}
+          textColor={this.props.buttonTextColor}
+          color={this.props.buttonColor}
+          size={this.props.buttonSize}
+          handleClick={this.props.handleOpenModal}
+        />
+
         <Modal
           message={this.props.message}
-          showModal={this.state.modalOpen}
+          showModal={this.props.modalOpen}
           confirmText={this.props.confirmText}
           cancelText={this.props.cancelText}
           onConfirm={this.props.onConfirm}
-          onClose={this.handleCloseModal}
+          onClose={this.props.onClose}
+          modalOpen={this.state.modalOpen}
         />
       </div>
     );
   }
 }
+
 export default ModalContainerJoin;

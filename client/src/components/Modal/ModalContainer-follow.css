@@ -13,6 +13,12 @@
   color: black;
   transition: all 0.8s;
   position: absolute;
+  left: 25%;
+  top: 20%;
+}
+
+.Modal-hidden {
+  display: none;
 }
 
 .Modal_containerDiv {

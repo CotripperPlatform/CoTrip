@@ -52,6 +52,7 @@
   display: flex;
   width: 100vw;
   justify-content: center;
+  text-decoration: none;
 }
 
 .secondNav-Button {
@@ -128,13 +129,4 @@
 .CommunityPage__groupCard-single {
   margin-right: 50px;
   margin-bottom: 50px;
-}
-
-.Card--medium-wide {
-  width: 260px;
-  height: 152px;
-}
-
-.Card__discover-link {
-  line-height: normal;
 }
