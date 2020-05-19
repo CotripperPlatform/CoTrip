@@ -124,7 +124,9 @@ const ForumPageDiscover = props => {
           />
         </div>
         <div>
-          <header className="ForumPage__header">#hashtags</header>
+          <header className="ForumPage__header">
+            #hashtags: <a href="/forum-page-hashtag">example tag</a>
+          </header>
         </div>
         <div className="forum-page-hollow-pill-container">
           <Pill
