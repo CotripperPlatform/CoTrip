@@ -45,7 +45,7 @@
   .Button--outline {
     color: var(--purple);
     background-color: var(--white);
-    border: 1px solid var(--purple);
+    border: 3px solid var(--purple);
 }
   .secondNav {
     display: flex;
@@ -119,7 +119,7 @@
   .CommunityPage__moms-in-city-container {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: auto;
     flex-wrap: wrap;
     margin-left: 50px;
   }
@@ -132,10 +132,7 @@
   }
 
   .Card__discover-link {
-    text-align: center;
-    margin: 50px 20px 50px 20px;
     line-height: 3;
-    transition: transform 0.3s;
   }
 
   .CommunityPage__momCard-single {

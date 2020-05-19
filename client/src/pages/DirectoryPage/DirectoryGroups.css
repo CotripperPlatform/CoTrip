@@ -42,6 +42,12 @@
   }
 }
 
+.Button--outline {
+  color: var(--purple);
+  background-color: var(--white);
+  border: 3px solid var(--purple);
+}
+
 .secondNav {
   display: flex;
   width: 100vw;
@@ -56,7 +62,7 @@
 .CommunityPage__group-location-container {
   display: flex;
   flex-direction: row;
-  width: 101.5vw;
+  width: auto;
   flex-wrap: wrap;
   margin-left: 50px;
 }
@@ -130,8 +136,5 @@
 }
 
 .Card__discover-link {
-  text-align: center;
-  margin: 30px 20px 30px 20px;
-  transition: transform 0.3s;
   line-height: normal;
 }

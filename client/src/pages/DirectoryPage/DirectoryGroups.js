@@ -38,12 +38,7 @@ const DirectoryGroups = props => {
         />
       </Banner>
       <div className="secondNav">
-        <Button
-          text="My Friends"
-          color="outline"
-          size="long"
-          handleClick={handleClick}
-        />
+        <Button text="My Friends" color="outline" size="long" handleClick={handleClick}/>
         <Button text="My Groups" color="purple" size="long" handleClick={handleClick} />
       </div>{" "}
       <div className="CommunityPage_SortByButton">
