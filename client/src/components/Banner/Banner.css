@@ -3,11 +3,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0em 0em .5em 0em;
+  padding: 0em 0em 0.5em 0em;
   margin: 0 auto;
   width: 100%;
   width: 100vw;
-  min-height: 230px;
+  min-height: 200px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,7 +18,7 @@
   margin-bottom: 5vh;
 }
 .Banner--large {
-  height: 488px;
+  height: 350px;
   font-size: 100px;
   position: relative;
 }

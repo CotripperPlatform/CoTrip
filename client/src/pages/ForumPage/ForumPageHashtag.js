@@ -67,11 +67,10 @@ class ForumPageHastag extends Component {
         <Banner background={Banner__Community}>
           <div className="community-page-header">
             {" "}
-            <h3 style={{ margin: -5 }}>#packinglight</h3>
+            <h3 style={{ margin: 0 }}>#packinglight</h3>
           </div>
           <InputTextField
             type="text"
-            variation="search"
             name="search directory"
             placeholder="Search in #packinglight"
             variation="wide"

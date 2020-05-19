@@ -28,13 +28,12 @@ const CommunityPage = props => {
       <Banner background={Banner__Community}>
         <div className="community-page-header">
           {" "}
-          <h3 style={{ margin: -5 }}>Community: Groups</h3>
+          <h3 style={{ margin: 0 }}>Community: Groups</h3>
         </div>
         <InputTextField
           type="text"
-          variation="search"
           name="search directory"
-          placeholder="Search My Directory"
+          placeholder="Search Groups"
           variation="wide"
         />
       </Banner>
@@ -56,7 +55,9 @@ const CommunityPage = props => {
       </div>
       <div className="CommunityPage_body">
         <div>
-          <header className="CommunityPage__header">Group Location:</header>
+          <header className="CommunityPage__header">
+            Group Location: <a href="./view-group"> View Sample Page </a>
+          </header>
         </div>
         <div className="CommunityPage__group-location-container">
           <Pill

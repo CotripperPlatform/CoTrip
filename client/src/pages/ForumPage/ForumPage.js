@@ -28,7 +28,7 @@ const ForumPage = props => {
         <h3 style={{ margin: 0 }}>Forum: Discover Topics</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
           placeholder="Search Topics and #hashtags"
         />

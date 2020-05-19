@@ -108,9 +108,9 @@ class MemberProfilePage extends Component {
           <h3 style={{ margin: 0 }}>User Profile</h3>
           <InputTextField
             type="text"
-            variation="search"
+            variation="wide"
             name="search directory"
-            placeholder="Search My Directory"
+            placeholder="Search Groups"
           />
         </Banner>
         <div className="MemberProfilePage__page-contents">

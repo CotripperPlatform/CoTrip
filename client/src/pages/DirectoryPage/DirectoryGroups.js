@@ -28,9 +28,9 @@ const DirectoryGroups = props => {
         <h3 style={{ margin: 0 }}>Directory: My Groups</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
-          placeholder="Search My Directory"
+          placeholder="Search Groups"
         />
       </Banner>
       <div className="secondNav">

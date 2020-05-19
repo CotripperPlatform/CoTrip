@@ -28,7 +28,7 @@ const ForumPageDiscover = props => {
         <h3 style={{ margin: 0 }}>Search: Packing</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
           placeholder="Packing"
         />

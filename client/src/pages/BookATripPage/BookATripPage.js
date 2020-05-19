@@ -21,7 +21,7 @@ const BookATripPage = props => {
         <h3 style={{ margin: 0 }}>Book a Trip</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
           placeholder="Search Trip"
         />

@@ -31,9 +31,9 @@ const CommunityPage = props => {
         <h3 style={{ margin: 0 }}>Community: People</h3>
         <InputTextField
           type="text"
-          variation="search"
+          variation="wide"
           name="search directory"
-          placeholder="Search My Directory"
+          placeholder="Search Groups"
         />
       </Banner>
       <div className="secondNav">
@@ -55,7 +55,9 @@ const CommunityPage = props => {
       </div>
       <div className="CommunityPage_body">
         <div>
-          <header className="CommunityPage__header">Group Location:</header>
+          <header className="CommunityPage__header">
+            Group Location: <a href="./view-group"> View Sample Page </a>
+          </header>
         </div>
         <div className="CommunityPage__mom-location-container">
           <Pill

@@ -121,13 +121,12 @@ class CommunityPageGroup extends Component {
           <Banner background={Banner__Community}>
             <div className="community-page-header">
               {" "}
-              <h3 style={{ margin: -5 }}>Group: Moms in DC</h3>
+              <h3 style={{ margin: 0 }}>Group: Moms in DC</h3>
             </div>
             <InputTextField
               type="text"
-              variation="search"
               name="search directory"
-              placeholder="Search My Directory"
+              placeholder="Search Groups"
               variation="wide"
             />
             {this.state.joinGroup ? (
