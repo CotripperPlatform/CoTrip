@@ -4,14 +4,17 @@ from rest_framework import generics, permissions
 from .serializers import PostSerializer
 
 
+
 class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permissions_classes = (permissions.IsAuthenticated)
+    permission_classes = (permissions.IsAuthenticated,)
 
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permissions_classes = (permissions.IsAuthenticated)
+    def get_queryset(self):
+        user = self.request.user
+        return Post.objects.filter(author=user.id)
+        
 

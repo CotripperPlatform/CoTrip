@@ -2,12 +2,11 @@ import React from "react";
 import "./ForumPage.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
-import ModalContainer from "../../components/Modal/_ModalContainer"
-import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer"
+import ModalContainer from "../../components/Modal/_ModalContainer";
+import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
-import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import books from "../../assets/images/media-card-1.png";
@@ -16,7 +15,6 @@ import van from "../../assets/images/media-card-3.png";
 import nightSky from "../../assets/images/media-card-4.png";
 import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
-
 
 function handleEvent(evt) {
   evt.preventDefault();
@@ -49,40 +47,82 @@ const ForumPageHastag = props => {
         </div>
       </Banner>
       <div className="hashtag__body">
-
         <div className="hashtag__bodyLeft">
           <header className="ForumPage__header"></header>
           <div>
-            <ForumContainer className="ForumPost" forumPost={{topics:["Parenting", "Vacation", "Topic"],likes: 8,comments: 5}} comments={[
-      {name: "Lexi R.",likes: 2, replies: 0, date: "May 5 ", time: " 4:45pm",body:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-      }]}/>
-            <ForumContainer className="ForumPost" forumPost={{topics:["Parenting", "Vacation", "Topic"],likes: 8,comments: 5}} comments={[
-      {name: "Lexi R.",likes: 2, replies: 0, date: "May 5 ", time: " 4:45pm",body:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-      }]}/>
-            <ForumContainer className="ForumPost" forumPost={{topics:["Parenting", "Vacation", "Topic"],likes: 8,comments: 5}} comments={[
-      {name: "Lexi R.",likes: 2, replies: 0, date: "May 5 ", time: " 4:45pm",body:
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-      }]}/>
-
+            <ForumContainer
+              className="ForumPost"
+              forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
+              comments={[
+                {
+                  name: "Lexi R.",
+                  likes: 2,
+                  replies: 0,
+                  date: "May 5 ",
+                  time: " 4:45pm",
+                  body:
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
+                }
+              ]}
+            />
+            <ForumContainer
+              className="ForumPost"
+              forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
+              comments={[
+                {
+                  name: "Lexi R.",
+                  likes: 2,
+                  replies: 0,
+                  date: "May 5 ",
+                  time: " 4:45pm",
+                  body:
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
+                }
+              ]}
+            />
+            <ForumContainer
+              className="ForumPost"
+              forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
+              comments={[
+                {
+                  name: "Lexi R.",
+                  likes: 2,
+                  replies: 0,
+                  date: "May 5 ",
+                  time: " 4:45pm",
+                  body:
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
+                }
+              ]}
+            />
           </div>
-
         </div>
         <div className="hashtag__bodyRight">
           <div className="hashtag_media">
             <h2>Media</h2>
           </div>
           <div className="hashtag_media">
-            <div className="hashtag_medieContainer">
-              <div className="hashtag_mediaCard"><MediaCard imageSrc={happiness} size="small" footerText="Posted By: Chandi" /></div>
-              <div className="hashtag_mediaCard"><MediaCard imageSrc={books} size="small" footerText="Posted By: Chandi" /></div>
-              <div className="hashtag_mediaCard"><MediaCard imageSrc={van} size="small" footerText="Posted By: Chandi" /></div>
+            <div className="hashtag_mediaContainer">
+              <div className="hashtag_mediaCard">
+                <MediaCard imageSrc={happiness} size="small" footerText="Posted By: Chandi" />
+              </div>
+              <div className="hashtag_mediaCard">
+                <MediaCard imageSrc={books} size="small" footerText="Posted By: Chandi" />
+              </div>
+              <div className="hashtag_mediaCard">
+                <MediaCard imageSrc={van} size="small" footerText="Posted By: Chandi" />
+              </div>
             </div>
-            <div className="hashtag_medieContainer">
-              <div className="hashtag_mediaCard"><MediaCard imageSrc={nightSky} size="small" footerText="Posted By: Paula" /></div>
-              <div className="hashtag_mediaCard"><MediaCard imageSrc={waterfall} size="small" footerText="Posted By: Paula" /></div>
-              <div className="hashtag_mediaCard"><MediaCard imageSrc={flight} size="small" footerText="Posted By: Paula" /></div>
+            <div className="hashtag_mediaContainer">
+              <div className="hashtag_mediaCard">
+                <MediaCard imageSrc={nightSky} size="small" footerText="Posted By: Paula" />
+              </div>
+              <div className="hashtag_mediaCard">
+                <MediaCard imageSrc={waterfall} size="small" footerText="Posted By: Paula" />
+              </div>
+              <div className="hashtag_mediaCard">
+                <MediaCard imageSrc={flight} size="small" footerText="Posted By: Paula" />
+              </div>
             </div>
           </div>
         </div>
