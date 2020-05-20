@@ -1,16 +1,16 @@
-
 .Groups {
   width: 70vw;
 }
 .Groups__list {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.Groups__card--1, .Groups__card--2, .Groups__card--3 {
+.Groups__card--1,
+.Groups__card--2,
+.Groups__card--3 {
   margin: 1em 1em 0 0;
-} 
+}
 
 .Groups__card--4 {
   display: flex;
