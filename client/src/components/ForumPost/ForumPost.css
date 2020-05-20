@@ -11,6 +11,7 @@
 .ForumPost__top-middle {
   border: 1px solid var(--black-lite);
   border-radius: 3px;
+  padding-right: 20px;
 }
 .ForumPost__top-middle {
   padding-bottom: 0.5em;
@@ -38,10 +39,14 @@
   height: 2em;
   background-color: var(--gray-lite);
 }
-.ForumPost__topic-pills,
-.ForumPost__likes-comments {
+.ForumPost__topic-pills {
   display: flex;
   justify-content: space-evenly;
+}
+
+.ForumPost__likes-comments {
+  display: flex;
+  margin-left: -50px;
 }
 
 .ForumPost__likes-comments p {

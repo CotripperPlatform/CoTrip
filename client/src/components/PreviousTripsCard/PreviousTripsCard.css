@@ -7,7 +7,6 @@
 }
 .PreviousTripCard__trips {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   padding: 2vh 0vw 4vh 0vw;
   /* border: 2px solid black; */

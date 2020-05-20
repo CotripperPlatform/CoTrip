@@ -17,7 +17,6 @@ class TripFilter(FilterSet):
 
     location = django_filters.CharFilter(field_name="locations",lookup_expr="in")
     activity = django_filters.CharFilter(field_name="activities",lookup_expr="in")
-    attendee = django_filters.CharFilter(field_name="attendees",lookup_expr="in")
     class Meta:
         model = Trip
-        fields = ('title','location','activity','attendee','start_date', 'end_date')
+        fields = ('title','location','activity','start_date', 'end_date')

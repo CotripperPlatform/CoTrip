@@ -1,0 +1,24 @@
+.OnboardingPage__requirement-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.OnboardingPage__password-box {
+  background-color: rgba(253, 18, 1, 0.089);
+  padding: 0px 20px 0px 20px;
+  border-radius: 2%;
+  border: 1px solid rgba(255, 107, 9, 0.877);
+}
+
+.OnboardingPage__requirement-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -5px;
+  margin-right: -5px;
+  font-size: 13px;
+}
+
+.InputTextField__container--default {
+  padding: 5px 6px 5px 6px;
+}

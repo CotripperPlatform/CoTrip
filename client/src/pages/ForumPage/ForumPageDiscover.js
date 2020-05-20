@@ -20,30 +20,30 @@ const handleClick = e => {
   console.log("Clicked");
 };
 
-const ForumPage = props => {
+const ForumPageDiscover = props => {
   return (
     <div className="ForumPage">
       <NavBar page={2} profileImage={people} />
       <Banner background={Banner__Community}>
-        <h3 style={{ margin: 0 }}>Forum: Discover Topics</h3>
+        <h3 style={{ margin: 0 }}>Search: Packing</h3>
         <InputTextField
           type="text"
           variation="wide"
           name="search directory"
-          placeholder="Search Topics and #hashtags"
+          placeholder="Packing"
         />
       </Banner>
       <div className="secondNav">
-        <a className="secondNav">
-          <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
-        </a>
-        <a className="secondNav" href="./forum-page-discover">
+        <a className="secondNav" href="./forum-page">
           <Button
-            text="Discover Topics"
+            text="My Favorite Topics"
             color="outlinepink"
             size="long"
             handleClick={handleClick}
           />
+        </a>
+        <a className="secondNav">
+          <Button text="Discover Topics" color="pink" size="long" handleClick={handleClick} />
         </a>
       </div>
 
@@ -52,14 +52,14 @@ const ForumPage = props => {
           onSelect={handleSelect}
           optionPrefix={"Sort By:  "}
           options={[
+            { value: "Popularity", title: "Popularity" },
             { value: "location", title: "Location" },
             { value: "date", title: "Date" },
-            { value: "type", title: "Type" },
-            { value: "Popularity", title: "Popularity" }
+            { value: "type", title: "Type" }
           ]}
         />
         <div>
-          <header className="ForumPage__header">My Favorite Topics</header>
+          <header className="ForumPage__header">Popular Topics</header>
         </div>
         <div className="forum-page-pill-container">
           <Pill
@@ -72,36 +72,11 @@ const ForumPage = props => {
             onClick={pillClick}
             selectId={0}
           />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"red"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
+        </div>
+        <div>
+          <header className="ForumPage__header">Topics</header>
+        </div>
+        <div className="forum-page-pill-container">
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
@@ -122,16 +97,6 @@ const ForumPage = props => {
             onClick={pillClick}
             selectId={0}
           />{" "}
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
@@ -165,10 +130,65 @@ const ForumPage = props => {
         </div>
         <div>
           <header className="ForumPage__header">
-            #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
-          </header>{" "}
+            #hashtags: <a href="/forum-page-hashtag">example tag</a>
+          </header>
         </div>
         <div className="forum-page-hollow-pill-container">
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />
+          <Pill
+            text={"#hashtags"}
+            size={"medium"}
+            size={"short"}
+            color={"pink"}
+            icon={"pink"}
+            shadow
+            border
+            onClick={pillClick}
+            selectId={0}
+          />{" "}
           <Pill
             text={"#hashtags"}
             size={"medium"}
@@ -232,4 +252,4 @@ const ForumPage = props => {
   );
 };
 
-export default ForumPage;
+export default ForumPageDiscover;

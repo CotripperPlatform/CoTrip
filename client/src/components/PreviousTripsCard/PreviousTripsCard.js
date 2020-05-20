@@ -12,7 +12,7 @@ const PreviousTripsCard = props => {
   ];
 
   return (
-    <Card color="purple">
+    <Card color="purple" size="large">
       <div className="PreviousTripCard__container">{title}</div>
       {trips ? (
         <div className="PreviousTripCard__trips">

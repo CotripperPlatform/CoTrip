@@ -26,7 +26,7 @@ storiesOf("Atoms/InputTextField", module)
   .add("Search Directory", () => (
     <InputTextField
       type="text"
-      variation="search"
+      variation="wide"
       name="search directory"
       placeholder="Search Directory"
     />

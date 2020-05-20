@@ -8,6 +8,7 @@ import Banner__Community from "assets/images/community_banner.png";
 import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import UpcomingEventsCard from "../../components/UpcomingEventsCard/UpcomingEventsCard";
+import Footer from "../../components/Footer/Footer";
 
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
@@ -22,10 +23,6 @@ import pic4 from "../../assets/images/profile-picture-4.png";
 import pic5 from "../../assets/images/profile-picture-5.png";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Connections from "../../components/Connections/Connections";
-
-// const handleClick = e => {
-//   console.log("Clicked");
-// };
 
 let testUsers = [
   {
@@ -124,13 +121,12 @@ class CommunityPageGroup extends Component {
           <Banner background={Banner__Community}>
             <div className="community-page-header">
               {" "}
-              <h3 style={{ margin: -5 }}>Group: Moms in DC</h3>
+              <h3 style={{ margin: 0 }}>Group: Moms in DC</h3>
             </div>
             <InputTextField
               type="text"
-              variation="search"
               name="search directory"
-              placeholder="Search My Directory"
+              placeholder="Search Groups"
               variation="wide"
             />
             {this.state.joinGroup ? (
@@ -281,6 +277,7 @@ class CommunityPageGroup extends Component {
             </div>
           </div>
         </div>
+        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
     );
   }
