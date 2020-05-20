@@ -18,6 +18,7 @@ import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
 import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import HomePageOldUser from "../src/pages/HomePageOldUser/HomePageOldUser";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -228,6 +229,13 @@ class App extends Component {
             exact
             render={routerProps => (
               <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/home-old-user"
+            exact
+            render={routerProps => (
+              <HomePageOldUser handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>
