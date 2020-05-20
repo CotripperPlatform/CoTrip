@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from knox.models import AuthToken
 from .serializers import UserSerializer, RegisterSerializer, LoginSerializer, ProfileSerializer, ProfileSocialMediaSerializer, SocialMediaTypeSerializer
 from .models import Profile, CustomUser, ProfileSocialMedia, SocialMediaType
+from trip.models import Location
 import boto3
 from django.http import JsonResponse
 from django.conf import settings
@@ -17,13 +18,15 @@ class RegisterAPI(generics.GenericAPIView):
     def post(self, request, *args, **kwargs):
         # create a mutable copy of the request data in order to perform .pop('profile')
         mutable_request_data = request.data.copy()
+        print(request.data)
         profile_data = {}
         if 'profile' in mutable_request_data:
             profile_data = mutable_request_data.pop('profile')
-
+            profile_data['city_of_residence'] = Location.objects.get(id=profile_data['city_of_residence'])
         serializer = self.get_serializer(data=mutable_request_data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
+        print(user)
         profile = Profile.objects.create(user=user, **profile_data)
 
         return Response({
