@@ -102,13 +102,19 @@ class FilterSettingsForm extends Component {
       //binary search
       let result = this.binarySearch(currentStateCities, userSubmission, 0, currentStateCities.length-1);
 
-      this.setState({ city: result.location.id, city_of_residence: result.location.id })
+      if (result)
+          this.setState({ city: result.location.id, city_of_residence: result.location.id });
+      else
+          this.setState({ city: null, city_of_residence: null });
+
+
+  
       console.log("binarysearch: ", result);
   }
 
   binarySearch = (cities, userSubmission, start, end) => {
     // Base Condition 
-    if (start > end) return {found: false, location: null }; 
+    if (start > end) return false; 
    
     // Find the middle index 
     let mid=Math.floor((start + end)/2); 
