@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 const GroupCard = props => {
   let { picture, name, members, location } = props;
   return (
-    <Card size="medium-wide" picture={picture}>
+    <Card size="medium-short" picture={picture}>
       <Link className="GroupCard" to="#">
         <div className="GroupCard__text-container">
           <h2 className="GroupCard__group-name">{name}</h2>
