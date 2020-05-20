@@ -11,7 +11,6 @@ import example1 from "../../assets/images/card_small2.png";
 import Navbar from "../../components/Navbar/Navbar";
 import InteractionCard from "../../components/InteractionCard/InteractionCard";
 import UpcomingTrip from "components/UpcomingTripsCard/UpcomingTripsCard";
-import BookTripCard from "../../components/BookTripCard/BookTripCard";
 import Connections from "../../components/Connections/Connections";
 import Footer from "../../components/Footer/Footer";
 import InputTextField from "../../components/InputTextField/InputTextField";
@@ -20,7 +19,7 @@ import Banner from "../../components/Banner/Banner";
 import GroupsList from "../../components/GroupsList/GroupsList";
 import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
-import TripCard from "components/TripCard/TripCard";
+import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
 // Class Based React Component
 class MemberProfilePage extends Component {
@@ -104,15 +103,20 @@ class MemberProfilePage extends Component {
     return (
       <div className={this.state.classList}>
         <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
+
         <Banner background={Banner__pink}>
-          <h3 style={{ margin: 0 }}>User Profile</h3>
-          <InputTextField
-            type="text"
-            variation="wide"
-            name="search directory"
-            placeholder="Search Groups"
-          />
+          {" "}
+          <div className="BannerTest">
+            <h3 style={{ margin: 0 }}>User Profile</h3>
+            <InputTextField
+              type="text"
+              variation="wide"
+              name="search directory"
+              placeholder="Search Groups"
+            />{" "}
+          </div>
         </Banner>
+
         <div className="MemberProfilePage__page-contents">
           <div className="MemberProfilePage__left-top">
             <div className="MemberProfilePage__left-contents">
@@ -134,12 +138,14 @@ class MemberProfilePage extends Component {
               </div>
               <div></div>
             </div>
-            <Connections
-              userViewing={false}
-              to="/home"
-              users={testUsers.slice(0, 6)}
-              extraUsers="View All"
-            />
+            <div className="Connections__list-Member">
+              <Connections
+                userViewing={false}
+                to="/home"
+                users={testUsers.slice(0, 6)}
+                extraUsers="View All"
+              />
+            </div>
           </div>
 
           <div className="MemberProfilePage__right-contents">
@@ -147,14 +153,14 @@ class MemberProfilePage extends Component {
               details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
             >
               <h1>Book a Trip</h1>
-              <TripCard src={example2} location="Hawaii" date="May 2020" />
-              <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+              <TripCardUsers src={example2} location="Hawaii" date="May 2020" />
+              <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
             </UpcomingTrip>
 
             <PreviousTripsCard trips={true} link="/">
               <h1>Previous Trips</h1>
-              <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-              <TripCard
+              <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
+              <TripCardUsers
                 src="https://wallpaperaccess.com/full/144067.jpg"
                 location="Hawaii"
                 date="May 2020"
@@ -163,7 +169,7 @@ class MemberProfilePage extends Component {
           </div>
         </div>
 
-        <div ClassName="MemberProfilePage__group-div">
+        <div className="MemberProfilePage__group-div-Her">
           <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
         </div>
 
