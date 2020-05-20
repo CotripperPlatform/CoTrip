@@ -4,7 +4,6 @@ from .models import Profile, CustomUser, ProfileSocialMedia, SocialMediaType
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 
-
 class SocialMediaTypeSerializer(serializers.ModelSerializer):
     class Meta:
         model = SocialMediaType
