@@ -5,9 +5,8 @@
   align-items: center;
   padding: 0em 0em 0.5em 0em;
   margin: 0 auto;
-  width: 100%;
-  width: 100vw;
-  min-height: 220px;
+  width: 100.1vw;
+  min-height: 240px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,6 +15,7 @@
   font-size: 48px;
   color: #fafafa;
   margin-bottom: 5vh;
+  overflow: hidden;
 }
 .Banner--large {
   height: 350px;
