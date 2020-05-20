@@ -21,6 +21,9 @@ import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
+import { BASE_URL } from '../../services/constants';
+import axios from 'axios';
+
 // Class Based React Component
 class MemberProfilePage extends Component {
   constructor(props) {
@@ -34,7 +37,20 @@ class MemberProfilePage extends Component {
   }
 
   // Runs after Component is loaded in the broswer
-  componentDidMount() {}
+  componentDidMount() {
+    // axios()
+  
+    // console.log(this.props);
+    // axios.get(`${BASE_URL}/profile/${this.props.id}`)
+    // .then(res => console.log('axios ', res.data))
+ 
+  }
+
+  componentWillReceiveProps(){
+    console.log(this.props);
+    axios.get(`${BASE_URL}/profile/${this.props.id}`)
+    .then(res => console.log('axios ', res.data))
+  }
 
   // Runs after a component has been updated
   componentDidUpdate() {}
@@ -43,6 +59,9 @@ class MemberProfilePage extends Component {
   componentWillUnmount() {}
 
   render() {
+
+
+     
     let people = [
       {
         name: "Suzie",
@@ -100,82 +119,94 @@ class MemberProfilePage extends Component {
         userPic: pic1
       }
     ];
+
+    if(this.props.logged_in === true) 
+    {
     return (
-      <div className={this.state.classList}>
-        <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
+    
+    
+        <div className={this.state.classList}>
+          <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
 
-        <Banner background={Banner__pink}>
-          {" "}
-          <div className="BannerTest">
-            <h3 style={{ margin: 0 }}>User Profile</h3>
-            <InputTextField
-              type="text"
-              variation="wide"
-              name="search directory"
-              placeholder="Search Groups"
-            />{" "}
-          </div>
-        </Banner>
+          <Banner background={Banner__pink}>
+            {" "}
+            <div className="BannerTest">
+              <h3 style={{ margin: 0 }}>User Profile</h3>
+              <InputTextField
+                type="text"
+                variation="wide"
+                name="search directory"
+                placeholder="Search Groups"
+              />{" "}
+            </div>
+          </Banner>
 
-        <div className="MemberProfilePage__page-contents">
-          <div className="MemberProfilePage__left-top">
-            <div className="MemberProfilePage__left-contents">
-              <div className="interaction-div">
-                <InteractionCard></InteractionCard>
+          <div className="MemberProfilePage__page-contents">
+            <div className="MemberProfilePage__left-top">
+              <div className="MemberProfilePage__left-contents">
+                <div className="interaction-div">
+                  <InteractionCard></InteractionCard>
+                </div>
+                <div className="MemberProfilePage__bio-container">
+                  <Bio
+                    instagram={people[0].intagram}
+                    facebook={people[0].facebook}
+                    pinterest={people[0].pinterest}
+                    type="default"
+                    name={people[0].name}
+                    // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
+                    bio={people[0].bio}
+                    hashtags={people[0].hashtags}
+                    isCurrentUser={true}
+                    onClick={console.log("Hello")}
+                  />
+                </div>
+                <div></div>
               </div>
-              <div className="MemberProfilePage__bio-container">
-                <Bio
-                  instagram={people[0].intagram}
-                  facebook={people[0].facebook}
-                  pinterest={people[0].pinterest}
-                  type="default"
-                  name={people[0].name}
-                  bio={people[0].bio}
-                  hashtags={people[0].hashtags}
-                  isCurrentUser={people[0].isCurrentUser}
-                  onClick={console.log("Hello")}
+              <div className="Connections__list-Member">
+                <Connections
+                  userViewing={false}
+                  to="/home"
+                  users={testUsers.slice(0, 6)}
+                  extraUsers="View All"
                 />
               </div>
-              <div></div>
             </div>
-            <div className="Connections__list-Member">
-              <Connections
-                userViewing={false}
-                to="/home"
-                users={testUsers.slice(0, 6)}
-                extraUsers="View All"
-              />
+
+            <div className="MemberProfilePage__right-contents">
+              <UpcomingTrip
+                details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
+              >
+                <h1>Book a Trip</h1>
+                <TripCardUsers src={example2} location="Hawaii" date="May 2020" />
+                <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
+              </UpcomingTrip>
+
+              <PreviousTripsCard trips={true} link="/">
+                <h1>Previous Trips</h1>
+                <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
+                <TripCardUsers
+                  src="https://wallpaperaccess.com/full/144067.jpg"
+                  location="Hawaii"
+                  date="May 2020"
+                />
+              </PreviousTripsCard>
             </div>
           </div>
 
-          <div className="MemberProfilePage__right-contents">
-            <UpcomingTrip
-              details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
-            >
-              <h1>Book a Trip</h1>
-              <TripCardUsers src={example2} location="Hawaii" date="May 2020" />
-              <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
-            </UpcomingTrip>
-
-            <PreviousTripsCard trips={true} link="/">
-              <h1>Previous Trips</h1>
-              <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
-              <TripCardUsers
-                src="https://wallpaperaccess.com/full/144067.jpg"
-                location="Hawaii"
-                date="May 2020"
-              />
-            </PreviousTripsCard>
+          <div className="MemberProfilePage__group-div-Her">
+            <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
-        </div>
 
-        <div className="MemberProfilePage__group-div-Her">
-          <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
+          <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
+      );
 
-        <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
-      </div>
-    );
+    }
+    else {
+      window.location.href="/";
+    }
+   
   }
 }
 

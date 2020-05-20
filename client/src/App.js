@@ -14,7 +14,7 @@ import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
 import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
-import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
+import MemberProfilePage from "./pages/MemberProfilePage/MemberProfilePage";
 import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
@@ -87,14 +87,15 @@ class App extends Component {
       })
         .then(res => res.json())
         .then(json => {
-          console.log(json);
+          // console.log(json);
           if (json.detail == "Invalid token.") {
             this.handleLogout();
           } else {
             this.setState({
               email: json.email,
               first_name: json.profile.first_name,
-              image: json.profile.image
+              image: json.profile.image,
+              userid: json.id
             });
           }
         });
@@ -146,7 +147,7 @@ class App extends Component {
             path="/member-page"
             exact
             render={routerProps => (
-              <MemberPage handle_logout={this.handleLogout} {...routerProps} />
+              <MemberProfilePage {...this.state} handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
           <Route
