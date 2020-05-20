@@ -102,7 +102,7 @@ class FilterSettingsForm extends Component {
       //binary search
       let result = this.binarySearch(currentStateCities, userSubmission, 0, currentStateCities.length-1);
 
-      this.setState({ city: result.location, city_of_residence: result.location })
+      this.setState({ city: result.location.id, city_of_residence: result.location.id })
       console.log("binarysearch: ", result);
   }
 
