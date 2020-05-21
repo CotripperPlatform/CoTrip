@@ -31,17 +31,6 @@
   margin: 10px 50px 30px 0px;
 }
 
-@media only screen and (max-width: 320px) {
-  .CommunityPage__header {
-    text-align: center;
-    font-size: 36px;
-  }
-
-  .CommunityPage {
-    width: 100vw;
-  }
-}
-
 .community-page-header {
   margin-top: -40px;
 }
@@ -79,16 +68,6 @@
   border-radius: 3px;
 }
 
-.CommunityPage_SortByButton {
-  background: #fafafa;
-  border: 2px solid #e5e5e5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  width: 356px;
-  height: 48px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
 
 .seeAll-Button {
   font-family: Reem Kufi;
@@ -127,3 +106,21 @@
   margin-right: 50px;
   margin-bottom: 50px;
 }
+
+@media only screen and (max-width: 768px){
+
+  .CommunityPage_SortByButton {
+    margin: 20px auto;
+  }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    .CommunityPage__header {
+      text-align: center;
+      font-size: 36px;
+    }
+  
+    .CommunityPage {
+      width: 100vw;
+    }
+  }
