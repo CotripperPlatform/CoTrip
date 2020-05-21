@@ -1,0 +1,299 @@
+// This Postman Collection shows the various HTTP Method Requests needed to test the routes associated with Profile and Post. The JSON object below contains all the information you need to test the routes in Postman. Note the "description" for each route as it provides an explanation of what the route should do. The descriptions contain information on where to locate certain items in Postman.
+
+{
+  "info": {
+    "_postman_id": "f5a40573-896e-4938-ba20-0d893c61d593",
+    "name": "CoTripper",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST auth/register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"email\":\"{{email}}\",\n\t\"password\": \"{{password}}\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/auth/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["auth", "register"]
+        },
+        "description": "This request creates a new user account.\n\nEnter values for the \"email\" and \"password\" fields of the CoTripper environmental variable in the top right hand corner.\n\nKeep all other fields empty or null.\n\nSend the request."
+      },
+      "response": []
+    },
+    {
+      "name": "POST auth/login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "fcc978f2-0bfa-4de3-8350-a8dce62b27cf",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "postman.setEnvironmentVariable(\"Token\", jsonData.token);",
+              "postman.setEnvironmentVariable(\"profile\", jsonData.user.profile);",
+              "postman.setEnvironmentVariable(\"id\", jsonData.user.id);",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        },
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "0be9384b-1367-4d2c-8bb7-1816cb4eea2a",
+            "exec": [""],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"email\":\"{{email}}\",\n\t\"password\": \"{{password}}\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/auth/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["auth", "login"]
+        },
+        "description": "This request allows a user with an existing account to log in.\n\nConfirm that the correct values for email and password are passed into the \"Current Value\" column of the CoTripper Environmental Variable.\n\nKeep all other fields null or empty.\n\nSend the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Profile",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "77402e93-1503-4d51-a1b5-aa54d8086a9d",
+            "exec": [""],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{Token}} ",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"user\": 7,\n        \"topics\": [],\n        \"hashtags\": [],\n        \"image\": \"www.jpg\",\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"city_of_residence\": null,\n        \"age\": null,\n        \"dream_destination\": \"\",\n        \"bio\": \"\",\n        \"activities\": [],\n        \"events\": [],\n        \"connections\": [],\n        \"social_media\": []\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/profile/{{id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["profile", "{{id}}"]
+        },
+        "description": "This request allows a user to update only their profile.\n\nEnsure the correct values are stored in the \"Current Value\" column of the CoTripper Environemental Variable for all fields except post_id.\n\nIn the body of the request, make the updates you wish to make.\n\nSend the request."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Profile List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/profile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["profile"]
+        },
+        "description": "This route allows any user to view all profiles."
+      },
+      "response": []
+    },
+    {
+      "name": "GET Posts List",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{Token}}",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["posts"]
+        },
+        "description": "This route allows any authentiated user to view all posts."
+      },
+      "response": []
+    },
+    {
+      "name": "Create Post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "03af658c-80da-4294-bf6d-4105dd3699a1",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "postman.setEnvironmentVariable(\"post_id\", jsonData.id);",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{Token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": " {\n        \"post_type\": \"Post\",\n        \"title\": \"HelloWorld\",\n        \"time\": \"2020-05-14T19:01:59.021103Z\",\n        \"body\": \"TESTING123\",\n        \"likes\": 0,\n        \"author\": 7,\n        \"parent\": [\n            6\n        ]\n    }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/posts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["posts"]
+        },
+        "description": "This request allows an authenticated user to create a post.\n\n1. Make sure you are logged in by using the POST auth/login route.\n\n2. Enter the data for the post you want to create. Note: post_type can be \"Post\", \"Comment\", \"Reply\".\n\n3. Send the request."
+      },
+      "response": []
+    },
+    {
+      "name": "Update Post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "4eaf95c3-4cd1-4bfe-92a2-1f5527982fec",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "postman.setEnvironmentVariable(\"post_id\", jsonData.id);",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{Token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 16,\n    \"post_type\": \"Post\",\n    \"title\": \"HelloWorld\",\n    \"time\": \"2020-05-21T14:07:29.168238Z\",\n    \"body\": \"TESTING\",\n    \"likes\": 0,\n    \"author\": 6,\n    \"parent\": [\n        6\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/posts/{{post_id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["posts", "{{post_id}}"]
+        },
+        "description": "This request allows an authenticated user to update or edit only those posts they authored.\n\n1. Make sure you are logged in using the POST auth/login route.\n2. Confirm that the \"id\" in the body of the request matches the current value for \"post_id\" in the CoTriipper Environmental Variable.\n2. Update the fields with content of your choice in the body of the request.\n3. Send the request."
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE Post",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "14659157-d605-4043-a16b-3e662d7a1059",
+            "exec": [
+              "var jsonData = JSON.parse(responseBody);",
+              "postman.setEnvironmentVariable(\"post_id\", jsonData.id);",
+              ""
+            ],
+            "type": "text/javascript"
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Token {{Token}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": 16,\n    \"post_type\": \"Post\",\n    \"title\": \"HelloWorld\",\n    \"time\": \"2020-05-21T14:21:04.098996Z\",\n    \"body\": \"TESTING\",\n    \"likes\": 0,\n    \"author\": 6,\n    \"parent\": [\n        6\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/posts/{{post_id}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["posts", "{{post_id}}"]
+        }
+      },
+      "response": []
+    }
+  ],
+  "protocolProfileBehavior": {}
+}
