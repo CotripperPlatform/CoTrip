@@ -243,13 +243,13 @@ This is the registration page for creating a new user
 
 ## Current Status
 
-Navigating the Onboarding Page takes the user through three steps. 
+Navigating the Onboarding Page takes the user through three steps.
 
 Step One: Fully functional, but not responsive under 1000px
 
 Step Two: Fully functional & responsive
 
-Step Three: Fully functional - but the app cannot upload a photo via aws when ran locally. The eployed app does upload a photo via aws when. 
+Step Three: Fully functional - but the app cannot upload a photo via aws when ran locally. The eployed app does upload a photo via aws when.
 
 ## Future Development
 
@@ -277,7 +277,7 @@ The Login page is fully functional, but not fully responsive.
 
 ## Future Development
 
-Text-input fields should not be dynamic and should remain the same size (ideally the same size as the Submit button). Future contributors may consider adding a Back/Cancel button and a Reset Password feature. 
+Text-input fields should not be dynamic and should remain the same size (ideally the same size as the Submit button). Future contributors may consider adding a Back/Cancel button and a Reset Password feature.
 
 There is no front-end or back-end method for a user to reset their password on their own nor by an admin.
 
@@ -285,7 +285,7 @@ There is no front-end or back-end method for a user to reset their password on t
 
 ## Description
 
-This page is where the user can search for specific groups, connect with "other moms", and discover different groups. Also, this page suggests groups for the user to join based on the location the user specifies. 
+This page is where the user can search for specific groups, connect with "other moms", and discover different groups. Also, this page suggests groups for the user to join based on the location the user specifies.
 
 ## URL Route
 
@@ -293,22 +293,22 @@ This page is where the user can search for specific groups, connect with "other 
 
 ## Current Status
 
-The page is static and does not pull any data from the backend. 
+The page is static and does not pull any data from the backend.
 
-The page needs to make API calls to get group locations (city and state) so that the groups rendered align with the location specified by the user. 
+The page needs to make API calls to get group locations (city and state) so that the groups rendered align with the location specified by the user.
 
 This page needs data from the Groups model on the back-end.
 
 ## Future Development
 
-1. Make the search bar, "sort by" filter, and "See More" features function. 
-2. Pills should render group data pulled from the back-end. When clicked, pills should change color and redirect the user to that group's page.  
+1. Make the search bar, "sort by" filter, and "See More" features function.
+2. Pills should render group data pulled from the back-end. When clicked, pills should change color and redirect the user to that group's page.
 
 # Community Groups Page
 
 ## Description
 
-After a user clicks on a specific group, they are redirected to this page where they can learn more about a specific group, see different user comments and hashtags, a description of the page, members that are part of the group, and upcoming events. 
+After a user clicks on a specific group, they are redirected to this page where they can learn more about a specific group, see different user comments and hashtags, a description of the page, members that are part of the group, and upcoming events.
 
 ## URL Route
 
@@ -339,9 +339,9 @@ The page is currently static. The search bar and 'sort by' features do not work.
 ## Future Development
 
 1. Build the 'sort by' feature
-2. Build the search bar 
-3. Add event listener so that pills change color when clicked 
-4. Header buttons should by dynamic 
+2. Build the search bar
+3. Add event listener so that pills change color when clicked
+4. Header buttons should by dynamic
 5. "See All" should work
 
 # Forum Page
@@ -356,12 +356,12 @@ The forum page allows the user to search for topics and hashtags, and sort by di
 
 ## Current Status
 
-The forum page is currently all static but the tabs on the top will link to the correct page when clicked on. The search bar,  "My favorite topics" and "Discover Topics" are static.
+The forum page is currently all static but the tabs on the top will link to the correct page when clicked on. The search bar, "My favorite topics" and "Discover Topics" are static.
 
 ## Future Development
 
 1. Build the search bar so that users can search
-2. "My favorite topics" and "Discover topic" should link properly 
+2. "My favorite topics" and "Discover topic" should link properly
 3. "Pills" should change color when clicked
 
 # Forum - Hashtag
@@ -376,7 +376,7 @@ This page returns results for the hashtag searched by the user.
 
 ## Current Status
 
-The tabs are functioning and the NavBar works. 
+The tabs are functioning and the NavBar works.
 
 ## Future Development
 
@@ -488,6 +488,7 @@ description: "a description"
 The view is functional, allowing for viewing of current groups and creation of new ones, if request is authenticated.
 
 ## Future Development
+
 This route is complete. It is ready to be accessed by the front end.
 
 # /groups/<int:pk>
@@ -506,7 +507,7 @@ Route is functional, allowing for GET UPDATE and DELETE on individual instances
 
 ## Future Development
 
-See Future Development in this models list route. 
+See Future Development in this models list route.
 
 One thing to consider: users shouldn't be able to delete or update groups, just their association to them.
 
@@ -527,9 +528,9 @@ The view is functional, allowing for viewing of current media and creation of ne
 
 ## Future Development
 
-This route does not seem complete. 
+This route does not seem complete.
 
-The media model does not require an author to create a post. Most images in the site are being stored as CharFields, but this model stores its image as an ImageField, which may be a better option or might be something to change, depending on what further research determines. I also think it is odd that topics are a many-to-many relationship but hashtags are many-to-one. 
+The media model does not require an author to create a post. Most images in the site are being stored as CharFields, but this model stores its image as an ImageField, which may be a better option or might be something to change, depending on what further research determines. I also think it is odd that topics are a many-to-many relationship but hashtags are many-to-one.
 
 # /media/<int:pk>
 
@@ -731,3 +732,206 @@ Fully functional.
 ## Future Development
 
 This route is complete and ready for the front-end to access.
+
+# /trips
+
+Returns a list of all trips, or returns a list of trips by filter conditions: title, location, activity, start_date, end_date.
+
+- title: the trip’s title. Get the list of trip which each trip’s title contains the filter’s title (ignore case). Filter by title with fuzzy query.
+- location: the location’s id.Get the list of trip which each trip’s localtions contains the filter’s localtion.
+- activity: the activity’s id. Get the list of trip which each trip’s activities contains the filter’s activity.
+- start_date: Get the list of trip which each trip’s start_date >= the filter’s start_date.
+- start_date: Get the list of trip which each trip’s end_date <= the filter’s end_date.
+
+## Request Example
+
+1. Get all trips
+   HTTP Method: GET
+   fetch(`${BASE_URL}/trips`, {
+   headers: {
+   Authorization: `Token ${localStorage.getItem(“token”)}`
+   }
+   })
+2. Get trips by conditions
+   HTTP Method: GET
+   fetch(`${BASE_URL}/trips?title=Tokyo&location=1&start_date=2020-06-15`, {
+   headers: {
+   Authorization: `Token ${localStorage.getItem(“token”)}`
+   }
+   })
+   ##Current status
+   Fully functional.
+   ##Future Development
+   This route is complete and ready for the front end to access.
+   #/trips/Upcoming
+   Returns a list of all upcoming trips, or returns a list of upcoming trips by filter conditions: title, location, activity, start_date, end_date.
+
+- title: the trip’s title. Get the list of trip which each trip’s title contains the filter’s title (ignore case). Filter by title with fuzzy query.
+- location: the location’s id.Get the list of upcoming trip which each trip’s localtions contains the filter’s localtion.
+- activity: the activity’s id. Get the list of upcoming trip which each trip’s activities contains the filter’s activity.
+- start_date: Get the list of upcoming trip which each trip’s start_date >= the filter’s start_date.
+- start_date: Get the list of upcoming trip which each trip’s end_date <= the filter’s end_date.
+
+## Request Example
+
+1. Get all upcoming trips
+   HTTP Method: GET
+   fetch(`${BASE_URL}/trips/upcoming`, {
+   headers: {
+   Authorization: `Token ${localStorage.getItem(“token”)}`
+   }
+   })
+2. Get upcoming trips by conditions
+   HTTP Method: GET
+   fetch(`${BASE_URL}/trips/upcoming?title=Tokyo&location=1&start_date=2020-06-15`, {
+   headers: {
+   Authorization: `Token ${localStorage.getItem(“token”)}`
+   }
+   })
+   ##Current status
+   Fully functional.
+   ##Future Development
+   This route is complete and ready for the front end to access.
+   #/trips/<int:pk>
+   Returns a specific trip that matches the passed pk
+   ##Request Example
+   HTTP Methods: GET
+   fetch(`${BASE_URL}/trips/<int:pk>`, {
+   headers: {
+   Authorization: `Token ${localStorage.getItem(“token”)}`
+   }
+   })
+
+## Current Status
+
+Route is only for get method. Didn’t provide UPDATE and DELETE.
+
+## Future Development
+
+If future development determine which kind of user can update or delete a specific trip, then can add the UPDATE and DELETE method for this route.
+
+# /location
+
+Returns a list of all locations.
+
+## Request Example
+
+HTTP Methods: GET
+fetch(`${BASE_URL}/location`, {
+headers: {
+Authorization: `Token ${localStorage.getItem(“token”)}`
+}
+})
+
+## Current status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front-end to access.
+
+# /location/states
+
+Returns all of the U.S states
+
+## Request Example
+
+HTTP Methods: GET
+fetch(`${BASE_URL}/location/states`, {
+headers: {
+Authorization: `Token ${localStorage.getItem(“token”)}`
+}
+})
+
+## Current status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front-end to access.
+
+# /location/bystate
+
+Returns a list of locations by specific state.
+
+## Request Example
+
+HTTP Methods: GET
+fetch(`${BASE_URL}/location/bystate?state__code=CA`, {
+headers: {
+Authorization: `Token ${localStorage.getItem(“token”)}`
+}
+})
+
+## Current status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front-end to access.
+
+# /location/<int:pk>
+
+Returns a specific location that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET
+fetch(`${BASE_URL}/location/<int:pk>`, {
+headers: {
+Authorization: `Token ${localStorage.getItem(“token”)}`
+}
+})
+
+## Current status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front-end to access.
+
+# /activity
+
+Returns a list of activity.
+
+## Request Example
+
+HTTP Methods: GET
+fetch(`${BASE_URL}/activity`, {
+headers: {
+Authorization: `Token ${localStorage.getItem(“token”)}`
+}
+})
+
+## Current status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front-end to access.
+
+# /activity/<int:pk>
+
+Returns a specific activity that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET
+fetch(`${BASE_URL}/activity/<int:pk>`, {
+headers: {
+Authorization: `Token ${localStorage.getItem(“token”)}`
+}
+})
+
+## Current Status
+
+Route is only for get method. Didn’t provide UPDATE and DELETE.
+
+## Future Development
+
+If future development determine which kind of user can update or delete a specific activity, then can add the UPDATE and DELETE method for this route.
