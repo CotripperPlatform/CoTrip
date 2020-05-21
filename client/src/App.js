@@ -2,12 +2,23 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
+import CommunityPage from "./pages/CommunityPage/CommunityPage";
+import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
+import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
+import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import ForumPageDiscover from "./pages/ForumPage/ForumPageDiscover";
+
+import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
+import ForumPage from "./pages/ForumPage/ForumPage";
+import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
+import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups";
 import HomePage from "../src/pages/HomePage/HomePage";
 import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
-import MemberPage from "./pages/MemberProfilePage/MemberProfilePage";
-import Hawaii2020 from "./pages/Hawaii2020/Hawaii2020";
+import MemberProfilePage from "./pages/MemberProfilePage/MemberProfilePage";
+import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
+import HomePageOldUser from "../src/pages/HomePageOldUser/HomePageOldUser";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -21,11 +32,14 @@ import {
   faAngleLeft,
   faAngleRight,
   faCommentDots,
-  faEdit,
+  faEdit
 } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
+import { BASE_URL } from "./services/constants";
+import { handleSignup, handleLogin, handleLogout } from "./services/User";
+
 library.add(
   fab,
   far,
@@ -52,83 +66,45 @@ class App extends Component {
       email: "",
       first_name: "",
       image: "",
+      profileLoaded: false,
+      menuItems: [
+        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "Community", link: "/community" },
+        { menuItem: "Forum", link: "/forum-page" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" }
+      ]
     };
+
+    this.handleSignup = handleSignup.bind(this);
+    this.handleLogin = handleLogin.bind(this);
+    this.handleLogout = handleLogout.bind(this);
   }
   componentDidMount() {
     if (this.state.logged_in) {
-      fetch("http://localhost:8000/auth/user", {
+      fetch(`${BASE_URL}/auth/user`, {
         headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`,
-        },
+          Authorization: `Token ${localStorage.getItem("token")}`
+        }
       })
-        .then((res) => res.json())
-        .then((json) => {
-          console.log(json);
+        .then(res => res.json())
+        .then(json => {
+          // console.log(json);
           if (json.detail == "Invalid token.") {
-            this.handle_logout();
+            this.handleLogout();
           } else {
             this.setState({
               email: json.email,
               first_name: json.profile.first_name,
               image: json.profile.image,
-            });
+              userid: json.id,
+              profileLoaded: true
+            }, this.logState);
           }
         });
     }
   }
-  handle_login = (data, history) => {
-    fetch("http://localhost:8000/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json.token);
-        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
-        this.setState({
-          logged_in: json.token != undefined ? true : false,
-          email: json.user.email,
-          first_name: json.user.profile.first_name,
-          image: json.user.profile.image,
-        });
-        history.push("/home");
-      })
-      .catch((err) => {
-        console.log(err);
-        alert("Please enter valid email and password");
-      });
-  };
-  handle_signup = (data, history) => {
-    fetch("http://localhost:8000/auth/register", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-        json.token ? localStorage.setItem("token", json.token) : console.log("no token");
-        this.setState({
-          logged_in: json.token != undefined ? true : false,
-          email: json.user.email,
-          first_name: json.user.profile.first_name,
-          image: json.user.profile.image,
-        });
-        history.push("/home");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  handle_logout = () => {
-    localStorage.removeItem("token");
-    this.setState({ logged_in: false, email: "", first_name: "", image: "" });
-  };
+
+  logState = () => console.log('App.js state finished: ',this.state);
   render() {
     return (
       <div className="App">
@@ -136,47 +112,124 @@ class App extends Component {
           <Route path="/" exact component={SplashPage}></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
-            path="/hawaii-2020"
+            path="/TripDetail"
             exact
-            render={(routerProps) => (
-              <Hawaii2020 tripName={"Hawaii"} handle_logout={this.handle_logout} {...routerProps} />
+            render={routerProps => (
+              <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>{" "}
+          <Route
+            path="/community/join-groups"
+            exact
+            render={routerProps => (
+              <CommunityPage handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
+            path="/community/view-group"
+            exact
+            render={routerProps => (
+              <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
+            path="/community/explore-people"
+            exact
+            render={routerProps => (
+              <CommunityPagePeople handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
           <Route
             path="/book-a-trip"
             exact
-            render={(routerProps) => (
-              <BookATripPage handle_logout={this.handle_logout} {...routerProps} />
+            render={routerProps => (
+              <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
 
-          <Route
-            path="/member-page"
-            exact
-            render={(routerProps) => (
-              <MemberPage handle_logout={this.handle_logout} {...routerProps} />
-            )}
-          ></Route>
+          {this.state.profileLoaded === true ? 
+            <Route
+              path="/member-page"
+              exact
+              render={routerProps => (
+                <MemberProfilePage {...this.state} handle_logout={this.handleLogout} {...routerProps} />
+              )}
+            ></Route>
+            :
+            
+            ''
+
+          }
           <Route
             path="/coming_soon"
             exact
-            render={(routerProps) => (
-              <ComingSoonPage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+            render={routerProps => (
+              <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page"
+            exact
+            render={routerProps => (
+              <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page-hashtag"
+            exact
+            render={routerProps => (
+              <ForumPageHashtag
+                handle_logout={this.handleLogout}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page-discover"
+            exact
+            render={routerProps => (
+              <ForumPageDiscover
+                handle_logout={this.handleLogout}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
+          ></Route>
+          <Route
+            path="/forum-page-topic"
+            exact
+            render={routerProps => (
+              <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/directory/people"
+            exact
+            render={routerProps => (
+              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
+            path="/directory/groups"
+            exact
+            render={routerProps => (
+              <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
           <Route
             path="/login"
             exact
-            render={(routerProps) => (
-              <LoginPage handleLogin={this.handle_login} {...routerProps} {...this.state} />
+            render={routerProps => (
+              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
             path="/register"
             exact
-            render={(routerProps) => (
+            render={routerProps => (
               <OnboardingPage
-                handleSignup={this.handle_signup}
+                handleSignup={this.handleSignup}
                 {...routerProps}
                 logged_in={this.state.logged_in}
               />
@@ -185,8 +238,15 @@ class App extends Component {
           <Route
             path="/home"
             exact
-            render={(routerProps) => (
-              <HomePage handle_logout={this.handle_logout} {...routerProps} {...this.state} />
+            render={routerProps => (
+              <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            )}
+          ></Route>
+          <Route
+            path="/home-old-user"
+            exact
+            render={routerProps => (
+              <HomePageOldUser handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>

@@ -14,8 +14,13 @@ class Navbar extends Component {
     // Default CSS class to apply to the Component
     this.state = {
       condensedMenuActive: false,
-      // menuItems are careated in order of the following array.
-      menuItems: ["My Directory", "Community", "Forum", "Book a Trip"]
+      // menuItems are created in order of the following array.
+      menuItems: [
+        { menuItem: "My Directory", link: "/directory/people" },
+        { menuItem: "Community", link: "/community/explore-people" },
+        { menuItem: "Forum", link: "/forum-page" },
+        { menuItem: "Book A Trip", link: "/book-a-trip" }
+      ]
     };
   }
 
@@ -42,11 +47,13 @@ class Navbar extends Component {
           <div className="Navbar__menu">
             {this.state.menuItems.map((item, key) => (
               <div className="Navbar__link-item" key={key}>
-                <NavLink text={item} to={"/book-a-trip"} menuList={[]} />
+                <NavLink text={item.menuItem} to={item.link} />
+                {this.props.page === key}
                 {this.props.page === key && <div className={`Navbar__triangle`}></div>}
               </div>
             ))}
           </div>
+
           <div className="Navbar__right">
             <Icon icon={"search"} size="2x" onClick={this.clickHandler} />
             <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.clickHandler} />

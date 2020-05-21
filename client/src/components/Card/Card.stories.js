@@ -29,6 +29,11 @@ storiesOf("Layout/Cards/Indiviual Cards", module)
       <a href="/">Discover New Groups</a>
     </Card>
   ))
+  .add("Card, Discover New Connections", () => (
+    <Card outline size="mobile">
+      <a href="/">Discover New Connections</a>
+    </Card>
+  ))
   .add("Large Card with Small Card inside", () => (
     <div>
       <Card color="purple" size="large">

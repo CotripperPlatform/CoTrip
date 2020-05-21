@@ -10,7 +10,6 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   align-items: center;
 }
 .OnboardingPage__inner-wrapper {
@@ -63,6 +62,43 @@
 .OnboardingPage a {
   color: var(--black);
 }
+
+.OnboardingPage__Autocomplete {
+  margin: 0 auto;
+  width: 100%;
+  /* border: 1px solid red; */
+  /* padding-left: 25%;
+  padding-right: 25%; */
+
+ 
+
+}
+
+.OnboardingPage__Autocomplete > * {
+  width: 100%;
+  /* max-width: 30vw; */
+  color: var(--black);
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 3px;
+  /* padding: 1vh 10vw 1vh 1vw; */
+  /* margin: 0 0 2vh 0; */
+  /* width: 100%; */
+
+  max-width: 30vw;
+
+  /* margin-top: 0.2em; */
+
+  margin: 0.2em auto 0 auto;
+  /* margin-right: auto; */
+  /* margin-left:calc(50%+4em); */
+  /* margin-left: 4.6em; */
+  
+}
+.MuiFilledInput-root {
+  background: white !important;
+}
+
 @media all and (max-width: 320px) {
   .OnboardingPage__container {
     flex-direction: column;

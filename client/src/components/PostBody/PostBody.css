@@ -8,6 +8,7 @@
 .PostBody__top {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .PostBody__top-left {
@@ -19,7 +20,7 @@
 .PostBody__top-right {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: right;
 }
 
 .PostBody__title {

@@ -1,7 +1,7 @@
 # CoTripper Backend
 
 CoTripper: an app to facilitate organized group travel experiences for
-single-mothers. This repository is dedicated to the backend functionality that covers user authentication, connecting to frontend for functionality, and keep a database for topics, trip information, etc. 
+single-mothers. This repository is dedicated to the backend functionality that covers user authentication, connecting to frontend for functionality, and keep a database for topics, trip information, etc.
 
 ## Getting Started
 
@@ -13,6 +13,9 @@ For setup and installation instructions, see the readmes for the API and Client:
 
 - [API Readme](./api/README.md)
 - [Client Readme](./client/README.md)
+
+### CORS 
+In order to ensure that CORS works properly, install [CORS](https://mybrowseraddon.com/access-control-allow-origin.html) into your browser
 
 ### Dependencies
 
@@ -30,24 +33,25 @@ your editor is set to automatically format on save.
 
 Poorly formatted code will not be merged.
 
+## Deployment Links
 
-## Deployment
-
-TBC
+- Frontend: https://cotripper.netlify.com/
+- Backend: https://cotripper-api.herokuapp.com/
 
 ## Languages/Technologies Utilized
-* Python
-* Django
-* PostgreSQL
 
-## Models 
+- Python
+- Django
+- PostgreSQL
 
-* Topic
-* City
+## Models
+
+- Topic
+- City
 
 ## Next Steps
 
-* 
+-
 
 ## Contributing
 

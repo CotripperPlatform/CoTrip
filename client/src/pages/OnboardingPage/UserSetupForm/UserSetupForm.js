@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
-import Logo from "components/Logo/Logo.js";
-import CarouselDots from "components/CarouselDots/CarouselDots";
+import "./UserSetupForm.css";
 
 class UserSetupForm extends Component {
   constructor(props) {
@@ -35,12 +34,13 @@ class UserSetupForm extends Component {
     if (
       this.state.confirmPassword == this.state.password &&
       this.state.email.match(regexEmail) &&
-      this.state.password.match(regexPassword)    ) {
+      this.state.password.match(regexPassword)
+    ) {
       this.props.save("setup", this.state);
       this.props.handleClick();
     } else {
       alert(
-        "Error: Registration failed. Please make sure: \n you have entered a valid email address \n your password information matches \n your password length is greater than 6 characters"
+        "Error: Registration failed. Please make sure: \n You have entered a valid/unregistered email address \n Your password information matches both fields \n Your password matches the provided password requirements"
       );
     }
   };
@@ -88,6 +88,18 @@ class UserSetupForm extends Component {
             placeholder="Confirm Password"
             onChange={this.confirmPassword}
           ></InputTextField>
+          <div className="OnboardingPage__requirement-container">
+            <div className="OnboardingPage__password-box">
+              <h5 className="OnboardingPage__requirement-text">
+                Password Requirements:<br></br> MUST contain at least 6 characters (12+ recommended)
+                <br></br>
+                MUST contain at least one uppercase letter<br></br>MUST contain at least one
+                lowercase letter
+                <br></br> MUST contain at least one number <br></br>MUST contain at least one
+                special character (!#$%*+, etc)
+              </h5>
+            </div>
+          </div>
         </div>
         <div className="OnboardingPage__button-container">
           <Button text="Next" size="small" handleClick={this.next}></Button>

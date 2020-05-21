@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 75%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 30px auto auto auto;
 }
 
-@media only screen and (max-width: 768px){
-  .PostContainer{
-    width: 25em;
+@media only screen and (max-width: 768px) {
+  .PostContainer {
+    width: 100vw;
   }
 }

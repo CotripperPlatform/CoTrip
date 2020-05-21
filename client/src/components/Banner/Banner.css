@@ -3,11 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 0;
+  padding: 0em 0em 0.5em 0em;
   margin: 0 auto;
-  width: 100%;
-  width: 100vw;
-  min-height: 230px;
+  width: 100.1vw;
+  min-height: 240px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,6 +14,37 @@
   font-family: var(--default-font);
   font-size: 48px;
   color: #fafafa;
-  line-height: 72px;
   margin-bottom: 5vh;
+  overflow: hidden;
+}
+.Banner--large {
+  height: 350px;
+  font-size: 100px;
+  position: relative;
+}
+.Banner--large > * {
+  position: absolute;
+  vertical-align: text-bottom;
+  margin-bottom: 40px;
+  bottom: 0;
+  right: 40px;
+}
+
+@media only screen and (max-width: 576px) {
+  .Banner--large > * {
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Banner--large > * {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
 }

@@ -82,22 +82,26 @@ const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
       <nav>
-        <NavBar to={"/member-page"} profileImage={people}></NavBar>
+        <NavBar page={5} to={"/member-page"} profileImage={people}></NavBar>
       </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
           {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
         </Banner>
+        <a href="./home">New User Sample</a>
+        <a href="./home-old-user">Old User Sample</a>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
             <div className="HomePage__group-cards-container">
-              <GroupCard
-                name="DIY with your kids"
-                members="98"
-                location="Boston, MA"
-                picture={card1}
-              />
+              <span className="HomePage__groupcard-1">
+                <GroupCard
+                  name="DIY with your kids"
+                  members="98"
+                  location="Boston, MA"
+                  picture={card1}
+                />
+              </span>
               <span className="HomePage__groupcard-2">
                 <GroupCard name="Mystery Stories!" members="213" location="NYC" picture={card2} />
               </span>
@@ -207,9 +211,10 @@ const HomePage = props => {
         <SignUp
           heading="Never Miss a Trip"
           subheading="Sign up with your email address to recieve news and updates"
-        ></SignUp>
-        <Footer history={props.history} handle_logout={props.handle_logout} />
+        ></SignUp>{" "}
       </footer>
+
+      <Footer history={props.history} handle_logout={props.handle_logout} />
     </body>
   );
 };

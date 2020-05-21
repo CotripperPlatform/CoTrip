@@ -3,9 +3,7 @@ import InputTextField from "components/InputTextField/InputTextField";
 import Button from "components/Button/Button";
 import ProfilePicture from "components/ProfilePicture/ProfilePicture";
 import FileUpload from "components/FileUploadComponent/FileUpload";
-
-// In order to gain the TypeScript typings (for intellisense / autocomplete) while using CommonJS imports with require() use the following approach:
-const axios = require("axios").default;
+import { getSignedRequest, uploadFile } from "../../../services/Accounts";
 
 // import handleFile from ""
 class PersonalSettingsForm extends Component {
@@ -23,35 +21,11 @@ class PersonalSettingsForm extends Component {
         city_of_residence: this.props.filter.city
       }
     };
-  }
-  getSignedRequest = file => {
-    const API_HOST =
-      process.env.NODE_ENV === "production"
-        ? "https://cotripper-api.herokuapp.com/"
-        : "http://localhost:8000/";
-    axios
-      .get(`${API_HOST}sign_s3?folder=profile&file_type=` + file.type)
-      .then(response => {
-        this.uploadFile(file, response.data.data, response.data.url);
-      })
-      .catch(error => alert("Could not get signed URL. " + error));
-  };
-  uploadFile = (file, s3Data, url) => {
-    let postData = new FormData();
-    for (let key in s3Data.fields) {
-      postData.append(key, s3Data.fields[key]);
-    }
-    postData.append("file", file);
 
-    axios
-      .post(s3Data.url, postData)
-      .then(res => {
-        this.setState({ profile: { ...this.state.profile, image: url } });
-      })
-      .catch(err => {
-        alert("Could not upload file.");
-      });
-  };
+    this.getSignedRequest = getSignedRequest.bind(this);
+    this.uploadFile = uploadFile.bind(this);
+  }
+
   updateValue = e => {
     let name = e.target.name;
     let value = e.target.value;
@@ -68,7 +42,7 @@ class PersonalSettingsForm extends Component {
   render() {
     return (
       <div className="OnboardingPage__inner-wrapper">
-        <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile (optional)</h1>
+        <h1 className="OnboardingPage__text">Step Three: Personalize Your Profile</h1>
         <div className="OnboardingPage__form-container">
           {this.state.profile.image === "" ? (
             <FileUpload
@@ -80,7 +54,7 @@ class PersonalSettingsForm extends Component {
                 console.log(evt);
 
                 let file = evt.target.files[0];
-                this.getSignedRequest(file);
+                this.getSignedRequest(file, "profile");
               }}
             ></FileUpload>
           ) : (

@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import Button from "../Button/Button";
 import "./Modal.css";
 
-class ModalContainer extends Component {
+class ModalContainerJoin extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,13 +16,11 @@ class ModalContainer extends Component {
       modalOpen: false
     });
   };
-
   handleOpenModal = () => {
     this.setState({
       modalOpen: true
     });
   };
-
   render() {
     return (
       <div className="Modal__container">
@@ -49,5 +47,4 @@ class ModalContainer extends Component {
     );
   }
 }
-
-export default ModalContainer;
+export default ModalContainerJoin;
