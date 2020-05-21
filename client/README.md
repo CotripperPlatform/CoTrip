@@ -192,3 +192,69 @@ For example:
 ## Deployment
 
 - Deployed on Netlify: https://cotripper.netlify.com/
+
+# Splash Page 
+## Description 
+
+The Splash page is the first page when a user signs into the website and is not logged in. It offers users the option to register or sign in.
+
+## URL Route
+
+/
+
+## Current Status
+
+The page is fully responsive and tied to the backend correctly.
+
+## Future Development 
+
+It can be hard to read the 'BOOK TRIPS' text when the user's screen is less than 1200 px width. Perhaps change width of the <p> element when between 1200 pix & 575px
+
+# Book A Trip
+## Description
+
+This page provides users with a list of upcoming trips. 
+
+## URL Route 
+
+/book-a-trip
+
+## Current Status
+
+This page should receive data about trips offered by CoTrip, but it is not set up to receive live data. The data rendered now is mock data. 
+
+The search bar on this page is not functional, though it ought to take user input and hide any components that do not match that input. 
+
+This page is responsive. It renders on mobile devices without breaking any components. 
+ 
+## Future Development
+
+Future development should focus on:
+1. Having this page retrieve and render live data about upcoming trips
+2. Making the search bar functional
+
+# Trip Detail
+## Description
+
+This page provides users with details about an upcoming trip. 
+
+## URL Route 
+
+/TripDetail
+
+## Current Status 
+
+This page only loads mock data for a specific trip: Hawaii 2020. 
+
+This page should render live data depending on which trip the user clicked on from the "Book A Trip" page. No links are live or lead to any other page within the app. 
+
+This page is responsive. It renders on mobile devices without breaking any components. The main content renders justified to the left of the screen, though, and would look better centered. 
+
+## Future Development 
+
+Future development should focus on: 
+1. Centering components when they render on smaller screens. 
+2. Rendering details from live trip data. 
+3. The "Book Trip" button should redirect users to a registration page for that specific trip. 
+
+
