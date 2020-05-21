@@ -263,7 +263,7 @@ class CommunityPageGroup extends Component {
                   <MediaCard imageSrc={van} size="small" footerText="Posted By: Chandi" />
                 </div>
               </div>
-              <div className="community_mediaContainer">
+              <div className="community_mediaContainer2">
                 <div className="community_mediaCard">
                   <MediaCard imageSrc={nightSky} size="small" footerText="Posted By: Paula" />
                 </div>
