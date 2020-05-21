@@ -48,16 +48,18 @@ const ForumPageDiscover = props => {
       </div>
 
       <div className="forum-page-body">
-        <InputSelect
-          onSelect={handleSelect}
-          optionPrefix={"Sort By:  "}
-          options={[
-            { value: "Popularity", title: "Popularity" },
-            { value: "location", title: "Location" },
-            { value: "date", title: "Date" },
-            { value: "type", title: "Type" }
-          ]}
-        />
+        <div className="forum-page-sort">
+          <InputSelect
+            onSelect={handleSelect}
+            optionPrefix={"Sort By:  "}
+            options={[
+              { value: "Popularity", title: "Popularity" },
+              { value: "location", title: "Location" },
+              { value: "date", title: "Date" },
+              { value: "type", title: "Type" }
+            ]}
+          />
+        </div>
         <div>
           <header className="ForumPage__header">Popular Topics</header>
         </div>
