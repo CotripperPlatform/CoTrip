@@ -49,16 +49,6 @@
   margin: 10px 50px 30px 0px;
 }
 
-@media only screen and (max-width: 320px) {
-  .CommunityPage-Group-__header {
-    text-align: center;
-    font-size: 36px;
-  }
-
-  .CommunityPage-Group- {
-    width: 100vw;
-  }
-}
 
 .secondNav {
   display: flex;
@@ -256,7 +246,7 @@
   border: 1px solid black;
 }
 
-.community_medieContainer {
+.community_medieContainer, .community_mediaContainer2 {
   margin-top: 70px;
   margin-left: -100px;
   margin-right: 120px;
@@ -368,7 +358,8 @@
   line-height: 0px;
 }
 
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 1000px) {
   .CommunityPage__header {
     text-align: center;
     font-size: 36px;
@@ -376,5 +367,104 @@
 
   .CommunityPage {
     width: 100vw;
+    }
+
+  .community-group-members_description{
+    text-align: center;
+  }
+
+  .community-group-members_description_p {
+    width: 80vw;
+  }
+
+  .community-group-members_section{
+  display: none;
+  }
+
+  .community-group-body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .community-group-bodyLeft {
+    width: 100vw;
+    margin: auto;
+    height: 100%;
+  }
+  .community-group-bodyRight {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 0px;
+    margin-top: 80px;
+    margin-left: 20px;
+    justify-content: center;
+    align-items: center;
+}
+  .PostContainer {
+    width: 100vw;
+  }  
+
+  .upcoming-events {
+    display: flex;
+    flex-direction: column;
+    /* width: 1000px; */
+  }
+
+.seemore-events{
+  width: auto;
+}
+
+.community_media {
+  margin-top: 0px;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-left: 70px;
+  justify-content: center;
+  align-items: center;
+}
+  .SingleEvent{
+    margin-bottom: 20px;
+  }
+
+  .community_mediaContainer2{
+    margin-top: 0px;
   }
 }
+
+@media only screen and (max-width: 768px){
+  .PostContainer{
+     width: 100vw;
+  }
+  .Button--like-comment {
+    width: 100vw;
+  }
+  .Comment__body {
+    margin: auto;
+    width: 15em;
+}
+}
+
+@media only screen and (max-width: 375px) {
+  .Comment__body {
+    margin: 0;
+    width: 15em;
+  }
+  }
+
+/* @media only screen and (max-width: 320px) {
+  .CommunityPage-Group-__header {
+    text-align: center;
+    font-size: 36px;
+  }
+
+  .CommunityPage-Group- {
+    width: 100vw;
+  }
+} */
+

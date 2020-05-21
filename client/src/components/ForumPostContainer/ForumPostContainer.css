@@ -8,6 +8,6 @@
 
 @media only screen and (max-width: 768px) {
   .PostContainer {
-    width: 25em;
+    width: 100vw;
   }
 }

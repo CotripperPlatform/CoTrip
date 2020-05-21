@@ -87,17 +87,6 @@
   border-radius: 3px;
 }
 
-.CommunityPage_SortByButton {
-  background: #fafafa;
-  border: 2px solid #e5e5e5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  width: 356px;
-  height: 48px;
-  margin-left: 50px;
-  margin-top: 50px;
-}
-
 .seeAll-Button {
   font-family: Reem Kufi;
   font-style: normal;
@@ -141,3 +130,43 @@
 .CommunityPage__momCard-single {
   margin: 50px;
 }
+
+
+@media only screen and (max-width: 768px){
+
+  .CommunityPage_SortByButton {
+    margin-left: 0px;
+    margin-top: 0px;
+    width: 80vw;
+    margin: 20px auto;
+  }
+
+  .secondNav {
+    flex-direction: column;
+    height: 150px;
+    margin: -20px auto;
+}
+
+.CommunityPage__mom-location-container {
+  display: flex;
+  flex-direction: row;
+  width: 101.5vw;
+  flex-wrap: wrap;
+  margin-left: 100px;
+}
+}
+  
+  @media only screen and (max-width: 500px) {
+    .CommunityPage__header {
+      text-align: center;
+      font-size: 36px;
+    }
+  
+    .CommunityPage {
+      width: 100vw;
+    }
+
+    .CommunityPage__mom-location-container {
+      margin-left: 50px;
+  }
+  }
