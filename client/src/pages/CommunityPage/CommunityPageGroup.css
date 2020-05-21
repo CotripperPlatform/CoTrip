@@ -246,7 +246,7 @@
   border: 1px solid black;
 }
 
-.community_medieContainer {
+.community_medieContainer, .community_mediaContainer2 {
   margin-top: 70px;
   margin-left: -100px;
   margin-right: 120px;
@@ -359,7 +359,7 @@
 }
 
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1000px) {
   .CommunityPage__header {
     text-align: center;
     font-size: 36px;
@@ -369,8 +369,12 @@
     width: 100vw;
     }
 
+  .community-group-members_description{
+    text-align: center;
+  }
+
   .community-group-members_description_p {
-    width: 300px;
+    width: 80vw;
   }
 
   .community-group-members_section{
@@ -394,7 +398,7 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    width: 350px;
+    width: 0px;
     margin-top: 80px;
     margin-left: 20px;
     justify-content: center;
@@ -420,12 +424,16 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 60px;
+  margin-left: 70px;
   justify-content: center;
   align-items: center;
 }
   .SingleEvent{
     margin-bottom: 20px;
+  }
+
+  .community_mediaContainer2{
+    margin-top: 0px;
   }
 }
 
@@ -441,6 +449,13 @@
     width: 15em;
 }
 }
+
+@media only screen and (max-width: 375px) {
+  .Comment__body {
+    margin: 0;
+    width: 15em;
+  }
+  }
 
 /* @media only screen and (max-width: 320px) {
   .CommunityPage-Group-__header {
