@@ -193,68 +193,541 @@ For example:
 
 - Deployed on Netlify: https://cotripper.netlify.com/
 
-# Splash Page 
-## Description 
+# SiteWide Issues
 
-The Splash page is the first page when a user signs into the website and is not logged in. It offers users the option to register or sign in.
+## Description
+
+These issues are not in any specific page; they are site-wide.
+
+## Current Status
+
+See 'Future Development' below.
+
+## Future Development
+
+1. Search feature is not functional on NavBar
+2. Inbox is not functional on NavBar
+3. Footer does not have links set up to Social Media
+4. Sitemap (mentioned in footer) does not exist
+5. Email sign-up is not linked to client’s email service
+6. Users have no way (front-end or back-end) to reset their password
+7. There is no front-end or back-end functionality for the inbox
+
+# Splash Page
+
+## Description
+
+The Splash page is the first page users encounter when they visit the website but are not logged in. The splash page offers users the option to register or sign in.
 
 ## URL Route
 
-/
+"/"
 
 ## Current Status
 
-The page is fully responsive and tied to the backend correctly.
+This page is fully functioning, responsive, and tied to the back-end.
 
-## Future Development 
+## Future Development
 
 It can be hard to read the 'BOOK TRIPS' text when the user's screen is less than 1200 px width. Perhaps change width of the <p> element when between 1200 pix & 575px
 
-# Book A Trip
+# Onboarding
+
 ## Description
 
-This page provides users with a list of upcoming trips. 
+This is the registration page for creating a new user
 
-## URL Route 
+## URL Route
 
-/book-a-trip
+"/register"
 
 ## Current Status
 
-This page should receive data about trips offered by CoTrip, but it is not set up to receive live data. The data rendered now is mock data. 
+Navigating the Onboarding Page takes the user through three steps. 
 
-The search bar on this page is not functional, though it ought to take user input and hide any components that do not match that input. 
+Step One: Fully functional, but not responsive under 1000px
 
-This page is responsive. It renders on mobile devices without breaking any components. 
- 
+Step Two: Fully functional & responsive
+
+Step Three: Fully functional - but the app cannot upload a photo via aws when ran locally. The eployed app does upload a photo via aws when. 
+
+## Future Development
+
+By steps:
+
+Step One: When under 1000px, password requirements box stays the same size - but the input fields change size, are no longer lined up, and are not centered. The text input boxes need to remain the same size, or be centered upon screen resolution shrink.
+
+![Screenshot](Screenshot.jpg)
+
+Step Three: Responsive, but the dream destination text is cut off when screen resolution is 350px or less.
+
+# Login Page
+
+## Description
+
+This is where the user logs in with their username and password
+
+## URL
+
+"/login"
+
+## Current Status
+
+The Login page is fully functional, but not fully responsive.
+
+## Future Development
+
+Text-input fields should not be dynamic and should remain the same size (ideally the same size as the Submit button). Future contributors may consider adding a Back/Cancel button and a Reset Password feature. 
+
+There is no front-end or back-end method for a user to reset their password on their own nor by an admin.
+
+# Community Home Page
+
+## Description
+
+This page is where the user can search for specific groups, connect with "other moms", and discover different groups. Also, this page suggests groups for the user to join based on the location the user specifies. 
+
+## URL Route
+
+"/community/join-groups"
+
+## Current Status
+
+The page is static and does not pull any data from the backend. 
+
+The page needs to make API calls to get group locations (city and state) so that the groups rendered align with the location specified by the user. 
+
+This page needs data from the Groups model on the back-end.
+
+## Future Development
+
+1. Make the search bar, "sort by" filter, and "See More" features function. 
+2. Pills should render group data pulled from the back-end. When clicked, pills should change color and redirect the user to that group's page.  
+
+# Community Groups Page
+
+## Description
+
+After a user clicks on a specific group, they are redirected to this page where they can learn more about a specific group, see different user comments and hashtags, a description of the page, members that are part of the group, and upcoming events. 
+
+## URL Route
+
+"/community/view-group"
+
+## Current Status
+
+The page has all necessary components but only renders mock data. The page is mostly mobile responsive. The page needs to fetch group data from the backend to search the group in the group modals.
+
+## Future Development
+
+Different users should be able to like a post and comment on the post, click on the hashtag, click "join" to join the group, click on members to see different members, and click on upcoming events.
+
+# Community People Page
+
+## Description
+
+This page allows the users to view members by location. The user can also search for groups, and filter search results with the sort feature.
+
+## URL Route
+
+"/community/view-group"
+
+## Current Status
+
+The page is currently static. The search bar and 'sort by' features do not work. The user should be able to click "See More." "Discover Groups" and "Connect With Other Moms" should each link to the appropriate pages.
+
+## Future Development
+
+1. Build the 'sort by' feature
+2. Build the search bar 
+3. Add event listener so that pills change color when clicked 
+4. Header buttons should by dynamic 
+5. "See All" should work
+
+# Forum Page
+
+## Description
+
+The forum page allows the user to search for topics and hashtags, and sort by different criteria. The user can also add favorite topics and hashtags that they "heart" (like) as well.
+
+## URL Route
+
+"/forum-page"
+
+## Current Status
+
+The forum page is currently all static but the tabs on the top will link to the correct page when clicked on. The search bar,  "My favorite topics" and "Discover Topics" are static.
+
+## Future Development
+
+1. Build the search bar so that users can search
+2. "My favorite topics" and "Discover topic" should link properly 
+3. "Pills" should change color when clicked
+
+# Forum - Hashtag
+
+## Description
+
+This page returns results for the hashtag searched by the user.
+
+## URL Route
+
+"/forum-page-hashtag"
+
+## Current Status
+
+The tabs are functioning and the NavBar works. 
+
+## Future Development
+
+1. This page should retrieve data from the back-end
+2. This page is not responsive
+3. The Like/Comment buttons are not functioning
+
+# Forum - Topic
+
+## Description
+
+When the user searches forum pages by topic, this page provides results.
+
+## URL Route
+
+"/forum-page-topic"
+
+## Current Status
+
+1. Tabs are functioning
+2. NavBar works
+3. Adds description and members
+4. Page renders mock data
+
+## Future Development
+
+1. Retrieve data from back-end
+2. 'See More' button
+3. Write a message to post should function
+4. The page is not responsive
+
+# Book A Trip
+
+## Description
+
+This page provides users with a list of upcoming trips.
+
+## URL Route
+
+"/book-a-trip"
+
+## Current Status
+
+This page should receive data about trips offered by CoTrip, but it is not set up to receive live data. The data rendered now is mock data.
+
+The search bar on this page is not functional, though it ought to take user input and hide any components that do not match that input.
+
+This page is responsive. It renders on mobile devices without breaking any components.
+
 ## Future Development
 
 Future development should focus on:
+
 1. Having this page retrieve and render live data about upcoming trips
 2. Making the search bar functional
 
 # Trip Detail
+
 ## Description
 
-This page provides users with details about an upcoming trip. 
+This page provides users with details about an upcoming trip.
 
-## URL Route 
+## URL Route
 
-/TripDetail
+"/TripDetail"
 
-## Current Status 
+## Current Status
 
-This page only loads mock data for a specific trip: Hawaii 2020. 
+This page only loads mock data for a specific trip: Hawaii 2020.
 
-This page should render live data depending on which trip the user clicked on from the "Book A Trip" page. No links are live or lead to any other page within the app. 
+This page should render live data depending on which trip the user clicked on from the "Book A Trip" page. No links are live or lead to any other page within the app.
 
-This page is responsive. It renders on mobile devices without breaking any components. The main content renders justified to the left of the screen, though, and would look better centered. 
+This page is responsive. It renders on mobile devices without breaking any components. The main content renders justified to the left of the screen, though, and would look better centered.
 
-## Future Development 
+## Future Development
 
-Future development should focus on: 
-1. Centering components when they render on smaller screens. 
-2. Rendering details from live trip data. 
-3. The "Book Trip" button should redirect users to a registration page for that specific trip. 
+Future development should focus on:
 
+1. Centering components when they render on smaller screens.
+2. Rendering details from live trip data.
+3. The "Book Trip" button should redirect users to a registration page for that specific trip.
 
+# /groups
+
+Returns a list of all groups in the database.
+
+## Request Example
+
+```
+HTTP Methods: POST, GET
+fetch(`${BASE_URL}/groups`, {
+        headers: {
+          Authorization: `Token ${localStorage.getItem("token")}`
+        }
+ 	})
+```
+
+If post request, expects the following request body format
+
+```
+{
+title: "yourtitle",
+description: "a description"
+}
+```
+
+## Current Status
+
+The view is functional, allowing for viewing of current groups and creation of new ones, if request is authenticated.
+
+## Future Development
+This route is complete. It is ready to be accessed by the front end.
+
+# /groups/<int:pk>
+
+Returns a specific instance of the model that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET, UPDATE, DELETE
+`` fetch(`${BASE_URL}/groups/<int:pk>`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+if UPDATE request body should include an object with the name of the field, you want to update set to its new value ex. `{title: "King of England"}`
+
+## Current Status
+
+Route is functional, allowing for GET UPDATE and DELETE on individual instances
+
+## Future Development
+
+See Future Development in this models list route. 
+
+One thing to consider: users shouldn't be able to delete or update groups, just their association to them.
+
+# /media
+
+Returns a list of all media in the database.
+
+## Request Example
+
+HTTP Methods: POST, GET
+`` fetch(`${BASE_URL}/media`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+If a post request, expects the following request body format
+`{ time: Date, image: Image, title: "yourtitle", description: "a description", optionally, the request can include author: Foreign Key of accounts.Profile, hashtag: Foreign Key of community.Hashtag, group: Foreign Key of community.Group, }`
+
+## Current status
+
+The view is functional, allowing for viewing of current media and creation of new ones, if request is authenticated
+
+## Future Development
+
+This route does not seem complete. 
+
+The media model does not require an author to create a post. Most images in the site are being stored as CharFields, but this model stores its image as an ImageField, which may be a better option or might be something to change, depending on what further research determines. I also think it is odd that topics are a many-to-many relationship but hashtags are many-to-one. 
+
+# /media/<int:pk>
+
+Returns a specific instance of the model that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET, UPDATE, DELETE
+`` fetch(`${BASE_URL}/media/<int:pk>`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+if UPDATE request body should include an object with the name of the field you would like to update set to its new value ex. `{title: "King of England"}`
+
+## Current Status
+
+Route is currently functional, allowing for GET UPDATE and DELETE on individual instances
+
+## Future Development
+
+See Future Development in this models list route. One thing to consider: users should only be able to delete media that they have posted.
+
+# /hashtags
+
+Returns a list of all hashtags in the database.
+
+## Request Example
+
+HTTP Methods: POST, GET
+`` fetch(`${BASE_URL}/hashtags`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+If a post request, expects the following request body format
+`{ title: "yourtitle", description: "a description" }`
+
+## Current status
+
+The view is functional, allowing for viewing of current groups and creation of new ones, if request is authenticated
+
+## Future Development
+
+This route is complete. It is ready to be accessed by the front end. Possibly redundant with topics, see the Future Development of the topics list route below.
+
+# /hashtags/<int:pk>
+
+Returns a specific instance of the model that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET, UPDATE, DELETE
+`` fetch(`${BASE_URL}/hashtags/<int:pk>`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+if UPDATE request body should include an object with the name of the field you would like to update set to its new value ex. `{title: "King of England"}`
+
+## Current Status
+
+Route is currently functional, allowing for GET UPDATE and DELETE on individual instances
+
+## Future Development
+
+See Future Development in this models list route.
+
+# /events
+
+Returns a list of all groups in the database.
+
+## Request Example
+
+HTTP Methods: POST, GET
+`` fetch(`${BASE_URL}/events`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+If a post request, expects the following request body format
+`{ title: "yourtitle", optionally, group: Foreign Key of community.Group location: Foreign Key of trip.Location }`
+
+## Current status
+
+We did not work very much on this part of the API during SEI 36. Currently the view is functional, allowing for viewing of current groups and creation of new ones, if request is authenticated
+
+## Future Development
+
+This route is complete. It is ready to be accessed by the front end. However, this model could use some work. Right now, it does not seem that the event model has all of its specs implemented. More research is needed. It might be redundant with the trip or activities models, and its functionality might be better served by one of those options.
+
+# /events/<int:pk>
+
+Returns a specific instance of the model that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET, UPDATE, DELETE
+`` fetch(`${BASE_URL}/events/<int:pk>`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+if UPDATE request body should include an object with the name of the field you would like to update set to its new value ex. `{title: "King of England"}`
+
+## Current Status
+
+Route is currently functional, allowing for GET UPDATE and DELETE on individual instances
+
+## Future Development
+
+See Future Development in this models list route. One thing to consider: users maybe shouldn't be able to delete or update events, just their association to them, unless they are the creator of that event.
+
+# /topics
+
+Returns a list of all topics in the database.
+
+## Request Example
+
+HTTP Methods: POST, GET
+`` fetch(`${BASE_URL}/topics`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+If a post request, expects the following request body format
+`{ title: "yourtitle", description: "a description" }`
+
+## Current status
+
+We did not work very much on this part of the API during SEI 36. Currently the view is functional, allowing for viewing of current groups and creation of new ones, if request is authenticated
+
+## Future Development
+
+This route is complete. It is ready to be accessed by the front end.
+However, topics and hashtags seem to be identical, which is redundant. It would be more coherent to just have topics, with a boolean added to the model that determines whether or not that topic is also a hashtag.
+
+# /topics/<int:pk>
+
+Returns a specific instance of the model that matches the passed pk
+
+## Request Example
+
+HTTP Methods: GET, UPDATE, DELETE
+`` fetch(`${BASE_URL}/topics/<int:pk>`, { headers: { Authorization: `Token ${localStorage.getItem("token")}` } }) ``
+if UPDATE request body should include an object with the name of the field you would like to update set to its new value ex. `{title: "King of England"}`
+
+## Current Status
+
+Route is functional, allowing for GET UPDATE and DELETE on individual instances
+
+## Future Development
+
+See Future Development in this models list route. One thing to consider: users shouldn't be able to delete or update topics, just their association to them.
+
+# /posts
+
+This route allows an authenticated user to create a post and view all posts from all users.
+
+## Request Example:
+
+HTTP Method: GET, POST
+Request Headers: Authorization & Token
+fetch(`${BASE_URL}/posts`,
+{headers:
+{
+Authorization: `Token ${localStorage.getItem("token")}`
+}
+})
+Body (for POST only):
+{
+"post_type": "Post",
+"title": "HelloWorld",
+"time": "2020-05-14T19:01:59.021103Z",
+"body": "TESTING123456",
+"likes": 0,
+"author": 6,
+"parent": [6]
+}
+
+- Note: When submitting this request, a user must be logged in, which will store an authorization token required for the request to be fulfilled.
+- When testing this route in Postman, make sure the value at "author" is the same as the value at "user" when the user logs in via the <auth/login> route.
+
+## Current Status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front end to access.
+
+# /posts/<int:pk>
+
+This route allows an authenticated user to view, update, and delete ONLY their own post(s).
+
+## Request Example
+
+HTTP Method: GET, PATCH/PUT, DELETE
+Request Headers: Authorization & Token
+fetch(`${BASE_URL}/posts/17`,
+{headers:
+{
+Authorization: `Token ${localStorage.getItem("token")}`
+}
+})
+When submitting this request, a user must be logged in, which will store an authorization token required for the request to be fulfilled.
+Body (PATCH/PUT and DELETE only):
+{
+"id": 17,
+"post_type": "Post",
+"title": "HelloWorld12345",
+"time": "2020-05-15T18:08:05.800105Z",
+"body": "TESTING123",
+"likes": 0,
+"author": 7,
+"parent": [6]
+}
+
+## Current Status
+
+Fully functional.
+
+## Future Development
+
+This route is complete and ready for the front-end to access.
