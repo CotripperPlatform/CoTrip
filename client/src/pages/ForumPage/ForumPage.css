@@ -206,10 +206,14 @@
   margin-bottom: -16px;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 380px) {
   .ForumPage__header {
     text-align: center;
     font-size: 36px;
+  }
+
+  .forum-page-sort {
+    margin: 20px auto auto -70px;
   }
 
   .ForumPage {
