@@ -40,17 +40,36 @@ class MemberProfilePage extends Component {
   componentDidMount() {
     // axios()
   
-    // console.log(this.props);
-    // axios.get(`${BASE_URL}/profile/${this.props.id}`)
+    // console.log('memberpage props: ', this.props);
+    if(this.props.userid !== undefined)
+    {
+      axios.get(`${BASE_URL}/profile/${this.props.userid}`,
+      { 
+        headers: { 
+          Authorization: `Token ${localStorage.getItem("token")}` 
+        } 
+      })
+      .then(res => {
+        console.log('axios ', res.data)
+
+        this.setState({
+          protectedProfileData: {
+              first_name: res.data.first_name,
+              last_name: res.data.last_name,
+              bio: res.data.bio,
+              age: res.data.age,
+              image: res.data.image,
+              city_of_residence: res.data.city_of_residence
+          }
+        })
+      })
+    }
+
     // .then(res => console.log('axios ', res.data))
  
   }
 
-  componentWillReceiveProps(){
-    console.log(this.props);
-    axios.get(`${BASE_URL}/profile/${this.props.id}`)
-    .then(res => console.log('axios ', res.data))
-  }
+
 
   // Runs after a component has been updated
   componentDidUpdate() {}
@@ -148,18 +167,23 @@ class MemberProfilePage extends Component {
                   <InteractionCard></InteractionCard>
                 </div>
                 <div className="MemberProfilePage__bio-container">
+
+
+                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ? 
                   <Bio
-                    instagram={people[0].intagram}
-                    facebook={people[0].facebook}
-                    pinterest={people[0].pinterest}
+                    userid={this.props.userid}
                     type="default"
-                    name={people[0].name}
+                    first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
                     // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
-                    bio={people[0].bio}
+                    bio={this.state.protectedProfileData.bio}
                     hashtags={people[0].hashtags}
                     isCurrentUser={true}
                     onClick={console.log("Hello")}
                   />
+                  : '' }
+
+
+
                 </div>
                 <div></div>
               </div>

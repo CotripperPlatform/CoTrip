@@ -7,7 +7,7 @@
 .OnboardingPage__password-box {
   background-color: rgba(253, 18, 1, 0.089);
   padding: 0px 20px 0px 20px;
-  border-radius: 2%;
+  border-radius: 0.2em;
   border: 1px solid rgba(255, 107, 9, 0.877);
 }
 

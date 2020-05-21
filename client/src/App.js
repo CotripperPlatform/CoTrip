@@ -66,6 +66,7 @@ class App extends Component {
       email: "",
       first_name: "",
       image: "",
+      profileLoaded: false,
       menuItems: [
         { menuItem: "My Directory", link: "/home" },
         { menuItem: "Community", link: "/community" },
@@ -95,13 +96,15 @@ class App extends Component {
               email: json.email,
               first_name: json.profile.first_name,
               image: json.profile.image,
-              userid: json.id
-            });
+              userid: json.id,
+              profileLoaded: true
+            }, this.logState);
           }
         });
     }
   }
 
+  logState = () => console.log('App.js state finished: ',this.state);
   render() {
     return (
       <div className="App">
@@ -143,13 +146,20 @@ class App extends Component {
               <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
-          <Route
-            path="/member-page"
-            exact
-            render={routerProps => (
-              <MemberProfilePage {...this.state} handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
+
+          {this.state.profileLoaded === true ? 
+            <Route
+              path="/member-page"
+              exact
+              render={routerProps => (
+                <MemberProfilePage {...this.state} handle_logout={this.handleLogout} {...routerProps} />
+              )}
+            ></Route>
+            :
+            
+            ''
+
+          }
           <Route
             path="/coming_soon"
             exact
