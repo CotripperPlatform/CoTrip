@@ -21,7 +21,12 @@ class Bio extends Component {
     }
   }
 
-  toggleEditMode = () => this.setState({ editMode: !(this.state.editMode) })
+  toggleEditMode = () => {
+      this.setState({ 
+        editMode: !(this.state.editMode)
+      })
+    
+  }
 
   updateFirstName = (event) => {
     let first_name = event.target.value;
@@ -43,6 +48,7 @@ class Bio extends Component {
         form_bio: bio 
     });
   }
+
 
   submitUserUpdates = () => {
       axios({
@@ -73,13 +79,15 @@ class Bio extends Component {
   }
 
   logForm = () => console.log(this.state.form_first_name, this.state.form_last_name, this.state.form_bio);
-    
 
-  componentDidMount() {
-    // console.log('bio props: ', this.props);
+  componentDidMount(){
+    this.setState({
+      form_first_name: this.props.first_name,
+      form_last_name: this.props.last_name,
+      form_bio: this.props.bio
+    })
   }
-
-
+  
   render() {  
 
       let userBio = '';
@@ -118,7 +126,7 @@ class Bio extends Component {
 
     if(this.state.editMode === true)
     {
-      
+    
       
       // if(this.props.bio)
       //     userBio = this.props.bio;
@@ -133,15 +141,18 @@ class Bio extends Component {
             <InputTextField
           name="first_name"
           type="text"
-          placeholder={firstName}
+          placeholder='First name'
+          defaultValue={firstName}
           onChange={this.updateFirstName}
+          // loadcallback={this.updateFirstName}
           /> &nbsp;
           <InputTextField
           name="last_name"
           type="text"
-          placeholder={lastName}
+          placeholder='Last name'
+          defaultValue={lastName}
           onChange={this.updateLastName}
-          /> &nbsp;
+          /> &nbsp; 
               {this.props.isCurrentUser ? <Icon callback={this.toggleEditMode} icon={"edit"} /> : null}
             </h2>
 
@@ -155,6 +166,7 @@ class Bio extends Component {
           defaultValue={userBio}
           variant="outlined"
           onChange={this.updateBio}
+          
         />
 
         {/* <a onClick={this.logForm}>Log Vals</a> */}
