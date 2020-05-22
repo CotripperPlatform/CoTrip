@@ -951,12 +951,14 @@ Returns a list of all trips, or returns a list of trips by filter conditions: ti
    }})
 ```
 
-##Current status
+## Current status
+
 Fully functional.
-##Future Development
+##F uture Development
 This route is complete and ready for the front end to access.
 
-#/trips/Upcoming
+# /trips/Upcoming
+
 Returns a list of all upcoming trips, or returns a list of upcoming trips by filter conditions: title, location, activity, start_date, end_date.
 
 - "title": the trip’s title. Get the list of trip which each trip’s title contains the filter’s title (ignore case). Filter by title with fuzzy query.
