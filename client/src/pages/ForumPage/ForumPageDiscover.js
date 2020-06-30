@@ -42,7 +42,7 @@ const ForumPageDiscover = props => {
             handleClick={handleClick}
           />
         </a>
-        <a className="secondNav">
+        <a href="./forum-page-discover" className="secondNav">
           <Button text="Discover Topics" color="pink" size="long" handleClick={handleClick} />
         </a>
       </div>
@@ -67,7 +67,7 @@ const ForumPageDiscover = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"red"}
             icon={"white"}
@@ -82,7 +82,7 @@ const ForumPageDiscover = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"white"}
@@ -92,7 +92,7 @@ const ForumPageDiscover = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"white"}
@@ -102,7 +102,7 @@ const ForumPageDiscover = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"white"}
@@ -112,7 +112,7 @@ const ForumPageDiscover = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"white"}
@@ -122,7 +122,7 @@ const ForumPageDiscover = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"white"}
@@ -138,7 +138,7 @@ const ForumPageDiscover = props => {
         <div className="forum-page-hollow-pill-container">
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -149,7 +149,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -160,7 +160,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -171,7 +171,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -182,7 +182,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -193,7 +193,7 @@ const ForumPageDiscover = props => {
           />{" "}
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -204,7 +204,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -215,7 +215,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -226,7 +226,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}
@@ -237,7 +237,7 @@ const ForumPageDiscover = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
+            // size={"medium"}
             size={"short"}
             color={"pink"}
             icon={"pink"}

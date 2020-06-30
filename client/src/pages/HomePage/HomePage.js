@@ -149,25 +149,25 @@ const HomePage = props => {
         <div className="HomePage__mobile-wrapper">
           <Link to="/">
             <Card color="yellow" size="mobile">
-              <img src={groups} className="HomePage__mobile-card-icon" />
+              <img src={groups} alt="suggested-groups-icon" className="HomePage__mobile-card-icon" />
               <h2>Suggested Groups</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="pink" size="mobile">
-              <img src={airplane} className="HomePage__mobile-card-icon" />
+              <img src={airplane} alt="book-a-trip-icon" className="HomePage__mobile-card-icon" />
               <h2>Book a Trip</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="red" size="mobile">
-              <img src={suggestedPeople} className="HomePage__mobile-card-icon" />
+              <img src={suggestedPeople} alt="suggested-people-icon" className="HomePage__mobile-card-icon" />
               <h2>Suggested People</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="purple" size="mobile">
-              <img src={hashtags} className="HomePage__mobile-card-icon" />
+              <img src={hashtags} alt="trending-hashtags-icon" className="HomePage__mobile-card-icon" />
               <h2>Trending Hashtags</h2>
             </Card>
           </Link>

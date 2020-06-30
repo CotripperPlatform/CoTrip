@@ -220,20 +220,20 @@ const HomePageOldUser = props => {
         <div className="HomePageOld__mobile-wrapper">
           <Link to="/">
             <Card color="yellow" size="mobile">
-              <img src={groups} className="HomePageOld__mobile-card-icon" />
+              <img src={groups} alt="suggested-groups-icon" className="HomePageOld__mobile-card-icon" />
               <h2>My Groups</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="pink" size="mobile">
-              <img src={airplane} className="HomePageOld__mobile-card-icon" />
+              <img src={airplane} alt="book-a-trip-icon" className="HomePageOld__mobile-card-icon" />
               <h2>Book a Trip</h2>
             </Card>
           </Link>
 
           <Link to="/">
             <Card color="purple" size="mobile">
-              <img src={hashtags} className="HomePageOld__mobile-card-icon" />
+              <img src={hashtags}  alt="suggested-people-icon" className="HomePageOld__mobile-card-icon" />
               <h2>Trending Hashtags</h2>
             </Card>
           </Link>

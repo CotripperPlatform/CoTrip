@@ -18,7 +18,7 @@ export function handleSignup(data, history) {
     .then(json => {
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
       this.setState({
-        logged_in: json.token != undefined ? true : false,
+        logged_in: json.token !== undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
         image: json.user.profile.image
@@ -43,7 +43,7 @@ export function handleLogin(data, history) {
       console.log(json.token);
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
       this.setState({
-        logged_in: json.token != undefined ? true : false,
+        logged_in: json.token !== undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
         image: json.user.profile.image

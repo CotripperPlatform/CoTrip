@@ -40,7 +40,7 @@ class Pill extends Component {
   renderHeart = () => {
     let iconClass = this.props.iconOffset ? "Pill--icon Pill--icon-offset" : "Pill--icon";
     let renderHeart = this.props.icon.toLowerCase() === "pink" ? heartPink : heartWhite;
-    let img = <img src={renderHeart} className={iconClass}></img>;
+    let img = <img src={renderHeart} alt= "Heart-shaped icon" className={iconClass}></img>;
     let render = this.props.icon ? img : <div />;
     return render;
   };

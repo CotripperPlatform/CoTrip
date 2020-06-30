@@ -4,7 +4,7 @@ import "./Icon.css";
 
 const defaultCallback = () => console.log('default callback');
 const Icon = (props) => (
-  <div onClick={props.callback == undefined ? defaultCallback : props.callback}>
+  <div onClick={props.callback === undefined ? defaultCallback : props.callback}>
     <FontAwesomeIcon icon={ props.icon} size={props.size}/>
   </div>
 )
