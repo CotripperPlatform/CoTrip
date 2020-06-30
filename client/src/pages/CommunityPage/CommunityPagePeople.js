@@ -38,7 +38,9 @@ const CommunityPage = props => {
   }, []);
 
   //random number between 1 and 5
-  const randomPlaceholderImage = () => Math.floor(Math.random() * 6) + 1;
+  const stockImages = [image1, image2, image3, image4, image5];
+  const randomPlaceholderImages = () =>
+    stockImages[Math.floor(Math.random() * (stockImages.length - 1 + 1))];
 
   const profileList = () => {
     return (
@@ -47,7 +49,7 @@ const CommunityPage = props => {
         return (
           <div className="CommunityPage__momCard-single">
             <PersonCard
-              image={data.image[randomPlaceholderImage]}
+              image={randomPlaceholderImages()}
               name={data.first_name + "" + data.last_name}
               location={data.city_of_residence}
               interests={data.hashtags}
@@ -224,7 +226,7 @@ const CommunityPage = props => {
             <PersonCard image={image5} name="Julia C." location="Washington D.C." />
           </div>{" "}
           <div className="CommunityPage__momCard-single"> </div> */}
-          {profileList}
+          {profileList()}
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
