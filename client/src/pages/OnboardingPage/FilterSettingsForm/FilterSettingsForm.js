@@ -79,24 +79,24 @@ class FilterSettingsForm extends Component {
       if(state.name.toLowerCase() === userSubmission) {
         axios.get(`${BASE_URL}/location/bystate?state__code=${state.code}`)
         .then(res => {
-          this.setState({ 
+          this.setState({
             stateFound: true,
             currentStateCities: res.data
           })
 
-          
+
         })
       }
     });
   }
-  
+
   setLocationID = (event) => {
 
       let currentStateCities = this.state.currentStateCities;
       // console.log(currentStateCities);
 
       let userSubmission = event.target.textContent.toLowerCase();
-      
+
       // for(let i=0;i<currentStateCities.length)
 
       //binary search
@@ -108,33 +108,33 @@ class FilterSettingsForm extends Component {
           this.setState({ city: null, city_of_residence: null });
 
 
-  
+
       console.log("binarysearch: ", result);
   }
 
   binarySearch = (cities, userSubmission, start, end) => {
-    // Base Condition 
-    if (start > end) return false; 
-   
-    // Find the middle index 
-    let mid=Math.floor((start + end)/2); 
-   
-    // Compare mid with given key x 
-    if (cities[mid].name.toLowerCase()===userSubmission) return { found:true, location: cities[mid] }; 
-          
-    // If element at mid is greater than x, 
-    // search in the left half of mid 
-    if(cities[mid].name.toLowerCase() > userSubmission)  
-        return this.binarySearch(cities, userSubmission, start, mid-1); 
+    // Base Condition
+    if (start > end) return false;
+
+    // Find the middle index
+    let mid=Math.floor((start + end)/2);
+
+    // Compare mid with given key x
+    if (cities[mid].name.toLowerCase()===userSubmission) return { found:true, location: cities[mid] };
+
+    // If element at mid is greater than x,
+    // search in the left half of mid
+    if(cities[mid].name.toLowerCase() > userSubmission)
+        return this.binarySearch(cities, userSubmission, start, mid-1);
     else
-        // If element at mid is smaller than x, 
-        // search in the right half of mid 
-        return this.binarySearch(cities, userSubmission, mid+1, end); 
+        // If element at mid is smaller than x,
+        // search in the right half of mid
+        return this.binarySearch(cities, userSubmission, mid+1, end);
   }
 
   render() {
+    console.log(this.state.selectedPills)
 
-    
     return (
       <div className="OnboardingPage__wrapper">
         {/* <InputTextField
@@ -150,30 +150,30 @@ class FilterSettingsForm extends Component {
           options={this.state.USStates}
           getOptionLabel={(option) => option.name}
           onChange={this.getCitiesFromState}
-          
-          renderInput={(params) => <TextField  
-            
+
+          renderInput={(params) => <TextField
+
             {...params} label="State" variant="filled" />}
-          
-         
+
+
         />
 
 
-        { this.state.stateFound === true ? 
+        { this.state.stateFound === true ?
 
             <Autocomplete
             id="AutoCityField"
             options={this.state.currentStateCities}
             getOptionLabel={(option) => option.name}
             onChange={this.setLocationID}
-            renderInput={(params) => <TextField  
-              
+            renderInput={(params) => <TextField
+
               {...params} label="City" variant="filled" />}
-            />  
-    
-        : 
+            />
+
+        :
            ''
-        
+
         }
 
 

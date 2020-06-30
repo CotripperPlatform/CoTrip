@@ -22,32 +22,33 @@ class Bio extends Component {
   }
 
   toggleEditMode = () => {
-      this.setState({ 
+      this.setState({
         editMode: !(this.state.editMode)
       })
-    
+
   }
 
   updateFirstName = (event) => {
     let first_name = event.target.value;
-    this.setState({ 
-           form_first_name: first_name 
+    this.setState({
+           form_first_name: first_name
     });
   }
 
   updateLastName = (event) => {
     let last_name = event.target.value;
-    this.setState({ 
-        form_last_name: last_name 
+    this.setState({
+        form_last_name: last_name
     });
   }
 
   updateBio = (event) => {
     let bio = event.target.value;
-    this.setState({ 
-        form_bio: bio 
+    this.setState({
+        form_bio: bio
     });
   }
+
 
 
   submitUserUpdates = () => {
@@ -55,7 +56,7 @@ class Bio extends Component {
         method: 'PATCH',
         url: `${BASE_URL}/profile/${this.props.userid}`,
         headers: {
-          Authorization: `Token ${localStorage.getItem("token")}` 
+          Authorization: `Token ${localStorage.getItem("token")}`
         },
         data: {
             first_name: this.state.form_first_name,
@@ -84,11 +85,12 @@ class Bio extends Component {
     this.setState({
       form_first_name: this.props.first_name,
       form_last_name: this.props.last_name,
-      form_bio: this.props.bio
+      form_bio: this.props.bio,
+      form_topics: this.props.topics
     })
   }
-  
-  render() {  
+
+  render() {
 
       let userBio = '';
       let firstName = '';
@@ -126,11 +128,11 @@ class Bio extends Component {
 
     if(this.state.editMode === true)
     {
-    
-      
+
+
       // if(this.props.bio)
       //     userBio = this.props.bio;
-      // else 
+      // else
       //   userBio = "Please enter a bio."
 
       return (
@@ -152,7 +154,7 @@ class Bio extends Component {
           placeholder='Last name'
           defaultValue={lastName}
           onChange={this.updateLastName}
-          /> &nbsp; 
+          /> &nbsp;
               {this.props.isCurrentUser ? <Icon callback={this.toggleEditMode} icon={"edit"} /> : null}
             </h2>
 
@@ -166,17 +168,18 @@ class Bio extends Component {
           defaultValue={userBio}
           variant="outlined"
           onChange={this.updateBio}
-          
+
         />
 
         {/* <a onClick={this.logForm}>Log Vals</a> */}
         <br />
         <br />
         <Button text="Submit" color="pink" size="small" handleClick={this.submitUserUpdates} />
-       
+
 
             </div>
             <h3 className="Bio__interests">Interests</h3>
+          <p>aweosome</p>
             <div className="hashtag__container">
               {this.props.hashtags.map(hashtag => (
                 <span className="Bio__span" key={hashtag + 1}>
@@ -210,9 +213,10 @@ class Bio extends Component {
 
 
             <h3 className="Bio__subheader">Bio </h3>
-      
+
             <p className="Bio__paragraph">{userBio}</p>
             <h3 className="Bio__interests">Interests</h3>
+            <p>awesome</p>
             <div className="hashtag__container">
               {this.props.hashtags.map(hashtag => (
                 <span className="Bio__span" key={hashtag + 1}>

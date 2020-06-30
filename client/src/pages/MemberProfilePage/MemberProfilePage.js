@@ -39,15 +39,15 @@ class MemberProfilePage extends Component {
   // Runs after Component is loaded in the broswer
   componentDidMount() {
     // axios()
-  
+
     // console.log('memberpage props: ', this.props);
     if(this.props.userid !== undefined)
     {
       axios.get(`${BASE_URL}/profile/${this.props.userid}`,
-      { 
-        headers: { 
-          Authorization: `Token ${localStorage.getItem("token")}` 
-        } 
+      {
+        headers: {
+          Authorization: `Token ${localStorage.getItem("token")}`
+        }
       })
       .then(res => {
         console.log('axios ', res.data)
@@ -59,6 +59,7 @@ class MemberProfilePage extends Component {
               bio: res.data.bio,
               age: res.data.age,
               image: res.data.image,
+              topics: res.data.topics,
               city_of_residence: res.data.city_of_residence
           }
         })
@@ -66,7 +67,7 @@ class MemberProfilePage extends Component {
     }
 
     // .then(res => console.log('axios ', res.data))
- 
+
   }
 
 
@@ -80,13 +81,14 @@ class MemberProfilePage extends Component {
   render() {
 
 
-     
+
     let people = [
       {
         name: "Suzie",
         bio:
           "My daughter Brittany and I have been a CoTripper member for a while now and love everything about it. I work as an HR director and Brittany will be entering 8th grade this fall. We really enjoy hiking and jamming out to Lizzo. We love sharing our travel experiences and connecting with like-minded people. Hope to hear from you.",
         hashtags: ["#parenting", "#teenages", "#health&wellness", "#Hawaii2020"],
+        topics: ['stuff', 'more stuff'],
         facebook: "www.facebook.com",
         instagram: "www.instagram.com",
         pinterest: "www.pinterest.com",
@@ -139,11 +141,11 @@ class MemberProfilePage extends Component {
       }
     ];
 
-    if(this.props.logged_in === true) 
+    if(this.props.logged_in === true)
     {
     return (
-    
-    
+
+
         <div className={this.state.classList}>
           <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
 
@@ -169,13 +171,14 @@ class MemberProfilePage extends Component {
                 <div className="MemberProfilePage__bio-container">
 
 
-                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ? 
+                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ?
                   <Bio
                     userid={this.props.userid}
                     type="default"
                     first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
                     // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
                     bio={this.state.protectedProfileData.bio}
+                    interests={people[0].topics}
                     hashtags={people[0].hashtags}
                     isCurrentUser={true}
                     onClick={console.log("Hello")}
@@ -230,7 +233,7 @@ class MemberProfilePage extends Component {
     else {
       window.location.href="/";
     }
-   
+
   }
 }
 

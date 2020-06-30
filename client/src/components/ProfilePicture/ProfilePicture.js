@@ -23,7 +23,8 @@ const ProfilePicture = props => {
 };
 
 ProfilePicture.defaultProps = {
-  type: "medium"
+  type: "medium",
+  to: '/member-page'
 };
 
 export default ProfilePicture;

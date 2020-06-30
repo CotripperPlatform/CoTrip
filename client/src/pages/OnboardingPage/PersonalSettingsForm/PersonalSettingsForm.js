@@ -16,6 +16,7 @@ class PersonalSettingsForm extends Component {
         image: "",
         age: 0,
         dream_destination: "",
+        topics: this.props.filter.tags,
         first_name: this.props.setup.first_name,
         last_name: this.props.setup.last_name,
         city_of_residence: this.props.filter.city
