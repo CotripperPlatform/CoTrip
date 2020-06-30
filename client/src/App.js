@@ -112,7 +112,13 @@ class App extends Component {
     return (
       <div className="App">
         <main>
-          <Route path="/" exact component={SplashPage}></Route>
+          <Route
+          path="/"
+          exact
+          render={(routerProps) => (
+            <SplashPage loggedIn={this.state.logged_in} {...routerProps}/>
+          )}
+          ></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
             path="/TripDetail"
