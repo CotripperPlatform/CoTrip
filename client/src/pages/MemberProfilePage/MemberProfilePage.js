@@ -21,8 +21,8 @@ import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
-import { BASE_URL } from '../../services/constants';
-import axios from 'axios';
+import { BASE_URL } from "../../services/constants";
+import axios from "axios";
 
 // Class Based React Component
 class MemberProfilePage extends Component {
@@ -32,44 +32,42 @@ class MemberProfilePage extends Component {
 
     // Default CSS class to apply to the Component
     this.state = {
-      classList: "MemberProfilePage"
+      classList: "MemberProfilePage",
+      email: "",
+      password: ""
     };
   }
 
   // Runs after Component is loaded in the broswer
   componentDidMount() {
     // axios()
-  
-    // console.log('memberpage props: ', this.props);
-    if(this.props.userid !== undefined)
-    {
-      axios.get(`${BASE_URL}/profile/${this.props.userid}`,
-      { 
-        headers: { 
-          Authorization: `Token ${localStorage.getItem("token")}` 
-        } 
-      })
-      .then(res => {
-        console.log('axios ', res.data)
 
-        this.setState({
-          protectedProfileData: {
+    // console.log('memberpage props: ', this.props);
+    if (this.props.userid !== undefined) {
+      axios
+        .get(`${BASE_URL}/profile/${this.props.userid}`, {
+          headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`
+          }
+        })
+        .then(res => {
+          console.log("axios ", res.data);
+
+          this.setState({
+            protectedProfileData: {
               first_name: res.data.first_name,
               last_name: res.data.last_name,
               bio: res.data.bio,
               age: res.data.age,
               image: res.data.image,
               city_of_residence: res.data.city_of_residence
-          }
-        })
-      })
+            }
+          });
+        });
     }
 
     // .then(res => console.log('axios ', res.data))
- 
   }
-
-
 
   // Runs after a component has been updated
   componentDidUpdate() {}
@@ -77,10 +75,23 @@ class MemberProfilePage extends Component {
   // Runs right before a component is removed from the DOM
   componentWillUnmount() {}
 
+  handleEmailChange = evt => {
+    this.setState({ email: evt.target.value });
+  };
+
+  handlePasswordChange = evt => {
+    this.setState({ password: evt.target.value });
+  };
+
+  handleLogin = evt => {
+    console.log("Email: " + this.state.email);
+    console.log("Password: " + this.state.password);
+  };
+
+  inputValue = evt => {};
   render() {
-
-
-     
+    console.log(this.state);
+    console.log(this.props);
     let people = [
       {
         name: "Suzie",
@@ -139,11 +150,8 @@ class MemberProfilePage extends Component {
       }
     ];
 
-    if(this.props.logged_in === true) 
-    {
-    return (
-    
-    
+    if (this.props.logged_in === true) {
+      return (
         <div className={this.state.classList}>
           <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
 
@@ -167,25 +175,44 @@ class MemberProfilePage extends Component {
                   <InteractionCard></InteractionCard>
                 </div>
                 <div className="MemberProfilePage__bio-container">
-
-
-                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ? 
-                  <Bio
-                    userid={this.props.userid}
-                    type="default"
-                    first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
-                    // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
-                    bio={this.state.protectedProfileData.bio}
-                    hashtags={people[0].hashtags}
-                    isCurrentUser={true}
-                    onClick={console.log("Hello")}
-                  />
-                  : '' }
-
-
-
+                  {this.state.protectedProfileData !== undefined &&
+                  this.props.userid !== undefined ? (
+                    <Bio
+                      userid={this.props.userid}
+                      type="default"
+                      first_name={this.state.protectedProfileData.first_name}
+                      last_name={this.state.protectedProfileData.last_name}
+                      // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
+                      bio={this.state.protectedProfileData.bio}
+                      hashtags={people[0].hashtags}
+                      isCurrentUser={true}
+                      onClick={console.log("Hello")}
+                    />
+                  ) : (
+                    ""
+                  )}
                 </div>
-                <div></div>
+                <div>
+                  <form>
+                    <input
+                      type="text"
+                      name="email"
+                      placeholder="Email"
+                      value={this.state.email}
+                      onChange={this.handleEmailChange}
+                    />
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="Password"
+                      value={this.state.password}
+                      onChange={this.handlePasswordChange}
+                    />
+                    <button type="button" onClick={this.handleLogin}>
+                      Login
+                    </button>
+                  </form>
+                </div>
               </div>
               <div className="Connections__list-Member">
                 <Connections
@@ -225,12 +252,9 @@ class MemberProfilePage extends Component {
           <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
       );
-
+    } else {
+      window.location.href = "/";
     }
-    else {
-      window.location.href="/";
-    }
-   
   }
 }
 

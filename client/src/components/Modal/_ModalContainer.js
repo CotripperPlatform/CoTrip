@@ -22,6 +22,7 @@ class ModalContainerJoin extends Component {
     });
   };
   render() {
+    
     return (
       <div className="Modal__container">
         {this.state.modalOpen ? (
