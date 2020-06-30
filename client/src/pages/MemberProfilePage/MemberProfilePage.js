@@ -26,6 +26,7 @@ import axios from 'axios';
 
 // Class Based React Component
 class MemberProfilePage extends Component {
+<<<<<<< HEAD
   constructor(props) {
     super(props);
     console.log(props);
@@ -227,6 +228,7 @@ class MemberProfilePage extends Component {
     }
 
   }
+
 }
 
 export default MemberProfilePage;
