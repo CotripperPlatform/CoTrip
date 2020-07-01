@@ -26,7 +26,7 @@ import axios from 'axios';
 
 // Class Based React Component
 class MemberProfilePage extends Component {
-<<<<<<< HEAD
+
   constructor(props) {
     super(props);
     console.log(props);
@@ -59,7 +59,9 @@ class MemberProfilePage extends Component {
               bio: res.data.bio,
               age: res.data.age,
               image: res.data.image,
-              city_of_residence: res.data.city_of_residence
+              city_of_residence: res.data.city_of_residence,
+              social_media: res.data.social_media,
+              user_id: res.data.user_id
             }
           })
         })
@@ -78,6 +80,7 @@ class MemberProfilePage extends Component {
   componentWillUnmount() { }
 
   render() {
+    this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
 
 
 
@@ -144,6 +147,8 @@ class MemberProfilePage extends Component {
 
 
         <div className={this.state.classList}>
+          <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
+
           <Banner background={Banner__pink}>
             {" "}
             <div className="BannerTest">
@@ -176,6 +181,7 @@ class MemberProfilePage extends Component {
                       hashtags={people[0].hashtags}
                       isCurrentUser={true}
                       onClick={console.log("Hello")}
+                      social_media={this.state.protectedProfileData.social_media}
                     />
                     : ''}
 
@@ -187,7 +193,7 @@ class MemberProfilePage extends Component {
               <div className="Connections__list-Member">
                 <Connections
                   userViewing={false}
-                  to="/"
+                  to="/home"
                   users={testUsers.slice(0, 6)}
                   extraUsers="View All"
                 />
@@ -219,6 +225,7 @@ class MemberProfilePage extends Component {
             <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
 
+          <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
       );
 
@@ -228,7 +235,6 @@ class MemberProfilePage extends Component {
     }
 
   }
-
 }
 
 export default MemberProfilePage;
