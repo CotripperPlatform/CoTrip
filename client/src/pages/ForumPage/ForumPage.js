@@ -68,7 +68,6 @@ const ForumPage = props => {
             className="Forum-Pill"
             text={"Traveling"}
             size={"wide"}
-            size={"short"}
             color={"red"}
             icon={"white"}
             onClick={pillClick}
@@ -77,8 +76,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"red"}
             icon={"white"}
             onClick={pillClick}
@@ -87,8 +85,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -97,8 +94,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -107,8 +103,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -117,8 +112,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -127,8 +121,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -137,8 +130,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -147,8 +139,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -157,8 +148,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"white"}
             onClick={pillClick}
@@ -173,8 +163,7 @@ const ForumPage = props => {
         <div className="forum-page-hollow-pill-container">
           <Pill
             text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"pink"}
             shadow
@@ -184,8 +173,7 @@ const ForumPage = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"pink"}
             shadow
@@ -195,8 +183,7 @@ const ForumPage = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"pink"}
             shadow
@@ -206,8 +193,7 @@ const ForumPage = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"pink"}
             shadow
@@ -217,8 +203,7 @@ const ForumPage = props => {
           />
           <Pill
             text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
+            size={"wide"}
             color={"pink"}
             icon={"pink"}
             shadow
