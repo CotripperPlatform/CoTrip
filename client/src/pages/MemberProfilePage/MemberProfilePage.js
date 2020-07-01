@@ -71,7 +71,7 @@ class MemberProfilePage extends Component {
 	}
 
 	render() {
-		this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
+		// this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
 
 
 
@@ -171,7 +171,7 @@ class MemberProfilePage extends Component {
 											bio={this.state.protectedProfileData.bio}
 											hashtags={people[0].hashtags}
 											isCurrentUser={true}
-											onClick={console.log("Hello")}
+											// onClick={console.log("Hello")}
 											social_media={this.state.protectedProfileData.social_media}
 										/>
 										: ''}
