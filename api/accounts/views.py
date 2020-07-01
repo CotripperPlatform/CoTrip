@@ -9,6 +9,10 @@ import boto3
 from django.http import JsonResponse
 from django.conf import settings
 import uuid
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash, authenticate
+from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
 
 
 
@@ -125,3 +129,32 @@ def sign_s3(request):
     'data': presigned_post,
     'url': 'https://%s.s3.amazonaws.com/%s' % (settings.S3_BUCKET, file_name)
   })
+
+class PasswordChange(generics.GenericAPIView):
+
+    def post(self, request, *args, **kwargs):
+        data = request.data.copy()
+        print(data)
+        email = data.get('email')
+        current_password = data.get('currentpassword')
+        new_password = data.get('newpassword')
+        user = authenticate(username = email, password = current_password)
+
+        if user is not None:
+             user.set_password(new_password)
+             user.save()
+             print('yay it worked')
+        else:
+            print('rip')   
+
+        
+        print(user)
+        # print(email)
+        print(current_password)
+        print(new_password)
+
+
+        return Response({
+            'hi': 'blah'
+        })
+

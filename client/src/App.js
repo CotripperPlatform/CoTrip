@@ -157,6 +157,7 @@ class App extends Component {
                 <MemberProfilePage
                   {...this.state}
                   handle_logout={this.handleLogout}
+                  handleLogin={this.handleLogin}
                   {...routerProps}
                 />
               )}

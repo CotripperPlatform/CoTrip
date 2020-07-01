@@ -34,6 +34,8 @@ class MemberProfilePage extends Component {
     this.state = {
       classList: "MemberProfilePage",
       email: "",
+      currentpassword: "",
+      newpassword: "",
       password: ""
     };
   }
@@ -86,6 +88,29 @@ class MemberProfilePage extends Component {
   handleLogin = evt => {
     console.log("Email: " + this.state.email);
     console.log("Password: " + this.state.password);
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    fetch(`${BASE_URL}/auth/password_change`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(this.state)
+  })
+    .then(res => res.json())
+    .then(json => {
+      console.log(json);
+    })
+    .catch(err => {
+      console.log(err);
+      alert("Please enter valid email and password");
+    });
   };
 
   inputValue = evt => {};
@@ -211,6 +236,33 @@ class MemberProfilePage extends Component {
                     <button type="button" onClick={this.handleLogin}>
                       Login
                     </button>
+                  </form>
+
+
+                  <form className="LoginPage__form" onSubmit={this.handleSubmit}>
+                  <InputTextField
+                      name="email"
+                      type="email"
+                      placeholder="email"
+                      onChange={this.handleChange}
+                      value={this.state.email}
+                    />
+                    <InputTextField
+                      name="currentpassword"
+                      type="password"
+                      placeholder="Current Password"
+                      onChange={this.handleChange}
+                      value={this.state.currentpassword}
+                    />
+                    <InputTextField
+                      name="newpassword"
+                      type="password"
+                      placeholder="New password"
+                      onChange={this.handleChange}
+                      value={this.state.newpassword}
+                    />
+
+                    <input className="LoginPage__submit" text="Login" type="submit" />
                   </form>
                 </div>
               </div>
