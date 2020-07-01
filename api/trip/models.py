@@ -33,7 +33,7 @@ class Trip(models.Model):
     start_date = models.DateField()
     end_date = models.DateField()
     imageURLs = models.CharField(max_length=500, null=True,blank=True)
-
+    
     def __str__(self):
         return self.name
 

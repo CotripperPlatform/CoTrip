@@ -5,6 +5,7 @@ import Card from "../Card/Card";
 import TripCard from "../TripCard/TripCard";
 
 const UpcomingTripsCard = props => {
+
   return (
     <Card color="pink" className="UpcomingTripsCard" size="large">
       <header className="UpcomingTripsCard__header">Upcoming Trips</header>

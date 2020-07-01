@@ -69,8 +69,6 @@ class MemberProfilePage extends Component {
  
   }
 
-
-
   // Runs after a component has been updated
   componentDidUpdate() {}
 

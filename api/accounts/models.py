@@ -40,6 +40,7 @@ class Profile(models.Model):
         'community.Event', related_name='people', null=True, blank=True)
     connections = models.ManyToManyField(
         'self', related_name='friends', null=True, blank=True)
+    
     # Posts, comments, and replies to be defined as foreign key on those respective models within forum app
     # CoTrip media defined as foreign key in community app
 
