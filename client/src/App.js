@@ -62,7 +62,7 @@ class App extends Component {
     super(props);
     this.state = {
       logged_in:
-        localStorage.getItem("token") && localStorage.getItem("token") !== undefined ? true : false,
+        localStorage.getItem("token") && localStorage.getItem("token") != undefined ? true : false,
       email: "",
       first_name: "",
       image: "",
@@ -89,7 +89,7 @@ class App extends Component {
         .then(res => res.json())
         .then(json => {
           // console.log(json);
-          if (json.detail === "Invalid token.") {
+          if (json.detail == "Invalid token.") {
             this.handleLogout();
           } else {
             this.setState(

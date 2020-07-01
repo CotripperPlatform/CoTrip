@@ -46,7 +46,7 @@ const CommunityPage = props => {
             handleClick={handleClick}
           />
         </a>{" "}
-        <a href="./join-groups" className="secondNav">
+        <a className="secondNav">
           <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
         </a>
       </div>{" "}

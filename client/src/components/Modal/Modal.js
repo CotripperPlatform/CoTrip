@@ -12,7 +12,7 @@ const Modal = props => {
       }}
     >
       <div className="Modal__close">
-        <a href="#modal" className="Modal__close-button" onClick={props.onClose}>
+        <a href="#" className="Modal__close-button" onClick={props.onClose}>
           ×
         </a>
       </div>

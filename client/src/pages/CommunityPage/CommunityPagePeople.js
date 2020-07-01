@@ -37,7 +37,7 @@ const CommunityPage = props => {
         />
       </Banner>
       <div className="secondNav">
-        <a href className="secondNav">
+        <a className="secondNav">
           <Button
             text="Connect With Other Moms"
             color="pink"
@@ -156,7 +156,7 @@ const CommunityPage = props => {
             selectId={0}
           />
         </div>{" "}
-        <a href className="seeMore-Button">See More</a>
+        <a className="seeMore-Button">See More</a>
         <div>
           <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
@@ -193,7 +193,7 @@ const CommunityPage = props => {
           </div>{" "}
           <div className="CommunityPage__momCard-single"> </div>
         </div>
-        <a href className="seeAll-Button">See All</a>
+        <a className="seeAll-Button">See All</a>
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>

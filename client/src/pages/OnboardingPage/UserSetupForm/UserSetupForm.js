@@ -32,7 +32,7 @@ class UserSetupForm extends Component {
     let regexPassword = /(^(?=.*[a-z])(?=.*[A-Z])(\S{6,}))/;
 
     if (
-      this.state.confirmPassword === this.state.password &&
+      this.state.confirmPassword == this.state.password &&
       this.state.email.match(regexEmail) &&
       this.state.password.match(regexPassword)
     ) {

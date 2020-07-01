@@ -18,7 +18,7 @@ const Footer = props => {
         <a onClick={handleClick}>Logout</a>
       </div>
       <div className="Footer--center">
-        <a href="mailto:info@cotripper.co?" rel="opener">
+        <a href="mailto:info@cotripper.co?" target="_blank">
           info@cotripper.co
         </a>
       </div>

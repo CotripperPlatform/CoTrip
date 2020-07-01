@@ -13,10 +13,10 @@ const ProfilePicture = props => {
 
       {props.to ? (
         <Link to={props.to}>
-          <img src={props.image} alt="link-profile" />
+          <img src={props.image} alt="profile-picture" />
         </Link>
       ) : (
-        <img src={props.image} alt="user-profile" />
+        <img src={props.image} alt="profile-picture" />
       )}
     </div>
   );

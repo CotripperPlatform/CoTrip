@@ -31,7 +31,7 @@ class CarouselDots extends Component {
     let activeLocation = this.state.activeLocation;
     let dots = [];
     for (let i = 1; i <= numberOfDots; i++) {
-      let classList = "CarouselDot";
+      let classList = "CarouselDot ";
       let dot = (
         <div
           key={i}
@@ -39,7 +39,7 @@ class CarouselDots extends Component {
           // onClick={this.handleClick}
           className={`CarouselDot ${
             this.props.hasOwnProperty("border") ? " CarouselDot__border " : ""
-          } ${i === activeLocation ? " CarouselDot--active " : ""} `}
+          } ${i == activeLocation ? " CarouselDot--active " : ""} `}
         />
       );
       dots.push(dot);
