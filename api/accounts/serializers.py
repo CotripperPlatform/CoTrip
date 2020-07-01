@@ -21,8 +21,7 @@ class ProfileSocialMediaSerializer(serializers.ModelSerializer):
 
 
 class ProfileSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
-    social_media = ProfileSocialMediaSerializer(
-        source='profile_social_media', many=True)
+    social_media = ProfileSocialMediaSerializer(many=True)
 
     class Meta:
         depth = 2
