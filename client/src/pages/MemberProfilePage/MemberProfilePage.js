@@ -70,14 +70,6 @@ class MemberProfilePage extends Component {
 
 	}
 
-
-
-	// Runs after a component has been updated
-	componentDidUpdate() { }
-
-	// Runs right before a component is removed from the DOM
-	componentWillUnmount() { }
-
 	render() {
 		this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
 
@@ -183,11 +175,7 @@ class MemberProfilePage extends Component {
 											social_media={this.state.protectedProfileData.social_media}
 										/>
 										: ''}
-
-
-
 								</div>
-								<div></div>
 							</div>
 							<div className="Connections__list-Member">
 								<Connections
