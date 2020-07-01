@@ -34,7 +34,7 @@ const ForumPage = props => {
         />
       </Banner>
       <div className="secondNav">
-        <a className="secondNav">
+        <a href="./forum-page" className="secondNav">
           <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
         </a>
         <a className="secondNav" href="./forum-page-discover">
@@ -67,7 +67,7 @@ const ForumPage = props => {
           <Pill
             className="Forum-Pill"
             text={"Traveling"}
-            size={"medium"}
+            size={"wide"}
             size={"short"}
             color={"red"}
             icon={"white"}

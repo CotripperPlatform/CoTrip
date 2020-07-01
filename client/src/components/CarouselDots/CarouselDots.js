@@ -39,7 +39,7 @@ class CarouselDots extends Component {
           // onClick={this.handleClick}
           className={`CarouselDot ${
             this.props.hasOwnProperty("border") ? " CarouselDot__border " : ""
-          } ${i == activeLocation ? " CarouselDot--active " : ""} `}
+          } ${i === activeLocation ? " CarouselDot--active " : ""} `}
         />
       );
       dots.push(dot);

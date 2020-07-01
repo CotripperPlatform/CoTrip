@@ -42,7 +42,7 @@ const ForumPageDiscover = props => {
             handleClick={handleClick}
           />
         </a>
-        <a className="secondNav">
+        <a href="./forum-page-discover" className="secondNav">
           <Button text="Discover Topics" color="pink" size="long" handleClick={handleClick} />
         </a>
       </div>
