@@ -28,7 +28,6 @@ class Bio extends Component {
 		this.setState({
 			editMode: !(this.state.editMode)
 		})
-
 	}
 
 	updateFirstName = (event) => {
@@ -52,10 +51,22 @@ class Bio extends Component {
 		});
 	}
 
-	updateSocialMedia = (event) => {
-		let socialMedia = event.target.value;
+	updateSocialMediaList = (event, mediaId) => {
+		let username = event.target.value
+		let media = this.state.socialMediaOptions.filter(option => option.id === mediaId)[0]
+		let option = {
+			profile: this.props.userid, // userid
+			social_media_type: {
+				id: mediaId,
+				name: media.name,
+			},
+			url: `https://www.${media.name.toLowerCase()}.com/${username}`
+		}
+		let prevMediaList = [...this.state.form_social_media]
+		let prevMedia = prevMediaList.filter(media => media.social_media_type.id !== mediaId)
+
 		this.setState({
-			form_social_media: socialMedia
+			form_social_media: [...prevMedia, option]
 		})
 	}
 
@@ -97,8 +108,6 @@ class Bio extends Component {
 			form_bio: this.props.bio,
 			form_social_media: this.props.social_media,
 		})
-
-
 	}
 
 	getSocialMediaOptions = () => {
@@ -118,6 +127,9 @@ class Bio extends Component {
 
 	render() {
 		console.log(this.state.socialMediaOptions[0])
+		console.log(this.props.social_media)
+		console.log(this.state.form_social_media)
+
 		let userBio = '';
 		let firstName = '';
 		let lastName = '';
@@ -154,10 +166,9 @@ class Bio extends Component {
 
 		let userSocialMediaLinks = !this.state.form_social_media ? "" :
 			this.state.form_social_media.map(mediaType => {
-				console.log(`generating social media link: ${mediaType.social_media_type.name}`)
 				return (
-					<a href={mediaType.url} target='_blank'>
-						<Icon onClick={this.props.onClick} icon={["fab", mediaType.social_media_type.name.toLowerCase()]} />
+					<a href={mediaType.url} target='_blank' >
+						<Icon onClick={this.props.onClick} icon={["fab", mediaType.social_media_type.name.toLowerCase()]} key={mediaType.social_media_type.id} />
 					</a>
 				)
 			})
@@ -205,8 +216,34 @@ class Bio extends Component {
 								onChange={this.updateBio}
 							/>
 
-							{/* <a onClick={this.logForm}>Log Vals</a> */}
+							<a onClick={this.logForm}>Log Vals</a>
 							<br />
+							<div className="icons__div-edit ">
+								{!this.state.socialMediaOptions ? "" :
+									this.state.socialMediaOptions.map(mediaType => {
+										return (
+											<div className='icons__div-edit__media-entry-container'>
+												<TextField
+													fullWidth={true}
+													label={`${mediaType.name} Username`}
+													size="small"
+													rows={1}
+													defaultValue={""}
+													variant="outlined"
+													onChange={e => this.updateSocialMediaList(e, mediaType.id)}
+													InputProps={{
+														startAdornment: (
+															<InputAdornment position="start">
+																<Icon icon={["fab", mediaType.name.toLowerCase()]} />
+															</InputAdornment>
+														),
+													}}
+												/>
+											</div>
+										)
+									})
+								}
+							</div>
 							<br />
 							<Button text="Submit" color="pink" size="small" handleClick={this.submitUserUpdates} />
 
@@ -220,35 +257,7 @@ class Bio extends Component {
 								</span>
 							))}
 						</div>
-						<div className="icons__div-edit">
-							{!this.state.socialMediaOptions ? "" :
-								this.state.socialMediaOptions.map(mediaType => {
-									return (
-										<p>
-											<label name={mediaType.name.toLowerCase()}>
-												{`Enter your ${mediaType.name} profile page.`}
-											</label>
-											<TextField
-												fullWidth={true}
-												size="small"
-												rows={1}
-												defaultValue={""}
-												variant="outlined"
-												onChange={this.updateSocialMediaList}
-												InputProps={{
-													startAdornment: (
-														<InputAdornment position="start">
-															<Icon icon={["fab", mediaType.name.toLowerCase()]} />
-														</InputAdornment>
-													),
-												}}
-											/>
-										</p>
-									)
-								})
 
-							}
-						</div>
 					</div>
 				</div>
 			);
