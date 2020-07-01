@@ -60,6 +60,7 @@ class MemberProfilePage extends Component {
 							image: res.data.image,
 							city_of_residence: res.data.city_of_residence,
 							social_media: res.data.social_media,
+							user_id: res.data.user_id
 						}
 					})
 				})
@@ -179,6 +180,7 @@ class MemberProfilePage extends Component {
 											hashtags={people[0].hashtags}
 											isCurrentUser={true}
 											onClick={console.log("Hello")}
+											social_media={this.state.protectedProfileData.social_media}
 										/>
 										: ''}
 

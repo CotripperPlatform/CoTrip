@@ -11,6 +11,10 @@
   color: var(--purple);
 }
 
+.Bio .icons__div-edit {
+  flex-flow: column nowrap;
+}
+
 .icons__div div {
   color: var(--purple);
   margin-top: 1rem;
