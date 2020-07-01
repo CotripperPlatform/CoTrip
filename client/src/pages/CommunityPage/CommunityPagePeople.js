@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./CommunityPagePeople.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
@@ -9,7 +9,6 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import PersonCard from "../../components/PersonCard/PersonCard";
-import axios from "axios";
 import image1 from "../../assets/images/profile-picture-1.png";
 import image2 from "../../assets/images/profile-picture-2.png";
 import image3 from "../../assets/images/profile-picture-3.png";
@@ -25,40 +24,6 @@ const handleClick = e => {};
 
 // Page or
 const CommunityPage = props => {
-  const [profile, setProfile] = useState([]);
-
-  // Getting profile list
-  useEffect(() => {
-    const fetch = async () => {
-      const res = await axios.get("http://127.0.0.1:8000/profile");
-      setProfile(res.data);
-      // console.log(res);
-    };
-    fetch();
-  }, []);
-
-  //random number between 1 and 5
-  const stockImages = [image1, image2, image3, image4, image5];
-  const randomPlaceholderImages = () =>
-    stockImages[Math.floor(Math.random() * (stockImages.length - 1 + 1))];
-
-  const profileList = () => {
-    return (
-      profile &&
-      profile.map(data => {
-        return (
-          <div className="CommunityPage__momCard-single">
-            <PersonCard
-              image={randomPlaceholderImages()}
-              name={data.first_name + "" + data.last_name}
-              location={data.city_of_residence}
-              interests={data.hashtags}
-            />
-          </div>
-        );
-      })
-    );
-  };
   return (
     <div className="CommunityPage">
       <NavBar page={1} profileImage={people} />
@@ -81,6 +46,7 @@ const CommunityPage = props => {
           />
         </a>
         <a href="./join-groups" className="secondNav">
+          {" "}
           <Button
             text="Discover Groups"
             color="outlinepink"
@@ -195,7 +161,7 @@ const CommunityPage = props => {
           <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
         <div className="CommunityPage__moms-in-city-container">
-          {/* <div className="CommunityPage__momCard-single">
+          <div className="CommunityPage__momCard-single">
             <PersonCard image={image1} name="Lindsay L." location="Washington D.C." />
           </div>
           <div className="CommunityPage__momCard-single">
@@ -225,8 +191,7 @@ const CommunityPage = props => {
           <div className="CommunityPage__momCard-single">
             <PersonCard image={image5} name="Julia C." location="Washington D.C." />
           </div>{" "}
-          <div className="CommunityPage__momCard-single"> </div> */}
-          {profileList()}
+          <div className="CommunityPage__momCard-single"> </div>
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
