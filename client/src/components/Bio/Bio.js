@@ -81,7 +81,8 @@ class Bio extends Component {
 			data: {
 				first_name: this.state.form_first_name,
 				last_name: this.state.form_last_name,
-				bio: this.state.form_bio
+				bio: this.state.form_bio,
+				social_media: this.state.form_social_media,
 			}
 		})
 			.then(res => {
@@ -90,7 +91,7 @@ class Bio extends Component {
 				this.setState({
 					updated_first_name: this.state.form_first_name,
 					updated_last_name: this.state.form_last_name,
-					updated_bio: this.state.form_bio
+					updated_bio: this.state.form_bio,
 				})
 				this.toggleEditMode();
 				// this.forceUpdate();
@@ -126,10 +127,6 @@ class Bio extends Component {
 	}
 
 	render() {
-		console.log(this.state.socialMediaOptions[0])
-		console.log(this.props.social_media)
-		console.log(this.state.form_social_media)
-
 		let userBio = '';
 		let firstName = '';
 		let lastName = '';
