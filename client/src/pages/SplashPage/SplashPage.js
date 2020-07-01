@@ -1,5 +1,4 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
 import Button from "components/Button/Button";
 import logo from "assets/images/login_logo.png";
 import "./SplashPage.css";
@@ -17,12 +16,6 @@ class SplashPage extends React.Component {
     this.props.history.push("/register");
   }
   render() {
-    const loggedIn = this.props.loggedIn;
-    if (loggedIn) {
-      return (
-      <Redirect to="/home" />
-      )
-    } else {
     return (
       <div className="SplashPage">
         <img src={logo} alt="CoTripper Logo" />
@@ -32,7 +25,6 @@ class SplashPage extends React.Component {
         <Button text="Register" color="purple" handleClick={this.toRegister} />
       </div>
     );
-  }
   }
 }
 

@@ -113,11 +113,16 @@ class App extends Component {
       <div className="App">
         <main>
           <Route
-          path="/"
-          exact
-          render={(routerProps) => (
-            <SplashPage loggedIn={this.state.logged_in} {...routerProps}/>
-          )}
+            path="/"
+            exact
+            render={routerProps => (
+              <HomePage
+                loggedIn={this.state.logged_in}
+                handle_logout={this.handleLogout}
+                {...routerProps}
+                {...this.state}
+              />
+            )}
           ></Route>
           <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
@@ -249,7 +254,7 @@ class App extends Component {
             path="/home"
             exact
             render={routerProps => (
-              <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              <HomePage loggedIn={this.state.logged_in} handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
