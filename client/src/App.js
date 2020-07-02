@@ -109,6 +109,7 @@ class App extends Component {
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
+    const loggedIn = this.state.logged_in
     return (
       <div className="App">
         <main>
@@ -124,7 +125,6 @@ class App extends Component {
               />
             )}
           ></Route>
-          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
           <Route
             path="/TripDetail"
             exact
@@ -175,13 +175,6 @@ class App extends Component {
           ) : (
             ""
           )}
-          <Route
-            path="/coming_soon"
-            exact
-            render={routerProps => (
-              <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-            )}
-          ></Route>
           <Route
             path="/forum-page"
             exact
@@ -248,20 +241,6 @@ class App extends Component {
                 {...routerProps}
                 logged_in={this.state.logged_in}
               />
-            )}
-          ></Route>
-          <Route
-            path="/home"
-            exact
-            render={routerProps => (
-              <HomePage loggedIn={this.state.logged_in} handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/home-old-user"
-            exact
-            render={routerProps => (
-              <HomePageOldUser handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>

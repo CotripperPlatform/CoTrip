@@ -93,8 +93,6 @@ const HomePage = props => {
           <Banner background={Banner__purpleBig}>
             {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
           </Banner>
-          <a href="./home">New User Sample</a>
-          <a href="./home-old-user">Old User Sample</a>
           <div className="HomePage_top-items-wrapper">
             <span className="HomePage__suggestions-container">
               <h1 className="HomePage__suggested-header">Suggested Groups</h1>
@@ -120,7 +118,7 @@ const HomePage = props => {
                 {personCard1}
                 {personCard2}
                 {personCard3}
-                <a href="/home" className="HomePage__arrow lower-people" />
+                <a href="/" className="HomePage__arrow lower-people" />
               </div>
             </span>
 
