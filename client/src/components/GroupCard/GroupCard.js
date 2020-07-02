@@ -7,7 +7,7 @@ const GroupCard = props => {
   let { picture, name, members, location } = props;
   return (
     <Card size="medium-short" picture={picture}>
-      <Link className="GroupCard" to="../GroupPage/GroupPage">
+      <Link className="GroupCard" to="#">
         <div className="GroupCard__text-container">
           <h2 className="GroupCard__group-name">{name}</h2>
           <footer className="GroupCard__details">
