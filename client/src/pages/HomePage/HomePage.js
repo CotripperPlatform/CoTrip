@@ -107,7 +107,7 @@ const HomePage = props => {
                 <span className="HomePage__groupcard-3">
                   <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
                 </span>
-                <a href="/home" className="HomePage__arrow" />
+                <a href="/" className="HomePage__arrow" />
               </div>
               <h1 className="HomePage__suggested-header">Suggested People</h1>
               <div className="HomePage__people-container">
@@ -179,15 +179,15 @@ const HomePage = props => {
               <MediaCard
                 imageSrc={happiness}
                 size="medium"
-                to="/home"
+                to="/"
                 footerText="Posted By: Paula"
               />
-              <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: Carmen" />
+              <MediaCard imageSrc={van} size="medium" to="/" footerText="Posted By: Carmen" />
 
               <MediaCard
                 imageSrc={nightSky}
                 size="medium"
-                to="/home"
+                to="/"
                 footerText="Posted By: Krystin"
               />
 
@@ -195,7 +195,7 @@ const HomePage = props => {
                 <MediaCard
                   imageSrc={waterfall}
                   size="medium"
-                  to="/home"
+                  to="/"
                   footerText="Posted By: Paul"
                 />
               </span>
@@ -203,7 +203,7 @@ const HomePage = props => {
                 <MediaCard
                   imageSrc={flight}
                   size="medium"
-                  to="/home"
+                  to="/"
                   footerText="Posted By: Fiona"
                 />
               </span>

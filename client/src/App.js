@@ -66,7 +66,7 @@ class App extends Component {
       image: "",
       profileLoaded: false,
       menuItems: [
-        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "My Directory", link: "/" },
         { menuItem: "Community", link: "/community" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" }
