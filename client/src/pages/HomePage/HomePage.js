@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 import example1 from "assets/images/card_small2.png";
 import example2 from "assets/images/Hawaii-resort.jpg";
@@ -34,6 +34,7 @@ import MediaCard from "../../components/MediaCard/MediaCard";
 import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
+
 
 const personCard1 = (
   <PersonCard
@@ -89,6 +90,7 @@ const HomePage = props => {
           {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
         </Banner>
         <a href="./home">New User Sample</a>
+        <br></br>
         <a href="./home-old-user">Old User Sample</a>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
@@ -108,14 +110,14 @@ const HomePage = props => {
               <span className="HomePage__groupcard-3">
                 <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
               </span>
-              <a href="/home" className="HomePage__arrow" />
+              <div className="HomePage__arrow" />
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
               {personCard1}
               {personCard2}
               {personCard3}
-              <a href="/home" className="HomePage__arrow lower-people" />
+              <div className="HomePage__arrow lower-people" />
             </div>
           </span>
 

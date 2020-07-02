@@ -14,7 +14,6 @@ import image2 from "../../assets/images/profile-picture-2.png";
 import image3 from "../../assets/images/profile-picture-3.png";
 import image4 from "../../assets/images/profile-picture-4.png";
 import image5 from "../../assets/images/profile-picture-5.png";
-import Card from "../../components/Card/Card";
 
 function pillClick(val) {
   console.log(val);
@@ -37,7 +36,7 @@ const CommunityPage = props => {
         />
       </Banner>
       <div className="secondNav">
-        <a className="secondNav">
+        <a href className="secondNav">
           <Button
             text="Connect With Other Moms"
             color="pink"
@@ -156,7 +155,7 @@ const CommunityPage = props => {
             selectId={0}
           />
         </div>{" "}
-        <a className="seeMore-Button">See More</a>
+        <a href className="seeMore-Button">See More</a>
         <div>
           <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
@@ -193,7 +192,7 @@ const CommunityPage = props => {
           </div>{" "}
           <div className="CommunityPage__momCard-single"> </div>
         </div>
-        <a className="seeAll-Button">See All</a>
+        <a href className="seeAll-Button">See All</a>
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>

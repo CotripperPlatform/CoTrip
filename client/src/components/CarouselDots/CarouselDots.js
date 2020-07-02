@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./CarouselDots.css";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 class CarouselDots extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ class CarouselDots extends Component {
     let activeLocation = this.state.activeLocation;
     let dots = [];
     for (let i = 1; i <= numberOfDots; i++) {
-      let classList = "CarouselDot ";
+      // let classList = "CarouselDot";
       let dot = (
         <div
           key={i}

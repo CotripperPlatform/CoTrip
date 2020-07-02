@@ -73,7 +73,7 @@
   margin: -0.3rem;
 }
 
-/* .HomePageOld__people-container {
+.HomePageOld__people-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -82,6 +82,7 @@
   padding: 0rem 0rem 1rem 0rem;
   margin: 1rem;
   /* border: 5px solid red; */
+}
 
 .HomePageOld__arrow {
   background-color: var(--yellow-dark);

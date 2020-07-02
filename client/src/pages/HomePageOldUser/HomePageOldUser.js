@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePageOldUser.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 import example1 from "assets/images/card_small2.png";
 import example2 from "assets/images/Hawaii-resort.jpg";
@@ -123,10 +123,15 @@ const HomePageOldUser = props => {
                 picture={card3}
               />
               {/* </span> */}
-              <a href="/home" className="HomePageOld__arrow" />
+              <div className="HomePageOld__arrow" />
             </div>
             <h1 className="HomePageOld__left-header">Topics and #hashtags I'm Following</h1>
             <div className="home-old-user-page-pill-container">
+              {personCard1}
+              {personCard2}
+              {personCard3}
+              <div className="HomePageOld__arrow lower-people" />
+              
               <Pill
                 className="Forum-Pill"
                 text={"Traveling"}
@@ -187,7 +192,7 @@ const HomePageOldUser = props => {
               </div>
             </div>
 
-            <a href="/home" className="HomePageOld__arrow lower-people" />
+            
           </span>
 
           <span className="HomePageOld__top-cards-wrapper">

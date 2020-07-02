@@ -9,7 +9,7 @@ const Comment = props => {
   // Default Class to apply to Component
   // No props right now but when there is data we can use
   // this.props.comment and this.props.date
-  const { body, date, time, to, image, name, likes, replies, type } = props;
+  const { body, date, time, to, name, likes, replies } = props;
 
   return (
     <div className="Comment">

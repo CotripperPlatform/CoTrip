@@ -46,7 +46,7 @@ const CommunityPage = props => {
             handleClick={handleClick}
           />
         </a>{" "}
-        <a className="secondNav">
+        <a href className="secondNav">
           <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
         </a>
       </div>{" "}
@@ -151,7 +151,7 @@ const CommunityPage = props => {
             selectId={0}
           />
         </div>{" "}
-        <a className="seeMore-Button">See More</a>
+        <a href className="seeMore-Button">See More</a>
         <div>
           <header className="CommunityPage__header">
             Groups in WASHINGTON, DC: <a href="./view-group"> View Sample Page </a>
@@ -238,7 +238,7 @@ const CommunityPage = props => {
             </Card>{" "}
           </div>
         </div>
-        <a className="seeAll-Button">See All</a>
+        <a href className="seeAll-Button">See All</a>
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
