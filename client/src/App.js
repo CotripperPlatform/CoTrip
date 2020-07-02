@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -107,28 +107,22 @@ class App extends Component {
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
-    const loggedIn = this.state.logged_in
+    const loggedIn = this.state.logged_in;
     return (
       <div className="App">
         <main>
-          {loggedIn ?
-          <Route
-            path="/"
-            exact
-            render={routerProps => (
-              <HomePage
-                handle_logout={this.handleLogout}
-                {...routerProps}
-                {...this.state}
-              />
-            )}
-          ></Route> :
-          <Route
-            path="/"
-            exact
-            component={SplashPage}
-          ></Route>
-            }
+          {loggedIn ? (
+            <Route
+              path="/"
+              exact
+              render={routerProps => (
+                <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              )}
+            ></Route>
+          ) : (
+            <Redirect to="/welcome" />
+          )}
+          <Route path="/welcome" exact component={SplashPage}></Route>
           <Route
             path="/TripDetail"
             exact
