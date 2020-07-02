@@ -5,7 +5,7 @@ const InputTextField = props => {
   let { variation = "default", type, name, placeholder, onChange } = props;
 
   if(props.loadcallback && props.loadcallbackarg) props.loadcallback(props.loadcallbackarg);
-  console.log(props);
+  
   return (
     <input
       className={`InputTextField__container--${variation}`}

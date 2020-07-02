@@ -34,9 +34,9 @@ class MemberProfilePage extends Component {
     this.state = {
       classList: "MemberProfilePage",
       email: "",
-      currentpassword: "",
-      newpassword: "",
-      password: ""
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: ""
     };
   }
 
@@ -96,21 +96,22 @@ class MemberProfilePage extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    if (this.state.newPassword === this.state.confirmPassword) {
     fetch(`${BASE_URL}/auth/password_change`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(this.state)
-  })
-    .then(res => res.json())
-    .then(json => {
-      console.log(json);
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state)
     })
-    .catch(err => {
-      console.log(err);
-      alert("Please enter valid email and password");
-    });
+      .then(res => res.json())
+      .then(json => {
+        console.log(json)
+        alert(json)
+      })
+    } else {
+      alert("Password do not match")
+    }
   };
 
   inputValue = evt => {};
@@ -217,54 +218,7 @@ class MemberProfilePage extends Component {
                     ""
                   )}
                 </div>
-                <div>
-                  <form>
-                    <input
-                      type="text"
-                      name="email"
-                      placeholder="Email"
-                      value={this.state.email}
-                      onChange={this.handleEmailChange}
-                    />
-                    <input
-                      type="password"
-                      name="password"
-                      placeholder="Password"
-                      value={this.state.password}
-                      onChange={this.handlePasswordChange}
-                    />
-                    <button type="button" onClick={this.handleLogin}>
-                      Login
-                    </button>
-                  </form>
-
-
-                  <form className="LoginPage__form" onSubmit={this.handleSubmit}>
-                  <InputTextField
-                      name="email"
-                      type="email"
-                      placeholder="email"
-                      onChange={this.handleChange}
-                      value={this.state.email}
-                    />
-                    <InputTextField
-                      name="currentpassword"
-                      type="password"
-                      placeholder="Current Password"
-                      onChange={this.handleChange}
-                      value={this.state.currentpassword}
-                    />
-                    <InputTextField
-                      name="newpassword"
-                      type="password"
-                      placeholder="New password"
-                      onChange={this.handleChange}
-                      value={this.state.newpassword}
-                    />
-
-                    <input className="LoginPage__submit" text="Login" type="submit" />
-                  </form>
-                </div>
+                <div></div>
               </div>
               <div className="Connections__list-Member">
                 <Connections
@@ -273,6 +227,40 @@ class MemberProfilePage extends Component {
                   users={testUsers.slice(0, 6)}
                   extraUsers="View All"
                 />
+              </div>
+              <div className="Change_password">
+                <form className="LoginPage__form" onSubmit={this.handleSubmit}>
+                  <InputTextField
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    onChange={this.handleChange}
+                    value={this.state.email}
+                  />
+                  <InputTextField
+                    name="currentPassword"
+                    type="password"
+                    placeholder="Current Password"
+                    onChange={this.handleChange}
+                    value={this.state.currentPassword}
+                  />
+                  <InputTextField
+                    name="newPassword"
+                    type="password"
+                    placeholder="New password"
+                    onChange={this.handleChange}
+                    value={this.state.newPassword}
+                  />
+                  <InputTextField
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Confirm Password"
+                    onChange={this.handleChange}
+                    value={this.state.confirmPassword}
+                  />
+
+                  <input className="LoginPage__submit" text="Login" type="submit" />
+                </form>
               </div>
             </div>
 
