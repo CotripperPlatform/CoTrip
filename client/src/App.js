@@ -13,12 +13,10 @@ import ForumPage from "./pages/ForumPage/ForumPage";
 import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
 import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups";
 import HomePage from "../src/pages/HomePage/HomePage";
-import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberProfilePage from "./pages/MemberProfilePage/MemberProfilePage";
 import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import HomePageOldUser from "../src/pages/HomePageOldUser/HomePageOldUser";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -113,18 +111,24 @@ class App extends Component {
     return (
       <div className="App">
         <main>
+          {loggedIn ?
           <Route
             path="/"
             exact
             render={routerProps => (
               <HomePage
-                loggedIn={this.state.logged_in}
                 handle_logout={this.handleLogout}
                 {...routerProps}
                 {...this.state}
               />
             )}
+          ></Route> :
+          <Route
+            path="/"
+            exact
+            component={SplashPage}
           ></Route>
+            }
           <Route
             path="/TripDetail"
             exact

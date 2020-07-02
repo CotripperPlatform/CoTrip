@@ -80,10 +80,6 @@ const handleClick = e => {
 };
 
 const HomePage = props => {
-  const loggedIn = props.loggedIn;
-  if (!loggedIn) {
-    return <SplashPage {...props}/>;
-  } else {
     return (
       <body className="HomePage__wrapper">
         <nav>
@@ -225,7 +221,6 @@ const HomePage = props => {
         <Footer history={props.history} handle_logout={props.handle_logout} />
       </body>
     );
-  }
 };
 
 export default HomePage;

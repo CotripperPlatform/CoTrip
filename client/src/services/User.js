@@ -23,7 +23,7 @@ export function handleSignup(data, history) {
         first_name: json.user.profile.first_name,
         image: json.user.profile.image
       });
-      history.push("/home");
+      history.push("/");
     })
     .catch(err => {
       console.log(err);
@@ -48,7 +48,7 @@ export function handleLogin(data, history) {
         first_name: json.user.profile.first_name,
         image: json.user.profile.image
       });
-      history.push("/home");
+      history.push("/");
     })
     .catch(err => {
       console.log(err);
