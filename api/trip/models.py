@@ -1,5 +1,4 @@
 from django.db import models
-from community.models import Group
 
 
 class Country(models.Model):
@@ -27,8 +26,6 @@ class Location(models.Model):
         State, on_delete=models.CASCADE, null=True, blank=True)
     country = models.ForeignKey(
         Country, on_delete=models.CASCADE, null=True, blank=True)
-    groups = models.ForeignKey(
-        Group, on_delete=models.PROTECT, related_name='location', null=True, blank=True)
 
     def __str__(self):
         return self.name + ", " + self.state.code
