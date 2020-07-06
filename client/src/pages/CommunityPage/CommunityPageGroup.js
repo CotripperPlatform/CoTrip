@@ -195,28 +195,51 @@ class CommunityPageGroup extends Component {
   render() {
     console.log(this.state.groupData)
     console.log(this.state.postList)
-    const groupData = this.state.groupData
+    let groupData = this.state.groupData
+    let postList = []
+    if (groupData.posts) postList = this.state.postList.filter(post => groupData.posts.includes(post.id))
 
-    !this.state.postList ? "" : !groupData ? "" :
-      this.state.postList.filter(post => groupData.posts.includes(post.id)).map(post => {
-        return (
-          <ForumContainer
-            className="ForumPost"
-            forumPost={{ likes: post.likes, comments: '#' }}
-            comments={[
-              {
-                name: "Lexi R.",
-                likes: 2,
-                replies: 0,
-                date: "May 5 ",
-                time: " 4:45pm",
-                body:
-                  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-              }
-            ]}
-          />
-        )
+    let forumPosts = []
+    // TO DO: Fix the fixture data to ensure the 'parent' field makes sense. Comment parent is post. reply parent is comment.
+    // TO DO: Check ForumContainer component.  Currently not rendering comments.
+    if (postList) {
+      console.log(this.state.postList)
+      console.log(postList)
+      forumPosts = postList.map(post => {
+        let comments = this.state.postList.filter(post => this.state.postList.includes(...post.parent))
+        comments = comments.map(comment => {
+          let replies = this.state.postList.filter(comment => this.state.postList.includes(...comment.parent))
+          replies = replies.map(reply => {
+            return ({
+              name: reply.author,
+              likes: reply.likes,
+              replies: 99,
+              date: reply.time,
+              time: reply.time,
+              body: reply.body
+            })
+          })
+          return ({
+            name: comment.author,
+            likes: comment.likes,
+            replies: replies.length,
+            date: comment.time,
+            time: comment.time,
+            body: comment.body
+          })
+        })
+        console.log('comments' + comments)
+        if (post.post_type === 'Post') {
+          return (
+            <ForumContainer
+              className="ForumPost"
+              forumPost={{ likes: post.likes, comments: '#' }}
+              comments={comments}
+            />
+          )
+        } else return ""
       })
+    }
 
     if (this.state.groupData) {
       console.log(groupData)
@@ -273,8 +296,8 @@ class CommunityPageGroup extends Component {
           <div className="community-group-body">
             <div className="community-group-bodyLeft">
               <div>
-                {}
-                <ForumContainer
+                {forumPosts}
+                {/* <ForumContainer
                   className="ForumPost"
                   forumPost={{ likes: 8, comments: 5 }}
                   comments={[
@@ -318,7 +341,7 @@ class CommunityPageGroup extends Component {
                         "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
                     }
                   ]}
-                />
+                /> */}
               </div>
             </div>
             <div className="community-group-bodyRight">
