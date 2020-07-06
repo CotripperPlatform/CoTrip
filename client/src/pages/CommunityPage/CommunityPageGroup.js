@@ -9,6 +9,8 @@ import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import UpcomingEventsCard from "../../components/UpcomingEventsCard/UpcomingEventsCard";
 import Footer from "../../components/Footer/Footer";
+import axios from 'axios';
+
 
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
@@ -23,6 +25,7 @@ import pic4 from "../../assets/images/profile-picture-4.png";
 import pic5 from "../../assets/images/profile-picture-5.png";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Connections from "../../components/Connections/Connections";
+import { BASE_URL } from '../../services/constants';
 
 let testUsers = [
   {
@@ -74,17 +77,70 @@ class CommunityPageGroup extends Component {
     super(props);
     this.state = {
       joinGroup: false,
-      showModal: false
+      showModal: false,
+      groupId: 1,
+      groupData: {},
     };
   }
 
+  componentDidMount() {
+    console.log('community page group props: ', this.props);
+    if (this.state.groupId !== undefined) {
+      axios.get(`${BASE_URL}/groups/${this.state.groupId}`,
+        {
+          headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`
+          }
+        })
+        .then(res => {
+          console.log('axios ', res.data)
+
+          this.setState({
+            groupData: res.data
+          })
+        })
+        .catch(res => console.log(res))
+    }
+  }
   handleConfirm = evt => {
     evt.preventDefault();
+    this.submitJoinGroup()
     this.setState({
       joinGroup: true,
       showModal: false
     });
   };
+
+  submitJoinGroup = () => {
+    console.log(this.props.userid)
+    if (this.props.userid) {
+      axios({
+        method: 'PATCH',
+        url: `${BASE_URL}/profile/${this.props.userid}`,
+        headers: {
+          Authorization: `Token ${localStorage.getItem("token")}`
+        },
+        data: {
+          groups: this.state.form_first_name,
+          last_name: this.state.form_last_name,
+          bio: this.state.form_bio,
+          social_media: this.state.form_social_media,
+        }
+      })
+        .then(res => {
+          console.log(res)
+
+          this.setState({
+            updated_first_name: this.state.form_first_name,
+            updated_last_name: this.state.form_last_name,
+            updated_bio: this.state.form_bio,
+          })
+          this.toggleEditMode();
+          // this.forceUpdate();
+        })
+        .catch(err => console.log(err))
+    }
+  }
 
   handleLeave = evt => {
     evt.preventDefault();
@@ -114,6 +170,7 @@ class CommunityPageGroup extends Component {
   };
 
   render() {
+    console.log(this.state.groupData)
     return (
       <div>
         <div className="CommunityPage-Group-">
@@ -146,22 +203,22 @@ class CommunityPageGroup extends Component {
                 />
               </div>
             ) : (
-              <div className="Modal_align">
-                <ModalContainerJoin
-                  buttonText="Join"
-                  buttonTextColor="black"
-                  buttonColor="yellow"
-                  buttonSize="small"
-                  message="Are you sure you want to join?"
-                  confirmText="Join"
-                  cancelText="Exit"
-                  onConfirm={this.handleConfirm}
-                  onClose={this.handleCloseModal}
-                  modalOpen={this.state.showModal}
-                  handleOpenModal={this.handleOpenModal}
-                />
-              </div>
-            )}
+                <div className="Modal_align">
+                  <ModalContainerJoin
+                    buttonText="Join"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
+                    buttonSize="small"
+                    message="Are you sure you want to join?"
+                    confirmText="Join"
+                    cancelText="Exit"
+                    onConfirm={this.handleConfirm}
+                    onClose={this.handleCloseModal}
+                    modalOpen={this.state.showModal}
+                    handleOpenModal={this.handleOpenModal}
+                  />
+                </div>
+              )}
           </Banner>{" "}
         </div>{" "}
         <div className="community-group-body">

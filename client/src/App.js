@@ -120,8 +120,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-            <Redirect to="/welcome" />
-          )}
+              <Redirect to="/welcome" />
+            )}
           <Route path="/welcome" exact component={SplashPage}></Route>
           <Route
             path="/TripDetail"
@@ -141,7 +141,7 @@ class App extends Component {
             path="/community/view-group"
             exact
             render={routerProps => (
-              <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
+              <CommunityPageGroup handle_logout={this.handleLogout} {...this.state} {...routerProps} />
             )}
           ></Route>
           <Route
@@ -171,8 +171,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-            ""
-          )}
+              ""
+            )}
           <Route
             path="/forum-page"
             exact
