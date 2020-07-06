@@ -297,51 +297,6 @@ class CommunityPageGroup extends Component {
             <div className="community-group-bodyLeft">
               <div>
                 {forumPosts}
-                {/* <ForumContainer
-                  className="ForumPost"
-                  forumPost={{ likes: 8, comments: 5 }}
-                  comments={[
-                    {
-                      name: "Lexi R.",
-                      likes: 2,
-                      replies: 0,
-                      date: "May 5 ",
-                      time: " 4:45pm",
-                      body:
-                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                    }
-                  ]}
-                />
-                <ForumContainer
-                  className="ForumPost"
-                  forumPost={{ likes: 8, comments: 5 }}
-                  comments={[
-                    {
-                      name: "Lexi R.",
-                      likes: 2,
-                      replies: 0,
-                      date: "May 5 ",
-                      time: " 4:45pm",
-                      body:
-                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                    }
-                  ]}
-                />
-                <ForumContainer
-                  className="ForumPost"
-                  forumPost={{ likes: 8, comments: 5 }}
-                  comments={[
-                    {
-                      name: "Lexi R.",
-                      likes: 2,
-                      replies: 0,
-                      date: "May 5 ",
-                      time: " 4:45pm",
-                      body:
-                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                    }
-                  ]}
-                /> */}
               </div>
             </div>
             <div className="community-group-bodyRight">
