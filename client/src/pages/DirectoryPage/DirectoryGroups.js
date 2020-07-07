@@ -172,6 +172,7 @@ class DirectoryGroups extends Component {
           </div>
           <div className="CommunityPage__groups-in-city-container">
           {groups.map(group =>{
+            console.log(group)
             let memberLength = 1;
             if (memberLength){
               const memberLength = group.members.length;
@@ -187,7 +188,6 @@ class DirectoryGroups extends Component {
               />
               </div>
             )
-            
           }) 
           }
           
