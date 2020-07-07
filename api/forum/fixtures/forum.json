@@ -38,7 +38,7 @@
       "likes": 0,
       "author": 3,
       "parent": [],
-      "group": 1
+      "group": 2
     }
   },
   {
@@ -66,7 +66,7 @@
       "likes": 0,
       "author": 4,
       "parent": [],
-      "group": 2
+      "group": 3
     }
   },
   {
@@ -82,7 +82,7 @@
       "parent": [
         1
       ],
-      "group": 2
+      "group": 1
     }
   },
   {
@@ -98,7 +98,7 @@
       "parent": [
         2
       ],
-      "group": 2
+      "group": 1
     }
   },
   {
@@ -162,7 +162,7 @@
       "parent": [
         6
       ],
-      "group": 3
+      "group": 1
     }
   },
   {
@@ -178,7 +178,7 @@
       "parent": [
         7
       ],
-      "group": 3
+      "group": 1
     }
   },
   {
@@ -194,7 +194,7 @@
       "parent": [
         8
       ],
-      "group": 3
+      "group": 2
     }
   },
   {
@@ -210,7 +210,7 @@
       "parent": [
         9
       ],
-      "group": 3
+      "group": 2
     }
   },
   {
