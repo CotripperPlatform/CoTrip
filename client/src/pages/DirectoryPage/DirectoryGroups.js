@@ -43,6 +43,7 @@ class DirectoryGroups extends Component {
   }
 
   render() {
+    console.log(this.state)
     const groups = this.state.groups ? this.state.groups : [];
     return (
       <div className="DirectoryPage">
@@ -182,23 +183,25 @@ class DirectoryGroups extends Component {
                 members={memberLength}
                 location={group.location}
                 picture={picture1}
+                id={group.id}
               />
-            </div>
+              </div>
             )
-            }) }
             
-            </div>{" "}
+          }) 
+          }
+          
             <div className="CommunityPage__groupCard-single">
               {" "}
               <Card outline size="medium-wide-directory">
                 <a href="/">Discover New Groups</a>
-              </Card>{" "}
+              </Card>
             </div>
           </div>
           <a className="seeAll-Button">See All</a>
         </div>
         <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
-      
+      </div>
     );
   }
 };
