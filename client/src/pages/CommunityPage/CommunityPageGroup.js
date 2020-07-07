@@ -84,7 +84,7 @@ class CommunityPageGroup extends Component {
   }
 
   componentDidMount() {
-    console.log('community page group props: ', this.props);
+    // console.log('community page group props: ', this.props);
     this.getPosts()
     this.getGroup()
   }
@@ -98,7 +98,6 @@ class CommunityPageGroup extends Component {
           }
         })
         .then(res => {
-          console.log('axios ', res.data)
 
           this.setState({
             groupData: res.data
@@ -116,7 +115,6 @@ class CommunityPageGroup extends Component {
         }
       })
       .then(res => {
-        console.log('axios ', res.data)
 
         this.setState({
           postList: res.data
@@ -201,12 +199,9 @@ class CommunityPageGroup extends Component {
   };
 
   render() {
-    console.log(this.state.groupData)
-    console.log(this.state.postList)
     let groupData = this.state.groupData
     let postList = []
     if (groupData.posts && this.state.postList) {
-      console.log('filtering postList')
       postList = this.state.postList.filter(post => groupData.posts.includes(post.id))
     }
 
@@ -217,20 +212,26 @@ class CommunityPageGroup extends Component {
       console.log(this.state.postList)
       console.log(postList)
       forumPosts = postList.map(post => {
-        let comments = this.state.postList.filter(post => this.state.postList.includes(...post.parent))
+        // let comments = this.state.postList.filter(comment => {
+        //   let postIncludesComment = false
+        //   for 
+        //   this.state.commentList.includes(...comment.parent))
+        // }
+        let comments = post.comments
+        console.log(comments)
         comments = comments.map(comment => {
-
+          let date = new Date(comment.time)
           return ({
-            name: comment.author,
+            name: `${comment.author.first_name} ${comment.author.last_name[0].toUpperCase()}`,
             to: `/profile/${comment.author.user}`,
             likes: comment.likes,
-            date: `${comment.time.toLocaleString('default', { month: 'long' })} ${comment.time.getDate()}`,
-            time: `${comment.time.getHours()}:${comment.time.getMinutes()}`,
+            date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+            time: `${date.getHours()}:${date.getMinutes()}`,
             body: comment.body,
             image: comment.author.image
           })
         })
-        console.log('comments' + comments)
+        console.log('comments' + comments.length)
         if (post.post_type === 'Post') {
           let date = new Date(post.time)
           return (

@@ -9,5 +9,5 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         depth = 2
-        fields = ['id', 'parent',  'post_type', 'title',
+        fields = ['id', 'parent', 'comments', 'post_type', 'title',
                   'time', 'body', 'likes', 'author', 'group']
