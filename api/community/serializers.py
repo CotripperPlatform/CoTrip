@@ -1,11 +1,15 @@
 from rest_framework import serializers
 from .models import Group, Event, Topic, Hashtag, Media
+from forum.serializers import PostSerializer
 
 
 class GroupSerializer(serializers.ModelSerializer):
+    posts = PostSerializer(many=True)
+
     class Meta:
         model = Group
-        fields = ['title', 'description', 'location', 'posts']
+        depth = 1
+        fields = ['title', 'description', 'location', 'posts', 'members']
 
 
 class EventSerializer(serializers.ModelSerializer):
