@@ -132,11 +132,11 @@ def sign_s3(request):
     })
 
 
+# Allows User to Change their password
 class PasswordChange(generics.GenericAPIView):
 
     def post(self, request, *args, **kwargs):
         data = request.data.copy()
-        print(data)
         email = data.get('email')
         current_password = data.get('currentPassword')
         new_password = data.get('newPassword')
@@ -145,9 +145,9 @@ class PasswordChange(generics.GenericAPIView):
         if user is not None:
             user.set_password(new_password)
             user.save()
-            print(f'Success! New password is {new_password}')
+            
             return Response(
-                 f'Success! New password is {new_password}'
+                 'Success! New password has been created'
             )
         else:
             print('User credentials not valid')
