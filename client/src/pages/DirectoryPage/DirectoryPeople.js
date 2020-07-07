@@ -21,7 +21,7 @@ function pillClick(val) {
 }
 
 const handleClick = e => {
-  ("/home");
+  ("/");
 };
 
 // Page or
