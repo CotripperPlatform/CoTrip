@@ -33,7 +33,6 @@ class DirectoryGroups extends Component {
   componentDidMount() {
     axios.get(`${BASE_URL}/groups`)
       .then(response => {
-       console.log(response)
         this.setState({ 
           groups: response.data
         })
@@ -44,7 +43,6 @@ class DirectoryGroups extends Component {
   }
 
   render() {
-    console.log(this.state.groups)
     const groups = this.state.groups ? this.state.groups : [];
     return (
       <div className="DirectoryPage">
@@ -173,12 +171,16 @@ class DirectoryGroups extends Component {
           </div>
           <div className="CommunityPage__groups-in-city-container">
           {groups.map(group =>{
+            let memberLength = 1;
+            if (memberLength > 1){
+
+            }
             return(
               <div className="CommunityPage__groupCard-single">
               <GroupCard
                 name={group.title}
-                members="98 Members"
-                location="Mixed Locations"
+                members={memberLength}
+                location={group.location}
                 picture={picture1}
               />
             </div>
