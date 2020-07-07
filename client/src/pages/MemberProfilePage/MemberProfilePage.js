@@ -188,7 +188,7 @@ class MemberProfilePage extends Component {
               <div className="Connections__list-Member">
                 <Connections
                   userViewing={false}
-                  to="/home"
+                  to="/"
                   users={testUsers.slice(0, 6)}
                   extraUsers="View All"
                 />
