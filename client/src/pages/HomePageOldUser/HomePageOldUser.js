@@ -35,6 +35,11 @@ import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
 import Pill from "../../components/Pill/Pill";
 
+// const handleClick = e => {
+//   e.preventDefault();
+//   console.log("clicked");
+// };
+
 const personCard1 = (
   <PersonCard
     image={image1}
@@ -73,10 +78,7 @@ const personCard3 = (
   />
 );
 
-const handleClick = e => {
-  e.preventDefault();
-  console.log("clicked");
-};
+
 function pillClick(val) {
   console.log(val);
 }

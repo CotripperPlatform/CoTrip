@@ -39,7 +39,7 @@ class FilterSettingsForm extends Component {
 
   test = val => {
     let selectedPills = [];
-    val.pills.map(pill => {
+    val.pills.forEach(pill => {
       if (pill.selected === true) {
         selectedPills.push(pill.value);
         console.log(selectedPills);

@@ -35,6 +35,10 @@ import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
 
+// const handleClick = e => {
+//   e.preventDefault();
+//   console.log("clicked");
+// };
 
 const personCard1 = (
   <PersonCard
@@ -74,10 +78,6 @@ const personCard3 = (
   />
 );
 
-const handleClick = e => {
-  e.preventDefault();
-  console.log("clicked");
-};
 
 const HomePage = props => {
   return (
