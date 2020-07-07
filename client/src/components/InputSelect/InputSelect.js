@@ -14,6 +14,7 @@ class InputSelect extends Component {
 
   handleChange(e) {
     e.preventDefault();
+    console.log(e.target.value)
     this.setState({ value: e.target.value });
     this.props.onSelect(e.target.value);
   }
@@ -37,7 +38,7 @@ InputSelect.defaultProps = {
     { value: "option1", title: "Option 1" },
     { value: "option2", title: "Option 2" }
   ],
-  onSelect:function(){}
+  onSelect: function () { }
 };
 InputSelect.propTypes = {
   optionPrefix: PropTypes.string,

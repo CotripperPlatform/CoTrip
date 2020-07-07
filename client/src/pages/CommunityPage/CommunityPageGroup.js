@@ -4,6 +4,7 @@ import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
+import InputSelect from "../../components/InputSelect/InputSelect";
 import Banner__Community from "assets/images/community_banner.png";
 import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
@@ -25,16 +26,19 @@ import { BASE_URL } from '../../services/constants';
 class CommunityPageGroup extends Component {
   constructor(props) {
     super(props);
+    let startGroup
+    !props.id ? startGroup = 1 : startGroup = props.id
     this.state = {
       joinGroup: false,
       showModal: false,
-      groupId: 1,
+      groupId: startGroup,
       groupData: {},
     };
   }
 
   componentDidMount() {
     this.getGroup()
+    this.getGroups()
   }
 
   getGroup = () => {
@@ -53,6 +57,23 @@ class CommunityPageGroup extends Component {
         })
         .catch(res => console.log(res))
     }
+  }
+
+  getGroups = () => {
+    axios.get(`${BASE_URL}/groups`,
+      {
+        headers: {
+          Authorization: `Token ${localStorage.getItem("token")}`
+        }
+      })
+      .then(res => {
+
+        this.setState({
+          groupList: res.data
+        })
+      })
+      .catch(res => console.log(res))
+
   }
 
   handleConfirm = evt => {
@@ -99,7 +120,14 @@ class CommunityPageGroup extends Component {
     console.log(val);
   };
 
+  handleSelect = id => {
+    this.setState({ groupId: id }, this.getGroup)
+  };
+
   render() {
+    //Set Placeholder for group search
+    let groupList = this.state.groupList
+
     // TO DO: Media Section, Upcoming Events Section
     let groupData = this.state.groupData
     let postList = [], forumPosts = []
@@ -152,7 +180,7 @@ class CommunityPageGroup extends Component {
         } else return ""
       })
     }
-
+    console.log(groupList)
     return (
       <div>
         <div className="CommunityPage-Group-">
@@ -168,6 +196,18 @@ class CommunityPageGroup extends Component {
               placeholder="Search Groups"
               variation="wide"
             />
+            {!groupList ? "" :
+              <InputSelect
+                options={groupList.map(group => {
+                  return ({
+                    value: group.id,
+                    title: group.title,
+                  })
+                })}
+                onSelect={this.handleSelect}
+                optionPrefix=""
+              />
+            }
             {this.state.joinGroup ? (
               <div className="Modal_align">
                 <ModalContainerJoin

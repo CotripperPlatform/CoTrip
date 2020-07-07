@@ -9,7 +9,7 @@ class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         depth = 1
-        fields = ['title', 'description', 'location', 'posts', 'members']
+        fields = ['id', 'title', 'description', 'location', 'posts', 'members']
 
 
 class EventSerializer(serializers.ModelSerializer):
