@@ -42,10 +42,11 @@ class Profile(models.Model):
         'community.Event', related_name='people', null=True, blank=True)
     connections = models.ManyToManyField(
         'self', related_name='friends', null=True, blank=True)
+    
     # Posts, comments, and replies to be defined as foreign key on those respective models within forum app
     # CoTrip media defined as foreign key in community app
     groups = models.ManyToManyField(
-        Group, related_name='groups', null=True, blank=True)
+        Group, related_name='members', null=True, blank=True)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} Profile'
