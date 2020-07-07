@@ -224,6 +224,13 @@ class App extends Component {
             )}
           ></Route>
           <Route
+            path="/profile/:id"
+            exact
+            render={routerProps => (
+              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
             path="/login"
             exact
             render={routerProps => (

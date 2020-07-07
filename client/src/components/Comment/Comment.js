@@ -14,7 +14,7 @@ const Comment = props => {
   return (
     <div className="Comment">
       <div className="Comment__column Comment__profile">
-        <ProfilePicture type="small" to={to} image={Profile2} />
+        <ProfilePicture type="small" to={to} image={image} />
         <h4 className="Comment__name">{name}</h4>
       </div>
       <div className="Comment__column Comment__content">
@@ -22,7 +22,7 @@ const Comment = props => {
           <p className="Comment__body">{body}</p>
           <div className="Comment__activities">
             <div className="Comment__likes">{likes} Likes</div>
-            <div className="Comment__replies">{replies} Replies</div>
+            {/* <div className="Comment__replies">{replies} Replies</div> */}
           </div>
         </div>
         <div className="Comment__column Comment__timing--container">

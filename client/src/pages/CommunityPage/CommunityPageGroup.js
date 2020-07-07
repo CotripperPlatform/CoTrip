@@ -208,24 +208,15 @@ class CommunityPageGroup extends Component {
       forumPosts = postList.map(post => {
         let comments = this.state.postList.filter(post => this.state.postList.includes(...post.parent))
         comments = comments.map(comment => {
-          let replies = this.state.postList.filter(comment => this.state.postList.includes(...comment.parent))
-          replies = replies.map(reply => {
-            return ({
-              name: reply.author,
-              likes: reply.likes,
-              replies: 99,
-              date: reply.time,
-              time: reply.time,
-              body: reply.body
-            })
-          })
+
           return ({
             name: comment.author,
+            to: `/profile/${comment.author.user}`,
             likes: comment.likes,
-            replies: replies.length,
-            date: comment.time,
-            time: comment.time,
-            body: comment.body
+            date: `${comment.time.toLocaleString('default', { month: 'long' })} ${comment.time.getDate()}`,
+            time: `${comment.time.getHours()}:${comment.time.getMinutes()}`,
+            body: comment.body,
+            image: comment.author.image
           })
         })
         console.log('comments' + comments)
