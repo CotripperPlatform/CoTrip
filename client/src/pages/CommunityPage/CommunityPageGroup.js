@@ -192,17 +192,28 @@ class CommunityPageGroup extends Component {
     console.log(val);
   };
 
+  commentClick = val => {
+    console.log(val);
+  };
+
+  likeClick = val => {
+    console.log(val);
+  };
+
   render() {
     console.log(this.state.groupData)
     console.log(this.state.postList)
     let groupData = this.state.groupData
     let postList = []
-    if (groupData.posts) postList = this.state.postList.filter(post => groupData.posts.includes(post.id))
+    if (groupData.posts && this.state.postList) {
+      console.log('filtering postList')
+      postList = this.state.postList.filter(post => groupData.posts.includes(post.id))
+    }
 
     let forumPosts = []
-    // TO DO: Fix the fixture data to ensure the 'parent' field makes sense. Comment parent is post. reply parent is comment.
+    // TO DO: Implement comment replies.
     // TO DO: Check ForumContainer component.  Currently not rendering comments.
-    if (postList) {
+    if (postList.length) {
       console.log(this.state.postList)
       console.log(postList)
       forumPosts = postList.map(post => {
@@ -221,18 +232,35 @@ class CommunityPageGroup extends Component {
         })
         console.log('comments' + comments)
         if (post.post_type === 'Post') {
+          let date = new Date(post.time)
           return (
             <ForumContainer
               className="ForumPost"
-              forumPost={{ likes: post.likes, comments: '#' }}
-              comments={comments}
+              forumPost={{
+                pillClick: this.pillClick,
+                commentClick: this.commentClick,
+                likeClick: this.likeclick,
+                to: `/profile/${post.author.user}`,
+                name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
+                likes: post.likes,
+                comments: comments,
+                // topics: post.topics,  // TO DO:  Add topics to Post Model
+                image: post.author.image,
+                post: {
+                  title: post.title,
+                  date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+                  time: `${date.getHours()}:${date.getMinutes()}`,
+                  body: post.body,
+                  // hashtags: post.hashtags,    // TO DO:  Add hashtags to Post Model
+                },
+              }}
             />
           )
         } else return ""
       })
     }
 
-    if (this.state.groupData) {
+    if (groupData) {
       console.log(groupData)
       return (
         <div>
