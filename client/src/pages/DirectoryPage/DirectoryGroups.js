@@ -172,8 +172,8 @@ class DirectoryGroups extends Component {
           <div className="CommunityPage__groups-in-city-container">
           {groups.map(group =>{
             let memberLength = 1;
-            if (memberLength > 1){
-
+            if (memberLength){
+              const memberLength = group.members.length;
             }
             return(
               <div className="CommunityPage__groupCard-single">
