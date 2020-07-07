@@ -18,59 +18,9 @@ import van from "../../assets/images/media-card-3.png";
 import nightSky from "../../assets/images/media-card-4.png";
 import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
-import pic1 from "../../assets/images/profile-picture-1.png";
-import pic2 from "../../assets/images/profile-picture-2.png";
-import pic3 from "../../assets/images/profile-picture-3.png";
-import pic4 from "../../assets/images/profile-picture-4.png";
-import pic5 from "../../assets/images/profile-picture-5.png";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Connections from "../../components/Connections/Connections";
 import { BASE_URL } from '../../services/constants';
-
-let testUsers = [
-  {
-    userId: 1,
-    userFirstName: "Paula",
-    userSurname: "Bannerman",
-    userPic: pic1
-  },
-  {
-    userId: 2,
-    userFirstName: "Jack",
-    userSurname: "Johnson",
-    userPic: pic2
-  },
-  {
-    userId: 3,
-    userFirstName: "Jenny",
-    userSurname: "Jones",
-    userPic: pic3
-  },
-  {
-    userId: 4,
-    userFirstName: "Joan",
-    userSurname: "Rivers",
-    userPic: pic4
-  },
-  {
-    userId: 5,
-    userFirstName: "Freida",
-    userSurname: "Mercury",
-    userPic: pic5
-  },
-  {
-    userId: 6,
-    userFirstName: "Leslie",
-    userSurname: "Knope",
-    userPic: pic5
-  },
-  {
-    userId: 7,
-    userFirstName: "Frankie",
-    userSurname: "Ocean",
-    userPic: pic4
-  }
-];
 
 class CommunityPageGroup extends Component {
   constructor(props) {
@@ -84,7 +34,6 @@ class CommunityPageGroup extends Component {
   }
 
   componentDidMount() {
-    // console.log('community page group props: ', this.props);
     this.getGroup()
   }
 
@@ -114,37 +63,6 @@ class CommunityPageGroup extends Component {
       showModal: false
     });
   };
-
-  // submitJoinGroup = () => {
-  //   console.log(this.props.userid)
-  //   if (this.props.userid) {
-  //     axios({
-  //       method: 'PATCH',
-  //       url: `${BASE_URL}/profile/${this.props.userid}`,
-  //       headers: {
-  //         Authorization: `Token ${localStorage.getItem("token")}`
-  //       },
-  //       data: {
-  //         groups: this.state.form_first_name,
-  //         last_name: this.state.form_last_name,
-  //         bio: this.state.form_bio,
-  //         social_media: this.state.form_social_media,
-  //       }
-  //     })
-  //       .then(res => {
-  //         console.log(res)
-
-  //         this.setState({
-  //           updated_first_name: this.state.form_first_name,
-  //           updated_last_name: this.state.form_last_name,
-  //           updated_bio: this.state.form_bio,
-  //         })
-  //         this.toggleEditMode();
-  //         // this.forceUpdate();
-  //       })
-  //       .catch(err => console.log(err))
-  //   }
-  // }
 
   handleLeave = evt => {
     evt.preventDefault();
@@ -182,22 +100,17 @@ class CommunityPageGroup extends Component {
   };
 
   render() {
+    // TO DO: Media Section, Upcoming Events Section
     let groupData = this.state.groupData
-    console.log(groupData)
-    let postList = []
+    let postList = [], forumPosts = []
+
+    // Generates Forum Posts using ForumContainer component. 
+    //   TO DO: Implement comment replies.
     if (groupData.posts) {
       postList = groupData.posts
-    }
-    console.log(postList)
 
-    // Generate Forum Posts using ForumContainer component. 
-    let forumPosts = []
-    // TO DO: Implement comment replies.
-    if (postList.length) {
-      console.log(this.state.postList)
       forumPosts = postList.map(post => {
         let comments = post.comments
-        console.log(comments)
         comments = comments.map(comment => {
           let date = new Date(comment.time)
           return ({
@@ -210,7 +123,6 @@ class CommunityPageGroup extends Component {
             image: comment.author.image
           })
         })
-        console.log('comments' + comments.length)
         if (post.post_type === 'Post') {
           let date = new Date(post.time)
           return (
@@ -241,129 +153,125 @@ class CommunityPageGroup extends Component {
       })
     }
 
-    if (groupData) {
-      return (
-        <div>
-          <div className="CommunityPage-Group-">
-            <NavBar page={1} profileImage={people} />
-            <Banner background={Banner__Community}>
-              <div className="community-page-header">
-                {" "}
-                <h3 style={{ margin: 0 }}>{this.state.groupData.title}</h3>
+    return (
+      <div>
+        <div className="CommunityPage-Group-">
+          <NavBar page={1} profileImage={people} />
+          <Banner background={Banner__Community}>
+            <div className="community-page-header">
+              {" "}
+              <h3 style={{ margin: 0 }}>{this.state.groupData.title}</h3>
+            </div>
+            <InputTextField
+              type="text"
+              name="search directory"
+              placeholder="Search Groups"
+              variation="wide"
+            />
+            {this.state.joinGroup ? (
+              <div className="Modal_align">
+                <ModalContainerJoin
+                  buttonText="Leave Group"
+                  buttonTextColor="white"
+                  buttonColor="pink"
+                  buttonSize="small"
+                  message="Are you sure you want to leave the group?"
+                  confirmText="Leave Group"
+                  cancelText="Exit"
+                  onConfirm={this.handleLeave}
+                  onClose={this.handleCloseModal}
+                  modalOpen={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                />
               </div>
-              <InputTextField
-                type="text"
-                name="search directory"
-                placeholder="Search Groups"
-                variation="wide"
-              />
-              {this.state.joinGroup ? (
+            ) : (
                 <div className="Modal_align">
                   <ModalContainerJoin
-                    buttonText="Leave Group"
-                    buttonTextColor="white"
-                    buttonColor="pink"
+                    buttonText="Join"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
                     buttonSize="small"
-                    message="Are you sure you want to leave the group?"
-                    confirmText="Leave Group"
+                    message="Are you sure you want to join?"
+                    confirmText="Join"
                     cancelText="Exit"
-                    onConfirm={this.handleLeave}
+                    onConfirm={this.handleConfirm}
                     onClose={this.handleCloseModal}
                     modalOpen={this.state.showModal}
                     handleOpenModal={this.handleOpenModal}
                   />
                 </div>
-              ) : (
-                  <div className="Modal_align">
-                    <ModalContainerJoin
-                      buttonText="Join"
-                      buttonTextColor="black"
-                      buttonColor="yellow"
-                      buttonSize="small"
-                      message="Are you sure you want to join?"
-                      confirmText="Join"
-                      cancelText="Exit"
-                      onConfirm={this.handleConfirm}
-                      onClose={this.handleCloseModal}
-                      modalOpen={this.state.showModal}
-                      handleOpenModal={this.handleOpenModal}
-                    />
-                  </div>
-                )}
-            </Banner>{" "}
-          </div>{" "}
-          <div className="community-group-body">
-            <div className="community-group-bodyLeft">
-              <div>
-                {forumPosts}
+              )}
+          </Banner>{" "}
+        </div>{" "}
+        <div className="community-group-body">
+          <div className="community-group-bodyLeft">
+            <div>
+              {forumPosts}
+            </div>
+          </div>
+          <div className="community-group-bodyRight">
+            <div className="community-group-members_description">
+              <h2>Description</h2>
+              <p className="community-group-members_description_p">
+                {groupData.description}
+              </p>
+            </div>
+            <div className="community-group-members_section">
+              <h2>Members</h2>
+              <div className="community-group-members_topic">
+                <Connections userViewing={true} users={groupData.members} extraUsers="See More" />
               </div>
             </div>
-            <div className="community-group-bodyRight">
-              <div className="community-group-members_description">
-                <h2>Description</h2>
-                <p className="community-group-members_description_p">
-                  {groupData.description}
-                </p>
-              </div>
-              <div className="community-group-members_section">
-                <h2>Members</h2>
-                <div className="community-group-members_topic">
-                  <Connections userViewing={true} users={groupData.members} extraUsers="See More" />
-                </div>
-              </div>
-              <h2>Upcoming Events</h2>
-              <div className="upcoming-events">
-                <div className="SingleEvent">
-                  <UpcomingEventsCard
-                    name="Upcoming Event"
-                    date="Month Day"
-                    time="Time"
-                    location="City, State"
-                  />{" "}
-                </div>{" "}
+            <h2>Upcoming Events</h2>
+            <div className="upcoming-events">
+              <div className="SingleEvent">
                 <UpcomingEventsCard
                   name="Upcoming Event"
                   date="Month Day"
                   time="Time"
                   location="City, State"
-                />
+                />{" "}
               </div>{" "}
-              <div className="seemore-events">See More</div>
-              <div className="community-group-title_topic">
-                <h2>Media</h2>
-              </div>
-              <div className="community_media">
-                <div className="community_mediaContainer">
-                  <div className="community_mediaCard">
-                    <MediaCard imageSrc={happiness} size="small" footerText="Posted By: Chandi" />
-                  </div>
-                  <div className="community_mediaCard">
-                    <MediaCard imageSrc={books} size="small" footerText="Posted By: Chandi" />
-                  </div>
-                  <div className="community_mediaCard">
-                    <MediaCard imageSrc={van} size="small" footerText="Posted By: Chandi" />
-                  </div>
+              <UpcomingEventsCard
+                name="Upcoming Event"
+                date="Month Day"
+                time="Time"
+                location="City, State"
+              />
+            </div>{" "}
+            <div className="seemore-events">See More</div>
+            <div className="community-group-title_topic">
+              <h2>Media</h2>
+            </div>
+            <div className="community_media">
+              <div className="community_mediaContainer">
+                <div className="community_mediaCard">
+                  <MediaCard imageSrc={happiness} size="small" footerText="Posted By: Chandi" />
                 </div>
-                <div className="community_mediaContainer2">
-                  <div className="community_mediaCard">
-                    <MediaCard imageSrc={nightSky} size="small" footerText="Posted By: Paula" />
-                  </div>
-                  <div className="community_mediaCard">
-                    <MediaCard imageSrc={waterfall} size="small" footerText="Posted By: Paula" />
-                  </div>
-                  <div className="community_mediaCard">
-                    <MediaCard imageSrc={flight} size="small" footerText="Posted By: Paula" />
-                  </div>
+                <div className="community_mediaCard">
+                  <MediaCard imageSrc={books} size="small" footerText="Posted By: Chandi" />
+                </div>
+                <div className="community_mediaCard">
+                  <MediaCard imageSrc={van} size="small" footerText="Posted By: Chandi" />
+                </div>
+              </div>
+              <div className="community_mediaContainer2">
+                <div className="community_mediaCard">
+                  <MediaCard imageSrc={nightSky} size="small" footerText="Posted By: Paula" />
+                </div>
+                <div className="community_mediaCard">
+                  <MediaCard imageSrc={waterfall} size="small" footerText="Posted By: Paula" />
+                </div>
+                <div className="community_mediaCard">
+                  <MediaCard imageSrc={flight} size="small" footerText="Posted By: Paula" />
                 </div>
               </div>
             </div>
           </div>
-          <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
         </div>
-      )
-    }
-
-    else return <div></div>
+        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
+      </div>
+    )
   }
 }
 export default CommunityPageGroup;

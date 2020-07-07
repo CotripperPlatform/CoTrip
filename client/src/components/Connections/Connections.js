@@ -5,7 +5,6 @@ import ProfilePicture from "../ProfilePicture/ProfilePicture";
 
 // function Based React Component
 function Connections(props) {
-  console.log(props)
   let heading = "Connections";
 
   if (props.userViewing === true) {
