@@ -10,7 +10,6 @@ const Comment = props => {
   // No props right now but when there is data we can use
   // this.props.comment and this.props.date
   const { body, date, time, to, image, name, likes } = props;
-  console.log(props)
   if (props.image) {
 
     return (

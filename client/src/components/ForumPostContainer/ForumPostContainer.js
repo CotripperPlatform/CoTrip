@@ -6,7 +6,6 @@ import Comment from '../Comment/Comment'
 
 export default function ForumPostContainer(props) {
   const comments = props.forumPost.comments
-  console.log(comments)
   return (
     <div className="PostContainer">
       <div>

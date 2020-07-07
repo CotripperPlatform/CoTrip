@@ -85,7 +85,6 @@ class CommunityPageGroup extends Component {
 
   componentDidMount() {
     // console.log('community page group props: ', this.props);
-    this.getPosts()
     this.getGroup()
   }
 
@@ -107,22 +106,6 @@ class CommunityPageGroup extends Component {
     }
   }
 
-  getPosts = () => {
-    axios.get(`${BASE_URL}/posts`,
-      {
-        headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`
-        }
-      })
-      .then(res => {
-
-        this.setState({
-          postList: res.data
-        })
-      })
-      .catch(res => console.log('getPosts failed:' + res))
-
-  }
   handleConfirm = evt => {
     evt.preventDefault();
     this.submitJoinGroup()
@@ -200,23 +183,19 @@ class CommunityPageGroup extends Component {
 
   render() {
     let groupData = this.state.groupData
+    console.log(groupData)
     let postList = []
-    if (groupData.posts && this.state.postList) {
-      postList = this.state.postList.filter(post => groupData.posts.includes(post.id))
+    if (groupData.posts) {
+      postList = groupData.posts
     }
+    console.log(postList)
 
+    // Generate Forum Posts using ForumContainer component. 
     let forumPosts = []
     // TO DO: Implement comment replies.
-    // TO DO: Check ForumContainer component.  Currently not rendering comments.
     if (postList.length) {
       console.log(this.state.postList)
-      console.log(postList)
       forumPosts = postList.map(post => {
-        // let comments = this.state.postList.filter(comment => {
-        //   let postIncludesComment = false
-        //   for 
-        //   this.state.commentList.includes(...comment.parent))
-        // }
         let comments = post.comments
         console.log(comments)
         comments = comments.map(comment => {
@@ -237,6 +216,7 @@ class CommunityPageGroup extends Component {
           return (
             <ForumContainer
               className="ForumPost"
+              key={post.id}
               forumPost={{
                 pillClick: this.pillClick,
                 commentClick: this.commentClick,
@@ -262,7 +242,6 @@ class CommunityPageGroup extends Component {
     }
 
     if (groupData) {
-      console.log(groupData)
       return (
         <div>
           <div className="CommunityPage-Group-">
@@ -323,16 +302,13 @@ class CommunityPageGroup extends Component {
               <div className="community-group-members_description">
                 <h2>Description</h2>
                 <p className="community-group-members_description_p">
-                  This forum page is the place to discuss the ins and outs, as well as the ups and
-                  downs of parenting. You can get advice on potty training, talk about breastfeeding,
-                  discuss how to get your baby to sleep, or ask if that one weird thing your kid does
-                  is normal. We welcome mothers of all stages in life!
-              </p>
+                  {groupData.description}
+                </p>
               </div>
               <div className="community-group-members_section">
                 <h2>Members</h2>
                 <div className="community-group-members_topic">
-                  <Connections userViewing={true} users={testUsers} extraUsers="See More" />
+                  <Connections userViewing={true} users={groupData.members} extraUsers="See More" />
                 </div>
               </div>
               <h2>Upcoming Events</h2>
