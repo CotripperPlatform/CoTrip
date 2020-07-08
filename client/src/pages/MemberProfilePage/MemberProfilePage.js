@@ -21,6 +21,7 @@ import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
+
 import { BASE_URL } from "../../services/constants";
 import axios from "axios";
 
