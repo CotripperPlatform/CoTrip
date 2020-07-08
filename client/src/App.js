@@ -159,6 +159,13 @@ class App extends Component {
               <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
+          <Route
+            path="/previous-trip"
+            exact
+            render={routerProps => (
+              <PreviousPage handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
           {this.state.profileLoaded === true ? (
             <Route
               path="/member-page"
