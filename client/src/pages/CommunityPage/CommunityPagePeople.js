@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { BASE_URL } from "../../services/constants";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
 import axios from "axios";
 import "./CommunityPagePeople.css";
 import NavBar from "../../components/Navbar/Navbar";
@@ -23,25 +26,36 @@ function pillClick(val) {
 
 const handleClick = e => {};
 
-// Page or
 const CommunityPage = props => {
+  // State Hooks
   const [profile, setProfile] = useState([]);
+  const [states, setStates] = useState([]);
+  const [cities, setCities] = useState([]);
 
   // Getting profile list
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get("http://127.0.0.1:8000/profile");
+      const res = await axios.get(`${BASE_URL}/profile`);
       setProfile(res.data);
-      // console.log(res);
     };
     fetch();
   }, []);
 
-  //random number between 1 and 5
+  // Getting US States
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await axios.get(`${BASE_URL}/location/states`);
+      setStates({ USStates: res.data });
+    };
+    fetch();
+  }, []);
+
+  //random placeholder image
   const stockImages = [image1, image2, image3, image4, image5];
   const randomPlaceholderImages = () =>
     stockImages[Math.floor(Math.random() * (stockImages.length - 1 + 1))];
 
+  // all profiles
   const profileList = () => {
     return (
       profile &&
@@ -51,7 +65,7 @@ const CommunityPage = props => {
             <PersonCard
               image={randomPlaceholderImages()}
               name={data.first_name + "" + data.last_name}
-              location={data.city_of_residence}
+              location={data.city_of_residence.name}
               interests={data.hashtags}
             />
           </div>
@@ -59,6 +73,38 @@ const CommunityPage = props => {
       })
     );
   };
+
+  const getCitiesFromState = event => {
+    if (event.target.textContent === "") setCities({ stateFound: false });
+
+    //TextContent because materialUI outputs an <li> tag
+    let userSubmission = event.target.textContent.toLowerCase();
+
+    states.USStates.forEach(state => {
+      if (state.name.toLowerCase() === userSubmission) {
+        axios.get(`${BASE_URL}/location/bystate?state__code=${state.code}`).then(res => {
+          setCities({
+            stateFound: true,
+            currentStateCities: res.data
+          });
+        });
+      }
+    });
+  };
+
+  const getProfileFromCities = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+    return (
+      profile &&
+      setProfile(
+        profile.filter(user => user.city_of_residence.name.toLowerCase() === userSubmission)
+      )
+    );
+  };
+
+  console.log(cities);
+  console.log(states);
+  console.log(profile);
 
   return (
     <div className="CommunityPage">
@@ -82,7 +128,6 @@ const CommunityPage = props => {
           />
         </a>
         <a href="./join-groups" className="secondNav">
-          {" "}
           <Button
             text="Discover Groups"
             color="outlinepink"
@@ -90,7 +135,28 @@ const CommunityPage = props => {
             handleClick={handleClick}
           />
         </a>
-      </div>{" "}
+      </div>
+      <div className="CommunityPagePeople__Autocomplete">
+        <Autocomplete
+          id="AutoStateField"
+          options={states.USStates}
+          getOptionLabel={option => option.name}
+          onChange={getCitiesFromState}
+          renderInput={params => <TextField {...params} label="State" variant="filled" />}
+        />
+        {cities.stateFound === true ? (
+          <Autocomplete
+            id="AutoCityField"
+            options={cities.currentStateCities}
+            getOptionLabel={option => option.name}
+            onChange={getProfileFromCities}
+            renderInput={params => <TextField {...params} label="City" variant="filled" />}
+          />
+        ) : (
+          ""
+        )}
+      </div>
+
       <div className="CommunityPage_SortByButton">
         <div className="CommunityPage_SortByText">Sort By: Location </div>
       </div>
@@ -194,7 +260,7 @@ const CommunityPage = props => {
         </div>{" "}
         <a className="seeMore-Button">See More</a>
         <div>
-          <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
+          <header className="CommunityPage__header">`</header>
         </div>
         <div className="CommunityPage__moms-in-city-container">
           {/* <div className="CommunityPage__momCard-single">
@@ -228,6 +294,7 @@ const CommunityPage = props => {
             <PersonCard image={image5} name="Julia C." location="Washington D.C." />
           </div>{" "}
           <div className="CommunityPage__momCard-single"> </div> */}
+          {/* {getProfileFromCities} */}
           {profileList()}
         </div>
         <a className="seeAll-Button">See All</a>
