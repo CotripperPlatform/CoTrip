@@ -21,6 +21,8 @@ import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
+import BioStagnant from "../../components/Bio/BioStagnant";
+
 
 import { BASE_URL } from "../../services/constants";
 import axios from "axios";
@@ -204,7 +206,7 @@ class MemberProfilePage extends Component {
                 <div className="MemberProfilePage__bio-container">
                   {this.state.protectedProfileData !== undefined &&
                   this.props.userid !== undefined ? (
-                    <Bio
+                    <BioStagnant
                       userid={this.props.userid}
                       type="default"
                       first_name={this.state.protectedProfileData.first_name}
@@ -213,7 +215,7 @@ class MemberProfilePage extends Component {
                       bio={this.state.protectedProfileData.bio}
                       hashtags={people[0].hashtags}
                       isCurrentUser={true}
-                      onClick={console.log("Hello")}
+                      
                     />
                   ) : (
                     ""

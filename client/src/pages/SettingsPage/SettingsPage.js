@@ -3,6 +3,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Banner__pink from "assets/images/Banner__pink.png";
 import Banner from "../../components/Banner/Banner";
 import Bio from "../../components/Bio/Bio";
+import InputTextField from "../../components/InputTextField/InputTextField";
 
 // test image for nav
 import pic1 from "../../assets/images/profile-picture-1.png";
@@ -33,7 +34,7 @@ class SettingsPage extends Component {
   componentDidMount() {
     // if (this.props.userid !== undefined) {
     axios
-      .get(`${BASE_URL}/profile/6`, {
+      .get(`${BASE_URL}/profile/${this.props.userid}`, {
         headers: {
           Authorization: `Token ${localStorage.getItem("token")}`
         }
@@ -54,6 +55,31 @@ class SettingsPage extends Component {
       });
     // }
   }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    if (this.state.newPassword === this.state.confirmPassword) {
+      fetch(`${BASE_URL}/auth/password_change`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(this.state)
+      })
+        .then(res => res.json())
+        .then(json => {
+          console.log(json);
+          alert(json);
+        });
+    } else {
+      alert("Password do not match");
+    }
+  };
+
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   render() {
     let people = [
       {
@@ -86,13 +112,47 @@ class SettingsPage extends Component {
           userid={this.props.userid}
           type="default"
           first_name={this.props.first_name}
-            last_name={this.state.protectedProfileData.last_name}
+          last_name={this.state.protectedProfileData.last_name}
           // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
           bio={this.state.protectedProfileData.bio}
           hashtags={people[0].hashtags}
           isCurrentUser={true}
           onClick={console.log("Hello")}
         />
+        <div className="Change_password">
+          <form className="LoginPage__form" onSubmit={this.handleSubmit}>
+            <InputTextField
+              name="email"
+              type="email"
+              placeholder="Email"
+              onChange={this.handleChange}
+              value={this.state.email}
+            />
+            <InputTextField
+              name="currentPassword"
+              type="password"
+              placeholder="Current Password"
+              onChange={this.handleChange}
+              value={this.state.currentPassword}
+            />
+            <InputTextField
+              name="newPassword"
+              type="password"
+              placeholder="New password"
+              onChange={this.handleChange}
+              value={this.state.newPassword}
+            />
+            <InputTextField
+              name="confirmPassword"
+              type="password"
+              placeholder="Confirm Password"
+              onChange={this.handleChange}
+              value={this.state.confirmPassword}
+            />
+
+            <input className="LoginPage__submit" text="Login" type="submit" />
+          </form>
+        </div>
       </div>
     );
   }
