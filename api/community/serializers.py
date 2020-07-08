@@ -22,15 +22,21 @@ class EventSerializer(serializers.ModelSerializer):
 
 
 class TopicSerializer(serializers.ModelSerializer):
+    posts = PostSerializer(many=True)
+
     class Meta:
         model = Topic
-        fields = '__all__'
+        depth = 1
+        fields = ['id', 'title', 'description', 'posts']
 
 
 class HashtagSerializer(serializers.ModelSerializer):
+    posts = PostSerializer(many=True)
+
     class Meta:
         model = Hashtag
-        fields = '__all__'
+        depth = 1
+        fields = ['id', 'title', 'description', 'posts']
 
 
 class MediaSerializer(serializers.ModelSerializer):
