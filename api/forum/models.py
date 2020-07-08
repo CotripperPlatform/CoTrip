@@ -15,6 +15,10 @@ class Post(models.Model):
                                on_delete=models.CASCADE, related_name='posts', null=True)
     group = models.ForeignKey(
         Group, on_delete=models.CASCADE, related_name='posts', null=True)
+    hashtag = models.ManyToManyField(
+        Hashtag, related_name='posts', null=True, blank=True)
+    topic = models.ForeignKey(
+        Topic, on_delete=models.CASCADE, related_name='posts', null=True, blank=True)
 
     def __str__(self):
         return self.title
