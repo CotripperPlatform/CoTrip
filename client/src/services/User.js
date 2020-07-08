@@ -47,12 +47,38 @@ export function handleLogin(data, history) {
         email: json.user.email,
         first_name: json.user.profile.first_name,
         image: json.user.profile.image
-      });
+      }, getUserData);
       history.push("/");
     })
     .catch(err => {
       console.log(err);
       alert("Please enter valid email and password");
+    });
+}
+
+export function getUserData() {
+  fetch(`${BASE_URL}/auth/user`, {
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`
+    }
+  })
+    .then(res => res.json())
+    .then(json => {
+      // console.log(json);
+      if (json.detail == "Invalid token.") {
+        this.handleLogout();
+      } else {
+        this.setState(
+          {
+            email: json.email,
+            first_name: json.profile.first_name,
+            image: json.profile.image,
+            userid: json.id,
+            profileLoaded: true
+          },
+          this.logState
+        );
+      }
     });
 }
 
