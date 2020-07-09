@@ -88,7 +88,44 @@ class ForumPageHashtag extends Component {
     alert("something happens");
   }
   render() {
+    let hashtagData = this.state.hashtagData
+    let postList = [], forumPosts = []
     console.log(this.state.hashtagData)
+
+    if (hashtagData.posts) {
+      postList = hashtagData.posts
+
+      forumPosts = postList.map(post => {
+        let date = new Date(post.time)
+        return (
+          <ForumContainer
+            className="ForumPost"
+            key={post.id}
+            forumPost={{
+              key: post.id,
+              postId: post.id,
+              pillClick: this.pillClick,
+              commentClick: this.commentClick,
+              likeClick: this.likeclick,
+              to: `/profile/${post.author.user}`,
+              name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
+              likes: post.likes,
+              comments: post.comments,
+              topics: post.topics,
+              image: post.author.image,
+              post: {
+                title: post.title,
+                date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+                time: `${date.getHours()}:${date.getMinutes()}`,
+                body: post.body,
+                hashtags: post.hashtags,
+              },
+            }}
+          />
+        )
+      })
+    }
+
     return (
       <div className="ForumPage">
         <NavBar page={2} profileImage={people} />
@@ -141,51 +178,7 @@ class ForumPageHashtag extends Component {
           <div className="hashtag__bodyLeft">
             <header className="ForumPage__header"></header>
             <div>
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
+              {/* {forumPosts} */}
             </div>
           </div>
           <div className="hashtag__bodyRight">
