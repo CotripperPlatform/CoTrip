@@ -9,6 +9,9 @@ import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
 import Footer from "../../components/Footer/Footer";
 import MediaCard from "../../components/MediaCard/MediaCard";
+import axios from 'axios';
+import { BASE_URL } from '../../services/constants';
+
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
 import van from "../../assets/images/media-card-3.png";
@@ -16,13 +19,37 @@ import nightSky from "../../assets/images/media-card-4.png";
 import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
 
-class ForumPageHastag extends Component {
+class ForumPageHashtag extends Component {
   constructor(props) {
     super(props);
     this.state = {
       followTag: false,
-      showModal: false
+      showModal: false,
+      hashtagId: props.hashtagId,
+      hashtagData: [],
     };
+  }
+
+  componentDidMount() {
+    this.getPosts()
+  }
+
+  getPosts = () => {
+    if (this.state.hashtagId !== undefined) {
+      axios.get(`${BASE_URL}/hashtags/${this.state.hashtagId}`,
+        {
+          headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`
+          }
+        })
+        .then(res => {
+          console.log(res)
+          this.setState({
+            hashtagData: res.data
+          })
+        })
+        .catch(res => console.log(res))
+    }
   }
 
   handleConfirm = evt => {
@@ -61,6 +88,7 @@ class ForumPageHastag extends Component {
     alert("something happens");
   }
   render() {
+    console.log(this.state.hashtagData)
     return (
       <div className="ForumPage">
         <NavBar page={2} profileImage={people} />
@@ -92,22 +120,22 @@ class ForumPageHastag extends Component {
               />
             </div>
           ) : (
-            <div className="Modal_align">
-              <ModalContainerFollow
-                buttonText="Follow #hashtag"
-                buttonTextColor="black"
-                buttonColor="yellow"
-                buttonSize="small"
-                message="Are you sure you want to follow?"
-                confirmText="Follow"
-                cancelText="Exit"
-                onConfirm={this.handleConfirm}
-                onClose={this.handleCloseModal}
-                modalOpen={this.state.showModal}
-                handleOpenModal={this.handleOpenModal}
-              />
-            </div>
-          )}
+              <div className="Modal_align">
+                <ModalContainerFollow
+                  buttonText="Follow #hashtag"
+                  buttonTextColor="black"
+                  buttonColor="yellow"
+                  buttonSize="small"
+                  message="Are you sure you want to follow?"
+                  confirmText="Follow"
+                  cancelText="Exit"
+                  onConfirm={this.handleConfirm}
+                  onClose={this.handleCloseModal}
+                  modalOpen={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                />
+              </div>
+            )}
         </Banner>{" "}
         <div className="hashtag__body">
           <div className="hashtag__bodyLeft">
@@ -196,4 +224,8 @@ class ForumPageHastag extends Component {
   }
 }
 
-export default ForumPageHastag;
+ForumPageHashtag.defaultProps = {
+  hashtagId: 1,
+};
+
+export default ForumPageHashtag;
