@@ -6,9 +6,6 @@ import Profile2 from "../../assets/images/card_profile3.png";
 
 // Function based React Component
 const Comment = props => {
-  // Default Class to apply to Component
-  // No props right now but when there is data we can use
-  // this.props.comment and this.props.date
   const { body, date, time, to, image, name, likes } = props;
 
   return (

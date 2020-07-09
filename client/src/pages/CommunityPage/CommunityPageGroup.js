@@ -10,8 +10,7 @@ import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import UpcomingEventsCard from "../../components/UpcomingEventsCard/UpcomingEventsCard";
 import Footer from "../../components/Footer/Footer";
-import axios from 'axios';
-
+import { getGroup, getAllGroups } from "../../services/Groups";
 
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
@@ -21,7 +20,6 @@ import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Connections from "../../components/Connections/Connections";
-import { BASE_URL } from '../../services/constants';
 
 class CommunityPageGroup extends Component {
   constructor(props) {
@@ -34,47 +32,18 @@ class CommunityPageGroup extends Component {
       groupId: startGroup,
       groupData: {},
     };
+
+    this.getAllGroups = getAllGroups.bind(this);
+    this.getGroup = getGroup.bind(this);
+
   }
 
   componentDidMount() {
     this.getGroup()
-    this.getGroups()
+    this.getAllGroups()
   }
 
-  getGroup = () => {
-    if (this.state.groupId !== undefined) {
-      axios.get(`${BASE_URL}/groups/${this.state.groupId}`,
-        {
-          headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`
-          }
-        })
-        .then(res => {
 
-          this.setState({
-            groupData: res.data
-          })
-        })
-        .catch(res => console.log(res))
-    }
-  }
-
-  getGroups = () => {
-    axios.get(`${BASE_URL}/groups`,
-      {
-        headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`
-        }
-      })
-      .then(res => {
-
-        this.setState({
-          groupList: res.data
-        })
-      })
-      .catch(res => console.log(res))
-
-  }
 
   handleConfirm = evt => {
     evt.preventDefault();
@@ -125,7 +94,6 @@ class CommunityPageGroup extends Component {
   };
 
   render() {
-    //Set Placeholder for group search
     let groupList = this.state.groupList
 
     // TO DO: Media Section, Upcoming Events Section
