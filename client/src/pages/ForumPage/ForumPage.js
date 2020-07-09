@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component } from "react";
 import "./ForumPage.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
@@ -10,6 +10,9 @@ import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
 
+import { BASE_URL } from '../../services/constants';
+import axios from 'axios';
+
 const handleSelect = props => {
   console.log(props);
 };
@@ -20,7 +23,30 @@ const handleClick = e => {
   console.log("Clicked");
 };
 
-const ForumPage = props => {
+class ForumPage extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      topics: []
+    }
+  }
+
+componentDidMount() {
+  axios.get(`${BASE_URL}/topics`)
+    .then(response => {
+      this.setState({ 
+        topics: response.data
+      })
+    })
+    .catch(error => {
+      console.log('Error', error);
+    })
+}
+
+render() {
+  
+  const topics = this.state.topics ? this.state.topics: [];
+
   return (
     <div className="ForumPage">
       <NavBar page={2} profileImage={people} />
@@ -34,7 +60,7 @@ const ForumPage = props => {
         />
       </Banner>
       <div className="secondNav">
-        <a className="secondNav">
+        <a href className="secondNav">
           <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
         </a>
         <a className="secondNav" href="./forum-page-discover">
@@ -64,107 +90,23 @@ const ForumPage = props => {
           <header className="ForumPage__header">My Favorite Topics</header>
         </div>
         <div className="forum-page-pill-container">
+        {topics.map(topics =>{
+        
+        return(
+          <div className="Forum-Pill">
           <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
+            text={topics.title}
             size={"medium"}
-            size={"short"}
             color={"red"}
             icon={"white"}
             onClick={pillClick}
             selectId={0}
           />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"red"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-        </div>
+          </div>
+          )
+        })
+      }
+        
         <div>
           <header className="ForumPage__header">
             #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
@@ -174,7 +116,7 @@ const ForumPage = props => {
           <Pill
             text={"#hashtags"}
             size={"medium"}
-            size={"short"}
+            
             color={"pink"}
             icon={"pink"}
             shadow
@@ -185,7 +127,7 @@ const ForumPage = props => {
           <Pill
             text={"#hashtags"}
             size={"medium"}
-            size={"short"}
+            
             color={"pink"}
             icon={"pink"}
             shadow
@@ -196,7 +138,7 @@ const ForumPage = props => {
           <Pill
             text={"#hashtags"}
             size={"medium"}
-            size={"short"}
+        
             color={"pink"}
             icon={"pink"}
             shadow
@@ -207,7 +149,7 @@ const ForumPage = props => {
           <Pill
             text={"#hashtags"}
             size={"medium"}
-            size={"short"}
+            
             color={"pink"}
             icon={"pink"}
             shadow
@@ -218,7 +160,7 @@ const ForumPage = props => {
           <Pill
             text={"#hashtags"}
             size={"medium"}
-            size={"short"}
+           
             color={"pink"}
             icon={"pink"}
             shadow
@@ -229,9 +171,11 @@ const ForumPage = props => {
         </div>
         <div className="ForumPage__button-container"></div>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
-    </div>
+      <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
+      </div>
+      </div>
   );
 };
+}
 
 export default ForumPage;
