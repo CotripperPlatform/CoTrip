@@ -17,12 +17,10 @@ import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__pink from "assets/images/Banner__pink.png";
 import Banner from "../../components/Banner/Banner";
 import GroupsList from "../../components/GroupsList/GroupsList";
-import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
 import BioStagnant from "../../components/Bio/BioStagnant";
-
 
 import { BASE_URL } from "../../services/constants";
 import axios from "axios";
@@ -80,47 +78,10 @@ class MemberProfilePage extends Component {
   // Runs right before a component is removed from the DOM
   componentWillUnmount() {}
 
-  handleEmailChange = evt => {
-    this.setState({ email: evt.target.value });
-  };
-
-  handlePasswordChange = evt => {
-    this.setState({ password: evt.target.value });
-  };
-
-  handleLogin = evt => {
-    console.log("Email: " + this.state.email);
-    console.log("Password: " + this.state.password);
-  };
-
-  handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
-  handleSubmit = e => {
-    e.preventDefault();
-    if (this.state.newPassword === this.state.confirmPassword) {
-    fetch(`${BASE_URL}/auth/password_change`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(this.state)
-    })
-      .then(res => res.json())
-      .then(json => {
-        console.log(json)
-        alert(json)
-      })
-    } else {
-      alert("Password do not match")
-    }
-  };
 
   inputValue = evt => {};
+
   render() {
-    console.log(this.state);
-    console.log(this.props);
     let people = [
       {
         name: "Suzie",
@@ -215,7 +176,6 @@ class MemberProfilePage extends Component {
                       bio={this.state.protectedProfileData.bio}
                       hashtags={people[0].hashtags}
                       isCurrentUser={true}
-                      
                     />
                   ) : (
                     ""
@@ -230,40 +190,6 @@ class MemberProfilePage extends Component {
                   users={testUsers.slice(0, 6)}
                   extraUsers="View All"
                 />
-              </div>
-              <div className="Change_password">
-                <form className="LoginPage__form" onSubmit={this.handleSubmit}>
-                  <InputTextField
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    onChange={this.handleChange}
-                    value={this.state.email}
-                  />
-                  <InputTextField
-                    name="currentPassword"
-                    type="password"
-                    placeholder="Current Password"
-                    onChange={this.handleChange}
-                    value={this.state.currentPassword}
-                  />
-                  <InputTextField
-                    name="newPassword"
-                    type="password"
-                    placeholder="New password"
-                    onChange={this.handleChange}
-                    value={this.state.newPassword}
-                  />
-                  <InputTextField
-                    name="confirmPassword"
-                    type="password"
-                    placeholder="Confirm Password"
-                    onChange={this.handleChange}
-                    value={this.state.confirmPassword}
-                  />
-
-                  <input className="LoginPage__submit" text="Login" type="submit" />
-                </form>
               </div>
             </div>
 

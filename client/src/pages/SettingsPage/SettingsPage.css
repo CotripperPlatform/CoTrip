@@ -1,0 +1,13 @@
+.container__settings {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.password_header {
+    color: #6a4c93;
+    font-size: 1.4rem;
+}
+
+.change_password {
+    margin: 2rem 0;
+}

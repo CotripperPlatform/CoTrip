@@ -4,6 +4,8 @@ import Banner__pink from "assets/images/Banner__pink.png";
 import Banner from "../../components/Banner/Banner";
 import Bio from "../../components/Bio/Bio";
 import InputTextField from "../../components/InputTextField/InputTextField";
+import Footer from "../../components/Footer/Footer";
+import "./SettingsPage.css";
 
 // test image for nav
 import pic1 from "../../assets/images/profile-picture-1.png";
@@ -94,8 +96,6 @@ class SettingsPage extends Component {
       },
       { name: "Martha", bio: "sup yall" }
     ];
-    console.log(this.props.userid);
-    console.log(this.state);
 
     return (
       <div>
@@ -107,52 +107,55 @@ class SettingsPage extends Component {
             <h3 style={{ margin: 0 }}>User Profile Settings</h3>
           </div>
         </Banner>
+        <div className="container__settings">
+          <Bio
+            userid={this.props.userid}
+            type="default"
+            first_name={this.props.first_name}
+            last_name={this.state.protectedProfileData.last_name}
+            // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
+            bio={this.state.protectedProfileData.bio}
+            hashtags={people[0].hashtags}
+            isCurrentUser={true}
+            onClick={console.log("Hello")}
+          />
+          <div className="change_password">
+              <h2 className="password_header">Change Your Password</h2>
+            <form onSubmit={this.handleSubmit}>
+              <InputTextField
+                name="email"
+                type="email"
+                placeholder="Email"
+                onChange={this.handleChange}
+                value={this.state.email}
+              />
+              <InputTextField
+                name="currentPassword"
+                type="password"
+                placeholder="Current Password"
+                onChange={this.handleChange}
+                value={this.state.currentPassword}
+              />
+              <InputTextField
+                name="newPassword"
+                type="password"
+                placeholder="New password"
+                onChange={this.handleChange}
+                value={this.state.newPassword}
+              />
+              <InputTextField
+                name="confirmPassword"
+                type="password"
+                placeholder="Confirm Password"
+                onChange={this.handleChange}
+                value={this.state.confirmPassword}
+              />
 
-        <Bio
-          userid={this.props.userid}
-          type="default"
-          first_name={this.props.first_name}
-          last_name={this.state.protectedProfileData.last_name}
-          // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
-          bio={this.state.protectedProfileData.bio}
-          hashtags={people[0].hashtags}
-          isCurrentUser={true}
-          onClick={console.log("Hello")}
-        />
-        <div className="Change_password">
-          <form className="LoginPage__form" onSubmit={this.handleSubmit}>
-            <InputTextField
-              name="email"
-              type="email"
-              placeholder="Email"
-              onChange={this.handleChange}
-              value={this.state.email}
-            />
-            <InputTextField
-              name="currentPassword"
-              type="password"
-              placeholder="Current Password"
-              onChange={this.handleChange}
-              value={this.state.currentPassword}
-            />
-            <InputTextField
-              name="newPassword"
-              type="password"
-              placeholder="New password"
-              onChange={this.handleChange}
-              value={this.state.newPassword}
-            />
-            <InputTextField
-              name="confirmPassword"
-              type="password"
-              placeholder="Confirm Password"
-              onChange={this.handleChange}
-              value={this.state.confirmPassword}
-            />
-
-            <input className="LoginPage__submit" text="Login" type="submit" />
-          </form>
+              <input className="LoginPage__submit" text="Login" type="submit" />
+            </form>
+          </div>
         </div>
+        <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
       </div>
     );
   }
