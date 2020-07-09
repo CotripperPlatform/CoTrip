@@ -79,7 +79,7 @@ ForumPost.propTypes = {
   pillClick: PropTypes.func.isRequired,
   to: PropTypes.string,
   likes: PropTypes.number,
-  comments: PropTypes.number,
+  comments: PropTypes.array,
   name: PropTypes.string,
   image: PropTypes.string,
   topics: PropTypes.array,

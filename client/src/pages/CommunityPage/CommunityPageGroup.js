@@ -101,54 +101,40 @@ class CommunityPageGroup extends Component {
     let postList = [], forumPosts = []
 
     // Generates Forum Posts using ForumContainer component. 
-    //   TO DO: Implement comment replies.
+    //   TO DO: Implement comment replies, if desired.
     if (groupData.posts) {
       postList = groupData.posts
 
       forumPosts = postList.map(post => {
-        let comments = post.comments
-        comments = comments.map(comment => {
-          let date = new Date(comment.time)
-          return ({
-            name: `${comment.author.first_name} ${comment.author.last_name[0].toUpperCase()}`,
-            to: `/profile/${comment.author.user}`,
-            likes: comment.likes,
-            date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
-            time: `${date.getHours()}:${date.getMinutes()}`,
-            body: comment.body,
-            image: comment.author.image
-          })
-        })
-        if (post.post_type === 'Post') {
-          let date = new Date(post.time)
-          return (
-            <ForumContainer
-              className="ForumPost"
-              key={post.id}
-              forumPost={{
-                pillClick: this.pillClick,
-                commentClick: this.commentClick,
-                likeClick: this.likeclick,
-                to: `/profile/${post.author.user}`,
-                name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
-                likes: post.likes,
-                comments: comments,
-                // topics: post.topics,  // TO DO:  Add topics to Post Model
-                image: post.author.image,
-                post: {
-                  title: post.title,
-                  date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
-                  time: `${date.getHours()}:${date.getMinutes()}`,
-                  body: post.body,
-                  // hashtags: post.hashtags,    // TO DO:  Add hashtags to Post Model
-                },
-              }}
-            />
-          )
-        } else return ""
+        let date = new Date(post.time)
+        return (
+          <ForumContainer
+            className="ForumPost"
+            key={post.id}
+            forumPost={{
+              key: post.id,
+              postId: post.id,
+              pillClick: this.pillClick,
+              commentClick: this.commentClick,
+              likeClick: this.likeclick,
+              to: `/profile/${post.author.user}`,
+              name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
+              likes: post.likes,
+              comments: post.comments,
+              topics: post.topics,
+              image: post.author.image,
+              post: {
+                title: post.title,
+                date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+                time: `${date.getHours()}:${date.getMinutes()}`,
+                body: post.body,
+                hashtags: post.hashtags,
+              },
+            }}
+          />
+        )
       })
     }
-    console.log(groupList)
     return (
       <div>
         <div className="CommunityPage-Group-">

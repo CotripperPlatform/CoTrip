@@ -11,6 +11,7 @@ export default function ForumPostContainer(props) {
       <div>
         {props.forumPost ? (
           <ForumPost
+            key={props.postId}
             pillClick={props.forumPost.pillClick}
             commentClick={props.forumPost.commentClick}
             likeClick={props.forumPost.likeClick}
@@ -21,6 +22,8 @@ export default function ForumPostContainer(props) {
             topics={props.forumPost.topics}
             image={props.forumPost.image}
             post={props.forumPost.post}
+            topic={props.forumPost.topic}
+            hashtags={props.forumPost.hashtags}
           />
         ) : (
             <ForumPost />
@@ -31,6 +34,7 @@ export default function ForumPostContainer(props) {
           comments.map((comment, i) => {
             return (
               <Comment
+                key={comment.id}
                 {...comment}
               />
             );
