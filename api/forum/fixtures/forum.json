@@ -240,7 +240,12 @@
       "likes": 1,
       "author": 1,
       "parent": [],
-      "hashtag": 1
+      "group": null,
+      "hashtags": [
+        1,
+        2
+      ],
+      "topics": []
     }
   },
   {
@@ -254,7 +259,11 @@
       "likes": 2,
       "author": 2,
       "parent": [],
-      "hashtag": 2
+      "group": null,
+      "hashtags": [
+        2
+      ],
+      "topics": []
     }
   },
   {
@@ -268,7 +277,12 @@
       "likes": 3,
       "author": 3,
       "parent": [],
-      "hashtag": 3
+      "group": null,
+      "hashtags": [
+        3,
+        2
+      ],
+      "topics": []
     }
   },
   {
@@ -284,7 +298,12 @@
       "parent": [
         16
       ],
-      "hashtag": 1
+      "group": null,
+      "topics": [],
+      "hashtags": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -300,7 +319,11 @@
       "parent": [
         17
       ],
-      "hashtag": 2
+      "group": null,
+      "topics": [],
+      "hashtags": [
+        2
+      ]
     }
   },
   {
@@ -316,7 +339,11 @@
       "parent": [
         18
       ],
-      "hashtag": 3
+      "group": null,
+      "topics": [],
+      "hashtags": [
+        3
+      ]
     }
   },
   {
@@ -332,7 +359,149 @@
       "parent": [
         18
       ],
-      "hashtag": 3
+      "group": null,
+      "topics": [],
+      "hashtags": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 23,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for topics. Msg - 1",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for topics. Msg - 1 et aut officiis debitis aut rerum.",
+      "likes": 1,
+      "author": 1,
+      "parent": [],
+      "group": null,
+      "hashtags": [],
+      "topics": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 24,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for topics. Msg - 2",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for topics. Msg - 2 et aut officiis debitis aut rerum.",
+      "likes": 2,
+      "author": 2,
+      "parent": [],
+      "group": null,
+      "hashtags": [],
+      "topics": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 25,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for topics. Msg - 3",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for topics. Msg - 3 et aut officiis debitis aut rerum.",
+      "likes": 3,
+      "author": 3,
+      "parent": [],
+      "group": null,
+      "hashtags": [],
+      "topics": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 26,
+    "fields": {
+      "post_type": "Reply",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 2,
+      "parent": [
+        23
+      ],
+      "group": null,
+      "topics": [
+        1,
+        2
+      ],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 27,
+    "fields": {
+      "post_type": "Reply",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 3,
+      "parent": [
+        24
+      ],
+      "group": null,
+      "topics": [
+        2
+      ],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 28,
+    "fields": {
+      "post_type": "Reply",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 4,
+      "parent": [
+        25
+      ],
+      "group": null,
+      "topics": [
+        1,
+        3
+      ],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 29,
+    "fields": {
+      "post_type": "Reply",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 1,
+      "parent": [
+        25
+      ],
+      "group": null,
+      "topics": [
+        2,
+        3
+      ],
+      "hashtags": []
     }
   }
 ]

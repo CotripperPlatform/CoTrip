@@ -1,6 +1,6 @@
 from django.db import models
 from accounts.models import Profile
-from community.models import Group, Hashtag, Topic
+from community.models import Group
 
 
 class Post(models.Model):
@@ -14,11 +14,12 @@ class Post(models.Model):
     author = models.ForeignKey(Profile,
                                on_delete=models.CASCADE, related_name='posts', null=True)
     group = models.ForeignKey(
-        Group, on_delete=models.CASCADE, related_name='posts', null=True, blank=True)
-    hashtag = models.ManyToManyField(
-        Hashtag, related_name='posts', null=True, blank=True)
-    topic = models.ForeignKey(
-        Topic, on_delete=models.CASCADE, related_name='posts', null=True, blank=True)
+        Group, on_delete=models.CASCADE, related_name='posts', null=True)
+
+    hashtags = models.ManyToManyField(
+        'community.hashtag', related_name='posts', null=True, blank=True)
+    topics = models.ManyToManyField(
+        'community.hashtag', related_name='TopicPosts', null=True, blank=True)
 
     def __str__(self):
         return self.title
