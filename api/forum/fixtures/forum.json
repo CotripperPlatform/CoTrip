@@ -234,9 +234,9 @@
     "pk": 16,
     "fields": {
       "post_type": "Post",
-      "title": "Post placeholder text for hashtags. Msg - 1 ",
+      "title": "Post placeholder text for hashtags. Msg - 1",
       "time": "2020-04-09T20:13:15.180134Z",
-      "body": "Post placeholder text for hashtags. Msg - 1  et aut officiis debitis aut rerum.",
+      "body": "Post placeholder text for hashtags. Msg - 1 et aut officiis debitis aut rerum.",
       "likes": 1,
       "author": 1,
       "parent": [],
