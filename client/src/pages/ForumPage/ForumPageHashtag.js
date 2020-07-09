@@ -9,8 +9,7 @@ import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
 import Footer from "../../components/Footer/Footer";
 import MediaCard from "../../components/MediaCard/MediaCard";
-import axios from 'axios';
-import { BASE_URL } from '../../services/constants';
+import { getHashtagData } from "../../services/Community";
 
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
@@ -28,28 +27,12 @@ class ForumPageHashtag extends Component {
       hashtagId: props.hashtagId,
       hashtagData: [],
     };
+
+    this.getHashtagData = 
   }
 
   componentDidMount() {
-    this.getHashtags()
-  }
-
-  getHashtags = () => {
-    if (this.state.hashtagId !== undefined) {
-      axios.get(`${BASE_URL}/hashtags/${this.state.hashtagId}`,
-        {
-          headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`
-          }
-        })
-        .then(res => {
-          console.log(res)
-          this.setState({
-            hashtagData: res.data
-          })
-        })
-        .catch(res => console.log(res))
-    }
+    this.getHashtagData()
   }
 
   handleConfirm = evt => {
