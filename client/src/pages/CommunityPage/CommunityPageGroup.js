@@ -4,11 +4,13 @@ import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
+import InputSelect from "../../components/InputSelect/InputSelect";
 import Banner__Community from "assets/images/community_banner.png";
 import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import UpcomingEventsCard from "../../components/UpcomingEventsCard/UpcomingEventsCard";
 import Footer from "../../components/Footer/Footer";
+import { getGroup, getAllGroups } from "../../services/Groups";
 
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
@@ -16,70 +18,36 @@ import van from "../../assets/images/media-card-3.png";
 import nightSky from "../../assets/images/media-card-4.png";
 import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
-import pic1 from "../../assets/images/profile-picture-1.png";
-import pic2 from "../../assets/images/profile-picture-2.png";
-import pic3 from "../../assets/images/profile-picture-3.png";
-import pic4 from "../../assets/images/profile-picture-4.png";
-import pic5 from "../../assets/images/profile-picture-5.png";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Connections from "../../components/Connections/Connections";
-
-let testUsers = [
-  {
-    userId: 1,
-    userFirstName: "Paula",
-    userSurname: "Bannerman",
-    userPic: pic1
-  },
-  {
-    userId: 2,
-    userFirstName: "Jack",
-    userSurname: "Johnson",
-    userPic: pic2
-  },
-  {
-    userId: 3,
-    userFirstName: "Jenny",
-    userSurname: "Jones",
-    userPic: pic3
-  },
-  {
-    userId: 4,
-    userFirstName: "Joan",
-    userSurname: "Rivers",
-    userPic: pic4
-  },
-  {
-    userId: 5,
-    userFirstName: "Freida",
-    userSurname: "Mercury",
-    userPic: pic5
-  },
-  {
-    userId: 6,
-    userFirstName: "Leslie",
-    userSurname: "Knope",
-    userPic: pic5
-  },
-  {
-    userId: 7,
-    userFirstName: "Frankie",
-    userSurname: "Ocean",
-    userPic: pic4
-  }
-];
 
 class CommunityPageGroup extends Component {
   constructor(props) {
     super(props);
+    let startGroup
+    !props.id ? startGroup = 1 : startGroup = props.id
     this.state = {
       joinGroup: false,
-      showModal: false
+      showModal: false,
+      groupId: startGroup,
+      groupData: {},
     };
+
+    this.getAllGroups = getAllGroups.bind(this);
+    this.getGroup = getGroup.bind(this);
+
   }
+
+  componentDidMount() {
+    this.getGroup()
+    this.getAllGroups()
+  }
+
+
 
   handleConfirm = evt => {
     evt.preventDefault();
+    this.submitJoinGroup()
     this.setState({
       joinGroup: true,
       showModal: false
@@ -113,7 +81,60 @@ class CommunityPageGroup extends Component {
     console.log(val);
   };
 
+  commentClick = val => {
+    console.log(val);
+  };
+
+  likeClick = val => {
+    console.log(val);
+  };
+
+  handleSelect = id => {
+    this.setState({ groupId: id }, this.getGroup)
+  };
+
   render() {
+    let groupList = this.state.groupList
+
+    // TO DO: Media Section, Upcoming Events Section
+    let groupData = this.state.groupData
+    let postList = [], forumPosts = []
+
+    // Generates Forum Posts using ForumContainer component. 
+    //   TO DO: Implement comment replies, if desired.
+    if (groupData.posts) {
+      postList = groupData.posts
+
+      forumPosts = postList.map(post => {
+        let date = new Date(post.time)
+        return (
+          <ForumContainer
+            className="ForumPost"
+            key={post.id}
+            forumPost={{
+              key: post.id,
+              postId: post.id,
+              pillClick: this.pillClick,
+              commentClick: this.commentClick,
+              likeClick: this.likeclick,
+              to: `/profile/${post.author.user}`,
+              name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
+              likes: post.likes,
+              comments: post.comments,
+              topics: post.topics,
+              image: post.author.image,
+              post: {
+                title: post.title,
+                date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+                time: `${date.getHours()}:${date.getMinutes()}`,
+                body: post.body,
+                hashtags: post.hashtags,
+              },
+            }}
+          />
+        )
+      })
+    }
     return (
       <div>
         <div className="CommunityPage-Group-">
@@ -121,7 +142,7 @@ class CommunityPageGroup extends Component {
           <Banner background={Banner__Community}>
             <div className="community-page-header">
               {" "}
-              <h3 style={{ margin: 0 }}>Group: Moms in DC</h3>
+              <h3 style={{ margin: 0 }}>{this.state.groupData.title}</h3>
             </div>
             <InputTextField
               type="text"
@@ -129,6 +150,18 @@ class CommunityPageGroup extends Component {
               placeholder="Search Groups"
               variation="wide"
             />
+            {!groupList ? "" :
+              <InputSelect
+                options={groupList.map(group => {
+                  return ({
+                    value: group.id,
+                    title: group.title,
+                  })
+                })}
+                onSelect={this.handleSelect}
+                optionPrefix=""
+              />
+            }
             {this.state.joinGroup ? (
               <div className="Modal_align">
                 <ModalContainerJoin
@@ -146,88 +179,41 @@ class CommunityPageGroup extends Component {
                 />
               </div>
             ) : (
-              <div className="Modal_align">
-                <ModalContainerJoin
-                  buttonText="Join"
-                  buttonTextColor="black"
-                  buttonColor="yellow"
-                  buttonSize="small"
-                  message="Are you sure you want to join?"
-                  confirmText="Join"
-                  cancelText="Exit"
-                  onConfirm={this.handleConfirm}
-                  onClose={this.handleCloseModal}
-                  modalOpen={this.state.showModal}
-                  handleOpenModal={this.handleOpenModal}
-                />
-              </div>
-            )}
+                <div className="Modal_align">
+                  <ModalContainerJoin
+                    buttonText="Join"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
+                    buttonSize="small"
+                    message="Are you sure you want to join?"
+                    confirmText="Join"
+                    cancelText="Exit"
+                    onConfirm={this.handleConfirm}
+                    onClose={this.handleCloseModal}
+                    modalOpen={this.state.showModal}
+                    handleOpenModal={this.handleOpenModal}
+                  />
+                </div>
+              )}
           </Banner>{" "}
         </div>{" "}
         <div className="community-group-body">
           <div className="community-group-bodyLeft">
             <div>
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
+              {forumPosts}
             </div>
           </div>
           <div className="community-group-bodyRight">
             <div className="community-group-members_description">
               <h2>Description</h2>
               <p className="community-group-members_description_p">
-                This forum page is the place to discuss the ins and outs, as well as the ups and
-                downs of parenting. You can get advice on potty training, talk about breastfeeding,
-                discuss how to get your baby to sleep, or ask if that one weird thing your kid does
-                is normal. We welcome mothers of all stages in life!
+                {groupData.description}
               </p>
             </div>
             <div className="community-group-members_section">
               <h2>Members</h2>
               <div className="community-group-members_topic">
-                <Connections userViewing={true} users={testUsers} extraUsers="See More" />
+                <Connections userViewing={true} users={groupData.members} extraUsers="See More" />
               </div>
             </div>
             <h2>Upcoming Events</h2>
@@ -279,7 +265,7 @@ class CommunityPageGroup extends Component {
         </div>
         <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
-    );
+    )
   }
 }
 export default CommunityPageGroup;

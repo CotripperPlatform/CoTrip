@@ -4,7 +4,10 @@ from accounts.serializers import ProfileSerializer, UserSerializer
 
 
 class PostSerializer(serializers.ModelSerializer):
-    # author = ProfileSerializer()
+    author = ProfileSerializer()
+
     class Meta:
         model = Post
-        fields = '__all__'
+        depth = 2
+        fields = ['id', 'parent', 'comments', 'post_type', 'title',
+                  'time', 'body', 'likes', 'author', 'group']

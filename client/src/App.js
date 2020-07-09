@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -13,12 +13,10 @@ import ForumPage from "./pages/ForumPage/ForumPage";
 import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
 import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups";
 import HomePage from "../src/pages/HomePage/HomePage";
-import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberProfilePage from "./pages/MemberProfilePage/MemberProfilePage";
 import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import HomePageOldUser from "../src/pages/HomePageOldUser/HomePageOldUser";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -68,7 +66,7 @@ class App extends Component {
       image: "",
       profileLoaded: false,
       menuItems: [
-        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "My Directory", link: "/" },
         { menuItem: "Community", link: "/community" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" }
@@ -109,11 +107,22 @@ class App extends Component {
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
+    const loggedIn = this.state.logged_in;
     return (
       <div className="App">
         <main>
-          <Route path="/" exact component={SplashPage}></Route>
-          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+          {loggedIn ? (
+            <Route
+              path="/"
+              exact
+              render={routerProps => (
+                <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              )}
+            ></Route>
+          ) : (
+              <Redirect to="/welcome" />
+            )}
+          <Route path="/welcome" exact component={SplashPage}></Route>
           <Route
             path="/TripDetail"
             exact
@@ -132,7 +141,7 @@ class App extends Component {
             path="/community/view-group"
             exact
             render={routerProps => (
-              <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
+              <CommunityPageGroup handle_logout={this.handleLogout} {...this.state} {...routerProps} />
             )}
           ></Route>
           <Route
@@ -162,15 +171,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-            ""
-          )}
-          <Route
-            path="/coming_soon"
-            exact
-            render={routerProps => (
-              <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              ""
             )}
-          ></Route>
           <Route
             path="/forum-page"
             exact
@@ -222,6 +224,13 @@ class App extends Component {
             )}
           ></Route>
           <Route
+            path="/profile/:id"
+            exact
+            render={routerProps => (
+              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
             path="/login"
             exact
             render={routerProps => (
@@ -237,20 +246,6 @@ class App extends Component {
                 {...routerProps}
                 logged_in={this.state.logged_in}
               />
-            )}
-          ></Route>
-          <Route
-            path="/home"
-            exact
-            render={routerProps => (
-              <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/home-old-user"
-            exact
-            render={routerProps => (
-              <HomePageOldUser handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
         </main>

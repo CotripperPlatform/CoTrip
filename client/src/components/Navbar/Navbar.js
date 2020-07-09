@@ -32,7 +32,7 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
-          <Logo clickable to="/home" />
+          <Logo clickable to="/" />
         </div>
         <div className="Navbar__burger">
           {/* Handles activating the hamburger animation and displays the menu. */}
