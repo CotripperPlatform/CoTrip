@@ -31,10 +31,10 @@ class ForumPageHashtag extends Component {
   }
 
   componentDidMount() {
-    this.getPosts()
+    this.getHashtags()
   }
 
-  getPosts = () => {
+  getHashtags = () => {
     if (this.state.hashtagId !== undefined) {
       axios.get(`${BASE_URL}/hashtags/${this.state.hashtagId}`,
         {
