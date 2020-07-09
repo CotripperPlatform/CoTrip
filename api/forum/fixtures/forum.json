@@ -242,7 +242,8 @@
       "parent": [],
       "group": null,
       "hashtags": [
-        1
+        1,
+        2
       ],
       "topics": []
     }
@@ -278,7 +279,8 @@
       "parent": [],
       "group": null,
       "hashtags": [
-        3
+        3,
+        2
       ],
       "topics": []
     }
@@ -299,7 +301,8 @@
       "group": null,
       "topics": [],
       "hashtags": [
-        1
+        1,
+        2
       ]
     }
   },
@@ -377,7 +380,8 @@
       "group": null,
       "hashtags": [],
       "topics": [
-        1
+        1,
+        3
       ]
     }
   },
@@ -432,6 +436,7 @@
       ],
       "group": null,
       "topics": [
+        1,
         2
       ],
       "hashtags": []
@@ -472,6 +477,7 @@
       ],
       "group": null,
       "topics": [
+        1,
         3
       ],
       "hashtags": []
@@ -492,6 +498,7 @@
       ],
       "group": null,
       "topics": [
+        2,
         3
       ],
       "hashtags": []
