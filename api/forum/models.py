@@ -1,6 +1,6 @@
 from django.db import models
 from accounts.models import Profile
-from community.models import Group
+from community.models import Group, Hashtag, Topic
 
 
 class Post(models.Model):
