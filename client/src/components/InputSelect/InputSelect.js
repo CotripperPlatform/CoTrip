@@ -14,7 +14,6 @@ class InputSelect extends Component {
 
   handleChange(e) {
     e.preventDefault();
-    console.log(e.target.value)
     this.setState({ value: e.target.value });
     this.props.onSelect(e.target.value);
   }
