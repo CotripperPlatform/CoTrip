@@ -32,14 +32,6 @@ export default function ForumPostContainer(props) {
             return (
               <Comment
                 {...comment}
-              // name={comment.name}
-              // likes={comment.likes}
-              // replies={comment.replies}
-              // image={comment.image}
-              // date={comment.date}
-              // time={comment.time}
-              // body={comment.body}
-              // key={i}
               />
             );
           })
