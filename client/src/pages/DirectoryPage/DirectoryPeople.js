@@ -179,7 +179,6 @@ const DirectoryPeople = props => {
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

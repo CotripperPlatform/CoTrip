@@ -115,7 +115,6 @@ class ForumPageTopic extends Component {
     return (
       <div>
         <div className="ForumPage">
-          <NavBar page={2} profileImage={people} />
           <Banner background={Banner__Community}>
             <div className="community-page-header">
               {" "}
@@ -144,22 +143,22 @@ class ForumPageTopic extends Component {
                 />
               </div>
             ) : (
-              <div className="Modal_align">
-                <ModalContainerFollow
-                  buttonText="Follow Parenting"
-                  buttonTextColor="black"
-                  buttonColor="yellow"
-                  buttonSize="small"
-                  message="Are you sure you want to follow?"
-                  confirmText="Follow"
-                  cancelText="Exit"
-                  onConfirm={this.handleConfirm}
-                  onClose={this.handleCloseModal}
-                  modalOpen={this.state.showModal}
-                  handleOpenModal={this.handleOpenModal}
-                />
-              </div>
-            )}
+                <div className="Modal_align">
+                  <ModalContainerFollow
+                    buttonText="Follow Parenting"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
+                    buttonSize="small"
+                    message="Are you sure you want to follow?"
+                    confirmText="Follow"
+                    cancelText="Exit"
+                    onConfirm={this.handleConfirm}
+                    onClose={this.handleCloseModal}
+                    modalOpen={this.state.showModal}
+                    handleOpenModal={this.handleOpenModal}
+                  />
+                </div>
+              )}
           </Banner>{" "}
         </div>
         <div className="InputBox-Topic">
@@ -266,7 +265,6 @@ class ForumPageTopic extends Component {
             </div>
           </div>
         </div>
-        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
     );
   }
