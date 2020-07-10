@@ -17,11 +17,14 @@ export function handleSignup(data, history) {
     .then(res => res.json())
     .then(json => {
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
+
       this.setState({
         logged_in: json.token != undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
-        image: json.user.profile.image
+        image: json.user.profile.image,
+        profileLoaded: true,
+        userid: json.user.id
       });
       history.push("/");
     })
@@ -43,10 +46,10 @@ export function handleLogin(data, history) {
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
       this.setState({
         logged_in: json.token != undefined ? true : false,
-        profileLoaded: true,
         email: json.user.email,
         first_name: json.user.profile.first_name,
         image: json.user.profile.image,
+        profileLoaded: true,
         userid: json.user.id
       });
       history.push("/");
