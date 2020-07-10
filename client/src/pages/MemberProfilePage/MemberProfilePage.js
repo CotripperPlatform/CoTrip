@@ -218,7 +218,6 @@ class MemberProfilePage extends Component {
             <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
 
-          <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
       );
 

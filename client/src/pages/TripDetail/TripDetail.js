@@ -48,7 +48,6 @@ const TripDetail = props => {
       <div className="TripDetail__button-container">
         <Button text="Book Now" color="pink" size="large" handleClick={handleClick} />
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

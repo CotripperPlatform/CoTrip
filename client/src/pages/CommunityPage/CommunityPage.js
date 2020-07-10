@@ -1,7 +1,5 @@
 import React from "react";
 import "./CommunityPage.css";
-import NavBar from "../../components/Navbar/Navbar";
-import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
@@ -239,7 +237,6 @@ const CommunityPage = props => {
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

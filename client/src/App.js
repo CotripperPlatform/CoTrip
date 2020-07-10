@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar"
+import Footer from "./components/Footer/Footer"
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -111,13 +112,13 @@ class App extends Component {
     const loggedIn = this.state.logged_in;
     return (
       <div className="App">
+        <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={5}></Navbar>
         {loggedIn ? (
           <Route
             path="/"
             exact
             render={routerProps => (
               <main>
-                <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={5}></Navbar>
                 <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
               </main>
             )}
@@ -127,7 +128,7 @@ class App extends Component {
           )}
         <Route path="/welcome" exact component={SplashPage}></Route>
         <Route
-          path="/TripDetail"
+          path="/TripDetail:page"
           exact
           render={routerProps => (
             <main>
@@ -280,6 +281,8 @@ class App extends Component {
             />
           )}
         ></Route>
+        <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
+
       </div>
     );
   }
