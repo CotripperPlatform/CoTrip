@@ -79,7 +79,7 @@ class App extends Component {
     this.getUserData = getUserData.bind(this);
   }
   componentDidMount() {
-    if (this.state.logged_in) this.getUserData()
+    if (this.state.logged_in) { this.getUserData() }
   }
 
 

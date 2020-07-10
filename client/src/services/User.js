@@ -40,14 +40,15 @@ export function handleLogin(data, history) {
   })
     .then(res => res.json())
     .then(json => {
-      console.log(json.token);
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
       this.setState({
         logged_in: json.token != undefined ? true : false,
+        profileLoaded: true,
         email: json.user.email,
         first_name: json.user.profile.first_name,
-        image: json.user.profile.image
-      }, getUserData);
+        image: json.user.profile.image,
+        userid: json.user.id
+      });
       history.push("/");
     })
     .catch(err => {
@@ -64,7 +65,6 @@ export function getUserData() {
   })
     .then(res => res.json())
     .then(json => {
-      // console.log(json);
       if (json.detail == "Invalid token.") {
         this.handleLogout();
       } else {
