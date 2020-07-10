@@ -10,6 +10,9 @@ import ModalContainerJoin from "../../components/Modal/_ModalContainer-join";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import UpcomingEventsCard from "../../components/UpcomingEventsCard/UpcomingEventsCard";
 import Footer from "../../components/Footer/Footer";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+
 import { getGroup, getAllGroups } from "../../services/Groups";
 
 import books from "../../assets/images/media-card-1.png";
@@ -24,30 +27,27 @@ import Connections from "../../components/Connections/Connections";
 class CommunityPageGroup extends Component {
   constructor(props) {
     super(props);
-    let startGroup
-    !props.id ? startGroup = 1 : startGroup = props.id
+    let startGroup;
+    !props.id ? (startGroup = 1) : (startGroup = props.id);
     this.state = {
       joinGroup: false,
       showModal: false,
       groupId: startGroup,
-      groupData: {},
+      groupData: {}
     };
 
     this.getAllGroups = getAllGroups.bind(this);
     this.getGroup = getGroup.bind(this);
-
   }
 
   componentDidMount() {
-    this.getGroup()
-    this.getAllGroups()
+    this.getGroup();
+    this.getAllGroups();
   }
-
-
 
   handleConfirm = evt => {
     evt.preventDefault();
-    this.submitJoinGroup()
+    this.submitJoinGroup();
     this.setState({
       joinGroup: true,
       showModal: false
@@ -89,24 +89,32 @@ class CommunityPageGroup extends Component {
     console.log(val);
   };
 
-  handleSelect = id => {
-    this.setState({ groupId: id }, this.getGroup)
+  handleSelect = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+
+    this.state.groupList.map(group => {
+      if (userSubmission === group.title.toLowerCase()) {
+        this.setState({ groupId: group.id }, this.getGroup);
+      }
+    });
   };
 
   render() {
-    let groupList = this.state.groupList
+    console.log(getAllGroups);
+    let groupList = this.state.groupList;
 
     // TO DO: Media Section, Upcoming Events Section
-    let groupData = this.state.groupData
-    let postList = [], forumPosts = []
+    let groupData = this.state.groupData;
+    let postList = [],
+      forumPosts = [];
 
-    // Generates Forum Posts using ForumContainer component. 
+    // Generates Forum Posts using ForumContainer component.
     //   TO DO: Implement comment replies, if desired.
     if (groupData.posts) {
-      postList = groupData.posts
+      postList = groupData.posts;
 
       forumPosts = postList.map(post => {
-        let date = new Date(post.time)
+        let date = new Date(post.time);
         return (
           <ForumContainer
             className="ForumPost"
@@ -125,16 +133,17 @@ class CommunityPageGroup extends Component {
               image: post.author.image,
               post: {
                 title: post.title,
-                date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+                date: `${date.toLocaleString("default", { month: "long" })} ${date.getDate()}`,
                 time: `${date.getHours()}:${date.getMinutes()}`,
                 body: post.body,
-                hashtags: post.hashtags,
-              },
+                hashtags: post.hashtags
+              }
             }}
           />
-        )
-      })
+        );
+      });
     }
+
     return (
       <div>
         <div className="CommunityPage-Group-">
@@ -144,24 +153,18 @@ class CommunityPageGroup extends Component {
               {" "}
               <h3 style={{ margin: 0 }}>{this.state.groupData.title}</h3>
             </div>
-            <InputTextField
-              type="text"
-              name="search directory"
-              placeholder="Search Groups"
-              variation="wide"
-            />
-            {!groupList ? "" :
-              <InputSelect
-                options={groupList.map(group => {
-                  return ({
-                    value: group.id,
-                    title: group.title,
-                  })
-                })}
-                onSelect={this.handleSelect}
-                optionPrefix=""
+            {!groupList ? (
+              ""
+            ) : (
+              <Autocomplete
+                style={{ width: 300 }}
+                id="AutoStateField"
+                options={groupList}
+                getOptionLabel={option => option.title}
+                onChange={this.handleSelect}
+                renderInput={params => <TextField {...params} label="Group" variant="filled" />}
               />
-            }
+            )}
             {this.state.joinGroup ? (
               <div className="Modal_align">
                 <ModalContainerJoin
@@ -179,36 +182,32 @@ class CommunityPageGroup extends Component {
                 />
               </div>
             ) : (
-                <div className="Modal_align">
-                  <ModalContainerJoin
-                    buttonText="Join"
-                    buttonTextColor="black"
-                    buttonColor="yellow"
-                    buttonSize="small"
-                    message="Are you sure you want to join?"
-                    confirmText="Join"
-                    cancelText="Exit"
-                    onConfirm={this.handleConfirm}
-                    onClose={this.handleCloseModal}
-                    modalOpen={this.state.showModal}
-                    handleOpenModal={this.handleOpenModal}
-                  />
-                </div>
-              )}
+              <div className="Modal_align">
+                <ModalContainerJoin
+                  buttonText="Join"
+                  buttonTextColor="black"
+                  buttonColor="yellow"
+                  buttonSize="small"
+                  message="Are you sure you want to join?"
+                  confirmText="Join"
+                  cancelText="Exit"
+                  onConfirm={this.handleConfirm}
+                  onClose={this.handleCloseModal}
+                  modalOpen={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                />
+              </div>
+            )}
           </Banner>{" "}
         </div>{" "}
         <div className="community-group-body">
           <div className="community-group-bodyLeft">
-            <div>
-              {forumPosts}
-            </div>
+            <div>{forumPosts}</div>
           </div>
           <div className="community-group-bodyRight">
             <div className="community-group-members_description">
               <h2>Description</h2>
-              <p className="community-group-members_description_p">
-                {groupData.description}
-              </p>
+              <p className="community-group-members_description_p">{groupData.description}</p>
             </div>
             <div className="community-group-members_section">
               <h2>Members</h2>
@@ -265,7 +264,7 @@ class CommunityPageGroup extends Component {
         </div>
         <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
-    )
+    );
   }
 }
 export default CommunityPageGroup;
