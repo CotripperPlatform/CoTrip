@@ -103,13 +103,12 @@ class CommunityPageGroup extends Component {
     console.log(getAllGroups);
     let groupList = this.state.groupList;
 
-    // TO DO: Media Section, Upcoming Events Section
+    // TODO: Media Section, Upcoming Events Section
     let groupData = this.state.groupData;
     let postList = [],
       forumPosts = [];
 
     // Generates Forum Posts using ForumContainer component.
-    //   TO DO: Implement comment replies, if desired.
     if (groupData.posts) {
       postList = groupData.posts;
 
@@ -156,15 +155,15 @@ class CommunityPageGroup extends Component {
             {!groupList ? (
               ""
             ) : (
-              <Autocomplete
-                style={{ width: 250 }}
-                id="AutoStateField"
-                options={groupList}
-                getOptionLabel={option => option.title}
-                onChange={this.handleSelect}
-                renderInput={params => <TextField {...params} label="Group" variant="filled" />}
-              />
-            )}
+                <Autocomplete
+                  style={{ width: 250 }}
+                  id="AutoStateField"
+                  options={groupList}
+                  getOptionLabel={option => option.title}
+                  onChange={this.handleSelect}
+                  renderInput={params => <TextField {...params} label="Group" variant="filled" />}
+                />
+              )}
             {this.state.joinGroup ? (
               <div className="Modal_align">
                 <ModalContainerJoin
@@ -182,22 +181,22 @@ class CommunityPageGroup extends Component {
                 />
               </div>
             ) : (
-              <div className="Modal_align">
-                <ModalContainerJoin
-                  buttonText="Join"
-                  buttonTextColor="black"
-                  buttonColor="yellow"
-                  buttonSize="small"
-                  message="Are you sure you want to join?"
-                  confirmText="Join"
-                  cancelText="Exit"
-                  onConfirm={this.handleConfirm}
-                  onClose={this.handleCloseModal}
-                  modalOpen={this.state.showModal}
-                  handleOpenModal={this.handleOpenModal}
-                />
-              </div>
-            )}
+                <div className="Modal_align">
+                  <ModalContainerJoin
+                    buttonText="Join"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
+                    buttonSize="small"
+                    message="Are you sure you want to join?"
+                    confirmText="Join"
+                    cancelText="Exit"
+                    onConfirm={this.handleConfirm}
+                    onClose={this.handleCloseModal}
+                    modalOpen={this.state.showModal}
+                    handleOpenModal={this.handleOpenModal}
+                  />
+                </div>
+              )}
           </Banner>{" "}
         </div>{" "}
         <div className="community-group-body">
