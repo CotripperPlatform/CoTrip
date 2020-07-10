@@ -112,13 +112,13 @@ class App extends Component {
     const loggedIn = this.state.logged_in;
     return (
       <div className="App">
-        <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={5}></Navbar>
         {loggedIn ? (
           <Route
             path="/"
             exact
             render={routerProps => (
               <main>
+                <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={5}></Navbar>
                 <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
               </main>
             )}
