@@ -23,9 +23,10 @@ const TripDetail = props => {
 
   let { tripName } = props;
 
+  let handleClick = (e) => console.log(e.target)
+
   return (
     <div className="TripDetail">
-      <NavBar page={3} profileImage={people} />
       <div className="TripDetail-Header">
         <Banner background={Banner__pink}>
           <h3>Trip: {tripName} 2020</h3>
@@ -45,7 +46,7 @@ const TripDetail = props => {
         <ActivityList title="Activities for Moms & Kids" activities={kidsActivities} color="red" />
       </div>
       <div className="TripDetail__button-container">
-        <Button text="Book Now" color="pink" size="large" />
+        <Button text="Book Now" color="pink" size="large" handleClick={handleClick} />
       </div>
       <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>

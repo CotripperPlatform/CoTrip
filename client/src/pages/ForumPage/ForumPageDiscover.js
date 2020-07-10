@@ -23,7 +23,6 @@ const handleClick = e => {
 const ForumPageDiscover = props => {
   return (
     <div className="ForumPage">
-      <NavBar page={2} profileImage={people} />
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Search: Packing</h3>
         <InputTextField

@@ -28,7 +28,6 @@ const handleClick = e => {
 const DirectoryPeople = props => {
   return (
     <div className="CommunityPage">
-      <NavBar page={0} profileImage={people} />
       <Banner background={Banner__Directory}>
         <h3 style={{ margin: 0 }}>Directory: My Friends</h3>
         <InputTextField

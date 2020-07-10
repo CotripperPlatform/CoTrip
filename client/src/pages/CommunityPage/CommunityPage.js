@@ -18,13 +18,12 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {};
+const handleClick = e => { };
 
 // Page or
 const CommunityPage = props => {
   return (
     <div className="CommunityPage">
-      <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
         <div className="community-page-header">
           {" "}

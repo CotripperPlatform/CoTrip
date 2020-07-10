@@ -63,7 +63,6 @@ class ForumPageHastag extends Component {
   render() {
     return (
       <div className="ForumPage">
-        <NavBar page={2} profileImage={people} />
         <Banner background={Banner__Community}>
           <div className="community-page-header">
             {" "}
@@ -92,22 +91,22 @@ class ForumPageHastag extends Component {
               />
             </div>
           ) : (
-            <div className="Modal_align">
-              <ModalContainerFollow
-                buttonText="Follow #hashtag"
-                buttonTextColor="black"
-                buttonColor="yellow"
-                buttonSize="small"
-                message="Are you sure you want to follow?"
-                confirmText="Follow"
-                cancelText="Exit"
-                onConfirm={this.handleConfirm}
-                onClose={this.handleCloseModal}
-                modalOpen={this.state.showModal}
-                handleOpenModal={this.handleOpenModal}
-              />
-            </div>
-          )}
+              <div className="Modal_align">
+                <ModalContainerFollow
+                  buttonText="Follow #hashtag"
+                  buttonTextColor="black"
+                  buttonColor="yellow"
+                  buttonSize="small"
+                  message="Are you sure you want to follow?"
+                  confirmText="Follow"
+                  cancelText="Exit"
+                  onConfirm={this.handleConfirm}
+                  onClose={this.handleCloseModal}
+                  modalOpen={this.state.showModal}
+                  handleOpenModal={this.handleOpenModal}
+                />
+              </div>
+            )}
         </Banner>{" "}
         <div className="hashtag__body">
           <div className="hashtag__bodyLeft">

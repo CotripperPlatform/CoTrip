@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar"
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -110,138 +111,175 @@ class App extends Component {
     const loggedIn = this.state.logged_in;
     return (
       <div className="App">
-        <main>
-          {loggedIn ? (
-            <Route
-              path="/"
-              exact
-              render={routerProps => (
+        {loggedIn ? (
+          <Route
+            path="/"
+            exact
+            render={routerProps => (
+              <main>
+                <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={5}></Navbar>
                 <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-              )}
-            ></Route>
-          ) : (
+              </main>
+            )}
+          ></Route>
+        ) : (
             <Redirect to="/welcome" />
           )}
-          <Route path="/welcome" exact component={SplashPage}></Route>
-          <Route
-            path="/TripDetail"
-            exact
-            render={routerProps => (
+        <Route path="/welcome" exact component={SplashPage}></Route>
+        <Route
+          path="/TripDetail"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={3}></Navbar>
               <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>{" "}
-          <Route
-            path="/community/join-groups"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>{" "}
+        <Route
+          path="/community/join-groups"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={1}></Navbar>
               <CommunityPage handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
-          <Route
-            path="/community/view-group"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/community/view-group"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={1}></Navbar>
               <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
-          <Route
-            path="/community/explore-people"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/community/explore-people"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={1}></Navbar>
               <CommunityPagePeople handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/book-a-trip"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={3}></Navbar>
+              <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
+            </main>
+          )}
+        ></Route>
+        {this.state.profileLoaded === true ? (
           <Route
-            path="/book-a-trip"
+            path="/member-page/:memberId" // Get memberId from this.props.match.params.memberId within the MemberProfilePage
             exact
             render={routerProps => (
-              <BookATripPage handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
-          {this.state.profileLoaded === true ? (
-            <Route
-              path="/member-page"
-              exact
-              render={routerProps => (
+              <main>
+                <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={5}></Navbar>
                 <MemberProfilePage
                   {...this.state}
                   handle_logout={this.handleLogout}
                   {...routerProps}
                 />
-              )}
-            ></Route>
-          ) : (
-            ""
-          )}
-          <Route
-            path="/forum-page"
-            exact
-            render={routerProps => (
-              <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              </main>
             )}
           ></Route>
-          <Route
-            path="/forum-page-hashtag"
-            exact
-            render={routerProps => (
+        ) : (
+            ""
+          )}
+        <Route
+          path="/forum-page"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={2}></Navbar>
+              <ForumPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/forum-page-hashtag"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={2}></Navbar>
               <ForumPageHashtag
                 handle_logout={this.handleLogout}
                 {...routerProps}
                 {...this.state}
               />
-            )}
-          ></Route>
-          <Route
-            path="/forum-page-discover"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/forum-page-discover"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={2}></Navbar>
               <ForumPageDiscover
                 handle_logout={this.handleLogout}
                 {...routerProps}
                 {...this.state}
               />
-            )}
-          ></Route>
-          <Route
-            path="/forum-page-topic"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/forum-page-topic"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={2}></Navbar>
               <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/directory/people"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/directory/people"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={0}></Navbar>
               <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
-          <Route
-            path="/directory/groups"
-            exact
-            render={routerProps => (
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/directory/groups"
+          exact
+          render={routerProps => (
+            <main>
+              <Navbar to={`/member-page/${this.state.userid}`} profileImage={this.state.image} page={0}></Navbar>
               <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
-          <Route
-            path="/login"
-            exact
-            render={routerProps => (
-              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/register"
-            exact
-            render={routerProps => (
-              <OnboardingPage
-                handleSignup={this.handleSignup}
-                {...routerProps}
-                logged_in={this.state.logged_in}
-              />
-            )}
-          ></Route>
-        </main>
+            </main>
+          )}
+        ></Route>
+        <Route
+          path="/login"
+          exact
+          render={routerProps => (
+            <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
+          )}
+        ></Route>
+        <Route
+          path="/register"
+          exact
+          render={routerProps => (
+            <OnboardingPage
+              handleSignup={this.handleSignup}
+              {...routerProps}
+              logged_in={this.state.logged_in}
+            />
+          )}
+        ></Route>
       </div>
     );
   }

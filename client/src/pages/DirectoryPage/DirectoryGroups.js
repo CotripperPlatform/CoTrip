@@ -23,7 +23,6 @@ function pillClick(val) {
 const DirectoryGroups = props => {
   return (
     <div className="DirectoryPage">
-      <NavBar page={0} profileImage={people} />
       <Banner background={Banner__Directory}>
         <h3 style={{ margin: 0 }}>Directory: My Groups</h3>
         <InputTextField
