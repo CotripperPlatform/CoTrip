@@ -157,7 +157,7 @@ class CommunityPageGroup extends Component {
               ""
             ) : (
               <Autocomplete
-                style={{ width: 300 }}
+                style={{ width: 250 }}
                 id="AutoStateField"
                 options={groupList}
                 getOptionLabel={option => option.title}
