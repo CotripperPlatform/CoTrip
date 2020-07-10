@@ -28,7 +28,8 @@ class ForumPageHashtag extends Component {
       hashtagData: [],
     };
 
-    this.getHashtagData = 
+    this.getHashtagData = getHashtagData.bind(this);
+
   }
 
   componentDidMount() {
