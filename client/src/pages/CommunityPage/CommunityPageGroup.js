@@ -276,6 +276,7 @@ class CommunityPageGroup extends Component {
             </div>
           </div>
         </div>
+        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
     );
   }

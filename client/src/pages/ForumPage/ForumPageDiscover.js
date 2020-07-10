@@ -248,6 +248,7 @@ const ForumPageDiscover = props => {
         </div>
         <div className="ForumPage__button-container"></div>
       </div>
+      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };
