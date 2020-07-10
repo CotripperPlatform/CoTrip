@@ -53,8 +53,7 @@ export default function ForumPost(props) {
               {" Likes"}
             </p>
             <p>
-              {props.comments.length}
-              {props.comments.length === 1 ? " Comment" : " Comments"}
+              {`${props.comments.length} ${props.comments.length === 1 ? " Comment" : " Comments"}`}
             </p>
           </div>
         </div>
