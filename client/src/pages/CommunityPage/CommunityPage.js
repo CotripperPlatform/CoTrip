@@ -154,7 +154,7 @@ const CommunityPage = props => {
         <a className="seeMore-Button">See More</a>
         <div>
           <header className="CommunityPage__header">
-            Groups in WASHINGTON, DC: <a href="./view-group"> View Sample Page </a>
+            Groups in WASHINGTON, DC: <a href="./view-group"> View Sample Page </a><a href="./create-group">Create Group</a>
           </header>{" "}
         </div>
         <div className="CommunityPage__groups-in-city-container">
