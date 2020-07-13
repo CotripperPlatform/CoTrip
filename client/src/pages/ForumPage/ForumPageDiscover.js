@@ -10,6 +10,7 @@ import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
 import getHashtags from "../../services/Forum.js";
+import { Link } from "react-router-dom";
 
 
 const handleSelect = props => {
@@ -155,9 +156,12 @@ render() {
           </header>
         </div>
         <div className="forum-page-hollow-pill-container">
+          
           {hashtags.map(hashtag => {
+            
           return(
           <div className="Forum-Pill">
+            <Link to={`/forum-page-hashtag/${hashtag.id}`}>
           <Pill
             text={hashtag.title}
             size={"medium"}
@@ -166,12 +170,14 @@ render() {
             shadow
             border
             onClick={pillClick}
-            selectId={0}
+            selectId={hashtag.id}
           />
+           </Link>
           </div>
             )
-        })
+          })
         }
+       
         </div>{" "}
         
         <div className="ForumPage__button-container"></div>
