@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import "./ForumPage.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
@@ -10,6 +10,9 @@ import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
 
+import { BASE_URL } from '../../services/constants';
+import axios from 'axios';
+
 const handleSelect = props => {
   console.log(props);
 };
@@ -20,7 +23,29 @@ const handleClick = e => {
   console.log("Clicked");
 };
 
-const ForumPageDiscover = props => {
+class ForumPageDiscover extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      topics: []
+    }
+  }
+
+componentDidMount() {
+  axios.get(`${BASE_URL}/topics`)
+    .then(response => {
+      this.setState({ 
+        topics: response.data
+      })
+    })
+    .catch(error => {
+      console.log('Error', error);
+    })
+}
+render() {
+  
+  const topics = this.state.topics ? this.state.topics: [];
+
   return (
     <div className="ForumPage">
       <NavBar page={2} profileImage={people} />
@@ -68,7 +93,6 @@ const ForumPageDiscover = props => {
             className="Forum-Pill"
             text={"Traveling"}
             size={"medium"}
-            size={"short"}
             color={"red"}
             icon={"white"}
             onClick={pillClick}
@@ -79,57 +103,25 @@ const ForumPageDiscover = props => {
           <header className="ForumPage__header">Topics</header>
         </div>
         <div className="forum-page-pill-container">
+        {topics.map(topics =>{
+        
+        return(
+          <div className="Forum-Pill">
           <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
+            text={topics.title}
             size={"medium"}
-            size={"short"}
-            color={"pink"}
+            color={"red"}
             icon={"white"}
             onClick={pillClick}
             selectId={0}
-          />{" "}
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Forum-Pill"
-            text={"Traveling"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-        </div>
+          />  
+           </div>
+          )   
+             
+        })
+      }
+     </div>{" "}
+      <a href className="seeMore-Button">See More</a>
         <div>
           <header className="ForumPage__header">
             #hashtags: <a href="/forum-page-hashtag">example tag</a>
@@ -249,9 +241,10 @@ const ForumPageDiscover = props => {
         </div>
         <div className="ForumPage__button-container"></div>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
+      <a href className="seeAll-Button">See All</a>
+      <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
     </div>
   );
 };
-
+}
 export default ForumPageDiscover;
