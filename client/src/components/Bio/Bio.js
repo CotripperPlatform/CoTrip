@@ -20,8 +20,11 @@ class Bio extends Component {
       form_last_name: "",
       form_bio: "",
       form_social_media: "",
-	  socialMediaOptions: [],
-	  
+      socialMediaOptions: [],
+      email: "",
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: ""
     };
   }
 
@@ -138,11 +141,10 @@ class Bio extends Component {
       })
         .then(res => res.json())
         .then(json => {
-          
           alert(json);
         });
     } else {
-      alert("Password do not match");
+      alert("Passwords do not match");
     }
   };
 
