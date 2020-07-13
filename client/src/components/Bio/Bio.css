@@ -15,11 +15,13 @@
   flex-flow: column nowrap;
 }
 
-.Bio .icons__div div, .icons__div-edit__media-entry-container {
+.Bio .icons__div div,
+.icons__div-edit__media-entry-container {
   margin-top: 1rem;
 }
 
-.Bio .icons__div div, .Bio .icons__div-edit div {
+.Bio .icons__div div,
+.Bio .icons__div-edit div {
   color: var(--purple);
 }
 
@@ -31,7 +33,6 @@
 
 .Bio .Bio__paragraph {
   font-family: var(--paragraph-font);
-
 }
 
 .Bio .Bio__span {
@@ -41,7 +42,7 @@
 .Bio .Bio__header {
   display: flex;
   justify-content: space-between;
-  color: var(--purple)
+  color: var(--purple);
 }
 
 .Bio .hashtag__container {
@@ -55,5 +56,3 @@
 .password_header {
   color: #6a4c93;
 }
-
-
