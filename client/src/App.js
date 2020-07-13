@@ -72,7 +72,8 @@ class App extends Component {
         { menuItem: "Community", link: "/community" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" }
-      ]
+      ],
+      connections: []
     };
 
     this.handleSignup = handleSignup.bind(this);
@@ -98,7 +99,9 @@ class App extends Component {
                 first_name: json.profile.first_name,
                 image: json.profile.image,
                 userid: json.id,
-                profileLoaded: true
+                profileLoaded: true,
+                connections: json.profile.connections,
+                requests: json.profile.requests
               },
               this.logState
             );
@@ -211,7 +214,7 @@ class App extends Component {
             path="/directory/people"
             exact
             render={routerProps => (
-              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
+              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} {...this.state} />
             )}
           ></Route>
           <Route
