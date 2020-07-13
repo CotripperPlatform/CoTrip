@@ -8,7 +8,6 @@ import Footer from "../../components/Footer/Footer"
 
 export default function Layout(props) {
     let currentPath = useLocation().pathname.split('/')[1]
-    console.log(currentPath)
 
     const pathPages = {
         '': 99,
@@ -23,12 +22,9 @@ export default function Layout(props) {
         'directory': 0,
     }
 
-    let page = pathPages[currentPath]
-    console.log(page)
-
     return (
         <main>
-            <Navbar to={`/member-page/${props.userid}`} profileImage={props.image} page={page}></Navbar>
+            <Navbar to={`/member-page/${props.userid}`} profileImage={props.image} page={pathPages[currentPath]}></Navbar>
             {props.children}
             <Footer history={props.history} handle_logout={props.handle_logout} />
         </main>
