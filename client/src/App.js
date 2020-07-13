@@ -37,6 +37,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import GroupPage from "./components/GroupPage/GroupPage"
 
 library.add(
   fab,
