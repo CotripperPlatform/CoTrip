@@ -38,10 +38,6 @@
   margin: 10px 50px 30px 0px;
 }
 
-a:link {
-  text-decoration: none!important;
-}
-
 .forum-page-hollow-pill-container {
   display: flex;
   width: 95vw;
