@@ -102,14 +102,16 @@ render() {
             icon={"white"}
             onClick={pillClick}
             selectId={0}
-          />
-          </div>
-          )
+          />  
+           </div>
+          )   
+             
         })
       }
+     </div>{" "}
       
-        <a href className="seeMore-Button">See More</a>
-
+      <a href className="seeMore-Button">See More</a>
+      
         <div>
           <header className="ForumPage__header">
             #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
@@ -177,7 +179,7 @@ render() {
       <a href className="seeAll-Button">See All</a>
       <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
       </div>
-      </div>
+      
   );
 };
 }
