@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
+import Layout from "./components/Layout/Layout"
+import Navbar from "./components/Navbar/Navbar"
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -89,7 +91,7 @@ class App extends Component {
     const loggedIn = this.state.logged_in;
     return (
       <div className="App">
-        <main>
+        <Layout {...this.state} {...this.props}>
           {loggedIn ? (
             <Route
               path="/"
@@ -101,9 +103,8 @@ class App extends Component {
           ) : (
               <Redirect to="/welcome" />
             )}
-          <Route path="/welcome" exact component={SplashPage}></Route>
           <Route
-            path="/TripDetail"
+            path="/TripDetail:page"
             exact
             render={routerProps => (
               <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
@@ -139,7 +140,7 @@ class App extends Component {
           ></Route>
           {this.state.profileLoaded === true ? (
             <Route
-              path="/member-page"
+              path="/member-page/:memberId" // Get memberId from this.props.match.params.memberId within the MemberProfilePage
               exact
               render={routerProps => (
                 <MemberProfilePage
@@ -202,25 +203,28 @@ class App extends Component {
               <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
-          <Route
-            path="/login"
-            exact
-            render={routerProps => (
-              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/register"
-            exact
-            render={routerProps => (
-              <OnboardingPage
-                handleSignup={this.handleSignup}
-                {...routerProps}
-                logged_in={this.state.logged_in}
-              />
-            )}
-          ></Route>
-        </main>
+        </Layout>
+
+        <Route path="/welcome" exact component={SplashPage}></Route>
+        <Route
+          path="/login"
+          exact
+          render={routerProps => (
+            <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
+          )}
+        ></Route>
+        <Route
+          path="/register"
+          exact
+          render={routerProps => (
+            <OnboardingPage
+              handleSignup={this.handleSignup}
+              {...routerProps}
+              logged_in={this.state.logged_in}
+            />
+          )}
+        ></Route>
+
       </div>
     );
   }
