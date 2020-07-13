@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Component} from "react";
 import "./ForumPage.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
@@ -10,6 +10,9 @@ import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
 
+import { BASE_URL } from '../../services/constants';
+import axios from 'axios';
+
 const handleSelect = props => {
   console.log(props);
 };
@@ -20,7 +23,32 @@ const handleClick = e => {
   console.log("Clicked");
 };
 
-const ForumPageDiscover = props => {
+
+class ForumPageDiscover extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      hashtags: [],
+    }
+  }
+
+  componentDidMount() {
+  axios.get(`${BASE_URL}/hashtags`)
+    .then(response => {
+      this.setState({ 
+        hashtags: response.data
+      })
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.log('Error', error);
+    })
+}
+
+render() {
+
+  const hashtags = this.state.hashtags ? this.state.hashtags: [];
+
   return (
     <div className="ForumPage">
       <NavBar page={2} profileImage={people} />
@@ -132,14 +160,16 @@ const ForumPageDiscover = props => {
         </div>
         <div>
           <header className="ForumPage__header">
-            #hashtags: <a href="/forum-page-hashtag">example tag</a>
+            #hashtags: <a href="/forum-page-hashtag">Example tag</a>
           </header>
         </div>
         <div className="forum-page-hollow-pill-container">
+          {hashtags.map(hashtags => {
+          return(
+          <div className="Forum-Pill">
           <Pill
             text={"#hashtags"}
             size={"medium"}
-            size={"short"}
             color={"pink"}
             icon={"pink"}
             shadow
@@ -147,111 +177,17 @@ const ForumPageDiscover = props => {
             onClick={pillClick}
             selectId={0}
           />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            size={"short"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-        </div>
+          </div>
+            )
+        })
+        }
+        </div>{" "}
+        
         <div className="ForumPage__button-container"></div>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
+      <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
     </div>
   );
 };
-
+}
 export default ForumPageDiscover;
