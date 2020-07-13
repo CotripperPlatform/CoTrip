@@ -3,8 +3,10 @@ import "./Bio.css";
 import Icon from "../Icon/Icon";
 import { Link } from "react-router-dom";
 import InputTextField from "../../components/InputTextField/InputTextField";
-import Button from '../../components/Button/Button';
 import TextField from '@material-ui/core/TextField';
+
+import Button from '../Button/Button';
+import { getSocialMediaOptions, updateSocialMediaList, submitUserUpdates } from '../../services/Members';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
 import axios from 'axios';
@@ -22,6 +24,11 @@ class Bio extends Component {
 			form_social_media: '',
 			socialMediaOptions: [],
 		}
+
+		this.getSocialMediaOptions = getSocialMediaOptions.bind(this);
+		this.updateSocialMediaList = updateSocialMediaList.bind(this);
+		this.submitUserUpdates = submitUserUpdates.bind(this);
+
 	}
 
 	toggleEditMode = () => {
@@ -51,54 +58,6 @@ class Bio extends Component {
 		});
 	}
 
-	updateSocialMediaList = (event, mediaId) => {
-		let username = event.target.value
-		let media = this.state.socialMediaOptions.filter(option => option.id === mediaId)[0]
-		let option = {
-			profile: this.props.userid, // userid
-			social_media_type: {
-				id: mediaId,
-				name: media.name,
-			},
-			url: `https://www.${media.name.toLowerCase()}.com/${username}`
-		}
-		let prevMediaList = [...this.state.form_social_media]
-		let prevMedia = prevMediaList.filter(media => media.social_media_type.id !== mediaId)
-
-		this.setState({
-			form_social_media: [...prevMedia, option]
-		})
-	}
-
-
-	submitUserUpdates = () => {
-		axios({
-			method: 'PATCH',
-			url: `${BASE_URL}/profile/${this.props.userid}`,
-			headers: {
-				Authorization: `Token ${localStorage.getItem("token")}`
-			},
-			data: {
-				first_name: this.state.form_first_name,
-				last_name: this.state.form_last_name,
-				bio: this.state.form_bio,
-				social_media: this.state.form_social_media,
-			}
-		})
-			.then(res => {
-				console.log(res)
-
-				this.setState({
-					updated_first_name: this.state.form_first_name,
-					updated_last_name: this.state.form_last_name,
-					updated_bio: this.state.form_bio,
-				})
-				this.toggleEditMode();
-				// this.forceUpdate();
-			})
-			.catch(err => console.log(err))
-	}
-
 	logForm = () => console.log(...this.state);
 
 	componentDidMount() {
@@ -111,26 +70,13 @@ class Bio extends Component {
 		})
 	}
 
-	getSocialMediaOptions = () => {
-		axios.get(`${BASE_URL}/social_media_type`,
-			{
-				headers: {
-					Authorization: `Token ${localStorage.getItem("token")}`
-				}
-			})
-			.then(res => {
-				this.setState(prevState => ({
-					socialMediaOptions: [...prevState.socialMediaOptions, ...res.data]
-				}))
-			})
-			.catch(error => console.log(error))
-	}
+
 
 	render() {
 		let userBio = '';
 		let firstName = '';
 		let lastName = '';
-
+		console.log(this.state.form_social_media)
 		if (this.state.updated_first_name !== undefined) {
 			if (this.props.first_name === this.state.updated_first_name)
 				firstName = this.props.first_name;
@@ -162,10 +108,10 @@ class Bio extends Component {
 		}
 
 		let userSocialMediaLinks = !this.state.form_social_media ? "" :
-			this.state.form_social_media.map(mediaType => {
+			this.state.form_social_media.map((mediaType, index) => {
 				return (
 					<a href={mediaType.url} target='_blank' >
-						<Icon onClick={this.props.onClick} icon={["fab", mediaType.social_media_type.name.toLowerCase()]} key={mediaType.social_media_type.id} />
+						<Icon onClick={this.props.onClick} icon={["fab", mediaType.social_media_type.name.toLowerCase()]} key={mediaType.index} />
 					</a>
 				)
 			})
