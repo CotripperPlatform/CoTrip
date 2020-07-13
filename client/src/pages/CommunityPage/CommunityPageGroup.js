@@ -102,6 +102,8 @@ class CommunityPageGroup extends Component {
   render() {
     console.log(getAllGroups);
     let groupList = this.state.groupList;
+    console.log(groupList)
+
 
     // TODO: Media Section, Upcoming Events Section
     let groupData = this.state.groupData;
