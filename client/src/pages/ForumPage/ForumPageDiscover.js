@@ -92,7 +92,7 @@ class ForumPageDiscover extends Component {
             {topics.map(topic => {
               return (
                 <div className="Forum-Pill">
-                  <Link to={`/forum-page-topic/${topic.id}`}>
+                  <Link to={`/forum-page-topic/${topic.id}`} style={{ textDecoration: "none" }}>
                     <Pill
                       text={topic.title}
                       size={"medium"}
