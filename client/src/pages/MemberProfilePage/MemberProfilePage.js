@@ -32,7 +32,19 @@ class MemberProfilePage extends Component {
 
 		// Default CSS class to apply to the Component
 		this.state = {
-			classList: "MemberProfilePage"
+			classList: "MemberProfilePage",
+			protectedProfileData: {
+				first_name: '',
+				last_name: '',
+				bio: '',
+				age: '',
+				image: '',
+				city_of_residence: [],
+				social_media: [],
+				user_id: [],
+				hashtags: [],
+				connections: []
+			}
 		};
 	}
 
@@ -73,8 +85,7 @@ class MemberProfilePage extends Component {
 	}
 
 	render() {
-		// this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
-		console.log(this.state.protectedProfileData)
+		this.state.protectedProfileData ? console.log(this.state.protectedProfileData) : console.log('no profile data')
 
 
 		let people = [
@@ -90,50 +101,7 @@ class MemberProfilePage extends Component {
 			},
 			{ name: "Martha", bio: "sup yall" }
 		];
-		let testUsers = [
-			{
-				userId: 1,
-				userFirstName: "Paula",
-				userSurname: "Bannerman",
-				userPic: pic1
-			},
-			{
-				userId: 2,
-				userFirstName: "Jack",
-				userSurname: "Johnson",
-				userPic: pic2
-			},
-			{
-				userId: 3,
-				userFirstName: "Jenny",
-				userSurname: "Jones",
-				userPic: pic3
-			},
-			{
-				userId: 4,
-				userFirstName: "Joan",
-				userSurname: "Rivers",
-				userPic: pic4
-			},
-			{
-				userId: 5,
-				userFirstName: "Freddy",
-				userSurname: "Mercury",
-				userPic: pic2
-			},
-			{
-				userId: 5,
-				userFirstName: "Leslie",
-				userSurname: "Knope",
-				userPic: pic3
-			},
-			{
-				userId: 7,
-				userFirstName: "Frank",
-				userSurname: "Ocean",
-				userPic: pic1
-			}
-		];
+
 
 		if (this.props.logged_in === true) {
 			return (
@@ -159,7 +127,7 @@ class MemberProfilePage extends Component {
 						<div className="MemberProfilePage__left-top">
 							<div className="MemberProfilePage__left-contents">
 								<div className="interaction-div">
-									<InteractionCard></InteractionCard>
+									<InteractionCard image={this.state.protectedProfileData.image}></InteractionCard>
 								</div>
 								<div className="MemberProfilePage__bio-container">
 
@@ -183,7 +151,7 @@ class MemberProfilePage extends Component {
 								<Connections
 									userViewing={false}
 									to="/home"
-									users={testUsers.slice(0, 6)}
+									users={this.state.protectedProfileData.connections.slice(0, 6)}
 									extraUsers="View All"
 								/>
 							</div>

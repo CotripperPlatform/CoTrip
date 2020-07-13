@@ -26,4 +26,5 @@ ProfilePicture.defaultProps = {
   type: "medium"
 };
 
+
 export default ProfilePicture;
