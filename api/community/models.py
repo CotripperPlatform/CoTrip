@@ -36,10 +36,11 @@ class Topic(models.Model):
     def __str__(self):
         return self.title
 
-# Followers: Many to many with user
-#       taken care of in accounts.Profile
-# Post: one to many with post
-#       (should be) taken care of in the Post model
+# For both Topic & Hashtag:
+    # Followers: Many to many with user
+    #       taken care of in accounts.Profile
+    # Post: one to many with post
+    #       (should be) taken care of in the Post model
 
 
 class Hashtag(models.Model):

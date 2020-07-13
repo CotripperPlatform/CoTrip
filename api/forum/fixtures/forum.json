@@ -81,8 +81,7 @@
       "author": 1,
       "parent": [
         1
-      ],
-      "group": 1
+      ]
     }
   },
   {
@@ -97,8 +96,7 @@
       "author": 2,
       "parent": [
         2
-      ],
-      "group": 1
+      ]
     }
   },
   {
@@ -113,8 +111,7 @@
       "author": 3,
       "parent": [
         3
-      ],
-      "group": 2
+      ]
     }
   },
   {
@@ -129,8 +126,7 @@
       "author": 4,
       "parent": [
         4
-      ],
-      "group": 2
+      ]
     }
   },
   {
@@ -145,8 +141,7 @@
       "author": 1,
       "parent": [
         5
-      ],
-      "group": 3
+      ]
     }
   },
   {
@@ -161,8 +156,7 @@
       "author": 1,
       "parent": [
         6
-      ],
-      "group": 1
+      ]
     }
   },
   {
@@ -177,8 +171,7 @@
       "author": 2,
       "parent": [
         7
-      ],
-      "group": 1
+      ]
     }
   },
   {
@@ -193,8 +186,7 @@
       "author": 3,
       "parent": [
         8
-      ],
-      "group": 2
+      ]
     }
   },
   {
@@ -209,8 +201,7 @@
       "author": 4,
       "parent": [
         9
-      ],
-      "group": 2
+      ]
     }
   },
   {
@@ -225,8 +216,252 @@
       "author": 5,
       "parent": [
         10
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 16,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for hashtags. Msg - 1",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for hashtags. Msg - 1 et aut officiis debitis aut rerum.",
+      "likes": 1,
+      "author": 1,
+      "parent": [],
+      "hashtags": [
+        1,
+        2
       ],
-      "group": 3
+      "topics": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 17,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for hashtags. Msg - 2",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for hashtags. Msg - 2 et aut officiis debitis aut rerum.",
+      "likes": 2,
+      "author": 2,
+      "parent": [],
+      "hashtags": [
+        2
+      ],
+      "topics": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 18,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for hashtags. Msg - 3",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for hashtags. Msg - 3 et aut officiis debitis aut rerum.",
+      "likes": 3,
+      "author": 3,
+      "parent": [],
+      "hashtags": [
+        3,
+        2
+      ],
+      "topics": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 19,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 2,
+      "parent": [
+        16
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 20,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 3,
+      "parent": [
+        17
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 21,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 4,
+      "parent": [
+        18
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 22,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 1,
+      "parent": [
+        18
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 23,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for topics. Msg - 1",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for topics. Msg - 1 et aut officiis debitis aut rerum.",
+      "likes": 1,
+      "author": 1,
+      "parent": [],
+      "hashtags": [],
+      "topics": [
+        1,
+        3
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 24,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for topics. Msg - 2",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for topics. Msg - 2 et aut officiis debitis aut rerum.",
+      "likes": 2,
+      "author": 2,
+      "parent": [],
+      "hashtags": [
+        3
+      ],
+      "topics": [
+        2
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 25,
+    "fields": {
+      "post_type": "Post",
+      "title": "Post placeholder text for topics. Msg - 3",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Post placeholder text for topics. Msg - 3 et aut officiis debitis aut rerum.",
+      "likes": 3,
+      "author": 3,
+      "parent": [],
+      "hashtags": [
+        2
+      ],
+      "topics": [
+        3
+      ]
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 26,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 2,
+      "parent": [
+        23
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 27,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 3,
+      "parent": [
+        24
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 28,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 4,
+      "parent": [
+        25
+      ],
+      "topics": [],
+      "hashtags": []
+    }
+  },
+  {
+    "model": "forum.post",
+    "pk": 29,
+    "fields": {
+      "post_type": "Comment",
+      "title": "Temporibus autem quibusdam",
+      "time": "2020-04-09T20:13:15.180134Z",
+      "body": "Temporibus autem quibusdam et aut officiis debitis aut rerum.",
+      "likes": 0,
+      "author": 1,
+      "parent": [
+        25
+      ],
+      "topics": [],
+      "hashtags": []
     }
   }
 ]

@@ -148,7 +148,6 @@ class CommunityPageGroup extends Component {
     return (
       <div>
         <div className="CommunityPage-Group-">
-          <NavBar page={1} profileImage={people} />
           <Banner background={Banner__Community}>
             <div className="community-page-header">
               {" "}
@@ -264,7 +263,6 @@ class CommunityPageGroup extends Component {
             </div>
           </div>
         </div>
-        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
     );
   }

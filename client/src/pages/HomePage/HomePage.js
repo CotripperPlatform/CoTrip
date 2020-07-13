@@ -80,147 +80,143 @@ const handleClick = e => {
 };
 
 const HomePage = props => {
-    return (
-      <body className="HomePage__wrapper">
-        <nav>
-          <NavBar page={5} to={"/member-page"} profileImage={people}></NavBar>
-        </nav>
-        <div className="HomePage__content">
-          <Banner background={Banner__purpleBig}>
-            {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
-          </Banner>
-          <div className="HomePage_top-items-wrapper">
-            <span className="HomePage__suggestions-container">
-              <h1 className="HomePage__suggested-header">Suggested Groups</h1>
-              <div className="HomePage__group-cards-container">
-                <span className="HomePage__groupcard-1">
-                  <GroupCard
-                    name="DIY with your kids"
-                    members="98"
-                    location="Boston, MA"
-                    picture={card1}
-                  />
-                </span>
-                <span className="HomePage__groupcard-2">
-                  <GroupCard name="Mystery Stories!" members="213" location="NYC" picture={card2} />
-                </span>
-                <span className="HomePage__groupcard-3">
-                  <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
-                </span>
-                <a href="/" className="HomePage__arrow" />
-              </div>
-              <h1 className="HomePage__suggested-header">Suggested People</h1>
-              <div className="HomePage__people-container">
-                {personCard1}
-                {personCard2}
-                {personCard3}
-                <a href="/" className="HomePage__arrow lower-people" />
-              </div>
-            </span>
-
-            <span className="HomePage__top-cards-wrapper">
-              <div className="HomePage__cards-container">
-                <BookTripCard>
-                  <h1>Book a Trip</h1>
-                  <TripCard src={example2} location="Hawaii" date="May 2020" />
-                  <TripCard src={example1} location="Puerto Rico" date="April 2019" />
-                </BookTripCard>
-                <TrendingHashtagCard
-                  data={[
-                    "#art",
-                    "#hawaii",
-                    "#food",
-                    "#vacation",
-                    "#boats",
-                    "#crafts",
-                    "#parks",
-                    "#dogs",
-                    "#italy",
-                    "#yoga"
-                  ]}
-                >
-                  <h1>Trending Hashtags</h1>
-                </TrendingHashtagCard>
-              </div>
-            </span>
-          </div>
-
-          <div className="HomePage__mobile-wrapper">
-            <Link to="/">
-              <Card color="yellow" size="mobile">
-                <img src={groups} className="HomePage__mobile-card-icon" />
-                <h2>Suggested Groups</h2>
-              </Card>
-            </Link>
-            <Link to="/">
-              <Card color="pink" size="mobile">
-                <img src={airplane} className="HomePage__mobile-card-icon" />
-                <h2>Book a Trip</h2>
-              </Card>
-            </Link>
-            <Link to="/">
-              <Card color="red" size="mobile">
-                <img src={suggestedPeople} className="HomePage__mobile-card-icon" />
-                <h2>Suggested People</h2>
-              </Card>
-            </Link>
-            <Link to="/">
-              <Card color="purple" size="mobile">
-                <img src={hashtags} className="HomePage__mobile-card-icon" />
-                <h2>Trending Hashtags</h2>
-              </Card>
-            </Link>
-          </div>
-        </div>
-        <div className="HomePage__scrapbook-wrapper">
-          <span className="HomePage__scrapbook-container">
-            <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
-            <div className="HomePage__scrapbook-cards-container">
-              <MediaCard
-                imageSrc={happiness}
-                size="medium"
-                to="/"
-                footerText="Posted By: Paula"
-              />
-              <MediaCard imageSrc={van} size="medium" to="/" footerText="Posted By: Carmen" />
-
-              <MediaCard
-                imageSrc={nightSky}
-                size="medium"
-                to="/"
-                footerText="Posted By: Krystin"
-              />
-
-              <span className="HomePage__mediacard-hide">
-                <MediaCard
-                  imageSrc={waterfall}
-                  size="medium"
-                  to="/"
-                  footerText="Posted By: Paul"
+  return (
+    <body className="HomePage__wrapper">
+      <div className="HomePage__content">
+        <Banner background={Banner__purpleBig}>
+          {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
+        </Banner>
+        <div className="HomePage_top-items-wrapper">
+          <span className="HomePage__suggestions-container">
+            <h1 className="HomePage__suggested-header">Suggested Groups</h1>
+            <div className="HomePage__group-cards-container">
+              <span className="HomePage__groupcard-1">
+                <GroupCard
+                  name="DIY with your kids"
+                  members="98"
+                  location="Boston, MA"
+                  picture={card1}
                 />
               </span>
-              <span className="HomePage__mediacard-hide">
-                <MediaCard
-                  imageSrc={flight}
-                  size="medium"
-                  to="/"
-                  footerText="Posted By: Fiona"
-                />
+              <span className="HomePage__groupcard-2">
+                <GroupCard name="Mystery Stories!" members="213" location="NYC" picture={card2} />
               </span>
+              <span className="HomePage__groupcard-3">
+                <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
+              </span>
+              <a href="/" className="HomePage__arrow" />
+            </div>
+            <h1 className="HomePage__suggested-header">Suggested People</h1>
+            <div className="HomePage__people-container">
+              {personCard1}
+              {personCard2}
+              {personCard3}
+              <a href="/" className="HomePage__arrow lower-people" />
+            </div>
+          </span>
+
+          <span className="HomePage__top-cards-wrapper">
+            <div className="HomePage__cards-container">
+              <BookTripCard>
+                <h1>Book a Trip</h1>
+                <TripCard src={example2} location="Hawaii" date="May 2020" />
+                <TripCard src={example1} location="Puerto Rico" date="April 2019" />
+              </BookTripCard>
+              <TrendingHashtagCard
+                data={[
+                  "#art",
+                  "#hawaii",
+                  "#food",
+                  "#vacation",
+                  "#boats",
+                  "#crafts",
+                  "#parks",
+                  "#dogs",
+                  "#italy",
+                  "#yoga"
+                ]}
+              >
+                <h1>Trending Hashtags</h1>
+              </TrendingHashtagCard>
             </div>
           </span>
         </div>
 
-        <footer className="HomePage__footer-wrapper">
-          <SignUp
-            heading="Never Miss a Trip"
-            subheading="Sign up with your email address to recieve news and updates"
-          ></SignUp>{" "}
-        </footer>
+        <div className="HomePage__mobile-wrapper">
+          <Link to="/">
+            <Card color="yellow" size="mobile">
+              <img src={groups} className="HomePage__mobile-card-icon" />
+              <h2>Suggested Groups</h2>
+            </Card>
+          </Link>
+          <Link to="/">
+            <Card color="pink" size="mobile">
+              <img src={airplane} className="HomePage__mobile-card-icon" />
+              <h2>Book a Trip</h2>
+            </Card>
+          </Link>
+          <Link to="/">
+            <Card color="red" size="mobile">
+              <img src={suggestedPeople} className="HomePage__mobile-card-icon" />
+              <h2>Suggested People</h2>
+            </Card>
+          </Link>
+          <Link to="/">
+            <Card color="purple" size="mobile">
+              <img src={hashtags} className="HomePage__mobile-card-icon" />
+              <h2>Trending Hashtags</h2>
+            </Card>
+          </Link>
+        </div>
+      </div>
+      <div className="HomePage__scrapbook-wrapper">
+        <span className="HomePage__scrapbook-container">
+          <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
+          <div className="HomePage__scrapbook-cards-container">
+            <MediaCard
+              imageSrc={happiness}
+              size="medium"
+              to="/"
+              footerText="Posted By: Paula"
+            />
+            <MediaCard imageSrc={van} size="medium" to="/" footerText="Posted By: Carmen" />
 
-        <Footer history={props.history} handle_logout={props.handle_logout} />
-      </body>
-    );
+            <MediaCard
+              imageSrc={nightSky}
+              size="medium"
+              to="/"
+              footerText="Posted By: Krystin"
+            />
+
+            <span className="HomePage__mediacard-hide">
+              <MediaCard
+                imageSrc={waterfall}
+                size="medium"
+                to="/"
+                footerText="Posted By: Paul"
+              />
+            </span>
+            <span className="HomePage__mediacard-hide">
+              <MediaCard
+                imageSrc={flight}
+                size="medium"
+                to="/"
+                footerText="Posted By: Fiona"
+              />
+            </span>
+          </div>
+        </span>
+      </div>
+
+      <footer className="HomePage__footer-wrapper">
+        <SignUp
+          heading="Never Miss a Trip"
+          subheading="Sign up with your email address to recieve news and updates"
+        ></SignUp>{" "}
+      </footer>
+
+    </body>
+  );
 };
 
 export default HomePage;
