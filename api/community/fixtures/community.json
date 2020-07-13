@@ -48,6 +48,86 @@
     }
   },
   {
+    "model": "community.topic",
+    "pk": 4,
+    "fields": {
+      "title": "Teens",
+      "description": "How to keep your teens occupied while you're away"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 5,
+    "fields": {
+      "title": "Arts",
+      "description": "Where to go and what to see: The best music scenes and museums to scout before travel"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 6,
+    "fields": {
+      "title": "Traveling",
+      "description": "The Do's and Don'ts of Traveling"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 7,
+    "fields": {
+      "title": "Primary School",
+      "description": "The best Primary Schools in your area"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 8,
+    "fields": {
+      "title": "Sports",
+      "description": "Sporting events happening in the area you're traveling to"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 9,
+    "fields": {
+      "title": "Infants",
+      "description": "Raising babies: How to"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 10,
+    "fields": {
+      "title": "Meetups",
+      "description": "Want to meet new people abroad? Let's do it!"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 3,
+    "fields": {
+      "title": "Secondary School",
+      "description": "Best Secondary Schools on a budget"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 11,
+    "fields": {
+      "title": "Flights",
+      "description": "Cheap flights to check out"
+    }
+  },
+  {
+    "model": "community.topic",
+    "pk": 12,
+    "fields": {
+      "title": "Health & Wellness",
+      "description": "Tips and tricks to keep your body and mind right while you travel"
+    }
+  },
+  {
     "model": "community.hashtag",
     "pk": 1,
     "fields": {
