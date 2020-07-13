@@ -22,6 +22,7 @@
   text-align: left;
   margin-top: 15px;
 }
+
 .ForumPost__likes-comments {
   margin-top: 20px;
   position: absolute;
@@ -83,7 +84,7 @@
   margin: -50px -100px;
 }
 
-.hashtag_medieContainer {
+.hashtag_mediaContainer {
   margin-top: 70px;
   margin-left: -100px;
   margin-right: 120px;
@@ -138,7 +139,7 @@
   height: 20px;
 }
 
-.hashtag_medieContainer_topic {
+.hashtag_mediaContainer_topic {
   margin-top: 0px;
   margin-left: -65px;
   margin-right: 100px;

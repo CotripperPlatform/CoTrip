@@ -142,14 +142,14 @@ class ForumPageDiscover extends Component {
           </div>
           <div>
             <header className="ForumPage__header">
-              #hashtags: <a href="/forum-page-hashtag">Example tag</a>
+              #hashtags: <a href="/forum-page-hashtag">Example Tag</a>
             </header>
           </div>
           <div className="forum-page-hollow-pill-container">
             {hashtags.map(hashtag => {
               return (
                 <div className="Forum-Pill">
-                  <Link to={`/forum-page-hashtag/${hashtag.id}`}>
+                  <Link to={`/forum-page-hashtag/${hashtag.id}`} style={{ textDecoration: "none" }}>
                     <Pill
                       text={hashtag.title}
                       size={"medium"}
