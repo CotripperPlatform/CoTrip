@@ -8,11 +8,9 @@ import pic3 from "../../assets/images/profile-picture-3.png";
 import pic4 from "../../assets/images/profile-picture-4.png";
 import example1 from "../../assets/images/card_small2.png";
 
-import Navbar from "../../components/Navbar/Navbar";
 import InteractionCard from "../../components/InteractionCard/InteractionCard";
 import UpcomingTrip from "components/UpcomingTripsCard/UpcomingTripsCard";
 import Connections from "../../components/Connections/Connections";
-import Footer from "../../components/Footer/Footer";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__pink from "assets/images/Banner__pink.png";
 import Banner from "../../components/Banner/Banner";
@@ -20,61 +18,32 @@ import GroupsList from "../../components/GroupsList/GroupsList";
 import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
+import getMemberData from "../../services/Members"
 
-import { BASE_URL } from '../../services/constants';
-import axios from 'axios';
+
+
 
 // Class Based React Component
 class MemberProfilePage extends Component {
 
   constructor(props) {
     super(props);
-    console.log(props);
-
-    // Default CSS class to apply to the Component
     this.state = {
-      classList: "MemberProfilePage"
+      classList: "MemberProfilePage",
     };
+
+    this.getMemberData = getMemberData.bind(this);
   }
 
-  // Runs after Component is loaded in the broswer
   componentDidMount() {
-    // axios()
 
-    // console.log('memberpage props: ', this.props);
-    if (this.props.userid !== undefined) {
-      axios.get(`${BASE_URL}/profile/${this.props.userid}`,
-        {
-          headers: {
-            Authorization: `Token ${localStorage.getItem("token")}`
-          }
-        })
-        .then(res => {
-          console.log('axios ', res.data)
-
-          this.setState({
-            protectedProfileData: {
-              first_name: res.data.first_name,
-              last_name: res.data.last_name,
-              bio: res.data.bio,
-              age: res.data.age,
-              image: res.data.image,
-              city_of_residence: res.data.city_of_residence,
-              social_media: res.data.social_media,
-              user_id: res.data.user_id
-            }
-          })
-        })
-    }
-
-    // .then(res => console.log('axios ', res.data))
-
+    console.log(this.props)
+    this.getMemberData(this.props.userid)
   }
+
+
 
   render() {
-    // this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
-
-
 
     let people = [
       {
@@ -221,8 +190,8 @@ class MemberProfilePage extends Component {
     else {
       window.location.href = "/";
     }
-
   }
 }
+
 
 export default MemberProfilePage;
