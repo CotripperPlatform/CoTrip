@@ -33,7 +33,7 @@ class ForumPageHashtag extends Component {
   }
 
   componentDidMount() {
-    this.getHashtagData()
+    this.getHashtagData(this.state.groupId)
   }
 
   handleConfirm = evt => {

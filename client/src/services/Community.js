@@ -2,18 +2,19 @@ import { BASE_URL } from "./constants";
 import axios from 'axios';
 
 
-export function getHashtagData() {
-    if (this.state.groupId !== undefined) {
-        axios.get(`${BASE_URL}/groups/${this.state.groupId}`,
+export function getHashtagData(groupId) {
+    console.log(groupId = 1)
+    if (groupId !== undefined) {
+        axios.get(`${BASE_URL}/groups/${groupId}`,
             {
                 headers: {
                     Authorization: `Token ${localStorage.getItem("token")}`
                 }
             })
             .then(res => {
-
+                console.log(res)
                 this.setState({
-                    groupData: res.data
+                    hashtagData: res.data
                 })
             })
             .catch(res => console.log(res))
@@ -30,7 +31,7 @@ export function getAllHashtags() {
         .then(res => {
 
             this.setState({
-                groupList: res.data
+                hashtagList: res.data
             })
         })
         .catch(res => console.log(res))
