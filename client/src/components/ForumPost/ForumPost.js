@@ -74,7 +74,7 @@ ForumPost.defaultProps = {
 };
 ForumPost.propTypes = {
   commentClick: PropTypes.func.isRequired,
-  likeClick: PropTypes.func.isRequired,
+  // likeClick: PropTypes.func.isRequired,
   pillClick: PropTypes.func.isRequired,
   to: PropTypes.string,
   likes: PropTypes.number,
