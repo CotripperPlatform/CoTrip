@@ -76,7 +76,6 @@ class Bio extends Component {
 		let userBio = '';
 		let firstName = '';
 		let lastName = '';
-		console.log(this.state.form_social_media)
 		if (this.state.updated_first_name !== undefined) {
 			if (this.props.first_name === this.state.updated_first_name)
 				firstName = this.props.first_name;
@@ -117,12 +116,6 @@ class Bio extends Component {
 			})
 
 		if (this.state.editMode === true) {
-
-
-			// if(this.props.bio)
-			//     userBio = this.props.bio;
-			// else 
-			//   userBio = "Please enter a bio."
 
 			return (
 				<div className={"Bio"}>

@@ -82,12 +82,7 @@ export function submitUserUpdates() {
                 updateSubmitted: true
             })
             this.toggleEditMode();
-            // this.forceUpdate();
         })
         .catch(err => console.log(err))
 
-    // this.setState({
-    //     updateSubmitted: true
-    // })
-    // this.toggleEditMode();
 }
