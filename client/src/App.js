@@ -38,7 +38,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
-import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import { handleSignup, handleLogin, handleLogout, getUserData } from "./services/User";
 
 library.add(
   fab,
@@ -78,34 +78,13 @@ class App extends Component {
     this.handleSignup = handleSignup.bind(this);
     this.handleLogin = handleLogin.bind(this);
     this.handleLogout = handleLogout.bind(this);
+    this.getUserData = getUserData.bind(this);
   }
   componentDidMount() {
-    if (this.state.logged_in) {
-      fetch(`${BASE_URL}/auth/user`, {
-        headers: {
-          Authorization: `Token ${localStorage.getItem("token")}`
-        }
-      })
-        .then(res => res.json())
-        .then(json => {
-          // console.log(json);
-          if (json.detail == "Invalid token.") {
-            this.handleLogout();
-          } else {
-            this.setState(
-              {
-                email: json.email,
-                first_name: json.profile.first_name,
-                image: json.profile.image,
-                userid: json.id,
-                profileLoaded: true
-              },
-              this.logState
-            );
-          }
-        });
-    }
+    if (this.state.logged_in) { this.getUserData() }
   }
+
+
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
