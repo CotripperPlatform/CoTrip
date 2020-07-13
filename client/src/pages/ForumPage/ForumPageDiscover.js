@@ -33,7 +33,9 @@ class ForumPageDiscover extends Component {
   }
 
 componentDidMount() {
+
   this.getTopics()
+
 }
 
 render() {
@@ -90,6 +92,7 @@ render() {
             icon={"white"}
             onClick={pillClick}
             selectId={0}
+            
           />
         </div>
         <div>
