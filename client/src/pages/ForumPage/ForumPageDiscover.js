@@ -34,12 +34,12 @@ class ForumPageDiscover extends Component {
   }
 
   componentDidMount() {
-  this.getHashtags()
+    this.getHashtags()
 }
 
 render() {
 
-  const hashtags = this.state.hashtags ? this.state.hashtags: [];
+const hashtags = this.state.hashtags ? this.state.hashtags: [];
 
   return (
     <div className="ForumPage">
