@@ -43,7 +43,6 @@ render() {
 
   return (
     <div className="ForumPage">
-      <NavBar page={2} profileImage={people} />
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Search: Packing</h3>
         <InputTextField
@@ -182,7 +181,6 @@ render() {
         
         <div className="ForumPage__button-container"></div>
       </div>
-      <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
     </div>
   );
 };
