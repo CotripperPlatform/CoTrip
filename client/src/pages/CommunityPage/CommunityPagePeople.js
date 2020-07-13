@@ -21,7 +21,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {};
+const handleClick = e => { };
 
 // Page or
 const CommunityPage = props => {
@@ -62,7 +62,6 @@ const CommunityPage = props => {
 
   return (
     <div className="CommunityPage">
-      <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Community: People</h3>
         <InputTextField
@@ -232,7 +231,6 @@ const CommunityPage = props => {
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };
