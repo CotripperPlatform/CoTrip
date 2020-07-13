@@ -25,7 +25,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {};
+const handleClick = e => { };
 
 const CommunityPage = props => {
   // State Hooks
@@ -115,7 +115,6 @@ const CommunityPage = props => {
 
   return (
     <div className="CommunityPage">
-      <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Community: People</h3>
         {/* <Autocomplete
@@ -167,7 +166,6 @@ const CommunityPage = props => {
         </div>
         <a className="seeAll-Button"></a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };
