@@ -138,7 +138,7 @@ class App extends Component {
             )}
           ></Route>
           <Route
-            path="/community/view-group"
+            path="/community/view-group/:id"
             exact
             render={routerProps => (
               <CommunityPageGroup handle_logout={this.handleLogout} {...this.state} {...routerProps} />

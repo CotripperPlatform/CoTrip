@@ -18,7 +18,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {};
+const handleClick = e => { };
 
 // Page or
 const CommunityPage = props => {
@@ -56,7 +56,7 @@ const CommunityPage = props => {
       <div className="CommunityPage_body">
         <div>
           <header className="CommunityPage__header">
-            Group Location: <a href="./view-group"> View Sample Page </a>
+            Group Location: <a href="./view-group/1"> View Sample Page </a>
           </header>
         </div>
         <div className="CommunityPage__group-location-container">
