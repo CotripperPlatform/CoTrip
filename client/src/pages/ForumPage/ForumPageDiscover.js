@@ -10,17 +10,17 @@ import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
 
-import { BASE_URL } from '../../services/constants';
-import axios from 'axios';
+import getTopics from "../../services/Forum.js";
+import { Link } from "react-router-dom";
 
 const handleSelect = props => {
-  console.log(props);
+  
 };
 function pillClick(val) {
-  console.log(val);
+  
 }
 const handleClick = e => {
-  console.log("Clicked");
+  
 };
 
 class ForumPageDiscover extends Component {
@@ -29,19 +29,13 @@ class ForumPageDiscover extends Component {
     this.state = {
       topics: []
     }
+    this.getTopics = getTopics.bind(this);
   }
 
 componentDidMount() {
-  axios.get(`${BASE_URL}/topics`)
-    .then(response => {
-      this.setState({ 
-        topics: response.data
-      })
-    })
-    .catch(error => {
-      console.log('Error', error);
-    })
+  this.getTopics()
 }
+
 render() {
   
   const topics = this.state.topics ? this.state.topics: [];
@@ -103,21 +97,22 @@ render() {
           <header className="ForumPage__header">Topics</header>
         </div>
         <div className="forum-page-pill-container">
-        {topics.map(topics =>{
+        {topics.map(topic =>{
         
         return(
           <div className="Forum-Pill">
+            <Link to={`/forum-page-topic/${topic.id}`}>
           <Pill
-            text={topics.title}
+            text={topic.title}
             size={"medium"}
             color={"red"}
             icon={"white"}
             onClick={pillClick}
-            selectId={0}
+            selectId={topic.id}
           />  
+          </Link>
            </div>
           )   
-             
         })
       }
      </div>{" "}
