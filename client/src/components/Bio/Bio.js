@@ -175,7 +175,7 @@ class Bio extends Component {
 
 			// if(this.props.bio)
 			//     userBio = this.props.bio;
-			// else 
+			// else
 			//   userBio = "Please enter a bio."
 
 			return (
@@ -273,6 +273,7 @@ class Bio extends Component {
 
 						<p className="Bio__paragraph">{userBio}</p>
 						<h3 className="Bio__interests">Interests</h3>
+						<p>my interests</p>
 						<div className="hashtag__container">
 							{this.props.hashtags.map(hashtag => (
 								<span className="Bio__span" key={hashtag + 1}>

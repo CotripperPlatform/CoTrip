@@ -60,7 +60,9 @@ class MemberProfilePage extends Component {
 							image: res.data.image,
 							city_of_residence: res.data.city_of_residence,
 							social_media: res.data.social_media,
-							user_id: res.data.user_id
+							user_id: res.data.user_id,
+							hashtags: res.data.hashtags,
+							connections: res.data.connections
 						}
 					})
 				})
@@ -72,7 +74,7 @@ class MemberProfilePage extends Component {
 
 	render() {
 		// this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
-
+		console.log(this.state.protectedProfileData)
 
 
 		let people = [
@@ -169,7 +171,7 @@ class MemberProfilePage extends Component {
 											first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
 											// name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
 											bio={this.state.protectedProfileData.bio}
-											hashtags={people[0].hashtags}
+											hashtags={this.state.protectedProfileData.hashtags}
 											isCurrentUser={true}
 											// onClick={console.log("Hello")}
 											social_media={this.state.protectedProfileData.social_media}
