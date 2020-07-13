@@ -34,6 +34,7 @@ class ForumPageDiscover extends Component {
   }
 
   componentDidMount() {
+
     this.getHashtags()
 }
 
@@ -176,9 +177,8 @@ const hashtags = this.state.hashtags ? this.state.hashtags: [];
             )
           })
         }
-       
         </div>{" "}
-        
+
         <div className="ForumPage__button-container"></div>
       </div>
     </div>
