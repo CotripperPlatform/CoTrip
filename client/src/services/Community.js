@@ -2,10 +2,10 @@ import { BASE_URL } from "./constants";
 import axios from 'axios';
 
 
-export function getHashtagData(groupId) {
-    console.log(groupId = 1)
-    if (groupId !== undefined) {
-        axios.get(`${BASE_URL}/groups/${groupId}`,
+export function getHashtagData(hashtagId) {
+    console.log(hashtagId = 1)
+    if (hashtagId !== undefined) {
+        axios.get(`${BASE_URL}/hashtags/${hashtagId}`,
             {
                 headers: {
                     Authorization: `Token ${localStorage.getItem("token")}`

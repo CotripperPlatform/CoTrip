@@ -162,7 +162,7 @@ class ForumPageHashtag extends Component {
           <div className="hashtag__bodyLeft">
             <header className="ForumPage__header"></header>
             <div>
-              {/* {forumPosts} */}
+              {forumPosts}
             </div>
           </div>
           <div className="hashtag__bodyRight">
