@@ -27,12 +27,10 @@ import Connections from "../../components/Connections/Connections";
 class CommunityPageGroup extends Component {
   constructor(props) {
     super(props);
-    let startGroup;
-    !props.id ? (startGroup = 1) : (startGroup = props.id);
     this.state = {
       joinGroup: false,
       showModal: false,
-      groupId: startGroup,
+      groupId: this.props.match.params.id,
       groupData: {}
     };
 
@@ -94,6 +92,7 @@ class CommunityPageGroup extends Component {
 
     this.state.groupList.map(group => {
       if (userSubmission === group.title.toLowerCase()) {
+        this.props.history.push(`${group.id}`)
         this.setState({ groupId: group.id }, this.getGroup);
       }
     });
