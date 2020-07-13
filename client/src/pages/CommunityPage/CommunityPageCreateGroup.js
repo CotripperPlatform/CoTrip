@@ -42,7 +42,6 @@ export default class CommunityPage extends Component {
   render() {
     return (
       <div className="CommunityPage">
-        <NavBar page={1} profileImage={people} />
         <Banner background={Banner__Community}>
           <div className="community-page-header">
             {" "}
@@ -89,7 +88,6 @@ export default class CommunityPage extends Component {
             save={this.saveSettings}
             />
         </div>
-        <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
       </div>
     );
   }
