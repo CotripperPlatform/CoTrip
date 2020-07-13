@@ -9,18 +9,17 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
+import getHashtags from "../../services/Forum.js";
 
-import { BASE_URL } from '../../services/constants';
-import axios from 'axios';
 
 const handleSelect = props => {
-  console.log(props);
+  
 };
 function pillClick(val) {
-  console.log(val);
+  
 }
 const handleClick = e => {
-  console.log("Clicked");
+ 
 };
 
 
@@ -30,19 +29,11 @@ class ForumPageDiscover extends Component {
     this.state = {
       hashtags: [],
     }
+    this.getHashtags = getHashtags.bind(this);
   }
 
   componentDidMount() {
-  axios.get(`${BASE_URL}/hashtags`)
-    .then(response => {
-      this.setState({ 
-        hashtags: response.data
-      })
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log('Error', error);
-    })
+  this.getHashtags()
 }
 
 render() {
@@ -164,11 +155,11 @@ render() {
           </header>
         </div>
         <div className="forum-page-hollow-pill-container">
-          {hashtags.map(hashtags => {
+          {hashtags.map(hashtag => {
           return(
           <div className="Forum-Pill">
           <Pill
-            text={"#hashtags"}
+            text={hashtag.title}
             size={"medium"}
             color={"pink"}
             icon={"pink"}
