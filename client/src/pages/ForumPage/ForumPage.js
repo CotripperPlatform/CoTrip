@@ -10,17 +10,17 @@ import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
 
-import { BASE_URL } from '../../services/constants';
-import axios from 'axios';
+import getHashtags from "../../services/Forum.js";
+import { Link } from "react-router-dom";
 
 const handleSelect = props => {
-  console.log(props);
+  
 };
 function pillClick(val) {
-  console.log(val);
+  
 }
 const handleClick = e => {
-  console.log("Clicked");
+  
 };
 class ForumPage extends Component {
   constructor(props) {
@@ -28,19 +28,11 @@ class ForumPage extends Component {
     this.state = {
       hashtags: [],
     }
+    this.getHashtags = getHashtags.bind(this);
   }
 
 componentDidMount() {
-  axios.get(`${BASE_URL}/hashtags`)
-    .then(response => {
-      this.setState({ 
-        hashtags: response.data
-      })
-      console.log(response.data);
-    })
-    .catch(error => {
-      console.log('Error', error);
-    })
+  this.getHashtags()
 }
 
 render() {
@@ -197,23 +189,26 @@ render() {
           </header>{" "}
         </div>
         <div className="forum-page-hollow-pill-container">
-          {hashtags.map(hashtags => {
-          return(
-          <div className="Forum-Pill">
-          <Pill
-            text={"#hashtags"}
-            size={"medium"}
-            color={"pink"}
-            icon={"pink"}
-            shadow
-            border
-            onClick={pillClick}
-            selectId={0}
-          />
-          </div>
-            )
-        })
-        }
+        {hashtags.map(hashtag => {
+            
+            return(
+            <div className="Forum-Pill">
+              <Link to={`/forum-page-hashtag/${hashtag.id}`}>
+            <Pill
+              text={hashtag.title}
+              size={"medium"}
+              color={"pink"}
+              icon={"pink"}
+              shadow
+              border
+              onClick={pillClick}
+              selectId={hashtag.id}
+            />
+             </Link>
+            </div>
+              )
+            })
+          }
         </div>{" "}
         
         <div className="ForumPage__button-container"></div>
