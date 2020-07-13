@@ -9,7 +9,10 @@ import boto3
 from django.http import JsonResponse
 from django.conf import settings
 import uuid
-
+from django.contrib import messages
+from django.contrib.auth import update_session_auth_hash, authenticate
+from django.contrib.auth.forms import PasswordChangeForm
+from django.shortcuts import render, redirect
 
 
 class RegisterAPI(generics.GenericAPIView):
@@ -22,7 +25,8 @@ class RegisterAPI(generics.GenericAPIView):
         profile_data = {}
         if 'profile' in mutable_request_data:
             profile_data = mutable_request_data.pop('profile')
-            profile_data['city_of_residence'] = Location.objects.get(id=profile_data['city_of_residence'])
+            profile_data['city_of_residence'] = Location.objects.get(
+                id=profile_data['city_of_residence'])
         serializer = self.get_serializer(data=mutable_request_data)
         serializer.is_valid(raise_exception=True)
         user = serializer.save()
@@ -65,6 +69,7 @@ class ProfileList(generics.ListAPIView):
 
 class ProfileDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = ProfileSerializer
+
     def get_queryset(self):
         print(self.request.user)
         user = self.request.user
@@ -105,23 +110,46 @@ class SocialMediaTypeDetail(generics.RetrieveUpdateDestroyAPIView):
 
 def sign_s3(request):
 
-  file_name = request.GET['folder'] + "/" + uuid.uuid1().hex
-  file_type = request.GET['file_type']
+    file_name = request.GET['folder'] + "/" + uuid.uuid1().hex
+    file_type = request.GET['file_type']
 
-  s3 = boto3.client('s3')
+    s3 = boto3.client('s3')
 
-  presigned_post = s3.generate_presigned_post(
-    Bucket = settings.S3_BUCKET,
-    Key = file_name,
-    Fields = {"acl": "public-read", "Content-Type": file_type},
-    Conditions = [
-      {"acl": "public-read"},
-      {"Content-Type": file_type}
-    ],
-    ExpiresIn = 3600
-  )
+    presigned_post = s3.generate_presigned_post(
+        Bucket=settings.S3_BUCKET,
+        Key=file_name,
+        Fields={"acl": "public-read", "Content-Type": file_type},
+        Conditions=[
+            {"acl": "public-read"},
+            {"Content-Type": file_type}
+        ],
+        ExpiresIn=3600
+    )
 
-  return JsonResponse({
-    'data': presigned_post,
-    'url': 'https://%s.s3.amazonaws.com/%s' % (settings.S3_BUCKET, file_name)
-  })
+    return JsonResponse({
+        'data': presigned_post,
+        'url': 'https://%s.s3.amazonaws.com/%s' % (settings.S3_BUCKET, file_name)
+    })
+
+
+# Allows User to Change their password
+class PasswordChange(generics.GenericAPIView):
+
+    def post(self, request, *args, **kwargs):
+        data = request.data.copy()
+        email = data.get('email')
+        current_password = data.get('currentPassword')
+        new_password = data.get('newPassword')
+        user = authenticate(username=email, password=current_password)
+
+        if user is not None:
+            user.set_password(new_password)
+            user.save()
+            
+            return Response(
+                 'Success! New password has been created'
+            )
+        else:
+            return Response(
+                'Error! User credentials not valid'
+            )
