@@ -87,7 +87,8 @@ render() {
           />
         </div>
         <div>
-          <header className="ForumPage__header">My Favorite Topics</header>
+          <header className="ForumPage__header">My Favorite Topics:
+          <a href="/forum-page-topic">Example Topic</a></header>
         </div>
         <div className="forum-page-pill-container">
         {topics.map(topics =>{
@@ -106,7 +107,9 @@ render() {
           )
         })
       }
-        
+      
+        <a href className="seeMore-Button">See More</a>
+
         <div>
           <header className="ForumPage__header">
             #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
@@ -171,6 +174,7 @@ render() {
         </div>
         <div className="ForumPage__button-container"></div>
       </div>
+      <a href className="seeAll-Button">See All</a>
       <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
       </div>
       </div>
