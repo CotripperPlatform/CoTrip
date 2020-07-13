@@ -173,6 +173,7 @@ class MemberProfilePage extends Component {
 											isCurrentUser={true}
 											// onClick={console.log("Hello")}
 											social_media={this.state.protectedProfileData.social_media}
+											email={this.props.email}
 										/>
 										: ''}
 								</div>

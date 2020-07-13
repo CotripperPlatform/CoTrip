@@ -12,8 +12,8 @@ import { BASE_URL } from "../../services/constants";
 
 // const Bio = props => {
 class Bio extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       editMode: false,
       form_first_name: "",
@@ -21,7 +21,7 @@ class Bio extends Component {
       form_bio: "",
       form_social_media: "",
       socialMediaOptions: [],
-      email: "",
+      email: this.props.email,
       currentPassword: "",
       newPassword: "",
       confirmPassword: ""
@@ -128,6 +128,10 @@ class Bio extends Component {
       })
       .catch(error => console.log(error));
   };
+
+  /**
+   * Change Your Password Functionality
+   */
 
   handleSubmit = e => {
     e.preventDefault();
@@ -277,13 +281,6 @@ class Bio extends Component {
             <div className="change_password">
               <h2 className="password_header">Change Your Password</h2>
               <form onSubmit={this.handleSubmit}>
-                <InputTextField
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  onChange={this.handleChange}
-                  value={this.state.email}
-                />
                 <InputTextField
                   name="currentPassword"
                   type="password"
