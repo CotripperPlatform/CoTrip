@@ -86,7 +86,6 @@ class App extends Component {
       })
         .then(res => res.json())
         .then(json => {
-          // console.log(json);
           if (json.detail == "Invalid token.") {
             this.handleLogout();
           } else {
@@ -98,7 +97,6 @@ class App extends Component {
                 userid: json.id,
                 profileLoaded: true
               },
-              this.logState
             );
           }
         });
@@ -120,8 +118,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-            <Redirect to="/welcome" />
-          )}
+              <Redirect to="/welcome" />
+            )}
           <Route path="/welcome" exact component={SplashPage}></Route>
           <Route
             path="/TripDetail"
@@ -171,8 +169,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-            ""
-          )}
+              ""
+            )}
           <Route
             path="/forum-page"
             exact

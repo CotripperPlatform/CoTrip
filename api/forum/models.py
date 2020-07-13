@@ -5,7 +5,7 @@ from community.models import Group
 
 class Post(models.Model):
     parent = models.ManyToManyField(
-        'self', related_name='comments', null=True, blank=True)
+        'self', related_name='comments', symmetrical=False, null=True, blank=True)
     post_type = models.CharField(max_length=200, null=True, blank=True)
     title = models.CharField(max_length=200)
     time = models.DateTimeField(auto_now=True)
