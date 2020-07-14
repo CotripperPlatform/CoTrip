@@ -63,14 +63,12 @@ const CommunityPage = props => {
       profile.users.map(data => {
         return (
           <div className="CommunityPage__momCard-single">
-            <Link to={`/member-page/${data.id}`}>
+            <Link to={`/member-page/${data.user}`}>
               <PersonCard
-                image={data.image}
+                image={"" ? randomPlaceholderImages() : data.image}
                 name={data.first_name + "" + data.last_name}
                 location={data.city_of_residence.name + ", " + data.city_of_residence.state.name}
                 interests={data.hashtags.title}
-
-                //group card with prop:  id=group.id
               />
             </Link>
           </div>
@@ -96,14 +94,38 @@ const CommunityPage = props => {
     }
   };
 
-  const handleDisplay = event => {
+  const handleFullName = () => {
+    return (
+      profile.baseState &&
+      profile.baseState.map(user => {
+        return { fullName: user.first_name + " " + user.last_name };
+      })
+    );
+  };
+
+  const getProfileFromName = event => {
     let userSubmission = event.target.textContent.toLowerCase();
+    if (userSubmission === "") {
+      return setProfile({
+        users: profile.baseState,
+        baseState: profile.baseState
+      });
+    } else {
+      return setProfile({
+        baseState: profile.baseState,
+        users: profile.users.filter(
+          user =>
+            userSubmission === user.first_name.toLowerCase() + " " + user.last_name.toLowerCase()
+        )
+      });
+    }
+  };
+
+  const handleDisplay = () => {
     profile.users &&
       profile.users.forEach(user => {
-        if (userSubmission === user.city_of_residence.state.name) {
+        if (user.city_of_residence.state.name) {
           return user.city_of_residence.state.name;
-        } else if (userSubmission === undefined) {
-          return "This is America";
         }
       });
   };
@@ -111,17 +133,19 @@ const CommunityPage = props => {
   console.log(states);
   console.log(profile);
   console.log(profile.baseState);
+  console.log(handleFullName());
   return (
     <div className="CommunityPage">
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Community: People</h3>
-        {/* <Autocomplete
+        <Autocomplete
+          style={{ width: 400 }}
           id="AutoStateField"
-          options={fullName}
-          getOptionLabel={option => option.fullname}
-          onClick={getProfileFromName}
+          options={handleFullName()}
+          getOptionLabel={option => option.fullName}
+          onChange={getProfileFromName}
           renderInput={params => <TextField {...params} label="Search By Name" variant="filled" />}
-        /> */}
+        />
       </Banner>
       <div className="secondNav">
         <a className="secondNav">
@@ -147,23 +171,14 @@ const CommunityPage = props => {
           options={states}
           getOptionLabel={option => option.name}
           onChange={getProfileFromStates}
-          renderInput={params => (
-            <TextField {...params} label="Search For Moms By State" variant="filled" />
-          )}
+          renderInput={params => <TextField {...params} label="Search By State" variant="filled" />}
         />
       </div>
-
-      {/* <div className="CommunityPage_SortByButton">
-        <div className="CommunityPage_SortByText">Sort By: Location </div>
-      </div> */}
       <div className="CommunityPage_body">
         <div>
           <header className="CommunityPage__header"></header>
         </div>
-        <div className="CommunityPage__moms-in-city-container">
-          {profileList()}
-          {/* {profileBaseList} */}
-        </div>
+        <div className="CommunityPage__moms-in-city-container">{profileList()}</div>
         <a className="seeAll-Button"></a>
       </div>
     </div>
