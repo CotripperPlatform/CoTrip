@@ -166,7 +166,7 @@ const ForumPage = props => {
         </div>
         <div>
           <header className="ForumPage__header">
-            #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
+            #hashtags I'm Following: <a href="/forum-page-hashtag/1">Example Tag</a>
           </header>{" "}
         </div>
         <div className="forum-page-hollow-pill-container">
