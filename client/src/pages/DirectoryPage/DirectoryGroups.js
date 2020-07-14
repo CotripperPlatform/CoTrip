@@ -35,6 +35,7 @@ class DirectoryGroups extends Component {
 
   render() {
     const groups = this.state.groups;
+    console.log(groups)
     return (
       <div className="DirectoryPage">
         <Banner background={Banner__Directory}>
