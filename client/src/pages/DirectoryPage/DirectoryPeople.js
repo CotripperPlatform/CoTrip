@@ -21,14 +21,13 @@ function pillClick(val) {
 }
 
 const handleClick = e => {
-  ("/home");
+  ("/");
 };
 
 // Page or
 const DirectoryPeople = props => {
   return (
     <div className="CommunityPage">
-      <NavBar page={0} profileImage={people} />
       <Banner background={Banner__Directory}>
         <h3 style={{ margin: 0 }}>Directory: My Friends</h3>
         <InputTextField
@@ -180,7 +179,6 @@ const DirectoryPeople = props => {
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

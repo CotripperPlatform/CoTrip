@@ -117,7 +117,6 @@ class CommunityPageGroup extends Component {
     return (
       <div>
         <div className="CommunityPage-Group-">
-          <NavBar page={1} profileImage={people} />
           <Banner background={Banner__Community}>
             <div className="community-page-header">
               {" "}
@@ -146,22 +145,22 @@ class CommunityPageGroup extends Component {
                 />
               </div>
             ) : (
-              <div className="Modal_align">
-                <ModalContainerJoin
-                  buttonText="Join"
-                  buttonTextColor="black"
-                  buttonColor="yellow"
-                  buttonSize="small"
-                  message="Are you sure you want to join?"
-                  confirmText="Join"
-                  cancelText="Exit"
-                  onConfirm={this.handleConfirm}
-                  onClose={this.handleCloseModal}
-                  modalOpen={this.state.showModal}
-                  handleOpenModal={this.handleOpenModal}
-                />
-              </div>
-            )}
+                <div className="Modal_align">
+                  <ModalContainerJoin
+                    buttonText="Join"
+                    buttonTextColor="black"
+                    buttonColor="yellow"
+                    buttonSize="small"
+                    message="Are you sure you want to join?"
+                    confirmText="Join"
+                    cancelText="Exit"
+                    onConfirm={this.handleConfirm}
+                    onClose={this.handleCloseModal}
+                    modalOpen={this.state.showModal}
+                    handleOpenModal={this.handleOpenModal}
+                  />
+                </div>
+              )}
           </Banner>{" "}
         </div>{" "}
         <div className="community-group-body">
@@ -277,7 +276,6 @@ class CommunityPageGroup extends Component {
             </div>
           </div>
         </div>
-        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
     );
   }

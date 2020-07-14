@@ -4,7 +4,8 @@
     "pk": 1,
     "fields": {
       "title": "Moms in DC",
-      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private."
+      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private.",
+      "location": 60
     }
   },
   {
@@ -12,7 +13,8 @@
     "pk": 2,
     "fields": {
       "title": "Moms in NYC",
-      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private."
+      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private.",
+      "location": 3658
     }
   },
   {
@@ -20,7 +22,8 @@
     "pk": 3,
     "fields": {
       "title": "Moms in Philadelphia",
-      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private."
+      "description": "Ladies others the six desire age. Bred am soon park past read by lain. As excuse eldest no moment. An delight beloved up garrets am cottage private.",
+      "location": 4168
     }
   },
   {
@@ -187,7 +190,10 @@
       "image": "https://www.azom.com/images/Article_Images/ImageForArticle_12117(1).jpg",
       "hashtag": 1,
       "group": 3,
-      "topics": [1, 2]
+      "topics": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -199,7 +205,10 @@
       "image": "https://www.azom.com/images/Article_Images/ImageForArticle_12117(1).jpg",
       "hashtag": 1,
       "group": 3,
-      "topics": [1, 2]
+      "topics": [
+        1,
+        2
+      ]
     }
   },
   {
@@ -211,7 +220,10 @@
       "image": "https://www.azom.com/images/Article_Images/ImageForArticle_12117(1).jpg",
       "hashtag": 1,
       "group": 3,
-      "topics": [1, 2]
+      "topics": [
+        1,
+        2
+      ]
     }
   }
 ]

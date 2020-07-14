@@ -87,7 +87,7 @@ class OnboardingPage extends Component {
             </div>
             {/* {this.state.counter === 3 ? (
               <div className="OnboardingPage__skip-link">
-                <Link to="/home">
+                <Link to="/">
                   <p>Skip</p>
                 </Link>
               </div>
