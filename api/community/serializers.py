@@ -4,7 +4,7 @@ from .models import Group, Event, Topic, Hashtag, Media
 class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
-        fields = '__all__'
+        fields = ['title', 'description', 'location', 'posts', 'members', 'id']
 
 class EventSerializer(serializers.ModelSerializer):
     group = serializers.CharField()
