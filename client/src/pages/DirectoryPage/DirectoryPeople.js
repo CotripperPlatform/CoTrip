@@ -238,7 +238,7 @@ export default class DirectoryPeople extends Component {
       .catch(error => {
         console.log(error);
       });
-    //window.location.reload(true);
+    window.location.reload(true);
   };
 
   sendRequest = e => {
