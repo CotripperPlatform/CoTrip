@@ -79,7 +79,6 @@ export function getUserData() {
             userid: json.id,
             profileLoaded: true
           },
-          this.logState
         );
       }
     });
