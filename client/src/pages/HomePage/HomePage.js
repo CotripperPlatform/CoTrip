@@ -79,7 +79,6 @@ const personCard3 = (
   />
 );
 
-
 const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
@@ -87,12 +86,6 @@ const HomePage = props => {
         <Banner background={Banner__purpleBig}>
           {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
         </Banner>
-<<<<<<< HEAD
-        <a href="./home">New User Sample</a>
-        <br></br>
-        <a href="./home-old-user">Old User Sample</a>
-=======
->>>>>>> develop
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
@@ -111,22 +104,14 @@ const HomePage = props => {
               <span className="HomePage__groupcard-3">
                 <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
               </span>
-<<<<<<< HEAD
-              <div className="HomePage__arrow" />
-=======
               <a href="/" className="HomePage__arrow" />
->>>>>>> develop
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
               {personCard1}
               {personCard2}
               {personCard3}
-<<<<<<< HEAD
-              <div className="HomePage__arrow lower-people" />
-=======
               <a href="/" className="HomePage__arrow lower-people" />
->>>>>>> develop
             </div>
           </span>
 
@@ -160,7 +145,11 @@ const HomePage = props => {
         <div className="HomePage__mobile-wrapper">
           <Link to="/">
             <Card color="yellow" size="mobile">
-              <img src={groups} alt="suggested-groups-icon" className="HomePage__mobile-card-icon" />
+              <img
+                src={groups}
+                alt="suggested-groups-icon"
+                className="HomePage__mobile-card-icon"
+              />
               <h2>Suggested Groups</h2>
             </Card>
           </Link>
@@ -172,13 +161,21 @@ const HomePage = props => {
           </Link>
           <Link to="/">
             <Card color="red" size="mobile">
-              <img src={suggestedPeople}  alt="suggested-people-icon" className="HomePage__mobile-card-icon" />
+              <img
+                src={suggestedPeople}
+                alt="suggested-people-icon"
+                className="HomePage__mobile-card-icon"
+              />
               <h2>Suggested People</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="purple" size="mobile">
-              <img src={hashtags} alt="trending-hashtags-icon" className="HomePage__mobile-card-icon" />
+              <img
+                src={hashtags}
+                alt="trending-hashtags-icon"
+                className="HomePage__mobile-card-icon"
+              />
               <h2>Trending Hashtags</h2>
             </Card>
           </Link>
@@ -188,36 +185,16 @@ const HomePage = props => {
         <span className="HomePage__scrapbook-container">
           <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
           <div className="HomePage__scrapbook-cards-container">
-            <MediaCard
-              imageSrc={happiness}
-              size="medium"
-              to="/"
-              footerText="Posted By: Paula"
-            />
+            <MediaCard imageSrc={happiness} size="medium" to="/" footerText="Posted By: Paula" />
             <MediaCard imageSrc={van} size="medium" to="/" footerText="Posted By: Carmen" />
 
-            <MediaCard
-              imageSrc={nightSky}
-              size="medium"
-              to="/"
-              footerText="Posted By: Krystin"
-            />
+            <MediaCard imageSrc={nightSky} size="medium" to="/" footerText="Posted By: Krystin" />
 
             <span className="HomePage__mediacard-hide">
-              <MediaCard
-                imageSrc={waterfall}
-                size="medium"
-                to="/"
-                footerText="Posted By: Paul"
-              />
+              <MediaCard imageSrc={waterfall} size="medium" to="/" footerText="Posted By: Paul" />
             </span>
             <span className="HomePage__mediacard-hide">
-              <MediaCard
-                imageSrc={flight}
-                size="medium"
-                to="/"
-                footerText="Posted By: Fiona"
-              />
+              <MediaCard imageSrc={flight} size="medium" to="/" footerText="Posted By: Fiona" />
             </span>
           </div>
         </span>
@@ -229,7 +206,6 @@ const HomePage = props => {
           subheading="Sign up with your email address to recieve news and updates"
         ></SignUp>{" "}
       </footer>
-
     </body>
   );
 };
