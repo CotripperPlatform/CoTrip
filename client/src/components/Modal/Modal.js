@@ -2,7 +2,6 @@ import React from "react";
 import "./Modal.css";
 
 const Modal = props => {
-  // console.log(props);
   return (
     <div
       className="Modal"

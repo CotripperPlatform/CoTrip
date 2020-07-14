@@ -61,7 +61,6 @@ const ForumPage = props => {
         </div>
         <div>
           <header className="ForumPage__header">My Favorite Topics:
-          <a href="/forum-page-topic/1">Example Topic Detail</a>
           </header>
         </div>
         <div className="forum-page-pill-container">
