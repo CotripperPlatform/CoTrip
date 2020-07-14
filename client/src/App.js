@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
+import Layout from "./components/Layout/Layout"
+import Navbar from "./components/Navbar/Navbar"
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -13,12 +15,10 @@ import ForumPage from "./pages/ForumPage/ForumPage";
 import DirectoryPeople from "./pages/DirectoryPage/DirectoryPeople";
 import DirectoryGroup from "./pages/DirectoryPage/DirectoryGroups";
 import HomePage from "../src/pages/HomePage/HomePage";
-import ComingSoonPage from "./pages/ComingSoonPage/ComingSoonPage";
 import MemberProfilePage from "./pages/MemberProfilePage/MemberProfilePage";
 import TripDetail from "./pages/TripDetail/TripDetail";
 import OnboardingPage from "./pages/OnboardingPage/OnboardingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import HomePageOldUser from "../src/pages/HomePageOldUser/HomePageOldUser";
 import "./App.css";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
@@ -38,7 +38,7 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { BASE_URL } from "./services/constants";
-import { handleSignup, handleLogin, handleLogout } from "./services/User";
+import { handleSignup, handleLogin, handleLogout, getUserData } from "./services/User";
 
 library.add(
   fab,
@@ -68,7 +68,7 @@ class App extends Component {
       image: "",
       profileLoaded: false,
       menuItems: [
-        { menuItem: "My Directory", link: "/home" },
+        { menuItem: "My Directory", link: "/" },
         { menuItem: "Community", link: "/community" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" }
@@ -78,6 +78,7 @@ class App extends Component {
     this.handleSignup = handleSignup.bind(this);
     this.handleLogin = handleLogin.bind(this);
     this.handleLogout = handleLogout.bind(this);
+    this.getUserData = getUserData.bind(this);
   }
   componentDidMount() {
     if (this.state.logged_in) {
@@ -107,17 +108,30 @@ class App extends Component {
           }
         });
     }
+    if (this.state.logged_in) { this.getUserData() }
   }
+
+
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
+    const loggedIn = this.state.logged_in;
     return (
       <div className="App">
-        <main>
-          <Route path="/" exact component={SplashPage}></Route>
-          <Route path="/coming_soon" exact component={ComingSoonPage}></Route>
+        <Layout {...this.state} {...this.props}>
+          {loggedIn ? (
+            <Route
+              path="/"
+              exact
+              render={routerProps => (
+                <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              )}
+            ></Route>
+          ) : (
+              <Redirect to="/welcome" />
+            )}
           <Route
-            path="/TripDetail"
+            path="/TripDetail:page"
             exact
             render={routerProps => (
               <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
@@ -153,7 +167,7 @@ class App extends Component {
           ></Route>
           {this.state.profileLoaded === true ? (
             <Route
-              path="/member-page"
+              path="/member-page/:memberId" // Get memberId from this.props.match.params.memberId within the MemberProfilePage
               exact
               render={routerProps => (
                 <MemberProfilePage
@@ -164,15 +178,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-            ""
-          )}
-          <Route
-            path="/coming_soon"
-            exact
-            render={routerProps => (
-              <ComingSoonPage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+              ""
             )}
-          ></Route>
           <Route
             path="/forum-page"
             exact
@@ -223,39 +230,28 @@ class App extends Component {
               <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
-          <Route
-            path="/login"
-            exact
-            render={routerProps => (
-              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/register"
-            exact
-            render={routerProps => (
-              <OnboardingPage
-                handleSignup={this.handleSignup}
-                {...routerProps}
-                logged_in={this.state.logged_in}
-              />
-            )}
-          ></Route>
-          <Route
-            path="/home"
-            exact
-            render={routerProps => (
-              <HomePage handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/home-old-user"
-            exact
-            render={routerProps => (
-              <HomePageOldUser handle_logout={this.handleLogout} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-        </main>
+        </Layout>
+
+        <Route path="/welcome" exact component={SplashPage}></Route>
+        <Route
+          path="/login"
+          exact
+          render={routerProps => (
+            <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
+          )}
+        ></Route>
+        <Route
+          path="/register"
+          exact
+          render={routerProps => (
+            <OnboardingPage
+              handleSignup={this.handleSignup}
+              {...routerProps}
+              logged_in={this.state.logged_in}
+            />
+          )}
+        ></Route>
+
       </div>
     );
   }

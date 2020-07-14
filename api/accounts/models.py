@@ -3,6 +3,8 @@ from django.contrib.auth.models import AbstractUser
 from django.apps import apps
 from .managers import CustomUserManager
 from django.contrib.postgres.fields import ArrayField
+from community.models import Group
+
 
 class CustomUser(AbstractUser):
     username = None
@@ -30,7 +32,8 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=200, null=True)
     #cities_of_residence = models.ManyToManyField('trip.Location', related_name='people',null=True, blank=True)
     # city_of_residence = models.CharField(max_length=200)
-    city_of_residence = models.ForeignKey('trip.Location', on_delete=models.CASCADE, related_name='people', null=True, blank=True)
+    city_of_residence = models.ForeignKey(
+        'trip.Location', on_delete=models.CASCADE, related_name='people', null=True, blank=True)
     age = models.IntegerField(null=True)
     dream_destination = models.CharField(max_length=200, blank=True)
     bio = models.TextField(blank=True)
@@ -43,6 +46,8 @@ class Profile(models.Model):
     requests = ArrayField(models.IntegerField())
     # Posts, comments, and replies to be defined as foreign key on those respective models within forum app
     # CoTrip media defined as foreign key in community app
+    groups = models.ManyToManyField(
+        Group, related_name='members', null=True, blank=True)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name} Profile'

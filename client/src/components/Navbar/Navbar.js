@@ -32,7 +32,7 @@ class Navbar extends Component {
     return (
       <div className="Navbar">
         <div className="Navbar__logo">
-          <Logo clickable to="/home" />
+          <Logo clickable to="/" />
         </div>
         <div className="Navbar__burger">
           {/* Handles activating the hamburger animation and displays the menu. */}
@@ -57,7 +57,7 @@ class Navbar extends Component {
           <div className="Navbar__right">
             <Icon icon={"search"} size="2x" onClick={this.clickHandler} />
             <Icon icon={["far", "comment-dots"]} size="2x" onClick={this.clickHandler} />
-            <ProfilePicture type="extra-small" to={this.props.to} image={this.props.profileImage} />
+            <ProfilePicture type="extra-small" to={this.props.to} image={this.props.profileImage ? this.props.profileImage : require('../../assets/images/profile_default.svg')} />
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ Navbar.propTypes = {
 
 Navbar.defaultProps = {
   page: 0,
-  image: "../../assets/images/profile-picture-1.png",
+  image: require('../../assets/images/profile_default.svg'),
   to: "/"
 };
 

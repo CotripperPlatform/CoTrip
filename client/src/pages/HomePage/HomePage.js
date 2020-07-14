@@ -34,6 +34,7 @@ import MediaCard from "../../components/MediaCard/MediaCard";
 import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
+import SplashPage from "pages/SplashPage/SplashPage";
 
 const personCard1 = (
   <PersonCard
@@ -81,15 +82,10 @@ const handleClick = e => {
 const HomePage = props => {
   return (
     <body className="HomePage__wrapper">
-      <nav>
-        <NavBar page={5} to={"/member-page"} profileImage={people}></NavBar>
-      </nav>
       <div className="HomePage__content">
         <Banner background={Banner__purpleBig}>
           {props.first_name ? <h1>Welcome, {props.first_name}!</h1> : <h1>Welcome!</h1>}
         </Banner>
-        <a href="./home">New User Sample</a>
-        <a href="./home-old-user">Old User Sample</a>
         <div className="HomePage_top-items-wrapper">
           <span className="HomePage__suggestions-container">
             <h1 className="HomePage__suggested-header">Suggested Groups</h1>
@@ -108,14 +104,14 @@ const HomePage = props => {
               <span className="HomePage__groupcard-3">
                 <GroupCard name="Bay Cruise" members="98" location="Lisbon" picture={card3} />
               </span>
-              <a href="/home" className="HomePage__arrow" />
+              <a href="/" className="HomePage__arrow" />
             </div>
             <h1 className="HomePage__suggested-header">Suggested People</h1>
             <div className="HomePage__people-container">
               {personCard1}
               {personCard2}
               {personCard3}
-              <a href="/home" className="HomePage__arrow lower-people" />
+              <a href="/" className="HomePage__arrow lower-people" />
             </div>
           </span>
 
@@ -180,15 +176,15 @@ const HomePage = props => {
             <MediaCard
               imageSrc={happiness}
               size="medium"
-              to="/home"
+              to="/"
               footerText="Posted By: Paula"
             />
-            <MediaCard imageSrc={van} size="medium" to="/home" footerText="Posted By: Carmen" />
+            <MediaCard imageSrc={van} size="medium" to="/" footerText="Posted By: Carmen" />
 
             <MediaCard
               imageSrc={nightSky}
               size="medium"
-              to="/home"
+              to="/"
               footerText="Posted By: Krystin"
             />
 
@@ -196,12 +192,17 @@ const HomePage = props => {
               <MediaCard
                 imageSrc={waterfall}
                 size="medium"
-                to="/home"
+                to="/"
                 footerText="Posted By: Paul"
               />
             </span>
             <span className="HomePage__mediacard-hide">
-              <MediaCard imageSrc={flight} size="medium" to="/home" footerText="Posted By: Fiona" />
+              <MediaCard
+                imageSrc={flight}
+                size="medium"
+                to="/"
+                footerText="Posted By: Fiona"
+              />
             </span>
           </div>
         </span>
@@ -214,7 +215,6 @@ const HomePage = props => {
         ></SignUp>{" "}
       </footer>
 
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </body>
   );
 };

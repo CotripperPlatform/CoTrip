@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./CommunityPagePeople.css";
 import NavBar from "../../components/Navbar/Navbar";
 import people from "assets/images/profile_default.svg";
@@ -20,13 +21,47 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => {};
+const handleClick = e => { };
 
 // Page or
 const CommunityPage = props => {
+  const [profile, setProfile] = useState([]);
+
+  // Getting profile list
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await axios.get("http://127.0.0.1:8000/profile");
+      setProfile(res.data);
+      // console.log(res);
+    };
+    fetch();
+  }, []);
+
+  //random number between 1 and 5
+  const stockImages = [image1, image2, image3, image4, image5];
+  const randomPlaceholderImages = () =>
+    stockImages[Math.floor(Math.random() * (stockImages.length - 1 + 1))];
+
+  const profileList = () => {
+    return (
+      profile &&
+      profile.map(data => {
+        return (
+          <div className="CommunityPage__momCard-single">
+            <PersonCard
+              image={randomPlaceholderImages()}
+              name={data.first_name + "" + data.last_name}
+              location={data.city_of_residence}
+              interests={data.hashtags}
+            />
+          </div>
+        );
+      })
+    );
+  };
+
   return (
     <div className="CommunityPage">
-      <NavBar page={1} profileImage={people} />
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Community: People</h3>
         <InputTextField
@@ -161,7 +196,7 @@ const CommunityPage = props => {
           <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
         <div className="CommunityPage__moms-in-city-container">
-          <div className="CommunityPage__momCard-single">
+          {/* <div className="CommunityPage__momCard-single">
             <PersonCard image={image1} name="Lindsay L." location="Washington D.C." />
           </div>
           <div className="CommunityPage__momCard-single">
@@ -191,11 +226,11 @@ const CommunityPage = props => {
           <div className="CommunityPage__momCard-single">
             <PersonCard image={image5} name="Julia C." location="Washington D.C." />
           </div>{" "}
-          <div className="CommunityPage__momCard-single"> </div>
+          <div className="CommunityPage__momCard-single"> </div> */}
+          {profileList()}
         </div>
         <a className="seeAll-Button">See All</a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

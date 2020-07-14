@@ -38,11 +38,6 @@ export default class DirectoryPeople extends Component {
 
 
   
-  
-  handleClick = e => {
-    ('/home')
-  };
-  
   getFriends = () => {
     fetch(`http://127.0.0.1:8000/profile`, {
       headers: {
@@ -102,6 +97,43 @@ export default class DirectoryPeople extends Component {
         </div>
       )
     }
+  }
+
+  handleClick = (e) => {
+    ("/")
+  }
+
+// Page or
+  DirectoryPeople = props => {
+    return (
+      <div className="CommunityPage">
+        <Banner background={Banner__Directory}>
+          <h3 style={{ margin: 0 }}>Directory: My Friends</h3>
+          <InputTextField
+            type="text"
+            variation="wide"
+            name="search directory"
+            placeholder="Search Groups"
+          />
+        </Banner>
+        <div className="secondNav">
+          <a className="secondNav">
+            <Button text="My Friends" color="purple" size="long" handleClick={this.handleClick} />
+          </a>
+          <a className="secondNav" href="./groups">
+            <Button text="My Groups" color="outline" size="long" />
+          </a>
+        </div>{" "}
+        <div className="CommunityPage_SortByButton">
+          <div className="CommunityPage_SortByText">Sort By: Location </div>
+        </div>
+        <div className="CommunityPage_body">
+          <div>
+            <header className="CommunityPage__header">Location:</header>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   showOthers = () => {
@@ -288,7 +320,7 @@ export default class DirectoryPeople extends Component {
   render() {
     return (
       <div className="CommunityPage">
-        <NavBar page={0} profileImage={people} />
+        
         <Banner background={Banner__Directory}>
           <h3 style={{ margin: 0 }}>Directory: My Friends</h3>
           <InputTextField
@@ -329,7 +361,7 @@ export default class DirectoryPeople extends Component {
           </div>
           <a className="seeMore-Button">See More</a>
         </div>
-        <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
+        
       </div>
     );
   }
