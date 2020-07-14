@@ -15,6 +15,8 @@ import image3 from "../../assets/images/profile-picture-3.png";
 import image4 from "../../assets/images/profile-picture-4.png";
 import image5 from "../../assets/images/profile-picture-5.png";
 import Card from "../../components/Card/Card";
+import { Link } from "react-router-dom";
+
 
 let friends = []
 let others = []
@@ -91,11 +93,13 @@ export default class DirectoryPeople extends Component {
     for (let i = 0; i < length; i++) {
       //change to get the ith in the list and that objects name and image
       arr.push(
-        <div className="CommunityPage__momCard-single">
-        <PersonCard image={this.state.friends[i].image} name={this.state.friends[i].first_name} location="Washington D.C." />
-        <button className="FriendButton" onClick={this.removeFriend}>Remove Friend</button>
-        <div className="FriendId">{this.state.friends[i].user}</div>
-        </div>
+        <Link to={`/member-page/${this.state.friends[i].user}`} style={{textDecoration: 'none'}}>
+          <div className="CommunityPage__momCard-single">
+          <PersonCard image={this.state.friends[i].image} name={this.state.friends[i].first_name} location="Washington D.C." />
+          <button className="FriendButton" onClick={this.removeFriend}>Remove Friend</button>
+          <div className="FriendId">{this.state.friends[i].user}</div>
+          </div>
+        </Link>
       )
     }
   }
@@ -148,11 +152,13 @@ export default class DirectoryPeople extends Component {
     for (let i = 0; i < length; i++) {
       //same as the friends function
       arr.push(
-        <div className="CommunityPage__momCard-single">
-        <PersonCard image={this.state.others[i].image} name={this.state.others[i].first_name} location="Washington D.C." />
-        <button className="FriendButton" onClick={this.sendRequest}>Add Friend</button>
-        <div className="FriendId">{this.state.others[i].user}</div>
-        </div>
+        <Link to={`/member-page/${this.state.others[i].user}`} style={{textDecoration: 'none'}}>
+          <div className="CommunityPage__momCard-single">
+          <PersonCard image={this.state.others[i].image} name={this.state.others[i].first_name} location="Washington D.C." />
+          <button className="FriendButton" onClick={this.sendRequest}>Add Friend</button>
+          <div className="FriendId">{this.state.others[i].user}</div>
+          </div>
+        </Link>
       )
     }
   }
@@ -168,11 +174,13 @@ export default class DirectoryPeople extends Component {
     for (let i = 0; i < length; i++) {
       //same as the friends function
       arr.push(
-        <div className="CommunityPage__momCard-single">
-        <PersonCard image={this.state.friendRequests[i].image} name={this.state.friendRequests[i].first_name} location="Washington D.C." />
-        <button className="FriendButton" onClick={this.acceptRequest}>Accept</button>
-        <div className="FriendId">{this.state.friendRequests[i].user}</div>
-        </div>
+        <Link to={`/member-page/${this.state.friendRequests[i].user}`} style={{textDecoration: 'none'}}>
+          <div className="CommunityPage__momCard-single">
+          <PersonCard image={this.state.friendRequests[i].image} name={this.state.friendRequests[i].first_name} location="Washington D.C." />
+          <button className="FriendButton" onClick={this.acceptRequest}>Accept</button>
+          <div className="FriendId">{this.state.friendRequests[i].user}</div>
+          </div>
+        </Link>
       )
     }
   }
