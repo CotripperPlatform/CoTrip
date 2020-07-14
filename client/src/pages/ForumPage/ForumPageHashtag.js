@@ -112,7 +112,6 @@ class ForumPageHashtag extends Component {
 
     return (
       <div className="ForumPage">
-        <NavBar page={2} profileImage={people} />
         <Banner background={Banner__Community}>
           <div className="community-page-header">
             {" "}
@@ -195,7 +194,6 @@ class ForumPageHashtag extends Component {
             </div>
           </div>
         </div>
-        <Footer /* history={props.history} handle_logout={props.handle_logout} */ />
       </div>
     );
   }
