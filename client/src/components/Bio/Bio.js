@@ -10,7 +10,7 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import axios from "axios";
 import { BASE_URL } from "../../services/constants";
 
-// const Bio = props => {
+
 class Bio extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +24,10 @@ class Bio extends Component {
       email: this.props.email,
       currentPassword: "",
       newPassword: "",
-      confirmPassword: ""
+      confirmPassword: "",
+      isSuccess: false,
+      isFailure: false,
+      passwordMatch: false
     };
   }
 
@@ -135,21 +138,38 @@ class Bio extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    if (this.state.newPassword === this.state.confirmPassword) {
-      fetch(`${BASE_URL}/auth/password_change`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(this.state)
-      })
-        .then(res => res.json())
-        .then(json => {
-          alert(json);
-        });
-    } else {
-      alert("Passwords do not match");
+    if (this.state.newPassword !== this.state.confirmPassword) {
+      this.setState({
+        passwordMatch: true,
+        isFailure: false,
+        isSuccess: false
+      });
+      return;
     }
+
+    fetch(`${BASE_URL}/auth/password_change`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state)
+    })
+      .then(res => res.json())
+      .then(json => {
+        if (json === "Success! New password has been created") {
+          this.setState({
+            isSuccess: true,
+            isFailure: false,
+            passwordMatch: false
+          });
+        } else {
+          this.setState({
+            isFailure: true,
+            isSuccess: false,
+            passwordMatch: false
+          });
+        }
+      });
   };
 
   handleChange = e => {
@@ -160,6 +180,13 @@ class Bio extends Component {
     let userBio = "";
     let firstName = "";
     let lastName = "";
+
+	/**
+	 * Change Password Alerts
+	 */
+    let passwordSuccess = !this.state.isSuccess ? "" : <p>Password has been changed</p>;
+    let passwordFailure = !this.state.isFailure ? "" : <p>Current password is invalid</p>;
+    let passwordMatch = !this.state.passwordMatch ? "" : <p>New Passwords do not match</p>;
 
     if (this.state.updated_first_name !== undefined) {
       if (this.props.first_name === this.state.updated_first_name)
@@ -278,8 +305,8 @@ class Bio extends Component {
                 handleClick={this.submitUserUpdates}
               />
             </div>
-            <div className="change_password">
-              <h2 className="password_header">Change Your Password</h2>
+            <div className="change__password">
+              <h2 className="change__password__title">Change Your Password</h2>
               <form onSubmit={this.handleSubmit}>
                 <InputTextField
                   name="currentPassword"
@@ -302,7 +329,9 @@ class Bio extends Component {
                   onChange={this.handleChange}
                   value={this.state.confirmPassword}
                 />
-
+                {passwordSuccess}
+                {passwordFailure}
+                {passwordMatch}
                 <input className="LoginPage__submit" text="Login" type="submit" />
               </form>
             </div>
