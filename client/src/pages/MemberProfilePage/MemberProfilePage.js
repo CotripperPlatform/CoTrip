@@ -96,45 +96,45 @@ class MemberProfilePage extends Component {
     let testUsers = [
       {
         userId: 1,
-        userFirstName: "Paula",
-        userSurname: "Bannerman",
-        userPic: pic1
+        first_name: "Paula",
+        last_name: "Bannerman",
+        image: pic1
       },
       {
         userId: 2,
-        userFirstName: "Jack",
-        userSurname: "Johnson",
-        userPic: pic2
+        first_name: "Jack",
+        last_name: "Johnson",
+        image: pic2
       },
       {
         userId: 3,
-        userFirstName: "Jenny",
-        userSurname: "Jones",
-        userPic: pic3
+        first_name: "Jenny",
+        last_name: "Jones",
+        image: pic3
       },
       {
         userId: 4,
-        userFirstName: "Joan",
-        userSurname: "Rivers",
-        userPic: pic4
+        first_name: "Joan",
+        last_name: "Rivers",
+        image: pic4
       },
       {
         userId: 5,
-        userFirstName: "Freddy",
-        userSurname: "Mercury",
-        userPic: pic2
+        first_name: "Freddy",
+        last_name: "Mercury",
+        image: pic2
       },
       {
         userId: 5,
-        userFirstName: "Leslie",
-        userSurname: "Knope",
-        userPic: pic3
+        first_name: "Leslie",
+        last_name: "Knope",
+        image: pic3
       },
       {
         userId: 7,
-        userFirstName: "Frank",
-        userSurname: "Ocean",
-        userPic: pic1
+        first_name: "Frank",
+        last_name: "Ocean",
+        image: pic1
       }
     ];
 
