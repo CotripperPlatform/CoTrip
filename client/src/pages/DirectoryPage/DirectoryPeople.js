@@ -233,10 +233,10 @@ export default class DirectoryPeople extends Component {
     })
       .then(response => response.json())
       .then(result => {
-        console.log(result);
+        //success
       })
       .catch(error => {
-        console.log(error);
+        //error
       });
     window.location.reload(true);
   };
@@ -364,10 +364,7 @@ export default class DirectoryPeople extends Component {
           </a>
         </div>
         <header className="CommunityPage__header">Friends:</header>
-        <div className="CommunityPage__moms-in-city-container">
-          {this.showFriends()}
-          {console.log(this.state)}
-        </div>
+        <div className="CommunityPage__moms-in-city-container">{this.showFriends()}</div>
         <header className="CommunityPage__header">Requests:</header>
         <div className="CommunityPage__moms-in-city-container">{this.showRequests()}</div>
         <header className="CommunityPage__header">Add Other Moms As Friends:</header>
