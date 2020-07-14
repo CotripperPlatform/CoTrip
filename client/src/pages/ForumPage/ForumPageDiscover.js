@@ -9,7 +9,6 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
-
 import getTopics from "../../services/Forum.js";
 import { Link } from "react-router-dom";
 
@@ -53,13 +52,13 @@ class ForumPageDiscover extends Component {
               handleClick={handleClick}
             />
           </a>
-          <a className="secondNav">
+          <a href="./forum-page" className="secondNav">
             <Button text="Discover Topics" color="pink" size="long" handleClick={handleClick} />
           </a>
         </div>
 
-        <div className="forum-page-body">
-          <div className="forum-page-sort">
+        <div className="ForumPage__body">
+          <div className="ForumPage__sort">
             <InputSelect
               onSelect={handleSelect}
               optionPrefix={"Sort By:  "}
@@ -74,7 +73,7 @@ class ForumPageDiscover extends Component {
           <div>
             <header className="ForumPage__header">Popular Topics</header>
           </div>
-          <div className="forum-page-pill-container">
+          <div className="ForumPage__pill-container">
             <Pill
               className="Forum-Pill"
               text={"Traveling"}
@@ -88,11 +87,11 @@ class ForumPageDiscover extends Component {
           <div>
             <header className="ForumPage__header">Topics</header>
           </div>
-          <div className="forum-page-pill-container">
+          <div className="ForumPage__pill-container">
             {topics.map(topic => {
               return (
-                <div className="Forum-Pill">
-                  <Link to={`/forum-page-topic/${topic.id}`} style={{ textDecoration: "none" }}>
+                <div className="Forum__Pill">
+                  <Link to={"./forum-page-topic/"} style={{ textDecoration: "none" }}>
                     <Pill
                       text={topic.title}
                       size={"medium"}
@@ -105,7 +104,7 @@ class ForumPageDiscover extends Component {
                 </div>
               );
             })}
-          </div>{" "}
+          </div>
           <a href className="seeMore-Button">
             See More
           </a>
@@ -114,7 +113,7 @@ class ForumPageDiscover extends Component {
               #hashtags: <a href="/forum-page-hashtag">example tag</a>
             </header>
           </div>
-          <div className="forum-page-hollow-pill-container">
+          <div className="ForumPage__hollow-pill-container">
             <Pill
               text={"#hashtags"}
               size={"medium"}
