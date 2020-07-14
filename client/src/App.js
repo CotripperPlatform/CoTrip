@@ -7,7 +7,7 @@ import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
-import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import ForumPageTopic from "./pages/ForumPage/ForumPageTopic";
 import ForumPageDiscover from "./pages/ForumPage/ForumPageDiscover";
 
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
