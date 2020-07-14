@@ -94,6 +94,7 @@ export default class DirectoryPeople extends Component {
         <div className="CommunityPage__momCard-single">
         <PersonCard image={this.state.friends[i].image} name={this.state.friends[i].first_name} location="Washington D.C." />
         <button className="FriendButton" onClick={this.removeFriend}>Remove Friend</button>
+        <div className="FriendId">{this.state.friends[i].user}</div>
         </div>
       )
     }
@@ -150,6 +151,7 @@ export default class DirectoryPeople extends Component {
         <div className="CommunityPage__momCard-single">
         <PersonCard image={this.state.others[i].image} name={this.state.others[i].first_name} location="Washington D.C." />
         <button className="FriendButton" onClick={this.sendRequest}>Add Friend</button>
+        <div className="FriendId">{this.state.others[i].user}</div>
         </div>
       )
     }
@@ -169,6 +171,7 @@ export default class DirectoryPeople extends Component {
         <div className="CommunityPage__momCard-single">
         <PersonCard image={this.state.friendRequests[i].image} name={this.state.friendRequests[i].first_name} location="Washington D.C." />
         <button className="FriendButton" onClick={this.acceptRequest}>Accept</button>
+        <div className="FriendId">{this.state.friendRequests[i].user}</div>
         </div>
       )
     }
@@ -183,10 +186,10 @@ export default class DirectoryPeople extends Component {
   }
 
   removeFriend = (e) => {
-    let nonFriend = e.target.parentElement.children[0].children[1].textContent
+    let nonFriend = e.target.parentElement.children[2].textContent
     let connectionsList = this.props.connections
     for (let i = 0; i < this.state.friends.length; i++) {
-      if (this.state.friends[i].first_name === nonFriend) {
+      if (this.state.friends[i].user === nonFriend) {
         connectionsList.splice(i, 1)
       }
     }
@@ -210,19 +213,17 @@ export default class DirectoryPeople extends Component {
   }
 
   sendRequest = (e) => {
-    let newFriend = e.target.parentElement.children[0].children[1].textContent
+    let newFriend = e.target.parentElement.children[2].textContent
     e.target.parentElement.children[1].textContent = "Request Sent"
-    let newFriendId
     let requestList
     for (let i = 0; i < this.state.others.length; i++) {
-      if (this.state.others[i].first_name === newFriend) {
-        newFriendId = this.state.others[i].user
+      if (this.state.others[i].user === newFriend) {
         requestList = this.state.others[i].requests
       }
     }
     requestList.push(this.props.userid)
     let data = { requests: requestList }
-    fetch(`http://127.0.0.1:8000/profile/${newFriendId}`, {
+    fetch(`http://127.0.0.1:8000/profile/${newFriend}`, {
       method: 'PATCH',
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
@@ -240,13 +241,11 @@ export default class DirectoryPeople extends Component {
   }
 
   acceptRequest = (e) => {
-    let newFriend = e.target.parentElement.children[0].children[1].textContent
-    let newFriendId
+    let newFriend = e.target.parentElement.children[2].textContent
     let connectionsList = this.props.connections
     for (let i = 0; i < this.state.friendRequests.length; i++) {
-      if (this.state.friendRequests[i].first_name === newFriend) {
+      if (this.state.friendRequests[i].user === newFriend) {
         connectionsList.push(this.state.friendRequests[i].user)
-        newFriendId = this.state.friendRequests[i].user
       }
     }
     let data = { connections: connectionsList }
@@ -266,7 +265,7 @@ export default class DirectoryPeople extends Component {
       //error
     });
     window.location.reload(true)
-    this.manageRequests(newFriendId)
+    this.manageRequests(newFriend)
   }
   
   manageRequests = (id) => {
