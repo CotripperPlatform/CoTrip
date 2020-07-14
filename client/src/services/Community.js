@@ -2,17 +2,15 @@ import { BASE_URL } from "./constants";
 import axios from 'axios';
 
 
-export function getHashtagData(hashtagId) {
-    console.log(hashtagId = 1)
-    if (hashtagId !== undefined) {
-        axios.get(`${BASE_URL}/hashtags/${hashtagId}`,
+export function getHashtagData() {
+    if (this.state.hashtagId !== undefined) {
+        axios.get(`${BASE_URL}/hashtags/${this.state.hashtagId}`,
             {
                 headers: {
                     Authorization: `Token ${localStorage.getItem("token")}`
                 }
             })
             .then(res => {
-                console.log(res)
                 this.setState({
                     hashtagData: res.data
                 })
@@ -21,7 +19,7 @@ export function getHashtagData(hashtagId) {
     }
 }
 
-export function getAllHashtags() {
+export function getAllHashtags(callback = null) {
     axios.get(`${BASE_URL}/hashtags`,
         {
             headers: {
@@ -32,7 +30,7 @@ export function getAllHashtags() {
 
             this.setState({
                 hashtagList: res.data
-            })
+            }, callback)
         })
         .catch(res => console.log(res))
 }

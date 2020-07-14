@@ -6,7 +6,11 @@ import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
 import MediaCard from "../../components/MediaCard/MediaCard";
-import { getHashtagData } from "../../services/Community";
+import { getHashtagData, getAllHashtags } from "../../services/Community";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import TextField from "@material-ui/core/TextField";
+
+
 
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
@@ -21,16 +25,23 @@ class ForumPageHashtag extends Component {
     this.state = {
       followTag: false,
       showModal: false,
-      hashtagId: props.match.params.id,
-      hashtagData: [],
+      hashtagId: parseInt(props.match.params.id),
+      hashtagData: {},
     };
 
     this.getHashtagData = getHashtagData.bind(this);
+    this.getAllHashtags = getAllHashtags.bind(this);
 
   }
 
   componentDidMount() {
-    this.getHashtagData(this.state.groupId)
+    this.getAllHashtags(this.mountHashtagData)
+  }
+
+  mountHashtagData = () => {
+    console.log(this.state.hashtagId)
+    let hashtag = this.state.hashtagList.filter(hashtag => hashtag.id === this.state.hashtagId)[0]
+    this.setState({ hashtagData: hashtag })
   }
 
   handleConfirm = evt => {
@@ -71,6 +82,7 @@ class ForumPageHashtag extends Component {
   render() {
     let hashtagData = this.state.hashtagData
     let postList = [], forumPosts = []
+    console.log(this.state.hashtagList)
     console.log(this.state.hashtagData)
 
     if (hashtagData.posts) {
@@ -111,14 +123,16 @@ class ForumPageHashtag extends Component {
       <div className="ForumPage">
         <Banner background={Banner__Community}>
           <div className="community-page-header">
-            {" "}
-            <h3 style={{ margin: 0 }}>#packinglight</h3>
+
+            <h3 style={{ margin: 0 }}>{this.state.hashtagData.title}</h3>
           </div>
-          <InputTextField
-            type="text"
-            name="search directory"
-            placeholder="Search in #packinglight"
-            variation="wide"
+          <Autocomplete
+            style={{ width: 300 }}
+            id="AutoStateField"
+            options={this.state.hashtagList ? this.state.hashtagList : ""}
+            getOptionLabel={option => option.title}
+            onChange={this.handleSelect}
+            renderInput={params => <TextField {...params} label="Hashtag" variant="filled" />}
           />
           {this.state.followTag ? (
             <div className="Modal_align">
