@@ -9,32 +9,30 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
-import getTopics from "../../services/Forum.js";
+import getHashtags from "../../services/Forum.js";
 import { Link } from "react-router-dom";
 
 const handleSelect = props => {};
 function pillClick(val) {}
 const handleClick = e => {};
-
 class ForumPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      topics: []
+      hashtags: []
     };
-    this.getTopics = getTopics.bind(this);
+    this.getHashtags = getHashtags.bind(this);
   }
 
   componentDidMount() {
-    this.getTopics();
+    this.getHashtags();
   }
 
   render() {
-    const topics = this.state.topics ? this.state.topics : [];
+    const hashtags = this.state.hashtags ? this.state.hashtags : [];
 
     return (
       <div className="ForumPage">
-        <NavBar page={2} profileImage={people} />
         <Banner background={Banner__Community}>
           <h3 style={{ margin: 0 }}>Forum: Discover Topics</h3>
           <InputTextField
@@ -57,6 +55,7 @@ class ForumPage extends Component {
             />
           </a>
         </div>
+
         <div className="ForumPage__body">
           <div className="ForumPage__sort">
             <InputSelect
@@ -71,91 +70,135 @@ class ForumPage extends Component {
             />
           </div>
           <div>
-            <header className="ForumPage__header">My Favorite Topics:</header>
+            <header className="ForumPage__header">My Favorite Topics</header>
           </div>
           <div className="ForumPage__pill-container">
-            {topics.map(topic => {
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"red"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"red"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />{" "}
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />{" "}
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum-Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+            <Pill
+              className="Forum__Pill"
+              text={"Traveling"}
+              size={"medium"}
+              size={"short"}
+              color={"pink"}
+              icon={"white"}
+              onClick={pillClick}
+              selectId={0}
+            />
+          </div>
+          <div>
+            <header className="ForumPage__header">#hashtags I'm Following</header>
+          </div>
+          <div className="ForumPage__hollow-pill-container">
+            {hashtags.map(hashtag => {
               return (
-                <div className="Forum__Pill">
-                  <Link to={"./forum-page-topic/"} style={{ textDecoration: "none" }}>
+                <div className="Forum-Pill">
+                  <Link to={"./forum-page-hashtag/"} style={{ textDecoration: "none" }}>
                     <Pill
-                      text={topic.title}
+                      text={hashtag.title}
                       size={"medium"}
-                      color={"red"}
-                      icon={"white"}
+                      color={"pink"}
+                      icon={"pink"}
+                      shadow
+                      border
                       onClick={pillClick}
-                      selectId={topic.id}
+                      selectId={hashtag.id}
                     />
                   </Link>
                 </div>
               );
             })}
           </div>
-          <a href className="seeMore-Button">
-            See More
-          </a>
-          <div>
-            <header className="ForumPage__header">
-              #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
-            </header>{" "}
-          </div>
-          <div className="ForumPage__hollow-pill-container">
-            <Pill
-              text={"#hashtags"}
-              size={"medium"}
-              color={"pink"}
-              icon={"pink"}
-              shadow
-              border
-              onClick={pillClick}
-              selectId={0}
-            />
-            <Pill
-              text={"#hashtags"}
-              size={"medium"}
-              color={"pink"}
-              icon={"pink"}
-              shadow
-              border
-              onClick={pillClick}
-              selectId={0}
-            />
-            <Pill
-              text={"#hashtags"}
-              size={"medium"}
-              color={"pink"}
-              icon={"pink"}
-              shadow
-              border
-              onClick={pillClick}
-              selectId={0}
-            />
-            <Pill
-              text={"#hashtags"}
-              size={"medium"}
-              color={"pink"}
-              icon={"pink"}
-              shadow
-              border
-              onClick={pillClick}
-              selectId={0}
-            />
-            <Pill
-              text={"#hashtags"}
-              size={"medium"}
-              color={"pink"}
-              icon={"pink"}
-              shadow
-              border
-              onClick={pillClick}
-              selectId={0}
-            />
-          </div>
           <div className="ForumPage__button-container"></div>
-          <a href className="seeAll-Button">
-            See All
-          </a>
-        </div>{" "}
+        </div>
       </div>
     );
   }
