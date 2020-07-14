@@ -10,4 +10,4 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         depth = 2
         fields = ['id', 'parent', 'comments', 'post_type', 'title',
-                  'time', 'body', 'likes', 'author', 'group']
+                  'time', 'body', 'likes', 'author', 'group', 'hashtags', 'topics']
