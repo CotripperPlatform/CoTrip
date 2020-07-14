@@ -169,10 +169,10 @@ export default class DirectoryPeople extends Component {
     })
     .then(response => response.json())
     .then(result => {
-      console.log('Success:', result);
+      //success
     })
     .catch(error => {
-      console.error('Error:', error);
+      //error
     });
     window.location.reload(true)
   }
@@ -200,10 +200,10 @@ export default class DirectoryPeople extends Component {
     })
     .then(response => response.json())
     .then(result => {
-      console.log('Success:', result);
+      //success
     })
     .catch(error => {
-      console.error('Error:', error);
+      //error
     });
   }
 
@@ -228,10 +228,10 @@ export default class DirectoryPeople extends Component {
     })
     .then(response => response.json())
     .then(result => {
-      console.log('Success:', result);
+      //success
     })
     .catch(error => {
-      console.error('Error:', error);
+      //error
     });
     window.location.reload(true)
     this.manageRequests(newFriendId)
@@ -257,10 +257,10 @@ export default class DirectoryPeople extends Component {
     })
     .then(response => response.json())
     .then(result => {
-      console.log('Success:', result);
+      //success
     })
     .catch(error => {
-      console.error('Error:', error);
+      //error
     });
   }
 
@@ -277,10 +277,10 @@ export default class DirectoryPeople extends Component {
     })
     .then(response => response.json())
     .then(result => {
-      console.log('Success:', result);
+      //success
     })
     .catch(error => {
-      console.error('Error:', error);
+      //error
     });
   }
 

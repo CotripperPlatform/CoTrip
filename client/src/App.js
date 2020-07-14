@@ -72,8 +72,7 @@ class App extends Component {
         { menuItem: "Community", link: "/community" },
         { menuItem: "Forum", link: "/forum-page" },
         { menuItem: "Book A Trip", link: "/book-a-trip" }
-      ],
-      connections: []
+      ]
     };
 
     this.handleSignup = handleSignup.bind(this);
