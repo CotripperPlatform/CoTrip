@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import Card from "../Card/Card";
 
 const GroupCard = props => {
-  let { picture, name, members, location } = props;
+  let { picture, name, members, location, id } = props;
   return (
     <Card size="medium-short" picture={picture}>
-      <Link className="GroupCard" to={`/view-group`}>
+      <Link className="GroupCard" to={`/view-group/${id}`}>
         <div className="GroupCard__text-container">
           <h2 className="GroupCard__group-name">{name}</h2>
           <footer className="GroupCard__details">
             <p className="GroupCard__members">{members} members</p>
-            <p className="GroupCard__location">{location}</p>
+            <p className="GroupCard__location">{location}</p> 
           </footer>
         </div>
       </Link>
