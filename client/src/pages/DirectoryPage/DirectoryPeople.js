@@ -218,7 +218,7 @@ export default class DirectoryPeople extends Component {
     let nonFriend = e.target.parentElement.children[2].textContent;
     let connectionsList = this.props.connections;
     for (let i = 0; i < this.props.connections.length; i++) {
-      if (this.props.connections[i] === nonFriend) {
+      if (this.props.connections[i] == nonFriend) {
         connectionsList.splice(i, 1);
       }
     }
@@ -233,12 +233,12 @@ export default class DirectoryPeople extends Component {
     })
       .then(response => response.json())
       .then(result => {
-        //success
+        console.log(result);
       })
       .catch(error => {
-        //error
+        console.log(error);
       });
-    window.location.reload(true);
+    //window.location.reload(true);
   };
 
   sendRequest = e => {
@@ -246,7 +246,7 @@ export default class DirectoryPeople extends Component {
     e.target.parentElement.children[1].textContent = "Request Sent";
     let requestList;
     for (let i = 0; i < this.state.others.length; i++) {
-      if (this.state.others[i].user === newFriend) {
+      if (this.state.others[i].user == newFriend) {
         requestList = this.state.others[i].requests;
       }
     }
@@ -273,7 +273,7 @@ export default class DirectoryPeople extends Component {
     let newFriend = e.target.parentElement.children[2].textContent;
     let connectionsList = this.props.connections;
     for (let i = 0; i < this.state.friendRequests.length; i++) {
-      if (this.state.friendRequests[i].user === newFriend) {
+      if (this.state.friendRequests[i].user == newFriend) {
         connectionsList.push(this.state.friendRequests[i].user);
       }
     }
@@ -300,7 +300,7 @@ export default class DirectoryPeople extends Component {
   manageRequests = id => {
     let requestList = this.props.requests;
     for (let i = 0; i < requestList.length; i++) {
-      if (id === requestList[i]) {
+      if (id == requestList[i]) {
         console.log("it's here");
         requestList.splice(i, 1);
         requestList.push(0);
