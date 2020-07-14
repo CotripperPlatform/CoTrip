@@ -108,7 +108,6 @@ class MemberProfilePage extends Component {
 
 
         <div className={this.state.classList}>
-          <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
 
           <Banner background={Banner__pink}>
             {" "}
@@ -182,7 +181,6 @@ class MemberProfilePage extends Component {
             <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
 
-          <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
       );
 
