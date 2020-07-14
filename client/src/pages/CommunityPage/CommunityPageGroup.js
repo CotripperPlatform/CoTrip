@@ -30,7 +30,7 @@ class CommunityPageGroup extends Component {
     this.state = {
       joinGroup: false,
       showModal: false,
-      groupId: this.props.match.params.id,
+      groupId: parseInt(this.props.match.params.id),
       groupData: {}
     };
 
@@ -39,8 +39,12 @@ class CommunityPageGroup extends Component {
   }
 
   componentDidMount() {
-    this.getGroup();
-    this.getAllGroups();
+    this.getAllGroups(this.mountGroupData);
+  }
+
+  mountGroupData = () => {
+    let group = this.state.groupList.filter(group => group.id === this.state.groupId)[0]
+    this.setState({ groupData: group })
   }
 
   handleConfirm = evt => {
@@ -93,16 +97,13 @@ class CommunityPageGroup extends Component {
     this.state.groupList.map(group => {
       if (userSubmission === group.title.toLowerCase()) {
         this.props.history.push(`${group.id}`)
-        this.setState({ groupId: group.id }, this.getGroup);
+        this.setState({ groupId: group.id }, this.mountGroupData);
       }
     });
   };
 
   render() {
-    console.log(getAllGroups);
     let groupList = this.state.groupList;
-    console.log(groupList)
-
 
     // TODO: Media Section, Upcoming Events Section
     let groupData = this.state.groupData;

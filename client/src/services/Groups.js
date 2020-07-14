@@ -20,7 +20,7 @@ export function getGroup() {
     }
 }
 
-export function getAllGroups() {
+export function getAllGroups(callback = null) {
     axios.get(`${BASE_URL}/groups`,
         {
             headers: {
@@ -31,7 +31,7 @@ export function getAllGroups() {
 
             this.setState({
                 groupList: res.data
-            })
+            }, callback)
         })
         .catch(res => console.log(res))
 }
