@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import "./ForumPage.css";
-import NavBar from "../../components/Navbar/Navbar";
-import people from "assets/images/profile_default.svg";
 import ModalContainerFollow from "../../components/Modal/_ModalContainer-follow";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
-import Footer from "../../components/Footer/Footer";
 import MediaCard from "../../components/MediaCard/MediaCard";
 import { getHashtagData } from "../../services/Community";
 
@@ -24,7 +21,7 @@ class ForumPageHashtag extends Component {
     this.state = {
       followTag: false,
       showModal: false,
-      hashtagId: props.hashtagId,
+      hashtagId: props.match.params.id,
       hashtagData: [],
     };
 
