@@ -22,7 +22,6 @@ class ProfileSerializer(serializers.ModelSerializer):
     social_media = ProfileSocialMediaSerializer(many=True, read_only=True)
     class Meta:
         model = Profile
-        depth = 1
         fields = ['user', 'topics', 'hashtags', 'image', 'first_name', 'last_name', 'city_of_residence',
                   'age', 'dream_destination', 'bio', 'activities', 'events', 'connections', 'social_media', 'groups']
 
