@@ -90,19 +90,22 @@ export default class DirectoryPeople extends Component {
     for (let i = 0; i < length; i++) {
       //change to get the ith in the list and that objects name and image
       arr.push(
-        <Link to={`/member-page/${this.state.friends[i].user}`} style={{ textDecoration: "none" }}>
-          <div className="CommunityPage__momCard-single">
+        <div className="CommunityPage__momCard-single">
+          <Link
+            to={`/member-page/${this.state.friends[i].user}`}
+            style={{ textDecoration: "none" }}
+          >
             <PersonCard
               image={this.state.friends[i].image}
               name={this.state.friends[i].first_name}
               location="Washington D.C."
             />
-            <button className="FriendButton" onClick={this.removeFriend}>
-              Remove Friend
-            </button>
-            <div className="FriendId">{this.state.friends[i].user}</div>
-          </div>
-        </Link>
+          </Link>
+          <button className="FriendButton" onClick={this.removeFriend}>
+            Remove Friend
+          </button>
+          <div className="FriendId">{this.state.friends[i].user}</div>
+        </div>
       );
     }
   };
@@ -155,19 +158,19 @@ export default class DirectoryPeople extends Component {
     for (let i = 0; i < length; i++) {
       //same as the friends function
       arr.push(
-        <Link to={`/member-page/${this.state.others[i].user}`} style={{ textDecoration: "none" }}>
-          <div className="CommunityPage__momCard-single">
+        <div className="CommunityPage__momCard-single">
+          <Link to={`/member-page/${this.state.others[i].user}`} style={{ textDecoration: "none" }}>
             <PersonCard
               image={this.state.others[i].image}
               name={this.state.others[i].first_name}
               location="Washington D.C."
             />
-            <button className="FriendButton" onClick={this.sendRequest}>
-              Add Friend
-            </button>
-            <div className="FriendId">{this.state.others[i].user}</div>
-          </div>
-        </Link>
+          </Link>
+          <button className="FriendButton" onClick={this.sendRequest}>
+            Add Friend
+          </button>
+          <div className="FriendId">{this.state.others[i].user}</div>
+        </div>
       );
     }
   };
@@ -183,22 +186,22 @@ export default class DirectoryPeople extends Component {
     for (let i = 0; i < length; i++) {
       //same as the friends function
       arr.push(
-        <Link
-          to={`/member-page/${this.state.friendRequests[i].user}`}
-          style={{ textDecoration: "none" }}
-        >
-          <div className="CommunityPage__momCard-single">
+        <div className="CommunityPage__momCard-single">
+          <Link
+            to={`/member-page/${this.state.friendRequests[i].user}`}
+            style={{ textDecoration: "none" }}
+          >
             <PersonCard
               image={this.state.friendRequests[i].image}
               name={this.state.friendRequests[i].first_name}
               location="Washington D.C."
             />
-            <button className="FriendButton" onClick={this.acceptRequest}>
-              Accept
-            </button>
-            <div className="FriendId">{this.state.friendRequests[i].user}</div>
-          </div>
-        </Link>
+          </Link>
+          <button className="FriendButton" onClick={this.acceptRequest}>
+            Accept
+          </button>
+          <div className="FriendId">{this.state.friendRequests[i].user}</div>
+        </div>
       );
     }
   };
@@ -214,8 +217,8 @@ export default class DirectoryPeople extends Component {
   removeFriend = e => {
     let nonFriend = e.target.parentElement.children[2].textContent;
     let connectionsList = this.props.connections;
-    for (let i = 0; i < this.state.friends.length; i++) {
-      if (this.state.friends[i].user === nonFriend) {
+    for (let i = 0; i < this.props.connections.length; i++) {
+      if (this.props.connections[i] === nonFriend) {
         connectionsList.splice(i, 1);
       }
     }
@@ -361,7 +364,10 @@ export default class DirectoryPeople extends Component {
           </a>
         </div>
         <header className="CommunityPage__header">Friends:</header>
-        <div className="CommunityPage__moms-in-city-container">{this.showFriends()}</div>
+        <div className="CommunityPage__moms-in-city-container">
+          {this.showFriends()}
+          {console.log(this.state)}
+        </div>
         <header className="CommunityPage__header">Requests:</header>
         <div className="CommunityPage__moms-in-city-container">{this.showRequests()}</div>
         <header className="CommunityPage__header">Add Other Moms As Friends:</header>
