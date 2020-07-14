@@ -130,10 +130,6 @@ const CommunityPage = props => {
       });
   };
 
-  console.log(states);
-  console.log(profile);
-  console.log(profile.baseState);
-  console.log(handleFullName());
   return (
     <div className="CommunityPage">
       <Banner background={Banner__Community}>
