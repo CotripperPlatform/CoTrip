@@ -8,6 +8,8 @@ import MediaCard from "../../components/MediaCard/MediaCard";
 import { getTopicData, getAllTopics } from "../../services/Community";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 import TextField from "@material-ui/core/TextField";
+import Connections from "../../components/Connections/Connections";
+
 
 
 
@@ -130,7 +132,7 @@ class ForumPageTopic extends Component {
                 <Banner background={Banner__Community}>
                     <div className="community-page-header">
 
-                        <h3 style={{ margin: 0 }}>{this.state.topicData.title}</h3>
+                        <h3 style={{ margin: 0 }}>{`Topic: ${this.state.topicData.title ? this.state.topicData.title : ""}`}</h3>
                     </div>
                     <Autocomplete
                         style={{ width: 300 }}
@@ -182,6 +184,20 @@ class ForumPageTopic extends Component {
                         </div>
                     </div>
                     <div className="hashtag__bodyRight">
+                        <div className="hashtag__members_description">
+                            <h2>Description</h2>
+                            <p className="hashtag__members_description_p">
+                                {topicData.description}
+                            </p>
+                        </div>
+                        {!topicData.members ? "" : (
+                            <div className="hashtag__members_section">
+                                <h2>Members</h2>
+                                <div className="hashtag__members_topic">
+                                    <Connections userViewing={true} users={topicData.members} extraUsers="See More" />
+                                </div>
+                            </div>
+                        )}
                         <div className="hashtag_media">
                             <h2>Media</h2>
                         </div>

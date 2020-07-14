@@ -19,12 +19,12 @@ class EventSerializer(serializers.ModelSerializer):
 
 
 class TopicSerializer(serializers.ModelSerializer):
-    TopicPosts = PostSerializer(many=True)
+    posts = PostSerializer(many=True)
 
     class Meta:
         model = Topic
         depth = 1
-        fields = ['id', 'title', 'description', 'TopicPosts']
+        fields = ['id', 'title', 'description', 'posts']
 
 
 class HashtagSerializer(serializers.ModelSerializer):

@@ -19,7 +19,7 @@ class Post(models.Model):
     hashtags = models.ManyToManyField(
         'community.hashtag', related_name='posts', null=True, blank=True)
     topics = models.ManyToManyField(
-        'community.topic', related_name='TopicPosts', null=True, blank=True)
+        'community.topic', related_name='posts', null=True, blank=True)
 
     def __str__(self):
         return self.title
