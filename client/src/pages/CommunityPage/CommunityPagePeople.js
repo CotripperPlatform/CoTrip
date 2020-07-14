@@ -57,7 +57,7 @@ const CommunityPage = props => {
     stockImages[Math.floor(Math.random() * (stockImages.length - 1 + 1))];
 
   // all profiles
-  const profileList = () => {
+  const profileList = props => {
     return (
       profile.users &&
       profile.users.map(data => {
@@ -65,7 +65,9 @@ const CommunityPage = props => {
           <div className="CommunityPage__momCard-single">
             <Link to={`/member-page/${data.user}`}>
               <PersonCard
-                image={"" ? randomPlaceholderImages() : data.image}
+                image={
+                  !data.image ? require("../../assets/images/profile_default.svg") : data.image
+                }
                 name={data.first_name + "" + data.last_name}
                 location={data.city_of_residence.name + ", " + data.city_of_residence.state.name}
                 interests={data.hashtags.title}
