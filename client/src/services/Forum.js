@@ -8,11 +8,11 @@ import { BASE_URL } from "./constants";
 import axios from 'axios';
 
 
-export default function getTopics(){
-    axios.get(`${BASE_URL}/topics`)
+export default function getHashtags(){
+    axios.get(`${BASE_URL}/hashtags`)
     .then(response => {
       this.setState({ 
-        topics: response.data
+        hashtags: response.data
       })
     })
     .catch(error => {
