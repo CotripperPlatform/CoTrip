@@ -5,6 +5,7 @@ import people from "assets/images/profile_default.svg";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Directory from "assets/images/Banner__pink.png";
+// import Banner__Community from "assets/images/community_banner.png";
 import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
@@ -38,7 +39,7 @@ const DirectoryPeople = props => {
         />
       </Banner>
       <div className="secondNav">
-        <a className="secondNav">
+        <a className="secondNav" href="./people">
           <Button text="My Friends" color="purple" size="long" handleClick={handleClick} />
         </a>
         <a className="secondNav" href="./groups">
@@ -144,7 +145,7 @@ const DirectoryPeople = props => {
             selectId={0}
           />
         </div>{" "}
-        <a className="seeMore-Button">See More</a>
+        <a href className="seeMore-Button">See More</a>
         <div>
           <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
         </div>
@@ -177,7 +178,7 @@ const DirectoryPeople = props => {
           </div>{" "}
           <div className="CommunityPage__momCard-single"> </div>
         </div>
-        <a className="seeAll-Button">See All</a>
+        <a href className="seeAll-Button">See All</a>
       </div>
     </div>
   );

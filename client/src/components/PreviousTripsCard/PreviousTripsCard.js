@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 
 // Function based React Component
 const PreviousTripsCard = props => {
-  let { link, trips } = props;
+  let { trips } = props;
   let [title, tripsItemOne, tripsItemTwo] = [
     props.children[0],
     props.children[1],
@@ -19,7 +19,7 @@ const PreviousTripsCard = props => {
           {tripsItemOne}
 
           <span className="PreviousTripCard__trip-two">{tripsItemTwo}</span>
-          <a href={link} className="PreviousTripCard__arrow" />
+          <div className="PreviousTripCard__arrow" />
         </div>
       ) : (
         <div className="PreviousTripCard__no-trips">

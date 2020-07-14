@@ -14,18 +14,18 @@ const Footer = props => {
     // These are hard links in the HTLM files and will need to be udpated once we have the info
     <div className={classList}>
       <div className="Footer--left">
-        <a href="">Sitemap</a>
-        <a onClick={handleClick}>Logout</a>
+        <a href="/">Sitemap</a>
+        <a href onClick={handleClick}>Logout</a>
       </div>
       <div className="Footer--center">
-        <a href="mailto:info@cotripper.co?" target="_blank">
+        <a href="mailto:info@cotripper.co?" rel="opener">
           info@cotripper.co
         </a>
       </div>
       <div className="Footer--right">
-        <a href="">Instagram</a>
-        <a href="">Facebook</a>
-        <a href="">Meetup</a>
+        <a href="./explore-people">Instagram</a>
+        <a href="./explore-people">Facebook</a>
+        <a href="./explore-people">Meetup</a>
       </div>
     </div>
   );

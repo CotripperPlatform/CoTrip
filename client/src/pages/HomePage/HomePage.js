@@ -1,6 +1,6 @@
 import React from "react";
 import "./HomePage.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 
 import example1 from "assets/images/card_small2.png";
 import example2 from "assets/images/Hawaii-resort.jpg";
@@ -35,6 +35,11 @@ import SignUp from "components/SignUpAd/SignUpAd";
 import Banner from "components/Banner/Banner";
 import PersonCard from "components/PersonCard/PersonCard";
 import SplashPage from "pages/SplashPage/SplashPage";
+
+// const handleClick = e => {
+//   e.preventDefault();
+//   console.log("clicked");
+// };
 
 const personCard1 = (
   <PersonCard
@@ -73,11 +78,6 @@ const personCard3 = (
     ]}
   />
 );
-
-const handleClick = e => {
-  e.preventDefault();
-  console.log("clicked");
-};
 
 const HomePage = props => {
   return (
@@ -145,25 +145,37 @@ const HomePage = props => {
         <div className="HomePage__mobile-wrapper">
           <Link to="/">
             <Card color="yellow" size="mobile">
-              <img src={groups} className="HomePage__mobile-card-icon" />
+              <img
+                src={groups}
+                alt="suggested-groups-icon"
+                className="HomePage__mobile-card-icon"
+              />
               <h2>Suggested Groups</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="pink" size="mobile">
-              <img src={airplane} className="HomePage__mobile-card-icon" />
+              <img src={airplane} alt="book-a-trip-icon" className="HomePage__mobile-card-icon" />
               <h2>Book a Trip</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="red" size="mobile">
-              <img src={suggestedPeople} className="HomePage__mobile-card-icon" />
+              <img
+                src={suggestedPeople}
+                alt="suggested-people-icon"
+                className="HomePage__mobile-card-icon"
+              />
               <h2>Suggested People</h2>
             </Card>
           </Link>
           <Link to="/">
             <Card color="purple" size="mobile">
-              <img src={hashtags} className="HomePage__mobile-card-icon" />
+              <img
+                src={hashtags}
+                alt="trending-hashtags-icon"
+                className="HomePage__mobile-card-icon"
+              />
               <h2>Trending Hashtags</h2>
             </Card>
           </Link>
@@ -173,36 +185,16 @@ const HomePage = props => {
         <span className="HomePage__scrapbook-container">
           <h1 className="HomePage__suggested-header">CoTripper Scrapbook</h1>
           <div className="HomePage__scrapbook-cards-container">
-            <MediaCard
-              imageSrc={happiness}
-              size="medium"
-              to="/"
-              footerText="Posted By: Paula"
-            />
+            <MediaCard imageSrc={happiness} size="medium" to="/" footerText="Posted By: Paula" />
             <MediaCard imageSrc={van} size="medium" to="/" footerText="Posted By: Carmen" />
 
-            <MediaCard
-              imageSrc={nightSky}
-              size="medium"
-              to="/"
-              footerText="Posted By: Krystin"
-            />
+            <MediaCard imageSrc={nightSky} size="medium" to="/" footerText="Posted By: Krystin" />
 
             <span className="HomePage__mediacard-hide">
-              <MediaCard
-                imageSrc={waterfall}
-                size="medium"
-                to="/"
-                footerText="Posted By: Paul"
-              />
+              <MediaCard imageSrc={waterfall} size="medium" to="/" footerText="Posted By: Paul" />
             </span>
             <span className="HomePage__mediacard-hide">
-              <MediaCard
-                imageSrc={flight}
-                size="medium"
-                to="/"
-                footerText="Posted By: Fiona"
-              />
+              <MediaCard imageSrc={flight} size="medium" to="/" footerText="Posted By: Fiona" />
             </span>
           </div>
         </span>
@@ -214,7 +206,6 @@ const HomePage = props => {
           subheading="Sign up with your email address to recieve news and updates"
         ></SignUp>{" "}
       </footer>
-
     </body>
   );
 };

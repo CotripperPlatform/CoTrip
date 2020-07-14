@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
-import InputTextField from "components/InputTextField/InputTextField";
-import InputSelect from "components/InputSelect/InputSelect";
 import Button from "components/Button/Button";
 import OnboardingPills from "components/OnboardingPills/OnboardingPills";
-
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { BASE_URL } from '../../../services/constants';
@@ -42,8 +39,8 @@ class FilterSettingsForm extends Component {
 
   test = val => {
     let selectedPills = [];
-    val.pills.map(pill => {
-      if (pill.selected == true) {
+    val.pills.forEach(pill => {
+      if (pill.selected === true) {
         selectedPills.push(pill.value);
         console.log(selectedPills);
       }

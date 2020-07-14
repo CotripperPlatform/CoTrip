@@ -121,7 +121,7 @@ class Bio extends Component {
             userBio = this.state.updated_bio;
       }
       else {
-          userBio = this.props.bio == undefined ? '': this.props.bio;
+          userBio = this.props.bio === undefined ? '': this.props.bio;
       }
 
     if(this.state.editMode === true)

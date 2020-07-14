@@ -21,7 +21,7 @@ export function handleSignup(data, history) {
       let image = !json.user.profile.image ? require('../assets/images/profile_default.svg') : json.user.profile.image
 
       this.setState({
-        logged_in: json.token != undefined ? true : false,
+        logged_in: json.token !== undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
         image: image,
@@ -49,7 +49,7 @@ export function handleLogin(data, history) {
       let image = !json.user.profile.image ? require('../assets/images/profile_default.svg') : json.user.profile.image
 
       this.setState({
-        logged_in: json.token != undefined ? true : false,
+        logged_in: json.token !== undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
         image: image,

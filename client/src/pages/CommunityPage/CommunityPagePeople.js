@@ -146,7 +146,7 @@ const CommunityPage = props => {
         />
       </Banner>
       <div className="secondNav">
-        <a className="secondNav">
+        <a href className="secondNav">
           <Button
             text="Connect With Other Moms"
             color="pink"
