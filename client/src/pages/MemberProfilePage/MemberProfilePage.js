@@ -39,48 +39,47 @@ class MemberProfilePage extends Component {
   // Runs after Component is loaded in the broswer
   componentDidMount() {
     // axios()
-  
-    // console.log('memberpage props: ', this.props);
-    if(this.props.userid !== undefined)
-    {
-      axios.get(`${BASE_URL}/profile/${this.props.userid}`,
-      { 
-        headers: { 
-          Authorization: `Token ${localStorage.getItem("token")}` 
-        } 
-      })
-      .then(res => {
-        console.log('axios ', res.data)
 
-        this.setState({
-          protectedProfileData: {
+    // console.log('memberpage props: ', this.props);
+    if (this.props.userid !== undefined) {
+      axios.get(`${BASE_URL}/profile/${this.props.userid}`,
+        {
+          headers: {
+            Authorization: `Token ${localStorage.getItem("token")}`
+          }
+        })
+        .then(res => {
+          console.log('axios ', res.data)
+
+          this.setState({
+            protectedProfileData: {
               first_name: res.data.first_name,
               last_name: res.data.last_name,
               bio: res.data.bio,
               age: res.data.age,
               image: res.data.image,
               city_of_residence: res.data.city_of_residence
-          }
+            }
+          })
         })
-      })
     }
 
     // .then(res => console.log('axios ', res.data))
- 
+
   }
 
 
 
   // Runs after a component has been updated
-  componentDidUpdate() {}
+  componentDidUpdate() { }
 
   // Runs right before a component is removed from the DOM
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
   render() {
 
 
-     
+
     let people = [
       {
         name: "Suzie",
@@ -139,14 +138,11 @@ class MemberProfilePage extends Component {
       }
     ];
 
-    if(this.props.logged_in === true) 
-    {
-    return (
-    
-    
-        <div className={this.state.classList}>
-          <Navbar to={"/"} profileImage={pic1} page={0}></Navbar>
+    if (this.props.logged_in === true) {
+      return (
 
+
+        <div className={this.state.classList}>
           <Banner background={Banner__pink}>
             {" "}
             <div className="BannerTest">
@@ -169,18 +165,18 @@ class MemberProfilePage extends Component {
                 <div className="MemberProfilePage__bio-container">
 
 
-                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ? 
-                  <Bio
-                    userid={this.props.userid}
-                    type="default"
-                    first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
-                    // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
-                    bio={this.state.protectedProfileData.bio}
-                    hashtags={people[0].hashtags}
-                    isCurrentUser={true}
-                    onClick={console.log("Hello")}
-                  />
-                  : '' }
+                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ?
+                    <Bio
+                      userid={this.props.userid}
+                      type="default"
+                      first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
+                      // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
+                      bio={this.state.protectedProfileData.bio}
+                      hashtags={people[0].hashtags}
+                      isCurrentUser={true}
+                      onClick={console.log("Hello")}
+                    />
+                    : ''}
 
 
 
@@ -222,15 +218,14 @@ class MemberProfilePage extends Component {
             <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
 
-          <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
       );
 
     }
     else {
-      window.location.href="/";
+      window.location.href = "/";
     }
-   
+
   }
 }
 
