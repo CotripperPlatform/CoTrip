@@ -16,6 +16,7 @@ import image4 from "../../assets/images/profile-picture-4.png";
 import image5 from "../../assets/images/profile-picture-5.png";
 import Card from "../../components/Card/Card";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../../services/constants";
 
 let friends = [];
 let others = [];
@@ -37,7 +38,7 @@ export default class DirectoryPeople extends Component {
   }
 
   getFriends = () => {
-    fetch(`http://127.0.0.1:8000/profile`, {
+    fetch(`${BASE_URL}/profile`, {
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`
       }
@@ -219,7 +220,7 @@ export default class DirectoryPeople extends Component {
       }
     }
     let data = { connections: connectionsList };
-    fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
+    fetch(`${BASE_URL}/profile/${this.props.userid}`, {
       method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
@@ -248,7 +249,7 @@ export default class DirectoryPeople extends Component {
     }
     requestList.push(this.props.userid);
     let data = { requests: requestList };
-    fetch(`http://127.0.0.1:8000/profile/${newFriend}`, {
+    fetch(`${BASE_URL}/profile/${newFriend}`, {
       method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
@@ -274,7 +275,7 @@ export default class DirectoryPeople extends Component {
       }
     }
     let data = { connections: connectionsList };
-    fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
+    fetch(`${BASE_URL}/profile/${this.props.userid}`, {
       method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
@@ -303,7 +304,7 @@ export default class DirectoryPeople extends Component {
       }
     }
     let data = { requests: requestList };
-    fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
+    fetch(`${BASE_URL}/profile/${this.props.userid}`, {
       method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
@@ -322,7 +323,7 @@ export default class DirectoryPeople extends Component {
 
   testRequests = () => {
     let data = { requests: [3] };
-    fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
+    fetch(`${BASE_URL}/profile/${this.props.userid}`, {
       method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
