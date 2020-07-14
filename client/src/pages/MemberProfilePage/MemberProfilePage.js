@@ -37,7 +37,6 @@ class MemberProfilePage extends Component {
 
   componentDidMount() {
 
-    console.log(this.props)
     this.getMemberData(this.props.userid)
   }
 
@@ -136,11 +135,9 @@ class MemberProfilePage extends Component {
                       userid={this.props.userid}
                       type="default"
                       first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
-                      // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
                       bio={this.state.protectedProfileData.bio}
                       hashtags={people[0].hashtags}
                       isCurrentUser={true}
-                      // onClick={console.log("Hello")}
                       social_media={this.state.protectedProfileData.social_media}
                     />
                     : ''}

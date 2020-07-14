@@ -9,10 +9,7 @@ import Button from '../Button/Button';
 import { getSocialMediaOptions, updateSocialMediaList, submitUserUpdates } from '../../services/Members';
 import InputAdornment from '@material-ui/core/InputAdornment';
 
-import axios from 'axios';
-import { BASE_URL } from '../../services/constants';
 
-// const Bio = props => {
 class Bio extends Component {
 	constructor() {
 		super();
@@ -120,7 +117,6 @@ class Bio extends Component {
 			return (
 				<div className={"Bio"}>
 					<div>
-						{/* <h3>Editing..</h3> */}
 						<h2 className={"Bio__header"}>
 							<InputTextField
 								name="first_name"
@@ -128,7 +124,6 @@ class Bio extends Component {
 								placeholder='First name'
 								defaultValue={firstName}
 								onChange={this.updateFirstName}
-							// loadcallback={this.updateFirstName}
 							/> &nbsp;
           					<InputTextField
 								name="last_name"
@@ -152,7 +147,6 @@ class Bio extends Component {
 								onChange={this.updateBio}
 							/>
 
-							<a onClick={this.logForm}>Log Vals</a>
 							<br />
 							<div className="icons__div-edit ">
 								{!this.state.socialMediaOptions ? "" :
