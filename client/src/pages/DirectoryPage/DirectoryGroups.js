@@ -22,7 +22,7 @@ class DirectoryGroups extends Component {
 
   componentDidMount() {
     axios
-      .get(`${BASE_URL}/view-group`)
+      .get(`${BASE_URL}/groups`)
       .then(response => {
         this.setState({
           groups: response.data
