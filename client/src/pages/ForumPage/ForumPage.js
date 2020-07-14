@@ -13,31 +13,9 @@ import InputSelect from "../../components/InputSelect/InputSelect";
 import getTopics from "../../services/Forum.js";
 import { Link } from "react-router-dom";
 
-const ForumPage = props => {
-  return (
-    <div className="ForumPage">
-      <Banner background={Banner__Community}>
-        <h3 style={{ margin: 0 }}>Forum: Discover Topics</h3>
-        <InputTextField
-          type="text"
-          variation="wide"
-          name="search directory"
-          placeholder="Search Topics and #hashtags"
-        />
-      </Banner>
-      <div className="secondNav">
-        <a className="secondNav">
-          <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
-        </a>
-        <a className="secondNav" href="./forum-page-discover">
-          <Button
-            text="Discover Topics"
-            color="outlinepink"
-            size="long"
-            handleClick={handleClick}
-          />
-        </a>
-      </div>
+const handleSelect = props => {};
+function pillClick(val) {}
+const handleClick = e => {};
 
 class ForumPage extends Component {
   constructor(props) {
@@ -185,8 +163,7 @@ class ForumPage extends Component {
         </a>
         <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
       </div>
-    </div>
-  );
-};
-
+    );
+  }
+}
 export default ForumPage;
