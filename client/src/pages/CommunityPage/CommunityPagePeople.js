@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { BASE_URL } from "../../services/constants";
+import TextField from "@material-ui/core/TextField";
+import Autocomplete from "@material-ui/lab/Autocomplete";
 import axios from "axios";
 import "./CommunityPagePeople.css";
 import NavBar from "../../components/Navbar/Navbar";
@@ -15,60 +18,129 @@ import image2 from "../../assets/images/profile-picture-2.png";
 import image3 from "../../assets/images/profile-picture-3.png";
 import image4 from "../../assets/images/profile-picture-4.png";
 import image5 from "../../assets/images/profile-picture-5.png";
+import { Link } from "react-router-dom";
 import Card from "../../components/Card/Card";
+import FilterSettingsForm from "pages/OnboardingPage/FilterSettingsForm/FilterSettingsForm";
 
 function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => { };
+const handleClick = e => {};
 
-// Page or
 const CommunityPage = props => {
+  // State Hooks
   const [profile, setProfile] = useState([]);
+  const [states, setStates] = useState([]);
 
   // Getting profile list
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get("http://127.0.0.1:8000/profile");
-      setProfile(res.data);
-      // console.log(res);
+      const res = await axios.get(`${BASE_URL}/profile`);
+      setProfile({ users: res.data, baseState: res.data });
     };
     fetch();
   }, []);
 
-  //random number between 1 and 5
+  // Getting US States
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await axios.get(`${BASE_URL}/location/states`);
+      setStates(res.data);
+    };
+    fetch();
+  }, []);
+
+  //random placeholder image
   const stockImages = [image1, image2, image3, image4, image5];
   const randomPlaceholderImages = () =>
     stockImages[Math.floor(Math.random() * (stockImages.length - 1 + 1))];
 
+  // all profiles
   const profileList = () => {
     return (
-      profile &&
-      profile.map(data => {
+      profile.users &&
+      profile.users.map(data => {
         return (
           <div className="CommunityPage__momCard-single">
-            <PersonCard
-              image={randomPlaceholderImages()}
-              name={data.first_name + "" + data.last_name}
-              location={data.city_of_residence}
-              interests={data.hashtags}
-            />
+            <Link to={`/member-page/${data.user}`}>
+              <PersonCard
+                image={"" ? randomPlaceholderImages() : data.image}
+                name={data.first_name + "" + data.last_name}
+                location={data.city_of_residence.name + ", " + data.city_of_residence.state.name}
+                interests={data.hashtags.title}
+              />
+            </Link>
           </div>
         );
       })
     );
   };
 
+  const getProfileFromStates = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+    if (userSubmission === "") {
+      return setProfile({
+        users: profile.baseState,
+        baseState: profile.baseState
+      });
+    } else {
+      return setProfile({
+        baseState: profile.baseState,
+        users: profile.users.filter(
+          user => userSubmission === user.city_of_residence.state.name.toLowerCase()
+        )
+      });
+    }
+  };
+
+  const handleFullName = () => {
+    return (
+      profile.baseState &&
+      profile.baseState.map(user => {
+        return { fullName: user.first_name + " " + user.last_name };
+      })
+    );
+  };
+
+  const getProfileFromName = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+    if (userSubmission === "") {
+      return setProfile({
+        users: profile.baseState,
+        baseState: profile.baseState
+      });
+    } else {
+      return setProfile({
+        baseState: profile.baseState,
+        users: profile.users.filter(
+          user =>
+            userSubmission === user.first_name.toLowerCase() + " " + user.last_name.toLowerCase()
+        )
+      });
+    }
+  };
+
+  const handleDisplay = () => {
+    profile.users &&
+      profile.users.forEach(user => {
+        if (user.city_of_residence.state.name) {
+          return user.city_of_residence.state.name;
+        }
+      });
+  };
+
   return (
     <div className="CommunityPage">
       <Banner background={Banner__Community}>
         <h3 style={{ margin: 0 }}>Community: People</h3>
-        <InputTextField
-          type="text"
-          variation="wide"
-          name="search directory"
-          placeholder="Search Groups"
+        <Autocomplete
+          style={{ width: 400 }}
+          id="AutoStateField"
+          options={handleFullName()}
+          getOptionLabel={option => option.fullName}
+          onChange={getProfileFromName}
+          renderInput={params => <TextField {...params} label="Search By Name" variant="filled" />}
         />
       </Banner>
       <div className="secondNav">
@@ -81,7 +153,6 @@ const CommunityPage = props => {
           />
         </a>
         <a href="./join-groups" className="secondNav">
-          {" "}
           <Button
             text="Discover Groups"
             color="outlinepink"
@@ -89,147 +160,22 @@ const CommunityPage = props => {
             handleClick={handleClick}
           />
         </a>
-      </div>{" "}
-      <div className="CommunityPage_SortByButton">
-        <div className="CommunityPage_SortByText">Sort By: Location </div>
+      </div>
+      <div className="CommunityPagePeople__Autocomplete">
+        <Autocomplete
+          id="AutoStateField"
+          options={states}
+          getOptionLabel={option => option.name}
+          onChange={getProfileFromStates}
+          renderInput={params => <TextField {...params} label="Search By State" variant="filled" />}
+        />
       </div>
       <div className="CommunityPage_body">
         <div>
-          <header className="CommunityPage__header">
-            Group Location: <a href="./view-group"> View Sample Page </a>
-          </header>
+          <header className="CommunityPage__header"></header>
         </div>
-        <div className="CommunityPage__mom-location-container">
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"purple"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-        </div>{" "}
-        <a className="seeMore-Button">See More</a>
-        <div>
-          <header className="CommunityPage__header">Moms in WASHINGTON, DC:</header>
-        </div>
-        <div className="CommunityPage__moms-in-city-container">
-          {/* <div className="CommunityPage__momCard-single">
-            <PersonCard image={image1} name="Lindsay L." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image2} name="Chandy S." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image3} name="Caroline N." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image4} name="Rachel G." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image5} name="Julia C." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image1} name="Lindsay L." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image2} name="Chandy S." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image3} name="Caroline N." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image4} name="Rachel G." location="Washington D.C." />
-          </div>
-          <div className="CommunityPage__momCard-single">
-            <PersonCard image={image5} name="Julia C." location="Washington D.C." />
-          </div>{" "}
-          <div className="CommunityPage__momCard-single"> </div> */}
-          {profileList()}
-        </div>
-        <a className="seeAll-Button">See All</a>
+        <div className="CommunityPage__moms-in-city-container">{profileList()}</div>
+        <a className="seeAll-Button"></a>
       </div>
     </div>
   );
