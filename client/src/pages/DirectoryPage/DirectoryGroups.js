@@ -35,7 +35,21 @@ const DirectoryGroups = props => {
           <header className="CommunityPage__header">Groups in WASHINGTON, DC:</header>
         </div>
         <div className="CommunityPage__groups-in-city-container">
-          <div className="CommunityPage__groupCard-single"></div>{" "}
+          <div className="CommunityPage__groupCard-single">
+            {groups.map((group, index) => {
+              return (
+                <div key={index} className="CommunityPage__groupCard-single">
+                  <GroupCard
+                    name={group.title}
+                    members={group.members.length}
+                    location={group.location}
+                    picture={picture1}
+                    id={group.id}
+                  />
+                </div>
+              );
+            })}
+          </div>{" "}
           <div className="CommunityPage__groupCard-single">
             {" "}
             <Card outline size="medium-wide-directory">
