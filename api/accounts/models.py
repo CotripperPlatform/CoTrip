@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from django.apps import apps
 from .managers import CustomUserManager
-
+from django.contrib.postgres.fields import ArrayField
 
 class CustomUser(AbstractUser):
     username = None
@@ -40,6 +40,7 @@ class Profile(models.Model):
         'community.Event', related_name='people', null=True, blank=True)
     connections = models.ManyToManyField(
         'self', related_name='friends', null=True, blank=True)
+    requests = ArrayField(models.IntegerField())
     # Posts, comments, and replies to be defined as foreign key on those respective models within forum app
     # CoTrip media defined as foreign key in community app
 
