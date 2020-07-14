@@ -39,7 +39,6 @@ class ForumPageHashtag extends Component {
   }
 
   mountHashtagData = () => {
-    console.log(this.state.hashtagId)
     let hashtag = this.state.hashtagList.filter(hashtag => hashtag.id === this.state.hashtagId)[0]
     this.setState({ hashtagData: hashtag })
   }
@@ -79,11 +78,20 @@ class ForumPageHashtag extends Component {
     evt.preventDefault();
     alert("something happens");
   }
+
+  handleSelect = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+
+    this.state.hashtagList.map(hashtag => {
+      if (userSubmission === hashtag.title.toLowerCase()) {
+        this.props.history.push(`${hashtag.id}`)
+        this.setState({ hashtagId: hashtag.id }, this.mountHashtagData);
+      }
+    });
+  };
   render() {
     let hashtagData = this.state.hashtagData
     let postList = [], forumPosts = []
-    console.log(this.state.hashtagList)
-    console.log(this.state.hashtagData)
 
     if (hashtagData.posts) {
       postList = hashtagData.posts
@@ -104,7 +112,6 @@ class ForumPageHashtag extends Component {
               name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
               likes: post.likes,
               comments: post.comments,
-              topics: post.topics,
               image: post.author.image,
               post: {
                 title: post.title,
