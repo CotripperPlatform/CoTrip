@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import Layout from "./components/Layout/Layout"
-import Navbar from "./components/Navbar/Navbar"
+import Layout from "./components/Layout/Layout";
+import Navbar from "./components/Navbar/Navbar";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -108,10 +108,10 @@ class App extends Component {
           }
         });
     }
-    if (this.state.logged_in) { this.getUserData() }
+    if (this.state.logged_in) {
+      this.getUserData();
+    }
   }
-
-
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
@@ -128,8 +128,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-              <Redirect to="/welcome" />
-            )}
+            <Redirect to="/welcome" />
+          )}
           <Route
             path="/TripDetail:page"
             exact
@@ -178,8 +178,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-              ""
-            )}
+            ""
+          )}
           <Route
             path="/forum-page"
             exact
@@ -251,7 +251,6 @@ class App extends Component {
             />
           )}
         ></Route>
-
       </div>
     );
   }

@@ -17,10 +17,9 @@ import image5 from "../../assets/images/profile-picture-5.png";
 import Card from "../../components/Card/Card";
 import { Link } from "react-router-dom";
 
-
-let friends = []
-let others = []
-let friendRequests = []
+let friends = [];
+let others = [];
+let friendRequests = [];
 
 export default class DirectoryPeople extends Component {
   constructor(props) {
@@ -32,14 +31,11 @@ export default class DirectoryPeople extends Component {
     };
   }
 
-
   componentDidMount() {
-    this.getFriends()
-    friends = this.state.friends
+    this.getFriends();
+    friends = this.state.friends;
   }
 
-
-  
   getFriends = () => {
     fetch(`http://127.0.0.1:8000/profile`, {
       headers: {
@@ -48,67 +44,73 @@ export default class DirectoryPeople extends Component {
     })
       .then(res => res.json())
       .then(json => {
-        this.makeFriends(json)
+        this.makeFriends(json);
       });
-  }
-  
-  makeFriends = (data) => {
+  };
+
+  makeFriends = data => {
     for (let i = 0; i < data.length; i++) {
       if (this.trueFriends(data[i].user)) {
-        let user = data[i]
+        let user = data[i];
         //instead of name just whole user
-        friends.push(user)
+        friends.push(user);
       } else if (data[i].user === this.props.userid) {
         //do nothing
       } else if (this.props.requests.length != 0) {
         for (let j = 0; j < this.props.requests.length; j++) {
           if (data[i].user === this.props.requests[j]) {
-            let user = data[i]
-            friendRequests.push(user)
+            let user = data[i];
+            friendRequests.push(user);
           } else {
-            let user = data[i]
-            others.push(user)
+            let user = data[i];
+            others.push(user);
           }
         }
       } else {
-        let user = data[i]
-        others.push(user)
+        let user = data[i];
+        others.push(user);
       }
     }
     this.setState({
       friends: friends,
       others: others,
       friendRequests: friendRequests
-    })
-  }
-  
-  showFriends = () => {
-    let cards = []
-    this.friendCards(cards)
-    return cards
-  }
+    });
+  };
 
-  friendCards = (arr) => {
-    let length  = friends.length
+  showFriends = () => {
+    let cards = [];
+    this.friendCards(cards);
+    return cards;
+  };
+
+  friendCards = arr => {
+    let length = friends.length;
     for (let i = 0; i < length; i++) {
       //change to get the ith in the list and that objects name and image
       arr.push(
-        <Link to={`/member-page/${this.state.friends[i].user}`} style={{textDecoration: 'none'}}>
+        <Link to={`/member-page/${this.state.friends[i].user}`} style={{ textDecoration: "none" }}>
           <div className="CommunityPage__momCard-single">
-          <PersonCard image={this.state.friends[i].image} name={this.state.friends[i].first_name} location="Washington D.C." />
-          <button className="FriendButton" onClick={this.removeFriend}>Remove Friend</button>
-          <div className="FriendId">{this.state.friends[i].user}</div>
+            <PersonCard
+              image={this.state.friends[i].image}
+              name={this.state.friends[i].first_name}
+              location="Washington D.C."
+            />
+            <button className="FriendButton" onClick={this.removeFriend}>
+              Remove Friend
+            </button>
+            <div className="FriendId">{this.state.friends[i].user}</div>
           </div>
         </Link>
-      )
+      );
     }
-  }
+  };
 
-  handleClick = (e) => {
-    ("/")
-  }
+  handleClick = e => {
+    ("/");
+  };
 
-// Page or
+  // Page or
   DirectoryPeople = props => {
     return (
       <div className="CommunityPage">
@@ -138,196 +140,208 @@ export default class DirectoryPeople extends Component {
           </div>
         </div>
       </div>
-    )
-  }
+    );
+  };
 
   showOthers = () => {
-    let cards = []
-    this.otherCards(cards)
-    return cards
-  }
+    let cards = [];
+    this.otherCards(cards);
+    return cards;
+  };
 
-  otherCards = (arr) => {
-    let length  = others.length
+  otherCards = arr => {
+    let length = others.length;
     for (let i = 0; i < length; i++) {
       //same as the friends function
       arr.push(
-        <Link to={`/member-page/${this.state.others[i].user}`} style={{textDecoration: 'none'}}>
+        <Link to={`/member-page/${this.state.others[i].user}`} style={{ textDecoration: "none" }}>
           <div className="CommunityPage__momCard-single">
-          <PersonCard image={this.state.others[i].image} name={this.state.others[i].first_name} location="Washington D.C." />
-          <button className="FriendButton" onClick={this.sendRequest}>Add Friend</button>
-          <div className="FriendId">{this.state.others[i].user}</div>
+            <PersonCard
+              image={this.state.others[i].image}
+              name={this.state.others[i].first_name}
+              location="Washington D.C."
+            />
+            <button className="FriendButton" onClick={this.sendRequest}>
+              Add Friend
+            </button>
+            <div className="FriendId">{this.state.others[i].user}</div>
           </div>
         </Link>
-      )
+      );
     }
-  }
+  };
 
   showRequests = () => {
-    let cards = []
-    this.requestCards(cards)
-    return cards
-  }
+    let cards = [];
+    this.requestCards(cards);
+    return cards;
+  };
 
-  requestCards = (arr) => {
-    let length  = friendRequests.length
+  requestCards = arr => {
+    let length = friendRequests.length;
     for (let i = 0; i < length; i++) {
       //same as the friends function
       arr.push(
-        <Link to={`/member-page/${this.state.friendRequests[i].user}`} style={{textDecoration: 'none'}}>
+        <Link
+          to={`/member-page/${this.state.friendRequests[i].user}`}
+          style={{ textDecoration: "none" }}
+        >
           <div className="CommunityPage__momCard-single">
-          <PersonCard image={this.state.friendRequests[i].image} name={this.state.friendRequests[i].first_name} location="Washington D.C." />
-          <button className="FriendButton" onClick={this.acceptRequest}>Accept</button>
-          <div className="FriendId">{this.state.friendRequests[i].user}</div>
+            <PersonCard
+              image={this.state.friendRequests[i].image}
+              name={this.state.friendRequests[i].first_name}
+              location="Washington D.C."
+            />
+            <button className="FriendButton" onClick={this.acceptRequest}>
+              Accept
+            </button>
+            <div className="FriendId">{this.state.friendRequests[i].user}</div>
           </div>
         </Link>
-      )
+      );
     }
-  }
+  };
 
-  trueFriends = (friendId) => {
+  trueFriends = friendId => {
     for (let i = 0; i < this.props.connections.length; i++) {
       if (this.props.connections[i] === friendId) {
-        return true
+        return true;
       }
     }
-  }
+  };
 
-  removeFriend = (e) => {
-    let nonFriend = e.target.parentElement.children[2].textContent
-    let connectionsList = this.props.connections
+  removeFriend = e => {
+    let nonFriend = e.target.parentElement.children[2].textContent;
+    let connectionsList = this.props.connections;
     for (let i = 0; i < this.state.friends.length; i++) {
       if (this.state.friends[i].user === nonFriend) {
-        connectionsList.splice(i, 1)
+        connectionsList.splice(i, 1);
       }
     }
-    let data = { connections: connectionsList }
+    let data = { connections: connectionsList };
     fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-      //success
-    })
-    .catch(error => {
-      //error
-    });
-    window.location.reload(true)
-  }
+      .then(response => response.json())
+      .then(result => {
+        //success
+      })
+      .catch(error => {
+        //error
+      });
+    window.location.reload(true);
+  };
 
-  sendRequest = (e) => {
-    let newFriend = e.target.parentElement.children[2].textContent
-    e.target.parentElement.children[1].textContent = "Request Sent"
-    let requestList
+  sendRequest = e => {
+    let newFriend = e.target.parentElement.children[2].textContent;
+    e.target.parentElement.children[1].textContent = "Request Sent";
+    let requestList;
     for (let i = 0; i < this.state.others.length; i++) {
       if (this.state.others[i].user === newFriend) {
-        requestList = this.state.others[i].requests
+        requestList = this.state.others[i].requests;
       }
     }
-    requestList.push(this.props.userid)
-    let data = { requests: requestList }
+    requestList.push(this.props.userid);
+    let data = { requests: requestList };
     fetch(`http://127.0.0.1:8000/profile/${newFriend}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-      //success
-    })
-    .catch(error => {
-      //error
-    });
-  }
+      .then(response => response.json())
+      .then(result => {
+        //success
+      })
+      .catch(error => {
+        //error
+      });
+  };
 
-  acceptRequest = (e) => {
-    let newFriend = e.target.parentElement.children[2].textContent
-    let connectionsList = this.props.connections
+  acceptRequest = e => {
+    let newFriend = e.target.parentElement.children[2].textContent;
+    let connectionsList = this.props.connections;
     for (let i = 0; i < this.state.friendRequests.length; i++) {
       if (this.state.friendRequests[i].user === newFriend) {
-        connectionsList.push(this.state.friendRequests[i].user)
+        connectionsList.push(this.state.friendRequests[i].user);
       }
     }
-    let data = { connections: connectionsList }
+    let data = { connections: connectionsList };
     fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-      //success
-    })
-    .catch(error => {
-      //error
-    });
-    window.location.reload(true)
-    this.manageRequests(newFriend)
-  }
-  
-  manageRequests = (id) => {
-    let requestList = this.props.requests
+      .then(response => response.json())
+      .then(result => {
+        //success
+      })
+      .catch(error => {
+        //error
+      });
+    window.location.reload(true);
+    this.manageRequests(newFriend);
+  };
+
+  manageRequests = id => {
+    let requestList = this.props.requests;
     for (let i = 0; i < requestList.length; i++) {
       if (id === requestList[i]) {
-        console.log("it's here")
-        requestList.splice(i, 1)
-        requestList.push(0)
+        console.log("it's here");
+        requestList.splice(i, 1);
+        requestList.push(0);
       }
     }
-    let data = { requests: requestList }
+    let data = { requests: requestList };
     fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-      //success
-    })
-    .catch(error => {
-      //error
-    });
-  }
-
+      .then(response => response.json())
+      .then(result => {
+        //success
+      })
+      .catch(error => {
+        //error
+      });
+  };
 
   testRequests = () => {
-    let data = { requests: [3] }
+    let data = { requests: [3] };
     fetch(`http://127.0.0.1:8000/profile/${this.props.userid}`, {
-      method: 'PATCH',
+      method: "PATCH",
       headers: {
         Authorization: `Token ${localStorage.getItem("token")}`,
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json"
       },
       body: JSON.stringify(data)
     })
-    .then(response => response.json())
-    .then(result => {
-      //success
-    })
-    .catch(error => {
-      //error
-    });
-  }
-
+      .then(response => response.json())
+      .then(result => {
+        //success
+      })
+      .catch(error => {
+        //error
+      });
+  };
 
   render() {
     return (
       <div className="CommunityPage">
-        
         <Banner background={Banner__Directory}>
           <h3 style={{ margin: 0 }}>Directory: My Friends</h3>
           <InputTextField
@@ -346,13 +360,9 @@ export default class DirectoryPeople extends Component {
           </a>
         </div>
         <header className="CommunityPage__header">Friends:</header>
-        <div className="CommunityPage__moms-in-city-container">
-          {this.showFriends()}
-        </div>
+        <div className="CommunityPage__moms-in-city-container">{this.showFriends()}</div>
         <header className="CommunityPage__header">Requests:</header>
-        <div className="CommunityPage__moms-in-city-container">
-          {this.showRequests()}
-        </div>
+        <div className="CommunityPage__moms-in-city-container">{this.showRequests()}</div>
         <header className="CommunityPage__header">Add Other Moms As Friends:</header>
         <div className="CommunityPage_SortByButton">
           <div className="CommunityPage_SortByText">Sort By: Location </div>
@@ -368,11 +378,7 @@ export default class DirectoryPeople extends Component {
           </div>
           <a className="seeMore-Button">See More</a>
         </div>
-        
       </div>
     );
   }
 }
-
-
-
