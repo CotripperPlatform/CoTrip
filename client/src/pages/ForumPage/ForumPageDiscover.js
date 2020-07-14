@@ -52,13 +52,13 @@ class ForumPageDiscover extends Component {
               handleClick={handleClick}
             />
           </a>
-          <a className="secondNav">
+          <a href="./forum-page" className="secondNav">
             <Button text="Discover Topics" color="pink" size="long" handleClick={handleClick} />
           </a>
         </div>
 
-        <div className="forum-page-body">
-          <div className="forum-page-sort">
+        <div className="ForumPage__body">
+          <div className="ForumPage__sort">
             <InputSelect
               onSelect={handleSelect}
               optionPrefix={"Sort By:  "}
@@ -73,9 +73,9 @@ class ForumPageDiscover extends Component {
           <div>
             <header className="ForumPage__header">Popular Topics</header>
           </div>
-          <div className="forum-page-pill-container">
+          <div className="ForumPage__pill-container">
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -88,9 +88,9 @@ class ForumPageDiscover extends Component {
           <div>
             <header className="ForumPage__header">Topics</header>
           </div>
-          <div className="forum-page-pill-container">
+          <div className="ForumPage__pill-container">
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -100,7 +100,7 @@ class ForumPageDiscover extends Component {
               selectId={0}
             />{" "}
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -110,7 +110,7 @@ class ForumPageDiscover extends Component {
               selectId={0}
             />{" "}
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -120,7 +120,7 @@ class ForumPageDiscover extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -130,7 +130,7 @@ class ForumPageDiscover extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -141,15 +141,13 @@ class ForumPageDiscover extends Component {
             />
           </div>
           <div>
-            <header className="ForumPage__header">
-              #hashtags: <a href="/forum-page-hashtag">Example Tag</a>
-            </header>
+            <header className="ForumPage__header">#hashtags</header>
           </div>
-          <div className="forum-page-hollow-pill-container">
+          <div className="ForumPage__hollow-pill-container">
             {hashtags.map(hashtag => {
               return (
-                <div className="Forum-Pill">
-                  <Link to={`/forum-page-hashtag/${hashtag.id}`} style={{ textDecoration: "none" }}>
+                <div className="Forum__Pill">
+                  <Link to={"./forum-page-hashtag/"} style={{ textDecoration: "none" }}>
                     <Pill
                       text={hashtag.title}
                       size={"medium"}
@@ -164,7 +162,7 @@ class ForumPageDiscover extends Component {
                 </div>
               );
             })}
-          </div>{" "}
+          </div>
           <div className="ForumPage__button-container"></div>
         </div>
       </div>
