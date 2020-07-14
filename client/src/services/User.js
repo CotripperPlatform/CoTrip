@@ -17,13 +17,16 @@ export function handleSignup(data, history) {
     .then(res => res.json())
     .then(json => {
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
+
       this.setState({
         logged_in: json.token !== undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
-        image: json.user.profile.image
+        image: json.user.profile.image,
+        profileLoaded: true,
+        userid: json.user.id
       });
-      history.push("/home");
+      history.push("/");
     })
     .catch(err => {
       console.log(err);
@@ -40,19 +43,45 @@ export function handleLogin(data, history) {
   })
     .then(res => res.json())
     .then(json => {
-      console.log(json.token);
       json.token ? localStorage.setItem("token", json.token) : console.log("no token");
       this.setState({
         logged_in: json.token !== undefined ? true : false,
         email: json.user.email,
         first_name: json.user.profile.first_name,
-        image: json.user.profile.image
+        image: json.user.profile.image,
+        profileLoaded: true,
+        userid: json.user.id
       });
-      history.push("/home");
+      history.push("/");
     })
     .catch(err => {
       console.log(err);
       alert("Please enter valid email and password");
+    });
+}
+
+export function getUserData() {
+  fetch(`${BASE_URL}/auth/user`, {
+    headers: {
+      Authorization: `Token ${localStorage.getItem("token")}`
+    }
+  })
+    .then(res => res.json())
+    .then(json => {
+      if (json.detail == "Invalid token.") {
+        this.handleLogout();
+      } else {
+        this.setState(
+          {
+            email: json.email,
+            first_name: json.profile.first_name,
+            image: json.profile.image,
+            userid: json.id,
+            profileLoaded: true
+          },
+          this.logState
+        );
+      }
     });
 }
 

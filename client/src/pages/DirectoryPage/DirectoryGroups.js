@@ -22,7 +22,6 @@ function pillClick(val) {
 const DirectoryGroups = props => {
   return (
     <div className="DirectoryPage">
-      <NavBar page={0} profileImage={people} />
       <Banner background={Banner__Directory}>
         <h3 style={{ margin: 0 }}>Directory: My Groups</h3>
         <InputTextField
@@ -227,7 +226,6 @@ const DirectoryGroups = props => {
         </div>
         <a href className="seeAll-Button">See All</a>
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };

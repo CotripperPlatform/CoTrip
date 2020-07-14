@@ -204,7 +204,7 @@ class Bio extends Component {
         <div className={"Bio"}>
           <div>
             <h2 className={"Bio__header"}>
-              {firstName} {lastName}
+              {firstName} {lastName[0] + "."}
               {this.props.isCurrentUser ? <Icon  callback={this.toggleEditMode} icon={"edit"} /> : null}
             </h2>
 

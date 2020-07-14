@@ -1,14 +1,16 @@
 from django.db import models
+from trip.models import Location
 
 # Create your models here.
 
 
 class Group(models.Model):
-    # Location defined in trip.models
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=500, blank=True, null=True)
-# Members defined in account.models in Profile model
-# Posts: one to many with post model
+    location = models.ForeignKey(
+        Location, on_delete=models.CASCADE, related_name='group', null=True, blank=True)
+    # Members defined in account.models in Profile model
+    # Posts: one to many with post model
 #         (should be) taken care of in the Post model
 
     def __str__(self):
@@ -34,10 +36,11 @@ class Topic(models.Model):
     def __str__(self):
         return self.title
 
-# Followers: Many to many with user
-#       taken care of in accounts.Profile
-# Post: one to many with post
-#       (should be) taken care of in the Post model
+# For both Topic & Hashtag:
+    # Followers: Many to many with user
+    #       taken care of in accounts.Profile
+    # Post: one to many with post
+    #       (should be) taken care of in the Post model
 
 
 class Hashtag(models.Model):
@@ -46,7 +49,7 @@ class Hashtag(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 
 class Media(models.Model):
     # title and file are required. hashtags, topics, and groups are optional
