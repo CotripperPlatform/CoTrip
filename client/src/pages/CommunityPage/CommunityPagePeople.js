@@ -18,6 +18,7 @@ import image2 from "../../assets/images/profile-picture-2.png";
 import image3 from "../../assets/images/profile-picture-3.png";
 import image4 from "../../assets/images/profile-picture-4.png";
 import image5 from "../../assets/images/profile-picture-5.png";
+import { Link } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import FilterSettingsForm from "pages/OnboardingPage/FilterSettingsForm/FilterSettingsForm";
 
@@ -25,7 +26,7 @@ function pillClick(val) {
   console.log(val);
 }
 
-const handleClick = e => { };
+const handleClick = e => {};
 
 const CommunityPage = props => {
   // State Hooks
@@ -62,30 +63,16 @@ const CommunityPage = props => {
       profile.users.map(data => {
         return (
           <div className="CommunityPage__momCard-single">
-            <PersonCard
-              image={randomPlaceholderImages()}
-              name={data.first_name + "" + data.last_name}
-              location={data.city_of_residence.name + ", " + data.city_of_residence.state.name}
-              interests={data.hashtags}
-            />
-          </div>
-        );
-      })
-    );
-  };
+            <Link to={`/member-page/${data.id}`}>
+              <PersonCard
+                image={data.image}
+                name={data.first_name + "" + data.last_name}
+                location={data.city_of_residence.name + ", " + data.city_of_residence.state.name}
+                interests={data.hashtags.title}
 
-  const profileBaseList = () => {
-    return (
-      profile.baseState &&
-      profile.baseState.map(data => {
-        return (
-          <div className="CommunityPage__momCard-single">
-            <PersonCard
-              image={randomPlaceholderImages()}
-              name={data.first_name + "" + data.last_name}
-              location={data.city_of_residence.name + ", " + data.city_of_residence.state.name}
-              interests={data.hashtags}
-            />
+                //group card with prop:  id=group.id
+              />
+            </Link>
           </div>
         );
       })
@@ -95,14 +82,13 @@ const CommunityPage = props => {
   const getProfileFromStates = event => {
     let userSubmission = event.target.textContent.toLowerCase();
     if (userSubmission === "") {
-      return (
-        profile.baseState &&
-        setProfile({
-          users: profile.baseState
-        })
-      );
+      return setProfile({
+        users: profile.baseState,
+        baseState: profile.baseState
+      });
     } else {
       return setProfile({
+        baseState: profile.baseState,
         users: profile.users.filter(
           user => userSubmission === user.city_of_residence.state.name.toLowerCase()
         )
@@ -110,9 +96,21 @@ const CommunityPage = props => {
     }
   };
 
+  const handleDisplay = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+    profile.users &&
+      profile.users.forEach(user => {
+        if (userSubmission === user.city_of_residence.state.name) {
+          return user.city_of_residence.state.name;
+        } else if (userSubmission === undefined) {
+          return "This is America";
+        }
+      });
+  };
+
   console.log(states);
   console.log(profile);
-
+  console.log(profile.baseState);
   return (
     <div className="CommunityPage">
       <Banner background={Banner__Community}>
@@ -149,7 +147,9 @@ const CommunityPage = props => {
           options={states}
           getOptionLabel={option => option.name}
           onChange={getProfileFromStates}
-          renderInput={params => <TextField {...params} label="Search By State" variant="filled" />}
+          renderInput={params => (
+            <TextField {...params} label="Search For Moms By State" variant="filled" />
+          )}
         />
       </div>
 

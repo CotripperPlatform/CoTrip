@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import Layout from "./components/Layout/Layout"
-import Navbar from "./components/Navbar/Navbar"
+import Layout from "./components/Layout/Layout";
+import Navbar from "./components/Navbar/Navbar";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -81,10 +81,10 @@ class App extends Component {
     this.getUserData = getUserData.bind(this);
   }
   componentDidMount() {
-    if (this.state.logged_in) { this.getUserData() }
+    if (this.state.logged_in) {
+      this.getUserData();
+    }
   }
-
-
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
@@ -101,12 +101,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-              <Redirect to="/welcome" />
-            )}
-<<<<<<< HEAD
-          <Route path="/welcome" exact component={SplashPage}></Route>
-=======
->>>>>>> develop
+            <Redirect to="/welcome" />
+          )}
           <Route
             path="/TripDetail:page"
             exact
@@ -125,7 +121,11 @@ class App extends Component {
             path="/community/view-group"
             exact
             render={routerProps => (
-              <CommunityPageGroup handle_logout={this.handleLogout} {...this.state} {...routerProps} />
+              <CommunityPageGroup
+                handle_logout={this.handleLogout}
+                {...this.state}
+                {...routerProps}
+              />
             )}
           ></Route>
           <Route
@@ -155,8 +155,8 @@ class App extends Component {
               )}
             ></Route>
           ) : (
-              ""
-            )}
+            ""
+          )}
           <Route
             path="/forum-page"
             exact
@@ -207,34 +207,6 @@ class App extends Component {
               <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
-<<<<<<< HEAD
-          <Route
-            path="/profile/:id"
-            exact
-            render={routerProps => (
-              <DirectoryPeople handle_logout={this.handleLogout} {...routerProps} />
-            )}
-          ></Route>
-          <Route
-            path="/login"
-            exact
-            render={routerProps => (
-              <LoginPage handleLogin={this.handleLogin} {...routerProps} {...this.state} />
-            )}
-          ></Route>
-          <Route
-            path="/register"
-            exact
-            render={routerProps => (
-              <OnboardingPage
-                handleSignup={this.handleSignup}
-                {...routerProps}
-                logged_in={this.state.logged_in}
-              />
-            )}
-          ></Route>
-        </main>
-=======
         </Layout>
 
         <Route path="/welcome" exact component={SplashPage}></Route>
@@ -256,8 +228,6 @@ class App extends Component {
             />
           )}
         ></Route>
-
->>>>>>> develop
       </div>
     );
   }
