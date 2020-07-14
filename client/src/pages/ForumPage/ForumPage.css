@@ -38,19 +38,19 @@
   margin: 10px 50px 30px 0px;
 }
 
-.forum-page-hollow-pill-container {
+.ForumPage__hollow-pill-container {
   display: flex;
   width: 95vw;
   flex-wrap: wrap;
 }
 
-.forum-page-pill-container {
+.ForumPage__pill-container {
   display: flex;
   width: 95vw;
   flex-wrap: wrap;
 }
 
-.forum-page-body {
+.ForumPage__body {
   display: flex;
   justify-content: center;
   flex-direction: column;
