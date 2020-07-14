@@ -26,7 +26,7 @@ export default function Layout(props) {
         <main>
             <Navbar to={`/member-page/${props.userid}`} profileImage={props.image} page={pathPages[currentPath]}></Navbar>
             {props.children}
-            <Footer history={props.history} handle_logout={props.handle_logout} />
+            <Footer history={props.history} handleLogout={props.handleLogout} />
         </main>
     )
 }

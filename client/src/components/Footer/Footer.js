@@ -6,8 +6,8 @@ const Footer = props => {
   // Default Class to apply to Component
   let classList = `Footer`;
   const handleClick = () => {
-    props.handle_logout();
-    props.history.push("/");
+    props.handleLogout();
+    // props.history.push("/");
   };
 
   return (

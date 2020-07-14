@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import Layout from "./components/Layout/Layout"
-import Navbar from "./components/Navbar/Navbar"
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -37,7 +36,6 @@ import {
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
-import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout, getUserData } from "./services/User";
 
 library.add(
@@ -92,7 +90,7 @@ class App extends Component {
     return (
       <div className="App">
         {loggedIn ? (
-          <Layout {...this.state} {...this.props}>
+          <Layout {...this.state} {...this.props} handleLogout={this.handleLogout} >
             <Route
               path="/"
               exact
