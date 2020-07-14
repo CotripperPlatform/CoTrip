@@ -9,7 +9,6 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import Pill from "../../components/Pill/Pill";
 import InputSelect from "../../components/InputSelect/InputSelect";
-
 import getHashtags from "../../services/Forum.js";
 import { Link } from "react-router-dom";
 
@@ -44,7 +43,7 @@ class ForumPage extends Component {
           />
         </Banner>
         <div className="secondNav">
-          <a className="secondNav">
+          <a href="./forum-page" className="secondNav">
             <Button text="My Favorite Topics" color="pink" size="long" handleClick={handleClick} />
           </a>
           <a className="secondNav" href="./forum-page-discover">
@@ -57,8 +56,8 @@ class ForumPage extends Component {
           </a>
         </div>
 
-        <div className="forum-page-body">
-          <div className="forum-page-sort">
+        <div className="ForumPage__body">
+          <div className="ForumPage__sort">
             <InputSelect
               onSelect={handleSelect}
               optionPrefix={"Sort By:  "}
@@ -73,9 +72,9 @@ class ForumPage extends Component {
           <div>
             <header className="ForumPage__header">My Favorite Topics</header>
           </div>
-          <div className="forum-page-pill-container">
+          <div className="ForumPage__pill-container">
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -85,7 +84,7 @@ class ForumPage extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -95,7 +94,7 @@ class ForumPage extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -105,7 +104,7 @@ class ForumPage extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -115,7 +114,7 @@ class ForumPage extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -125,7 +124,7 @@ class ForumPage extends Component {
               selectId={0}
             />{" "}
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -135,7 +134,7 @@ class ForumPage extends Component {
               selectId={0}
             />{" "}
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -155,7 +154,7 @@ class ForumPage extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -165,7 +164,7 @@ class ForumPage extends Component {
               selectId={0}
             />
             <Pill
-              className="Forum-Pill"
+              className="Forum__Pill"
               text={"Traveling"}
               size={"medium"}
               size={"short"}
@@ -176,15 +175,13 @@ class ForumPage extends Component {
             />
           </div>
           <div>
-            <header className="ForumPage__header">
-              #hashtags I'm Following: <a href="/forum-page-hashtag">Example Tag</a>
-            </header>{" "}
+            <header className="ForumPage__header">#hashtags I'm Following</header>
           </div>
-          <div className="forum-page-hollow-pill-container">
+          <div className="ForumPage__hollow-pill-container">
             {hashtags.map(hashtag => {
               return (
                 <div className="Forum-Pill">
-                  <Link to={`/forum-page-hashtag/${hashtag.id}`} style={{ textDecoration: "none" }}>
+                  <Link to={"./forum-page-hashtag/"} style={{ textDecoration: "none" }}>
                     <Pill
                       text={hashtag.title}
                       size={"medium"}
@@ -199,7 +196,7 @@ class ForumPage extends Component {
                 </div>
               );
             })}
-          </div>{" "}
+          </div>
           <div className="ForumPage__button-container"></div>
         </div>
       </div>
