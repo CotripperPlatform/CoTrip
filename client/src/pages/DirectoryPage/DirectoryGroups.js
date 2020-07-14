@@ -11,6 +11,7 @@ import picture3 from "../../assets/images/card_small3.png";
 import Card from "../../components/Card/Card";
 
 const DirectoryGroups = props => {
+  const groups = this.state.groups ? this.state.groups : [];
   return (
     <div className="DirectoryPage">
       <Banner background={Banner__Directory}>
