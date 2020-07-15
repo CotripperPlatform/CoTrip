@@ -223,11 +223,6 @@ class Bio extends Component {
         });
 
     if (this.state.editMode === true) {
-      // if(this.props.bio)
-      //     userBio = this.props.bio;
-      // else
-      //   userBio = "Please enter a bio."
-
       return (
         <div className={"Bio"}>
           <div>
