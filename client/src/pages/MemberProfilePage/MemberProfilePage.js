@@ -131,7 +131,6 @@ class MemberProfilePage extends Component {
           <div className="MemberProfilePage__group-div-Her">
             <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
-
         </div>
       );
 
