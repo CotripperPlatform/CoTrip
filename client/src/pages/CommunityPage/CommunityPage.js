@@ -4,8 +4,6 @@ import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
 import Button from "../../components/Button/Button";
-import Footer from "../../components/Footer/Footer";
-import Pill from "../../components/Pill/Pill";
 import GroupCard from "../../components/GroupCard/GroupCard";
 import picture1 from "../../assets/images/card_small1.png";
 import picture2 from "../../assets/images/card_small2.png";
@@ -47,111 +45,10 @@ const CommunityPage = props => {
           <Button text="Discover Groups" color="pink" size="long" handleClick={handleClick} />
         </a>
       </div>{" "}
-      <div className="CommunityPage_SortByButton">
-        <div className="CommunityPage_SortByText">Sort By: Location </div>
-      </div>
       <div className="CommunityPage_body">
         <div>
           <header className="CommunityPage__header">
-            Group Location: <a href="./view-group"> View Sample Page </a>
-          </header>
-        </div>
-        <div className="CommunityPage__group-location-container">
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"purple"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />{" "}
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-          <Pill
-            className="Pill"
-            text={"Traveling"}
-            size={"wide"}
-            color={"pink"}
-            icon={"white"}
-            onClick={pillClick}
-            selectId={0}
-          />
-        </div>{" "}
-        <a className="seeMore-Button">See More</a>
-        <div>
-          <header className="CommunityPage__header">
-            Groups in WASHINGTON, DC: <a href="./view-group"> View Sample Page </a>
+            Groups in WASHINGTON, DC: <a href="./create-group">Create Group</a>
           </header>{" "}
         </div>
         <div className="CommunityPage__groups-in-city-container">

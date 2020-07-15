@@ -6,6 +6,7 @@ import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
+import CommunityPageCreateGroup from "./pages/CommunityPage/CommunityPageCreateGroup"
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
 import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
 import ForumPageDiscover from "./pages/ForumPage/ForumPageDiscover";
@@ -122,6 +123,13 @@ class App extends Component {
             exact
             render={routerProps => (
               <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
+            )}
+          ></Route>
+          <Route
+            path="/community/create-group"
+            exact
+            render={routerProps => (
+              <CommunityPageCreateGroup handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
           <Route
