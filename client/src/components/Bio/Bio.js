@@ -182,7 +182,7 @@ class Bio extends Component {
 						<h3 className="Bio__interests">Interests</h3>
 						<div className="hashtag__container">
 							{this.props.hashtags.map(hashtag => (
-								<span className="Bio__span" key={hashtag + 1}>
+								<span className="Bio__span" key={hashtag.id}>
 									{hashtag}
 								</span>
 							))}
