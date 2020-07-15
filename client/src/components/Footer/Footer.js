@@ -15,7 +15,7 @@ const Footer = props => {
     <div className={classList}>
       <div className="Footer--left">
         <a href="">Sitemap</a>
-        <a onClick={handleClick}>Logout</a>
+        <a onClick={handleClick} style={{ cursor: 'pointer' }} >Logout</a>
       </div>
       <div className="Footer--center">
         <a href="mailto:info@cotripper.co?" target="_blank">
