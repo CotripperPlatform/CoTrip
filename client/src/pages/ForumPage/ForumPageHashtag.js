@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import "./ForumPage.css";
-import NavBar from "../../components/Navbar/Navbar";
-import people from "assets/images/profile_default.svg";
 import ModalContainerFollow from "../../components/Modal/_ModalContainer-follow";
 import ForumContainer from "../../components/ForumPostContainer/ForumPostContainer";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Banner__Community from "assets/images/community_banner.png";
-import Footer from "../../components/Footer/Footer";
 import MediaCard from "../../components/MediaCard/MediaCard";
+import { getHashtagData, getAllHashtags } from "../../services/Community";
+import Autocomplete from "@material-ui/lab/Autocomplete";
+import TextField from "@material-ui/core/TextField";
+
+
+
 import books from "../../assets/images/media-card-1.png";
 import happiness from "../../assets/images/media-card-2.png";
 import van from "../../assets/images/media-card-3.png";
@@ -16,13 +19,28 @@ import nightSky from "../../assets/images/media-card-4.png";
 import waterfall from "../../assets/images/media-card-5.png";
 import flight from "../../assets/images/media-card-6.png";
 
-class ForumPageHastag extends Component {
+class ForumPageHashtag extends Component {
   constructor(props) {
     super(props);
     this.state = {
       followTag: false,
-      showModal: false
+      showModal: false,
+      hashtagId: parseInt(props.match.params.id),
+      hashtagData: {},
     };
+
+    this.getHashtagData = getHashtagData.bind(this);
+    this.getAllHashtags = getAllHashtags.bind(this);
+
+  }
+
+  componentDidMount() {
+    this.getAllHashtags(this.mountHashtagData)
+  }
+
+  mountHashtagData = () => {
+    let hashtag = this.state.hashtagList.filter(hashtag => hashtag.id === this.state.hashtagId)[0]
+    this.setState({ hashtagData: hashtag })
   }
 
   handleConfirm = evt => {
@@ -60,19 +78,68 @@ class ForumPageHastag extends Component {
     evt.preventDefault();
     alert("something happens");
   }
+
+  handleSelect = event => {
+    let userSubmission = event.target.textContent.toLowerCase();
+
+    this.state.hashtagList.map(hashtag => {
+      if (userSubmission === hashtag.title.toLowerCase()) {
+        this.props.history.push(`${hashtag.id}`)
+        this.setState({ hashtagId: hashtag.id }, this.mountHashtagData);
+      }
+    });
+  };
   render() {
+    let hashtagData = this.state.hashtagData
+    let postList = [], forumPosts = []
+
+    if (hashtagData.posts) {
+      postList = hashtagData.posts
+
+      forumPosts = postList.map(post => {
+        let date = new Date(post.time)
+        return (
+          <ForumContainer
+            className="ForumPost"
+            key={post.id}
+            forumPost={{
+              key: post.id,
+              postId: post.id,
+              pillClick: this.pillClick,
+              commentClick: this.commentClick,
+              likeClick: this.likeclick,
+              to: `/profile/${post.author.user}`,
+              name: `${post.author.first_name} ${post.author.last_name[0].toUpperCase()}`,
+              likes: post.likes,
+              comments: post.comments,
+              image: post.author.image,
+              post: {
+                title: post.title,
+                date: `${date.toLocaleString('default', { month: 'long' })} ${date.getDate()}`,
+                time: `${date.getHours()}:${date.getMinutes()}`,
+                body: post.body,
+                hashtags: post.hashtags,
+              },
+            }}
+          />
+        )
+      })
+    }
+
     return (
       <div className="ForumPage">
         <Banner background={Banner__Community}>
           <div className="community-page-header">
-            {" "}
-            <h3 style={{ margin: 0 }}>#packinglight</h3>
+
+            <h3 style={{ margin: 0 }}>{this.state.hashtagData.title}</h3>
           </div>
-          <InputTextField
-            type="text"
-            name="search directory"
-            placeholder="Search in #packinglight"
-            variation="wide"
+          <Autocomplete
+            style={{ width: 300 }}
+            id="AutoStateField"
+            options={this.state.hashtagList ? this.state.hashtagList : ""}
+            getOptionLabel={option => option.title}
+            onChange={this.handleSelect}
+            renderInput={params => <TextField {...params} label="Hashtag" variant="filled" />}
           />
           {this.state.followTag ? (
             <div className="Modal_align">
@@ -112,51 +179,7 @@ class ForumPageHastag extends Component {
           <div className="hashtag__bodyLeft">
             <header className="ForumPage__header"></header>
             <div>
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
-              <ForumContainer
-                className="ForumPost"
-                forumPost={{ topics: ["Parenting", "Vacation", "Topic"], likes: 8, comments: 5 }}
-                comments={[
-                  {
-                    name: "Lexi R.",
-                    likes: 2,
-                    replies: 0,
-                    date: "May 5 ",
-                    time: " 4:45pm",
-                    body:
-                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore v eritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit"
-                  }
-                ]}
-              />
+              {forumPosts}
             </div>
           </div>
           <div className="hashtag__bodyRight">
@@ -194,4 +217,8 @@ class ForumPageHastag extends Component {
   }
 }
 
-export default ForumPageHastag;
+ForumPageHashtag.defaultProps = {
+  hashtagId: 1,
+};
+
+export default ForumPageHashtag;

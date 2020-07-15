@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import Layout from "./components/Layout/Layout"
+import Layout from "./components/Layout/Layout";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
 import CommunityPageGroup from "./pages/CommunityPage/CommunityPageGroup";
 import ForumPageHashtag from "./pages/ForumPage/ForumPageHashtag";
-import ForumPageTopic from "./pages/ForumPage/ForumPageHashtagTopic";
+import ForumPageTopic from "./pages/ForumPage/ForumPageTopic";
 import ForumPageDiscover from "./pages/ForumPage/ForumPageDiscover";
 
 import CommunityPagePeople from "./pages/CommunityPage/CommunityPagePeople";
@@ -79,10 +79,10 @@ class App extends Component {
     this.getUserData = getUserData.bind(this);
   }
   componentDidMount() {
-    if (this.state.logged_in) { this.getUserData() }
+    if (this.state.logged_in) {
+      this.getUserData();
+    }
   }
-
-
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
@@ -90,7 +90,7 @@ class App extends Component {
     return (
       <div className="App">
         {loggedIn ? (
-          <Layout {...this.state} {...this.props} handleLogout={this.handleLogout} >
+          <Layout {...this.state} {...this.props} handleLogout={this.handleLogout}>
             <Route
               path="/"
               exact
@@ -102,7 +102,11 @@ class App extends Component {
               path="/TripDetail:page"
               exact
               render={routerProps => (
-                <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
+                <TripDetail
+                  tripName={"Hawaii"}
+                  handle_logout={this.handleLogout}
+                  {...routerProps}
+                />
               )}
             ></Route>{" "}
             <Route
@@ -146,8 +150,8 @@ class App extends Component {
                 )}
               ></Route>
             ) : (
-                ""
-              )}
+              ""
+            )}
             <Route
               path="/forum-page"
               exact
@@ -181,7 +185,11 @@ class App extends Component {
               path="/forum-page-topic"
               exact
               render={routerProps => (
-                <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+                <ForumPageTopic
+                  handle_logout={this.handleLogout}
+                  {...routerProps}
+                  {...this.state}
+                />
               )}
             ></Route>
             <Route
@@ -200,8 +208,8 @@ class App extends Component {
             ></Route>
           </Layout>
         ) : (
-            <Redirect to="/welcome" />
-          )}
+          <Redirect to="/welcome" />
+        )}
 
         <Route path="/welcome" exact component={SplashPage}></Route>
         <Route
@@ -222,7 +230,6 @@ class App extends Component {
             />
           )}
         ></Route>
-
       </div>
     );
   }

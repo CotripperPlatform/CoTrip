@@ -27,24 +27,24 @@ export default function ForumPost(props) {
               hashtags={props.post.hashtags}
             />
           ) : (
-            <PostBody />
-          )}
+              <PostBody />
+            )}
         </div>
         <div className="ForumPost__middle">
           <div className="ForumPost__topic-pills">
             {props.topics
               ? props.topics.map(topic => (
-                  <Pill
-                    key={topic}
-                    text={topic}
-                    active={false}
-                    size={"small"}
-                    color={"red"}
-                    inactiveColor={"pink"}
-                    onClick={props.pillClick}
-                    selectId={0}
-                  />
-                ))
+                <Pill
+                  key={topic}
+                  text={topic}
+                  active={false}
+                  size={"small"}
+                  color={"red"}
+                  inactiveColor={"pink"}
+                  onClick={props.pillClick}
+                  selectId={0}
+                />
+              ))
               : null}
           </div>
           <div className="ForumPost__likes-comments">
@@ -53,7 +53,7 @@ export default function ForumPost(props) {
               {" Likes"}
             </p>
             <p>
-              {props.comments}
+              {props.comments.length}
               {" Comments"}
             </p>
           </div>
