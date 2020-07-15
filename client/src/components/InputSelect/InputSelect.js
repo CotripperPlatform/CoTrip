@@ -37,7 +37,7 @@ InputSelect.defaultProps = {
     { value: "option1", title: "Option 1" },
     { value: "option2", title: "Option 2" }
   ],
-  onSelect:function(){}
+  onSelect: function () { }
 };
 InputSelect.propTypes = {
   optionPrefix: PropTypes.string,

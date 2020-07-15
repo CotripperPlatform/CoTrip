@@ -16,13 +16,12 @@ function Connections(props) {
   }
 
   let userArray = props.users.map((person, index) => {
-    let userLastInitial = person.userSurname.slice(0, 1) + ".";
     if (index < 4) {
       return (
-        <div key={person.userId} className="Connections__person">
-          <ProfilePicture type="small" image={person.userPic} />
+        <div key={person.user} className="Connections__person">
+          <ProfilePicture type="small" image={person.image} />
           <p className="Connections--name">
-            {person.userFirstName} {userLastInitial}
+            {`${person.first_name} ${person.last_name[0].toUpperCase()}`}
           </p>
         </div>
       );

@@ -5,11 +5,13 @@ import Comment from '../Comment/Comment'
 
 
 export default function ForumPostContainer(props) {
+  const comments = props.forumPost.comments
   return (
     <div className="PostContainer">
       <div>
         {props.forumPost ? (
           <ForumPost
+            key={props.postId}
             pillClick={props.forumPost.pillClick}
             commentClick={props.forumPost.commentClick}
             likeClick={props.forumPost.likeClick}
@@ -20,30 +22,24 @@ export default function ForumPostContainer(props) {
             topics={props.forumPost.topics}
             image={props.forumPost.image}
             post={props.forumPost.post}
+            topic={props.forumPost.topic}
+            hashtags={props.forumPost.hashtags}
           />
         ) : (
-          <ForumPost />
-        )}
+            <ForumPost />
+          )}
       </div>
       <div>
-        {props.comments ? (
-          props.comments.map((comment, i) => {
+        {!comments ? "" : (
+          comments.map((comment, i) => {
             return (
               <Comment
-                name={comment.name}
-                likes={comment.likes}
-                replies={comment.replies}
-                image= {comment.image}
-                date={comment.date}
-                time={comment.time}
-                body={comment.body}
-                key={i}
+                key={comment.id}
+                {...comment}
               />
             );
           })
-          
-        ) : (
-          <Comment />
+
         )}
       </div>
     </div>

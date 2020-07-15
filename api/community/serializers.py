@@ -4,9 +4,13 @@ from forum.serializers import PostSerializer
 
 
 class GroupSerializer(serializers.ModelSerializer):
+    posts = PostSerializer(many=True)
+
     class Meta:
         model = Group
-        fields = '__all__'
+        depth = 1
+        fields = ['id', 'title', 'description', 'location', 'posts', 'members']
+
 
 
 class EventSerializer(serializers.ModelSerializer):
@@ -27,6 +31,7 @@ class TopicSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'description', 'posts']
 
 
+
 class HashtagSerializer(serializers.ModelSerializer):
     posts = PostSerializer(many=True)
 
@@ -34,6 +39,7 @@ class HashtagSerializer(serializers.ModelSerializer):
         model = Hashtag
         depth = 1
         fields = ['id', 'title', 'description', 'posts']
+
 
 
 class MediaSerializer(serializers.ModelSerializer):

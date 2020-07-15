@@ -118,10 +118,10 @@ class App extends Component {
             )}
           ></Route>
           <Route
-            path="/community/view-group"
+            path="/community/view-group/:id"
             exact
             render={routerProps => (
-              <CommunityPageGroup handle_logout={this.handleLogout} {...routerProps} />
+              <CommunityPageGroup handle_logout={this.handleLogout} {...this.state} {...routerProps} />
             )}
           ></Route>
           <Route
@@ -203,6 +203,7 @@ class App extends Component {
               <DirectoryGroup handle_logout={this.handleLogout} {...routerProps} />
             )}
           ></Route>
+
         </Layout>
 
         <Route path="/welcome" exact component={SplashPage}></Route>
