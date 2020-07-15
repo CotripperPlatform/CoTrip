@@ -5,8 +5,8 @@ import InputTextField from "../../components/InputTextField/InputTextField";
 import TextField from "@material-ui/core/TextField";
 import Banner__Community from "assets/images/community_banner.png";
 import Button from "../../components/Button/Button";
-import axios from "axios";
-import { BASE_URL } from "../../services/constants";
+import { createGroup } from "../../services/Group";
+import { getUSStates, getCitiesFromState } from "../../services/Location";
 import Autocomplete from "@material-ui/lab/Autocomplete";
 
 export default class CommunityPage extends Component {
@@ -15,65 +15,28 @@ export default class CommunityPage extends Component {
     this.state = {
       title: "",
       description: "",
-      location: null,
+      location: null
     };
+
+    this.getUSStates = getUSStates.bind(this);
+    this.getCitiesFromState = getCitiesFromState.bind(this);
+    this.createGroup = createGroup.bind(this);
   }
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  submit = () => {
-    console.log(this.state);
-    axios({
-      method: 'POST',
-      url: `${BASE_URL}/groups`,
-      data: {
-        title: this.state.title,
-        description: this.state.description,
-        location: this.state.location
-      }
-    })
-  };
+  handleClick = e => {};
 
   componentDidMount() {
     this.getUSStates();
   }
 
-  getUSStates = () => {
-    axios.get(`${BASE_URL}/location/states`).then(res => {
-      console.log(res.data);
-      this.setState({ USStates: res.data });
-    });
-  };
-
-  getCitiesFromState = event => {
-    if (event.target.textContent === "") this.setState({ stateFound: false });
-
-    let USStates = this.state.USStates;
-
-    //TextContent because materialUI outputs an <li> tag
-    let userSubmission = event.target.textContent.toLowerCase();
-
-    USStates.forEach(state => {
-      if (state.name.toLowerCase() === userSubmission) {
-        axios.get(`${BASE_URL}/location/bystate?state__code=${state.code}`).then(res => {
-          this.setState({
-            stateFound: true,
-            currentStateCities: res.data
-          });
-        });
-      }
-    });
-  };
-
   setLocationID = event => {
     let currentStateCities = this.state.currentStateCities;
-    // console.log(currentStateCities);
 
     let userSubmission = event.target.textContent.toLowerCase();
-
-    // for(let i=0;i<currentStateCities.length)
 
     //binary search
     let result = this.binarySearch(
@@ -83,10 +46,8 @@ export default class CommunityPage extends Component {
       currentStateCities.length - 1
     );
 
-    if (result) this.setState({ location: result.location.id});
-    else this.setState({ location: null});
-
-    console.log("binarysearch: ", result);
+    if (result) this.setState({ location: result.location.id });
+    else this.setState({ location: null });
   };
 
   binarySearch = (cities, userSubmission, start, end) => {
@@ -113,10 +74,7 @@ export default class CommunityPage extends Component {
     return (
       <div className="CommunityPage">
         <Banner background={Banner__Community}>
-          <div className="community-page-header">
-            {" "}
-            <h3 style={{ margin: 0 }}>Community: Groups</h3>
-          </div>
+          <h3 style={{ margin: 0 }}>Community: Groups</h3>
           <InputTextField
             type="text"
             name="search directory"
@@ -142,8 +100,10 @@ export default class CommunityPage extends Component {
             />
           </a>
         </div>{" "}
-        <div className="CommunityPage_body">
-          <div className="CommunityPage__Autocomplete">
+        <div className="CommunityPage__create-group-form-container">
+          <header className="CommunityPage__header">
+            <h3 style={{ margin: 0 }}>Create New Group</h3>
+          </header>
             <Autocomplete
               id="AutoStateField"
               options={this.state.USStates}
@@ -163,21 +123,27 @@ export default class CommunityPage extends Component {
             ) : (
               ""
             )}
-          </div>
-          <TextField 
+          <TextField
             id="outlined-multiline-static"
             name="title"
             type="title"
+            label="Title"
+            margin="normal"
+            required={true}
             fullWidth={true}
             placeholder="Title"
             variant="outlined"
             value={this.state.title}
             onChange={this.handleChange}
           />
-          <TextField 
+          <br></br>
+          <TextField
             id="outlined-multiline-static"
             name="description"
             type="description"
+            label="Description"
+            margin="normal"
+            required={true}
             fullWidth={true}
             multiline
             rows={4}
@@ -186,7 +152,7 @@ export default class CommunityPage extends Component {
             value={this.state.description}
             onChange={this.handleChange}
           />
-          <Button text="Submit" size="small" handleClick={this.submit}></Button>
+          <Button text="Submit" size="small" color="purple" handleClick={this.createGroup}></Button>
         </div>
       </div>
     );
