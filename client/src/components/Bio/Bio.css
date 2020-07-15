@@ -20,6 +20,7 @@
 }
 
 .Bio .icons__div div, .Bio .icons__div-edit div {
+
   color: var(--purple);
 }
 
@@ -31,7 +32,6 @@
 
 .Bio .Bio__paragraph {
   font-family: var(--paragraph-font);
-
 }
 
 .Bio .Bio__span {
@@ -41,7 +41,7 @@
 .Bio .Bio__header {
   display: flex;
   justify-content: space-between;
-  color: var(--purple)
+  color: var(--purple);
 }
 
 .Bio .hashtag__container {
@@ -50,4 +50,8 @@
   font-family: var(--paragraph-font);
   max-width: 100%;
   flex-wrap: wrap;
+}
+
+.change__password__title {
+  color: #6a4c93;
 }

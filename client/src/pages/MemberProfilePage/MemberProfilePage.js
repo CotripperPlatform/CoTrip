@@ -26,117 +26,118 @@ import getMemberData from "../../services/Members"
 // Class Based React Component
 class MemberProfilePage extends Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			classList: "MemberProfilePage",
-			protectedProfileData: {
-				first_name: '',
-				last_name: '',
-				bio: '',
-				age: '',
-				image: '',
-				city_of_residence: [],
-				social_media: [],
-				user_id: [],
-				hashtags: [],
-				connections: []
-			}
-		};
+  constructor(props) {
+    super(props);
+    this.state = {
+      classList: "MemberProfilePage",
+      protectedProfileData: {
+        first_name: '',
+        last_name: '',
+        bio: '',
+        age: '',
+        image: '',
+        city_of_residence: [],
+        social_media: [],
+        user_id: [],
+        hashtags: [],
+        connections: []
+      }
+    };
 
-		this.getMemberData = getMemberData.bind(this);
-	}
+    this.getMemberData = getMemberData.bind(this);
+  }
 
-	componentDidMount() {
+  componentDidMount() {
 
-		this.getMemberData(this.props.userid)
-	}
-
-
-
-	render() {
-
-		if (this.props.logged_in === true) {
-			return (
+    this.getMemberData(this.props.userid)
+  }
 
 
-				<div className={this.state.classList}>
 
-					<Banner background={Banner__pink}>
-						{" "}
-						<div className="BannerTest">
-							<h3 style={{ margin: 0 }}>User Profile</h3>
-							<InputTextField
-								type="text"
-								variation="wide"
-								name="search directory"
-								placeholder="Search Groups"
-							/>{" "}
-						</div>
-					</Banner>
+  render() {
 
-					<div className="MemberProfilePage__page-contents">
-						<div className="MemberProfilePage__left-top">
-							<div className="MemberProfilePage__left-contents">
-								<div className="interaction-div">
-									<InteractionCard image={this.state.protectedProfileData.image ? this.state.protectedProfileData.image : require('../../assets/images/profile_default.svg')} ></InteractionCard>
-								</div>
-								<div className="MemberProfilePage__bio-container">
+    if (this.props.logged_in === true) {
+      return (
 
 
-									{this.state.protectedProfileData !== undefined && this.props.userid !== undefined ?
-										<Bio
-											userid={this.props.userid}
-											type="default"
-											first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
-											bio={this.state.protectedProfileData.bio}
-											hashtags={this.state.protectedProfileData.hashtags}
-											isCurrentUser={true}
-											social_media={this.state.protectedProfileData.social_media}
-										/>
-										: ''}
-								</div>
-							</div>
-							<div className="Connections__list-Member">
-								<Connections
-									userViewing={false}
-									to="/home"
-									users={this.state.protectedProfileData.connections.slice(0, 6)}
-									extraUsers="View All"
-								/>
-							</div>
-						</div>
+        <div className={this.state.classList}>
 
-						<div className="MemberProfilePage__right-contents">
-							<UpcomingTrip
-								details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
-							>
-								<h1>Book a Trip</h1>
-								<TripCardUsers src={example2} location="Hawaii" date="May 2020" />
-								<TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
-							</UpcomingTrip>
+          <Banner background={Banner__pink}>
+            {" "}
+            <div className="BannerTest">
+              <h3 style={{ margin: 0 }}>User Profile</h3>
+              <InputTextField
+                type="text"
+                variation="wide"
+                name="search directory"
+                placeholder="Search Groups"
+              />{" "}
+            </div>
+          </Banner>
 
-							<PreviousTripsCard trips={true} link="/">
-								<h1>Previous Trips</h1>
-								<TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
-								<TripCardUsers
-									src="https://wallpaperaccess.com/full/144067.jpg"
-									location="Hawaii"
-									date="May 2020"
-								/>
-							</PreviousTripsCard>
-						</div>
-					</div>
+          <div className="MemberProfilePage__page-contents">
+            <div className="MemberProfilePage__left-top">
+              <div className="MemberProfilePage__left-contents">
+                <div className="interaction-div">
+                  <InteractionCard image={this.state.protectedProfileData.image ? this.state.protectedProfileData.image : require('../../assets/images/profile_default.svg')} ></InteractionCard>
+                </div>
+                <div className="MemberProfilePage__bio-container">
 
-					<div className="MemberProfilePage__group-div-Her">
-						<GroupsList heading="Her Groups" moreGroups="View All" to="/" />
-					</div>
 
-				</div>
-			);
+                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ?
+                    <Bio
+                      userid={this.props.userid}
+                      type="default"
+                      first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
+                      bio={this.state.protectedProfileData.bio}
+                      hashtags={this.state.protectedProfileData.hashtags}
+                      isCurrentUser={true}
+                      social_media={this.state.protectedProfileData.social_media}
+                    />
+                    : ''}
+                </div>
+              </div>
+              <div className="Connections__list-Member">
+                <Connections
+                  userViewing={false}
+                  to="/home"
+                  users={this.state.protectedProfileData.connections.slice(0, 6)}
+                  extraUsers="View All"
+                />
+              </div>
+            </div>
 
-		}
-	}
+            <div className="MemberProfilePage__right-contents">
+              <UpcomingTrip
+                details={["3 Days, 2 Nights", "Resort Stay", "Children Welcome", "Guided Tours"]}
+              >
+                <h1>Book a Trip</h1>
+                <TripCardUsers src={example2} location="Hawaii" date="May 2020" />
+                <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
+              </UpcomingTrip>
+
+              <PreviousTripsCard trips={true} link="/">
+                <h1>Previous Trips</h1>
+                <TripCardUsers src={example1} location="Puerto Rico" date="April 2019" />
+                <TripCardUsers
+                  src="https://wallpaperaccess.com/full/144067.jpg"
+                  location="Hawaii"
+                  date="May 2020"
+                />
+              </PreviousTripsCard>
+            </div>
+          </div>
+
+          <div className="MemberProfilePage__group-div-Her">
+            <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
+          </div>
+
+        </div>
+      );
+
+    }
+  }
+
 }
 
 
