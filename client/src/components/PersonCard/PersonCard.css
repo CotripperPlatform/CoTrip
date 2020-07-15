@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   background: var(--white);
-  width: 12.5rem;
+  width: 13rem;
   height: 17.5rem;
   font-family: var(--paragraph-font);
   color: var(--black);
@@ -16,7 +16,7 @@
 .PersonCard__name {
   font-family: var(--default-font);
   font-weight: var(--banner-weight);
-  font-size: 1.8em;
+  font-size: 1.6em;
 }
 
 .PersonCard__location {
