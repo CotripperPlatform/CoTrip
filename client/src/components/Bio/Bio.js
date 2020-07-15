@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Bio.css";
 import Icon from "../Icon/Icon";
-import { Link } from "react-router-dom";
 import InputTextField from "../../components/InputTextField/InputTextField";
 import Button from "../../components/Button/Button";
 import TextField from "@material-ui/core/TextField";
@@ -9,7 +8,6 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 
 import axios from "axios";
 import { BASE_URL } from "../../services/constants";
-
 
 class Bio extends Component {
   constructor(props) {
@@ -181,9 +179,9 @@ class Bio extends Component {
     let firstName = "";
     let lastName = "";
 
-	/**
-	 * Change Password Alerts
-	 */
+    /**
+     * Change Password Alerts
+     */
     let passwordSuccess = !this.state.isSuccess ? "" : <p>Password has been changed</p>;
     let passwordFailure = !this.state.isFailure ? "" : <p>Current password is invalid</p>;
     let passwordMatch = !this.state.passwordMatch ? "" : <p>New Passwords do not match</p>;
@@ -308,13 +306,15 @@ class Bio extends Component {
             <div className="change__password">
               <h2 className="change__password__title">Change Your Password</h2>
               <form onSubmit={this.handleSubmit}>
+                <label>Current Password</label>
                 <InputTextField
                   name="currentPassword"
                   type="password"
-                  placeholder="Current Password"
+                  placeholder="Current password"
                   onChange={this.handleChange}
                   value={this.state.currentPassword}
                 />
+                <label>New Password</label>
                 <InputTextField
                   name="newPassword"
                   type="password"
@@ -322,10 +322,12 @@ class Bio extends Component {
                   onChange={this.handleChange}
                   value={this.state.newPassword}
                 />
+
+                <label>Confirm Password</label>
                 <InputTextField
                   name="confirmPassword"
                   type="password"
-                  placeholder="Confirm Password"
+                  placeholder="Confirm password"
                   onChange={this.handleChange}
                   value={this.state.confirmPassword}
                 />
