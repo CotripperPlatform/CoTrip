@@ -121,11 +121,11 @@ class ForumPageDiscover extends Component {
             />
           </div>
           <div>
-            <header className="ForumPage__header">My Favorite Topics</header>
+            <header className="ForumPage__header">Discover Topics</header>
           </div>
           <div className="ForumPage__pill-container">{topics}</div>
           <div>
-            <header className="ForumPage__header">#hashtags I'm Following</header>
+            <header className="ForumPage__header">#hashtags</header>
           </div>
           <div className="ForumPage__hollow-pill-container">{hashtags}</div>
         </div>
