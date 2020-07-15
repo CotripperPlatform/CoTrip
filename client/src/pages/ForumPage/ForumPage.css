@@ -189,6 +189,10 @@
   display: none;
 }
 
+.hashtag__members_description {
+  margin-left: 30px;
+}
+
 .hashtag__members_description_p {
   font-family: Reem Kufi;
   font-style: normal;

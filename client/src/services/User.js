@@ -26,7 +26,11 @@ export function handleSignup(data, history) {
         first_name: json.user.profile.first_name,
         image: image,
         profileLoaded: true,
-        userid: json.user.id
+        userid: json.user.id,
+        connections: json.user.profile.connections,
+        hashtags: json.user.profile.hashtags,
+        topics: json.user.profile.topics,
+
       });
       history.push("/");
     })
@@ -54,7 +58,10 @@ export function handleLogin(data, history) {
         first_name: json.user.profile.first_name,
         image: image,
         profileLoaded: true,
-        userid: json.user.id
+        userid: json.user.id,
+        connections: json.user.profile.connections,
+        hashtags: json.user.profile.hashtags,
+        topics: json.user.profile.topics,
       });
       history.push("/");
     })
@@ -82,8 +89,11 @@ export function getUserData() {
             email: json.email,
             first_name: json.profile.first_name,
             image: image,
+            profileLoaded: true,
             userid: json.id,
-            profileLoaded: true
+            connections: json.profile.connections,
+            hashtags: json.profile.hashtags,
+            topics: json.profile.topics,
           },
         );
       }
