@@ -24,6 +24,6 @@ export function createGroup() {
         description: this.state.description,
         location: this.state.location
       }
-    }).then(this.props.history.push("/"));
+    }).then(this.props.history.push("/community/view-group"));
   }
 }
