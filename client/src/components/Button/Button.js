@@ -16,6 +16,6 @@ Button.defaultProps = {
   color: "color",
   size: "size",
   textColor: "textColor",
-  type: "none"
+  type: "none",
 };
 export default Button;

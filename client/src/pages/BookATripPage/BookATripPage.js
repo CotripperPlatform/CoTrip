@@ -1,7 +1,5 @@
 import React from "react";
 import "./BookATripPage.css";
-import NavBar from "../../components/Navbar/Navbar";
-import people from "assets/images/profile_default.svg";
 import BookATripImage from "../../components/BookATripImage/BookATripImage";
 import Banner from "../../components/Banner/Banner";
 import InputTextField from "../../components/InputTextField/InputTextField";
@@ -14,9 +12,11 @@ import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 
 const BookATripPage = props => {
+
+  let handleClick = (e) => console.log('Button Clicked')
+
   return (
     <div className="BookATripPage">
-      <NavBar page={3} profileImage={people} />
       <div className="NewBanner">
         <Banner background={Banner__pink}>
           <div className="community-page-header">
@@ -46,9 +46,8 @@ const BookATripPage = props => {
         ]}
       />
       <div className="BookATripPage__button-container">
-        <Button text="View Previous Trips" color="pink" size="large" />
+        <Button text="View Previous Trips" color="pink" size="large" handleClick={handleClick} />
       </div>
-      <Footer history={props.history} handle_logout={props.handle_logout} />
     </div>
   );
 };
