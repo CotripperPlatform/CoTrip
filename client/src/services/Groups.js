@@ -28,7 +28,7 @@ export function getAllGroups(callback = null) {
             }
         })
         .then(res => {
-
+console.log(res)
             this.setState({
                 groupList: res.data
             }, callback)

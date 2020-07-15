@@ -16,7 +16,7 @@ class CommunityPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      groups: []
+      groupList: []
     };
 
     this.getAllGroups = getAllGroups.bind(this);
@@ -38,6 +38,7 @@ class CommunityPage extends Component {
   }
   render() {
     const groups = this.state.groupList ? this.state.groupList : [];
+    console.log(groups)
     return (
       <div className="CommunityPage">
         <Banner background={Banner__Community}>
