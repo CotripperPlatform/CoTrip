@@ -24,7 +24,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         depth = 2
         model = Profile
         fields = ['user', 'topics', 'hashtags', 'image', 'first_name', 'last_name', 'city_of_residence',
-                  'age', 'dream_destination', 'bio', 'activities', 'events', 'connections', 'social_media', 'groups']
+                  'age', 'dream_destination', 'bio', 'activities', 'events', 'connections', 'requests', 'social_media', 'groups']
 
 
 class UserSerializer(serializers.ModelSerializer):

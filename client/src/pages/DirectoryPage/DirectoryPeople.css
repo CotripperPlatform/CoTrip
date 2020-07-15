@@ -170,3 +170,15 @@
       margin-left: 50px;
   }
   }
+
+  .FriendButton {
+    color: var(--white);
+    background-color: var(--purple);
+    border: 3px solid var(--purple);
+    width: 200px;
+    height: 30px;
+  }
+
+  .FriendId {
+    color: white;
+  }
