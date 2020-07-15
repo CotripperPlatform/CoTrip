@@ -21,8 +21,8 @@ import Bio from "../../components/Bio/Bio";
 import PreviousTripsCard from "../../components/PreviousTripsCard/PreviousTripsCard";
 import TripCardUsers from "../../components/TripCard-Users/TripCard-Users";
 
-import { BASE_URL } from '../../services/constants';
-import axios from 'axios';
+import { BASE_URL } from "../../services/constants";
+import axios from "axios";
 
 // Class Based React Component
 class MemberProfilePage extends Component {
@@ -42,14 +42,14 @@ class MemberProfilePage extends Component {
 
     // console.log('memberpage props: ', this.props);
     if (this.props.userid !== undefined) {
-      axios.get(`${BASE_URL}/profile/${this.props.userid}`,
-        {
+      axios
+        .get(`${BASE_URL}/profile/${this.props.userid}`, {
           headers: {
             Authorization: `Token ${localStorage.getItem("token")}`
           }
         })
         .then(res => {
-          console.log('axios ', res.data)
+          console.log("axios ", res.data);
 
           this.setState({
             protectedProfileData: {
@@ -58,27 +58,19 @@ class MemberProfilePage extends Component {
               bio: res.data.bio,
               age: res.data.age,
               image: res.data.image,
-              city_of_residence: res.data.city_of_residence
+              city_of_residence: res.data.city_of_residence,
+              social_media: res.data.social_media,
+              user_id: res.data.user_id
             }
-          })
-        })
+          });
+        });
     }
 
     // .then(res => console.log('axios ', res.data))
-
   }
 
-
-
-  // Runs after a component has been updated
-  componentDidUpdate() { }
-
-  // Runs right before a component is removed from the DOM
-  componentWillUnmount() { }
-
   render() {
-
-
+    // this.state.protectedProfileData ? console.log(this.state.protectedProfileData.social_media) : console.log('no profile data')
 
     let people = [
       {
@@ -140,8 +132,6 @@ class MemberProfilePage extends Component {
 
     if (this.props.logged_in === true) {
       return (
-
-
         <div className={this.state.classList}>
           <Banner background={Banner__pink}>
             {" "}
@@ -163,30 +153,30 @@ class MemberProfilePage extends Component {
                   <InteractionCard></InteractionCard>
                 </div>
                 <div className="MemberProfilePage__bio-container">
-
-
-                  {this.state.protectedProfileData !== undefined && this.props.userid !== undefined ?
+                  {this.state.protectedProfileData !== undefined &&
+                  this.props.userid !== undefined ? (
                     <Bio
                       userid={this.props.userid}
                       type="default"
-                      first_name={this.state.protectedProfileData.first_name} last_name={this.state.protectedProfileData.last_name}
+                      first_name={this.state.protectedProfileData.first_name}
+                      last_name={this.state.protectedProfileData.last_name}
                       // name={`${this.props.profile.firstname} ${this.props.profile.lastname}` }
                       bio={this.state.protectedProfileData.bio}
                       hashtags={people[0].hashtags}
                       isCurrentUser={true}
-                      onClick={console.log("Hello")}
+                      // onClick={console.log("Hello")}
+                      social_media={this.state.protectedProfileData.social_media}
+                      email={this.props.email}
                     />
-                    : ''}
-
-
-
+                  ) : (
+                    ""
+                  )}
                 </div>
-                <div></div>
               </div>
               <div className="Connections__list-Member">
                 <Connections
                   userViewing={false}
-                  to="/"
+                  to="/home"
                   users={testUsers.slice(0, 6)}
                   extraUsers="View All"
                 />
@@ -218,14 +208,12 @@ class MemberProfilePage extends Component {
             <GroupsList heading="Her Groups" moreGroups="View All" to="/" />
           </div>
 
+          <Footer history={this.props.history} handle_logout={this.props.handle_logout} />
         </div>
       );
-
-    }
-    else {
+    } else {
       window.location.href = "/";
     }
-
   }
 }
 
