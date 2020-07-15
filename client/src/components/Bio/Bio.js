@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Bio.css";
 import Icon from "../Icon/Icon";
 import InputTextField from "../../components/InputTextField/InputTextField";
+
 import Button from "../../components/Button/Button";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -211,16 +212,16 @@ class Bio extends Component {
     let userSocialMediaLinks = !this.state.form_social_media
       ? ""
       : this.state.form_social_media.map(mediaType => {
-          return (
-            <a href={mediaType.url} target="_blank">
-              <Icon
-                onClick={this.props.onClick}
-                icon={["fab", mediaType.social_media_type.name.toLowerCase()]}
-                key={mediaType.social_media_type.id}
-              />
-            </a>
-          );
-        });
+        return (
+          <a href={mediaType.url} target="_blank">
+            <Icon
+              onClick={this.props.onClick}
+              icon={["fab", mediaType.social_media_type.name.toLowerCase()]}
+              key={mediaType.social_media_type.id}
+            />
+          </a>
+        );
+      });
 
     if (this.state.editMode === true) {
       return (
@@ -234,7 +235,7 @@ class Bio extends Component {
                 placeholder="First name"
                 defaultValue={firstName}
                 onChange={this.updateFirstName}
-                // loadcallback={this.updateFirstName}
+              // loadcallback={this.updateFirstName}
               />{" "}
               &nbsp;
               <InputTextField
@@ -268,27 +269,27 @@ class Bio extends Component {
                 {!this.state.socialMediaOptions
                   ? ""
                   : this.state.socialMediaOptions.map(mediaType => {
-                      return (
-                        <div className="icons__div-edit__media-entry-container">
-                          <TextField
-                            fullWidth={true}
-                            label={`${mediaType.name} Username`}
-                            size="small"
-                            rows={1}
-                            defaultValue={""}
-                            variant="outlined"
-                            onChange={e => this.updateSocialMediaList(e, mediaType.id)}
-                            InputProps={{
-                              startAdornment: (
-                                <InputAdornment position="start">
-                                  <Icon icon={["fab", mediaType.name.toLowerCase()]} />
-                                </InputAdornment>
-                              )
-                            }}
-                          />
-                        </div>
-                      );
-                    })}
+                    return (
+                      <div className="icons__div-edit__media-entry-container">
+                        <TextField
+                          fullWidth={true}
+                          label={`${mediaType.name} Username`}
+                          size="small"
+                          rows={1}
+                          defaultValue={""}
+                          variant="outlined"
+                          onChange={e => this.updateSocialMediaList(e, mediaType.id)}
+                          InputProps={{
+                            startAdornment: (
+                              <InputAdornment position="start">
+                                <Icon icon={["fab", mediaType.name.toLowerCase()]} />
+                              </InputAdornment>
+                            )
+                          }}
+                        />
+                      </div>
+                    );
+                  })}
               </div>
               <br />
               <Button
@@ -335,8 +336,8 @@ class Bio extends Component {
             <h3 className="Bio__interests">Interests</h3>
             <div className="hashtag__container">
               {this.props.hashtags.map(hashtag => (
-                <span className="Bio__span" key={hashtag + 1}>
-                  {hashtag}
+                <span className="Bio__span" key={hashtag.id}>
+                  {"#", hashtag.title}
                 </span>
               ))}
             </div>
@@ -360,8 +361,8 @@ class Bio extends Component {
             <h3 className="Bio__interests">Interests</h3>
             <div className="hashtag__container">
               {this.props.hashtags.map(hashtag => (
-                <span className="Bio__span" key={hashtag + 1}>
-                  {hashtag}
+                <span className="Bio__span" key={hashtag.id}>
+                  {"#", hashtag.title}
                 </span>
               ))}
             </div>

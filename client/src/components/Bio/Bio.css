@@ -15,13 +15,12 @@
   flex-flow: column nowrap;
 }
 
-.Bio .icons__div div,
-.icons__div-edit__media-entry-container {
+.Bio .icons__div div, .icons__div-edit__media-entry-container {
   margin-top: 1rem;
 }
 
-.Bio .icons__div div,
-.Bio .icons__div-edit div {
+.Bio .icons__div div, .Bio .icons__div-edit div {
+
   color: var(--purple);
 }
 
