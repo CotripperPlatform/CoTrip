@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
-import Layout from "./components/Layout/Layout"
-import Navbar from "./components/Navbar/Navbar"
+import Layout from "./components/Layout/Layout";
 import SplashPage from "./pages/SplashPage/SplashPage";
 import BookATripPage from "./pages/BookATripPage/BookATripPage";
 import CommunityPage from "./pages/CommunityPage/CommunityPage";
@@ -37,7 +36,6 @@ import {
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
-import { BASE_URL } from "./services/constants";
 import { handleSignup, handleLogin, handleLogout, getUserData } from "./services/User";
 
 library.add(
@@ -81,11 +79,10 @@ class App extends Component {
     this.getUserData = getUserData.bind(this);
   }
   componentDidMount() {
-
-    if (this.state.logged_in) { this.getUserData() }
+    if (this.state.logged_in) {
+      this.getUserData();
+    }
   }
-
-
 
   logState = () => console.log("App.js state finished: ", this.state);
   render() {
@@ -93,7 +90,7 @@ class App extends Component {
     return (
       <div className="App">
         {loggedIn ? (
-          <Layout {...this.state} {...this.props}>
+          <Layout {...this.state} {...this.props} handleLogout={this.handleLogout}>
             <Route
               path="/"
               exact
@@ -105,9 +102,13 @@ class App extends Component {
               path="/TripDetail:page"
               exact
               render={routerProps => (
-                <TripDetail tripName={"Hawaii"} handle_logout={this.handleLogout} {...routerProps} />
+                <TripDetail
+                  tripName={"Hawaii"}
+                  handle_logout={this.handleLogout}
+                  {...routerProps}
+                />
               )}
-            ></Route>
+            ></Route>{" "}
             <Route
               path="/community/join-groups"
               exact
@@ -149,8 +150,8 @@ class App extends Component {
                 )}
               ></Route>
             ) : (
-                ""
-              )}
+              ""
+            )}
             <Route
               path="/forum-page"
               exact
@@ -159,7 +160,7 @@ class App extends Component {
               )}
             ></Route>
             <Route
-              path="/forum-page-hashtag/:id"
+              path="/forum-page-hashtag"
               exact
               render={routerProps => (
                 <ForumPageHashtag
@@ -181,10 +182,14 @@ class App extends Component {
               )}
             ></Route>
             <Route
-              path="/forum-page-topic/:id"
+              path="/forum-page-topic"
               exact
               render={routerProps => (
-                <ForumPageTopic handle_logout={this.handleLogout} {...routerProps} {...this.state} />
+                <ForumPageTopic
+                  handle_logout={this.handleLogout}
+                  {...routerProps}
+                  {...this.state}
+                />
               )}
             ></Route>
             <Route
@@ -203,8 +208,8 @@ class App extends Component {
             ></Route>
           </Layout>
         ) : (
-            <Redirect to="/welcome" />
-          )}
+          <Redirect to="/welcome" />
+        )}
 
         <Route path="/welcome" exact component={SplashPage}></Route>
         <Route
@@ -225,7 +230,6 @@ class App extends Component {
             />
           )}
         ></Route>
-
       </div>
     );
   }
