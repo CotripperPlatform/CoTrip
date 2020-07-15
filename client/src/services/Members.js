@@ -20,7 +20,9 @@ export default function getMemberData(userId) {
                         image: res.data.image,
                         city_of_residence: res.data.city_of_residence,
                         social_media: res.data.social_media,
-                        user_id: res.data.user_id
+                        user_id: res.data.user_id,
+                        hashtags: res.data.hashtags,
+                        connections: res.data.connections
                     }
                 })
             })
