@@ -16,13 +16,13 @@ function Connections(props) {
   }
 
   let userArray = props.users.map((person, index) => {
-    let userLastInitial = person.userSurname.slice(0, 1) + ".";
+    let userLastInitial = person.last_name.slice(0, 1) + ".";
     if (index < 4) {
       return (
-        <div key={person.userId} className="Connections__person">
-          <ProfilePicture type="small" image={person.userPic} />
+        <div key={person.id} className="Connections__person">
+          <ProfilePicture type="small" image={person.image ? person.image : require('../../assets/images/profile_default.svg')} />
           <p className="Connections--name">
-            {person.userFirstName} {userLastInitial}
+            {person.first_name} {userLastInitial}
           </p>
         </div>
       );

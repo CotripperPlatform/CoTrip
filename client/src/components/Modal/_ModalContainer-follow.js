@@ -18,7 +18,6 @@ class ModalContainerFollow extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
       <div className="Modal__container">
         <Button

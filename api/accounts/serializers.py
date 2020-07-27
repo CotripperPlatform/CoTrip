@@ -1,8 +1,10 @@
 from rest_framework import serializers
+from drf_writable_nested.serializers import WritableNestedModelSerializer
 from django.contrib.auth import authenticate
 from .models import Profile, CustomUser, ProfileSocialMedia, SocialMediaType
 from django.dispatch import receiver
 from django.db.models.signals import post_save
+
 
 class SocialMediaTypeSerializer(serializers.ModelSerializer):
     class Meta:
@@ -18,12 +20,14 @@ class ProfileSocialMediaSerializer(serializers.ModelSerializer):
         fields = ['social_media_type', 'url', 'profile']
 
 
-class ProfileSerializer(serializers.ModelSerializer):
-    social_media = ProfileSocialMediaSerializer(many=True, read_only=True)
+class ProfileSerializer(WritableNestedModelSerializer, serializers.ModelSerializer):
+    social_media = ProfileSocialMediaSerializer(many=True)
+
     class Meta:
+        depth = 2
         model = Profile
         fields = ['user', 'topics', 'hashtags', 'image', 'first_name', 'last_name', 'city_of_residence',
-                  'age', 'dream_destination', 'bio', 'activities', 'events', 'connections', 'social_media']
+                  'age', 'dream_destination', 'bio', 'activities', 'events', 'connections', 'social_media', 'groups']
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -57,4 +61,3 @@ class LoginSerializer(serializers.Serializer):
         user = authenticate(**data)
         if user and user.is_active:
             return user
- 

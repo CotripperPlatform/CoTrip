@@ -22,6 +22,7 @@ django-heroku = "*"
 dj-database-url = "*"
 psycopg2 = "*"
 django-filter = "*"
+drf-writable-nested = "*"
 
 [requires]
 python_version = "*"
